@@ -1,0 +1,19 @@
+{
+	"version": "1.0",
+	"modules": {
+		"design_1": {
+			"proto_instances": {
+				"/cp_rm_0/s_equalizer_in_axis": {
+					"interface": "xilinx.com:interface:axis:1.0",
+					"ports": {
+						"TDATA": { "actual": "s_equalizer_in_axis_tdata"},
+						"TID": { "actual": "s_equalizer_in_axis_tid"},
+						"TLAST": { "actual": "s_equalizer_in_axis_tlast"},
+						"TUSER": { "actual": "s_equalizer_in_axis_tuser"},
+						"TVALID": { "actual": "s_equalizer_in_axis_tvalid"}
+					}
+				}
+			}
+		}
+	}
+}
