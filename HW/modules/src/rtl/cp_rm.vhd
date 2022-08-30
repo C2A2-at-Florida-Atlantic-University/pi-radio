@@ -14,23 +14,25 @@ entity cp_rm is
     s_axis_aclk                   : in  std_logic;
     s_axis_aresetn                : in  std_logic;
 
-    s_equalizer_in_axis_tdata     : in  std_logic_vector(127 downto 0);
-    s_equalizer_in_axis_tvalid    : in  std_logic;
-    s_equalizer_in_axis_tid       : in  std_logic_vector(7 downto 0);
-    s_equalizer_in_axis_tuser     : in  std_logic_vector(7 downto 0);
-    s_equalizer_in_axis_tlast     : in  std_logic;
+    s_axis_tdata                  : in  std_logic_vector(127 downto 0);
+    s_axis_tvalid                 : in  std_logic;
+    s_axis_tid                    : in  std_logic_vector(7 downto 0);
+    s_axis_tuser                  : in  std_logic_vector(7 downto 0);
+    s_axis_tlast                  : in  std_logic;
 
-    m_cp_rm_axis_tdata            : out std_logic_vector(127 downto 0);
-    m_cp_rm_axis_tvalid           : out std_logic;
-    m_cp_rm_axis_tid              : out std_logic_vector(7 downto 0);
-    m_cp_rm_axis_tuser            : out std_logic_vector(7 downto 0);
-    m_cp_rm_axis_tlast            : out std_logic;
+    m_axis_tdata                  : out std_logic_vector(127 downto 0);
+    m_axis_tvalid                 : out std_logic;
+    m_axis_tid                    : out std_logic_vector(7 downto 0);
+    m_axis_tuser                  : out std_logic_vector(7 downto 0);
+    m_axis_tlast                  : out std_logic;
 
     m_cp_axis_tdata               : out std_logic_vector(127 downto 0);
     m_cp_axis_tvalid              : out std_logic;
     m_cp_axis_tid                 : out std_logic_vector(7 downto 0);
     m_cp_axis_tuser               : out std_logic_vector(7 downto 0);
-    m_cp_axis_tlast               : out std_logic
+    m_cp_axis_tlast               : out std_logic;
+
+    o_tlast_symbol                : out std_logic
   );
 end entity cp_rm;
 
@@ -51,7 +53,7 @@ begin
   P_FRAME : process(s_axis_aclk)
   begin
     if rising_edge(s_axis_aclk) then
-      if s_equalizer_in_axis_tlast = '1' then
+      if s_axis_tlast = '1' then
         frame_current             <= '1';
       end if;
     end if;
@@ -61,7 +63,7 @@ begin
   P_COUNTER : process(s_axis_aclk)
   begin
     if rising_edge(s_axis_aclk) then
-      if s_equalizer_in_axis_tlast = '1' then
+      if s_axis_tlast = '1' then
         cp_counter                <= (others => '0');
       else
         if frame_current = '1' then
@@ -75,11 +77,11 @@ begin
   P_AXIS_REGISTER : process(s_axis_aclk)
   begin
     if rising_edge(s_axis_aclk) then
-      in_tdata                    <= s_equalizer_in_axis_tdata;
-      in_tvalid                   <= s_equalizer_in_axis_tvalid;
-      in_tid                      <= s_equalizer_in_axis_tid;
-      in_tuser                    <= s_equalizer_in_axis_tuser;
-      in_tlast                    <= s_equalizer_in_axis_tlast;
+      in_tdata                    <= s_axis_tdata;
+      in_tvalid                   <= s_axis_tvalid;
+      in_tid                      <= s_axis_tid;
+      in_tuser                    <= s_axis_tuser;
+      in_tlast                    <= s_axis_tlast;
     end if;
   end process P_AXIS_REGISTER;
 
@@ -89,11 +91,11 @@ begin
     if rising_edge(s_axis_aclk) then
       case in_tvalid is
         when '0' =>
-          m_cp_rm_axis_tdata      <= (others => '0');
-          m_cp_rm_axis_tvalid     <= '0';
-          m_cp_rm_axis_tid        <= (others => '0');
-          m_cp_rm_axis_tuser      <= (others => '0');
-          m_cp_rm_axis_tlast      <= '0';
+          m_axis_tdata            <= (others => '0');
+          m_axis_tvalid           <= '0';
+          m_axis_tid              <= (others => '0');
+          m_axis_tuser            <= (others => '0');
+          m_axis_tlast            <= '0';
 
           m_cp_axis_tdata         <= (others => '0');
           m_cp_axis_tvalid        <= '0';
@@ -108,11 +110,11 @@ begin
             m_cp_axis_tuser       <= in_tuser;
             m_cp_axis_tlast       <= in_tlast;
 
-            m_cp_rm_axis_tdata    <= (others => '0');
-            m_cp_rm_axis_tvalid   <= '0';
-            m_cp_rm_axis_tid      <= (others => '0');
-            m_cp_rm_axis_tuser    <= (others => '0');
-            m_cp_rm_axis_tlast    <= '0';
+            m_axis_tdata          <= (others => '0');
+            m_axis_tvalid         <= '0';
+            m_axis_tid            <= (others => '0');
+            m_axis_tuser          <= (others => '0');
+            m_axis_tlast          <= '0';
           else
             m_cp_axis_tdata       <= (others => '0');
             m_cp_axis_tvalid      <= '0';
@@ -120,18 +122,18 @@ begin
             m_cp_axis_tuser       <= (others => '0');
             m_cp_axis_tlast       <= '0';
 
-            m_cp_rm_axis_tdata    <= in_tdata;
-            m_cp_rm_axis_tvalid   <= in_tvalid;
-            m_cp_rm_axis_tid      <= in_tid;
-            m_cp_rm_axis_tuser    <= in_tuser;
-            m_cp_rm_axis_tlast    <= in_tlast;
+            m_axis_tdata          <= in_tdata;
+            m_axis_tvalid         <= in_tvalid;
+            m_axis_tid            <= in_tid;
+            m_axis_tuser          <= in_tuser;
+            m_axis_tlast          <= in_tlast;
           end if;
         when others =>
-          m_cp_rm_axis_tdata      <= (others => '0');
-          m_cp_rm_axis_tvalid     <= '0';
-          m_cp_rm_axis_tid        <= (others => '0');
-          m_cp_rm_axis_tuser      <= (others => '0');
-          m_cp_rm_axis_tlast      <= '0';
+          m_axis_tdata            <= (others => '0');
+          m_axis_tvalid           <= '0';
+          m_axis_tid              <= (others => '0');
+          m_axis_tuser            <= (others => '0');
+          m_axis_tlast            <= '0';
 
           m_cp_axis_tdata         <= (others => '0');
           m_cp_axis_tvalid        <= '0';
@@ -141,5 +143,7 @@ begin
       end case;
     end if;
   end process P_CP;
+
+  o_tlast_symbol                  <= in_tlast;
 
 end architecture RTL;

@@ -2,4 +2,11 @@
 2020.2
 Apr 18 2022
 16:05:34
-C:/Projects/pi-radio/HW/modules/src/rtl/cp_rm.vhd,1661810275,vhdl,,,,cp_rm,,,,,,,,
+C:/Projects/pi-radio/HW/Equalizer_design/Equalizer_design.gen/sources_1/bd/design_1/hdl/design_1_wrapper.v,1661871105,verilog,,,,design_1_wrapper,,uvm,../../../../Equalizer_design.gen/sources_1/bd/design_1/ipshared/8713/hdl,,,,,
+C:/Projects/pi-radio/HW/Equalizer_design/Equalizer_design.ip_user_files/bd/design_1/ip/design_1_axis_data_fifo_0_0/sim/design_1_axis_data_fifo_0_0.v,1661871105,verilog,,C:/Projects/pi-radio/HW/Equalizer_design/Equalizer_design.ip_user_files/bd/design_1/ip/design_1_delay_0_0/sim/design_1_delay_0_0.v,,design_1_axis_data_fifo_0_0,,uvm,../../../../Equalizer_design.gen/sources_1/bd/design_1/ipshared/8713/hdl,,,,,
+C:/Projects/pi-radio/HW/Equalizer_design/Equalizer_design.ip_user_files/bd/design_1/ip/design_1_conj_0_0/sim/design_1_conj_0_0.v,1661871105,verilog,,C:/Projects/pi-radio/HW/Equalizer_design/Equalizer_design.ip_user_files/bd/design_1/ip/design_1_cp_rm_0_0/sim/design_1_cp_rm_0_0.v,,design_1_conj_0_0,,uvm,../../../../Equalizer_design.gen/sources_1/bd/design_1/ipshared/8713/hdl,,,,,
+C:/Projects/pi-radio/HW/Equalizer_design/Equalizer_design.ip_user_files/bd/design_1/ip/design_1_cp_rm_0_0/sim/design_1_cp_rm_0_0.v,1661871105,verilog,,C:/Projects/pi-radio/HW/Equalizer_design/Equalizer_design.ip_user_files/bd/design_1/ip/design_1_axis_data_fifo_0_0/sim/design_1_axis_data_fifo_0_0.v,,design_1_cp_rm_0_0,,uvm,../../../../Equalizer_design.gen/sources_1/bd/design_1/ipshared/8713/hdl,,,,,
+C:/Projects/pi-radio/HW/Equalizer_design/Equalizer_design.ip_user_files/bd/design_1/ip/design_1_delay_0_0/sim/design_1_delay_0_0.v,1661871105,verilog,,C:/Projects/pi-radio/HW/Equalizer_design/Equalizer_design.ip_user_files/bd/design_1/sim/design_1.v,,design_1_delay_0_0,,uvm,../../../../Equalizer_design.gen/sources_1/bd/design_1/ipshared/8713/hdl,,,,,
+C:/Projects/pi-radio/HW/Equalizer_design/Equalizer_design.ip_user_files/bd/design_1/sim/design_1.v,1661871105,verilog,,C:/Projects/pi-radio/HW/Equalizer_design/Equalizer_design.gen/sources_1/bd/design_1/hdl/design_1_wrapper.v,,design_1,,uvm,../../../../Equalizer_design.gen/sources_1/bd/design_1/ipshared/8713/hdl,,,,,
+C:/Projects/pi-radio/HW/Equalizer_design/Equalizer_design.sim/sim_1/behav/xsim/glbl.v,1649976174,verilog,,,,glbl,,uvm,,,,,,
+C:/Projects/pi-radio/HW/modules/sim/equalizer_top_tb.sv,1661825105,systemVerilog,,,,equalizer_top_tb,,uvm,../../../../Equalizer_design.gen/sources_1/bd/design_1/ipshared/8713/hdl,,,,,

@@ -1,6 +1,8 @@
 # compile vhdl design source files
 vhdl xil_defaultlib  \
+"../../../../../modules/src/rtl/conj.vhd" \
 "../../../../../modules/src/rtl/cp_rm.vhd" \
+"../../../../../modules/src/rtl/delay.vhd" \
 
 # Do not sort compile order
 nosort

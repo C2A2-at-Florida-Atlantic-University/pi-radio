@@ -1,0 +1,9 @@
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Projects/pi-radio/HW/modules/src/rtl/conj.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'conj'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Projects/pi-radio/HW/modules/src/rtl/cp_rm.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'cp_rm'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Projects/pi-radio/HW/modules/src/rtl/delay.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'delay'
+ERROR: [VRFC 10-2989] 'ceil' is not declared [C:/Projects/pi-radio/HW/modules/src/rtl/delay.vhd:38]
+ERROR: [VRFC 10-9458] unit 'rtl' is ignored due to previous errors [C:/Projects/pi-radio/HW/modules/src/rtl/delay.vhd:36]
+INFO: [VRFC 10-8704] VHDL file 'C:/Projects/pi-radio/HW/modules/src/rtl/delay.vhd' is ignored due to errors

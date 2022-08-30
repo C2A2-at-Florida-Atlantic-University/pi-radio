@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="equalizer_top_tb_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="equalizer_top_tb" />
+            <top_module name="glbl" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="83.795 ns"></ZoomStartTime>
+      <ZoomEndTime time="92.147 ns"></ZoomEndTime>
+      <Cursor1Time time="1,404.000 ns"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="320"></NameColumnWidth>
+      <ValueColumnWidth column_width="144"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="8" />
+   <wvobject fp_name="/equalizer_top_tb/fd" type="array">
+      <obj_property name="ElementShortName">fd[31:0]</obj_property>
+      <obj_property name="ObjectShortName">fd[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/equalizer_top_tb/r_clk" type="logic">
+      <obj_property name="ElementShortName">r_clk</obj_property>
+      <obj_property name="ObjectShortName">r_clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/equalizer_top_tb/r_nRst" type="logic">
+      <obj_property name="ElementShortName">r_nRst</obj_property>
+      <obj_property name="ObjectShortName">r_nRst</obj_property>
+   </wvobject>
+   <wvobject fp_name="group249" type="group">
+      <obj_property name="label">S_CP_AXIS</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/cp_rm_0/inst/s_axis_tdata" type="array">
+         <obj_property name="ElementShortName">s_axis_tdata[127:0]</obj_property>
+         <obj_property name="ObjectShortName">s_axis_tdata[127:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/cp_rm_0/inst/s_axis_tvalid" type="logic">
+         <obj_property name="ElementShortName">s_axis_tvalid</obj_property>
+         <obj_property name="ObjectShortName">s_axis_tvalid</obj_property>
+      </wvobject>
+      <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/cp_rm_0/inst/s_axis_tid" type="array">
+         <obj_property name="ElementShortName">s_axis_tid[7:0]</obj_property>
+         <obj_property name="ObjectShortName">s_axis_tid[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/cp_rm_0/inst/s_axis_tuser" type="array">
+         <obj_property name="ElementShortName">s_axis_tuser[7:0]</obj_property>
+         <obj_property name="ObjectShortName">s_axis_tuser[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/cp_rm_0/inst/s_axis_tlast" type="logic">
+         <obj_property name="ElementShortName">s_axis_tlast</obj_property>
+         <obj_property name="ObjectShortName">s_axis_tlast</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="group242" type="group">
+      <obj_property name="label">M_CP_AXIS</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/cp_rm_0/m_cp_axis_tdata" type="array">
+         <obj_property name="ElementShortName">m_cp_axis_tdata[127:0]</obj_property>
+         <obj_property name="ObjectShortName">m_cp_axis_tdata[127:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/cp_rm_0/m_cp_axis_tvalid" type="logic">
+         <obj_property name="ElementShortName">m_cp_axis_tvalid</obj_property>
+         <obj_property name="ObjectShortName">m_cp_axis_tvalid</obj_property>
+      </wvobject>
+      <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/cp_rm_0/m_cp_axis_tid" type="array">
+         <obj_property name="ElementShortName">m_cp_axis_tid[7:0]</obj_property>
+         <obj_property name="ObjectShortName">m_cp_axis_tid[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/cp_rm_0/m_cp_axis_tuser" type="array">
+         <obj_property name="ElementShortName">m_cp_axis_tuser[7:0]</obj_property>
+         <obj_property name="ObjectShortName">m_cp_axis_tuser[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/cp_rm_0/m_cp_axis_tlast" type="logic">
+         <obj_property name="ElementShortName">m_cp_axis_tlast</obj_property>
+         <obj_property name="ObjectShortName">m_cp_axis_tlast</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="group250" type="group">
+      <obj_property name="label">M_CP_RM_AXIS</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/cp_rm_0/m_axis_tdata" type="array">
+         <obj_property name="ElementShortName">m_axis_tdata[127:0]</obj_property>
+         <obj_property name="ObjectShortName">m_axis_tdata[127:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/cp_rm_0/m_axis_tvalid" type="logic">
+         <obj_property name="ElementShortName">m_axis_tvalid</obj_property>
+         <obj_property name="ObjectShortName">m_axis_tvalid</obj_property>
+      </wvobject>
+      <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/cp_rm_0/m_axis_tid" type="array">
+         <obj_property name="ElementShortName">m_axis_tid[7:0]</obj_property>
+         <obj_property name="ObjectShortName">m_axis_tid[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/cp_rm_0/m_axis_tuser" type="array">
+         <obj_property name="ElementShortName">m_axis_tuser[7:0]</obj_property>
+         <obj_property name="ObjectShortName">m_axis_tuser[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/cp_rm_0/m_axis_tlast" type="logic">
+         <obj_property name="ElementShortName">m_axis_tlast</obj_property>
+         <obj_property name="ObjectShortName">m_axis_tlast</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="group282" type="group">
+      <obj_property name="label">S_CONJ_AXIS</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/conj_0/inst/s_axis_tdata" type="array">
+         <obj_property name="ElementShortName">s_axis_tdata[127:0]</obj_property>
+         <obj_property name="ObjectShortName">s_axis_tdata[127:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/conj_0/inst/s_axis_tvalid" type="logic">
+         <obj_property name="ElementShortName">s_axis_tvalid</obj_property>
+         <obj_property name="ObjectShortName">s_axis_tvalid</obj_property>
+      </wvobject>
+      <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/conj_0/inst/s_axis_tid" type="array">
+         <obj_property name="ElementShortName">s_axis_tid[7:0]</obj_property>
+         <obj_property name="ObjectShortName">s_axis_tid[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/conj_0/inst/s_axis_tuser" type="array">
+         <obj_property name="ElementShortName">s_axis_tuser[7:0]</obj_property>
+         <obj_property name="ObjectShortName">s_axis_tuser[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/conj_0/inst/s_axis_tlast" type="logic">
+         <obj_property name="ElementShortName">s_axis_tlast</obj_property>
+         <obj_property name="ObjectShortName">s_axis_tlast</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="group283" type="group">
+      <obj_property name="label">M_CONJ_AXIS</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/conj_0/inst/m_axis_tdata" type="array">
+         <obj_property name="ElementShortName">m_axis_tdata[127:0]</obj_property>
+         <obj_property name="ObjectShortName">m_axis_tdata[127:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/conj_0/inst/m_axis_tvalid" type="logic">
+         <obj_property name="ElementShortName">m_axis_tvalid</obj_property>
+         <obj_property name="ObjectShortName">m_axis_tvalid</obj_property>
+      </wvobject>
+      <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/conj_0/inst/m_axis_tid" type="array">
+         <obj_property name="ElementShortName">m_axis_tid[7:0]</obj_property>
+         <obj_property name="ObjectShortName">m_axis_tid[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/conj_0/inst/m_axis_tuser" type="array">
+         <obj_property name="ElementShortName">m_axis_tuser[7:0]</obj_property>
+         <obj_property name="ObjectShortName">m_axis_tuser[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/conj_0/inst/m_axis_tlast" type="logic">
+         <obj_property name="ElementShortName">m_axis_tlast</obj_property>
+         <obj_property name="ObjectShortName">m_axis_tlast</obj_property>
+      </wvobject>
+   </wvobject>
+</wave_config>

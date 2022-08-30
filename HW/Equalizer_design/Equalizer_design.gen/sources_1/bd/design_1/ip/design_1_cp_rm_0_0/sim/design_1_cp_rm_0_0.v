@@ -57,51 +57,52 @@
 module design_1_cp_rm_0_0 (
   s_axis_aclk,
   s_axis_aresetn,
-  s_equalizer_in_axis_tdata,
-  s_equalizer_in_axis_tvalid,
-  s_equalizer_in_axis_tid,
-  s_equalizer_in_axis_tuser,
-  s_equalizer_in_axis_tlast,
-  m_cp_rm_axis_tdata,
-  m_cp_rm_axis_tvalid,
-  m_cp_rm_axis_tid,
-  m_cp_rm_axis_tuser,
-  m_cp_rm_axis_tlast,
+  s_axis_tdata,
+  s_axis_tvalid,
+  s_axis_tid,
+  s_axis_tuser,
+  s_axis_tlast,
+  m_axis_tdata,
+  m_axis_tvalid,
+  m_axis_tid,
+  m_axis_tuser,
+  m_axis_tlast,
   m_cp_axis_tdata,
   m_cp_axis_tvalid,
   m_cp_axis_tid,
   m_cp_axis_tuser,
-  m_cp_axis_tlast
+  m_cp_axis_tlast,
+  o_tlast_symbol
 );
 
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME s_axis_aclk, ASSOCIATED_RESET s_axis_aresetn, FREQ_HZ 250000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN design_1_s_axis_aclk_0, INSERT_VIP 0" *)
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME s_axis_aclk, ASSOCIATED_BUSIF s_axis, ASSOCIATED_RESET s_axis_aresetn, FREQ_HZ 250000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN design_1_s_axis_aclk_0, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 s_axis_aclk CLK" *)
 input wire s_axis_aclk;
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME s_axis_aresetn, POLARITY ACTIVE_LOW, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 s_axis_aresetn RST" *)
 input wire s_axis_aresetn;
-(* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 s_equalizer_in_axis TDATA" *)
-input wire [127 : 0] s_equalizer_in_axis_tdata;
-(* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 s_equalizer_in_axis TVALID" *)
-input wire s_equalizer_in_axis_tvalid;
-(* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 s_equalizer_in_axis TID" *)
-input wire [7 : 0] s_equalizer_in_axis_tid;
-(* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 s_equalizer_in_axis TUSER" *)
-input wire [7 : 0] s_equalizer_in_axis_tuser;
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME s_equalizer_in_axis, TDATA_NUM_BYTES 16, TDEST_WIDTH 0, TID_WIDTH 8, TUSER_WIDTH 8, HAS_TREADY 0, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 1, FREQ_HZ 250000000, PHASE 0.0, CLK_DOMAIN design_1_s_axis_aclk_0, LAYERED_METADATA undef, INSERT_VIP 0" *)
-(* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 s_equalizer_in_axis TLAST" *)
-input wire s_equalizer_in_axis_tlast;
-(* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 m_cp_rm_axis TDATA" *)
-output wire [127 : 0] m_cp_rm_axis_tdata;
-(* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 m_cp_rm_axis TVALID" *)
-output wire m_cp_rm_axis_tvalid;
-(* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 m_cp_rm_axis TID" *)
-output wire [7 : 0] m_cp_rm_axis_tid;
-(* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 m_cp_rm_axis TUSER" *)
-output wire [7 : 0] m_cp_rm_axis_tuser;
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME m_cp_rm_axis, TDATA_NUM_BYTES 16, TDEST_WIDTH 0, TID_WIDTH 8, TUSER_WIDTH 8, HAS_TREADY 0, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 1, FREQ_HZ 250000000, PHASE 0.0, CLK_DOMAIN design_1_s_axis_aclk_0, LAYERED_METADATA undef, INSERT_VIP 0" *)
-(* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 m_cp_rm_axis TLAST" *)
-output wire m_cp_rm_axis_tlast;
+(* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 s_axis TDATA" *)
+input wire [127 : 0] s_axis_tdata;
+(* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 s_axis TVALID" *)
+input wire s_axis_tvalid;
+(* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 s_axis TID" *)
+input wire [7 : 0] s_axis_tid;
+(* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 s_axis TUSER" *)
+input wire [7 : 0] s_axis_tuser;
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME s_axis, TDATA_NUM_BYTES 16, TDEST_WIDTH 0, TID_WIDTH 8, TUSER_WIDTH 8, HAS_TREADY 0, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 1, FREQ_HZ 250000000, PHASE 0.0, CLK_DOMAIN design_1_s_axis_aclk_0, LAYERED_METADATA undef, INSERT_VIP 0" *)
+(* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 s_axis TLAST" *)
+input wire s_axis_tlast;
+(* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 m_axis TDATA" *)
+output wire [127 : 0] m_axis_tdata;
+(* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 m_axis TVALID" *)
+output wire m_axis_tvalid;
+(* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 m_axis TID" *)
+output wire [7 : 0] m_axis_tid;
+(* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 m_axis TUSER" *)
+output wire [7 : 0] m_axis_tuser;
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME m_axis, TDATA_NUM_BYTES 16, TDEST_WIDTH 0, TID_WIDTH 8, TUSER_WIDTH 8, HAS_TREADY 0, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 1, FREQ_HZ 250000000, PHASE 0.0, CLK_DOMAIN design_1_s_axis_aclk_0, LAYERED_METADATA undef, INSERT_VIP 0" *)
+(* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 m_axis TLAST" *)
+output wire m_axis_tlast;
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 m_cp_axis TDATA" *)
 output wire [127 : 0] m_cp_axis_tdata;
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 m_cp_axis TVALID" *)
@@ -113,24 +114,26 @@ output wire [7 : 0] m_cp_axis_tuser;
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME m_cp_axis, TDATA_NUM_BYTES 16, TDEST_WIDTH 0, TID_WIDTH 8, TUSER_WIDTH 8, HAS_TREADY 0, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 1, FREQ_HZ 250000000, PHASE 0.0, CLK_DOMAIN design_1_s_axis_aclk_0, LAYERED_METADATA undef, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 m_cp_axis TLAST" *)
 output wire m_cp_axis_tlast;
+output wire o_tlast_symbol;
 
   cp_rm inst (
     .s_axis_aclk(s_axis_aclk),
     .s_axis_aresetn(s_axis_aresetn),
-    .s_equalizer_in_axis_tdata(s_equalizer_in_axis_tdata),
-    .s_equalizer_in_axis_tvalid(s_equalizer_in_axis_tvalid),
-    .s_equalizer_in_axis_tid(s_equalizer_in_axis_tid),
-    .s_equalizer_in_axis_tuser(s_equalizer_in_axis_tuser),
-    .s_equalizer_in_axis_tlast(s_equalizer_in_axis_tlast),
-    .m_cp_rm_axis_tdata(m_cp_rm_axis_tdata),
-    .m_cp_rm_axis_tvalid(m_cp_rm_axis_tvalid),
-    .m_cp_rm_axis_tid(m_cp_rm_axis_tid),
-    .m_cp_rm_axis_tuser(m_cp_rm_axis_tuser),
-    .m_cp_rm_axis_tlast(m_cp_rm_axis_tlast),
+    .s_axis_tdata(s_axis_tdata),
+    .s_axis_tvalid(s_axis_tvalid),
+    .s_axis_tid(s_axis_tid),
+    .s_axis_tuser(s_axis_tuser),
+    .s_axis_tlast(s_axis_tlast),
+    .m_axis_tdata(m_axis_tdata),
+    .m_axis_tvalid(m_axis_tvalid),
+    .m_axis_tid(m_axis_tid),
+    .m_axis_tuser(m_axis_tuser),
+    .m_axis_tlast(m_axis_tlast),
     .m_cp_axis_tdata(m_cp_axis_tdata),
     .m_cp_axis_tvalid(m_cp_axis_tvalid),
     .m_cp_axis_tid(m_cp_axis_tid),
     .m_cp_axis_tuser(m_cp_axis_tuser),
-    .m_cp_axis_tlast(m_cp_axis_tlast)
+    .m_cp_axis_tlast(m_cp_axis_tlast),
+    .o_tlast_symbol(o_tlast_symbol)
   );
 endmodule
