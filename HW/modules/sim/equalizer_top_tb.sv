@@ -52,7 +52,8 @@ module equalizer_top_tb();
 // Stimulate design
 //---------------------------------------------------------------
   initial begin
-    fd = $fopen("../../../../../modules/sim/cw_input_samples.txt","r");
+    //fd = $fopen("../../../../../modules/sim/cw_input_samples.txt","r");
+    fd = $fopen("../../../../../modules/sim/equalizer_input_samples.txt","r");
     if (fd) $display("File was opened successfully: %0d ",fd);
     else begin   
       $display("File was NOT opened successfully: %0d",fd);
@@ -85,10 +86,13 @@ module equalizer_top_tb();
       end
       in_axis_tdata                 = {q_data4,i_data4,q_data3,i_data3,
                                        q_data2,i_data2,q_data1,i_data1};
+      if (i == 319)
+        in_axis_tlast               = 1'b1;
       #CLOCK_PERIOD;
     end
-
-    #100 $stop;
+    
+    in_axis_tlast                   = 1'b0;
+    #200 $stop;
   end
 
 endmodule

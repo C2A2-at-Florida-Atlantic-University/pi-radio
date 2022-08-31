@@ -2,8 +2,8 @@
 # Vivado v2022.1 (64-bit)
 # SW Build 3526262 on Mon Apr 18 15:48:16 MDT 2022
 # IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
-# Start of session at: Tue Aug 30 10:58:40 2022
-# Process ID: 14148
+# Start of session at: Wed Aug 31 00:54:40 2022
+# Process ID: 17232
 # Current directory: C:/Projects/pi-radio/HW/Equalizer_design/Equalizer_design.runs/design_1_axis_data_fifo_0_0_synth_1
 # Command line: vivado.exe -log design_1_axis_data_fifo_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_axis_data_fifo_0_0.tcl
 # Log file: C:/Projects/pi-radio/HW/Equalizer_design/Equalizer_design.runs/design_1_axis_data_fifo_0_0_synth_1/design_1_axis_data_fifo_0_0.vds
@@ -21,4 +21,4 @@ synth_design failed
 ERROR: [Common 17-345] A valid license was not found for feature 'Synthesis' and/or device 'xczu28dr'. Please run the Vivado License Manager for assistance in determining
 which features and devices are licensed for your system.
 Resolution: Check the status of your licenses in the Vivado License Manager. For debug help search Xilinx Support for "Licensing FAQ". If you are using a license server, verify that the license server is up and running a version of the xilinx daemon that is compatible with the version of Xilinx software that you are using. Note: Vivado 2021.1 and later versions require upgrading your license server tools to the Flex 11.17.2.0 versions. Please confirm with your license admin that the correct version of the license server tools are installed.
-INFO: [Common 17-206] Exiting Vivado at Tue Aug 30 10:58:46 2022...
+INFO: [Common 17-206] Exiting Vivado at Wed Aug 31 00:54:47 2022...

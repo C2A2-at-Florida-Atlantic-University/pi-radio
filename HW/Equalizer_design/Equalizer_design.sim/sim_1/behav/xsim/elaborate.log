@@ -1,0 +1,52 @@
+Vivado Simulator v2022.1
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx_2022.1/Vivado/2022.1/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L axis_infrastructure_v1_1_0 -L axis_data_fifo_v2_0_8 -L uvm -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot equalizer_top_tb_behav xil_defaultlib.equalizer_top_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_unsigned
+Compiling package ieee.math_real
+Compiling module axis_infrastructure_v1_1_0.axis_infrastructure_v1_1_0_util_...
+Compiling module axis_infrastructure_v1_1_0.axis_infrastructure_v1_1_0_util_...
+Compiling module axis_infrastructure_v1_1_0.axis_infrastructure_v1_1_0_util_...
+Compiling module xpm.xpm_cdc_sync_rst(INIT=0,INIT_SYN...
+Compiling module xpm.xpm_fifo_rst(CDC_DEST_SYNC_FF=3)
+Compiling module xpm.xpm_fifo_reg_bit
+Compiling module xpm.xpm_counter_updn(COUNTER_WIDTH=1...
+Compiling module xpm.xpm_counter_updn(COUNTER_WIDTH=9...
+Compiling module xpm.xpm_memory_base(MEMORY_TYPE=1,ME...
+Compiling module xpm.xpm_counter_updn(COUNTER_WIDTH=2...
+Compiling module xpm.xpm_fifo_base(FIFO_WRITE_DEPTH=5...
+Compiling module xpm.xpm_fifo_axis(FIFO_DEPTH=512,TDA...
+Compiling module axis_data_fifo_v2_0_8.axis_data_fifo_v2_0_8_top(C_FAMI...
+Compiling module xil_defaultlib.design_1_axis_data_fifo_0_0
+Compiling architecture rtl of entity xil_defaultlib.axis_splitter [axis_splitter_default]
+Compiling module xil_defaultlib.design_1_axis_splitter_0_0
+Compiling architecture rtl of entity xil_defaultlib.complex_mult_sum [complex_mult_sum_default]
+Compiling module xil_defaultlib.design_1_complex_mult_sum_0_0
+Compiling architecture rtl of entity xil_defaultlib.conj [conj_default]
+Compiling module xil_defaultlib.design_1_conj_0_0
+Compiling architecture rtl of entity xil_defaultlib.cp_rm2 [cp_rm2_default]
+Compiling module xil_defaultlib.design_1_cp_rm2_0_0
+Compiling architecture rtl of entity xil_defaultlib.cp_rm [cp_rm_default]
+Compiling module xil_defaultlib.design_1_cp_rm_0_0
+Compiling architecture rtl of entity xil_defaultlib.delay [\delay(g_delay_cycles=264)\]
+Compiling module xil_defaultlib.design_1_delay_0_0
+Compiling module xil_defaultlib.design_1
+Compiling module xil_defaultlib.design_1_wrapper
+Compiling module xil_defaultlib.equalizer_top_tb
+WARNING: [XSIM 43-3373] "C:/Projects/pi-radio/HW/modules/sim/equalizer_top_tb.sv" Line 76. System function $fscanf is used as system task. This system function should have a LHS e.g. x=$fscanf().
+WARNING: [XSIM 43-3373] "C:/Projects/pi-radio/HW/modules/sim/equalizer_top_tb.sv" Line 77. System function $fscanf is used as system task. This system function should have a LHS e.g. x=$fscanf().
+WARNING: [XSIM 43-3373] "C:/Projects/pi-radio/HW/modules/sim/equalizer_top_tb.sv" Line 78. System function $fscanf is used as system task. This system function should have a LHS e.g. x=$fscanf().
+WARNING: [XSIM 43-3373] "C:/Projects/pi-radio/HW/modules/sim/equalizer_top_tb.sv" Line 79. System function $fscanf is used as system task. This system function should have a LHS e.g. x=$fscanf().
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot equalizer_top_tb_behav

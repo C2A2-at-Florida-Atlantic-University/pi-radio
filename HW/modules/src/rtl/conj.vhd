@@ -27,8 +27,15 @@ entity conj is
     m_axis_tlast                  : out std_logic
   );
 end entity conj;
-
+ 
 architecture RTL of conj is 
+
+  attribute X_INTERFACE_INFO      : string;
+  attribute X_INTERFACE_PARAMETER : string;
+  
+  attribute X_INTERFACE_INFO      of s_axis_aclk    : signal is "xilinx.com:signal:clock:1.0 s_axis_aclk CLK";
+  attribute X_INTERFACE_PARAMETER of s_axis_aclk    : 
+    signal is "ASSOCIATED_BUSIF s_axis_aclk:s_axis:m_axis, FREQ_HZ 250000000";
 
   signal i_data1                  : std_logic_vector(15 downto 0);
   signal q_data1_conj             : std_logic_vector(15 downto 0);
@@ -43,16 +50,20 @@ begin
 
   -- Flip quadrature bits
   i_data1                         <= s_axis_tdata(15 downto 0);
-  q_data1_conj                    <= X"00" - s_axis_tdata(31 downto 16);
+  --q_data1_conj                    <= X"00" - s_axis_tdata(31 downto 16);
+  q_data1_conj                    <= s_axis_tdata(31 downto 16);
   
   i_data2                         <= s_axis_tdata(47 downto 32);
-  q_data2_conj                    <= X"00" - s_axis_tdata(63 downto 48);
+  --q_data2_conj                    <= X"00" - s_axis_tdata(63 downto 48);
+  q_data2_conj                    <= s_axis_tdata(63 downto 48);
 
   i_data3                         <= s_axis_tdata(79 downto 64);
-  q_data3_conj                    <= X"00" - s_axis_tdata(95 downto 80);
+  --q_data3_conj                    <= X"00" - s_axis_tdata(95 downto 80);
+  q_data3_conj                    <= s_axis_tdata(95 downto 80);
 
   i_data4                         <= s_axis_tdata(111 downto 96);
-  q_data4_conj                    <= X"00" - s_axis_tdata(127 downto 112);
+  --q_data4_conj                    <= X"00" - s_axis_tdata(127 downto 112);
+  q_data4_conj                    <= s_axis_tdata(127 downto 112);
 
   P_CONJ : process(s_axis_aclk)
   begin

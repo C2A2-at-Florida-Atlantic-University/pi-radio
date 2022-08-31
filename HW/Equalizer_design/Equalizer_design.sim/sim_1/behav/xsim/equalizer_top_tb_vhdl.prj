@@ -3,6 +3,9 @@ vhdl xil_defaultlib  \
 "../../../../../modules/src/rtl/conj.vhd" \
 "../../../../../modules/src/rtl/cp_rm.vhd" \
 "../../../../../modules/src/rtl/delay.vhd" \
+"../../../../../modules/src/rtl/complex_mult_sum/rtl/complex_mult_sum.vhd" \
+"../../../../../modules/src/rtl/axis_splitter.vhd" \
+"../../../../../modules/src/rtl/cp_rm2.vhd" \
 
 # Do not sort compile order
 nosort

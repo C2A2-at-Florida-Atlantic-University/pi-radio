@@ -72,10 +72,11 @@ module design_1_cp_rm_0_0 (
   m_cp_axis_tid,
   m_cp_axis_tuser,
   m_cp_axis_tlast,
-  o_tlast_symbol
+  o_tlast_symbol,
+  o_symbol_number
 );
 
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME s_axis_aclk, ASSOCIATED_BUSIF s_axis, ASSOCIATED_RESET s_axis_aresetn, FREQ_HZ 250000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN design_1_s_axis_aclk_0, INSERT_VIP 0" *)
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME s_axis_aclk, ASSOCIATED_BUSIF s_axis_aclk:s_axis:m_axis:m_cp_axis, ASSOCIATED_RESET s_axis_aresetn, FREQ_HZ 250000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN design_1_s_axis_aclk_0, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 s_axis_aclk CLK" *)
 input wire s_axis_aclk;
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME s_axis_aresetn, POLARITY ACTIVE_LOW, INSERT_VIP 0" *)
@@ -115,6 +116,7 @@ output wire [7 : 0] m_cp_axis_tuser;
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 m_cp_axis TLAST" *)
 output wire m_cp_axis_tlast;
 output wire o_tlast_symbol;
+output wire [7 : 0] o_symbol_number;
 
   cp_rm inst (
     .s_axis_aclk(s_axis_aclk),
@@ -134,6 +136,7 @@ output wire o_tlast_symbol;
     .m_cp_axis_tid(m_cp_axis_tid),
     .m_cp_axis_tuser(m_cp_axis_tuser),
     .m_cp_axis_tlast(m_cp_axis_tlast),
-    .o_tlast_symbol(o_tlast_symbol)
+    .o_tlast_symbol(o_tlast_symbol),
+    .o_symbol_number(o_symbol_number)
   );
 endmodule

@@ -19,6 +19,9 @@
 -makelib xcelium_lib/xil_defaultlib \
   "../../../bd/design_1/ip/design_1_axis_data_fifo_0_0/sim/design_1_axis_data_fifo_0_0.v" \
   "../../../bd/design_1/ip/design_1_delay_0_0/sim/design_1_delay_0_0.v" \
+  "../../../bd/design_1/ip/design_1_complex_mult_sum_0_0/sim/design_1_complex_mult_sum_0_0.v" \
+  "../../../bd/design_1/ip/design_1_axis_splitter_0_0/sim/design_1_axis_splitter_0_0.v" \
+  "../../../bd/design_1/ip/design_1_cp_rm2_0_0/sim/design_1_cp_rm2_0_0.v" \
   "../../../bd/design_1/sim/design_1.v" \
 -endlib
 -makelib xcelium_lib/xil_defaultlib \

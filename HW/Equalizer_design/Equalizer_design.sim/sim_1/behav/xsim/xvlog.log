@@ -6,11 +6,13 @@ INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Projects/pi-radio/HW/Equalizer_d
 INFO: [VRFC 10-311] analyzing module design_1_axis_data_fifo_0_0
 INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Projects/pi-radio/HW/Equalizer_design/Equalizer_design.ip_user_files/bd/design_1/ip/design_1_delay_0_0/sim/design_1_delay_0_0.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module design_1_delay_0_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Projects/pi-radio/HW/Equalizer_design/Equalizer_design.ip_user_files/bd/design_1/ip/design_1_complex_mult_sum_0_0/sim/design_1_complex_mult_sum_0_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module design_1_complex_mult_sum_0_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Projects/pi-radio/HW/Equalizer_design/Equalizer_design.ip_user_files/bd/design_1/ip/design_1_axis_splitter_0_0/sim/design_1_axis_splitter_0_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module design_1_axis_splitter_0_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Projects/pi-radio/HW/Equalizer_design/Equalizer_design.ip_user_files/bd/design_1/ip/design_1_cp_rm2_0_0/sim/design_1_cp_rm2_0_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module design_1_cp_rm2_0_0
 INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Projects/pi-radio/HW/Equalizer_design/Equalizer_design.ip_user_files/bd/design_1/sim/design_1.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module design_1
 INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Projects/pi-radio/HW/Equalizer_design/Equalizer_design.gen/sources_1/bd/design_1/hdl/design_1_wrapper.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module design_1_wrapper
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Projects/pi-radio/HW/modules/sim/equalizer_top_tb.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module equalizer_top_tb
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Projects/pi-radio/HW/Equalizer_design/Equalizer_design.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module glbl
