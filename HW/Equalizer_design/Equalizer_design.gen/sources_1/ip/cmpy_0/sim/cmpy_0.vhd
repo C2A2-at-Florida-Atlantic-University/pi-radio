@@ -61,14 +61,11 @@ ENTITY cmpy_0 IS
     aclk : IN STD_LOGIC;
     aresetn : IN STD_LOGIC;
     s_axis_a_tvalid : IN STD_LOGIC;
-    s_axis_a_tready : OUT STD_LOGIC;
     s_axis_a_tdata : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
     s_axis_b_tvalid : IN STD_LOGIC;
-    s_axis_b_tready : OUT STD_LOGIC;
     s_axis_b_tdata : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
     m_axis_dout_tvalid : OUT STD_LOGIC;
-    m_axis_dout_tready : IN STD_LOGIC;
-    m_axis_dout_tdata : OUT STD_LOGIC_VECTOR(79 DOWNTO 0)
+    m_axis_dout_tdata : OUT STD_LOGIC_VECTOR(63 DOWNTO 0)
   );
 END cmpy_0;
 
@@ -132,7 +129,7 @@ ARCHITECTURE cmpy_0_arch OF cmpy_0 IS
       m_axis_dout_tready : IN STD_LOGIC;
       m_axis_dout_tuser : OUT STD_LOGIC_VECTOR(0 DOWNTO 0);
       m_axis_dout_tlast : OUT STD_LOGIC;
-      m_axis_dout_tdata : OUT STD_LOGIC_VECTOR(79 DOWNTO 0)
+      m_axis_dout_tdata : OUT STD_LOGIC_VECTOR(63 DOWNTO 0)
     );
   END COMPONENT cmpy_v6_0_21;
   ATTRIBUTE X_INTERFACE_INFO : STRING;
@@ -142,16 +139,13 @@ ARCHITECTURE cmpy_0_arch OF cmpy_0 IS
   ATTRIBUTE X_INTERFACE_PARAMETER OF aresetn: SIGNAL IS "XIL_INTERFACENAME aresetn_intf, POLARITY ACTIVE_LOW, INSERT_VIP 0";
   ATTRIBUTE X_INTERFACE_INFO OF aresetn: SIGNAL IS "xilinx.com:signal:reset:1.0 aresetn_intf RST";
   ATTRIBUTE X_INTERFACE_INFO OF m_axis_dout_tdata: SIGNAL IS "xilinx.com:interface:axis:1.0 M_AXIS_DOUT TDATA";
-  ATTRIBUTE X_INTERFACE_INFO OF m_axis_dout_tready: SIGNAL IS "xilinx.com:interface:axis:1.0 M_AXIS_DOUT TREADY";
-  ATTRIBUTE X_INTERFACE_PARAMETER OF m_axis_dout_tvalid: SIGNAL IS "XIL_INTERFACENAME M_AXIS_DOUT, TDATA_NUM_BYTES 10, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 0, FREQ_HZ 100000000, PHASE 0.0, LAYERED_METADATA undef, INSERT_VIP 0";
+  ATTRIBUTE X_INTERFACE_PARAMETER OF m_axis_dout_tvalid: SIGNAL IS "XIL_INTERFACENAME M_AXIS_DOUT, TDATA_NUM_BYTES 8, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 0, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 0, FREQ_HZ 100000000, PHASE 0.0, LAYERED_METADATA undef, INSERT_VIP 0";
   ATTRIBUTE X_INTERFACE_INFO OF m_axis_dout_tvalid: SIGNAL IS "xilinx.com:interface:axis:1.0 M_AXIS_DOUT TVALID";
   ATTRIBUTE X_INTERFACE_INFO OF s_axis_a_tdata: SIGNAL IS "xilinx.com:interface:axis:1.0 S_AXIS_A TDATA";
-  ATTRIBUTE X_INTERFACE_INFO OF s_axis_a_tready: SIGNAL IS "xilinx.com:interface:axis:1.0 S_AXIS_A TREADY";
-  ATTRIBUTE X_INTERFACE_PARAMETER OF s_axis_a_tvalid: SIGNAL IS "XIL_INTERFACENAME S_AXIS_A, TDATA_NUM_BYTES 4, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 0, FREQ_HZ 100000000, PHASE 0.0, LAYERED_METADATA undef, INSERT_VIP 0";
+  ATTRIBUTE X_INTERFACE_PARAMETER OF s_axis_a_tvalid: SIGNAL IS "XIL_INTERFACENAME S_AXIS_A, TDATA_NUM_BYTES 4, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 0, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 0, FREQ_HZ 100000000, PHASE 0.0, LAYERED_METADATA undef, INSERT_VIP 0";
   ATTRIBUTE X_INTERFACE_INFO OF s_axis_a_tvalid: SIGNAL IS "xilinx.com:interface:axis:1.0 S_AXIS_A TVALID";
   ATTRIBUTE X_INTERFACE_INFO OF s_axis_b_tdata: SIGNAL IS "xilinx.com:interface:axis:1.0 S_AXIS_B TDATA";
-  ATTRIBUTE X_INTERFACE_INFO OF s_axis_b_tready: SIGNAL IS "xilinx.com:interface:axis:1.0 S_AXIS_B TREADY";
-  ATTRIBUTE X_INTERFACE_PARAMETER OF s_axis_b_tvalid: SIGNAL IS "XIL_INTERFACENAME S_AXIS_B, TDATA_NUM_BYTES 4, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 0, FREQ_HZ 100000000, PHASE 0.0, LAYERED_METADATA undef, INSERT_VIP 0";
+  ATTRIBUTE X_INTERFACE_PARAMETER OF s_axis_b_tvalid: SIGNAL IS "XIL_INTERFACENAME S_AXIS_B, TDATA_NUM_BYTES 4, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 0, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 0, FREQ_HZ 100000000, PHASE 0.0, LAYERED_METADATA undef, INSERT_VIP 0";
   ATTRIBUTE X_INTERFACE_INFO OF s_axis_b_tvalid: SIGNAL IS "xilinx.com:interface:axis:1.0 S_AXIS_B TVALID";
 BEGIN
   U0 : cmpy_v6_0_21
@@ -161,15 +155,15 @@ BEGIN
       C_XDEVICE => "xczu28dr",
       C_A_WIDTH => 16,
       C_B_WIDTH => 16,
-      C_OUT_WIDTH => 33,
-      C_LATENCY => 9,
+      C_OUT_WIDTH => 32,
+      C_LATENCY => 6,
       C_MULT_TYPE => 1,
       C_OPTIMIZE_GOAL => 0,
       HAS_NEGATE => 0,
       SINGLE_OUTPUT => 0,
       ROUND => 0,
       USE_DSP_CASCADES => 1,
-      C_THROTTLE_SCHEME => 1,
+      C_THROTTLE_SCHEME => 3,
       C_HAS_ACLKEN => 0,
       C_HAS_ARESETN => 1,
       C_HAS_S_AXIS_A_TUSER => 0,
@@ -185,7 +179,7 @@ BEGIN
       C_S_AXIS_B_TUSER_WIDTH => 1,
       C_S_AXIS_CTRL_TDATA_WIDTH => 8,
       C_S_AXIS_CTRL_TUSER_WIDTH => 1,
-      C_M_AXIS_DOUT_TDATA_WIDTH => 80,
+      C_M_AXIS_DOUT_TDATA_WIDTH => 64,
       C_M_AXIS_DOUT_TUSER_WIDTH => 1
     )
     PORT MAP (
@@ -193,12 +187,10 @@ BEGIN
       aclken => '1',
       aresetn => aresetn,
       s_axis_a_tvalid => s_axis_a_tvalid,
-      s_axis_a_tready => s_axis_a_tready,
       s_axis_a_tuser => STD_LOGIC_VECTOR(TO_UNSIGNED(0, 1)),
       s_axis_a_tlast => '0',
       s_axis_a_tdata => s_axis_a_tdata,
       s_axis_b_tvalid => s_axis_b_tvalid,
-      s_axis_b_tready => s_axis_b_tready,
       s_axis_b_tuser => STD_LOGIC_VECTOR(TO_UNSIGNED(0, 1)),
       s_axis_b_tlast => '0',
       s_axis_b_tdata => s_axis_b_tdata,
@@ -207,7 +199,7 @@ BEGIN
       s_axis_ctrl_tlast => '0',
       s_axis_ctrl_tdata => STD_LOGIC_VECTOR(TO_UNSIGNED(0, 8)),
       m_axis_dout_tvalid => m_axis_dout_tvalid,
-      m_axis_dout_tready => m_axis_dout_tready,
+      m_axis_dout_tready => '0',
       m_axis_dout_tdata => m_axis_dout_tdata
     );
 END cmpy_0_arch;

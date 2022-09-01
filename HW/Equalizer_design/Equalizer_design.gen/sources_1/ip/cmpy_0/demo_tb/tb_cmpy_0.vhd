@@ -101,20 +101,13 @@ architecture tb of tb_cmpy_0 is
   signal s_axis_b_tvalid    : std_logic := '0';  -- TVALID for channel B
   signal s_axis_b_tdata     : std_logic_vector(31 downto 0) := (others => '0');  -- TDATA for channel B
 
-  -- Master channel DOUT inputs
-  signal m_axis_dout_tready : std_logic := '0';  -- TREADY for channel DOUT
-
   -----------------------------------------------------------------------
   -- DUT output signals
   -----------------------------------------------------------------------
 
-  -- Slave channels outputs
-  signal s_axis_a_tready    : std_logic := '0';  -- TREADY for channel A
-  signal s_axis_b_tready    : std_logic := '0';  -- TREADY for channel B
-
   -- Master channel DOUT outputs
   signal m_axis_dout_tvalid : std_logic := '0';  -- TVALID for channel DOUT
-  signal m_axis_dout_tdata  : std_logic_vector(79 downto 0) := (others => '0');  -- TDATA for channel DOUT
+  signal m_axis_dout_tdata  : std_logic_vector(63 downto 0) := (others => '0');  -- TDATA for channel DOUT
 
   -----------------------------------------------------------------------
   -- Aliases for AXI channel TDATA fields
@@ -126,8 +119,8 @@ architecture tb of tb_cmpy_0 is
   signal s_axis_a_tdata_imag     : std_logic_vector(15 downto 0) := (others => '0');
   signal s_axis_b_tdata_real     : std_logic_vector(15 downto 0) := (others => '0');
   signal s_axis_b_tdata_imag     : std_logic_vector(15 downto 0) := (others => '0');
-  signal m_axis_dout_tdata_real  : std_logic_vector(32 downto 0) := (others => '0');
-  signal m_axis_dout_tdata_imag  : std_logic_vector(32 downto 0) := (others => '0');
+  signal m_axis_dout_tdata_real  : std_logic_vector(31 downto 0) := (others => '0');
+  signal m_axis_dout_tdata_imag  : std_logic_vector(31 downto 0) := (others => '0');
 
   -----------------------------------------------------------------------
   -- Testbench signals
@@ -222,13 +215,10 @@ begin
       aclk                => aclk,
       aresetn             => aresetn,
       s_axis_a_tvalid     => s_axis_a_tvalid,
-      s_axis_a_tready     => s_axis_a_tready,
       s_axis_a_tdata      => s_axis_a_tdata,
       s_axis_b_tvalid     => s_axis_b_tvalid,
-      s_axis_b_tready     => s_axis_b_tready,
       s_axis_b_tdata      => s_axis_b_tdata,
       m_axis_dout_tvalid  => m_axis_dout_tvalid,
-      m_axis_dout_tready  => m_axis_dout_tready,
       m_axis_dout_tdata   => m_axis_dout_tdata
       );
 
@@ -282,13 +272,9 @@ begin
     variable ip_b_index       : integer   := 0;
     variable a_tvalid_nxt     : std_logic := '0';
     variable b_tvalid_nxt     : std_logic := '0';
-    variable dout_tready_nxt  : std_logic := '0';
     variable phase2_cycles : integer := 1;
     variable phase2_count  : integer := 0;
     constant PHASE2_LIMIT  : integer := 30;
-    variable phase3_cycles : integer := 1;
-    variable phase3_count  : integer := 0;
-    constant PHASE3_LIMIT  : integer := 30;
   begin
 
     -- Test is stopped in clock_gen process, use endless loop here
@@ -298,45 +284,36 @@ begin
       wait until rising_edge(aclk) and aresetn = '1';
       wait for T_HOLD;
 
-      -- Drive AXI handshake signals to demonstrate different types of operation
+      -- Drive AXI TVALID signals to demonstrate different types of operation
       case cycles is  -- do different types of operation at different phases of the test
         when 0 to PHASE_CYCLES * 1 - 1 =>
-          -- Phase 1: full throughput, no backpressure
+          -- Phase 1: inputs always valid, no missing input data
           a_tvalid_nxt    := '1';
           b_tvalid_nxt    := '1';
-          dout_tready_nxt := '1';
         when PHASE_CYCLES * 1 to PHASE_CYCLES * 2 - 1 =>
-          -- Phase 2: apply increasing amounts of backpressure
-          a_tvalid_nxt    := '1';
+          -- Phase 2: deprive channel A of valid transactions at an increasing rate
           b_tvalid_nxt    := '1';
           if phase2_count < phase2_cycles then
-            dout_tready_nxt := '0';
+            a_tvalid_nxt := '0';
           else
-            dout_tready_nxt := '1';
+            a_tvalid_nxt := '1';
           end if;
           phase2_count := phase2_count + 1;
-          if phase2_count = PHASE2_LIMIT then
+          if phase2_count >= PHASE2_LIMIT then
             phase2_count  := 0;
             phase2_cycles := phase2_cycles + 1;
           end if;
         when PHASE_CYCLES * 2 to PHASE_CYCLES * 3 - 1 =>
-          -- Phase 3: deprive channel A of valid transactions at an increasing rate
-          b_tvalid_nxt    := '1';
-          dout_tready_nxt := '1';
-          if phase3_count < phase3_cycles then
-            -- AXI protocol forbids changing TVALID from high to low if TREADY is low
-            if s_axis_a_tvalid = '0' or s_axis_a_tready = '1' then
-              a_tvalid_nxt := '0';
-            end if;
+          -- Phase 3: deprive channel A of 1 out of 2 transactions, and channel B of 1 out of 3 transactions
+          if cycles mod 2 = 0 then
+            a_tvalid_nxt := '0';
           else
             a_tvalid_nxt := '1';
           end if;
-          if phase3_count >= phase3_cycles or s_axis_a_tvalid = '0' or s_axis_a_tready = '1' then
-            phase3_count := phase3_count + 1;
-            if phase3_count >= PHASE3_LIMIT then
-              phase3_count  := 0;
-              phase3_cycles := phase3_cycles + 1;
-            end if;
+          if cycles mod 3 = 0 then
+            b_tvalid_nxt := '0';
+          else
+            b_tvalid_nxt := '1';
           end if;
         when others =>
           -- Test will stop imminently - do nothing
@@ -346,14 +323,12 @@ begin
       -- Drive handshake signals with local variable values
       s_axis_a_tvalid <= a_tvalid_nxt;
       s_axis_b_tvalid <= b_tvalid_nxt;
-      m_axis_dout_tready <= dout_tready_nxt;
 
       -- Drive AXI slave channel A payload
       -- Drive '0's on payload signals when not valid
-      -- Payload only changes when TVALID goes high or when a transaction just occurred
       if a_tvalid_nxt /= '1' then
         s_axis_a_tdata <= (others => '0');
-      elsif s_axis_a_tvalid /= '1' or (s_axis_a_tvalid = '1' and s_axis_a_tready = '1') then
+      else
         -- TDATA: Real and imaginary components are each 16 bits wide and byte-aligned at their LSBs
         s_axis_a_tdata(15 downto 0) <= IP_A_DATA(ip_a_index).re;
         s_axis_a_tdata(31 downto 16) <= IP_A_DATA(ip_a_index).im;
@@ -361,23 +336,22 @@ begin
 
       -- Drive AXI slave channel B payload
       -- Drive '0's on payload signals when not valid
-      -- Payload only changes when TVALID goes high or when a transaction just occurred
       if b_tvalid_nxt /= '1' then
         s_axis_b_tdata <= (others => '0');
-      elsif s_axis_b_tvalid /= '1' or (s_axis_b_tvalid = '1' and s_axis_b_tready = '1') then
+      else
         -- TDATA: Real and imaginary components are each 16 bits wide and byte-aligned at their LSBs
         s_axis_b_tdata(15 downto 0) <= IP_B_DATA(ip_b_index).re;
         s_axis_b_tdata(31 downto 16) <= IP_B_DATA(ip_b_index).im;
       end if;
 
       -- Increment input data indices
-      if a_tvalid_nxt = '1' and s_axis_a_tready = '1' then
+      if a_tvalid_nxt = '1' then
         ip_a_index := ip_a_index + 1;
         if ip_a_index = IP_A_DEPTH then
           ip_a_index := 0;
         end if;
       end if;
-      if b_tvalid_nxt = '1' and s_axis_b_tready = '1' then
+      if b_tvalid_nxt = '1' then
         ip_b_index := ip_b_index + 1;
         if ip_b_index = IP_B_DEPTH then
           ip_b_index := 0;
@@ -394,10 +368,6 @@ begin
 
   check_outputs : process
     variable check_ok : boolean := true;
-    -- Previous values of DOUT channel signals
-    variable dout_tvalid_prev : std_logic := '0';
-    variable dout_tready_prev : std_logic := '0';
-    variable dout_tdata_prev  : std_logic_vector(79 downto 0) := (others => '0');
   begin
 
     -- Check outputs T_STROBE time after rising edge of clock
@@ -408,7 +378,6 @@ begin
     -- which would make this demonstration testbench unwieldy.
     -- Instead, check the protocol of the DOUT channel:
     -- check that the payload is valid (not X) when TVALID is high
-    -- and check that the payload does not change while TVALID is high until TREADY goes high
 
     if m_axis_dout_tvalid = '1' and aresetn = '1' then
       if is_x(m_axis_dout_tdata) then
@@ -416,24 +385,10 @@ begin
         check_ok := false;
       end if;
 
-      if dout_tvalid_prev = '1' and dout_tready_prev = '0' then  -- payload must be the same as last cycle
-        if m_axis_dout_tdata /= dout_tdata_prev then
-          report "ERROR: m_axis_dout_tdata changed while m_axis_dout_tvalid was high and m_axis_dout_tready was low" severity error;
-          check_ok := false;
-        end if;
-      end if;
-
     end if;
 
     assert check_ok
       report "ERROR: terminating test with failures." severity failure;
-
-    -- Record payload values for checking next clock cycle
-    if check_ok then
-      dout_tvalid_prev := m_axis_dout_tvalid;
-      dout_tready_prev := m_axis_dout_tready;
-      dout_tdata_prev  := m_axis_dout_tdata;
-    end if;
 
   end process check_outputs;
 
@@ -445,8 +400,8 @@ begin
   s_axis_a_tdata_imag     <= s_axis_a_tdata(31 downto 16);
   s_axis_b_tdata_real     <= s_axis_b_tdata(15 downto 0);
   s_axis_b_tdata_imag     <= s_axis_b_tdata(31 downto 16);
-  m_axis_dout_tdata_real  <= m_axis_dout_tdata(32 downto 0);
-  m_axis_dout_tdata_imag  <= m_axis_dout_tdata(72 downto 40);
+  m_axis_dout_tdata_real  <= m_axis_dout_tdata(31 downto 0);
+  m_axis_dout_tdata_imag  <= m_axis_dout_tdata(63 downto 32);
 
 end tb;
 

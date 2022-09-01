@@ -3,6 +3,17 @@
 	"modules": {
 		"design_1": {
 			"proto_instances": {
+				"/angle_0/s_axis": {
+					"interface": "xilinx.com:interface:axis:1.0",
+					"ports": {
+						"ACLK": { "actual": "axis_aclk"},
+						"ARESETN": { "actual": "axis_aresetn"},
+						"TDATA": { "actual": "s_axis_tdata"},
+						"TID": { "actual": "s_axis_tid"},
+						"TUSER": { "actual": "s_axis_tuser"},
+						"TVALID": { "actual": "s_axis_tvalid"}
+					}
+				},
 				"/axis_data_fifo_0/M_AXIS": {
 					"interface": "xilinx.com:interface:axis:1.0",
 					"ports": {
@@ -51,6 +62,17 @@
 						"TLAST": { "actual": "s_axis_tlast"},
 						"TUSER": { "actual": "s_axis_tuser"},
 						"TVALID": { "actual": "s_axis_tvalid"}
+					}
+				},
+				"/complex_mult_sum_0/m_axis": {
+					"interface": "xilinx.com:interface:axis:1.0",
+					"ports": {
+						"ACLK": { "actual": "s_axis_aclk"},
+						"ARESETN": { "actual": "s_axis_aresetn"},
+						"TDATA": { "actual": "m_axis_tdata"},
+						"TID": { "actual": "m_axis_tid"},
+						"TUSER": { "actual": "m_axis_tuser"},
+						"TVALID": { "actual": "m_axis_tvalid"}
 					}
 				},
 				"/complex_mult_sum_0/s_axis0": {

@@ -1,7 +1,7 @@
 //Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2022.1 (win64) Build 3526262 Mon Apr 18 15:48:16 MDT 2022
-//Date        : Wed Aug 31 01:28:23 2022
+//Date        : Thu Sep  1 00:15:32 2022
 //Host        : DESKTOP-1UDCE0K running 64-bit major release  (build 9200)
 //Command     : generate_target design_1.bd
 //Design      : design_1
@@ -9,7 +9,7 @@
 //--------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CORE_GENERATION_INFO = "design_1,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=design_1,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=7,numReposBlks=7,numNonXlnxBlks=0,numHierBlks=0,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=6,numPkgbdBlks=0,bdsource=USER,synth_mode=OOC_per_IP}" *) (* HW_HANDOFF = "design_1.hwdef" *) 
+(* CORE_GENERATION_INFO = "design_1,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=design_1,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=8,numReposBlks=8,numNonXlnxBlks=0,numHierBlks=0,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=7,numPkgbdBlks=0,bdsource=USER,synth_mode=OOC_per_IP}" *) (* HW_HANDOFF = "design_1.hwdef" *) 
 module design_1
    (s_axis_0_tdata,
     s_axis_0_tid,
@@ -37,6 +37,10 @@ module design_1
   wire axis_splitter_0_m_axis0_TLAST;
   wire [7:0]axis_splitter_0_m_axis0_TUSER;
   wire axis_splitter_0_m_axis0_TVALID;
+  wire [255:0]complex_mult_sum_0_m_axis_TDATA;
+  wire [7:0]complex_mult_sum_0_m_axis_TID;
+  wire [7:0]complex_mult_sum_0_m_axis_TUSER;
+  wire complex_mult_sum_0_m_axis_TVALID;
   wire [127:0]conj_0_m_axis_TDATA;
   wire [7:0]conj_0_m_axis_TID;
   wire conj_0_m_axis_TLAST;
@@ -78,6 +82,13 @@ module design_1
   assign s_axis_0_1_TVALID = s_axis_0_tvalid;
   assign s_axis_aclk_0_1 = s_axis_aclk_0;
   assign s_axis_aresetn_0_1 = s_axis_aresetn_0;
+  design_1_angle_0_0 angle_0
+       (.axis_aclk(s_axis_aclk_0_1),
+        .axis_aresetn(s_axis_aresetn_0_1),
+        .s_axis_tdata(complex_mult_sum_0_m_axis_TDATA),
+        .s_axis_tid(complex_mult_sum_0_m_axis_TID[0]),
+        .s_axis_tuser(complex_mult_sum_0_m_axis_TUSER[0]),
+        .s_axis_tvalid(complex_mult_sum_0_m_axis_TVALID));
   design_1_axis_data_fifo_0_0 axis_data_fifo_0
        (.m_axis_tdata(axis_data_fifo_0_M_AXIS_TDATA),
         .m_axis_tid(axis_data_fifo_0_M_AXIS_TID),
@@ -106,7 +117,11 @@ module design_1
         .s_axis_tuser(cp_rm_0_m_axis_TUSER),
         .s_axis_tvalid(cp_rm_0_m_axis_TVALID));
   design_1_complex_mult_sum_0_0 complex_mult_sum_0
-       (.s_axis0_tdata(delay_0_m_axis_TDATA),
+       (.m_axis_tdata(complex_mult_sum_0_m_axis_TDATA),
+        .m_axis_tid(complex_mult_sum_0_m_axis_TID),
+        .m_axis_tuser(complex_mult_sum_0_m_axis_TUSER),
+        .m_axis_tvalid(complex_mult_sum_0_m_axis_TVALID),
+        .s_axis0_tdata(delay_0_m_axis_TDATA),
         .s_axis0_tid(delay_0_m_axis_TID),
         .s_axis0_tlast(delay_0_m_axis_TLAST),
         .s_axis0_tuser(delay_0_m_axis_TUSER),

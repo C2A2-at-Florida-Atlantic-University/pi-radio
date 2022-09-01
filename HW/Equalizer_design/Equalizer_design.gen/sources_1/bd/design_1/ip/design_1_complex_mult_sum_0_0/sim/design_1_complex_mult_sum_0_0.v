@@ -70,8 +70,7 @@ module design_1_complex_mult_sum_0_0 (
   m_axis_tdata,
   m_axis_tvalid,
   m_axis_tid,
-  m_axis_tuser,
-  m_axis_tlast
+  m_axis_tuser
 );
 
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME s_axis_aclk, ASSOCIATED_RESET s_axis_aresetn, ASSOCIATED_BUSIF s_axis_aclk:s_axis0:s_axis1:m_axis, FREQ_HZ 250000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN design_1_s_axis_aclk_0, INSERT_VIP 0" *)
@@ -103,16 +102,14 @@ input wire [7 : 0] s_axis1_tuser;
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 s_axis1 TLAST" *)
 input wire s_axis1_tlast;
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 m_axis TDATA" *)
-output wire [127 : 0] m_axis_tdata;
+output wire [255 : 0] m_axis_tdata;
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 m_axis TVALID" *)
 output wire m_axis_tvalid;
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 m_axis TID" *)
 output wire [7 : 0] m_axis_tid;
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME m_axis, TDATA_NUM_BYTES 32, TDEST_WIDTH 0, TID_WIDTH 8, TUSER_WIDTH 8, HAS_TREADY 0, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 0, FREQ_HZ 250000000, PHASE 0.0, CLK_DOMAIN design_1_s_axis_aclk_0, LAYERED_METADATA undef, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 m_axis TUSER" *)
 output wire [7 : 0] m_axis_tuser;
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME m_axis, TDATA_NUM_BYTES 16, TDEST_WIDTH 0, TID_WIDTH 8, TUSER_WIDTH 8, HAS_TREADY 0, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 1, FREQ_HZ 250000000, PHASE 0.0, CLK_DOMAIN design_1_s_axis_aclk_0, LAYERED_METADATA undef, INSERT_VIP 0" *)
-(* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 m_axis TLAST" *)
-output wire m_axis_tlast;
 
   complex_mult_sum inst (
     .s_axis_aclk(s_axis_aclk),
@@ -130,7 +127,6 @@ output wire m_axis_tlast;
     .m_axis_tdata(m_axis_tdata),
     .m_axis_tvalid(m_axis_tvalid),
     .m_axis_tid(m_axis_tid),
-    .m_axis_tuser(m_axis_tuser),
-    .m_axis_tlast(m_axis_tlast)
+    .m_axis_tuser(m_axis_tuser)
   );
 endmodule
