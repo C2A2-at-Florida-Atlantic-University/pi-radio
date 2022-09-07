@@ -50,20 +50,20 @@ begin
 
   -- Flip quadrature bits
   i_data1                         <= s_axis_tdata(15 downto 0);
-  --q_data1_conj                    <= X"00" - s_axis_tdata(31 downto 16);
-  q_data1_conj                    <= s_axis_tdata(31 downto 16);
+  q_data1_conj                    <= X"00" - s_axis_tdata(31 downto 16);
+  --q_data1_conj                    <= s_axis_tdata(31 downto 16);
   
   i_data2                         <= s_axis_tdata(47 downto 32);
-  --q_data2_conj                    <= X"00" - s_axis_tdata(63 downto 48);
-  q_data2_conj                    <= s_axis_tdata(63 downto 48);
+  q_data2_conj                    <= X"00" - s_axis_tdata(63 downto 48);
+  --q_data2_conj                    <= s_axis_tdata(63 downto 48);
 
   i_data3                         <= s_axis_tdata(79 downto 64);
-  --q_data3_conj                    <= X"00" - s_axis_tdata(95 downto 80);
-  q_data3_conj                    <= s_axis_tdata(95 downto 80);
+  q_data3_conj                    <= X"00" - s_axis_tdata(95 downto 80);
+  --q_data3_conj                    <= s_axis_tdata(95 downto 80);
 
   i_data4                         <= s_axis_tdata(111 downto 96);
-  --q_data4_conj                    <= X"00" - s_axis_tdata(127 downto 112);
-  q_data4_conj                    <= s_axis_tdata(127 downto 112);
+  q_data4_conj                    <= X"00" - s_axis_tdata(127 downto 112);
+  --q_data4_conj                    <= s_axis_tdata(127 downto 112);
 
   P_CONJ : process(s_axis_aclk)
   begin

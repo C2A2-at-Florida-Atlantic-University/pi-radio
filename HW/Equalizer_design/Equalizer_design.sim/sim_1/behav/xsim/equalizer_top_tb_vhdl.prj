@@ -1,14 +1,15 @@
 # compile vhdl design source files
 vhdl xil_defaultlib  \
-"../../../../../modules/src/rtl/cp_rm.vhd" \
-"../../../../Equalizer_design.gen/sources_1/ip/cmpy_0/sim/cmpy_0.vhd" \
-"../../../../../modules/src/rtl/complex_mult_sum/rtl/complex_mult_sum.vhd" \
 "../../../../../modules/src/rtl/axis_splitter.vhd" \
-"../../../../../modules/src/rtl/conj.vhd" \
 "../../../../../modules/src/rtl/cp_rm2.vhd" \
 "../../../../../modules/src/rtl/delay.vhd" \
+"../../../../../modules/src/rtl/cp_rm.vhd" \
+"../../../../../modules/src/rtl/conj.vhd" \
+"../../../../../modules/src/rtl/sum.vhd" \
 "../../../../Equalizer_design.gen/sources_1/ip/cordic_0/sim/cordic_0.vhd" \
 "../../../../../modules/src/rtl/angle.vhd" \
+"../../../../Equalizer_design.gen/sources_1/ip/cmpy_0/sim/cmpy_0.vhd" \
+"../../../../../modules/src/rtl/complex_mult/rtl/complex_mult.vhd" \
 
 # Do not sort compile order
 nosort

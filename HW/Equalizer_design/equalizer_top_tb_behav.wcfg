@@ -11,15 +11,15 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="0.000 ns"></ZoomStartTime>
-      <ZoomEndTime time="103.577 ns"></ZoomEndTime>
-      <Cursor1Time time="1,504.000 ns"></Cursor1Time>
+      <ZoomStartTime time="1,539.959 ns"></ZoomStartTime>
+      <ZoomEndTime time="1,556.809 ns"></ZoomEndTime>
+      <Cursor1Time time="1,554.000 ns"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="280"></NameColumnWidth>
-      <ValueColumnWidth column_width="84"></ValueColumnWidth>
+      <NameColumnWidth column_width="278"></NameColumnWidth>
+      <ValueColumnWidth column_width="58"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="10" />
+   <WVObjectSize size="12" />
    <wvobject fp_name="/equalizer_top_tb/fd" type="array">
       <obj_property name="ElementShortName">fd[31:0]</obj_property>
       <obj_property name="ObjectShortName">fd[31:0]</obj_property>
@@ -50,9 +50,12 @@
       <wvobject fp_name="group249" type="group">
          <obj_property name="label">S_CP_AXIS</obj_property>
          <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="isExpanded"></obj_property>
          <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/cp_rm_0/inst/s_axis_tdata" type="array">
             <obj_property name="ElementShortName">s_axis_tdata[127:0]</obj_property>
             <obj_property name="ObjectShortName">s_axis_tdata[127:0]</obj_property>
+            <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+            <obj_property name="isExpanded"></obj_property>
          </wvobject>
          <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/cp_rm_0/inst/s_axis_tvalid" type="logic">
             <obj_property name="ElementShortName">s_axis_tvalid</obj_property>
@@ -307,106 +310,6 @@
          <obj_property name="ObjectShortName">i_tlast_symbol</obj_property>
       </wvobject>
    </wvobject>
-   <wvobject fp_name="group961" type="group">
-      <obj_property name="label">MULT_SUM</obj_property>
-      <obj_property name="DisplayName">label</obj_property>
-      <obj_property name="isExpanded"></obj_property>
-      <wvobject fp_name="group387" type="group">
-         <obj_property name="label">S_MULT0_AXIS</obj_property>
-         <obj_property name="DisplayName">label</obj_property>
-         <obj_property name="isExpanded"></obj_property>
-         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/complex_mult_sum_0/inst/s_axis0_tdata" type="array">
-            <obj_property name="ElementShortName">s_axis0_tdata[127:0]</obj_property>
-            <obj_property name="ObjectShortName">s_axis0_tdata[127:0]</obj_property>
-         </wvobject>
-         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/complex_mult_sum_0/inst/s_axis0_tvalid" type="logic">
-            <obj_property name="ElementShortName">s_axis0_tvalid</obj_property>
-            <obj_property name="ObjectShortName">s_axis0_tvalid</obj_property>
-         </wvobject>
-         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/complex_mult_sum_0/inst/s_axis0_tid" type="array">
-            <obj_property name="ElementShortName">s_axis0_tid[7:0]</obj_property>
-            <obj_property name="ObjectShortName">s_axis0_tid[7:0]</obj_property>
-         </wvobject>
-         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/complex_mult_sum_0/inst/s_axis0_tuser" type="array">
-            <obj_property name="ElementShortName">s_axis0_tuser[7:0]</obj_property>
-            <obj_property name="ObjectShortName">s_axis0_tuser[7:0]</obj_property>
-         </wvobject>
-         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/complex_mult_sum_0/inst/s_axis0_tlast" type="logic">
-            <obj_property name="ElementShortName">s_axis0_tlast</obj_property>
-            <obj_property name="ObjectShortName">s_axis0_tlast</obj_property>
-         </wvobject>
-      </wvobject>
-      <wvobject fp_name="group388" type="group">
-         <obj_property name="label">S_MIULT1_AXIS</obj_property>
-         <obj_property name="DisplayName">label</obj_property>
-         <obj_property name="isExpanded"></obj_property>
-         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/complex_mult_sum_0/inst/s_axis1_tdata" type="array">
-            <obj_property name="ElementShortName">s_axis1_tdata[127:0]</obj_property>
-            <obj_property name="ObjectShortName">s_axis1_tdata[127:0]</obj_property>
-         </wvobject>
-         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/complex_mult_sum_0/inst/s_axis1_tvalid" type="logic">
-            <obj_property name="ElementShortName">s_axis1_tvalid</obj_property>
-            <obj_property name="ObjectShortName">s_axis1_tvalid</obj_property>
-         </wvobject>
-         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/complex_mult_sum_0/inst/s_axis1_tid" type="array">
-            <obj_property name="ElementShortName">s_axis1_tid[7:0]</obj_property>
-            <obj_property name="ObjectShortName">s_axis1_tid[7:0]</obj_property>
-         </wvobject>
-         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/complex_mult_sum_0/inst/s_axis1_tuser" type="array">
-            <obj_property name="ElementShortName">s_axis1_tuser[7:0]</obj_property>
-            <obj_property name="ObjectShortName">s_axis1_tuser[7:0]</obj_property>
-         </wvobject>
-         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/complex_mult_sum_0/inst/s_axis1_tlast" type="logic">
-            <obj_property name="ElementShortName">s_axis1_tlast</obj_property>
-            <obj_property name="ObjectShortName">s_axis1_tlast</obj_property>
-         </wvobject>
-         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/complex_mult_sum_0/inst/out_tvalid" type="array">
-            <obj_property name="ElementShortName">out_tvalid[3:0]</obj_property>
-            <obj_property name="ObjectShortName">out_tvalid[3:0]</obj_property>
-         </wvobject>
-         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/complex_mult_sum_0/inst/out_tdata" type="array">
-            <obj_property name="ElementShortName">out_tdata[255:0]</obj_property>
-            <obj_property name="ObjectShortName">out_tdata[255:0]</obj_property>
-         </wvobject>
-         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/complex_mult_sum_0/inst/tlast_pipe" type="array">
-            <obj_property name="ElementShortName">tlast_pipe[5:0]</obj_property>
-            <obj_property name="ObjectShortName">tlast_pipe[5:0]</obj_property>
-         </wvobject>
-         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/complex_mult_sum_0/inst/tlast" type="logic">
-            <obj_property name="ElementShortName">tlast</obj_property>
-            <obj_property name="ObjectShortName">tlast</obj_property>
-         </wvobject>
-         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/complex_mult_sum_0/inst/r_tlast" type="logic">
-            <obj_property name="ElementShortName">r_tlast</obj_property>
-            <obj_property name="ObjectShortName">r_tlast</obj_property>
-         </wvobject>
-         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/complex_mult_sum_0/inst/accum_data" type="array">
-            <obj_property name="ElementShortName">accum_data[255:0]</obj_property>
-            <obj_property name="ObjectShortName">accum_data[255:0]</obj_property>
-         </wvobject>
-         <wvobject fp_name="group312" type="group">
-            <obj_property name="label">M_MULT_AXIS</obj_property>
-            <obj_property name="DisplayName">label</obj_property>
-            <obj_property name="isExpanded"></obj_property>
-            <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/complex_mult_sum_0/inst/m_axis_tdata" type="array">
-               <obj_property name="ElementShortName">m_axis_tdata[255:0]</obj_property>
-               <obj_property name="ObjectShortName">m_axis_tdata[255:0]</obj_property>
-            </wvobject>
-            <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/complex_mult_sum_0/inst/m_axis_tvalid" type="logic">
-               <obj_property name="ElementShortName">m_axis_tvalid</obj_property>
-               <obj_property name="ObjectShortName">m_axis_tvalid</obj_property>
-            </wvobject>
-            <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/complex_mult_sum_0/inst/m_axis_tid" type="array">
-               <obj_property name="ElementShortName">m_axis_tid[7:0]</obj_property>
-               <obj_property name="ObjectShortName">m_axis_tid[7:0]</obj_property>
-            </wvobject>
-            <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/complex_mult_sum_0/inst/m_axis_tuser" type="array">
-               <obj_property name="ElementShortName">m_axis_tuser[7:0]</obj_property>
-               <obj_property name="ObjectShortName">m_axis_tuser[7:0]</obj_property>
-            </wvobject>
-         </wvobject>
-      </wvobject>
-   </wvobject>
    <wvobject fp_name="group1064" type="group">
       <obj_property name="label">BUFF_1</obj_property>
       <obj_property name="DisplayName">label</obj_property>
@@ -469,35 +372,207 @@
          </wvobject>
       </wvobject>
    </wvobject>
+   <wvobject fp_name="group2755" type="group">
+      <obj_property name="label">COMPLEX MULT</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject fp_name="group2752" type="group">
+         <obj_property name="label">S_AXIS0</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="isExpanded"></obj_property>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/complex_mult_0/inst/s_axis0_tdata" type="array">
+            <obj_property name="ElementShortName">s_axis0_tdata[127:0]</obj_property>
+            <obj_property name="ObjectShortName">s_axis0_tdata[127:0]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/complex_mult_0/inst/s_axis0_tvalid" type="logic">
+            <obj_property name="ElementShortName">s_axis0_tvalid</obj_property>
+            <obj_property name="ObjectShortName">s_axis0_tvalid</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/complex_mult_0/inst/s_axis0_tid" type="array">
+            <obj_property name="ElementShortName">s_axis0_tid[7:0]</obj_property>
+            <obj_property name="ObjectShortName">s_axis0_tid[7:0]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/complex_mult_0/inst/s_axis0_tuser" type="array">
+            <obj_property name="ElementShortName">s_axis0_tuser[7:0]</obj_property>
+            <obj_property name="ObjectShortName">s_axis0_tuser[7:0]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/complex_mult_0/inst/s_axis0_tlast" type="logic">
+            <obj_property name="ElementShortName">s_axis0_tlast</obj_property>
+            <obj_property name="ObjectShortName">s_axis0_tlast</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="group2753" type="group">
+         <obj_property name="label">S_AXIS1</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="isExpanded"></obj_property>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/complex_mult_0/inst/s_axis1_tdata" type="array">
+            <obj_property name="ElementShortName">s_axis1_tdata[127:0]</obj_property>
+            <obj_property name="ObjectShortName">s_axis1_tdata[127:0]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/complex_mult_0/inst/s_axis1_tvalid" type="logic">
+            <obj_property name="ElementShortName">s_axis1_tvalid</obj_property>
+            <obj_property name="ObjectShortName">s_axis1_tvalid</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/complex_mult_0/inst/s_axis1_tid" type="array">
+            <obj_property name="ElementShortName">s_axis1_tid[7:0]</obj_property>
+            <obj_property name="ObjectShortName">s_axis1_tid[7:0]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/complex_mult_0/inst/s_axis1_tuser" type="array">
+            <obj_property name="ElementShortName">s_axis1_tuser[7:0]</obj_property>
+            <obj_property name="ObjectShortName">s_axis1_tuser[7:0]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/complex_mult_0/inst/s_axis1_tlast" type="logic">
+            <obj_property name="ElementShortName">s_axis1_tlast</obj_property>
+            <obj_property name="ObjectShortName">s_axis1_tlast</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="group2754" type="group">
+         <obj_property name="label">M_AXIS</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="isExpanded"></obj_property>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/complex_mult_0/inst/m_axis_tdata" type="array">
+            <obj_property name="ElementShortName">m_axis_tdata[255:0]</obj_property>
+            <obj_property name="ObjectShortName">m_axis_tdata[255:0]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/complex_mult_0/inst/m_axis_tvalid" type="logic">
+            <obj_property name="ElementShortName">m_axis_tvalid</obj_property>
+            <obj_property name="ObjectShortName">m_axis_tvalid</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/complex_mult_0/inst/m_axis_tid" type="array">
+            <obj_property name="ElementShortName">m_axis_tid[7:0]</obj_property>
+            <obj_property name="ObjectShortName">m_axis_tid[7:0]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/complex_mult_0/inst/m_axis_tuser" type="array">
+            <obj_property name="ElementShortName">m_axis_tuser[7:0]</obj_property>
+            <obj_property name="ObjectShortName">m_axis_tuser[7:0]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/complex_mult_0/inst/m_axis_tlast" type="logic">
+            <obj_property name="ElementShortName">m_axis_tlast</obj_property>
+            <obj_property name="ObjectShortName">m_axis_tlast</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="group762" type="group">
+         <obj_property name="label">Mult_a_0_s</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/complex_mult_0/inst/\gen_mults(0)\/cmpy_inst1/s_axis_a_tvalid" type="logic">
+            <obj_property name="ElementShortName">s_axis_a_tvalid</obj_property>
+            <obj_property name="ObjectShortName">s_axis_a_tvalid</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/complex_mult_0/inst/\gen_mults(0)\/cmpy_inst1/s_axis_a_tdata" type="array">
+            <obj_property name="ElementShortName">s_axis_a_tdata[31:0]</obj_property>
+            <obj_property name="ObjectShortName">s_axis_a_tdata[31:0]</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="group795" type="group">
+         <obj_property name="label">Mult_b_0_s</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/complex_mult_0/inst/\gen_mults(0)\/cmpy_inst1/s_axis_b_tvalid" type="logic">
+            <obj_property name="ElementShortName">s_axis_b_tvalid</obj_property>
+            <obj_property name="ObjectShortName">s_axis_b_tvalid</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/complex_mult_0/inst/\gen_mults(0)\/cmpy_inst1/s_axis_b_tdata" type="array">
+            <obj_property name="ElementShortName">s_axis_b_tdata[31:0]</obj_property>
+            <obj_property name="ObjectShortName">s_axis_b_tdata[31:0]</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="group796" type="group">
+         <obj_property name="label">Mult_out_0_m</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/complex_mult_0/inst/\gen_mults(0)\/cmpy_inst1/m_axis_dout_tvalid" type="logic">
+            <obj_property name="ElementShortName">m_axis_dout_tvalid</obj_property>
+            <obj_property name="ObjectShortName">m_axis_dout_tvalid</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/complex_mult_0/inst/\gen_mults(0)\/cmpy_inst1/m_axis_dout_tdata" type="array">
+            <obj_property name="ElementShortName">m_axis_dout_tdata[79:0]</obj_property>
+            <obj_property name="ObjectShortName">m_axis_dout_tdata[79:0]</obj_property>
+         </wvobject>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="group1208" type="group">
+      <obj_property name="label">SUM</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject fp_name="group1206" type="group">
+         <obj_property name="label">S_AXIS</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/s_axis_tdata" type="array">
+            <obj_property name="ElementShortName">s_axis_tdata[255:0]</obj_property>
+            <obj_property name="ObjectShortName">s_axis_tdata[255:0]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/s_axis_tvalid" type="logic">
+            <obj_property name="ElementShortName">s_axis_tvalid</obj_property>
+            <obj_property name="ObjectShortName">s_axis_tvalid</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/s_axis_tuser" type="array">
+            <obj_property name="ElementShortName">s_axis_tuser[7:0]</obj_property>
+            <obj_property name="ObjectShortName">s_axis_tuser[7:0]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/s_axis_tid" type="array">
+            <obj_property name="ElementShortName">s_axis_tid[7:0]</obj_property>
+            <obj_property name="ObjectShortName">s_axis_tid[7:0]</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="group1207" type="group">
+         <obj_property name="label">M_AXIS</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="isExpanded"></obj_property>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/m_axis_tdata" type="array">
+            <obj_property name="ElementShortName">m_axis_tdata[79:0]</obj_property>
+            <obj_property name="ObjectShortName">m_axis_tdata[79:0]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/m_axis_tvalid" type="logic">
+            <obj_property name="ElementShortName">m_axis_tvalid</obj_property>
+            <obj_property name="ObjectShortName">m_axis_tvalid</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/m_axis_tuser" type="array">
+            <obj_property name="ElementShortName">m_axis_tuser[7:0]</obj_property>
+            <obj_property name="ObjectShortName">m_axis_tuser[7:0]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/m_axis_tid" type="array">
+            <obj_property name="ElementShortName">m_axis_tid[7:0]</obj_property>
+            <obj_property name="ObjectShortName">m_axis_tid[7:0]</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/r_tlast" type="logic">
+         <obj_property name="ElementShortName">r_tlast</obj_property>
+         <obj_property name="ObjectShortName">r_tlast</obj_property>
+      </wvobject>
+      <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/accum_data" type="array">
+         <obj_property name="ElementShortName">accum_data[79:0]</obj_property>
+         <obj_property name="ObjectShortName">accum_data[79:0]</obj_property>
+      </wvobject>
+   </wvobject>
    <wvobject fp_name="group1417" type="group">
       <obj_property name="label">ANGLE</obj_property>
       <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
       <wvobject fp_name="group1415" type="group">
          <obj_property name="label">S_ANGLE_AXIS</obj_property>
          <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="isExpanded"></obj_property>
          <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/angle_0/inst/s_axis_tdata" type="array">
-            <obj_property name="ElementShortName">s_axis_tdata[255:0]</obj_property>
-            <obj_property name="ObjectShortName">s_axis_tdata[255:0]</obj_property>
+            <obj_property name="ElementShortName">s_axis_tdata[79:0]</obj_property>
+            <obj_property name="ObjectShortName">s_axis_tdata[79:0]</obj_property>
          </wvobject>
          <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/angle_0/inst/s_axis_tvalid" type="logic">
             <obj_property name="ElementShortName">s_axis_tvalid</obj_property>
             <obj_property name="ObjectShortName">s_axis_tvalid</obj_property>
          </wvobject>
-         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/angle_0/inst/s_axis_tuser" type="logic">
-            <obj_property name="ElementShortName">s_axis_tuser</obj_property>
-            <obj_property name="ObjectShortName">s_axis_tuser</obj_property>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/angle_0/inst/s_axis_tuser" type="array">
+            <obj_property name="ElementShortName">s_axis_tuser[7:0]</obj_property>
+            <obj_property name="ObjectShortName">s_axis_tuser[7:0]</obj_property>
          </wvobject>
-         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/angle_0/inst/s_axis_tid" type="logic">
-            <obj_property name="ElementShortName">s_axis_tid</obj_property>
-            <obj_property name="ObjectShortName">s_axis_tid</obj_property>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/angle_0/inst/s_axis_tid" type="array">
+            <obj_property name="ElementShortName">s_axis_tid[7:0]</obj_property>
+            <obj_property name="ObjectShortName">s_axis_tid[7:0]</obj_property>
          </wvobject>
       </wvobject>
       <wvobject fp_name="group1416" type="group">
          <obj_property name="label">M_ANGLE_AXIS</obj_property>
          <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="isExpanded"></obj_property>
          <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/angle_0/inst/m_axis_tdata" type="array">
-            <obj_property name="ElementShortName">m_axis_tdata[127:0]</obj_property>
-            <obj_property name="ObjectShortName">m_axis_tdata[127:0]</obj_property>
+            <obj_property name="ElementShortName">m_axis_tdata[39:0]</obj_property>
+            <obj_property name="ObjectShortName">m_axis_tdata[39:0]</obj_property>
          </wvobject>
          <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/angle_0/inst/m_axis_tvalid" type="logic">
             <obj_property name="ElementShortName">m_axis_tvalid</obj_property>
@@ -507,10 +582,89 @@
             <obj_property name="ElementShortName">m_axis_tuser[7:0]</obj_property>
             <obj_property name="ObjectShortName">m_axis_tuser[7:0]</obj_property>
          </wvobject>
-         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/angle_0/inst/m_axis_tid" type="logic">
-            <obj_property name="ElementShortName">m_axis_tid</obj_property>
-            <obj_property name="ObjectShortName">m_axis_tid</obj_property>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/angle_0/inst/m_axis_tid" type="array">
+            <obj_property name="ElementShortName">m_axis_tid[7:0]</obj_property>
+            <obj_property name="ObjectShortName">m_axis_tid[7:0]</obj_property>
          </wvobject>
+         <wvobject fp_name="group2233" type="group">
+            <obj_property name="label">m_cordic_axis</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="isExpanded"></obj_property>
+            <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/angle_0/inst/cordic_inst/m_axis_dout_tvalid" type="logic">
+               <obj_property name="ElementShortName">m_axis_dout_tvalid</obj_property>
+               <obj_property name="ObjectShortName">m_axis_dout_tvalid</obj_property>
+            </wvobject>
+            <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/angle_0/inst/cordic_inst/m_axis_dout_tdata" type="array">
+               <obj_property name="ElementShortName">m_axis_dout_tdata[79:0]</obj_property>
+               <obj_property name="ObjectShortName">m_axis_dout_tdata[79:0]</obj_property>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="group275" type="group">
+      <obj_property name="label">INPUT</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject fp_name="/equalizer_top_tb/i_data1" type="array">
+         <obj_property name="ElementShortName">i_data1[15:0]</obj_property>
+         <obj_property name="ObjectShortName">i_data1[15:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+         <obj_property name="WaveformStyle">STYLE_ANALOG</obj_property>
+         <obj_property name="CellHeight">100</obj_property>
+         <obj_property name="AnalogYRangeType">ANALOG_YRANGETYPE_AUTO</obj_property>
+         <obj_property name="AnalogYRangeMin">0.000000</obj_property>
+         <obj_property name="AnalogYRRangeMax">0.000000</obj_property>
+         <obj_property name="AnalogInterpolation">ANALOG_INTERPOLATION_LINEAR</obj_property>
+         <obj_property name="AnalogOffscale">ANALOG_OFFSCALE_HIDE</obj_property>
+         <obj_property name="AnalogHorizLine">0.000000</obj_property>
+      </wvobject>
+      <wvobject fp_name="/equalizer_top_tb/q_data1" type="array">
+         <obj_property name="ElementShortName">q_data1[15:0]</obj_property>
+         <obj_property name="ObjectShortName">q_data1[15:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+         <obj_property name="WaveformStyle">STYLE_ANALOG</obj_property>
+         <obj_property name="CellHeight">100</obj_property>
+      </wvobject>
+      <wvobject fp_name="/equalizer_top_tb/i_data2" type="array">
+         <obj_property name="ElementShortName">i_data2[15:0]</obj_property>
+         <obj_property name="ObjectShortName">i_data2[15:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+         <obj_property name="WaveformStyle">STYLE_ANALOG</obj_property>
+         <obj_property name="CellHeight">100</obj_property>
+      </wvobject>
+      <wvobject fp_name="/equalizer_top_tb/q_data2" type="array">
+         <obj_property name="ElementShortName">q_data2[15:0]</obj_property>
+         <obj_property name="ObjectShortName">q_data2[15:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+         <obj_property name="WaveformStyle">STYLE_ANALOG</obj_property>
+         <obj_property name="CellHeight">100</obj_property>
+      </wvobject>
+      <wvobject fp_name="/equalizer_top_tb/i_data3" type="array">
+         <obj_property name="ElementShortName">i_data3[15:0]</obj_property>
+         <obj_property name="ObjectShortName">i_data3[15:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+         <obj_property name="WaveformStyle">STYLE_ANALOG</obj_property>
+         <obj_property name="CellHeight">100</obj_property>
+      </wvobject>
+      <wvobject fp_name="/equalizer_top_tb/q_data3" type="array">
+         <obj_property name="ElementShortName">q_data3[15:0]</obj_property>
+         <obj_property name="ObjectShortName">q_data3[15:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+         <obj_property name="WaveformStyle">STYLE_ANALOG</obj_property>
+         <obj_property name="CellHeight">100</obj_property>
+      </wvobject>
+      <wvobject fp_name="/equalizer_top_tb/i_data4" type="array">
+         <obj_property name="ElementShortName">i_data4[15:0]</obj_property>
+         <obj_property name="ObjectShortName">i_data4[15:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+         <obj_property name="WaveformStyle">STYLE_ANALOG</obj_property>
+         <obj_property name="CellHeight">100</obj_property>
+      </wvobject>
+      <wvobject fp_name="/equalizer_top_tb/q_data4" type="array">
+         <obj_property name="ElementShortName">q_data4[15:0]</obj_property>
+         <obj_property name="ObjectShortName">q_data4[15:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+         <obj_property name="WaveformStyle">STYLE_ANALOG</obj_property>
+         <obj_property name="CellHeight">100</obj_property>
       </wvobject>
    </wvobject>
 </wave_config>

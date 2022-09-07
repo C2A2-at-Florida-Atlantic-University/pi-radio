@@ -47,14 +47,14 @@
 // DO NOT MODIFY THIS FILE.
 
 
-// IP VLNV: xilinx.com:module_ref:complex_mult_sum:1.0
+// IP VLNV: xilinx.com:module_ref:complex_mult:1.0
 // IP Revision: 1
 
 `timescale 1ns/1ps
 
 (* IP_DEFINITION_SOURCE = "module_ref" *)
 (* DowngradeIPIdentifiedWarnings = "yes" *)
-module design_1_complex_mult_sum_0_0 (
+module design_1_complex_mult_0_0 (
   s_axis_aclk,
   s_axis_aresetn,
   s_axis0_tdata,
@@ -70,7 +70,8 @@ module design_1_complex_mult_sum_0_0 (
   m_axis_tdata,
   m_axis_tvalid,
   m_axis_tid,
-  m_axis_tuser
+  m_axis_tuser,
+  m_axis_tlast
 );
 
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME s_axis_aclk, ASSOCIATED_RESET s_axis_aresetn, ASSOCIATED_BUSIF s_axis_aclk:s_axis0:s_axis1:m_axis, FREQ_HZ 250000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN design_1_s_axis_aclk_0, INSERT_VIP 0" *)
@@ -107,11 +108,13 @@ output wire [255 : 0] m_axis_tdata;
 output wire m_axis_tvalid;
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 m_axis TID" *)
 output wire [7 : 0] m_axis_tid;
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME m_axis, TDATA_NUM_BYTES 32, TDEST_WIDTH 0, TID_WIDTH 8, TUSER_WIDTH 8, HAS_TREADY 0, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 0, FREQ_HZ 250000000, PHASE 0.0, CLK_DOMAIN design_1_s_axis_aclk_0, LAYERED_METADATA undef, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 m_axis TUSER" *)
 output wire [7 : 0] m_axis_tuser;
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME m_axis, TDATA_NUM_BYTES 32, TDEST_WIDTH 0, TID_WIDTH 8, TUSER_WIDTH 8, HAS_TREADY 0, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 1, FREQ_HZ 250000000, PHASE 0.0, CLK_DOMAIN design_1_s_axis_aclk_0, LAYERED_METADATA undef, INSERT_VIP 0" *)
+(* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 m_axis TLAST" *)
+output wire m_axis_tlast;
 
-  complex_mult_sum inst (
+  complex_mult inst (
     .s_axis_aclk(s_axis_aclk),
     .s_axis_aresetn(s_axis_aresetn),
     .s_axis0_tdata(s_axis0_tdata),
@@ -127,6 +130,7 @@ output wire [7 : 0] m_axis_tuser;
     .m_axis_tdata(m_axis_tdata),
     .m_axis_tvalid(m_axis_tvalid),
     .m_axis_tid(m_axis_tid),
-    .m_axis_tuser(m_axis_tuser)
+    .m_axis_tuser(m_axis_tuser),
+    .m_axis_tlast(m_axis_tlast)
   );
 endmodule
