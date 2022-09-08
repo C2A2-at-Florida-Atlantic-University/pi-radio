@@ -6,7 +6,7 @@
 module equalizer_top_tb();
 
   localparam                        CLOCK_PERIOD      = 4;
-  localparam                        CLOCK_CYCLE       = 2;
+  localparam                        CLOCK_CYCLE       = CLOCK_PERIOD/2;
   localparam                        c_PRECISION       = 32;
 
   int                               fd;
@@ -16,6 +16,7 @@ module equalizer_top_tb();
   int                               fd_mult_out_verif;
   int                               fd_sum;
   int                               fd_angle;
+  int                               fd_mixer;
 
   string                            line;
   logic [15:0]                      i_data1,q_data1;
@@ -49,8 +50,12 @@ module equalizer_top_tb();
 
   logic [39:0]                      sum_i, sum_q;
 
-  logic [39:0]                      angle;
-  real                              cordic_out_print;
+  real                              angle,cordic_out_print,cfo;
+  
+  logic [15:0]                      mixer_sample_i_1,mixer_sample_q_1;
+  logic [15:0]                      mixer_sample_i_2,mixer_sample_q_2;
+  logic [15:0]                      mixer_sample_i_3,mixer_sample_q_3;
+  logic [15:0]                      mixer_sample_i_4,mixer_sample_q_4;
 
 //---------------------------------------------------------------
 // DUT
@@ -80,8 +85,23 @@ module equalizer_top_tb();
 // Function to convert FIX data type of cordic output
 //---------------------------------------------------------------
   function real read_cordic_out;
-    input bit [c_PRECISION:0] cordic_out;
-    read_cordic_out                 = 1.23;
+    input logic [c_PRECISION:0] cordic_out;
+    real cordic_print = 0;
+    bit negative = 0;
+    if (cordic_out[c_PRECISION-1]) begin
+      negative                      <= 1;
+      cordic_out                    <= ~cordic_out + 1;
+
+    for (int i = 0; i < c_PRECISION-2; i++) begin
+      if (cordic_out[i])
+        cordic_print                <= cordic_print + $pow(2,-c_PRECISION+3+i);
+    end
+    
+    if (negative)
+      read_cordic_out               <= -1*cordic_print;
+    else
+      read_cordic_out               <= cordic_print;
+    end
   endfunction
 
 //---------------------------------------------------------------
@@ -314,15 +334,37 @@ module equalizer_top_tb();
 
     #(CLOCK_PERIOD*(c_PRECISION+344));
 
-    $fscanf(fd_angle,"%d\n",angle);
+    $fscanf(fd_angle,"%f\n",angle);
     $display("Expected angle value: %f",angle);
 
-    $display("Actual angle value: %d",$signed(DUT.design_1_i.angle_0.m_axis_tdata[c_PRECISION-1:0]));
+    $display("Actual angle value: %b",DUT.design_1_i.angle_0.m_axis_tdata[c_PRECISION-1:0]);
     cordic_out_print = read_cordic_out($signed(DUT.design_1_i.angle_0.m_axis_tdata[c_PRECISION-1:0]));
-    $display("Fix cordic conversion: %f",cordic_out_print);
+    $display("Actual angle value (converted): %f",cordic_out_print);
 
     $fclose(fd_angle);
 
+  end
+
+//---------------------------------------------------------------
+// Scoreboard mixer
+//---------------------------------------------------------------
+  initial begin
+    fd_mixer = $fopen("../../../../../modules/sim/mixer_samples.txt","r");
+    if (fd_mixer) $display("File was opened successfully: %0d ",fd_mixer);
+    else begin
+      $display("File was NOT opened successfylly: %0d",fd_mixer);
+      $stop;
+    end
+    
+    #(CLOCK_PERIOD*(c_PRECISION+335));
+    
+    for (int i = 0; i < 256; i++) begin
+      $fscanf(fd_mixer,"%f, %f\n%f, %f\n%f, %f\n%f, %f\n",mixer_sample_i_1,
+        mixer_sample_q_1,mixer_sample_i_2,mixer_sample_q_2,mixer_sample_i_3,
+        mixer_sample_q_3,mixer_sample_i_4,mixer_sample_q_4);
+    end
+    
+    $fclose(fd_mixer);
   end
 
 //---------------------------------------------------------------

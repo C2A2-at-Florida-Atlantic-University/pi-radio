@@ -6,9 +6,9 @@ verilog xil_defaultlib  --include "../../../../Equalizer_design.gen/sources_1/bd
 "../../../../Equalizer_design.ip_user_files/bd/design_1/ip/design_1_delay_0_0/sim/design_1_delay_0_0.v" \
 "../../../../Equalizer_design.ip_user_files/bd/design_1/ip/design_1_cp_rm_0_0/sim/design_1_cp_rm_0_0.v" \
 "../../../../Equalizer_design.ip_user_files/bd/design_1/ip/design_1_conj_0_0/sim/design_1_conj_0_0.v" \
+"../../../../Equalizer_design.ip_user_files/bd/design_1/ip/design_1_complex_mult_0_0/sim/design_1_complex_mult_0_0.v" \
 "../../../../Equalizer_design.ip_user_files/bd/design_1/ip/design_1_sum_0_0/sim/design_1_sum_0_0.v" \
 "../../../../Equalizer_design.ip_user_files/bd/design_1/ip/design_1_angle_0_0/sim/design_1_angle_0_0.v" \
-"../../../../Equalizer_design.ip_user_files/bd/design_1/ip/design_1_complex_mult_0_0/sim/design_1_complex_mult_0_0.v" \
 "../../../../Equalizer_design.ip_user_files/bd/design_1/sim/design_1.v" \
 "../../../../Equalizer_design.gen/sources_1/bd/design_1/hdl/design_1_wrapper.v" \
 

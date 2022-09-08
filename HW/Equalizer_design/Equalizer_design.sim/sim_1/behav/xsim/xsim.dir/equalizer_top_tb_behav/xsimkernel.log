@@ -1,7 +1,4 @@
-Running: xsim.dir/equalizer_top_tb_behav/xsimk.exe -simmode gui -wdb equalizer_top_tb_behav.wdb -simrunnum 0 -socket 51953
+Running: xsim.dir/equalizer_top_tb_behav/xsimk.exe -simmode gui -wdb equalizer_top_tb_behav.wdb -simrunnum 0 -socket 57624
 Design successfully loaded
-Design Loading Memory Usage: 19832 KB (Peak: 19832 KB)
-Design Loading CPU Usage: 15 ms
-Simulation completed
-Simulation Memory Usage: 22324 KB (Peak: 22324 KB)
-Simulation CPU Usage: 140 ms
+Design Loading Memory Usage: 19816 KB (Peak: 19816 KB)
+Design Loading CPU Usage: 30 ms
