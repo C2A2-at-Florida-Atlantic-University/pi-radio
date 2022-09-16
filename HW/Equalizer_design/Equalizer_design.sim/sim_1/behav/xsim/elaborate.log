@@ -1,6 +1,6 @@
 Vivado Simulator v2022.1
 Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
-Running: C:/Xilinx_2022.1/Vivado/2022.1/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L xbip_utils_v3_0_10 -L axi_utils_v2_0_6 -L xbip_pipe_v3_0_6 -L xbip_bram18k_v3_0_6 -L mult_gen_v12_0_18 -L cmpy_v6_0_21 -L c_reg_fd_v12_0_6 -L xbip_dsp48_wrapper_v3_0_4 -L xbip_dsp48_addsub_v3_0_6 -L xbip_addsub_v3_0_6 -L c_addsub_v12_0_14 -L cordic_v6_0_18 -L axis_infrastructure_v1_1_0 -L axis_data_fifo_v2_0_8 -L uvm -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot equalizer_top_tb_behav xil_defaultlib.equalizer_top_tb xil_defaultlib.glbl -log elaborate.log 
+Running: C:/Xilinx_2022.1/Vivado/2022.1/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L xbip_utils_v3_0_10 -L axi_utils_v2_0_6 -L xbip_pipe_v3_0_6 -L xbip_bram18k_v3_0_6 -L mult_gen_v12_0_18 -L cmpy_v6_0_21 -L c_reg_fd_v12_0_6 -L xbip_dsp48_wrapper_v3_0_4 -L xbip_dsp48_addsub_v3_0_6 -L xbip_addsub_v3_0_6 -L c_addsub_v12_0_14 -L cordic_v6_0_18 -L xbip_dsp48_multadd_v3_0_6 -L dds_compiler_v6_0_22 -L axis_infrastructure_v1_1_0 -L axis_data_fifo_v2_0_8 -L uvm -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot equalizer_top_tb_behav xil_defaultlib.equalizer_top_tb xil_defaultlib.glbl -log elaborate.log 
 Using 2 slave threads.
 Starting static elaboration
 Pass Through NonSizing Optimizer
@@ -14,15 +14,28 @@ Compiling package ieee.std_logic_1164
 Compiling package ieee.numeric_std
 Compiling package ieee.std_logic_arith
 Compiling package ieee.std_logic_unsigned
-Compiling package cordic_v6_0_18.cordic_v6_0_18_viv_comp
 Compiling package xbip_utils_v3_0_10.xbip_utils_v3_0_10_pkg
+Compiling package xbip_utils_v3_0_10.xcc_utils_v3_0
+Compiling package dds_compiler_v6_0_22.dds_compiler_v6_0_22_viv_comp
+Compiling package ieee.std_logic_signed
+Compiling package dds_compiler_v6_0_22.pkg_dds_compiler_v6_0_22
+Compiling package dds_compiler_v6_0_22.dds_compiler_v6_0_22_hdl_comps
 Compiling package xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv_comp
 Compiling package axi_utils_v2_0_6.axi_utils_v2_0_6_pkg
 Compiling package ieee.math_real
 Compiling package axi_utils_v2_0_6.global_util_pkg
 Compiling package axi_utils_v2_0_6.axi_utils_comps
+Compiling package unisim.vcomponents
+Compiling package dds_compiler_v6_0_22.pkg_betas
+Compiling package dds_compiler_v6_0_22.pkg_alphas
+Compiling package cmpy_v6_0_21.cmpy_v6_0_21_viv_comp
 Compiling package mult_gen_v12_0_18.mult_gen_v12_0_18_pkg
-Compiling package ieee.std_logic_signed
+Compiling package cmpy_v6_0_21.cmpy_v6_0_21_pkg
+Compiling package mult_gen_v12_0_18.dsp_pkg
+Compiling package ieee.vital_timing
+Compiling package ieee.vital_primitives
+Compiling package unisim.vpkg
+Compiling package cordic_v6_0_18.cordic_v6_0_18_viv_comp
 Compiling package cordic_v6_0_18.cordic_pack
 Compiling package cordic_v6_0_18.cordic_hdl_comps
 Compiling package c_addsub_v12_0_14.c_addsub_v12_0_14_viv_comp
@@ -30,13 +43,59 @@ Compiling package xbip_addsub_v3_0_6.xbip_addsub_v3_0_6_viv_comp
 Compiling package c_addsub_v12_0_14.c_addsub_v12_0_14_pkg
 Compiling package c_addsub_v12_0_14.c_addsub_v12_0_14_pkg_legacy
 Compiling package c_reg_fd_v12_0_6.c_reg_fd_v12_0_6_viv_comp
-Compiling package unisim.vcomponents
-Compiling package cmpy_v6_0_21.cmpy_v6_0_21_viv_comp
-Compiling package cmpy_v6_0_21.cmpy_v6_0_21_pkg
-Compiling package mult_gen_v12_0_18.dsp_pkg
-Compiling package ieee.vital_timing
-Compiling package ieee.vital_primitives
-Compiling package unisim.vpkg
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture synth of entity dds_compiler_v6_0_22.dds_compiler_v6_0_22_rdy [\dds_compiler_v6_0_22_rdy(c_has_...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture synth of entity dds_compiler_v6_0_22.pipe_add [\pipe_add(c_width=32,c_seg_width...]
+Compiling architecture synth of entity dds_compiler_v6_0_22.accum [\accum(c_xdevicefamily="zynquplu...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture synth of entity dds_compiler_v6_0_22.sin_cos [\sin_cos(c_xdevicefamily="zynqup...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
+Compiling architecture synth of entity dds_compiler_v6_0_22.dds_compiler_v6_0_22_core [\dds_compiler_v6_0_22_core(c_xde...]
+Compiling architecture synth of entity dds_compiler_v6_0_22.dds_compiler_v6_0_22_viv [\dds_compiler_v6_0_22_viv(c_xdev...]
+Compiling architecture xilinx of entity dds_compiler_v6_0_22.dds_compiler_v6_0_22 [\dds_compiler_v6_0_22(c_xdevicef...]
+Compiling architecture dds_compiler_0_arch of entity xil_defaultlib.dds_compiler_0 [dds_compiler_0_default]
+Compiling architecture rtl of entity xil_defaultlib.dds_top [dds_top_default]
+Compiling module xil_defaultlib.design_1_dds_top_0_0
+Compiling architecture xilinx of entity cmpy_v6_0_21.delay_line [\delay_line(c_xdevicefamily="zyn...]
+Compiling architecture xilinx of entity cmpy_v6_0_21.delay_line [\delay_line(c_xdevicefamily="zyn...]
+Compiling architecture xilinx of entity cmpy_v6_0_21.delay_line [\delay_line(c_xdevicefamily="zyn...]
+Compiling architecture xilinx of entity cmpy_v6_0_21.delay_line [\delay_line(c_xdevicefamily="zyn...]
+Compiling architecture xilinx of entity cmpy_v6_0_21.delay_line [\delay_line(c_xdevicefamily="zyn...]
+Compiling architecture xilinx of entity mult_gen_v12_0_18.delay_line [\delay_line(c_xdevicefamily="zyn...]
+Compiling architecture xilinx of entity mult_gen_v12_0_18.delay_line [\delay_line(c_xdevicefamily="zyn...]
+Compiling architecture dsp48e2_v of entity unisim.DSP48E2 [\DSP48E2(acascreg=2,alumodereg=0...]
+Compiling architecture xilinx of entity mult_gen_v12_0_18.delay_line [\delay_line(c_xdevicefamily="zyn...]
+Compiling architecture xilinx of entity mult_gen_v12_0_18.op_resize [\op_resize(ai_width=17,ao_width=...]
+Compiling architecture xilinx of entity mult_gen_v12_0_18.dsp [\dsp(c_xdevicefamily="zynquplus"...]
+Compiling architecture xilinx of entity cmpy_v6_0_21.cmpy_3_dsp48_mult [\cmpy_3_dsp48_mult(c_xdevicefami...]
+Compiling architecture xilinx of entity mult_gen_v12_0_18.delay_line [\delay_line(c_xdevicefamily="zyn...]
+Compiling architecture xilinx of entity mult_gen_v12_0_18.delay_line [\delay_line(c_xdevicefamily="zyn...]
+Compiling architecture dsp48e2_v of entity unisim.DSP48E2 [\DSP48E2(alumodereg=0,amultsel="...]
+Compiling architecture xilinx of entity mult_gen_v12_0_18.dsp [\dsp(c_xdevicefamily="zynquplus"...]
+Compiling architecture xilinx of entity cmpy_v6_0_21.cmpy_3_dsp48_mult [\cmpy_3_dsp48_mult(c_xdevicefami...]
+Compiling architecture xilinx of entity mult_gen_v12_0_18.dsp [\dsp(c_xdevicefamily="zynquplus"...]
+Compiling architecture xilinx of entity cmpy_v6_0_21.cmpy_3_dsp48_mult [\cmpy_3_dsp48_mult(c_xdevicefami...]
+Compiling architecture xilinx of entity cmpy_v6_0_21.input_negation [\input_negation(c_xdevicefamily=...]
+Compiling architecture xilinx of entity cmpy_v6_0_21.delay_line [\delay_line(c_xdevicefamily="zyn...]
+Compiling architecture xilinx of entity cmpy_v6_0_21.delay_line [\delay_line(c_xdevicefamily="zyn...]
+Compiling architecture xilinx of entity cmpy_v6_0_21.cmpy_3_dsp48 [\cmpy_3_dsp48(c_xdevicefamily="z...]
+Compiling architecture xilinx of entity cmpy_v6_0_21.cmpy_v6_0_21_synth [\cmpy_v6_0_21_synth(c_xdevicefam...]
+Compiling architecture xilinx of entity cmpy_v6_0_21.cmpy_v6_0_21_viv [\cmpy_v6_0_21_viv(c_xdevicefamil...]
+Compiling architecture xilinx of entity cmpy_v6_0_21.cmpy_v6_0_21 [\cmpy_v6_0_21(c_xdevicefamily="z...]
+Compiling architecture cmpy_0_arch of entity xil_defaultlib.cmpy_0 [cmpy_0_default]
+Compiling architecture rtl of entity xil_defaultlib.mixer [mixer_default]
+Compiling module xil_defaultlib.design_1_mixer_0_0
+Compiling module xil_defaultlib.Mixer_imp_1E3SM51
 Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
 Compiling architecture structural of entity c_reg_fd_v12_0_6.c_reg_fd_v12_0_6_viv [\c_reg_fd_v12_0_6_viv(c_width=39...]
 Compiling architecture muxcy_v of entity unisim.MUXCY [muxcy_default]
@@ -151,59 +210,42 @@ Compiling module xpm.xpm_fifo_base(FIFO_WRITE_DEPTH=5...
 Compiling module xpm.xpm_fifo_axis(FIFO_DEPTH=512,TDA...
 Compiling module axis_data_fifo_v2_0_8.axis_data_fifo_v2_0_8_top(C_FAMI...
 Compiling module xil_defaultlib.design_1_axis_data_fifo_0_0
+Compiling module xpm.xpm_counter_updn(COUNTER_WIDTH=1...
+Compiling module xpm.xpm_memory_base(MEMORY_TYPE=1,ME...
+Compiling module xpm.xpm_fifo_base(FIFO_WRITE_DEPTH=1...
+Compiling module xpm.xpm_fifo_axis(FIFO_DEPTH=1024,TD...
+Compiling module axis_data_fifo_v2_0_8.axis_data_fifo_v2_0_8_top(C_FAMI...
+Compiling module xil_defaultlib.design_1_axis_data_fifo_1_0
 Compiling architecture rtl of entity xil_defaultlib.axis_splitter [axis_splitter_default]
 Compiling module xil_defaultlib.design_1_axis_splitter_0_0
-Compiling architecture xilinx of entity cmpy_v6_0_21.delay_line [\delay_line(c_xdevicefamily="zyn...]
-Compiling architecture xilinx of entity cmpy_v6_0_21.delay_line [\delay_line(c_xdevicefamily="zyn...]
-Compiling architecture xilinx of entity cmpy_v6_0_21.delay_line [\delay_line(c_xdevicefamily="zyn...]
-Compiling architecture xilinx of entity cmpy_v6_0_21.delay_line [\delay_line(c_xdevicefamily="zyn...]
-Compiling architecture xilinx of entity cmpy_v6_0_21.delay_line [\delay_line(c_xdevicefamily="zyn...]
-Compiling architecture xilinx of entity mult_gen_v12_0_18.delay_line [\delay_line(c_xdevicefamily="zyn...]
-Compiling architecture xilinx of entity mult_gen_v12_0_18.delay_line [\delay_line(c_xdevicefamily="zyn...]
-Compiling architecture dsp48e2_v of entity unisim.DSP48E2 [\DSP48E2(acascreg=2,alumodereg=0...]
-Compiling architecture xilinx of entity mult_gen_v12_0_18.delay_line [\delay_line(c_xdevicefamily="zyn...]
-Compiling architecture xilinx of entity mult_gen_v12_0_18.op_resize [\op_resize(ai_width=17,ao_width=...]
-Compiling architecture xilinx of entity mult_gen_v12_0_18.dsp [\dsp(c_xdevicefamily="zynquplus"...]
-Compiling architecture xilinx of entity cmpy_v6_0_21.cmpy_3_dsp48_mult [\cmpy_3_dsp48_mult(c_xdevicefami...]
-Compiling architecture xilinx of entity mult_gen_v12_0_18.delay_line [\delay_line(c_xdevicefamily="zyn...]
-Compiling architecture xilinx of entity mult_gen_v12_0_18.delay_line [\delay_line(c_xdevicefamily="zyn...]
-Compiling architecture dsp48e2_v of entity unisim.DSP48E2 [\DSP48E2(alumodereg=0,amultsel="...]
-Compiling architecture xilinx of entity mult_gen_v12_0_18.dsp [\dsp(c_xdevicefamily="zynquplus"...]
-Compiling architecture xilinx of entity cmpy_v6_0_21.cmpy_3_dsp48_mult [\cmpy_3_dsp48_mult(c_xdevicefami...]
-Compiling architecture xilinx of entity mult_gen_v12_0_18.dsp [\dsp(c_xdevicefamily="zynquplus"...]
-Compiling architecture xilinx of entity cmpy_v6_0_21.cmpy_3_dsp48_mult [\cmpy_3_dsp48_mult(c_xdevicefami...]
-Compiling architecture xilinx of entity cmpy_v6_0_21.input_negation [\input_negation(c_xdevicefamily=...]
-Compiling architecture xilinx of entity cmpy_v6_0_21.delay_line [\delay_line(c_xdevicefamily="zyn...]
-Compiling architecture xilinx of entity cmpy_v6_0_21.delay_line [\delay_line(c_xdevicefamily="zyn...]
-Compiling architecture xilinx of entity cmpy_v6_0_21.cmpy_3_dsp48 [\cmpy_3_dsp48(c_xdevicefamily="z...]
-Compiling architecture xilinx of entity cmpy_v6_0_21.cmpy_v6_0_21_synth [\cmpy_v6_0_21_synth(c_xdevicefam...]
-Compiling architecture xilinx of entity cmpy_v6_0_21.cmpy_v6_0_21_viv [\cmpy_v6_0_21_viv(c_xdevicefamil...]
-Compiling architecture xilinx of entity cmpy_v6_0_21.cmpy_v6_0_21 [\cmpy_v6_0_21(c_xdevicefamily="z...]
-Compiling architecture cmpy_0_arch of entity xil_defaultlib.cmpy_0 [cmpy_0_default]
 Compiling architecture rtl of entity xil_defaultlib.complex_mult [complex_mult_default]
 Compiling module xil_defaultlib.design_1_complex_mult_0_0
 Compiling architecture rtl of entity xil_defaultlib.conj [conj_default]
 Compiling module xil_defaultlib.design_1_conj_0_0
+Compiling module xil_defaultlib.design_1_conj_1_0
 Compiling architecture rtl of entity xil_defaultlib.cp_rm2 [cp_rm2_default]
 Compiling module xil_defaultlib.design_1_cp_rm2_0_0
 Compiling architecture rtl of entity xil_defaultlib.cp_rm [cp_rm_default]
 Compiling module xil_defaultlib.design_1_cp_rm_0_0
 Compiling architecture rtl of entity xil_defaultlib.delay [\delay(g_delay_cycles=264)\]
 Compiling module xil_defaultlib.design_1_delay_0_0
+Compiling architecture rtl of entity xil_defaultlib.delay [\delay(g_delay_cycles=380)\]
+Compiling module xil_defaultlib.design_1_delay_1_0
 Compiling architecture rtl of entity xil_defaultlib.sum [sum_default]
 Compiling module xil_defaultlib.design_1_sum_0_0
 Compiling module xil_defaultlib.design_1
 Compiling module xil_defaultlib.design_1_wrapper
 Compiling module xil_defaultlib.equalizer_top_tb
-WARNING: [XSIM 43-3373] "C:/Projects/pi-radio/HW/modules/sim/equalizer_top_tb.sv" Line 127. System function $fscanf is used as system task. This system function should have a LHS e.g. x=$fscanf().
-WARNING: [XSIM 43-3373] "C:/Projects/pi-radio/HW/modules/sim/equalizer_top_tb.sv" Line 170. System function $fscanf is used as system task. This system function should have a LHS e.g. x=$fscanf().
-WARNING: [XSIM 43-3373] "C:/Projects/pi-radio/HW/modules/sim/equalizer_top_tb.sv" Line 237. System function $fscanf is used as system task. This system function should have a LHS e.g. x=$fscanf().
-WARNING: [XSIM 43-3373] "C:/Projects/pi-radio/HW/modules/sim/equalizer_top_tb.sv" Line 310. System function $fscanf is used as system task. This system function should have a LHS e.g. x=$fscanf().
-WARNING: [XSIM 43-3373] "C:/Projects/pi-radio/HW/modules/sim/equalizer_top_tb.sv" Line 337. System function $fscanf is used as system task. This system function should have a LHS e.g. x=$fscanf().
-WARNING: [XSIM 43-3373] "C:/Projects/pi-radio/HW/modules/sim/equalizer_top_tb.sv" Line 362. System function $fscanf is used as system task. This system function should have a LHS e.g. x=$fscanf().
-WARNING: [XSIM 43-3373] "C:/Projects/pi-radio/HW/modules/sim/equalizer_top_tb.sv" Line 395. System function $fscanf is used as system task. This system function should have a LHS e.g. x=$fscanf().
-WARNING: [XSIM 43-3373] "C:/Projects/pi-radio/HW/modules/sim/equalizer_top_tb.sv" Line 396. System function $fscanf is used as system task. This system function should have a LHS e.g. x=$fscanf().
-WARNING: [XSIM 43-3373] "C:/Projects/pi-radio/HW/modules/sim/equalizer_top_tb.sv" Line 397. System function $fscanf is used as system task. This system function should have a LHS e.g. x=$fscanf().
-WARNING: [XSIM 43-3373] "C:/Projects/pi-radio/HW/modules/sim/equalizer_top_tb.sv" Line 398. System function $fscanf is used as system task. This system function should have a LHS e.g. x=$fscanf().
+WARNING: [XSIM 43-3373] "C:/Projects/pi-radio/HW/modules/sim/equalizer_top_tb.sv" Line 141. System function $fscanf is used as system task. This system function should have a LHS e.g. x=$fscanf().
+WARNING: [XSIM 43-3373] "C:/Projects/pi-radio/HW/modules/sim/equalizer_top_tb.sv" Line 195. System function $fscanf is used as system task. This system function should have a LHS e.g. x=$fscanf().
+WARNING: [XSIM 43-3373] "C:/Projects/pi-radio/HW/modules/sim/equalizer_top_tb.sv" Line 273. System function $fscanf is used as system task. This system function should have a LHS e.g. x=$fscanf().
+WARNING: [XSIM 43-3373] "C:/Projects/pi-radio/HW/modules/sim/equalizer_top_tb.sv" Line 357. System function $fscanf is used as system task. This system function should have a LHS e.g. x=$fscanf().
+WARNING: [XSIM 43-3373] "C:/Projects/pi-radio/HW/modules/sim/equalizer_top_tb.sv" Line 388. System function $fscanf is used as system task. This system function should have a LHS e.g. x=$fscanf().
+WARNING: [XSIM 43-3373] "C:/Projects/pi-radio/HW/modules/sim/equalizer_top_tb.sv" Line 427. System function $fscanf is used as system task. This system function should have a LHS e.g. x=$fscanf().
+WARNING: [XSIM 43-3373] "C:/Projects/pi-radio/HW/modules/sim/equalizer_top_tb.sv" Line 541. System function $fscanf is used as system task. This system function should have a LHS e.g. x=$fscanf().
+WARNING: [XSIM 43-3373] "C:/Projects/pi-radio/HW/modules/sim/equalizer_top_tb.sv" Line 589. System function $fscanf is used as system task. This system function should have a LHS e.g. x=$fscanf().
+WARNING: [XSIM 43-3373] "C:/Projects/pi-radio/HW/modules/sim/equalizer_top_tb.sv" Line 590. System function $fscanf is used as system task. This system function should have a LHS e.g. x=$fscanf().
+WARNING: [XSIM 43-3373] "C:/Projects/pi-radio/HW/modules/sim/equalizer_top_tb.sv" Line 591. System function $fscanf is used as system task. This system function should have a LHS e.g. x=$fscanf().
+WARNING: [XSIM 43-3373] "C:/Projects/pi-radio/HW/modules/sim/equalizer_top_tb.sv" Line 592. System function $fscanf is used as system task. This system function should have a LHS e.g. x=$fscanf().
 Compiling module xil_defaultlib.glbl
 Built simulation snapshot equalizer_top_tb_behav

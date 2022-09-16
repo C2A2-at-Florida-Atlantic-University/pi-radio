@@ -1,0 +1,5140 @@
+Time resolution is 1 ps
+File was opened successfully: -20000 
+File was opened successfully: -19999 
+File was opened successfully: -19998 
+File was opened successfully: -19997 
+File was opened successfully: -19996 
+File was opened successfully: -19995 
+File was opened successfully: -19994 
+File was opened successfully: -19993 
+File was opened successfully: -19992 
+File was opened successfully: -19991 
+File was opened successfully: -19990 
+File was opened successfully: -19989 
+Info: [XPM_MEMORY 20-1] MEMORY_PRIMITIVE (0) instructs Vivado Synthesis to choose the memory primitive type. Depending on their values, other XPM_MEMORY parameters may preclude the choice of certain memory primitive types. Review XPM_MEMORY documentation and parameter values to understand any limitations, or set MEMORY_PRIMITIVE to a different value. equalizer_top_tb.DUT.design_1_i.axis_data_fifo_0.inst.\gen_fifo.xpm_fifo_axis_inst .xpm_fifo_base_inst.\gen_sdpram.xpm_memory_base_inst .config_drc
+Time: 1 ps  Iteration: 0  Process: /equalizer_top_tb/DUT/design_1_i/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/Initial299_18  Scope: equalizer_top_tb.DUT.design_1_i.axis_data_fifo_0.inst.\gen_fifo.xpm_fifo_axis_inst .xpm_fifo_base_inst.\gen_sdpram.xpm_memory_base_inst .config_drc  File: C:/Xilinx_2022.1/Vivado/2022.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv Line: 493
+Info: [XPM_MEMORY 20-1] MEMORY_PRIMITIVE (0) instructs Vivado Synthesis to choose the memory primitive type. Depending on their values, other XPM_MEMORY parameters may preclude the choice of certain memory primitive types. Review XPM_MEMORY documentation and parameter values to understand any limitations, or set MEMORY_PRIMITIVE to a different value. equalizer_top_tb.DUT.design_1_i.axis_data_fifo_1.inst.\gen_fifo.xpm_fifo_axis_inst .xpm_fifo_base_inst.\gen_sdpram.xpm_memory_base_inst .config_drc
+Time: 1 ps  Iteration: 0  Process: /equalizer_top_tb/DUT/design_1_i/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/Initial299_73  Scope: equalizer_top_tb.DUT.design_1_i.axis_data_fifo_1.inst.\gen_fifo.xpm_fifo_axis_inst .xpm_fifo_base_inst.\gen_sdpram.xpm_memory_base_inst .config_drc  File: C:/Xilinx_2022.1/Vivado/2022.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv Line: 493
+Printing Samples
+   -69 + i   323
+   697 + i  -197
+  -312 + i  -193
+  -132 + i   122
+ERROR: summation real expected:         307484
+Actual:   506806448412
+ERROR: summation imaginary expected:      -34752998
+Actual:   -12919654886
+Expected angle value: -1.561949
+Actual angle value: 00000000111110101001111010101011
+Actual angle value: 00fa9eab
+ERROR: DDS output sample           0
+DDS out Q0:   -101
+Expected:      0
+DDS out Q1:   -101
+Expected:     25
+DDS out Q2:   -101
+Expected:     50
+DDS out Q3:   -101
+Expected:     75
+ 
+ERROR: DDS output sample           1
+DDS out I0:  16383
+Expected:  16384
+DDS out I1:  16383
+Expected:  16384
+DDS out I2:  16383
+Expected:  16383
+DDS out I3:  16383
+Expected:  16383
+ 
+ERROR: DDS output sample           1
+DDS out Q0:   -202
+Expected:    100
+DDS out Q1:   -202
+Expected:    125
+DDS out Q2:   -202
+Expected:    150
+DDS out Q3:   -202
+Expected:    175
+ 
+ERROR: DDS output sample           2
+DDS out I0:  16381
+Expected:  16383
+DDS out I1:  16381
+Expected:  16382
+DDS out I2:  16381
+Expected:  16382
+DDS out I3:  16381
+Expected:  16382
+ 
+ERROR: DDS output sample           2
+DDS out Q0:   -302
+Expected:    200
+DDS out Q1:   -302
+Expected:    225
+DDS out Q2:   -302
+Expected:    250
+DDS out Q3:   -302
+Expected:    275
+ 
+ERROR: DDS output sample           3
+DDS out I0:  16379
+Expected:  16381
+DDS out I1:  16379
+Expected:  16381
+DDS out I2:  16379
+Expected:  16380
+DDS out I3:  16379
+Expected:  16380
+ 
+ERROR: DDS output sample           3
+DDS out Q0:   -403
+Expected:    300
+DDS out Q1:   -403
+Expected:    325
+DDS out Q2:   -403
+Expected:    350
+DDS out Q3:   -403
+Expected:    375
+ 
+ERROR: DDS output sample           4
+DDS out I0:  16376
+Expected:  16379
+DDS out I1:  16376
+Expected:  16378
+DDS out I2:  16376
+Expected:  16378
+DDS out I3:  16376
+Expected:  16377
+ 
+ERROR: DDS output sample           4
+DDS out Q0:   -503
+Expected:    400
+DDS out Q1:   -503
+Expected:    425
+DDS out Q2:   -503
+Expected:    450
+DDS out Q3:   -503
+Expected:    475
+ 
+ERROR: DDS output sample           5
+DDS out I0:  16373
+Expected:  16376
+DDS out I1:  16373
+Expected:  16376
+DDS out I2:  16373
+Expected:  16375
+DDS out I3:  16373
+Expected:  16374
+ 
+ERROR: DDS output sample           5
+DDS out Q0:   -604
+Expected:    500
+DDS out Q1:   -604
+Expected:    525
+DDS out Q2:   -604
+Expected:    550
+DDS out Q3:   -604
+Expected:    575
+ 
+ERROR: DDS output sample           6
+DDS out I0:  16369
+Expected:  16373
+DDS out I1:  16369
+Expected:  16372
+DDS out I2:  16369
+Expected:  16371
+DDS out I3:  16369
+Expected:  16370
+ 
+ERROR: DDS output sample           6
+DDS out Q0:   -704
+Expected:    600
+DDS out Q1:   -704
+Expected:    625
+DDS out Q2:   -704
+Expected:    650
+DDS out Q3:   -704
+Expected:    675
+ 
+ERROR: DDS output sample           7
+DDS out I0:  16364
+Expected:  16369
+DDS out I1:  16364
+Expected:  16368
+DDS out I2:  16364
+Expected:  16367
+DDS out I3:  16364
+Expected:  16366
+ 
+ERROR: DDS output sample           7
+DDS out Q0:   -805
+Expected:    700
+DDS out Q1:   -805
+Expected:    725
+DDS out Q2:   -805
+Expected:    749
+DDS out Q3:   -805
+Expected:    774
+ 
+ERROR: DDS output sample           8
+DDS out I0:  16359
+Expected:  16364
+DDS out I1:  16359
+Expected:  16363
+DDS out I2:  16359
+Expected:  16362
+DDS out I3:  16359
+Expected:  16361
+ 
+ERROR: DDS output sample           8
+DDS out Q0:   -905
+Expected:    799
+DDS out Q1:   -905
+Expected:    824
+DDS out Q2:   -905
+Expected:    849
+DDS out Q3:   -905
+Expected:    874
+ 
+ERROR: DDS output sample           9
+DDS out I0:  16353
+Expected:  16359
+DDS out I1:  16353
+Expected:  16358
+DDS out I2:  16353
+Expected:  16356
+DDS out I3:  16353
+Expected:  16355
+ 
+ERROR: DDS output sample           9
+DDS out Q0:  -1005
+Expected:    899
+DDS out Q1:  -1005
+Expected:    924
+DDS out Q2:  -1005
+Expected:    949
+DDS out Q3:  -1005
+Expected:    974
+ 
+ERROR: DDS output sample          10
+DDS out I0:  16347
+Expected:  16354
+DDS out I1:  16347
+Expected:  16352
+DDS out I2:  16347
+Expected:  16350
+DDS out I3:  16347
+Expected:  16349
+ 
+ERROR: DDS output sample          10
+DDS out Q0:  -1106
+Expected:    999
+DDS out Q1:  -1106
+Expected:   1024
+DDS out Q2:  -1106
+Expected:   1049
+DDS out Q3:  -1106
+Expected:   1074
+ 
+ERROR: DDS output sample          11
+DDS out I0:  16340
+Expected:  16347
+DDS out I1:  16340
+Expected:  16345
+DDS out I2:  16340
+Expected:  16344
+DDS out I3:  16340
+Expected:  16342
+ 
+ERROR: DDS output sample          11
+DDS out Q0:  -1206
+Expected:   1099
+DDS out Q1:  -1206
+Expected:   1124
+DDS out Q2:  -1206
+Expected:   1149
+DDS out Q3:  -1206
+Expected:   1174
+ 
+ERROR: DDS output sample          12
+DDS out I0:  16332
+Expected:  16340
+DDS out I1:  16332
+Expected:  16338
+DDS out I2:  16332
+Expected:  16336
+DDS out I3:  16332
+Expected:  16334
+ 
+ERROR: DDS output sample          12
+DDS out Q0:  -1306
+Expected:   1199
+DDS out Q1:  -1306
+Expected:   1223
+DDS out Q2:  -1306
+Expected:   1248
+DDS out Q3:  -1306
+Expected:   1273
+ 
+ERROR: DDS output sample          13
+DDS out I0:  16324
+Expected:  16332
+DDS out I1:  16324
+Expected:  16330
+DDS out I2:  16324
+Expected:  16328
+DDS out I3:  16324
+Expected:  16326
+ 
+ERROR: DDS output sample          13
+DDS out Q0:  -1406
+Expected:   1298
+DDS out Q1:  -1406
+Expected:   1323
+DDS out Q2:  -1406
+Expected:   1348
+DDS out Q3:  -1406
+Expected:   1373
+ 
+ERROR: DDS output sample          14
+DDS out I0:  16315
+Expected:  16324
+DDS out I1:  16315
+Expected:  16322
+DDS out I2:  16315
+Expected:  16320
+DDS out I3:  16315
+Expected:  16318
+ 
+ERROR: DDS output sample          14
+DDS out Q0:  -1507
+Expected:   1398
+DDS out Q1:  -1507
+Expected:   1423
+DDS out Q2:  -1507
+Expected:   1448
+DDS out Q3:  -1507
+Expected:   1472
+ 
+ERROR: DDS output sample          15
+DDS out I0:  16305
+Expected:  16315
+DDS out I1:  16305
+Expected:  16313
+DDS out I2:  16305
+Expected:  16311
+DDS out I3:  16305
+Expected:  16308
+ 
+ERROR: DDS output sample          15
+DDS out Q0:  -1607
+Expected:   1497
+DDS out Q1:  -1607
+Expected:   1522
+DDS out Q2:  -1607
+Expected:   1547
+DDS out Q3:  -1607
+Expected:   1572
+ 
+ERROR: DDS output sample          16
+DDS out I0:  16295
+Expected:  16306
+DDS out I1:  16295
+Expected:  16304
+DDS out I2:  16295
+Expected:  16301
+DDS out I3:  16295
+Expected:  16299
+ 
+ERROR: DDS output sample          16
+DDS out Q0:  -1707
+Expected:   1597
+DDS out Q1:  -1707
+Expected:   1622
+DDS out Q2:  -1707
+Expected:   1647
+DDS out Q3:  -1707
+Expected:   1671
+ 
+ERROR: DDS output sample          17
+DDS out I0:  16284
+Expected:  16296
+DDS out I1:  16284
+Expected:  16293
+DDS out I2:  16284
+Expected:  16291
+DDS out I3:  16284
+Expected:  16288
+ 
+ERROR: DDS output sample          17
+DDS out Q0:  -1807
+Expected:   1696
+DDS out Q1:  -1807
+Expected:   1721
+DDS out Q2:  -1807
+Expected:   1746
+DDS out Q3:  -1807
+Expected:   1771
+ 
+ERROR: DDS output sample          18
+DDS out I0:  16273
+Expected:  16285
+DDS out I1:  16273
+Expected:  16283
+DDS out I2:  16273
+Expected:  16280
+DDS out I3:  16273
+Expected:  16277
+ 
+ERROR: DDS output sample          18
+DDS out Q0:  -1907
+Expected:   1796
+DDS out Q1:  -1907
+Expected:   1821
+DDS out Q2:  -1907
+Expected:   1845
+DDS out Q3:  -1907
+Expected:   1870
+ 
+ERROR: DDS output sample          19
+DDS out I0:  16261
+Expected:  16274
+DDS out I1:  16261
+Expected:  16271
+DDS out I2:  16261
+Expected:  16268
+DDS out I3:  16261
+Expected:  16265
+ 
+ERROR: DDS output sample          19
+DDS out Q0:  -2006
+Expected:   1895
+DDS out Q1:  -2006
+Expected:   1920
+DDS out Q2:  -2006
+Expected:   1945
+DDS out Q3:  -2006
+Expected:   1970
+ 
+ERROR: DDS output sample          20
+DDS out I0:  16248
+Expected:  16262
+DDS out I1:  16248
+Expected:  16259
+DDS out I2:  16248
+Expected:  16256
+DDS out I3:  16248
+Expected:  16253
+ 
+ERROR: DDS output sample          20
+DDS out Q0:  -2106
+Expected:   1994
+DDS out Q1:  -2106
+Expected:   2019
+DDS out Q2:  -2106
+Expected:   2044
+DDS out Q3:  -2106
+Expected:   2069
+ 
+ERROR: DDS output sample          21
+DDS out I0:  16235
+Expected:  16250
+DDS out I1:  16235
+Expected:  16246
+DDS out I2:  16235
+Expected:  16243
+DDS out I3:  16235
+Expected:  16240
+ 
+ERROR: DDS output sample          21
+DDS out Q0:  -2206
+Expected:   2094
+DDS out Q1:  -2206
+Expected:   2118
+DDS out Q2:  -2206
+Expected:   2143
+DDS out Q3:  -2206
+Expected:   2168
+ 
+ERROR: DDS output sample          22
+DDS out I0:  16221
+Expected:  16237
+DDS out I1:  16221
+Expected:  16233
+DDS out I2:  16221
+Expected:  16230
+DDS out I3:  16221
+Expected:  16226
+ 
+ERROR: DDS output sample          22
+DDS out Q0:  -2305
+Expected:   2193
+DDS out Q1:  -2305
+Expected:   2217
+DDS out Q2:  -2305
+Expected:   2242
+DDS out Q3:  -2305
+Expected:   2267
+ 
+ERROR: DDS output sample          23
+DDS out I0:  16207
+Expected:  16223
+DDS out I1:  16207
+Expected:  16219
+DDS out I2:  16207
+Expected:  16216
+DDS out I3:  16207
+Expected:  16212
+ 
+ERROR: DDS output sample          23
+DDS out Q0:  -2405
+Expected:   2292
+DDS out Q1:  -2405
+Expected:   2316
+DDS out Q2:  -2405
+Expected:   2341
+DDS out Q3:  -2405
+Expected:   2366
+ 
+ERROR: DDS output sample          24
+DDS out I0:  16191
+Expected:  16209
+DDS out I1:  16191
+Expected:  16205
+DDS out I2:  16191
+Expected:  16201
+DDS out I3:  16191
+Expected:  16198
+ 
+ERROR: DDS output sample          24
+DDS out Q0:  -2504
+Expected:   2391
+DDS out Q1:  -2504
+Expected:   2415
+DDS out Q2:  -2504
+Expected:   2440
+DDS out Q3:  -2504
+Expected:   2465
+ 
+ERROR: DDS output sample          25
+DDS out I0:  16176
+Expected:  16194
+DDS out I1:  16176
+Expected:  16190
+DDS out I2:  16176
+Expected:  16186
+DDS out I3:  16176
+Expected:  16182
+ 
+ERROR: DDS output sample          25
+DDS out Q0:  -2604
+Expected:   2489
+DDS out Q1:  -2604
+Expected:   2514
+DDS out Q2:  -2604
+Expected:   2539
+DDS out Q3:  -2604
+Expected:   2564
+ 
+ERROR: DDS output sample          26
+DDS out I0:  16160
+Expected:  16178
+DDS out I1:  16160
+Expected:  16174
+DDS out I2:  16160
+Expected:  16170
+DDS out I3:  16160
+Expected:  16166
+ 
+ERROR: DDS output sample          26
+DDS out Q0:  -2703
+Expected:   2588
+DDS out Q1:  -2703
+Expected:   2613
+DDS out Q2:  -2703
+Expected:   2638
+DDS out Q3:  -2703
+Expected:   2662
+ 
+ERROR: DDS output sample          27
+DDS out I0:  16143
+Expected:  16162
+DDS out I1:  16143
+Expected:  16158
+DDS out I2:  16143
+Expected:  16154
+DDS out I3:  16143
+Expected:  16150
+ 
+ERROR: DDS output sample          27
+DDS out Q0:  -2802
+Expected:   2687
+DDS out Q1:  -2802
+Expected:   2712
+DDS out Q2:  -2802
+Expected:   2736
+DDS out Q3:  -2802
+Expected:   2761
+ 
+ERROR: DDS output sample          28
+DDS out I0:  16125
+Expected:  16145
+DDS out I1:  16125
+Expected:  16141
+DDS out I2:  16125
+Expected:  16137
+DDS out I3:  16125
+Expected:  16133
+ 
+ERROR: DDS output sample          28
+DDS out Q0:  -2901
+Expected:   2785
+DDS out Q1:  -2901
+Expected:   2810
+DDS out Q2:  -2901
+Expected:   2835
+DDS out Q3:  -2901
+Expected:   2859
+ 
+ERROR: DDS output sample          29
+DDS out I0:  16107
+Expected:  16128
+DDS out I1:  16107
+Expected:  16124
+DDS out I2:  16107
+Expected:  16119
+DDS out I3:  16107
+Expected:  16115
+ 
+ERROR: DDS output sample          29
+DDS out Q0:  -3000
+Expected:   2884
+DDS out Q1:  -3000
+Expected:   2908
+DDS out Q2:  -3000
+Expected:   2933
+DDS out Q3:  -3000
+Expected:   2958
+ 
+ERROR: DDS output sample          30
+DDS out I0:  16088
+Expected:  16110
+DDS out I1:  16088
+Expected:  16106
+DDS out I2:  16088
+Expected:  16101
+DDS out I3:  16088
+Expected:  16096
+ 
+ERROR: DDS output sample          30
+DDS out Q0:  -3098
+Expected:   2982
+DDS out Q1:  -3098
+Expected:   3007
+DDS out Q2:  -3098
+Expected:   3031
+DDS out Q3:  -3098
+Expected:   3056
+ 
+ERROR: DDS output sample          31
+DDS out I0:  16069
+Expected:  16092
+DDS out I1:  16069
+Expected:  16087
+DDS out I2:  16069
+Expected:  16082
+DDS out I3:  16069
+Expected:  16078
+ 
+ERROR: DDS output sample          31
+DDS out Q0:  -3197
+Expected:   3080
+DDS out Q1:  -3197
+Expected:   3105
+DDS out Q2:  -3197
+Expected:   3130
+DDS out Q3:  -3197
+Expected:   3154
+ 
+ERROR: DDS output sample          32
+DDS out I0:  16049
+Expected:  16073
+DDS out I1:  16049
+Expected:  16068
+DDS out I2:  16049
+Expected:  16063
+DDS out I3:  16049
+Expected:  16058
+ 
+ERROR: DDS output sample          32
+DDS out Q0:  -3296
+Expected:   3179
+DDS out Q1:  -3296
+Expected:   3203
+DDS out Q2:  -3296
+Expected:   3228
+DDS out Q3:  -3296
+Expected:   3252
+ 
+ERROR: DDS output sample          33
+DDS out I0:  16029
+Expected:  16053
+DDS out I1:  16029
+Expected:  16048
+DDS out I2:  16029
+Expected:  16043
+DDS out I3:  16029
+Expected:  16038
+ 
+ERROR: DDS output sample          33
+DDS out Q0:  -3394
+Expected:   3277
+DDS out Q1:  -3394
+Expected:   3301
+DDS out Q2:  -3394
+Expected:   3326
+DDS out Q3:  -3394
+Expected:   3350
+ 
+ERROR: DDS output sample          34
+DDS out I0:  16007
+Expected:  16033
+DDS out I1:  16007
+Expected:  16028
+DDS out I2:  16007
+Expected:  16022
+DDS out I3:  16007
+Expected:  16017
+ 
+ERROR: DDS output sample          34
+DDS out Q0:  -3492
+Expected:   3374
+DDS out Q1:  -3492
+Expected:   3399
+DDS out Q2:  -3492
+Expected:   3423
+DDS out Q3:  -3492
+Expected:   3448
+ 
+ERROR: DDS output sample          35
+DDS out I0:  15986
+Expected:  16012
+DDS out I1:  15986
+Expected:  16007
+DDS out I2:  15986
+Expected:  16001
+DDS out I3:  15986
+Expected:  15996
+ 
+ERROR: DDS output sample          35
+DDS out Q0:  -3591
+Expected:   3472
+DDS out Q1:  -3591
+Expected:   3497
+DDS out Q2:  -3591
+Expected:   3521
+DDS out Q3:  -3591
+Expected:   3545
+ 
+ERROR: DDS output sample          36
+DDS out I0:  15963
+Expected:  15990
+DDS out I1:  15963
+Expected:  15985
+DDS out I2:  15963
+Expected:  15979
+DDS out I3:  15963
+Expected:  15974
+ 
+ERROR: DDS output sample          36
+DDS out Q0:  -3689
+Expected:   3570
+DDS out Q1:  -3689
+Expected:   3594
+DDS out Q2:  -3689
+Expected:   3619
+DDS out Q3:  -3689
+Expected:   3643
+ 
+ERROR: DDS output sample          37
+DDS out I0:  15940
+Expected:  15968
+DDS out I1:  15940
+Expected:  15963
+DDS out I2:  15940
+Expected:  15957
+DDS out I3:  15940
+Expected:  15951
+ 
+ERROR: DDS output sample          37
+DDS out Q0:  -3786
+Expected:   3667
+DDS out Q1:  -3786
+Expected:   3692
+DDS out Q2:  -3786
+Expected:   3716
+DDS out Q3:  -3786
+Expected:   3740
+ 
+ERROR: DDS output sample          38
+DDS out I0:  15917
+Expected:  15946
+DDS out I1:  15917
+Expected:  15940
+DDS out I2:  15917
+Expected:  15934
+DDS out I3:  15917
+Expected:  15928
+ 
+ERROR: DDS output sample          38
+DDS out Q0:  -3884
+Expected:   3765
+DDS out Q1:  -3884
+Expected:   3789
+DDS out Q2:  -3884
+Expected:   3813
+DDS out Q3:  -3884
+Expected:   3838
+ 
+ERROR: DDS output sample          39
+DDS out I0:  15893
+Expected:  15922
+DDS out I1:  15893
+Expected:  15916
+DDS out I2:  15893
+Expected:  15910
+DDS out I3:  15893
+Expected:  15905
+ 
+ERROR: DDS output sample          39
+DDS out Q0:  -3982
+Expected:   3862
+DDS out Q1:  -3982
+Expected:   3886
+DDS out Q2:  -3982
+Expected:   3910
+DDS out Q3:  -3982
+Expected:   3935
+ 
+ERROR: DDS output sample          40
+DDS out I0:  15868
+Expected:  15898
+DDS out I1:  15868
+Expected:  15892
+DDS out I2:  15868
+Expected:  15886
+DDS out I3:  15868
+Expected:  15880
+ 
+ERROR: DDS output sample          40
+DDS out Q0:  -4079
+Expected:   3959
+DDS out Q1:  -4079
+Expected:   3983
+DDS out Q2:  -4079
+Expected:   4007
+DDS out Q3:  -4079
+Expected:   4032
+ 
+ERROR: DDS output sample          41
+DDS out I0:  15843
+Expected:  15874
+DDS out I1:  15843
+Expected:  15868
+DDS out I2:  15843
+Expected:  15862
+DDS out I3:  15843
+Expected:  15855
+ 
+ERROR: DDS output sample          41
+DDS out Q0:  -4176
+Expected:   4056
+DDS out Q1:  -4176
+Expected:   4080
+DDS out Q2:  -4176
+Expected:   4104
+DDS out Q3:  -4176
+Expected:   4129
+ 
+ERROR: DDS output sample          42
+DDS out I0:  15817
+Expected:  15849
+DDS out I1:  15817
+Expected:  15843
+DDS out I2:  15817
+Expected:  15836
+DDS out I3:  15817
+Expected:  15830
+ 
+ERROR: DDS output sample          42
+DDS out Q0:  -4274
+Expected:   4153
+DDS out Q1:  -4274
+Expected:   4177
+DDS out Q2:  -4274
+Expected:   4201
+DDS out Q3:  -4274
+Expected:   4225
+ 
+ERROR: DDS output sample          43
+DDS out I0:  15790
+Expected:  15823
+DDS out I1:  15790
+Expected:  15817
+DDS out I2:  15790
+Expected:  15810
+DDS out I3:  15790
+Expected:  15804
+ 
+ERROR: DDS output sample          43
+DDS out Q0:  -4371
+Expected:   4249
+DDS out Q1:  -4371
+Expected:   4273
+DDS out Q2:  -4371
+Expected:   4298
+DDS out Q3:  -4371
+Expected:   4322
+ 
+ERROR: DDS output sample          44
+DDS out I0:  15763
+Expected:  15797
+DDS out I1:  15763
+Expected:  15790
+DDS out I2:  15763
+Expected:  15784
+DDS out I3:  15763
+Expected:  15777
+ 
+ERROR: DDS output sample          44
+DDS out Q0:  -4467
+Expected:   4346
+DDS out Q1:  -4467
+Expected:   4370
+DDS out Q2:  -4467
+Expected:   4394
+DDS out Q3:  -4467
+Expected:   4418
+ 
+ERROR: DDS output sample          45
+DDS out I0:  15735
+Expected:  15770
+DDS out I1:  15735
+Expected:  15764
+DDS out I2:  15735
+Expected:  15757
+DDS out I3:  15735
+Expected:  15750
+ 
+ERROR: DDS output sample          45
+DDS out Q0:  -4564
+Expected:   4442
+DDS out Q1:  -4564
+Expected:   4466
+DDS out Q2:  -4564
+Expected:   4490
+DDS out Q3:  -4564
+Expected:   4514
+ 
+ERROR: DDS output sample          46
+DDS out I0:  15707
+Expected:  15743
+DDS out I1:  15707
+Expected:  15736
+DDS out I2:  15707
+Expected:  15729
+DDS out I3:  15707
+Expected:  15722
+ 
+ERROR: DDS output sample          46
+DDS out Q0:  -4660
+Expected:   4538
+DDS out Q1:  -4660
+Expected:   4562
+DDS out Q2:  -4660
+Expected:   4586
+DDS out Q3:  -4660
+Expected:   4610
+ 
+ERROR: DDS output sample          47
+DDS out I0:  15678
+Expected:  15715
+DDS out I1:  15678
+Expected:  15708
+DDS out I2:  15678
+Expected:  15701
+DDS out I3:  15678
+Expected:  15694
+ 
+ERROR: DDS output sample          47
+DDS out Q0:  -4757
+Expected:   4634
+DDS out Q1:  -4757
+Expected:   4658
+DDS out Q2:  -4757
+Expected:   4682
+DDS out Q3:  -4757
+Expected:   4706
+ 
+ERROR: DDS output sample          48
+DDS out I0:  15649
+Expected:  15686
+DDS out I1:  15649
+Expected:  15679
+DDS out I2:  15649
+Expected:  15672
+DDS out I3:  15649
+Expected:  15665
+ 
+ERROR: DDS output sample          48
+DDS out Q0:  -4853
+Expected:   4730
+DDS out Q1:  -4853
+Expected:   4754
+DDS out Q2:  -4853
+Expected:   4778
+DDS out Q3:  -4853
+Expected:   4802
+ 
+ERROR: DDS output sample          49
+DDS out I0:  15619
+Expected:  15657
+DDS out I1:  15619
+Expected:  15650
+DDS out I2:  15619
+Expected:  15642
+DDS out I3:  15619
+Expected:  15635
+ 
+ERROR: DDS output sample          49
+DDS out Q0:  -4949
+Expected:   4826
+DDS out Q1:  -4949
+Expected:   4850
+DDS out Q2:  -4949
+Expected:   4873
+DDS out Q3:  -4949
+Expected:   4897
+ 
+ERROR: DDS output sample          50
+DDS out I0:  15588
+Expected:  15627
+DDS out I1:  15588
+Expected:  15620
+DDS out I2:  15588
+Expected:  15612
+DDS out I3:  15588
+Expected:  15605
+ 
+ERROR: DDS output sample          50
+DDS out Q0:  -5045
+Expected:   4921
+DDS out Q1:  -5045
+Expected:   4945
+DDS out Q2:  -5045
+Expected:   4969
+DDS out Q3:  -5045
+Expected:   4993
+ 
+ERROR: DDS output sample          51
+DDS out I0:  15557
+Expected:  15597
+DDS out I1:  15557
+Expected:  15590
+DDS out I2:  15557
+Expected:  15582
+DDS out I3:  15557
+Expected:  15574
+ 
+ERROR: DDS output sample          51
+DDS out Q0:  -5140
+Expected:   5016
+DDS out Q1:  -5140
+Expected:   5040
+DDS out Q2:  -5140
+Expected:   5064
+DDS out Q3:  -5140
+Expected:   5088
+ 
+ERROR: DDS output sample          52
+DDS out I0:  15525
+Expected:  15566
+DDS out I1:  15525
+Expected:  15558
+DDS out I2:  15525
+Expected:  15551
+DDS out I3:  15525
+Expected:  15543
+ 
+ERROR: DDS output sample          52
+DDS out Q0:  -5235
+Expected:   5111
+DDS out Q1:  -5235
+Expected:   5135
+DDS out Q2:  -5235
+Expected:   5159
+DDS out Q3:  -5235
+Expected:   5183
+ 
+ERROR: DDS output sample          53
+DDS out I0:  15493
+Expected:  15535
+DDS out I1:  15493
+Expected:  15527
+DDS out I2:  15493
+Expected:  15519
+DDS out I3:  15493
+Expected:  15511
+ 
+ERROR: DDS output sample          53
+DDS out Q0:  -5331
+Expected:   5206
+DDS out Q1:  -5331
+Expected:   5230
+DDS out Q2:  -5331
+Expected:   5254
+DDS out Q3:  -5331
+Expected:   5277
+ 
+ERROR: DDS output sample          54
+DDS out I0:  15460
+Expected:  15503
+DDS out I1:  15460
+Expected:  15495
+DDS out I2:  15460
+Expected:  15487
+DDS out I3:  15460
+Expected:  15478
+ 
+ERROR: DDS output sample          54
+DDS out Q0:  -5426
+Expected:   5301
+DDS out Q1:  -5426
+Expected:   5325
+DDS out Q2:  -5426
+Expected:   5348
+DDS out Q3:  -5426
+Expected:   5372
+ 
+ERROR: DDS output sample          55
+DDS out I0:  15426
+Expected:  15470
+DDS out I1:  15426
+Expected:  15462
+DDS out I2:  15426
+Expected:  15454
+DDS out I3:  15426
+Expected:  15445
+ 
+ERROR: DDS output sample          55
+DDS out Q0:  -5520
+Expected:   5395
+DDS out Q1:  -5520
+Expected:   5419
+DDS out Q2:  -5520
+Expected:   5443
+DDS out Q3:  -5520
+Expected:   5466
+ 
+ERROR: DDS output sample          56
+DDS out I0:  15392
+Expected:  15437
+DDS out I1:  15392
+Expected:  15429
+DDS out I2:  15392
+Expected:  15420
+DDS out I3:  15392
+Expected:  15412
+ 
+ERROR: DDS output sample          56
+DDS out Q0:  -5615
+Expected:   5490
+DDS out Q1:  -5615
+Expected:   5513
+DDS out Q2:  -5615
+Expected:   5537
+DDS out Q3:  -5615
+Expected:   5560
+ 
+ERROR: DDS output sample          57
+DDS out I0:  15357
+Expected:  15403
+DDS out I1:  15357
+Expected:  15395
+DDS out I2:  15357
+Expected:  15386
+DDS out I3:  15357
+Expected:  15377
+ 
+ERROR: DDS output sample          57
+DDS out Q0:  -5709
+Expected:   5584
+DDS out Q1:  -5709
+Expected:   5607
+DDS out Q2:  -5709
+Expected:   5631
+DDS out Q3:  -5709
+Expected:   5654
+ 
+ERROR: DDS output sample          58
+DDS out I0:  15322
+Expected:  15369
+DDS out I1:  15322
+Expected:  15360
+DDS out I2:  15322
+Expected:  15351
+DDS out I3:  15322
+Expected:  15343
+ 
+ERROR: DDS output sample          58
+DDS out Q0:  -5803
+Expected:   5678
+DDS out Q1:  -5803
+Expected:   5701
+DDS out Q2:  -5803
+Expected:   5725
+DDS out Q3:  -5803
+Expected:   5748
+ 
+ERROR: DDS output sample          59
+DDS out I0:  15286
+Expected:  15334
+DDS out I1:  15286
+Expected:  15325
+DDS out I2:  15286
+Expected:  15316
+DDS out I3:  15286
+Expected:  15307
+ 
+ERROR: DDS output sample          59
+DDS out Q0:  -5897
+Expected:   5771
+DDS out Q1:  -5897
+Expected:   5795
+DDS out Q2:  -5897
+Expected:   5818
+DDS out Q3:  -5897
+Expected:   5841
+ 
+ERROR: DDS output sample          60
+DDS out I0:  15249
+Expected:  15298
+DDS out I1:  15249
+Expected:  15289
+DDS out I2:  15249
+Expected:  15280
+DDS out I3:  15249
+Expected:  15271
+ 
+ERROR: DDS output sample          60
+DDS out Q0:  -5991
+Expected:   5865
+DDS out Q1:  -5991
+Expected:   5888
+DDS out Q2:  -5991
+Expected:   5911
+DDS out Q3:  -5991
+Expected:   5935
+ 
+ERROR: DDS output sample          61
+DDS out I0:  15212
+Expected:  15262
+DDS out I1:  15212
+Expected:  15253
+DDS out I2:  15212
+Expected:  15244
+DDS out I3:  15212
+Expected:  15235
+ 
+ERROR: DDS output sample          61
+DDS out Q0:  -6084
+Expected:   5958
+DDS out Q1:  -6084
+Expected:   5981
+DDS out Q2:  -6084
+Expected:   6005
+DDS out Q3:  -6084
+Expected:   6028
+ 
+ERROR: DDS output sample          62
+DDS out I0:  15175
+Expected:  15226
+DDS out I1:  15175
+Expected:  15216
+DDS out I2:  15175
+Expected:  15207
+DDS out I3:  15175
+Expected:  15198
+ 
+ERROR: DDS output sample          62
+DDS out Q0:  -6178
+Expected:   6051
+DDS out Q1:  -6178
+Expected:   6074
+DDS out Q2:  -6178
+Expected:   6097
+DDS out Q3:  -6178
+Expected:   6121
+ 
+ERROR: DDS output sample          63
+DDS out I0:  15137
+Expected:  15188
+DDS out I1:  15137
+Expected:  15179
+DDS out I2:  15137
+Expected:  15170
+DDS out I3:  15137
+Expected:  15160
+ 
+ERROR: DDS output sample          63
+DDS out Q0:  -6271
+Expected:   6144
+DDS out Q1:  -6271
+Expected:   6167
+DDS out Q2:  -6271
+Expected:   6190
+DDS out Q3:  -6271
+Expected:   6213
+ 
+ERROR: DDS output sample          64
+DDS out I0:  15098
+Expected:  15151
+DDS out I1:  15098
+Expected:  15141
+DDS out I2:  15098
+Expected:  15132
+DDS out I3:  15098
+Expected:  15122
+ 
+ERROR: DDS output sample          64
+DDS out Q0:  -6363
+Expected:   6236
+DDS out Q1:  -6363
+Expected:   6259
+DDS out Q2:  -6363
+Expected:   6283
+DDS out Q3:  -6363
+Expected:   6306
+ 
+ERROR: DDS output sample          65
+DDS out I0:  15058
+Expected:  15112
+DDS out I1:  15058
+Expected:  15103
+DDS out I2:  15058
+Expected:  15093
+DDS out I3:  15058
+Expected:  15083
+ 
+ERROR: DDS output sample          65
+DDS out Q0:  -6456
+Expected:   6329
+DDS out Q1:  -6456
+Expected:   6352
+DDS out Q2:  -6456
+Expected:   6375
+DDS out Q3:  -6456
+Expected:   6398
+ 
+ERROR: DDS output sample          66
+DDS out I0:  15019
+Expected:  15073
+DDS out I1:  15019
+Expected:  15064
+DDS out I2:  15019
+Expected:  15054
+DDS out I3:  15019
+Expected:  15044
+ 
+ERROR: DDS output sample          66
+DDS out Q0:  -6548
+Expected:   6421
+DDS out Q1:  -6548
+Expected:   6444
+DDS out Q2:  -6548
+Expected:   6467
+DDS out Q3:  -6548
+Expected:   6490
+ 
+ERROR: DDS output sample          67
+DDS out I0:  14978
+Expected:  15034
+DDS out I1:  14978
+Expected:  15024
+DDS out I2:  14978
+Expected:  15014
+DDS out I3:  14978
+Expected:  15004
+ 
+ERROR: DDS output sample          67
+DDS out Q0:  -6640
+Expected:   6513
+DDS out Q1:  -6640
+Expected:   6536
+DDS out Q2:  -6640
+Expected:   6558
+DDS out Q3:  -6640
+Expected:   6581
+ 
+ERROR: DDS output sample          68
+DDS out I0:  14937
+Expected:  14994
+DDS out I1:  14937
+Expected:  14984
+DDS out I2:  14937
+Expected:  14974
+DDS out I3:  14937
+Expected:  14964
+ 
+ERROR: DDS output sample          68
+DDS out Q0:  -6732
+Expected:   6604
+DDS out Q1:  -6732
+Expected:   6627
+DDS out Q2:  -6732
+Expected:   6650
+DDS out Q3:  -6732
+Expected:   6673
+ 
+ERROR: DDS output sample          69
+DDS out I0:  14895
+Expected:  14953
+DDS out I1:  14895
+Expected:  14943
+DDS out I2:  14895
+Expected:  14933
+DDS out I3:  14895
+Expected:  14923
+ 
+ERROR: DDS output sample          69
+DDS out Q0:  -6823
+Expected:   6696
+DDS out Q1:  -6823
+Expected:   6718
+DDS out Q2:  -6823
+Expected:   6741
+DDS out Q3:  -6823
+Expected:   6764
+ 
+ERROR: DDS output sample          70
+DDS out I0:  14853
+Expected:  14912
+DDS out I1:  14853
+Expected:  14902
+DDS out I2:  14853
+Expected:  14891
+DDS out I3:  14853
+Expected:  14881
+ 
+ERROR: DDS output sample          70
+DDS out Q0:  -6915
+Expected:   6787
+DDS out Q1:  -6915
+Expected:   6809
+DDS out Q2:  -6915
+Expected:   6832
+DDS out Q3:  -6915
+Expected:   6855
+ 
+ERROR: DDS output sample          71
+DDS out I0:  14811
+Expected:  14871
+DDS out I1:  14811
+Expected:  14860
+DDS out I2:  14811
+Expected:  14850
+DDS out I3:  14811
+Expected:  14839
+ 
+ERROR: DDS output sample          71
+DDS out Q0:  -7006
+Expected:   6878
+DDS out Q1:  -7006
+Expected:   6900
+DDS out Q2:  -7006
+Expected:   6923
+DDS out Q3:  -7006
+Expected:   6946
+ 
+ERROR: DDS output sample          72
+DDS out I0:  14767
+Expected:  14828
+DDS out I1:  14767
+Expected:  14818
+DDS out I2:  14767
+Expected:  14807
+DDS out I3:  14767
+Expected:  14796
+ 
+ERROR: DDS output sample          72
+DDS out Q0:  -7097
+Expected:   6968
+DDS out Q1:  -7097
+Expected:   6991
+DDS out Q2:  -7097
+Expected:   7013
+DDS out Q3:  -7097
+Expected:   7036
+ 
+ERROR: DDS output sample          73
+DDS out I0:  14724
+Expected:  14786
+DDS out I1:  14724
+Expected:  14775
+DDS out I2:  14724
+Expected:  14764
+DDS out I3:  14724
+Expected:  14753
+ 
+ERROR: DDS output sample          73
+DDS out Q0:  -7187
+Expected:   7059
+DDS out Q1:  -7187
+Expected:   7081
+DDS out Q2:  -7187
+Expected:   7104
+DDS out Q3:  -7187
+Expected:   7126
+ 
+ERROR: DDS output sample          74
+DDS out I0:  14679
+Expected:  14742
+DDS out I1:  14679
+Expected:  14731
+DDS out I2:  14679
+Expected:  14720
+DDS out I3:  14679
+Expected:  14709
+ 
+ERROR: DDS output sample          74
+DDS out Q0:  -7277
+Expected:   7149
+DDS out Q1:  -7277
+Expected:   7171
+DDS out Q2:  -7277
+Expected:   7194
+DDS out Q3:  -7277
+Expected:   7216
+ 
+ERROR: DDS output sample          75
+DDS out I0:  14634
+Expected:  14698
+DDS out I1:  14634
+Expected:  14687
+DDS out I2:  14634
+Expected:  14676
+DDS out I3:  14634
+Expected:  14665
+ 
+ERROR: DDS output sample          75
+DDS out Q0:  -7367
+Expected:   7238
+DDS out Q1:  -7367
+Expected:   7261
+DDS out Q2:  -7367
+Expected:   7283
+DDS out Q3:  -7367
+Expected:   7306
+ 
+ERROR: DDS output sample          76
+DDS out I0:  14589
+Expected:  14654
+DDS out I1:  14589
+Expected:  14643
+DDS out I2:  14589
+Expected:  14631
+DDS out I3:  14589
+Expected:  14620
+ 
+ERROR: DDS output sample          76
+DDS out Q0:  -7457
+Expected:   7328
+DDS out Q1:  -7457
+Expected:   7350
+DDS out Q2:  -7457
+Expected:   7373
+DDS out Q3:  -7457
+Expected:   7395
+ 
+ERROR: DDS output sample          77
+DDS out I0:  14543
+Expected:  14609
+DDS out I1:  14543
+Expected:  14598
+DDS out I2:  14543
+Expected:  14586
+DDS out I3:  14543
+Expected:  14575
+ 
+ERROR: DDS output sample          77
+DDS out Q0:  -7546
+Expected:   7417
+DDS out Q1:  -7546
+Expected:   7440
+DDS out Q2:  -7546
+Expected:   7462
+DDS out Q3:  -7546
+Expected:   7484
+ 
+ERROR: DDS output sample          78
+DDS out I0:  14496
+Expected:  14563
+DDS out I1:  14496
+Expected:  14552
+DDS out I2:  14496
+Expected:  14540
+DDS out I3:  14496
+Expected:  14529
+ 
+ERROR: DDS output sample          78
+DDS out Q0:  -7635
+Expected:   7506
+DDS out Q1:  -7635
+Expected:   7528
+DDS out Q2:  -7635
+Expected:   7551
+DDS out Q3:  -7635
+Expected:   7573
+ 
+ERROR: DDS output sample          79
+DDS out I0:  14449
+Expected:  14517
+DDS out I1:  14449
+Expected:  14506
+DDS out I2:  14449
+Expected:  14494
+DDS out I3:  14449
+Expected:  14482
+ 
+ERROR: DDS output sample          79
+DDS out Q0:  -7724
+Expected:   7595
+DDS out Q1:  -7724
+Expected:   7617
+DDS out Q2:  -7724
+Expected:   7639
+DDS out Q3:  -7724
+Expected:   7661
+ 
+ERROR: DDS output sample          80
+DDS out I0:  14401
+Expected:  14471
+DDS out I1:  14401
+Expected:  14459
+DDS out I2:  14401
+Expected:  14447
+DDS out I3:  14401
+Expected:  14435
+ 
+ERROR: DDS output sample          80
+DDS out Q0:  -7813
+Expected:   7683
+DDS out Q1:  -7813
+Expected:   7705
+DDS out Q2:  -7813
+Expected:   7727
+DDS out Q3:  -7813
+Expected:   7750
+ 
+ERROR: DDS output sample          81
+DDS out I0:  14353
+Expected:  14424
+DDS out I1:  14353
+Expected:  14412
+DDS out I2:  14353
+Expected:  14400
+DDS out I3:  14353
+Expected:  14388
+ 
+ERROR: DDS output sample          81
+DDS out Q0:  -7901
+Expected:   7772
+DDS out Q1:  -7901
+Expected:   7794
+DDS out Q2:  -7901
+Expected:   7815
+DDS out Q3:  -7901
+Expected:   7837
+ 
+ERROR: DDS output sample          82
+DDS out I0:  14304
+Expected:  14376
+DDS out I1:  14304
+Expected:  14364
+DDS out I2:  14304
+Expected:  14352
+DDS out I3:  14304
+Expected:  14340
+ 
+ERROR: DDS output sample          82
+DDS out Q0:  -7989
+Expected:   7859
+DDS out Q1:  -7989
+Expected:   7881
+DDS out Q2:  -7989
+Expected:   7903
+DDS out Q3:  -7989
+Expected:   7925
+ 
+ERROR: DDS output sample          83
+DDS out I0:  14255
+Expected:  14328
+DDS out I1:  14255
+Expected:  14316
+DDS out I2:  14255
+Expected:  14303
+DDS out I3:  14255
+Expected:  14291
+ 
+ERROR: DDS output sample          83
+DDS out Q0:  -8076
+Expected:   7947
+DDS out Q1:  -8076
+Expected:   7969
+DDS out Q2:  -8076
+Expected:   7991
+DDS out Q3:  -8076
+Expected:   8012
+ 
+ERROR: DDS output sample          84
+DDS out I0:  14205
+Expected:  14279
+DDS out I1:  14205
+Expected:  14267
+DDS out I2:  14205
+Expected:  14254
+DDS out I3:  14205
+Expected:  14242
+ 
+ERROR: DDS output sample          84
+DDS out Q0:  -8164
+Expected:   8034
+DDS out Q1:  -8164
+Expected:   8056
+DDS out Q2:  -8164
+Expected:   8078
+DDS out Q3:  -8164
+Expected:   8099
+ 
+ERROR: DDS output sample          85
+DDS out I0:  14155
+Expected:  14230
+DDS out I1:  14155
+Expected:  14217
+DDS out I2:  14155
+Expected:  14205
+DDS out I3:  14155
+Expected:  14192
+ 
+ERROR: DDS output sample          85
+DDS out Q0:  -8251
+Expected:   8121
+DDS out Q1:  -8251
+Expected:   8143
+DDS out Q2:  -8251
+Expected:   8165
+DDS out Q3:  -8251
+Expected:   8186
+ 
+ERROR: DDS output sample          86
+DDS out I0:  14104
+Expected:  14180
+DDS out I1:  14104
+Expected:  14167
+DDS out I2:  14104
+Expected:  14155
+DDS out I3:  14104
+Expected:  14142
+ 
+ERROR: DDS output sample          86
+DDS out Q0:  -8337
+Expected:   8208
+DDS out Q1:  -8337
+Expected:   8229
+DDS out Q2:  -8337
+Expected:   8251
+DDS out Q3:  -8337
+Expected:   8273
+ 
+ERROR: DDS output sample          87
+DDS out I0:  14053
+Expected:  14129
+DDS out I1:  14053
+Expected:  14117
+DDS out I2:  14053
+Expected:  14104
+DDS out I3:  14053
+Expected:  14091
+ 
+ERROR: DDS output sample          87
+DDS out Q0:  -8424
+Expected:   8294
+DDS out Q1:  -8424
+Expected:   8316
+DDS out Q2:  -8424
+Expected:   8337
+DDS out Q3:  -8424
+Expected:   8359
+ 
+ERROR: DDS output sample          88
+DDS out I0:  14001
+Expected:  14079
+DDS out I1:  14001
+Expected:  14066
+DDS out I2:  14001
+Expected:  14053
+DDS out I3:  14001
+Expected:  14040
+ 
+ERROR: DDS output sample          88
+DDS out Q0:  -8510
+Expected:   8380
+DDS out Q1:  -8510
+Expected:   8402
+DDS out Q2:  -8510
+Expected:   8423
+DDS out Q3:  -8510
+Expected:   8445
+ 
+ERROR: DDS output sample          89
+DDS out I0:  13948
+Expected:  14027
+DDS out I1:  13948
+Expected:  14014
+DDS out I2:  13948
+Expected:  14001
+DDS out I3:  13948
+Expected:  13988
+ 
+ERROR: DDS output sample          89
+DDS out Q0:  -8596
+Expected:   8466
+DDS out Q1:  -8596
+Expected:   8487
+DDS out Q2:  -8596
+Expected:   8509
+DDS out Q3:  -8596
+Expected:   8530
+ 
+ERROR: DDS output sample          90
+DDS out I0:  13895
+Expected:  13975
+DDS out I1:  13895
+Expected:  13962
+DDS out I2:  13895
+Expected:  13949
+DDS out I3:  13895
+Expected:  13936
+ 
+ERROR: DDS output sample          90
+DDS out Q0:  -8681
+Expected:   8551
+DDS out Q1:  -8681
+Expected:   8573
+DDS out Q2:  -8681
+Expected:   8594
+DDS out Q3:  -8681
+Expected:   8615
+ 
+ERROR: DDS output sample          91
+DDS out I0:  13842
+Expected:  13923
+DDS out I1:  13842
+Expected:  13910
+DDS out I2:  13842
+Expected:  13896
+DDS out I3:  13842
+Expected:  13883
+ 
+ERROR: DDS output sample          91
+DDS out Q0:  -8766
+Expected:   8637
+DDS out Q1:  -8766
+Expected:   8658
+DDS out Q2:  -8766
+Expected:   8679
+DDS out Q3:  -8766
+Expected:   8700
+ 
+ERROR: DDS output sample          92
+DDS out I0:  13788
+Expected:  13870
+DDS out I1:  13788
+Expected:  13857
+DDS out I2:  13788
+Expected:  13843
+DDS out I3:  13788
+Expected:  13830
+ 
+ERROR: DDS output sample          92
+DDS out Q0:  -8851
+Expected:   8721
+DDS out Q1:  -8851
+Expected:   8742
+DDS out Q2:  -8851
+Expected:   8764
+DDS out Q3:  -8851
+Expected:   8785
+ 
+ERROR: DDS output sample          93
+DDS out I0:  13733
+Expected:  13816
+DDS out I1:  13733
+Expected:  13803
+DDS out I2:  13733
+Expected:  13789
+DDS out I3:  13733
+Expected:  13776
+ 
+ERROR: DDS output sample          93
+DDS out Q0:  -8935
+Expected:   8806
+DDS out Q1:  -8935
+Expected:   8827
+DDS out Q2:  -8935
+Expected:   8848
+DDS out Q3:  -8935
+Expected:   8869
+ 
+ERROR: DDS output sample          94
+DDS out I0:  13678
+Expected:  13762
+DDS out I1:  13678
+Expected:  13749
+DDS out I2:  13678
+Expected:  13735
+DDS out I3:  13678
+Expected:  13722
+ 
+ERROR: DDS output sample          94
+DDS out Q0:  -9019
+Expected:   8890
+DDS out Q1:  -9019
+Expected:   8911
+DDS out Q2:  -9019
+Expected:   8932
+DDS out Q3:  -9019
+Expected:   8953
+ 
+ERROR: DDS output sample          95
+DDS out I0:  13622
+Expected:  13708
+DDS out I1:  13622
+Expected:  13694
+DDS out I2:  13622
+Expected:  13680
+DDS out I3:  13622
+Expected:  13667
+ 
+ERROR: DDS output sample          95
+DDS out Q0:  -9103
+Expected:   8974
+DDS out Q1:  -9103
+Expected:   8995
+DDS out Q2:  -9103
+Expected:   9016
+DDS out Q3:  -9103
+Expected:   9036
+ 
+ERROR: DDS output sample          96
+DDS out I0:  13566
+Expected:  13653
+DDS out I1:  13566
+Expected:  13639
+DDS out I2:  13566
+Expected:  13625
+DDS out I3:  13566
+Expected:  13611
+ 
+ERROR: DDS output sample          96
+DDS out Q0:  -9187
+Expected:   9057
+DDS out Q1:  -9187
+Expected:   9078
+DDS out Q2:  -9187
+Expected:   9099
+DDS out Q3:  -9187
+Expected:   9120
+ 
+ERROR: DDS output sample          97
+DDS out I0:  13510
+Expected:  13597
+DDS out I1:  13510
+Expected:  13583
+DDS out I2:  13510
+Expected:  13569
+DDS out I3:  13510
+Expected:  13555
+ 
+ERROR: DDS output sample          97
+DDS out Q0:  -9270
+Expected:   9140
+DDS out Q1:  -9270
+Expected:   9161
+DDS out Q2:  -9270
+Expected:   9182
+DDS out Q3:  -9270
+Expected:   9202
+ 
+ERROR: DDS output sample          98
+DDS out I0:  13452
+Expected:  13541
+DDS out I1:  13452
+Expected:  13527
+DDS out I2:  13452
+Expected:  13513
+DDS out I3:  13452
+Expected:  13499
+ 
+ERROR: DDS output sample          98
+DDS out Q0:  -9352
+Expected:   9223
+DDS out Q1:  -9352
+Expected:   9244
+DDS out Q2:  -9352
+Expected:   9264
+DDS out Q3:  -9352
+Expected:   9285
+ 
+ERROR: DDS output sample          99
+DDS out I0:  13395
+Expected:  13485
+DDS out I1:  13395
+Expected:  13471
+DDS out I2:  13395
+Expected:  13456
+DDS out I3:  13395
+Expected:  13442
+ 
+ERROR: DDS output sample          99
+DDS out Q0:  -9435
+Expected:   9306
+DDS out Q1:  -9435
+Expected:   9326
+DDS out Q2:  -9435
+Expected:   9347
+DDS out Q3:  -9435
+Expected:   9367
+ 
+ERROR: DDS output sample         100
+DDS out I0:  13337
+Expected:  13428
+DDS out I1:  13337
+Expected:  13413
+DDS out I2:  13337
+Expected:  13399
+DDS out I3:  13337
+Expected:  13385
+ 
+ERROR: DDS output sample         100
+DDS out Q0:  -9517
+Expected:   9388
+DDS out Q1:  -9517
+Expected:   9408
+DDS out Q2:  -9517
+Expected:   9429
+DDS out Q3:  -9517
+Expected:   9449
+ 
+ERROR: DDS output sample         101
+DDS out I0:  13278
+Expected:  13370
+DDS out I1:  13278
+Expected:  13356
+DDS out I2:  13278
+Expected:  13341
+DDS out I3:  13278
+Expected:  13327
+ 
+ERROR: DDS output sample         101
+DDS out Q0:  -9598
+Expected:   9469
+DDS out Q1:  -9598
+Expected:   9490
+DDS out Q2:  -9598
+Expected:   9510
+DDS out Q3:  -9598
+Expected:   9531
+ 
+ERROR: DDS output sample         102
+DDS out I0:  13219
+Expected:  13312
+DDS out I1:  13219
+Expected:  13298
+DDS out I2:  13219
+Expected:  13283
+DDS out I3:  13219
+Expected:  13268
+ 
+ERROR: DDS output sample         102
+DDS out Q0:  -9680
+Expected:   9551
+DDS out Q1:  -9680
+Expected:   9571
+DDS out Q2:  -9680
+Expected:   9591
+DDS out Q3:  -9680
+Expected:   9612
+ 
+ERROR: DDS output sample         103
+DDS out I0:  13159
+Expected:  13254
+DDS out I1:  13159
+Expected:  13239
+DDS out I2:  13159
+Expected:  13224
+DDS out I3:  13159
+Expected:  13210
+ 
+ERROR: DDS output sample         103
+DDS out Q0:  -9761
+Expected:   9632
+DDS out Q1:  -9761
+Expected:   9652
+DDS out Q2:  -9761
+Expected:   9672
+DDS out Q3:  -9761
+Expected:   9692
+ 
+ERROR: DDS output sample         104
+DDS out I0:  13099
+Expected:  13195
+DDS out I1:  13099
+Expected:  13180
+DDS out I2:  13099
+Expected:  13165
+DDS out I3:  13099
+Expected:  13150
+ 
+ERROR: DDS output sample         104
+DDS out Q0:  -9841
+Expected:   9713
+DDS out Q1:  -9841
+Expected:   9733
+DDS out Q2:  -9841
+Expected:   9753
+DDS out Q3:  -9841
+Expected:   9773
+ 
+ERROR: DDS output sample         105
+DDS out I0:  13039
+Expected:  13135
+DDS out I1:  13039
+Expected:  13120
+DDS out I2:  13039
+Expected:  13105
+DDS out I3:  13039
+Expected:  13090
+ 
+ERROR: DDS output sample         105
+DDS out Q0:  -9921
+Expected:   9793
+DDS out Q1:  -9921
+Expected:   9813
+DDS out Q2:  -9921
+Expected:   9833
+DDS out Q3:  -9921
+Expected:   9853
+ 
+ERROR: DDS output sample         106
+DDS out I0:  12977
+Expected:  13075
+DDS out I1:  12977
+Expected:  13060
+DDS out I2:  12977
+Expected:  13045
+DDS out I3:  12977
+Expected:  13030
+ 
+ERROR: DDS output sample         106
+DDS out Q0: -10001
+Expected:   9873
+DDS out Q1: -10001
+Expected:   9893
+DDS out Q2: -10001
+Expected:   9913
+DDS out Q3: -10001
+Expected:   9933
+ 
+ERROR: DDS output sample         107
+DDS out I0:  12916
+Expected:  13015
+DDS out I1:  12916
+Expected:  13000
+DDS out I2:  12916
+Expected:  12984
+DDS out I3:  12916
+Expected:  12969
+ 
+ERROR: DDS output sample         107
+DDS out Q0: -10081
+Expected:   9952
+DDS out Q1: -10081
+Expected:   9972
+DDS out Q2: -10081
+Expected:   9992
+DDS out Q3: -10081
+Expected:  10012
+ 
+ERROR: DDS output sample         108
+DDS out I0:  12854
+Expected:  12954
+DDS out I1:  12854
+Expected:  12938
+DDS out I2:  12854
+Expected:  12923
+DDS out I3:  12854
+Expected:  12908
+ 
+ERROR: DDS output sample         108
+DDS out Q0: -10160
+Expected:  10032
+DDS out Q1: -10160
+Expected:  10051
+DDS out Q2: -10160
+Expected:  10071
+DDS out Q3: -10160
+Expected:  10091
+ 
+ERROR: DDS output sample         109
+DDS out I0:  12791
+Expected:  12892
+DDS out I1:  12791
+Expected:  12877
+DDS out I2:  12791
+Expected:  12861
+DDS out I3:  12791
+Expected:  12846
+ 
+ERROR: DDS output sample         109
+DDS out Q0: -10238
+Expected:  10111
+DDS out Q1: -10238
+Expected:  10130
+DDS out Q2: -10238
+Expected:  10150
+DDS out Q3: -10238
+Expected:  10169
+ 
+ERROR: DDS output sample         110
+DDS out I0:  12728
+Expected:  12830
+DDS out I1:  12728
+Expected:  12815
+DDS out I2:  12728
+Expected:  12799
+DDS out I3:  12728
+Expected:  12784
+ 
+ERROR: DDS output sample         110
+DDS out Q0: -10317
+Expected:  10189
+DDS out Q1: -10317
+Expected:  10209
+DDS out Q2: -10317
+Expected:  10228
+DDS out Q3: -10317
+Expected:  10248
+ 
+ERROR: DDS output sample         111
+DDS out I0:  12665
+Expected:  12768
+DDS out I1:  12665
+Expected:  12752
+DDS out I2:  12665
+Expected:  12737
+DDS out I3:  12665
+Expected:  12721
+ 
+ERROR: DDS output sample         111
+DDS out Q0: -10395
+Expected:  10267
+DDS out Q1: -10395
+Expected:  10287
+DDS out Q2: -10395
+Expected:  10306
+DDS out Q3: -10395
+Expected:  10325
+ 
+ERROR: DDS output sample         112
+DDS out I0:  12600
+Expected:  12705
+DDS out I1:  12600
+Expected:  12689
+DDS out I2:  12600
+Expected:  12674
+DDS out I3:  12600
+Expected:  12658
+ 
+ERROR: DDS output sample         112
+DDS out Q0: -10472
+Expected:  10345
+DDS out Q1: -10472
+Expected:  10364
+DDS out Q2: -10472
+Expected:  10384
+DDS out Q3: -10472
+Expected:  10403
+ 
+ERROR: DDS output sample         113
+DDS out I0:  12536
+Expected:  12642
+DDS out I1:  12536
+Expected:  12626
+DDS out I2:  12536
+Expected:  12610
+DDS out I3:  12536
+Expected:  12594
+ 
+ERROR: DDS output sample         113
+DDS out Q0: -10549
+Expected:  10422
+DDS out Q1: -10549
+Expected:  10441
+DDS out Q2: -10549
+Expected:  10461
+DDS out Q3: -10549
+Expected:  10480
+ 
+ERROR: DDS output sample         114
+DDS out I0:  12471
+Expected:  12578
+DDS out I1:  12471
+Expected:  12562
+DDS out I2:  12471
+Expected:  12546
+DDS out I3:  12471
+Expected:  12530
+ 
+ERROR: DDS output sample         114
+DDS out Q0: -10626
+Expected:  10499
+DDS out Q1: -10626
+Expected:  10518
+DDS out Q2: -10626
+Expected:  10537
+DDS out Q3: -10626
+Expected:  10557
+ 
+ERROR: DDS output sample         115
+DDS out I0:  12406
+Expected:  12514
+DDS out I1:  12406
+Expected:  12498
+DDS out I2:  12406
+Expected:  12481
+DDS out I3:  12406
+Expected:  12465
+ 
+ERROR: DDS output sample         115
+DDS out Q0: -10702
+Expected:  10576
+DDS out Q1: -10702
+Expected:  10595
+DDS out Q2: -10702
+Expected:  10614
+DDS out Q3: -10702
+Expected:  10633
+ 
+ERROR: DDS output sample         116
+DDS out I0:  12340
+Expected:  12449
+DDS out I1:  12340
+Expected:  12433
+DDS out I2:  12340
+Expected:  12416
+DDS out I3:  12340
+Expected:  12400
+ 
+ERROR: DDS output sample         116
+DDS out Q0: -10778
+Expected:  10652
+DDS out Q1: -10778
+Expected:  10671
+DDS out Q2: -10778
+Expected:  10690
+DDS out Q3: -10778
+Expected:  10709
+ 
+ERROR: DDS output sample         117
+DDS out I0:  12273
+Expected:  12384
+DDS out I1:  12273
+Expected:  12367
+DDS out I2:  12273
+Expected:  12351
+DDS out I3:  12273
+Expected:  12334
+ 
+ERROR: DDS output sample         117
+DDS out Q0: -10854
+Expected:  10728
+DDS out Q1: -10854
+Expected:  10746
+DDS out Q2: -10854
+Expected:  10765
+DDS out Q3: -10854
+Expected:  10784
+ 
+ERROR: DDS output sample         118
+DDS out I0:  12207
+Expected:  12318
+DDS out I1:  12207
+Expected:  12302
+DDS out I2:  12207
+Expected:  12285
+DDS out I3:  12207
+Expected:  12268
+ 
+ERROR: DDS output sample         118
+DDS out Q0: -10929
+Expected:  10803
+DDS out Q1: -10929
+Expected:  10822
+DDS out Q2: -10929
+Expected:  10840
+DDS out Q3: -10929
+Expected:  10859
+ 
+ERROR: DDS output sample         119
+DDS out I0:  12139
+Expected:  12252
+DDS out I1:  12139
+Expected:  12235
+DDS out I2:  12139
+Expected:  12219
+DDS out I3:  12139
+Expected:  12202
+ 
+ERROR: DDS output sample         119
+DDS out Q0: -11003
+Expected:  10878
+DDS out Q1: -11003
+Expected:  10897
+DDS out Q2: -11003
+Expected:  10915
+DDS out Q3: -11003
+Expected:  10934
+ 
+ERROR: DDS output sample         120
+DDS out I0:  12071
+Expected:  12185
+DDS out I1:  12071
+Expected:  12169
+DDS out I2:  12071
+Expected:  12152
+DDS out I3:  12071
+Expected:  12135
+ 
+ERROR: DDS output sample         120
+DDS out Q0: -11078
+Expected:  10952
+DDS out Q1: -11078
+Expected:  10971
+DDS out Q2: -11078
+Expected:  10990
+DDS out Q3: -11078
+Expected:  11008
+ 
+ERROR: DDS output sample         121
+DDS out I0:  12003
+Expected:  12118
+DDS out I1:  12003
+Expected:  12101
+DDS out I2:  12003
+Expected:  12085
+DDS out I3:  12003
+Expected:  12068
+ 
+ERROR: DDS output sample         121
+DDS out Q0: -11152
+Expected:  11027
+DDS out Q1: -11152
+Expected:  11045
+DDS out Q2: -11152
+Expected:  11063
+DDS out Q3: -11152
+Expected:  11082
+ 
+ERROR: DDS output sample         122
+DDS out I0:  11935
+Expected:  12051
+DDS out I1:  11935
+Expected:  12034
+DDS out I2:  11935
+Expected:  12017
+DDS out I3:  11935
+Expected:  12000
+ 
+ERROR: DDS output sample         122
+DDS out Q0: -11225
+Expected:  11100
+DDS out Q1: -11225
+Expected:  11119
+DDS out Q2: -11225
+Expected:  11137
+DDS out Q3: -11225
+Expected:  11155
+ 
+ERROR: DDS output sample         123
+DDS out I0:  11866
+Expected:  11983
+DDS out I1:  11866
+Expected:  11966
+DDS out I2:  11866
+Expected:  11949
+DDS out I3:  11866
+Expected:  11932
+ 
+ERROR: DDS output sample         123
+DDS out Q0: -11298
+Expected:  11174
+DDS out Q1: -11298
+Expected:  11192
+DDS out Q2: -11298
+Expected:  11210
+DDS out Q3: -11298
+Expected:  11228
+ 
+ERROR: DDS output sample         124
+DDS out I0:  11796
+Expected:  11914
+DDS out I1:  11796
+Expected:  11897
+DDS out I2:  11796
+Expected:  11880
+DDS out I3:  11796
+Expected:  11863
+ 
+ERROR: DDS output sample         124
+DDS out Q0: -11371
+Expected:  11246
+DDS out Q1: -11371
+Expected:  11265
+DDS out Q2: -11371
+Expected:  11283
+DDS out Q3: -11371
+Expected:  11301
+ 
+ERROR: DDS output sample         125
+DDS out I0:  11726
+Expected:  11846
+DDS out I1:  11726
+Expected:  11828
+DDS out I2:  11726
+Expected:  11811
+DDS out I3:  11726
+Expected:  11794
+ 
+ERROR: DDS output sample         125
+DDS out Q0: -11443
+Expected:  11319
+DDS out Q1: -11443
+Expected:  11337
+DDS out Q2: -11443
+Expected:  11355
+DDS out Q3: -11443
+Expected:  11373
+ 
+ERROR: DDS output sample         126
+DDS out I0:  11656
+Expected:  11776
+DDS out I1:  11656
+Expected:  11759
+DDS out I2:  11656
+Expected:  11741
+DDS out I3:  11656
+Expected:  11724
+ 
+ERROR: DDS output sample         126
+DDS out Q0: -11514
+Expected:  11391
+DDS out Q1: -11514
+Expected:  11409
+DDS out Q2: -11514
+Expected:  11427
+DDS out Q3: -11514
+Expected:  11445
+ 
+ERROR: DDS output sample         127
+DDS out I0:  11585
+Expected:  11707
+DDS out I1:  11585
+Expected:  11689
+DDS out I2:  11585
+Expected:  11672
+DDS out I3:  11585
+Expected:  11654
+ 
+ERROR: DDS output sample         127
+DDS out Q0: -11586
+Expected:  11463
+DDS out Q1: -11586
+Expected:  11481
+DDS out Q2: -11586
+Expected:  11498
+DDS out Q3: -11586
+Expected:  11516
+ 
+ERROR: DDS output sample         128
+DDS out I0:  11513
+Expected:  11636
+DDS out I1:  11513
+Expected:  11619
+DDS out I2:  11513
+Expected:  11601
+DDS out I3:  11513
+Expected:  11583
+ 
+ERROR: DDS output sample         128
+DDS out Q0: -11657
+Expected:  11534
+DDS out Q1: -11657
+Expected:  11552
+DDS out Q2: -11657
+Expected:  11569
+DDS out Q3: -11657
+Expected:  11587
+ 
+ERROR: DDS output sample         129
+DDS out I0:  11442
+Expected:  11566
+DDS out I1:  11442
+Expected:  11548
+DDS out I2:  11442
+Expected:  11530
+DDS out I3:  11442
+Expected:  11513
+ 
+ERROR: DDS output sample         129
+DDS out Q0: -11727
+Expected:  11605
+DDS out Q1: -11727
+Expected:  11622
+DDS out Q2: -11727
+Expected:  11640
+DDS out Q3: -11727
+Expected:  11657
+ 
+ERROR: DDS output sample         130
+DDS out I0:  11369
+Expected:  11495
+DDS out I1:  11369
+Expected:  11477
+DDS out I2:  11369
+Expected:  11459
+DDS out I3:  11369
+Expected:  11441
+ 
+ERROR: DDS output sample         130
+DDS out Q0: -11797
+Expected:  11675
+DDS out Q1: -11797
+Expected:  11693
+DDS out Q2: -11797
+Expected:  11710
+DDS out Q3: -11797
+Expected:  11727
+ 
+ERROR: DDS output sample         131
+DDS out I0:  11297
+Expected:  11423
+DDS out I1:  11297
+Expected:  11405
+DDS out I2:  11297
+Expected:  11387
+DDS out I3:  11297
+Expected:  11369
+ 
+ERROR: DDS output sample         131
+DDS out Q0: -11867
+Expected:  11745
+DDS out Q1: -11867
+Expected:  11762
+DDS out Q2: -11867
+Expected:  11780
+DDS out Q3: -11867
+Expected:  11797
+ 
+ERROR: DDS output sample         132
+DDS out I0:  11224
+Expected:  11351
+DDS out I1:  11224
+Expected:  11333
+DDS out I2:  11224
+Expected:  11315
+DDS out I3:  11224
+Expected:  11297
+ 
+ERROR: DDS output sample         132
+DDS out Q0: -11936
+Expected:  11814
+DDS out Q1: -11936
+Expected:  11832
+DDS out Q2: -11936
+Expected:  11849
+DDS out Q3: -11936
+Expected:  11866
+ 
+ERROR: DDS output sample         133
+DDS out I0:  11150
+Expected:  11279
+DDS out I1:  11150
+Expected:  11261
+DDS out I2:  11150
+Expected:  11243
+DDS out I3:  11150
+Expected:  11225
+ 
+ERROR: DDS output sample         133
+DDS out Q0: -12004
+Expected:  11883
+DDS out Q1: -12004
+Expected:  11901
+DDS out Q2: -12004
+Expected:  11918
+DDS out Q3: -12004
+Expected:  11935
+ 
+ERROR: DDS output sample         134
+DDS out I0:  11077
+Expected:  11206
+DDS out I1:  11077
+Expected:  11188
+DDS out I2:  11077
+Expected:  11170
+DDS out I3:  11077
+Expected:  11152
+ 
+ERROR: DDS output sample         134
+DDS out Q0: -12073
+Expected:  11952
+DDS out Q1: -12073
+Expected:  11969
+DDS out Q2: -12073
+Expected:  11986
+DDS out Q3: -12073
+Expected:  12003
+ 
+ERROR: DDS output sample         135
+DDS out I0:  11002
+Expected:  11133
+DDS out I1:  11002
+Expected:  11115
+DDS out I2:  11002
+Expected:  11097
+DDS out I3:  11002
+Expected:  11078
+ 
+ERROR: DDS output sample         135
+DDS out Q0: -12140
+Expected:  12020
+DDS out Q1: -12140
+Expected:  12037
+DDS out Q2: -12140
+Expected:  12054
+DDS out Q3: -12140
+Expected:  12071
+ 
+ERROR: DDS output sample         136
+DDS out I0:  10928
+Expected:  11060
+DDS out I1:  10928
+Expected:  11041
+DDS out I2:  10928
+Expected:  11023
+DDS out I3:  10928
+Expected:  11004
+ 
+ERROR: DDS output sample         136
+DDS out Q0: -12208
+Expected:  12088
+DDS out Q1: -12208
+Expected:  12105
+DDS out Q2: -12208
+Expected:  12122
+DDS out Q3: -12208
+Expected:  12138
+ 
+ERROR: DDS output sample         137
+DDS out I0:  10852
+Expected:  10986
+DDS out I1:  10852
+Expected:  10967
+DDS out I2:  10852
+Expected:  10949
+DDS out I3:  10852
+Expected:  10930
+ 
+ERROR: DDS output sample         137
+DDS out Q0: -12274
+Expected:  12155
+DDS out Q1: -12274
+Expected:  12172
+DDS out Q2: -12274
+Expected:  12189
+DDS out Q3: -12274
+Expected:  12205
+ 
+ERROR: DDS output sample         138
+DDS out I0:  10777
+Expected:  10911
+DDS out I1:  10777
+Expected:  10893
+DDS out I2:  10777
+Expected:  10874
+DDS out I3:  10777
+Expected:  10855
+ 
+ERROR: DDS output sample         138
+DDS out Q0: -12341
+Expected:  12222
+DDS out Q1: -12341
+Expected:  12239
+DDS out Q2: -12341
+Expected:  12255
+DDS out Q3: -12341
+Expected:  12272
+ 
+ERROR: DDS output sample         139
+DDS out I0:  10701
+Expected:  10837
+DDS out I1:  10701
+Expected:  10818
+DDS out I2:  10701
+Expected:  10799
+DDS out I3:  10701
+Expected:  10780
+ 
+ERROR: DDS output sample         139
+DDS out Q0: -12407
+Expected:  12288
+DDS out Q1: -12407
+Expected:  12305
+DDS out Q2: -12407
+Expected:  12321
+DDS out Q3: -12407
+Expected:  12338
+ 
+ERROR: DDS output sample         140
+DDS out I0:  10625
+Expected:  10761
+DDS out I1:  10625
+Expected:  10743
+DDS out I2:  10625
+Expected:  10724
+DDS out I3:  10625
+Expected:  10705
+ 
+ERROR: DDS output sample         140
+DDS out Q0: -12472
+Expected:  12354
+DDS out Q1: -12472
+Expected:  12371
+DDS out Q2: -12472
+Expected:  12387
+DDS out Q3: -12472
+Expected:  12403
+ 
+ERROR: DDS output sample         141
+DDS out I0:  10548
+Expected:  10686
+DDS out I1:  10548
+Expected:  10667
+DDS out I2:  10548
+Expected:  10648
+DDS out I3:  10548
+Expected:  10629
+ 
+ERROR: DDS output sample         141
+DDS out Q0: -12537
+Expected:  12420
+DDS out Q1: -12537
+Expected:  12436
+DDS out Q2: -12537
+Expected:  12452
+DDS out Q3: -12537
+Expected:  12468
+ 
+ERROR: DDS output sample         142
+DDS out I0:  10471
+Expected:  10610
+DDS out I1:  10471
+Expected:  10591
+DDS out I2:  10471
+Expected:  10572
+DDS out I3:  10471
+Expected:  10553
+ 
+ERROR: DDS output sample         142
+DDS out Q0: -12601
+Expected:  12485
+DDS out Q1: -12601
+Expected:  12501
+DDS out Q2: -12601
+Expected:  12517
+DDS out Q3: -12601
+Expected:  12533
+ 
+ERROR: DDS output sample         143
+DDS out I0:  10393
+Expected:  10534
+DDS out I1:  10393
+Expected:  10514
+DDS out I2:  10393
+Expected:  10495
+DDS out I3:  10393
+Expected:  10476
+ 
+ERROR: DDS output sample         143
+DDS out Q0: -12666
+Expected:  12549
+DDS out Q1: -12666
+Expected:  12565
+DDS out Q2: -12666
+Expected:  12581
+DDS out Q3: -12666
+Expected:  12597
+ 
+ERROR: DDS output sample         144
+DDS out I0:  10315
+Expected:  10457
+DDS out I1:  10315
+Expected:  10438
+DDS out I2:  10315
+Expected:  10418
+DDS out I3:  10315
+Expected:  10399
+ 
+ERROR: DDS output sample         144
+DDS out Q0: -12729
+Expected:  12613
+DDS out Q1: -12729
+Expected:  12629
+DDS out Q2: -12729
+Expected:  12645
+DDS out Q3: -12729
+Expected:  12661
+ 
+ERROR: DDS output sample         145
+DDS out I0:  10237
+Expected:  10380
+DDS out I1:  10237
+Expected:  10360
+DDS out I2:  10237
+Expected:  10341
+DDS out I3:  10237
+Expected:  10322
+ 
+ERROR: DDS output sample         145
+DDS out Q0: -12792
+Expected:  12677
+DDS out Q1: -12792
+Expected:  12693
+DDS out Q2: -12792
+Expected:  12708
+DDS out Q3: -12792
+Expected:  12724
+ 
+ERROR: DDS output sample         146
+DDS out I0:  10158
+Expected:  10302
+DDS out I1:  10158
+Expected:  10283
+DDS out I2:  10158
+Expected:  10263
+DDS out I3:  10158
+Expected:  10244
+ 
+ERROR: DDS output sample         146
+DDS out Q0: -12855
+Expected:  12740
+DDS out Q1: -12855
+Expected:  12755
+DDS out Q2: -12855
+Expected:  12771
+DDS out Q3: -12855
+Expected:  12787
+ 
+ERROR: DDS output sample         147
+DDS out I0:  10079
+Expected:  10224
+DDS out I1:  10079
+Expected:  10205
+DDS out I2:  10079
+Expected:  10185
+DDS out I3:  10079
+Expected:  10165
+ 
+ERROR: DDS output sample         147
+DDS out Q0: -12917
+Expected:  12802
+DDS out Q1: -12917
+Expected:  12818
+DDS out Q2: -12917
+Expected:  12834
+DDS out Q3: -12917
+Expected:  12849
+ 
+ERROR: DDS output sample         148
+DDS out I0:  10000
+Expected:  10146
+DDS out I1:  10000
+Expected:  10126
+DDS out I2:  10000
+Expected:  10107
+DDS out I3:  10000
+Expected:  10087
+ 
+ERROR: DDS output sample         148
+DDS out Q0: -12978
+Expected:  12865
+DDS out Q1: -12978
+Expected:  12880
+DDS out Q2: -12978
+Expected:  12895
+DDS out Q3: -12978
+Expected:  12911
+ 
+ERROR: DDS output sample         149
+DDS out I0:   9920
+Expected:  10067
+DDS out I1:   9920
+Expected:  10047
+DDS out I2:   9920
+Expected:  10028
+DDS out I3:   9920
+Expected:  10008
+ 
+ERROR: DDS output sample         149
+DDS out Q0: -13039
+Expected:  12926
+DDS out Q1: -13039
+Expected:  12942
+DDS out Q2: -13039
+Expected:  12957
+DDS out Q3: -13039
+Expected:  12972
+ 
+ERROR: DDS output sample         150
+DDS out I0:   9840
+Expected:   9988
+DDS out I1:   9840
+Expected:   9968
+DDS out I2:   9840
+Expected:   9948
+DDS out I3:   9840
+Expected:   9929
+ 
+ERROR: DDS output sample         150
+DDS out Q0: -13100
+Expected:  12987
+DDS out Q1: -13100
+Expected:  13003
+DDS out Q2: -13100
+Expected:  13018
+DDS out Q3: -13100
+Expected:  13033
+ 
+ERROR: DDS output sample         151
+DDS out I0:   9759
+Expected:   9909
+DDS out I1:   9759
+Expected:   9889
+DDS out I2:   9759
+Expected:   9869
+DDS out I3:   9759
+Expected:   9849
+ 
+ERROR: DDS output sample         151
+DDS out Q0: -13160
+Expected:  13048
+DDS out Q1: -13160
+Expected:  13063
+DDS out Q2: -13160
+Expected:  13078
+DDS out Q3: -13160
+Expected:  13093
+ 
+ERROR: DDS output sample         152
+DDS out I0:   9678
+Expected:   9829
+DDS out I1:   9678
+Expected:   9809
+DDS out I2:   9678
+Expected:   9789
+DDS out I3:   9678
+Expected:   9769
+ 
+ERROR: DDS output sample         152
+DDS out Q0: -13220
+Expected:  13108
+DDS out Q1: -13220
+Expected:  13123
+DDS out Q2: -13220
+Expected:  13138
+DDS out Q3: -13220
+Expected:  13153
+ 
+ERROR: DDS output sample         153
+DDS out I0:   9597
+Expected:   9749
+DDS out I1:   9597
+Expected:   9729
+DDS out I2:   9597
+Expected:   9709
+DDS out I3:   9597
+Expected:   9688
+ 
+ERROR: DDS output sample         153
+DDS out Q0: -13279
+Expected:  13168
+DDS out Q1: -13279
+Expected:  13183
+DDS out Q2: -13279
+Expected:  13198
+DDS out Q3: -13279
+Expected:  13212
+ 
+ERROR: DDS output sample         154
+DDS out I0:   9515
+Expected:   9668
+DDS out I1:   9515
+Expected:   9648
+DDS out I2:   9515
+Expected:   9628
+DDS out I3:   9515
+Expected:   9608
+ 
+ERROR: DDS output sample         154
+DDS out Q0: -13338
+Expected:  13227
+DDS out Q1: -13338
+Expected:  13242
+DDS out Q2: -13338
+Expected:  13257
+DDS out Q3: -13338
+Expected:  13271
+ 
+ERROR: DDS output sample         155
+DDS out I0:   9433
+Expected:   9587
+DDS out I1:   9433
+Expected:   9567
+DDS out I2:   9433
+Expected:   9547
+DDS out I3:   9433
+Expected:   9526
+ 
+ERROR: DDS output sample         155
+DDS out Q0: -13396
+Expected:  13286
+DDS out Q1: -13396
+Expected:  13301
+DDS out Q2: -13396
+Expected:  13315
+DDS out Q3: -13396
+Expected:  13330
+ 
+ERROR: DDS output sample         156
+DDS out I0:   9351
+Expected:   9506
+DDS out I1:   9351
+Expected:   9486
+DDS out I2:   9351
+Expected:   9465
+DDS out I3:   9351
+Expected:   9445
+ 
+ERROR: DDS output sample         156
+DDS out Q0: -13453
+Expected:  13344
+DDS out Q1: -13453
+Expected:  13359
+DDS out Q2: -13453
+Expected:  13373
+DDS out Q3: -13453
+Expected:  13388
+ 
+ERROR: DDS output sample         157
+DDS out I0:   9268
+Expected:   9425
+DDS out I1:   9268
+Expected:   9404
+DDS out I2:   9268
+Expected:   9384
+DDS out I3:   9268
+Expected:   9363
+ 
+ERROR: DDS output sample         157
+DDS out Q0: -13511
+Expected:  13402
+DDS out Q1: -13511
+Expected:  13416
+DDS out Q2: -13511
+Expected:  13431
+DDS out Q3: -13511
+Expected:  13445
+ 
+ERROR: DDS output sample         158
+DDS out I0:   9185
+Expected:   9343
+DDS out I1:   9185
+Expected:   9322
+DDS out I2:   9185
+Expected:   9301
+DDS out I3:   9185
+Expected:   9281
+ 
+ERROR: DDS output sample         158
+DDS out Q0: -13567
+Expected:  13459
+DDS out Q1: -13567
+Expected:  13473
+DDS out Q2: -13567
+Expected:  13488
+DDS out Q3: -13567
+Expected:  13502
+ 
+ERROR: DDS output sample         159
+DDS out I0:   9102
+Expected:   9260
+DDS out I1:   9102
+Expected:   9240
+DDS out I2:   9102
+Expected:   9219
+DDS out I3:   9102
+Expected:   9198
+ 
+ERROR: DDS output sample         159
+DDS out Q0: -13623
+Expected:  13516
+DDS out Q1: -13623
+Expected:  13530
+DDS out Q2: -13623
+Expected:  13544
+DDS out Q3: -13623
+Expected:  13558
+ 
+ERROR: DDS output sample         160
+DDS out I0:   9018
+Expected:   9178
+DDS out I1:   9018
+Expected:   9157
+DDS out I2:   9018
+Expected:   9136
+DDS out I3:   9018
+Expected:   9115
+ 
+ERROR: DDS output sample         160
+DDS out Q0: -13679
+Expected:  13572
+DDS out Q1: -13679
+Expected:  13586
+DDS out Q2: -13679
+Expected:  13600
+DDS out Q3: -13679
+Expected:  13614
+ 
+ERROR: DDS output sample         161
+DDS out I0:   8934
+Expected:   9095
+DDS out I1:   8934
+Expected:   9074
+DDS out I2:   8934
+Expected:   9053
+DDS out I3:   8934
+Expected:   9032
+ 
+ERROR: DDS output sample         161
+DDS out Q0: -13734
+Expected:  13628
+DDS out Q1: -13734
+Expected:  13642
+DDS out Q2: -13734
+Expected:  13656
+DDS out Q3: -13734
+Expected:  13669
+ 
+ERROR: DDS output sample         162
+DDS out I0:   8850
+Expected:   9011
+DDS out I1:   8850
+Expected:   8990
+DDS out I2:   8850
+Expected:   8970
+DDS out I3:   8850
+Expected:   8949
+ 
+ERROR: DDS output sample         162
+DDS out Q0: -13788
+Expected:  13683
+DDS out Q1: -13788
+Expected:  13697
+DDS out Q2: -13788
+Expected:  13711
+DDS out Q3: -13788
+Expected:  13724
+ 
+ERROR: DDS output sample         163
+DDS out I0:   8765
+Expected:   8928
+DDS out I1:   8765
+Expected:   8907
+DDS out I2:   8765
+Expected:   8886
+DDS out I3:   8765
+Expected:   8865
+ 
+ERROR: DDS output sample         163
+DDS out Q0: -13843
+Expected:  13738
+DDS out Q1: -13843
+Expected:  13752
+DDS out Q2: -13843
+Expected:  13765
+DDS out Q3: -13843
+Expected:  13779
+ 
+ERROR: DDS output sample         164
+DDS out I0:   8680
+Expected:   8844
+DDS out I1:   8680
+Expected:   8823
+DDS out I2:   8680
+Expected:   8802
+DDS out I3:   8680
+Expected:   8781
+ 
+ERROR: DDS output sample         164
+DDS out Q0: -13896
+Expected:  13792
+DDS out Q1: -13896
+Expected:  13806
+DDS out Q2: -13896
+Expected:  13819
+DDS out Q3: -13896
+Expected:  13833
+ 
+ERROR: DDS output sample         165
+DDS out I0:   8594
+Expected:   8759
+DDS out I1:   8594
+Expected:   8738
+DDS out I2:   8594
+Expected:   8717
+DDS out I3:   8594
+Expected:   8696
+ 
+ERROR: DDS output sample         165
+DDS out Q0: -13949
+Expected:  13846
+DDS out Q1: -13949
+Expected:  13859
+DDS out Q2: -13949
+Expected:  13873
+DDS out Q3: -13949
+Expected:  13886
+ 
+ERROR: DDS output sample         166
+DDS out I0:   8508
+Expected:   8675
+DDS out I1:   8508
+Expected:   8654
+DDS out I2:   8508
+Expected:   8632
+DDS out I3:   8508
+Expected:   8611
+ 
+ERROR: DDS output sample         166
+DDS out Q0: -14001
+Expected:  13899
+DDS out Q1: -14001
+Expected:  13912
+DDS out Q2: -14001
+Expected:  13925
+DDS out Q3: -14001
+Expected:  13939
+ 
+ERROR: DDS output sample         167
+DDS out I0:   8422
+Expected:   8590
+DDS out I1:   8422
+Expected:   8569
+DDS out I2:   8422
+Expected:   8547
+DDS out I3:   8422
+Expected:   8526
+ 
+ERROR: DDS output sample         167
+DDS out Q0: -14053
+Expected:  13952
+DDS out Q1: -14053
+Expected:  13965
+DDS out Q2: -14053
+Expected:  13978
+DDS out Q3: -14053
+Expected:  13991
+ 
+ERROR: DDS output sample         168
+DDS out I0:   8336
+Expected:   8505
+DDS out I1:   8336
+Expected:   8483
+DDS out I2:   8336
+Expected:   8462
+DDS out I3:   8336
+Expected:   8440
+ 
+ERROR: DDS output sample         168
+DDS out Q0: -14105
+Expected:  14004
+DDS out Q1: -14105
+Expected:  14017
+DDS out Q2: -14105
+Expected:  14030
+DDS out Q3: -14105
+Expected:  14043
+ 
+ERROR: DDS output sample         169
+DDS out I0:   8249
+Expected:   8419
+DDS out I1:   8249
+Expected:   8397
+DDS out I2:   8249
+Expected:   8376
+DDS out I3:   8249
+Expected:   8355
+ 
+ERROR: DDS output sample         169
+DDS out Q0: -14156
+Expected:  14056
+DDS out Q1: -14156
+Expected:  14068
+DDS out Q2: -14156
+Expected:  14081
+DDS out Q3: -14156
+Expected:  14094
+ 
+ERROR: DDS output sample         170
+DDS out I0:   8162
+Expected:   8333
+DDS out I1:   8162
+Expected:   8311
+DDS out I2:   8162
+Expected:   8290
+DDS out I3:   8162
+Expected:   8268
+ 
+ERROR: DDS output sample         170
+DDS out Q0: -14206
+Expected:  14107
+DDS out Q1: -14206
+Expected:  14119
+DDS out Q2: -14206
+Expected:  14132
+DDS out Q3: -14206
+Expected:  14145
+ 
+ERROR: DDS output sample         171
+DDS out I0:   8075
+Expected:   8247
+DDS out I1:   8075
+Expected:   8225
+DDS out I2:   8075
+Expected:   8204
+DDS out I3:   8075
+Expected:   8182
+ 
+ERROR: DDS output sample         171
+DDS out Q0: -14256
+Expected:  14157
+DDS out Q1: -14256
+Expected:  14170
+DDS out Q2: -14256
+Expected:  14182
+DDS out Q3: -14256
+Expected:  14195
+ 
+ERROR: DDS output sample         172
+DDS out I0:   7987
+Expected:   8160
+DDS out I1:   7987
+Expected:   8139
+DDS out I2:   7987
+Expected:   8117
+DDS out I3:   7987
+Expected:   8095
+ 
+ERROR: DDS output sample         172
+DDS out Q0: -14305
+Expected:  14207
+DDS out Q1: -14305
+Expected:  14220
+DDS out Q2: -14305
+Expected:  14232
+DDS out Q3: -14305
+Expected:  14244
+ 
+ERROR: DDS output sample         173
+DDS out I0:   7899
+Expected:   8073
+DDS out I1:   7899
+Expected:   8052
+DDS out I2:   7899
+Expected:   8030
+DDS out I3:   7899
+Expected:   8008
+ 
+ERROR: DDS output sample         173
+DDS out Q0: -14354
+Expected:  14257
+DDS out Q1: -14354
+Expected:  14269
+DDS out Q2: -14354
+Expected:  14281
+DDS out Q3: -14354
+Expected:  14294
+ 
+ERROR: DDS output sample         174
+DDS out I0:   7811
+Expected:   7986
+DDS out I1:   7811
+Expected:   7964
+DDS out I2:   7811
+Expected:   7943
+DDS out I3:   7811
+Expected:   7921
+ 
+ERROR: DDS output sample         174
+DDS out Q0: -14402
+Expected:  14306
+DDS out Q1: -14402
+Expected:  14318
+DDS out Q2: -14402
+Expected:  14330
+DDS out Q3: -14402
+Expected:  14342
+ 
+ERROR: DDS output sample         175
+DDS out I0:   7723
+Expected:   7899
+DDS out I1:   7723
+Expected:   7877
+DDS out I2:   7723
+Expected:   7855
+DDS out I3:   7723
+Expected:   7833
+ 
+ERROR: DDS output sample         175
+DDS out Q0: -14450
+Expected:  14354
+DDS out Q1: -14450
+Expected:  14366
+DDS out Q2: -14450
+Expected:  14378
+DDS out Q3: -14450
+Expected:  14390
+ 
+ERROR: DDS output sample         176
+DDS out I0:   7634
+Expected:   7811
+DDS out I1:   7634
+Expected:   7789
+DDS out I2:   7634
+Expected:   7767
+DDS out I3:   7634
+Expected:   7745
+ 
+ERROR: DDS output sample         176
+DDS out Q0: -14497
+Expected:  14402
+DDS out Q1: -14497
+Expected:  14414
+DDS out Q2: -14497
+Expected:  14426
+DDS out Q3: -14497
+Expected:  14438
+ 
+ERROR: DDS output sample         177
+DDS out I0:   7545
+Expected:   7723
+DDS out I1:   7545
+Expected:   7701
+DDS out I2:   7545
+Expected:   7679
+DDS out I3:   7545
+Expected:   7657
+ 
+ERROR: DDS output sample         177
+DDS out Q0: -14543
+Expected:  14450
+DDS out Q1: -14543
+Expected:  14461
+DDS out Q2: -14543
+Expected:  14473
+DDS out Q3: -14543
+Expected:  14485
+ 
+ERROR: DDS output sample         178
+DDS out I0:   7455
+Expected:   7635
+DDS out I1:   7455
+Expected:   7613
+DDS out I2:   7455
+Expected:   7591
+DDS out I3:   7455
+Expected:   7568
+ 
+ERROR: DDS output sample         178
+DDS out Q0: -14589
+Expected:  14496
+DDS out Q1: -14589
+Expected:  14508
+DDS out Q2: -14589
+Expected:  14520
+DDS out Q3: -14589
+Expected:  14531
+ 
+ERROR: DDS output sample         179
+DDS out I0:   7366
+Expected:   7546
+DDS out I1:   7366
+Expected:   7524
+DDS out I2:   7366
+Expected:   7502
+DDS out I3:   7366
+Expected:   7480
+ 
+ERROR: DDS output sample         179
+DDS out Q0: -14635
+Expected:  14543
+DDS out Q1: -14635
+Expected:  14554
+DDS out Q2: -14635
+Expected:  14566
+DDS out Q3: -14635
+Expected:  14577
+ 
+ERROR: DDS output sample         180
+DDS out I0:   7276
+Expected:   7457
+DDS out I1:   7276
+Expected:   7435
+DDS out I2:   7276
+Expected:   7413
+DDS out I3:   7276
+Expected:   7390
+ 
+ERROR: DDS output sample         180
+DDS out Q0: -14680
+Expected:  14588
+DDS out Q1: -14680
+Expected:  14600
+DDS out Q2: -14680
+Expected:  14611
+DDS out Q3: -14680
+Expected:  14622
+ 
+ERROR: DDS output sample         181
+DDS out I0:   7186
+Expected:   7368
+DDS out I1:   7186
+Expected:   7346
+DDS out I2:   7186
+Expected:   7324
+DDS out I3:   7186
+Expected:   7301
+ 
+ERROR: DDS output sample         181
+DDS out Q0: -14724
+Expected:  14634
+DDS out Q1: -14724
+Expected:  14645
+DDS out Q2: -14724
+Expected:  14656
+DDS out Q3: -14724
+Expected:  14667
+ 
+ERROR: DDS output sample         182
+DDS out I0:   7095
+Expected:   7279
+DDS out I1:   7095
+Expected:   7256
+DDS out I2:   7095
+Expected:   7234
+DDS out I3:   7095
+Expected:   7212
+ 
+ERROR: DDS output sample         182
+DDS out Q0: -14768
+Expected:  14678
+DDS out Q1: -14768
+Expected:  14689
+DDS out Q2: -14768
+Expected:  14701
+DDS out Q3: -14768
+Expected:  14712
+ 
+ERROR: DDS output sample         183
+DDS out I0:   7004
+Expected:   7189
+DDS out I1:   7004
+Expected:   7167
+DDS out I2:   7004
+Expected:   7144
+DDS out I3:   7004
+Expected:   7122
+ 
+ERROR: DDS output sample         183
+DDS out Q0: -14811
+Expected:  14723
+DDS out Q1: -14811
+Expected:  14733
+DDS out Q2: -14811
+Expected:  14744
+DDS out Q3: -14811
+Expected:  14755
+ 
+ERROR: DDS output sample         184
+DDS out I0:   6913
+Expected:   7099
+DDS out I1:   6913
+Expected:   7077
+DDS out I2:   6913
+Expected:   7054
+DDS out I3:   6913
+Expected:   7031
+ 
+ERROR: DDS output sample         184
+DDS out Q0: -14854
+Expected:  14766
+DDS out Q1: -14854
+Expected:  14777
+DDS out Q2: -14854
+Expected:  14788
+DDS out Q3: -14854
+Expected:  14798
+ 
+ERROR: DDS output sample         185
+DDS out I0:   6822
+Expected:   7009
+DDS out I1:   6822
+Expected:   6986
+DDS out I2:   6822
+Expected:   6964
+DDS out I3:   6822
+Expected:   6941
+ 
+ERROR: DDS output sample         185
+DDS out Q0: -14896
+Expected:  14809
+DDS out Q1: -14896
+Expected:  14820
+DDS out Q2: -14896
+Expected:  14830
+DDS out Q3: -14896
+Expected:  14841
+ 
+ERROR: DDS output sample         186
+DDS out I0:   6731
+Expected:   6918
+DDS out I1:   6731
+Expected:   6896
+DDS out I2:   6731
+Expected:   6873
+DDS out I3:   6731
+Expected:   6850
+ 
+ERROR: DDS output sample         186
+DDS out Q0: -14938
+Expected:  14852
+DDS out Q1: -14938
+Expected:  14862
+DDS out Q2: -14938
+Expected:  14873
+DDS out Q3: -14938
+Expected:  14883
+ 
+ERROR: DDS output sample         187
+DDS out I0:   6639
+Expected:   6828
+DDS out I1:   6639
+Expected:   6805
+DDS out I2:   6639
+Expected:   6782
+DDS out I3:   6639
+Expected:   6759
+ 
+ERROR: DDS output sample         187
+DDS out Q0: -14979
+Expected:  14894
+DDS out Q1: -14979
+Expected:  14904
+DDS out Q2: -14979
+Expected:  14914
+DDS out Q3: -14979
+Expected:  14925
+ 
+ERROR: DDS output sample         188
+DDS out I0:   6547
+Expected:   6737
+DDS out I1:   6547
+Expected:   6714
+DDS out I2:   6547
+Expected:   6691
+DDS out I3:   6547
+Expected:   6668
+ 
+ERROR: DDS output sample         188
+DDS out Q0: -15019
+Expected:  14935
+DDS out Q1: -15019
+Expected:  14945
+DDS out Q2: -15019
+Expected:  14955
+DDS out Q3: -15019
+Expected:  14966
+ 
+ERROR: DDS output sample         189
+DDS out I0:   6454
+Expected:   6645
+DDS out I1:   6454
+Expected:   6623
+DDS out I2:   6454
+Expected:   6600
+DDS out I3:   6454
+Expected:   6577
+ 
+ERROR: DDS output sample         189
+DDS out Q0: -15059
+Expected:  14976
+DDS out Q1: -15059
+Expected:  14986
+DDS out Q2: -15059
+Expected:  14996
+DDS out Q3: -15059
+Expected:  15006
+ 
+ERROR: DDS output sample         190
+DDS out I0:   6362
+Expected:   6554
+DDS out I1:   6362
+Expected:   6531
+DDS out I2:   6362
+Expected:   6508
+DDS out I3:   6362
+Expected:   6485
+ 
+ERROR: DDS output sample         190
+DDS out Q0: -15098
+Expected:  15016
+DDS out Q1: -15098
+Expected:  15026
+DDS out Q2: -15098
+Expected:  15036
+DDS out Q3: -15098
+Expected:  15046
+ 
+ERROR: DDS output sample         191
+DDS out I0:   6269
+Expected:   6462
+DDS out I1:   6269
+Expected:   6439
+DDS out I2:   6269
+Expected:   6416
+DDS out I3:   6269
+Expected:   6393
+ 
+ERROR: DDS output sample         191
+DDS out Q0: -15137
+Expected:  15056
+DDS out Q1: -15137
+Expected:  15066
+DDS out Q2: -15137
+Expected:  15075
+DDS out Q3: -15137
+Expected:  15085
+ 
+ERROR: DDS output sample         192
+DDS out I0:   6176
+Expected:   6370
+DDS out I1:   6176
+Expected:   6347
+DDS out I2:   6176
+Expected:   6324
+DDS out I3:   6176
+Expected:   6301
+ 
+ERROR: DDS output sample         192
+DDS out Q0: -15175
+Expected:  15095
+DDS out Q1: -15175
+Expected:  15105
+DDS out Q2: -15175
+Expected:  15114
+DDS out Q3: -15175
+Expected:  15124
+ 
+ERROR: DDS output sample         193
+DDS out I0:   6083
+Expected:   6278
+DDS out I1:   6083
+Expected:   6255
+DDS out I2:   6083
+Expected:   6232
+DDS out I3:   6083
+Expected:   6209
+ 
+ERROR: DDS output sample         193
+DDS out Q0: -15213
+Expected:  15133
+DDS out Q1: -15213
+Expected:  15143
+DDS out Q2: -15213
+Expected:  15153
+DDS out Q3: -15213
+Expected:  15162
+ 
+ERROR: DDS output sample         194
+DDS out I0:   5989
+Expected:   6186
+DDS out I1:   5989
+Expected:   6162
+DDS out I2:   5989
+Expected:   6139
+DDS out I3:   5989
+Expected:   6116
+ 
+ERROR: DDS output sample         194
+DDS out Q0: -15250
+Expected:  15172
+DDS out Q1: -15250
+Expected:  15181
+DDS out Q2: -15250
+Expected:  15190
+DDS out Q3: -15250
+Expected:  15200
+ 
+ERROR: DDS output sample         195
+DDS out I0:   5896
+Expected:   6093
+DDS out I1:   5896
+Expected:   6070
+DDS out I2:   5896
+Expected:   6046
+DDS out I3:   5896
+Expected:   6023
+ 
+ERROR: DDS output sample         195
+DDS out Q0: -15286
+Expected:  15209
+DDS out Q1: -15286
+Expected:  15218
+DDS out Q2: -15286
+Expected:  15227
+DDS out Q3: -15286
+Expected:  15237
+ 
+ERROR: DDS output sample         196
+DDS out I0:   5802
+Expected:   6000
+DDS out I1:   5802
+Expected:   5977
+DDS out I2:   5802
+Expected:   5953
+DDS out I3:   5802
+Expected:   5930
+ 
+ERROR: DDS output sample         196
+DDS out Q0: -15322
+Expected:  15246
+DDS out Q1: -15322
+Expected:  15255
+DDS out Q2: -15322
+Expected:  15264
+DDS out Q3: -15322
+Expected:  15273
+ 
+ERROR: DDS output sample         197
+DDS out I0:   5708
+Expected:   5907
+DDS out I1:   5708
+Expected:   5883
+DDS out I2:   5708
+Expected:   5860
+DDS out I3:   5708
+Expected:   5837
+ 
+ERROR: DDS output sample         197
+DDS out Q0: -15358
+Expected:  15282
+DDS out Q1: -15358
+Expected:  15291
+DDS out Q2: -15358
+Expected:  15300
+DDS out Q3: -15358
+Expected:  15309
+ 
+ERROR: DDS output sample         198
+DDS out I0:   5613
+Expected:   5813
+DDS out I1:   5613
+Expected:   5790
+DDS out I2:   5613
+Expected:   5767
+DDS out I3:   5613
+Expected:   5743
+ 
+ERROR: DDS output sample         198
+DDS out Q0: -15392
+Expected:  15318
+DDS out Q1: -15392
+Expected:  15327
+DDS out Q2: -15392
+Expected:  15336
+DDS out Q3: -15392
+Expected:  15344
+ 
+ERROR: DDS output sample         199
+DDS out I0:   5519
+Expected:   5720
+DDS out I1:   5519
+Expected:   5696
+DDS out I2:   5519
+Expected:   5673
+DDS out I3:   5519
+Expected:   5650
+ 
+ERROR: DDS output sample         199
+DDS out Q0: -15427
+Expected:  15353
+DDS out Q1: -15427
+Expected:  15362
+DDS out Q2: -15427
+Expected:  15371
+DDS out Q3: -15427
+Expected:  15379
+ 
+ERROR: DDS output sample         200
+DDS out I0:   5424
+Expected:   5626
+DDS out I1:   5424
+Expected:   5603
+DDS out I2:   5424
+Expected:   5579
+DDS out I3:   5424
+Expected:   5556
+ 
+ERROR: DDS output sample         200
+DDS out Q0: -15460
+Expected:  15388
+DDS out Q1: -15460
+Expected:  15396
+DDS out Q2: -15460
+Expected:  15405
+DDS out Q3: -15460
+Expected:  15413
+ 
+ERROR: DDS output sample         201
+DDS out I0:   5329
+Expected:   5532
+DDS out I1:   5329
+Expected:   5509
+DDS out I2:   5329
+Expected:   5485
+DDS out I3:   5329
+Expected:   5461
+ 
+ERROR: DDS output sample         201
+DDS out Q0: -15493
+Expected:  15422
+DDS out Q1: -15493
+Expected:  15430
+DDS out Q2: -15493
+Expected:  15439
+DDS out Q3: -15493
+Expected:  15447
+ 
+ERROR: DDS output sample         202
+DDS out I0:   5234
+Expected:   5438
+DDS out I1:   5234
+Expected:   5414
+DDS out I2:   5234
+Expected:   5391
+DDS out I3:   5234
+Expected:   5367
+ 
+ERROR: DDS output sample         202
+DDS out Q0: -15525
+Expected:  15455
+DDS out Q1: -15525
+Expected:  15464
+DDS out Q2: -15525
+Expected:  15472
+DDS out Q3: -15525
+Expected:  15480
+ 
+ERROR: DDS output sample         203
+DDS out I0:   5139
+Expected:   5344
+DDS out I1:   5139
+Expected:   5320
+DDS out I2:   5139
+Expected:   5296
+DDS out I3:   5139
+Expected:   5273
+ 
+ERROR: DDS output sample         203
+DDS out Q0: -15557
+Expected:  15488
+DDS out Q1: -15557
+Expected:  15496
+DDS out Q2: -15557
+Expected:  15504
+DDS out Q3: -15557
+Expected:  15512
+ 
+ERROR: DDS output sample         204
+DDS out I0:   5043
+Expected:   5249
+DDS out I1:   5043
+Expected:   5225
+DDS out I2:   5043
+Expected:   5202
+DDS out I3:   5043
+Expected:   5178
+ 
+ERROR: DDS output sample         204
+DDS out Q0: -15589
+Expected:  15520
+DDS out Q1: -15589
+Expected:  15528
+DDS out Q2: -15589
+Expected:  15536
+DDS out Q3: -15589
+Expected:  15544
+ 
+ERROR: DDS output sample         205
+DDS out I0:   4947
+Expected:   5154
+DDS out I1:   4947
+Expected:   5130
+DDS out I2:   4947
+Expected:   5107
+DDS out I3:   4947
+Expected:   5083
+ 
+ERROR: DDS output sample         205
+DDS out Q0: -15619
+Expected:  15552
+DDS out Q1: -15619
+Expected:  15560
+DDS out Q2: -15619
+Expected:  15568
+DDS out Q3: -15619
+Expected:  15576
+ 
+ERROR: DDS output sample         206
+DDS out I0:   4851
+Expected:   5059
+DDS out I1:   4851
+Expected:   5035
+DDS out I2:   4851
+Expected:   5012
+DDS out I3:   4851
+Expected:   4988
+ 
+ERROR: DDS output sample         206
+DDS out Q0: -15649
+Expected:  15583
+DDS out Q1: -15649
+Expected:  15591
+DDS out Q2: -15649
+Expected:  15599
+DDS out Q3: -15649
+Expected:  15606
+ 
+ERROR: DDS output sample         207
+DDS out I0:   4755
+Expected:   4964
+DDS out I1:   4755
+Expected:   4940
+DDS out I2:   4755
+Expected:   4916
+DDS out I3:   4755
+Expected:   4892
+ 
+ERROR: DDS output sample         207
+DDS out Q0: -15679
+Expected:  15614
+DDS out Q1: -15679
+Expected:  15621
+DDS out Q2: -15679
+Expected:  15629
+DDS out Q3: -15679
+Expected:  15636
+ 
+ERROR: DDS output sample         208
+DDS out I0:   4659
+Expected:   4869
+DDS out I1:   4659
+Expected:   4845
+DDS out I2:   4659
+Expected:   4821
+DDS out I3:   4659
+Expected:   4797
+ 
+ERROR: DDS output sample         208
+DDS out Q0: -15708
+Expected:  15644
+DDS out Q1: -15708
+Expected:  15651
+DDS out Q2: -15708
+Expected:  15659
+DDS out Q3: -15708
+Expected:  15666
+ 
+ERROR: DDS output sample         209
+DDS out I0:   4563
+Expected:   4773
+DDS out I1:   4563
+Expected:   4749
+DDS out I2:   4563
+Expected:   4725
+DDS out I3:   4563
+Expected:   4701
+ 
+ERROR: DDS output sample         209
+DDS out Q0: -15736
+Expected:  15673
+DDS out Q1: -15736
+Expected:  15681
+DDS out Q2: -15736
+Expected:  15688
+DDS out Q3: -15736
+Expected:  15695
+ 
+ERROR: DDS output sample         210
+DDS out I0:   4466
+Expected:   4677
+DDS out I1:   4466
+Expected:   4653
+DDS out I2:   4466
+Expected:   4629
+DDS out I3:   4466
+Expected:   4605
+ 
+ERROR: DDS output sample         210
+DDS out Q0: -15764
+Expected:  15702
+DDS out Q1: -15764
+Expected:  15709
+DDS out Q2: -15764
+Expected:  15716
+DDS out Q3: -15764
+Expected:  15723
+ 
+ERROR: DDS output sample         211
+DDS out I0:   4369
+Expected:   4581
+DDS out I1:   4369
+Expected:   4557
+DDS out I2:   4369
+Expected:   4533
+DDS out I3:   4369
+Expected:   4509
+ 
+ERROR: DDS output sample         211
+DDS out Q0: -15791
+Expected:  15730
+DDS out Q1: -15791
+Expected:  15737
+DDS out Q2: -15791
+Expected:  15744
+DDS out Q3: -15791
+Expected:  15751
+ 
+ERROR: DDS output sample         212
+DDS out I0:   4272
+Expected:   4485
+DDS out I1:   4272
+Expected:   4461
+DDS out I2:   4272
+Expected:   4437
+DDS out I3:   4272
+Expected:   4413
+ 
+ERROR: DDS output sample         212
+DDS out Q0: -15817
+Expected:  15758
+DDS out Q1: -15817
+Expected:  15765
+DDS out Q2: -15817
+Expected:  15772
+DDS out Q3: -15817
+Expected:  15778
+ 
+ERROR: DDS output sample         213
+DDS out I0:   4175
+Expected:   4389
+DDS out I1:   4175
+Expected:   4365
+DDS out I2:   4175
+Expected:   4341
+DDS out I3:   4175
+Expected:   4317
+ 
+ERROR: DDS output sample         213
+DDS out Q0: -15843
+Expected:  15785
+DDS out Q1: -15843
+Expected:  15792
+DDS out Q2: -15843
+Expected:  15798
+DDS out Q3: -15843
+Expected:  15805
+ 
+ERROR: DDS output sample         214
+DDS out I0:   4078
+Expected:   4293
+DDS out I1:   4078
+Expected:   4269
+DDS out I2:   4078
+Expected:   4245
+DDS out I3:   4078
+Expected:   4220
+ 
+ERROR: DDS output sample         214
+DDS out Q0: -15868
+Expected:  15812
+DDS out Q1: -15868
+Expected:  15818
+DDS out Q2: -15868
+Expected:  15825
+DDS out Q3: -15868
+Expected:  15831
+ 
+ERROR: DDS output sample         215
+DDS out I0:   3980
+Expected:   4196
+DDS out I1:   3980
+Expected:   4172
+DDS out I2:   3980
+Expected:   4148
+DDS out I3:   3980
+Expected:   4124
+ 
+ERROR: DDS output sample         215
+DDS out Q0: -15893
+Expected:  15838
+DDS out Q1: -15893
+Expected:  15844
+DDS out Q2: -15893
+Expected:  15850
+DDS out Q3: -15893
+Expected:  15857
+ 
+ERROR: DDS output sample         216
+DDS out I0:   3883
+Expected:   4100
+DDS out I1:   3883
+Expected:   4075
+DDS out I2:   3883
+Expected:   4051
+DDS out I3:   3883
+Expected:   4027
+ 
+ERROR: DDS output sample         216
+DDS out Q0: -15917
+Expected:  15863
+DDS out Q1: -15917
+Expected:  15869
+DDS out Q2: -15917
+Expected:  15875
+DDS out Q3: -15917
+Expected:  15881
+ 
+ERROR: DDS output sample         217
+DDS out I0:   3785
+Expected:   4003
+DDS out I1:   3785
+Expected:   3978
+DDS out I2:   3785
+Expected:   3954
+DDS out I3:   3785
+Expected:   3930
+ 
+ERROR: DDS output sample         217
+DDS out Q0: -15941
+Expected:  15888
+DDS out Q1: -15941
+Expected:  15894
+DDS out Q2: -15941
+Expected:  15900
+DDS out Q3: -15941
+Expected:  15906
+ 
+ERROR: DDS output sample         218
+DDS out I0:   3687
+Expected:   3906
+DDS out I1:   3687
+Expected:   3881
+DDS out I2:   3687
+Expected:   3857
+DDS out I3:   3687
+Expected:   3833
+ 
+ERROR: DDS output sample         218
+DDS out Q0: -15964
+Expected:  15912
+DDS out Q1: -15964
+Expected:  15918
+DDS out Q2: -15964
+Expected:  15924
+DDS out Q3: -15964
+Expected:  15929
+ 
+ERROR: DDS output sample         219
+DDS out I0:   3589
+Expected:   3808
+DDS out I1:   3589
+Expected:   3784
+DDS out I2:   3589
+Expected:   3760
+DDS out I3:   3589
+Expected:   3736
+ 
+ERROR: DDS output sample         219
+DDS out Q0: -15986
+Expected:  15935
+DDS out Q1: -15986
+Expected:  15941
+DDS out Q2: -15986
+Expected:  15947
+DDS out Q3: -15986
+Expected:  15952
+ 
+ERROR: DDS output sample         220
+DDS out I0:   3491
+Expected:   3711
+DDS out I1:   3491
+Expected:   3687
+DDS out I2:   3491
+Expected:   3662
+DDS out I3:   3491
+Expected:   3638
+ 
+ERROR: DDS output sample         220
+DDS out Q0: -16008
+Expected:  15958
+DDS out Q1: -16008
+Expected:  15964
+DDS out Q2: -16008
+Expected:  15969
+DDS out Q3: -16008
+Expected:  15975
+ 
+ERROR: DDS output sample         221
+DDS out I0:   3393
+Expected:   3614
+DDS out I1:   3393
+Expected:   3589
+DDS out I2:   3393
+Expected:   3565
+DDS out I3:   3393
+Expected:   3541
+ 
+ERROR: DDS output sample         221
+DDS out Q0: -16029
+Expected:  15980
+DDS out Q1: -16029
+Expected:  15986
+DDS out Q2: -16029
+Expected:  15991
+DDS out Q3: -16029
+Expected:  15997
+ 
+ERROR: DDS output sample         222
+DDS out I0:   3294
+Expected:   3516
+DDS out I1:   3294
+Expected:   3492
+DDS out I2:   3294
+Expected:   3467
+DDS out I3:   3294
+Expected:   3443
+ 
+ERROR: DDS output sample         222
+DDS out Q0: -16049
+Expected:  16002
+DDS out Q1: -16049
+Expected:  16008
+DDS out Q2: -16049
+Expected:  16013
+DDS out Q3: -16049
+Expected:  16018
+ 
+ERROR: DDS output sample         223
+DDS out I0:   3196
+Expected:   3418
+DDS out I1:   3196
+Expected:   3394
+DDS out I2:   3196
+Expected:   3370
+DDS out I3:   3196
+Expected:   3345
+ 
+ERROR: DDS output sample         223
+DDS out Q0: -16069
+Expected:  16023
+DDS out Q1: -16069
+Expected:  16029
+DDS out Q2: -16069
+Expected:  16034
+DDS out Q3: -16069
+Expected:  16039
+ 
+ERROR: DDS output sample         224
+DDS out I0:   3097
+Expected:   3321
+DDS out I1:   3097
+Expected:   3296
+DDS out I2:   3097
+Expected:   3272
+DDS out I3:   3097
+Expected:   3247
+ 
+ERROR: DDS output sample         224
+DDS out Q0: -16089
+Expected:  16044
+DDS out Q1: -16089
+Expected:  16049
+DDS out Q2: -16089
+Expected:  16054
+DDS out Q3: -16089
+Expected:  16059
+ 
+ERROR: DDS output sample         225
+DDS out I0:   2998
+Expected:   3223
+DDS out I1:   2998
+Expected:   3198
+DDS out I2:   2998
+Expected:   3174
+DDS out I3:   2998
+Expected:   3149
+ 
+ERROR: DDS output sample         225
+DDS out Q0: -16107
+Expected:  16064
+DDS out Q1: -16107
+Expected:  16069
+DDS out Q2: -16107
+Expected:  16074
+DDS out Q3: -16107
+Expected:  16079
+ 
+ERROR: DDS output sample         226
+DDS out I0:   2899
+Expected:   3125
+DDS out I1:   2899
+Expected:   3100
+DDS out I2:   2899
+Expected:   3076
+DDS out I3:   2899
+Expected:   3051
+ 
+ERROR: DDS output sample         226
+DDS out Q0: -16125
+Expected:  16083
+DDS out Q1: -16125
+Expected:  16088
+DDS out Q2: -16125
+Expected:  16093
+DDS out Q3: -16125
+Expected:  16097
+ 
+ERROR: DDS output sample         227
+DDS out I0:   2800
+Expected:   3026
+DDS out I1:   2800
+Expected:   3002
+DDS out I2:   2800
+Expected:   2977
+DDS out I3:   2800
+Expected:   2953
+ 
+ERROR: DDS output sample         227
+DDS out Q0: -16143
+Expected:  16102
+DDS out Q1: -16143
+Expected:  16107
+DDS out Q2: -16143
+Expected:  16111
+DDS out Q3: -16143
+Expected:  16116
+ 
+ERROR: DDS output sample         228
+DDS out I0:   2701
+Expected:   2928
+DDS out I1:   2701
+Expected:   2904
+DDS out I2:   2701
+Expected:   2879
+DDS out I3:   2701
+Expected:   2854
+ 
+ERROR: DDS output sample         228
+DDS out Q0: -16160
+Expected:  16120
+DDS out Q1: -16160
+Expected:  16125
+DDS out Q2: -16160
+Expected:  16129
+DDS out Q3: -16160
+Expected:  16133
+ 
+ERROR: DDS output sample         229
+DDS out I0:   2602
+Expected:   2830
+DDS out I1:   2602
+Expected:   2805
+DDS out I2:   2602
+Expected:   2780
+DDS out I3:   2602
+Expected:   2756
+ 
+ERROR: DDS output sample         229
+DDS out Q0: -16176
+Expected:  16138
+DDS out Q1: -16176
+Expected:  16142
+DDS out Q2: -16176
+Expected:  16146
+DDS out Q3: -16176
+Expected:  16151
+ 
+ERROR: DDS output sample         230
+DDS out I0:   2503
+Expected:   2731
+DDS out I1:   2503
+Expected:   2707
+DDS out I2:   2503
+Expected:   2682
+DDS out I3:   2503
+Expected:   2657
+ 
+ERROR: DDS output sample         230
+DDS out Q0: -16192
+Expected:  16155
+DDS out Q1: -16192
+Expected:  16159
+DDS out Q2: -16192
+Expected:  16163
+DDS out Q3: -16192
+Expected:  16167
+ 
+ERROR: DDS output sample         231
+DDS out I0:   2403
+Expected:   2633
+DDS out I1:   2403
+Expected:   2608
+DDS out I2:   2403
+Expected:   2583
+DDS out I3:   2403
+Expected:   2559
+ 
+ERROR: DDS output sample         231
+DDS out Q0: -16207
+Expected:  16171
+DDS out Q1: -16207
+Expected:  16175
+DDS out Q2: -16207
+Expected:  16179
+DDS out Q3: -16207
+Expected:  16183
+ 
+ERROR: DDS output sample         232
+DDS out I0:   2304
+Expected:   2534
+DDS out I1:   2304
+Expected:   2509
+DDS out I2:   2304
+Expected:   2485
+DDS out I3:   2304
+Expected:   2460
+ 
+ERROR: DDS output sample         232
+DDS out Q0: -16221
+Expected:  16187
+DDS out Q1: -16221
+Expected:  16191
+DDS out Q2: -16221
+Expected:  16195
+DDS out Q3: -16221
+Expected:  16198
+ 
+ERROR: DDS output sample         233
+DDS out I0:   2204
+Expected:   2435
+DDS out I1:   2204
+Expected:   2410
+DDS out I2:   2204
+Expected:   2386
+DDS out I3:   2204
+Expected:   2361
+ 
+ERROR: DDS output sample         233
+DDS out Q0: -16235
+Expected:  16202
+DDS out Q1: -16235
+Expected:  16206
+DDS out Q2: -16235
+Expected:  16209
+DDS out Q3: -16235
+Expected:  16213
+ 
+ERROR: DDS output sample         234
+DDS out I0:   2105
+Expected:   2336
+DDS out I1:   2105
+Expected:   2311
+DDS out I2:   2105
+Expected:   2287
+DDS out I3:   2105
+Expected:   2262
+ 
+ERROR: DDS output sample         234
+DDS out Q0: -16248
+Expected:  16217
+DDS out Q1: -16248
+Expected:  16220
+DDS out Q2: -16248
+Expected:  16224
+DDS out Q3: -16248
+Expected:  16227
+ 
+ERROR: DDS output sample         235
+DDS out I0:   2005
+Expected:   2237
+DDS out I1:   2005
+Expected:   2212
+DDS out I2:   2005
+Expected:   2188
+DDS out I3:   2005
+Expected:   2163
+ 
+ERROR: DDS output sample         235
+DDS out Q0: -16261
+Expected:  16231
+DDS out Q1: -16261
+Expected:  16234
+DDS out Q2: -16261
+Expected:  16237
+DDS out Q3: -16261
+Expected:  16241
+ 
+ERROR: DDS output sample         236
+DDS out I0:   1905
+Expected:   2138
+DDS out I1:   1905
+Expected:   2113
+DDS out I2:   1905
+Expected:   2089
+DDS out I3:   1905
+Expected:   2064
+ 
+ERROR: DDS output sample         236
+DDS out Q0: -16273
+Expected:  16244
+DDS out Q1: -16273
+Expected:  16247
+DDS out Q2: -16273
+Expected:  16250
+DDS out Q3: -16273
+Expected:  16254
+ 
+ERROR: DDS output sample         237
+DDS out I0:   1805
+Expected:   2039
+DDS out I1:   1805
+Expected:   2014
+DDS out I2:   1805
+Expected:   1989
+DDS out I3:   1805
+Expected:   1965
+ 
+ERROR: DDS output sample         237
+DDS out Q0: -16284
+Expected:  16257
+DDS out Q1: -16284
+Expected:  16260
+DDS out Q2: -16284
+Expected:  16263
+DDS out Q3: -16284
+Expected:  16266
+ 
+ERROR: DDS output sample         238
+DDS out I0:   1705
+Expected:   1940
+DDS out I1:   1705
+Expected:   1915
+DDS out I2:   1705
+Expected:   1890
+DDS out I3:   1705
+Expected:   1865
+ 
+ERROR: DDS output sample         238
+DDS out Q0: -16295
+Expected:  16269
+DDS out Q1: -16295
+Expected:  16272
+DDS out Q2: -16295
+Expected:  16275
+DDS out Q3: -16295
+Expected:  16277
+ 
+ERROR: DDS output sample         239
+DDS out I0:   1605
+Expected:   1840
+DDS out I1:   1605
+Expected:   1816
+DDS out I2:   1605
+Expected:   1791
+DDS out I3:   1605
+Expected:   1766
+ 
+ERROR: DDS output sample         239
+DDS out Q0: -16305
+Expected:  16280
+DDS out Q1: -16305
+Expected:  16283
+DDS out Q2: -16305
+Expected:  16286
+DDS out Q3: -16305
+Expected:  16289
+ 
+ERROR: DDS output sample         240
+DDS out I0:   1505
+Expected:   1741
+DDS out I1:   1505
+Expected:   1716
+DDS out I2:   1505
+Expected:   1691
+DDS out I3:   1505
+Expected:   1667
+ 
+ERROR: DDS output sample         240
+DDS out Q0: -16315
+Expected:  16291
+DDS out Q1: -16315
+Expected:  16294
+DDS out Q2: -16315
+Expected:  16296
+DDS out Q3: -16315
+Expected:  16299
+ 
+ERROR: DDS output sample         241
+DDS out I0:   1405
+Expected:   1642
+DDS out I1:   1405
+Expected:   1617
+DDS out I2:   1405
+Expected:   1592
+DDS out I3:   1405
+Expected:   1567
+ 
+ERROR: DDS output sample         241
+DDS out Q0: -16324
+Expected:  16302
+DDS out Q1: -16324
+Expected:  16304
+DDS out Q2: -16324
+Expected:  16306
+DDS out Q3: -16324
+Expected:  16309
+ 
+ERROR: DDS output sample         242
+DDS out I0:   1305
+Expected:   1542
+DDS out I1:   1305
+Expected:   1517
+DDS out I2:   1305
+Expected:   1492
+DDS out I3:   1305
+Expected:   1468
+ 
+ERROR: DDS output sample         242
+DDS out Q0: -16332
+Expected:  16311
+DDS out Q1: -16332
+Expected:  16314
+DDS out Q2: -16332
+Expected:  16316
+DDS out Q3: -16332
+Expected:  16318
+ 
+ERROR: DDS output sample         243
+DDS out I0:   1204
+Expected:   1443
+DDS out I1:   1204
+Expected:   1418
+DDS out I2:   1204
+Expected:   1393
+DDS out I3:   1204
+Expected:   1368
+ 
+ERROR: DDS output sample         243
+DDS out Q0: -16340
+Expected:  16320
+DDS out Q1: -16340
+Expected:  16323
+DDS out Q2: -16340
+Expected:  16325
+DDS out Q3: -16340
+Expected:  16327
+ 
+ERROR: DDS output sample         244
+DDS out I0:   1104
+Expected:   1343
+DDS out I1:   1104
+Expected:   1318
+DDS out I2:   1104
+Expected:   1293
+DDS out I3:   1104
+Expected:   1268
+ 
+ERROR: DDS output sample         244
+DDS out Q0: -16347
+Expected:  16329
+DDS out Q1: -16347
+Expected:  16331
+DDS out Q2: -16347
+Expected:  16333
+DDS out Q3: -16347
+Expected:  16335
+ 
+ERROR: DDS output sample         245
+DDS out I0:   1004
+Expected:   1243
+DDS out I1:   1004
+Expected:   1218
+DDS out I2:   1004
+Expected:   1194
+DDS out I3:   1004
+Expected:   1169
+ 
+ERROR: DDS output sample         245
+DDS out Q0: -16353
+Expected:  16337
+DDS out Q1: -16353
+Expected:  16339
+DDS out Q2: -16353
+Expected:  16340
+DDS out Q3: -16353
+Expected:  16342
+ 
+ERROR: DDS output sample         246
+DDS out I0:    904
+Expected:   1144
+DDS out I1:    904
+Expected:   1119
+DDS out I2:    904
+Expected:   1094
+DDS out I3:    904
+Expected:   1069
+ 
+ERROR: DDS output sample         246
+DDS out Q0: -16359
+Expected:  16344
+DDS out Q1: -16359
+Expected:  16346
+DDS out Q2: -16359
+Expected:  16347
+DDS out Q3: -16359
+Expected:  16349
+ 
+ERROR: DDS output sample         247
+DDS out I0:    803
+Expected:   1044
+DDS out I1:    803
+Expected:   1019
+DDS out I2:    803
+Expected:    994
+DDS out I3:    803
+Expected:    969
+ 
+ERROR: DDS output sample         247
+DDS out Q0: -16364
+Expected:  16351
+DDS out Q1: -16364
+Expected:  16352
+DDS out Q2: -16364
+Expected:  16354
+DDS out Q3: -16364
+Expected:  16355
+ 
+ERROR: DDS output sample         248
+DDS out I0:    703
+Expected:    944
+DDS out I1:    703
+Expected:    919
+DDS out I2:    703
+Expected:    894
+DDS out I3:    703
+Expected:    869
+ 
+ERROR: DDS output sample         248
+DDS out Q0: -16369
+Expected:  16357
+DDS out Q1: -16369
+Expected:  16358
+DDS out Q2: -16369
+Expected:  16360
+DDS out Q3: -16369
+Expected:  16361
+ 
+ERROR: DDS output sample         249
+DDS out I0:    602
+Expected:    844
+DDS out I1:    602
+Expected:    819
+DDS out I2:    602
+Expected:    794
+DDS out I3:    602
+Expected:    769
+ 
+ERROR: DDS output sample         249
+DDS out Q0: -16373
+Expected:  16362
+DDS out Q1: -16373
+Expected:  16363
+DDS out Q2: -16373
+Expected:  16365
+DDS out Q3: -16373
+Expected:  16366
+ 
+ERROR: DDS output sample         250
+DDS out I0:    502
+Expected:    744
+DDS out I1:    502
+Expected:    720
+DDS out I2:    502
+Expected:    695
+DDS out I3:    502
+Expected:    670
+ 
+ERROR: DDS output sample         250
+DDS out Q0: -16376
+Expected:  16367
+DDS out Q1: -16376
+Expected:  16368
+DDS out Q2: -16376
+Expected:  16369
+DDS out Q3: -16376
+Expected:  16370
+ 
+ERROR: DDS output sample         251
+DDS out I0:    401
+Expected:    645
+DDS out I1:    401
+Expected:    620
+DDS out I2:    401
+Expected:    595
+DDS out I3:    401
+Expected:    570
+ 
+ERROR: DDS output sample         251
+DDS out Q0: -16379
+Expected:  16371
+DDS out Q1: -16379
+Expected:  16372
+DDS out Q2: -16379
+Expected:  16373
+DDS out Q3: -16379
+Expected:  16374
+ 
+ERROR: DDS output sample         252
+DDS out I0:    301
+Expected:    545
+DDS out I1:    301
+Expected:    520
+DDS out I2:    301
+Expected:    495
+DDS out I3:    301
+Expected:    470
+ 
+ERROR: DDS output sample         252
+DDS out Q0: -16381
+Expected:  16375
+DDS out Q1: -16381
+Expected:  16376
+DDS out Q2: -16381
+Expected:  16377
+DDS out Q3: -16381
+Expected:  16377
+ 
+ERROR: DDS output sample         253
+DDS out I0:    200
+Expected:    445
+DDS out I1:    200
+Expected:    420
+DDS out I2:    200
+Expected:    395
+DDS out I3:    200
+Expected:    370
+ 
+ERROR: DDS output sample         253
+DDS out Q0: -16383
+Expected:  16378
+DDS out Q1: -16383
+Expected:  16379
+DDS out Q2: -16383
+Expected:  16379
+DDS out Q3: -16383
+Expected:  16380
+ 
+ERROR: DDS output sample         254
+DDS out I0:    100
+Expected:    345
+DDS out I1:    100
+Expected:    320
+DDS out I2:    100
+Expected:    295
+DDS out I3:    100
+Expected:    270
+ 
+ERROR: DDS output sample         254
+DDS out Q0: -16384
+Expected:  16380
+DDS out Q1: -16384
+Expected:  16381
+DDS out Q2: -16384
+Expected:  16381
+DDS out Q3: -16384
+Expected:  16382
+ 
+ERROR: DDS output sample         255
+DDS out I0:     -1
+Expected:    245
+DDS out I1:     -1
+Expected:    220
+DDS out I2:     -1
+Expected:    195
+DDS out I3:     -1
+Expected:    170
+ 
+ERROR: DDS output sample         255
+DDS out Q0: -16384
+Expected:  16382
+DDS out Q1: -16384
+Expected:  16383
+DDS out Q2: -16384
+Expected:  16383
+DDS out Q3: -16384
+Expected:  16383
+ 
+$stop called at time : 3254 ns : File "C:/Projects/pi-radio/HW/modules/sim/equalizer_top_tb.sv" Line 609

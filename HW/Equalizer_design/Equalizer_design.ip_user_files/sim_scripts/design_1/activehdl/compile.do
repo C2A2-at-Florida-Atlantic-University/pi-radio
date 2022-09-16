@@ -35,7 +35,12 @@ vlog -work xil_defaultlib  -v2k5 "+incdir+../../../../Equalizer_design.gen/sourc
 "../../../bd/design_1/ip/design_1_complex_mult_0_0/sim/design_1_complex_mult_0_0.v" \
 "../../../bd/design_1/ip/design_1_sum_0_0/sim/design_1_sum_0_0.v" \
 "../../../bd/design_1/ip/design_1_angle_0_0/sim/design_1_angle_0_0.v" \
+"../../../bd/design_1/ip/design_1_axis_data_fifo_1_0/sim/design_1_axis_data_fifo_1_0.v" \
+"../../../bd/design_1/ip/design_1_delay_1_0/sim/design_1_delay_1_0.v" \
+"../../../bd/design_1/ip/design_1_mixer_0_0/sim/design_1_mixer_0_0.v" \
+"../../../bd/design_1/ip/design_1_dds_top_0_0/sim/design_1_dds_top_0_0.v" \
 "../../../bd/design_1/sim/design_1.v" \
+"../../../bd/design_1/ip/design_1_conj_1_0/sim/design_1_conj_1_0.v" \
 
 vlog -work xil_defaultlib \
 "glbl.v"

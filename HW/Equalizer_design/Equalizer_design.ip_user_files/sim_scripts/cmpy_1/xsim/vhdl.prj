@@ -1,0 +1,4 @@
+vhdl xil_defaultlib  \
+"../../../../Equalizer_design.gen/sources_1/ip/cmpy_1/sim/cmpy_1.vhd" \
+
+nosort

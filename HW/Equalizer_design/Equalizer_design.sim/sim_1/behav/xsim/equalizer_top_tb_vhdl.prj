@@ -10,6 +10,9 @@ vhdl xil_defaultlib  \
 "../../../../../modules/src/rtl/sum.vhd" \
 "../../../../Equalizer_design.gen/sources_1/ip/cordic_0/sim/cordic_0.vhd" \
 "../../../../../modules/src/rtl/angle.vhd" \
+"../../../../../modules/src/rtl/mixer.vhd" \
+"../../../../Equalizer_design.gen/sources_1/ip/dds_compiler_0/sim/dds_compiler_0.vhd" \
+"../../../../../modules/src/rtl/dds_top.vhd" \
 
 # Do not sort compile order
 nosort
