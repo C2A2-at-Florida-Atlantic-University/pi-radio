@@ -2,3 +2,6 @@ Running: xsim.dir/equalizer_top_tb_behav/xsimk.exe -simmode gui -wdb equalizer_t
 Design successfully loaded
 Design Loading Memory Usage: 25560 KB (Peak: 25560 KB)
 Design Loading CPU Usage: 46 ms
+Simulation completed
+Simulation Memory Usage: 37724 KB (Peak: 37724 KB)
+Simulation CPU Usage: 16014 ms
