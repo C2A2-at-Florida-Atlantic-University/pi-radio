@@ -10,6 +10,7 @@ module equalizer_top_tb();
   localparam                        c_PRECISION       = 32;
 
   int                               fd;
+  int                               fd_info;
   int                               fd_mult1;
   int                               fd_mult2;
   int                               fd_mult_out;
@@ -21,6 +22,8 @@ module equalizer_top_tb();
   int                               fd_mixer;
   int                               fd_mixer_out;
   int                               fd_mixer_in_out;
+
+  int                               ofdm_symbols;
 
   logic [15:0]                      i_data1,q_data1;
   logic [15:0]                      i_data2,q_data2;
@@ -51,9 +54,14 @@ module equalizer_top_tb();
   logic [31:0]                      mult_out_i_data3,mult_out_q_data3,mult_out_i_print3,mult_out_q_print3;
   logic [31:0]                      mult_out_i_data4,mult_out_q_data4,mult_out_i_print4,mult_out_q_print4;
 
-  logic [39:0]                      sum_i, sum_q, actual_sum_i, actual_sum_q;
+  logic [31:0]                      sum_i, sum_q, actual_sum_i, actual_sum_q;
 
   real                              angle,actual_angle,cordic_out_print,cfo;
+  logic [31:0]                      actual_angle_val;
+  real                              scs;
+  logic [31:0]                      scs_hex = 32'h00EE_6B28; // 976,562.5 Hz = 0xEE6B2.8
+  logic [31:0]                      clk_freq = 32'h0EE6_B280; // Clock frequency
+  logic [31:0]                      phase_width = 32'hFFFF_FFFF; // 2^phase_width
 
   logic [15:0]                      dds_sample_i_1,dds_sample_q_1,dds_actual_i_1,dds_actual_q_1;
   logic [15:0]                      dds_sample_i_2,dds_sample_q_2,dds_actual_i_2,dds_actual_q_2;
@@ -104,6 +112,7 @@ module equalizer_top_tb();
     if (cordic_out[c_PRECISION-1]) begin
       negative                      <= 1;
       cordic_out                    <= ~cordic_out + 1;
+    end
 
     for (int i = 0; i < c_PRECISION-2; i++) begin
       if (cordic_out[i])
@@ -114,7 +123,6 @@ module equalizer_top_tb();
       read_cordic_out               <= -1*cordic_print;
     else
       read_cordic_out               <= cordic_print;
-    end
   endfunction
 
 //---------------------------------------------------------------
@@ -135,8 +143,14 @@ module equalizer_top_tb();
     end
 
     #(267*CLOCK_PERIOD);
+
     // Check every IQ sample of multiplier input
-    for (int i = 0; i < 64; i++) begin
+    for (int i = 0; i < (ofdm_symbols*64); i++) begin
+
+      if (!(i%64)&&(i!=0))
+        #(CLOCK_PERIOD*257);
+      else
+        #CLOCK_PERIOD;
 
       $fscanf(fd_mult1,"%d, %d\n%d, %d\n%d, %d\n%d, %d\n",mult0_i_data1,mult0_q_data1,mult0_i_data2,mult0_q_data2,
                               mult0_i_data3,mult0_q_data3,mult0_i_data4,mult0_q_data4);
@@ -189,6 +203,7 @@ module equalizer_top_tb();
         $display("ERROR: mult sum input sample %d",i);
         $display("Mult in A Q3: %d", $signed(mult0_q_actual4));
         $display("Expected: %d", $signed(mult0_q_data4));
+        $display(" ");
       end
 
 
@@ -243,8 +258,8 @@ module equalizer_top_tb();
         $display("ERROR: mult sum input sample %d",i);
         $display("Mult in B Q3: %d", $signed(mult1_q_actual4));
         $display("Expected: %d", $signed(mult1_q_data4));
+        $display(" ");
       end
-      #CLOCK_PERIOD;
     end
     $fclose(fd_mult1);
     $fclose(fd_mult2);
@@ -268,7 +283,12 @@ module equalizer_top_tb();
     end
 
     #(273*CLOCK_PERIOD);
-    for (int i = 0; i < 64; i++) begin
+    for (int i = 0; i < (ofdm_symbols*64); i++) begin
+
+      if (!(i%64)&&(i!=0))
+        #(CLOCK_PERIOD*257);
+      else
+        #CLOCK_PERIOD;
 
       $fscanf(fd_mult_out,"%d, %d\n%d, %d\n%d, %d\n%d, %d\n",mult_out_i_data1,mult_out_q_data1,
               mult_out_i_data2,mult_out_q_data2,mult_out_i_data3,mult_out_q_data3,
@@ -332,8 +352,8 @@ module equalizer_top_tb();
         $display("ERROR: mult output sample %d",i);
         $display("Mult out Q3: %d", $signed(mult_out_q_print4));
         $display("Expected: %d", $signed(mult_out_q_data4));
+        $display(" ");
       end
-      #CLOCK_PERIOD;
     end
 
     $fclose(fd_mult_out);
@@ -352,20 +372,27 @@ module equalizer_top_tb();
       $stop;
     end
 
-    #(CLOCK_PERIOD*339);
+    #(CLOCK_PERIOD*340);
 
-    $fscanf(fd_sum,"%d, %d\n",sum_i,sum_q);
+    for (int i = 0; i < ofdm_symbols; i++) begin
 
-    actual_sum_i = DUT.design_1_i.sum_0.m_axis_tdata[39:0];
-    actual_sum_q = DUT.design_1_i.sum_0.m_axis_tdata[79:40];
+      $fscanf(fd_sum,"%d, %d\n",sum_i,sum_q);
 
-    if (actual_sum_i != sum_i) begin
-      $display("ERROR: summation real expected: %d",$signed(sum_i));
-      $display("Actual: %d",$signed(actual_sum_i));
-    end
-    if (actual_sum_q != sum_q) begin
-      $display("ERROR: summation imaginary expected: %d",$signed(sum_q));
-      $display("Actual: %d",$signed(actual_sum_q));
+      actual_sum_i = DUT.design_1_i.sum_0.m_axis_tdata[31:0];
+      actual_sum_q = DUT.design_1_i.sum_0.m_axis_tdata[63:32];
+
+      if (actual_sum_i != sum_i) begin
+        $display("------------------------OFDM SYMBOL %0d------------------------",i);
+        $display("ERROR: summation real expected: %d",$signed(sum_i));
+        $display("Actual: %d",$signed(actual_sum_i));
+      end
+      if (actual_sum_q != sum_q) begin
+        $display("ERROR: summation imaginary expected: %d",$signed(sum_q));
+        $display("Actual: %d",$signed(actual_sum_q));
+      end
+
+      #(CLOCK_PERIOD*320);
+
     end
 
     $fclose(fd_sum);
@@ -383,19 +410,36 @@ module equalizer_top_tb();
       $stop;
     end
 
-    #(CLOCK_PERIOD*(c_PRECISION+344));
+    #(CLOCK_PERIOD*(c_PRECISION+345));
 
-    $fscanf(fd_angle,"%f\n",angle);
-    $display("Expected angle value: %f",angle);
+    for (int i = 0; i < ofdm_symbols; i++) begin
+      $display("------------------------OFDM SYMBOL %0d------------------------",i);
+      $fscanf(fd_angle,"%f\n",angle);
+      $display("Expected angle value: %f",angle);
 
-    actual_angle = DUT.design_1_i.angle_0.m_axis_tdata[c_PRECISION-1:0];
+      actual_angle = DUT.design_1_i.angle_0.m_axis_tdata[c_PRECISION-1:0];
+      actual_angle_val = DUT.design_1_i.angle_0.m_axis_tdata[c_PRECISION-1:0];
+      
+      $display("Actual angle value (signed): %H",actual_angle_val);
+      if (actual_angle_val[c_PRECISION-1])
+        $display("Actual angle value (unsigned): %H",-actual_angle_val);
+      $display("Actual angle value: %b",actual_angle_val);
     
-    $display("Actual angle value: %b",actual_angle);
-    $display("Actual angle value: %H",actual_angle);
+      cordic_out_print = read_cordic_out(actual_angle);
     
-//    cordic_out_print = read_cordic_out($signed(actual_angle));
+      $display("Actual angle value (converted): %f",cordic_out_print);
+      $display(" ");
     
-//    $display("Actual angle value (converted): %f",cordic_out_print);
+      $display("Expected cfo: %0f",angle*scs);
+      $display("scs * angle = %H",scs_hex*(-actual_angle_val));
+      $display("Actual phase increment = %0H",(angle*scs*phase_width)/clk_freq);
+      $display("------------------------------------------------------------");
+      $display(" ");
+      $display(" ");
+
+      #(CLOCK_PERIOD*320);
+
+    end
 
     $fclose(fd_angle);
 
@@ -418,11 +462,14 @@ module equalizer_top_tb();
       $stop;
     end
 
-    #(CLOCK_PERIOD*(c_PRECISION+351)); //351
+    #(CLOCK_PERIOD*(c_PRECISION+356)); //351
 
-    for (int i = 0; i < 256; i++) begin
+    for (int i = 0; i < (ofdm_symbols*256); i++) begin
       
-      #(CLOCK_PERIOD);
+      if (!(i%256)&&(i!=0))
+        #(CLOCK_PERIOD*65);
+      else
+        #CLOCK_PERIOD;
 
       $fscanf(fd_dds,"%d, %d\n%d, %d\n%d, %d\n%d, %d\n",dds_sample_i_1,
         dds_sample_q_1,dds_sample_i_2,dds_sample_q_2,dds_sample_i_3,
@@ -442,36 +489,36 @@ module equalizer_top_tb();
         $signed(dds_actual_i_3),$signed(dds_actual_q_3),$signed(dds_actual_i_4),
         $signed(dds_actual_q_4));
 
-      if (dds_actual_i_1 != dds_sample_i_1) begin
-        $display("ERROR: DDS output sample %d",i);
-        $display("DDS out I0: %d",$signed(dds_actual_i_1));
-        $display("Expected: %d",$signed(dds_sample_i_1));
+//      if (dds_actual_i_1 != dds_sample_i_1) begin
+//        $display("ERROR: DDS output sample %d",i);
+//        $display("DDS out I0: %d",$signed(dds_actual_i_1));
+//        $display("Expected: %d",$signed(dds_sample_i_1));
 
-        $display("DDS out I1: %d",$signed(dds_actual_i_2));
-        $display("Expected: %d",$signed(dds_sample_i_2));
+//        $display("DDS out I1: %d",$signed(dds_actual_i_2));
+//        $display("Expected: %d",$signed(dds_sample_i_2));
 
-        $display("DDS out I2: %d",$signed(dds_actual_i_3));
-        $display("Expected: %d",$signed(dds_sample_i_3));
+//        $display("DDS out I2: %d",$signed(dds_actual_i_3));
+//        $display("Expected: %d",$signed(dds_sample_i_3));
 
-        $display("DDS out I3: %d",$signed(dds_actual_i_4));
-        $display("Expected: %d",$signed(dds_sample_i_4));
-        $display(" ");
-      end
-      if (dds_actual_q_1 != dds_sample_q_1) begin
-        $display("ERROR: DDS output sample %d",i);
-        $display("DDS out Q0: %d",$signed(dds_actual_q_1));
-        $display("Expected: %d",$signed(dds_sample_q_1));
+//        $display("DDS out I3: %d",$signed(dds_actual_i_4));
+//        $display("Expected: %d",$signed(dds_sample_i_4));
+//        $display(" ");
+//      end
+//      if (dds_actual_q_1 != dds_sample_q_1) begin
+//        $display("ERROR: DDS output sample %d",i);
+//        $display("DDS out Q0: %d",$signed(dds_actual_q_1));
+//        $display("Expected: %d",$signed(dds_sample_q_1));
 
-        $display("DDS out Q1: %d",$signed(dds_actual_q_2));
-        $display("Expected: %d",$signed(dds_sample_q_2));
+//        $display("DDS out Q1: %d",$signed(dds_actual_q_2));
+//        $display("Expected: %d",$signed(dds_sample_q_2));
 
-        $display("DDS out Q2: %d",$signed(dds_actual_q_3));
-        $display("Expected: %d",$signed(dds_sample_q_3));
+//        $display("DDS out Q2: %d",$signed(dds_actual_q_3));
+//        $display("Expected: %d",$signed(dds_sample_q_3));
 
-        $display("DDS out Q3: %d",$signed(dds_actual_q_4));
-        $display("Expected: %d",$signed(dds_sample_q_4));
-        $display(" ");
-      end
+//        $display("DDS out Q3: %d",$signed(dds_actual_q_4));
+//        $display("Expected: %d",$signed(dds_sample_q_4));
+//        $display(" ");
+//      end
     end
 
     $fclose(fd_dds);
@@ -490,9 +537,12 @@ module equalizer_top_tb();
       $stop;
     end
 
-    #(CLOCK_PERIOD*(c_PRECISION+351));
+    #(CLOCK_PERIOD*(c_PRECISION+356));
 
-    for (int i = 0; i < 256; i++) begin
+    for (int i = 0; i < (ofdm_symbols*256); i++) begin
+
+      if (!(i%256)&&(i!=0))
+        #(CLOCK_PERIOD*64);
 
       #CLOCK_PERIOD;
 
@@ -532,9 +582,12 @@ module equalizer_top_tb();
       $stop;
     end
     
-    #(CLOCK_PERIOD*(c_PRECISION+357));
+    #(CLOCK_PERIOD*(c_PRECISION+363));
     
-    for (int i = 0; i < 256; i++) begin
+    for (int i = 0; i < (ofdm_symbols*256); i++) begin
+
+      if (!(i%256)&&(i!=0))
+        #(CLOCK_PERIOD*64);
 
       #CLOCK_PERIOD;
 
@@ -563,6 +616,28 @@ module equalizer_top_tb();
   end
 
 //---------------------------------------------------------------
+// Control tlast/tvalid
+//---------------------------------------------------------------
+  initial begin
+    r_nRst                          <= 1'b0;
+    #CLOCK_PERIOD;
+    r_nRst                          <= 1'b1;
+    #(4*CLOCK_PERIOD);
+    #CLOCK_PERIOD;
+    in_axis_tvalid                  <= 1'b1;
+    in_axis_tuser                   <= '0;
+    in_axis_tid                     <= '0;
+    for (int i = 0; i < (ofdm_symbols*320); i++) begin
+      if (!((i+1)%320)&&(i!=0))
+        in_axis_tlast               <= 1'b1;
+      if (!(i%320)&&(i!=0))
+        in_axis_tlast               <= 1'b0;
+      #CLOCK_PERIOD;
+    end
+    in_axis_tlast                   <= 1'b0;
+    in_axis_tvalid                  <= 1'b0;
+  end
+//---------------------------------------------------------------
 // Stimulate design
 //---------------------------------------------------------------
   initial begin
@@ -573,19 +648,19 @@ module equalizer_top_tb();
       $display("File was NOT opened successfully: %0d",fd);
       $stop;
     end
-  
-    r_nRst                          = 1'b0;
-    #CLOCK_PERIOD;
-    r_nRst                          = 1'b1;
-    #(4*CLOCK_PERIOD);
-    in_axis_tlast                   = 1'b1;
-    #CLOCK_PERIOD;
-    in_axis_tvalid                  = 1'b1;
-    in_axis_tuser                   = '0;
-    in_axis_tlast                   = 1'b0;
-    in_axis_tid                     = '0;
+    fd_info = $fopen("../../../../../modules/sim/info.txt","r");
+    if (fd_info) $display("File was opened successfully: %0d ",fd_info);
+    else begin
+      $display("File was NOT opened successfully: %0d",fd_info);
+      $stop;
+    end
 
-    for (int i = 0; i < 320; i++) begin
+    $fscanf(fd_info,"%d",ofdm_symbols);
+    $display("Number of OFDM symbols: %d",ofdm_symbols);
+    
+    #(CLOCK_PERIOD*6);
+
+    for (int i = 0; i < (ofdm_symbols*320); i++) begin
       $fscanf(fd,"%d, %d",i_data1,q_data1);
       $fscanf(fd,"%d, %d",i_data2,q_data2);
       $fscanf(fd,"%d, %d",i_data3,q_data3);
@@ -597,16 +672,12 @@ module equalizer_top_tb();
         $display("%D + i%D",$signed(i_data3),$signed(q_data3));
         $display("%D + i%D",$signed(i_data4),$signed(q_data4));
       end
-      in_axis_tdata                 = {q_data4,i_data4,q_data3,i_data3,
+      in_axis_tdata                 <= {q_data4,i_data4,q_data3,i_data3,
                                        q_data2,i_data2,q_data1,i_data1};
-      if (i == 319)
-        in_axis_tlast               = 1'b1;
       #CLOCK_PERIOD;
     end
-    in_axis_tvalid                  = 1'b0;    
-    in_axis_tlast                   = 1'b0;
     $fclose(fd);
-    #1950 $stop;
+    #(2000+((ofdm_symbols-1)*CLOCK_PERIOD)) $stop;
   end
 
 endmodule

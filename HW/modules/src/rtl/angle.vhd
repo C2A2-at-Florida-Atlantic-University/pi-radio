@@ -17,7 +17,7 @@ entity angle is
     axis_aclk                     : in  std_logic;
     axis_aresetn                  : in  std_logic;
 
-    s_axis_tdata                  : in  std_logic_vector(79 downto 0);
+    s_axis_tdata                  : in  std_logic_vector(63 downto 0);
     s_axis_tvalid                 : in  std_logic;
     s_axis_tuser                  : in  std_logic_vector(7 downto 0);
     s_axis_tid                    : in  std_logic_vector(7 downto 0);
@@ -57,8 +57,8 @@ architecture RTL of angle is
 
 begin
 
-  din_tdata                       <= s_axis_tdata(79 downto 79-g_PRECISION+1) & 
-                                     s_axis_tdata(39 downto 39-g_PRECISION+1);
+  din_tdata                       <= s_axis_tdata(63 downto 63-g_PRECISION+1) & 
+                                     s_axis_tdata(31 downto 31-g_PRECISION+1);
 
   cordic_inst : cordic_0
     port map(

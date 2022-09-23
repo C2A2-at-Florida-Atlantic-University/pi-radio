@@ -670,11 +670,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Thu Sep 08 05:11:52 UTC 2022</spirit:value>
+            <spirit:value>Fri Sep 23 05:15:34 UTC 2022</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:77429ef0</spirit:value>
+            <spirit:value>9:01a49f11</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -720,11 +720,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Thu Sep 08 05:11:52 UTC 2022</spirit:value>
+            <spirit:value>Fri Sep 23 05:15:35 UTC 2022</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:77429ef0</spirit:value>
+            <spirit:value>9:01a49f11</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -735,7 +735,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:77429ef0</spirit:value>
+            <spirit:value>9:01a49f11</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -751,11 +751,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Thu Sep 08 05:11:52 UTC 2022</spirit:value>
+            <spirit:value>Fri Sep 23 05:15:35 UTC 2022</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:77429ef0</spirit:value>
+            <spirit:value>9:01a49f11</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -801,11 +801,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Thu Sep 08 05:11:52 UTC 2022</spirit:value>
+            <spirit:value>Fri Sep 23 05:15:35 UTC 2022</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:f663edde</spirit:value>
+            <spirit:value>9:968df1a8</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -821,11 +821,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Thu Sep 08 05:11:52 UTC 2022</spirit:value>
+            <spirit:value>Fri Sep 23 05:15:35 UTC 2022</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:f663edde</spirit:value>
+            <spirit:value>9:968df1a8</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -840,11 +840,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Thu Sep 08 05:11:52 UTC 2022</spirit:value>
+            <spirit:value>Fri Sep 23 05:15:35 UTC 2022</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:77429ef0</spirit:value>
+            <spirit:value>9:01a49f11</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -860,11 +860,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Thu Sep 08 05:11:52 UTC 2022</spirit:value>
+            <spirit:value>Fri Sep 23 05:15:35 UTC 2022</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:77429ef0</spirit:value>
+            <spirit:value>9:01a49f11</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -878,11 +878,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Thu Sep 08 05:11:52 UTC 2022</spirit:value>
+            <spirit:value>Fri Sep 23 05:15:35 UTC 2022</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:77429ef0</spirit:value>
+            <spirit:value>9:01a49f11</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1368,7 +1368,7 @@
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>C_PHASE_FORMAT</spirit:name>
-        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_PHASE_FORMAT">0</spirit:value>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_PHASE_FORMAT">1</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>C_PIPELINE_MODE</spirit:name>
@@ -1907,7 +1907,7 @@
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>Phase_Format</spirit:name>
-      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.Phase_Format" spirit:choiceRef="choice_pairs_a71259a0" spirit:order="6">Radians</spirit:value>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.Phase_Format" spirit:choiceRef="choice_pairs_a71259a0" spirit:order="6">Scaled_Radians</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>Input_Width</spirit:name>
@@ -2014,6 +2014,7 @@
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.Functional_Selection" xilinx:valueSource="user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.Input_Width" xilinx:valueSource="user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.Output_Width" xilinx:valueSource="user"/>
+        <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.Phase_Format" xilinx:valueSource="user"/>
       </xilinx:configElementInfos>
     </xilinx:coreExtensions>
     <xilinx:packagingInfo>

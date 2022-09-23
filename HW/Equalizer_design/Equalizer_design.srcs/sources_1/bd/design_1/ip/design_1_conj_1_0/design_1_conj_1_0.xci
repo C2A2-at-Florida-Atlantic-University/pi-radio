@@ -112,7 +112,8 @@
                   &quot;m_axis_tvalid&quot;: [ { &quot;direction&quot;: &quot;out&quot; } ],
                   &quot;m_axis_tid&quot;: [ { &quot;direction&quot;: &quot;out&quot;, &quot;size_left&quot;: &quot;7&quot;, &quot;size_right&quot;: &quot;0&quot; } ],
                   &quot;m_axis_tuser&quot;: [ { &quot;direction&quot;: &quot;out&quot;, &quot;size_left&quot;: &quot;7&quot;, &quot;size_right&quot;: &quot;0&quot; } ],
-                  &quot;m_axis_tlast&quot;: [ { &quot;direction&quot;: &quot;out&quot; } ]
+                  &quot;m_axis_tlast&quot;: [ { &quot;direction&quot;: &quot;out&quot; } ],
+                  &quot;i_negative_freq&quot;: [ { &quot;direction&quot;: &quot;in&quot; } ]
                 },
                 &quot;interfaces&quot;: {
                   &quot;s_axis_aclk&quot;: {

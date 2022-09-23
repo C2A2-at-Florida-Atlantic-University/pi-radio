@@ -5,11 +5,13 @@ vlib riviera/xpm
 vlib riviera/axis_infrastructure_v1_1_0
 vlib riviera/axis_data_fifo_v2_0_8
 vlib riviera/xil_defaultlib
+vlib riviera/xlconstant_v1_1_7
 
 vmap xpm riviera/xpm
 vmap axis_infrastructure_v1_1_0 riviera/axis_infrastructure_v1_1_0
 vmap axis_data_fifo_v2_0_8 riviera/axis_data_fifo_v2_0_8
 vmap xil_defaultlib riviera/xil_defaultlib
+vmap xlconstant_v1_1_7 riviera/xlconstant_v1_1_7
 
 vlog -work xpm  -sv2k12 "+incdir+../../../../Equalizer_design.gen/sources_1/bd/design_1/ipshared/8713/hdl" \
 "C:/Xilinx_2022.1/Vivado/2022.1/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv" \
@@ -37,10 +39,17 @@ vlog -work xil_defaultlib  -v2k5 "+incdir+../../../../Equalizer_design.gen/sourc
 "../../../bd/design_1/ip/design_1_angle_0_0/sim/design_1_angle_0_0.v" \
 "../../../bd/design_1/ip/design_1_axis_data_fifo_1_0/sim/design_1_axis_data_fifo_1_0.v" \
 "../../../bd/design_1/ip/design_1_delay_1_0/sim/design_1_delay_1_0.v" \
-"../../../bd/design_1/ip/design_1_mixer_0_0/sim/design_1_mixer_0_0.v" \
 "../../../bd/design_1/ip/design_1_dds_top_0_0/sim/design_1_dds_top_0_0.v" \
-"../../../bd/design_1/sim/design_1.v" \
+"../../../bd/design_1/ip/design_1_mixer_0_0/sim/design_1_mixer_0_0.v" \
 "../../../bd/design_1/ip/design_1_conj_1_0/sim/design_1_conj_1_0.v" \
+"../../../bd/design_1/ip/design_1_scale_0_0/sim/design_1_scale_0_0.v" \
+
+vlog -work xlconstant_v1_1_7  -v2k5 "+incdir+../../../../Equalizer_design.gen/sources_1/bd/design_1/ipshared/8713/hdl" \
+"../../../../Equalizer_design.gen/sources_1/bd/design_1/ipshared/fcfc/hdl/xlconstant_v1_1_vl_rfs.v" \
+
+vlog -work xil_defaultlib  -v2k5 "+incdir+../../../../Equalizer_design.gen/sources_1/bd/design_1/ipshared/8713/hdl" \
+"../../../bd/design_1/ip/design_1_xlconstant_0_0/sim/design_1_xlconstant_0_0.v" \
+"../../../bd/design_1/sim/design_1.v" \
 
 vlog -work xil_defaultlib \
 "glbl.v"

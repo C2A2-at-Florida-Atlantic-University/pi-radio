@@ -1,0 +1,30 @@
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Projects/pi-radio/HW/modules/src/rtl/axis_splitter.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'axis_splitter'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Projects/pi-radio/HW/modules/src/rtl/cp_rm2.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'cp_rm2'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Projects/pi-radio/HW/modules/src/rtl/delay.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'delay'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Projects/pi-radio/HW/modules/src/rtl/cp_rm.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'cp_rm'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Projects/pi-radio/HW/modules/src/rtl/conj.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'conj'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Projects/pi-radio/HW/Equalizer_design/Equalizer_design.gen/sources_1/ip/cmpy_0/sim/cmpy_0.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'cmpy_0'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Projects/pi-radio/HW/modules/src/rtl/complex_mult/rtl/complex_mult.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'complex_mult'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Projects/pi-radio/HW/modules/src/rtl/sum.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'sum'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Projects/pi-radio/HW/Equalizer_design/Equalizer_design.gen/sources_1/ip/cordic_0/sim/cordic_0.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'cordic_0'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Projects/pi-radio/HW/modules/src/rtl/angle.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'angle'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Projects/pi-radio/HW/Equalizer_design/Equalizer_design.gen/sources_1/ip/dds_compiler_0/sim/dds_compiler_0.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'dds_compiler_0'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Projects/pi-radio/HW/modules/src/rtl/dds_top.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'dds_top'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Projects/pi-radio/HW/modules/src/rtl/mixer.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'mixer'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Projects/pi-radio/HW/Equalizer_design/Equalizer_design.gen/sources_1/ip/dsp_macro_0/sim/dsp_macro_0.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'dsp_macro_0'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Projects/pi-radio/HW/modules/src/rtl/scale.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'scale'

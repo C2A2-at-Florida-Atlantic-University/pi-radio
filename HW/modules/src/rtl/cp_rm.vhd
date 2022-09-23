@@ -2,14 +2,20 @@
 -- Jared Hermans
 --
 -- Description: Separates CP and non CP in AXIS 
+--  Also responsible for data formating and timing control 
+--  for the reset of the CFO corrector
 -----------------------------------------------------------------
 
 library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
 use ieee.std_logic_unsigned.all;
+use ieee.math_real.all;
 
 entity cp_rm is
+  generic(
+    g_PROCESSING_CYCLES           : integer := 383
+  );
   port(
     s_axis_aclk                   : in  std_logic;
     s_axis_aresetn                : in  std_logic;
@@ -32,7 +38,7 @@ entity cp_rm is
     m_cp_axis_tuser               : out std_logic_vector(7 downto 0);
     m_cp_axis_tlast               : out std_logic;
 
-    o_tlast_symbol                : out std_logic;
+    o_symbol                      : out std_logic;
     o_symbol_number               : out std_logic_vector(7 downto 0)
   );
 end entity cp_rm;
@@ -55,8 +61,12 @@ architecture RTL of cp_rm is
   signal in_tuser                 : std_logic_vector(7 downto 0);
   signal in_tlast                 : std_logic                       := '0';
 
+  signal tvalid_rising            : std_logic;
   signal symbol_counter           : std_logic_vector(7 downto 0);
   signal r_tlast_symbol           : std_logic;
+
+  signal out_counter              : std_logic_vector(integer(ceil(log2(real(g_PROCESSING_CYCLES)))) downto 0);
+  signal r_symbol                 : std_logic;
 
 begin
 
@@ -64,17 +74,22 @@ begin
   P_FRAME : process(s_axis_aclk)
   begin
     if rising_edge(s_axis_aclk) then
-      if s_axis_tlast = '1' then
+      if s_axis_tvalid = '1' then
         frame_current             <= '1';
       end if;
     end if;
   end process P_FRAME;
 
+  -- Capture rising edge of tvalid
+  tvalid_rising                   <= s_axis_tvalid and not in_tvalid;
+
   -- Create counter to cycle between all samples of OFDM symbol
-  P_COUNTER : process(s_axis_aclk)
+  P_COUNTER : process(s_axis_aclk,s_axis_aresetn)
   begin
-    if rising_edge(s_axis_aclk) then
-      if (in_tlast = '1') then
+    if s_axis_aresetn = '0' then
+      cp_counter                  <= (others => '0');
+    elsif rising_edge(s_axis_aclk) then
+      if in_tlast = '1' or tvalid_rising = '1' then
         cp_counter                <= (others => '0');
       else
         if frame_current = '1' then
@@ -100,7 +115,7 @@ begin
   P_CP : process(s_axis_aclk)
   begin
     if rising_edge(s_axis_aclk) then
-      case in_tvalid is
+      case s_axis_tvalid or in_tvalid is
         when '0' =>
           m_axis_tdata            <= (others => '0');
           m_axis_tvalid           <= '0';
@@ -114,7 +129,7 @@ begin
           m_cp_axis_tuser         <= (others => '0');
           m_cp_axis_tlast         <= '0';
         when '1' =>
-          if cp_counter < "0001000000" then
+          if cp_counter <= "0000111111" then
             m_cp_axis_tdata       <= in_tdata;
             m_cp_axis_tvalid      <= in_tvalid;
             m_cp_axis_tid         <= in_tid;
@@ -155,21 +170,41 @@ begin
     end if;
   end process P_CP;
 
-  o_tlast_symbol                  <= in_tlast;
+  -- Process to assert o_tlast_symbol for entire OFDM packet + processing time
+  P_OFDM_PACKET_TIMING : process(s_axis_aclk,s_axis_aresetn)
+  begin
+    if s_axis_aresetn = '0' then
+      r_symbol                    <= '0';
+      out_counter                 <= (others => '0');
+    elsif rising_edge(s_axis_aclk) then
+      if s_axis_tvalid = '1' then
+        out_counter               <= (others => '0');
+        r_symbol                  <= '1';
+      else
+        if out_counter = std_logic_vector(to_unsigned(g_PROCESSING_CYCLES, out_counter'length)) then
+          r_symbol                <= '0';
+        else
+          out_counter             <= out_counter + '1';
+        end if;
+      end if;
+    end if;
+  end process P_OFDM_PACKET_TIMING;
+
+  o_symbol                        <= r_symbol;
 
   -- Process to calculate current OFDM symbol
-  P_SYMBOL_COUNTER : process(s_axis_aclk)
+  P_SYMBOL_COUNTER : process(s_axis_aclk,s_axis_aresetn)
   begin
     if s_axis_aresetn = '0' then
       symbol_counter              <= (others => '0');
     elsif rising_edge(s_axis_aclk) then
-      r_tlast_symbol              <= in_tlast;
-      -- Max number of OFDM symbols per packet
-      if symbol_counter > X"5" then
+      -- Number of OFDM packets per symbol (max 256)
+      if r_symbol = '1' then
+        if in_tlast = '1' then
+          symbol_counter          <= symbol_counter + '1';
+        end if;
+      else
         symbol_counter            <= (others => '0');
-      -- Increment symbol counter every tlast
-      elsif in_tlast = '1' and r_tlast_symbol = '0' then
-        symbol_counter            <= symbol_counter + '1';
       end if;
     end if;
   end process P_SYMBOL_COUNTER;

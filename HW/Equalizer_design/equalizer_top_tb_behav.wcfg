@@ -11,131 +11,2281 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="1,508.529 ns"></ZoomStartTime>
-      <ZoomEndTime time="1,571.713 ns"></ZoomEndTime>
-      <Cursor1Time time="3,254.000 ns"></Cursor1Time>
+      <ZoomStartTime time="0.000000 us"></ZoomStartTime>
+      <ZoomEndTime time="14.860001 us"></ZoomEndTime>
+      <Cursor1Time time="14.860000 us"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="170"></NameColumnWidth>
+      <NameColumnWidth column_width="136"></NameColumnWidth>
       <ValueColumnWidth column_width="58"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="27" />
+   <WVObjectSize size="14" />
    <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/Mixer/dds_top_0/inst/dds_inst/aclk" type="logic">
       <obj_property name="ElementShortName">aclk</obj_property>
       <obj_property name="ObjectShortName">aclk</obj_property>
    </wvobject>
-   <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/Mixer/mixer_0/s_axis0_tdata" type="array">
-      <obj_property name="ElementShortName">s_axis0_tdata[127:0]</obj_property>
-      <obj_property name="ObjectShortName">s_axis0_tdata[127:0]</obj_property>
+   <wvobject fp_name="group672" type="group">
+      <obj_property name="label">CP_RM</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject fp_name="vbus475" type="vbus">
+         <obj_property name="label">4_I</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/cp_rm_0/inst/s_axis_tdata[111]" type="logic">
+            <obj_property name="ElementShortName">[111]</obj_property>
+            <obj_property name="ObjectShortName">[111]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/cp_rm_0/inst/s_axis_tdata[110]" type="logic">
+            <obj_property name="ElementShortName">[110]</obj_property>
+            <obj_property name="ObjectShortName">[110]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/cp_rm_0/inst/s_axis_tdata[109]" type="logic">
+            <obj_property name="ElementShortName">[109]</obj_property>
+            <obj_property name="ObjectShortName">[109]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/cp_rm_0/inst/s_axis_tdata[108]" type="logic">
+            <obj_property name="ElementShortName">[108]</obj_property>
+            <obj_property name="ObjectShortName">[108]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/cp_rm_0/inst/s_axis_tdata[107]" type="logic">
+            <obj_property name="ElementShortName">[107]</obj_property>
+            <obj_property name="ObjectShortName">[107]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/cp_rm_0/inst/s_axis_tdata[106]" type="logic">
+            <obj_property name="ElementShortName">[106]</obj_property>
+            <obj_property name="ObjectShortName">[106]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/cp_rm_0/inst/s_axis_tdata[105]" type="logic">
+            <obj_property name="ElementShortName">[105]</obj_property>
+            <obj_property name="ObjectShortName">[105]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/cp_rm_0/inst/s_axis_tdata[104]" type="logic">
+            <obj_property name="ElementShortName">[104]</obj_property>
+            <obj_property name="ObjectShortName">[104]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/cp_rm_0/inst/s_axis_tdata[103]" type="logic">
+            <obj_property name="ElementShortName">[103]</obj_property>
+            <obj_property name="ObjectShortName">[103]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/cp_rm_0/inst/s_axis_tdata[102]" type="logic">
+            <obj_property name="ElementShortName">[102]</obj_property>
+            <obj_property name="ObjectShortName">[102]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/cp_rm_0/inst/s_axis_tdata[101]" type="logic">
+            <obj_property name="ElementShortName">[101]</obj_property>
+            <obj_property name="ObjectShortName">[101]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/cp_rm_0/inst/s_axis_tdata[100]" type="logic">
+            <obj_property name="ElementShortName">[100]</obj_property>
+            <obj_property name="ObjectShortName">[100]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/cp_rm_0/inst/s_axis_tdata[99]" type="logic">
+            <obj_property name="ElementShortName">[99]</obj_property>
+            <obj_property name="ObjectShortName">[99]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/cp_rm_0/inst/s_axis_tdata[98]" type="logic">
+            <obj_property name="ElementShortName">[98]</obj_property>
+            <obj_property name="ObjectShortName">[98]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/cp_rm_0/inst/s_axis_tdata[97]" type="logic">
+            <obj_property name="ElementShortName">[97]</obj_property>
+            <obj_property name="ObjectShortName">[97]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/cp_rm_0/inst/s_axis_tdata[96]" type="logic">
+            <obj_property name="ElementShortName">[96]</obj_property>
+            <obj_property name="ObjectShortName">[96]</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="vbus458" type="vbus">
+         <obj_property name="label">4_Q</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/cp_rm_0/inst/s_axis_tdata[127]" type="logic">
+            <obj_property name="ElementShortName">[127]</obj_property>
+            <obj_property name="ObjectShortName">[127]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/cp_rm_0/inst/s_axis_tdata[126]" type="logic">
+            <obj_property name="ElementShortName">[126]</obj_property>
+            <obj_property name="ObjectShortName">[126]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/cp_rm_0/inst/s_axis_tdata[125]" type="logic">
+            <obj_property name="ElementShortName">[125]</obj_property>
+            <obj_property name="ObjectShortName">[125]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/cp_rm_0/inst/s_axis_tdata[124]" type="logic">
+            <obj_property name="ElementShortName">[124]</obj_property>
+            <obj_property name="ObjectShortName">[124]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/cp_rm_0/inst/s_axis_tdata[123]" type="logic">
+            <obj_property name="ElementShortName">[123]</obj_property>
+            <obj_property name="ObjectShortName">[123]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/cp_rm_0/inst/s_axis_tdata[122]" type="logic">
+            <obj_property name="ElementShortName">[122]</obj_property>
+            <obj_property name="ObjectShortName">[122]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/cp_rm_0/inst/s_axis_tdata[121]" type="logic">
+            <obj_property name="ElementShortName">[121]</obj_property>
+            <obj_property name="ObjectShortName">[121]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/cp_rm_0/inst/s_axis_tdata[120]" type="logic">
+            <obj_property name="ElementShortName">[120]</obj_property>
+            <obj_property name="ObjectShortName">[120]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/cp_rm_0/inst/s_axis_tdata[119]" type="logic">
+            <obj_property name="ElementShortName">[119]</obj_property>
+            <obj_property name="ObjectShortName">[119]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/cp_rm_0/inst/s_axis_tdata[118]" type="logic">
+            <obj_property name="ElementShortName">[118]</obj_property>
+            <obj_property name="ObjectShortName">[118]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/cp_rm_0/inst/s_axis_tdata[117]" type="logic">
+            <obj_property name="ElementShortName">[117]</obj_property>
+            <obj_property name="ObjectShortName">[117]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/cp_rm_0/inst/s_axis_tdata[116]" type="logic">
+            <obj_property name="ElementShortName">[116]</obj_property>
+            <obj_property name="ObjectShortName">[116]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/cp_rm_0/inst/s_axis_tdata[115]" type="logic">
+            <obj_property name="ElementShortName">[115]</obj_property>
+            <obj_property name="ObjectShortName">[115]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/cp_rm_0/inst/s_axis_tdata[114]" type="logic">
+            <obj_property name="ElementShortName">[114]</obj_property>
+            <obj_property name="ObjectShortName">[114]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/cp_rm_0/inst/s_axis_tdata[113]" type="logic">
+            <obj_property name="ElementShortName">[113]</obj_property>
+            <obj_property name="ObjectShortName">[113]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/cp_rm_0/inst/s_axis_tdata[112]" type="logic">
+            <obj_property name="ElementShortName">[112]</obj_property>
+            <obj_property name="ObjectShortName">[112]</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="group673" type="group">
+         <obj_property name="label">S_AXIS</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="isExpanded"></obj_property>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/cp_rm_0/inst/s_axis_tdata" type="array">
+            <obj_property name="ElementShortName">s_axis_tdata[127:0]</obj_property>
+            <obj_property name="ObjectShortName">s_axis_tdata[127:0]</obj_property>
+            <obj_property name="Radix">HEXRADIX</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/cp_rm_0/inst/s_axis_tvalid" type="logic">
+            <obj_property name="ElementShortName">s_axis_tvalid</obj_property>
+            <obj_property name="ObjectShortName">s_axis_tvalid</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/cp_rm_0/inst/s_axis_tlast" type="logic">
+            <obj_property name="ElementShortName">s_axis_tlast</obj_property>
+            <obj_property name="ObjectShortName">s_axis_tlast</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="group674" type="group">
+         <obj_property name="label">M_1024_AXIS</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="isExpanded"></obj_property>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/cp_rm_0/inst/m_axis_tdata" type="array">
+            <obj_property name="ElementShortName">m_axis_tdata[127:0]</obj_property>
+            <obj_property name="ObjectShortName">m_axis_tdata[127:0]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/cp_rm_0/inst/m_axis_tvalid" type="logic">
+            <obj_property name="ElementShortName">m_axis_tvalid</obj_property>
+            <obj_property name="ObjectShortName">m_axis_tvalid</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/cp_rm_0/inst/m_axis_tlast" type="logic">
+            <obj_property name="ElementShortName">m_axis_tlast</obj_property>
+            <obj_property name="ObjectShortName">m_axis_tlast</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="group675" type="group">
+         <obj_property name="label">M_CP_AXIS</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="isExpanded"></obj_property>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/cp_rm_0/inst/m_cp_axis_tdata" type="array">
+            <obj_property name="ElementShortName">m_cp_axis_tdata[127:0]</obj_property>
+            <obj_property name="ObjectShortName">m_cp_axis_tdata[127:0]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/cp_rm_0/inst/m_cp_axis_tvalid" type="logic">
+            <obj_property name="ElementShortName">m_cp_axis_tvalid</obj_property>
+            <obj_property name="ObjectShortName">m_cp_axis_tvalid</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/cp_rm_0/inst/m_cp_axis_tlast" type="logic">
+            <obj_property name="ElementShortName">m_cp_axis_tlast</obj_property>
+            <obj_property name="ObjectShortName">m_cp_axis_tlast</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/cp_rm_0/inst/o_symbol" type="logic">
+         <obj_property name="ElementShortName">o_symbol</obj_property>
+         <obj_property name="ObjectShortName">o_symbol</obj_property>
+      </wvobject>
+      <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/cp_rm_0/inst/o_symbol_number" type="array">
+         <obj_property name="ElementShortName">o_symbol_number[7:0]</obj_property>
+         <obj_property name="ObjectShortName">o_symbol_number[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/cp_rm_0/inst/r_symbol" type="logic">
+         <obj_property name="ElementShortName">r_symbol</obj_property>
+         <obj_property name="ObjectShortName">r_symbol</obj_property>
+      </wvobject>
+      <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/cp_rm_0/inst/out_counter" type="array">
+         <obj_property name="ElementShortName">out_counter[9:0]</obj_property>
+         <obj_property name="ObjectShortName">out_counter[9:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/cp_rm_0/inst/cp_counter" type="array">
+         <obj_property name="ElementShortName">cp_counter[9:0]</obj_property>
+         <obj_property name="ObjectShortName">cp_counter[9:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/cp_rm_0/inst/tvalid_rising" type="logic">
+         <obj_property name="ElementShortName">tvalid_rising</obj_property>
+         <obj_property name="ObjectShortName">tvalid_rising</obj_property>
+      </wvobject>
+      <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/cp_rm_0/inst/in_tvalid" type="logic">
+         <obj_property name="ElementShortName">in_tvalid</obj_property>
+         <obj_property name="ObjectShortName">in_tvalid</obj_property>
+      </wvobject>
+      <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/cp_rm_0/inst/in_tdata" type="array">
+         <obj_property name="ElementShortName">in_tdata[127:0]</obj_property>
+         <obj_property name="ObjectShortName">in_tdata[127:0]</obj_property>
+      </wvobject>
    </wvobject>
-   <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/Mixer/mixer_0/s_axis0_tvalid" type="logic">
-      <obj_property name="ElementShortName">s_axis0_tvalid</obj_property>
-      <obj_property name="ObjectShortName">s_axis0_tvalid</obj_property>
+   <wvobject fp_name="group679" type="group">
+      <obj_property name="label">CP_RM2</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject fp_name="group680" type="group">
+         <obj_property name="label">S_AXIS</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/cp_rm2_0/s_axis_tdata" type="array">
+            <obj_property name="ElementShortName">s_axis_tdata[127:0]</obj_property>
+            <obj_property name="ObjectShortName">s_axis_tdata[127:0]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/cp_rm2_0/s_axis_tvalid" type="logic">
+            <obj_property name="ElementShortName">s_axis_tvalid</obj_property>
+            <obj_property name="ObjectShortName">s_axis_tvalid</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="group681" type="group">
+         <obj_property name="label">M_AXIS</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="isExpanded"></obj_property>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/cp_rm2_0/m_axis_tdata" type="array">
+            <obj_property name="ElementShortName">m_axis_tdata[127:0]</obj_property>
+            <obj_property name="ObjectShortName">m_axis_tdata[127:0]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/cp_rm2_0/m_axis_tvalid" type="logic">
+            <obj_property name="ElementShortName">m_axis_tvalid</obj_property>
+            <obj_property name="ObjectShortName">m_axis_tvalid</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/cp_rm2_0/inst/r_tvalid_rising" type="logic">
+         <obj_property name="ElementShortName">r_tvalid_rising</obj_property>
+         <obj_property name="ObjectShortName">r_tvalid_rising</obj_property>
+      </wvobject>
+      <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/cp_rm2_0/inst/cp_counter" type="array">
+         <obj_property name="ElementShortName">cp_counter[9:0]</obj_property>
+         <obj_property name="ObjectShortName">cp_counter[9:0]</obj_property>
+      </wvobject>
    </wvobject>
-   <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/Mixer/mixer_0/s_axis0_tlast" type="logic">
-      <obj_property name="ElementShortName">s_axis0_tlast</obj_property>
-      <obj_property name="ObjectShortName">s_axis0_tlast</obj_property>
+   <wvobject fp_name="group4058" type="group">
+      <obj_property name="label">FIFO_CP</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject fp_name="group4056" type="group">
+         <obj_property name="label">S_AXIS</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="isExpanded"></obj_property>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/axis_data_fifo_0/inst/s_axis_tvalid" type="logic">
+            <obj_property name="ElementShortName">s_axis_tvalid</obj_property>
+            <obj_property name="ObjectShortName">s_axis_tvalid</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/axis_data_fifo_0/inst/s_axis_tready" type="logic">
+            <obj_property name="ElementShortName">s_axis_tready</obj_property>
+            <obj_property name="ObjectShortName">s_axis_tready</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/axis_data_fifo_0/inst/s_axis_tlast" type="logic">
+            <obj_property name="ElementShortName">s_axis_tlast</obj_property>
+            <obj_property name="ObjectShortName">s_axis_tlast</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/axis_data_fifo_0/inst/s_axis_tdata" type="array">
+            <obj_property name="ElementShortName">s_axis_tdata[127:0]</obj_property>
+            <obj_property name="ObjectShortName">s_axis_tdata[127:0]</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="group4057" type="group">
+         <obj_property name="label">M_AXIS</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="isExpanded"></obj_property>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/axis_data_fifo_0/inst/m_axis_tvalid" type="logic">
+            <obj_property name="ElementShortName">m_axis_tvalid</obj_property>
+            <obj_property name="ObjectShortName">m_axis_tvalid</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/axis_data_fifo_0/inst/m_axis_tlast" type="logic">
+            <obj_property name="ElementShortName">m_axis_tlast</obj_property>
+            <obj_property name="ObjectShortName">m_axis_tlast</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/axis_data_fifo_0/inst/m_axis_tdata" type="array">
+            <obj_property name="ElementShortName">m_axis_tdata[127:0]</obj_property>
+            <obj_property name="ObjectShortName">m_axis_tdata[127:0]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/axis_data_fifo_0/inst/m_axis_tready" type="logic">
+            <obj_property name="ElementShortName">m_axis_tready</obj_property>
+            <obj_property name="ObjectShortName">m_axis_tready</obj_property>
+         </wvobject>
+      </wvobject>
    </wvobject>
-   <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/Mixer/mixer_0/s_axis1_tdata" type="array">
-      <obj_property name="ElementShortName">s_axis1_tdata[127:0]</obj_property>
-      <obj_property name="ObjectShortName">s_axis1_tdata[127:0]</obj_property>
+   <wvobject fp_name="group686" type="group">
+      <obj_property name="label">DELAY_CP</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject fp_name="group687" type="group">
+         <obj_property name="label">S_AXIS</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="isExpanded"></obj_property>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/delay_0/inst/s_axis_tvalid" type="logic">
+            <obj_property name="ElementShortName">s_axis_tvalid</obj_property>
+            <obj_property name="ObjectShortName">s_axis_tvalid</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/delay_0/inst/s_axis_tdata" type="array">
+            <obj_property name="ElementShortName">s_axis_tdata[127:0]</obj_property>
+            <obj_property name="ObjectShortName">s_axis_tdata[127:0]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/delay_0/inst/s_axis_tready" type="logic">
+            <obj_property name="ElementShortName">s_axis_tready</obj_property>
+            <obj_property name="ObjectShortName">s_axis_tready</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="group688" type="group">
+         <obj_property name="label">M_AXIS</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="isExpanded"></obj_property>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/delay_0/inst/m_axis_tdata" type="array">
+            <obj_property name="ElementShortName">m_axis_tdata[127:0]</obj_property>
+            <obj_property name="ObjectShortName">m_axis_tdata[127:0]</obj_property>
+            <obj_property name="Radix">HEXRADIX</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/delay_0/inst/m_axis_tvalid" type="logic">
+            <obj_property name="ElementShortName">m_axis_tvalid</obj_property>
+            <obj_property name="ObjectShortName">m_axis_tvalid</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/delay_0/inst/counter" type="array">
+         <obj_property name="ElementShortName">counter[8:0]</obj_property>
+         <obj_property name="ObjectShortName">counter[8:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/delay_0/inst/active_counter" type="array">
+         <obj_property name="ElementShortName">active_counter[6:0]</obj_property>
+         <obj_property name="ObjectShortName">active_counter[6:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/delay_0/inst/quiet_counter" type="array">
+         <obj_property name="ElementShortName">quiet_counter[8:0]</obj_property>
+         <obj_property name="ObjectShortName">quiet_counter[8:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/delay_0/inst/delay_valid" type="logic">
+         <obj_property name="ElementShortName">delay_valid</obj_property>
+         <obj_property name="ObjectShortName">delay_valid</obj_property>
+      </wvobject>
+      <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/delay_0/inst/trigger" type="logic">
+         <obj_property name="ElementShortName">trigger</obj_property>
+         <obj_property name="ObjectShortName">trigger</obj_property>
+      </wvobject>
    </wvobject>
-   <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/Mixer/mixer_0/s_axis1_tvalid" type="logic">
-      <obj_property name="ElementShortName">s_axis1_tvalid</obj_property>
-      <obj_property name="ObjectShortName">s_axis1_tvalid</obj_property>
+   <wvobject fp_name="group676" type="group">
+      <obj_property name="label">CMPY</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject fp_name="group677" type="group">
+         <obj_property name="label">S_CONJ_AXIS</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="isExpanded"></obj_property>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/complex_mult_0/s_axis0_tdata" type="array">
+            <obj_property name="ElementShortName">s_axis0_tdata[127:0]</obj_property>
+            <obj_property name="ObjectShortName">s_axis0_tdata[127:0]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/complex_mult_0/s_axis0_tvalid" type="logic">
+            <obj_property name="ElementShortName">s_axis0_tvalid</obj_property>
+            <obj_property name="ObjectShortName">s_axis0_tvalid</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="group678" type="group">
+         <obj_property name="label">S_CP_AXIS</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="isExpanded"></obj_property>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/complex_mult_0/s_axis1_tdata" type="array">
+            <obj_property name="ElementShortName">s_axis1_tdata[127:0]</obj_property>
+            <obj_property name="ObjectShortName">s_axis1_tdata[127:0]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/complex_mult_0/s_axis1_tvalid" type="logic">
+            <obj_property name="ElementShortName">s_axis1_tvalid</obj_property>
+            <obj_property name="ObjectShortName">s_axis1_tvalid</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="vbus7609" type="vbus">
+         <obj_property name="label">CONJ_0_I</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/complex_mult_0/s_axis0_tdata[15]" type="logic">
+            <obj_property name="ElementShortName">[15]</obj_property>
+            <obj_property name="ObjectShortName">[15]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/complex_mult_0/s_axis0_tdata[14]" type="logic">
+            <obj_property name="ElementShortName">[14]</obj_property>
+            <obj_property name="ObjectShortName">[14]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/complex_mult_0/s_axis0_tdata[13]" type="logic">
+            <obj_property name="ElementShortName">[13]</obj_property>
+            <obj_property name="ObjectShortName">[13]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/complex_mult_0/s_axis0_tdata[12]" type="logic">
+            <obj_property name="ElementShortName">[12]</obj_property>
+            <obj_property name="ObjectShortName">[12]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/complex_mult_0/s_axis0_tdata[11]" type="logic">
+            <obj_property name="ElementShortName">[11]</obj_property>
+            <obj_property name="ObjectShortName">[11]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/complex_mult_0/s_axis0_tdata[10]" type="logic">
+            <obj_property name="ElementShortName">[10]</obj_property>
+            <obj_property name="ObjectShortName">[10]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/complex_mult_0/s_axis0_tdata[9]" type="logic">
+            <obj_property name="ElementShortName">[9]</obj_property>
+            <obj_property name="ObjectShortName">[9]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/complex_mult_0/s_axis0_tdata[8]" type="logic">
+            <obj_property name="ElementShortName">[8]</obj_property>
+            <obj_property name="ObjectShortName">[8]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/complex_mult_0/s_axis0_tdata[7]" type="logic">
+            <obj_property name="ElementShortName">[7]</obj_property>
+            <obj_property name="ObjectShortName">[7]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/complex_mult_0/s_axis0_tdata[6]" type="logic">
+            <obj_property name="ElementShortName">[6]</obj_property>
+            <obj_property name="ObjectShortName">[6]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/complex_mult_0/s_axis0_tdata[5]" type="logic">
+            <obj_property name="ElementShortName">[5]</obj_property>
+            <obj_property name="ObjectShortName">[5]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/complex_mult_0/s_axis0_tdata[4]" type="logic">
+            <obj_property name="ElementShortName">[4]</obj_property>
+            <obj_property name="ObjectShortName">[4]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/complex_mult_0/s_axis0_tdata[3]" type="logic">
+            <obj_property name="ElementShortName">[3]</obj_property>
+            <obj_property name="ObjectShortName">[3]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/complex_mult_0/s_axis0_tdata[2]" type="logic">
+            <obj_property name="ElementShortName">[2]</obj_property>
+            <obj_property name="ObjectShortName">[2]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/complex_mult_0/s_axis0_tdata[1]" type="logic">
+            <obj_property name="ElementShortName">[1]</obj_property>
+            <obj_property name="ObjectShortName">[1]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/complex_mult_0/s_axis0_tdata[0]" type="logic">
+            <obj_property name="ElementShortName">[0]</obj_property>
+            <obj_property name="ObjectShortName">[0]</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="vbus7626" type="vbus">
+         <obj_property name="label">CONJ_0_Q</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/complex_mult_0/s_axis0_tdata[31]" type="logic">
+            <obj_property name="ElementShortName">[31]</obj_property>
+            <obj_property name="ObjectShortName">[31]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/complex_mult_0/s_axis0_tdata[30]" type="logic">
+            <obj_property name="ElementShortName">[30]</obj_property>
+            <obj_property name="ObjectShortName">[30]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/complex_mult_0/s_axis0_tdata[29]" type="logic">
+            <obj_property name="ElementShortName">[29]</obj_property>
+            <obj_property name="ObjectShortName">[29]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/complex_mult_0/s_axis0_tdata[28]" type="logic">
+            <obj_property name="ElementShortName">[28]</obj_property>
+            <obj_property name="ObjectShortName">[28]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/complex_mult_0/s_axis0_tdata[27]" type="logic">
+            <obj_property name="ElementShortName">[27]</obj_property>
+            <obj_property name="ObjectShortName">[27]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/complex_mult_0/s_axis0_tdata[26]" type="logic">
+            <obj_property name="ElementShortName">[26]</obj_property>
+            <obj_property name="ObjectShortName">[26]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/complex_mult_0/s_axis0_tdata[25]" type="logic">
+            <obj_property name="ElementShortName">[25]</obj_property>
+            <obj_property name="ObjectShortName">[25]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/complex_mult_0/s_axis0_tdata[24]" type="logic">
+            <obj_property name="ElementShortName">[24]</obj_property>
+            <obj_property name="ObjectShortName">[24]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/complex_mult_0/s_axis0_tdata[23]" type="logic">
+            <obj_property name="ElementShortName">[23]</obj_property>
+            <obj_property name="ObjectShortName">[23]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/complex_mult_0/s_axis0_tdata[22]" type="logic">
+            <obj_property name="ElementShortName">[22]</obj_property>
+            <obj_property name="ObjectShortName">[22]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/complex_mult_0/s_axis0_tdata[21]" type="logic">
+            <obj_property name="ElementShortName">[21]</obj_property>
+            <obj_property name="ObjectShortName">[21]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/complex_mult_0/s_axis0_tdata[20]" type="logic">
+            <obj_property name="ElementShortName">[20]</obj_property>
+            <obj_property name="ObjectShortName">[20]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/complex_mult_0/s_axis0_tdata[19]" type="logic">
+            <obj_property name="ElementShortName">[19]</obj_property>
+            <obj_property name="ObjectShortName">[19]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/complex_mult_0/s_axis0_tdata[18]" type="logic">
+            <obj_property name="ElementShortName">[18]</obj_property>
+            <obj_property name="ObjectShortName">[18]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/complex_mult_0/s_axis0_tdata[17]" type="logic">
+            <obj_property name="ElementShortName">[17]</obj_property>
+            <obj_property name="ObjectShortName">[17]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/complex_mult_0/s_axis0_tdata[16]" type="logic">
+            <obj_property name="ElementShortName">[16]</obj_property>
+            <obj_property name="ObjectShortName">[16]</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="vbus7771" type="vbus">
+         <obj_property name="label">CP_0_I</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/complex_mult_0/s_axis1_tdata[15]" type="logic">
+            <obj_property name="ElementShortName">[15]</obj_property>
+            <obj_property name="ObjectShortName">[15]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/complex_mult_0/s_axis1_tdata[14]" type="logic">
+            <obj_property name="ElementShortName">[14]</obj_property>
+            <obj_property name="ObjectShortName">[14]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/complex_mult_0/s_axis1_tdata[13]" type="logic">
+            <obj_property name="ElementShortName">[13]</obj_property>
+            <obj_property name="ObjectShortName">[13]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/complex_mult_0/s_axis1_tdata[12]" type="logic">
+            <obj_property name="ElementShortName">[12]</obj_property>
+            <obj_property name="ObjectShortName">[12]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/complex_mult_0/s_axis1_tdata[11]" type="logic">
+            <obj_property name="ElementShortName">[11]</obj_property>
+            <obj_property name="ObjectShortName">[11]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/complex_mult_0/s_axis1_tdata[10]" type="logic">
+            <obj_property name="ElementShortName">[10]</obj_property>
+            <obj_property name="ObjectShortName">[10]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/complex_mult_0/s_axis1_tdata[9]" type="logic">
+            <obj_property name="ElementShortName">[9]</obj_property>
+            <obj_property name="ObjectShortName">[9]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/complex_mult_0/s_axis1_tdata[8]" type="logic">
+            <obj_property name="ElementShortName">[8]</obj_property>
+            <obj_property name="ObjectShortName">[8]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/complex_mult_0/s_axis1_tdata[7]" type="logic">
+            <obj_property name="ElementShortName">[7]</obj_property>
+            <obj_property name="ObjectShortName">[7]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/complex_mult_0/s_axis1_tdata[6]" type="logic">
+            <obj_property name="ElementShortName">[6]</obj_property>
+            <obj_property name="ObjectShortName">[6]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/complex_mult_0/s_axis1_tdata[5]" type="logic">
+            <obj_property name="ElementShortName">[5]</obj_property>
+            <obj_property name="ObjectShortName">[5]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/complex_mult_0/s_axis1_tdata[4]" type="logic">
+            <obj_property name="ElementShortName">[4]</obj_property>
+            <obj_property name="ObjectShortName">[4]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/complex_mult_0/s_axis1_tdata[3]" type="logic">
+            <obj_property name="ElementShortName">[3]</obj_property>
+            <obj_property name="ObjectShortName">[3]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/complex_mult_0/s_axis1_tdata[2]" type="logic">
+            <obj_property name="ElementShortName">[2]</obj_property>
+            <obj_property name="ObjectShortName">[2]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/complex_mult_0/s_axis1_tdata[1]" type="logic">
+            <obj_property name="ElementShortName">[1]</obj_property>
+            <obj_property name="ObjectShortName">[1]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/complex_mult_0/s_axis1_tdata[0]" type="logic">
+            <obj_property name="ElementShortName">[0]</obj_property>
+            <obj_property name="ObjectShortName">[0]</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="vbus7788" type="vbus">
+         <obj_property name="label">CP_0_Q</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/complex_mult_0/s_axis1_tdata[31]" type="logic">
+            <obj_property name="ElementShortName">[31]</obj_property>
+            <obj_property name="ObjectShortName">[31]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/complex_mult_0/s_axis1_tdata[30]" type="logic">
+            <obj_property name="ElementShortName">[30]</obj_property>
+            <obj_property name="ObjectShortName">[30]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/complex_mult_0/s_axis1_tdata[29]" type="logic">
+            <obj_property name="ElementShortName">[29]</obj_property>
+            <obj_property name="ObjectShortName">[29]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/complex_mult_0/s_axis1_tdata[28]" type="logic">
+            <obj_property name="ElementShortName">[28]</obj_property>
+            <obj_property name="ObjectShortName">[28]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/complex_mult_0/s_axis1_tdata[27]" type="logic">
+            <obj_property name="ElementShortName">[27]</obj_property>
+            <obj_property name="ObjectShortName">[27]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/complex_mult_0/s_axis1_tdata[26]" type="logic">
+            <obj_property name="ElementShortName">[26]</obj_property>
+            <obj_property name="ObjectShortName">[26]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/complex_mult_0/s_axis1_tdata[25]" type="logic">
+            <obj_property name="ElementShortName">[25]</obj_property>
+            <obj_property name="ObjectShortName">[25]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/complex_mult_0/s_axis1_tdata[24]" type="logic">
+            <obj_property name="ElementShortName">[24]</obj_property>
+            <obj_property name="ObjectShortName">[24]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/complex_mult_0/s_axis1_tdata[23]" type="logic">
+            <obj_property name="ElementShortName">[23]</obj_property>
+            <obj_property name="ObjectShortName">[23]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/complex_mult_0/s_axis1_tdata[22]" type="logic">
+            <obj_property name="ElementShortName">[22]</obj_property>
+            <obj_property name="ObjectShortName">[22]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/complex_mult_0/s_axis1_tdata[21]" type="logic">
+            <obj_property name="ElementShortName">[21]</obj_property>
+            <obj_property name="ObjectShortName">[21]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/complex_mult_0/s_axis1_tdata[20]" type="logic">
+            <obj_property name="ElementShortName">[20]</obj_property>
+            <obj_property name="ObjectShortName">[20]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/complex_mult_0/s_axis1_tdata[19]" type="logic">
+            <obj_property name="ElementShortName">[19]</obj_property>
+            <obj_property name="ObjectShortName">[19]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/complex_mult_0/s_axis1_tdata[18]" type="logic">
+            <obj_property name="ElementShortName">[18]</obj_property>
+            <obj_property name="ObjectShortName">[18]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/complex_mult_0/s_axis1_tdata[17]" type="logic">
+            <obj_property name="ElementShortName">[17]</obj_property>
+            <obj_property name="ObjectShortName">[17]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/complex_mult_0/s_axis1_tdata[16]" type="logic">
+            <obj_property name="ElementShortName">[16]</obj_property>
+            <obj_property name="ObjectShortName">[16]</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="group8578" type="group">
+         <obj_property name="label">M_AXIS</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="isExpanded"></obj_property>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/complex_mult_0/inst/m_axis_tdata" type="array">
+            <obj_property name="ElementShortName">m_axis_tdata[255:0]</obj_property>
+            <obj_property name="ObjectShortName">m_axis_tdata[255:0]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/complex_mult_0/inst/m_axis_tvalid" type="logic">
+            <obj_property name="ElementShortName">m_axis_tvalid</obj_property>
+            <obj_property name="ObjectShortName">m_axis_tvalid</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/complex_mult_0/inst/m_axis_tlast" type="logic">
+            <obj_property name="ElementShortName">m_axis_tlast</obj_property>
+            <obj_property name="ObjectShortName">m_axis_tlast</obj_property>
+         </wvobject>
+      </wvobject>
    </wvobject>
-   <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/Mixer/mixer_0/s_axis1_tlast" type="logic">
-      <obj_property name="ElementShortName">s_axis1_tlast</obj_property>
-      <obj_property name="ObjectShortName">s_axis1_tlast</obj_property>
+   <wvobject fp_name="group1687" type="group">
+      <obj_property name="label">SUM</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject fp_name="group1688" type="group">
+         <obj_property name="label">s_axis</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="isExpanded"></obj_property>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/s_axis_tdata" type="array">
+            <obj_property name="ElementShortName">s_axis_tdata[255:0]</obj_property>
+            <obj_property name="ObjectShortName">s_axis_tdata[255:0]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/s_axis_tvalid" type="logic">
+            <obj_property name="ElementShortName">s_axis_tvalid</obj_property>
+            <obj_property name="ObjectShortName">s_axis_tvalid</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/s_axis_tlast" type="logic">
+            <obj_property name="ElementShortName">s_axis_tlast</obj_property>
+            <obj_property name="ObjectShortName">s_axis_tlast</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/s_axis_tlast" type="logic">
+         <obj_property name="ElementShortName">s_axis_tlast</obj_property>
+         <obj_property name="ObjectShortName">s_axis_tlast</obj_property>
+      </wvobject>
+      <wvobject fp_name="group1689" type="group">
+         <obj_property name="label">M_AXIS</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="isExpanded"></obj_property>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/m_axis_tvalid" type="logic">
+            <obj_property name="ElementShortName">m_axis_tvalid</obj_property>
+            <obj_property name="ObjectShortName">m_axis_tvalid</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/m_axis_tdata" type="array">
+            <obj_property name="ElementShortName">m_axis_tdata[63:0]</obj_property>
+            <obj_property name="ObjectShortName">m_axis_tdata[63:0]</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="vbus1814" type="vbus">
+         <obj_property name="label">I</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/m_axis_tdata[39]" type="logic">
+            <obj_property name="ElementShortName">[39]</obj_property>
+            <obj_property name="ObjectShortName">[39]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/m_axis_tdata[38]" type="logic">
+            <obj_property name="ElementShortName">[38]</obj_property>
+            <obj_property name="ObjectShortName">[38]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/m_axis_tdata[37]" type="logic">
+            <obj_property name="ElementShortName">[37]</obj_property>
+            <obj_property name="ObjectShortName">[37]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/m_axis_tdata[36]" type="logic">
+            <obj_property name="ElementShortName">[36]</obj_property>
+            <obj_property name="ObjectShortName">[36]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/m_axis_tdata[35]" type="logic">
+            <obj_property name="ElementShortName">[35]</obj_property>
+            <obj_property name="ObjectShortName">[35]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/m_axis_tdata[34]" type="logic">
+            <obj_property name="ElementShortName">[34]</obj_property>
+            <obj_property name="ObjectShortName">[34]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/m_axis_tdata[33]" type="logic">
+            <obj_property name="ElementShortName">[33]</obj_property>
+            <obj_property name="ObjectShortName">[33]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/m_axis_tdata[32]" type="logic">
+            <obj_property name="ElementShortName">[32]</obj_property>
+            <obj_property name="ObjectShortName">[32]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/m_axis_tdata[31]" type="logic">
+            <obj_property name="ElementShortName">[31]</obj_property>
+            <obj_property name="ObjectShortName">[31]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/m_axis_tdata[30]" type="logic">
+            <obj_property name="ElementShortName">[30]</obj_property>
+            <obj_property name="ObjectShortName">[30]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/m_axis_tdata[29]" type="logic">
+            <obj_property name="ElementShortName">[29]</obj_property>
+            <obj_property name="ObjectShortName">[29]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/m_axis_tdata[28]" type="logic">
+            <obj_property name="ElementShortName">[28]</obj_property>
+            <obj_property name="ObjectShortName">[28]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/m_axis_tdata[27]" type="logic">
+            <obj_property name="ElementShortName">[27]</obj_property>
+            <obj_property name="ObjectShortName">[27]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/m_axis_tdata[26]" type="logic">
+            <obj_property name="ElementShortName">[26]</obj_property>
+            <obj_property name="ObjectShortName">[26]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/m_axis_tdata[25]" type="logic">
+            <obj_property name="ElementShortName">[25]</obj_property>
+            <obj_property name="ObjectShortName">[25]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/m_axis_tdata[24]" type="logic">
+            <obj_property name="ElementShortName">[24]</obj_property>
+            <obj_property name="ObjectShortName">[24]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/m_axis_tdata[23]" type="logic">
+            <obj_property name="ElementShortName">[23]</obj_property>
+            <obj_property name="ObjectShortName">[23]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/m_axis_tdata[22]" type="logic">
+            <obj_property name="ElementShortName">[22]</obj_property>
+            <obj_property name="ObjectShortName">[22]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/m_axis_tdata[21]" type="logic">
+            <obj_property name="ElementShortName">[21]</obj_property>
+            <obj_property name="ObjectShortName">[21]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/m_axis_tdata[20]" type="logic">
+            <obj_property name="ElementShortName">[20]</obj_property>
+            <obj_property name="ObjectShortName">[20]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/m_axis_tdata[19]" type="logic">
+            <obj_property name="ElementShortName">[19]</obj_property>
+            <obj_property name="ObjectShortName">[19]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/m_axis_tdata[18]" type="logic">
+            <obj_property name="ElementShortName">[18]</obj_property>
+            <obj_property name="ObjectShortName">[18]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/m_axis_tdata[17]" type="logic">
+            <obj_property name="ElementShortName">[17]</obj_property>
+            <obj_property name="ObjectShortName">[17]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/m_axis_tdata[16]" type="logic">
+            <obj_property name="ElementShortName">[16]</obj_property>
+            <obj_property name="ObjectShortName">[16]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/m_axis_tdata[15]" type="logic">
+            <obj_property name="ElementShortName">[15]</obj_property>
+            <obj_property name="ObjectShortName">[15]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/m_axis_tdata[14]" type="logic">
+            <obj_property name="ElementShortName">[14]</obj_property>
+            <obj_property name="ObjectShortName">[14]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/m_axis_tdata[13]" type="logic">
+            <obj_property name="ElementShortName">[13]</obj_property>
+            <obj_property name="ObjectShortName">[13]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/m_axis_tdata[12]" type="logic">
+            <obj_property name="ElementShortName">[12]</obj_property>
+            <obj_property name="ObjectShortName">[12]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/m_axis_tdata[11]" type="logic">
+            <obj_property name="ElementShortName">[11]</obj_property>
+            <obj_property name="ObjectShortName">[11]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/m_axis_tdata[10]" type="logic">
+            <obj_property name="ElementShortName">[10]</obj_property>
+            <obj_property name="ObjectShortName">[10]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/m_axis_tdata[9]" type="logic">
+            <obj_property name="ElementShortName">[9]</obj_property>
+            <obj_property name="ObjectShortName">[9]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/m_axis_tdata[8]" type="logic">
+            <obj_property name="ElementShortName">[8]</obj_property>
+            <obj_property name="ObjectShortName">[8]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/m_axis_tdata[7]" type="logic">
+            <obj_property name="ElementShortName">[7]</obj_property>
+            <obj_property name="ObjectShortName">[7]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/m_axis_tdata[6]" type="logic">
+            <obj_property name="ElementShortName">[6]</obj_property>
+            <obj_property name="ObjectShortName">[6]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/m_axis_tdata[5]" type="logic">
+            <obj_property name="ElementShortName">[5]</obj_property>
+            <obj_property name="ObjectShortName">[5]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/m_axis_tdata[4]" type="logic">
+            <obj_property name="ElementShortName">[4]</obj_property>
+            <obj_property name="ObjectShortName">[4]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/m_axis_tdata[3]" type="logic">
+            <obj_property name="ElementShortName">[3]</obj_property>
+            <obj_property name="ObjectShortName">[3]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/m_axis_tdata[2]" type="logic">
+            <obj_property name="ElementShortName">[2]</obj_property>
+            <obj_property name="ObjectShortName">[2]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/m_axis_tdata[1]" type="logic">
+            <obj_property name="ElementShortName">[1]</obj_property>
+            <obj_property name="ObjectShortName">[1]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/m_axis_tdata[0]" type="logic">
+            <obj_property name="ElementShortName">[0]</obj_property>
+            <obj_property name="ObjectShortName">[0]</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="vbus1773" type="vbus">
+         <obj_property name="label">Q</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/m_axis_tdata[63]" type="logic">
+            <obj_property name="ElementShortName">[63]</obj_property>
+            <obj_property name="ObjectShortName">[63]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/m_axis_tdata[62]" type="logic">
+            <obj_property name="ElementShortName">[62]</obj_property>
+            <obj_property name="ObjectShortName">[62]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/m_axis_tdata[61]" type="logic">
+            <obj_property name="ElementShortName">[61]</obj_property>
+            <obj_property name="ObjectShortName">[61]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/m_axis_tdata[60]" type="logic">
+            <obj_property name="ElementShortName">[60]</obj_property>
+            <obj_property name="ObjectShortName">[60]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/m_axis_tdata[59]" type="logic">
+            <obj_property name="ElementShortName">[59]</obj_property>
+            <obj_property name="ObjectShortName">[59]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/m_axis_tdata[58]" type="logic">
+            <obj_property name="ElementShortName">[58]</obj_property>
+            <obj_property name="ObjectShortName">[58]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/m_axis_tdata[57]" type="logic">
+            <obj_property name="ElementShortName">[57]</obj_property>
+            <obj_property name="ObjectShortName">[57]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/m_axis_tdata[56]" type="logic">
+            <obj_property name="ElementShortName">[56]</obj_property>
+            <obj_property name="ObjectShortName">[56]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/m_axis_tdata[55]" type="logic">
+            <obj_property name="ElementShortName">[55]</obj_property>
+            <obj_property name="ObjectShortName">[55]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/m_axis_tdata[54]" type="logic">
+            <obj_property name="ElementShortName">[54]</obj_property>
+            <obj_property name="ObjectShortName">[54]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/m_axis_tdata[53]" type="logic">
+            <obj_property name="ElementShortName">[53]</obj_property>
+            <obj_property name="ObjectShortName">[53]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/m_axis_tdata[52]" type="logic">
+            <obj_property name="ElementShortName">[52]</obj_property>
+            <obj_property name="ObjectShortName">[52]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/m_axis_tdata[51]" type="logic">
+            <obj_property name="ElementShortName">[51]</obj_property>
+            <obj_property name="ObjectShortName">[51]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/m_axis_tdata[50]" type="logic">
+            <obj_property name="ElementShortName">[50]</obj_property>
+            <obj_property name="ObjectShortName">[50]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/m_axis_tdata[49]" type="logic">
+            <obj_property name="ElementShortName">[49]</obj_property>
+            <obj_property name="ObjectShortName">[49]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/m_axis_tdata[48]" type="logic">
+            <obj_property name="ElementShortName">[48]</obj_property>
+            <obj_property name="ObjectShortName">[48]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/m_axis_tdata[47]" type="logic">
+            <obj_property name="ElementShortName">[47]</obj_property>
+            <obj_property name="ObjectShortName">[47]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/m_axis_tdata[46]" type="logic">
+            <obj_property name="ElementShortName">[46]</obj_property>
+            <obj_property name="ObjectShortName">[46]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/m_axis_tdata[45]" type="logic">
+            <obj_property name="ElementShortName">[45]</obj_property>
+            <obj_property name="ObjectShortName">[45]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/m_axis_tdata[44]" type="logic">
+            <obj_property name="ElementShortName">[44]</obj_property>
+            <obj_property name="ObjectShortName">[44]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/m_axis_tdata[43]" type="logic">
+            <obj_property name="ElementShortName">[43]</obj_property>
+            <obj_property name="ObjectShortName">[43]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/m_axis_tdata[42]" type="logic">
+            <obj_property name="ElementShortName">[42]</obj_property>
+            <obj_property name="ObjectShortName">[42]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/m_axis_tdata[41]" type="logic">
+            <obj_property name="ElementShortName">[41]</obj_property>
+            <obj_property name="ObjectShortName">[41]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/m_axis_tdata[40]" type="logic">
+            <obj_property name="ElementShortName">[40]</obj_property>
+            <obj_property name="ObjectShortName">[40]</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/r_tlast" type="logic">
+         <obj_property name="ElementShortName">r_tlast</obj_property>
+         <obj_property name="ObjectShortName">r_tlast</obj_property>
+      </wvobject>
+      <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/accum_data" type="array">
+         <obj_property name="ElementShortName">accum_data[63:0]</obj_property>
+         <obj_property name="ObjectShortName">accum_data[63:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="vbus12201" type="vbus">
+         <obj_property name="label">SUM_I</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/accum_data[31]" type="logic">
+            <obj_property name="ElementShortName">[31]</obj_property>
+            <obj_property name="ObjectShortName">[31]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/accum_data[30]" type="logic">
+            <obj_property name="ElementShortName">[30]</obj_property>
+            <obj_property name="ObjectShortName">[30]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/accum_data[29]" type="logic">
+            <obj_property name="ElementShortName">[29]</obj_property>
+            <obj_property name="ObjectShortName">[29]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/accum_data[28]" type="logic">
+            <obj_property name="ElementShortName">[28]</obj_property>
+            <obj_property name="ObjectShortName">[28]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/accum_data[27]" type="logic">
+            <obj_property name="ElementShortName">[27]</obj_property>
+            <obj_property name="ObjectShortName">[27]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/accum_data[26]" type="logic">
+            <obj_property name="ElementShortName">[26]</obj_property>
+            <obj_property name="ObjectShortName">[26]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/accum_data[25]" type="logic">
+            <obj_property name="ElementShortName">[25]</obj_property>
+            <obj_property name="ObjectShortName">[25]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/accum_data[24]" type="logic">
+            <obj_property name="ElementShortName">[24]</obj_property>
+            <obj_property name="ObjectShortName">[24]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/accum_data[23]" type="logic">
+            <obj_property name="ElementShortName">[23]</obj_property>
+            <obj_property name="ObjectShortName">[23]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/accum_data[22]" type="logic">
+            <obj_property name="ElementShortName">[22]</obj_property>
+            <obj_property name="ObjectShortName">[22]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/accum_data[21]" type="logic">
+            <obj_property name="ElementShortName">[21]</obj_property>
+            <obj_property name="ObjectShortName">[21]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/accum_data[20]" type="logic">
+            <obj_property name="ElementShortName">[20]</obj_property>
+            <obj_property name="ObjectShortName">[20]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/accum_data[19]" type="logic">
+            <obj_property name="ElementShortName">[19]</obj_property>
+            <obj_property name="ObjectShortName">[19]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/accum_data[18]" type="logic">
+            <obj_property name="ElementShortName">[18]</obj_property>
+            <obj_property name="ObjectShortName">[18]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/accum_data[17]" type="logic">
+            <obj_property name="ElementShortName">[17]</obj_property>
+            <obj_property name="ObjectShortName">[17]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/accum_data[16]" type="logic">
+            <obj_property name="ElementShortName">[16]</obj_property>
+            <obj_property name="ObjectShortName">[16]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/accum_data[15]" type="logic">
+            <obj_property name="ElementShortName">[15]</obj_property>
+            <obj_property name="ObjectShortName">[15]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/accum_data[14]" type="logic">
+            <obj_property name="ElementShortName">[14]</obj_property>
+            <obj_property name="ObjectShortName">[14]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/accum_data[13]" type="logic">
+            <obj_property name="ElementShortName">[13]</obj_property>
+            <obj_property name="ObjectShortName">[13]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/accum_data[12]" type="logic">
+            <obj_property name="ElementShortName">[12]</obj_property>
+            <obj_property name="ObjectShortName">[12]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/accum_data[11]" type="logic">
+            <obj_property name="ElementShortName">[11]</obj_property>
+            <obj_property name="ObjectShortName">[11]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/accum_data[10]" type="logic">
+            <obj_property name="ElementShortName">[10]</obj_property>
+            <obj_property name="ObjectShortName">[10]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/accum_data[9]" type="logic">
+            <obj_property name="ElementShortName">[9]</obj_property>
+            <obj_property name="ObjectShortName">[9]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/accum_data[8]" type="logic">
+            <obj_property name="ElementShortName">[8]</obj_property>
+            <obj_property name="ObjectShortName">[8]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/accum_data[7]" type="logic">
+            <obj_property name="ElementShortName">[7]</obj_property>
+            <obj_property name="ObjectShortName">[7]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/accum_data[6]" type="logic">
+            <obj_property name="ElementShortName">[6]</obj_property>
+            <obj_property name="ObjectShortName">[6]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/accum_data[5]" type="logic">
+            <obj_property name="ElementShortName">[5]</obj_property>
+            <obj_property name="ObjectShortName">[5]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/accum_data[4]" type="logic">
+            <obj_property name="ElementShortName">[4]</obj_property>
+            <obj_property name="ObjectShortName">[4]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/accum_data[3]" type="logic">
+            <obj_property name="ElementShortName">[3]</obj_property>
+            <obj_property name="ObjectShortName">[3]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/accum_data[2]" type="logic">
+            <obj_property name="ElementShortName">[2]</obj_property>
+            <obj_property name="ObjectShortName">[2]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/accum_data[1]" type="logic">
+            <obj_property name="ElementShortName">[1]</obj_property>
+            <obj_property name="ObjectShortName">[1]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/accum_data[0]" type="logic">
+            <obj_property name="ElementShortName">[0]</obj_property>
+            <obj_property name="ObjectShortName">[0]</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="vbus12168" type="vbus">
+         <obj_property name="label">SUM_Q</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/accum_data[63]" type="logic">
+            <obj_property name="ElementShortName">[63]</obj_property>
+            <obj_property name="ObjectShortName">[63]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/accum_data[62]" type="logic">
+            <obj_property name="ElementShortName">[62]</obj_property>
+            <obj_property name="ObjectShortName">[62]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/accum_data[61]" type="logic">
+            <obj_property name="ElementShortName">[61]</obj_property>
+            <obj_property name="ObjectShortName">[61]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/accum_data[60]" type="logic">
+            <obj_property name="ElementShortName">[60]</obj_property>
+            <obj_property name="ObjectShortName">[60]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/accum_data[59]" type="logic">
+            <obj_property name="ElementShortName">[59]</obj_property>
+            <obj_property name="ObjectShortName">[59]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/accum_data[58]" type="logic">
+            <obj_property name="ElementShortName">[58]</obj_property>
+            <obj_property name="ObjectShortName">[58]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/accum_data[57]" type="logic">
+            <obj_property name="ElementShortName">[57]</obj_property>
+            <obj_property name="ObjectShortName">[57]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/accum_data[56]" type="logic">
+            <obj_property name="ElementShortName">[56]</obj_property>
+            <obj_property name="ObjectShortName">[56]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/accum_data[55]" type="logic">
+            <obj_property name="ElementShortName">[55]</obj_property>
+            <obj_property name="ObjectShortName">[55]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/accum_data[54]" type="logic">
+            <obj_property name="ElementShortName">[54]</obj_property>
+            <obj_property name="ObjectShortName">[54]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/accum_data[53]" type="logic">
+            <obj_property name="ElementShortName">[53]</obj_property>
+            <obj_property name="ObjectShortName">[53]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/accum_data[52]" type="logic">
+            <obj_property name="ElementShortName">[52]</obj_property>
+            <obj_property name="ObjectShortName">[52]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/accum_data[51]" type="logic">
+            <obj_property name="ElementShortName">[51]</obj_property>
+            <obj_property name="ObjectShortName">[51]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/accum_data[50]" type="logic">
+            <obj_property name="ElementShortName">[50]</obj_property>
+            <obj_property name="ObjectShortName">[50]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/accum_data[49]" type="logic">
+            <obj_property name="ElementShortName">[49]</obj_property>
+            <obj_property name="ObjectShortName">[49]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/accum_data[48]" type="logic">
+            <obj_property name="ElementShortName">[48]</obj_property>
+            <obj_property name="ObjectShortName">[48]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/accum_data[47]" type="logic">
+            <obj_property name="ElementShortName">[47]</obj_property>
+            <obj_property name="ObjectShortName">[47]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/accum_data[46]" type="logic">
+            <obj_property name="ElementShortName">[46]</obj_property>
+            <obj_property name="ObjectShortName">[46]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/accum_data[45]" type="logic">
+            <obj_property name="ElementShortName">[45]</obj_property>
+            <obj_property name="ObjectShortName">[45]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/accum_data[44]" type="logic">
+            <obj_property name="ElementShortName">[44]</obj_property>
+            <obj_property name="ObjectShortName">[44]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/accum_data[43]" type="logic">
+            <obj_property name="ElementShortName">[43]</obj_property>
+            <obj_property name="ObjectShortName">[43]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/accum_data[42]" type="logic">
+            <obj_property name="ElementShortName">[42]</obj_property>
+            <obj_property name="ObjectShortName">[42]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/accum_data[41]" type="logic">
+            <obj_property name="ElementShortName">[41]</obj_property>
+            <obj_property name="ObjectShortName">[41]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/accum_data[40]" type="logic">
+            <obj_property name="ElementShortName">[40]</obj_property>
+            <obj_property name="ObjectShortName">[40]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/accum_data[39]" type="logic">
+            <obj_property name="ElementShortName">[39]</obj_property>
+            <obj_property name="ObjectShortName">[39]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/accum_data[38]" type="logic">
+            <obj_property name="ElementShortName">[38]</obj_property>
+            <obj_property name="ObjectShortName">[38]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/accum_data[37]" type="logic">
+            <obj_property name="ElementShortName">[37]</obj_property>
+            <obj_property name="ObjectShortName">[37]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/accum_data[36]" type="logic">
+            <obj_property name="ElementShortName">[36]</obj_property>
+            <obj_property name="ObjectShortName">[36]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/accum_data[35]" type="logic">
+            <obj_property name="ElementShortName">[35]</obj_property>
+            <obj_property name="ObjectShortName">[35]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/accum_data[34]" type="logic">
+            <obj_property name="ElementShortName">[34]</obj_property>
+            <obj_property name="ObjectShortName">[34]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/accum_data[33]" type="logic">
+            <obj_property name="ElementShortName">[33]</obj_property>
+            <obj_property name="ObjectShortName">[33]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/accum_data[32]" type="logic">
+            <obj_property name="ElementShortName">[32]</obj_property>
+            <obj_property name="ObjectShortName">[32]</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="vbus8934" type="vbus">
+         <obj_property name="label">IN_1_I</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/s_axis_tdata[31]" type="logic">
+            <obj_property name="ElementShortName">[31]</obj_property>
+            <obj_property name="ObjectShortName">[31]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/s_axis_tdata[30]" type="logic">
+            <obj_property name="ElementShortName">[30]</obj_property>
+            <obj_property name="ObjectShortName">[30]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/s_axis_tdata[29]" type="logic">
+            <obj_property name="ElementShortName">[29]</obj_property>
+            <obj_property name="ObjectShortName">[29]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/s_axis_tdata[28]" type="logic">
+            <obj_property name="ElementShortName">[28]</obj_property>
+            <obj_property name="ObjectShortName">[28]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/s_axis_tdata[27]" type="logic">
+            <obj_property name="ElementShortName">[27]</obj_property>
+            <obj_property name="ObjectShortName">[27]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/s_axis_tdata[26]" type="logic">
+            <obj_property name="ElementShortName">[26]</obj_property>
+            <obj_property name="ObjectShortName">[26]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/s_axis_tdata[25]" type="logic">
+            <obj_property name="ElementShortName">[25]</obj_property>
+            <obj_property name="ObjectShortName">[25]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/s_axis_tdata[24]" type="logic">
+            <obj_property name="ElementShortName">[24]</obj_property>
+            <obj_property name="ObjectShortName">[24]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/s_axis_tdata[23]" type="logic">
+            <obj_property name="ElementShortName">[23]</obj_property>
+            <obj_property name="ObjectShortName">[23]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/s_axis_tdata[22]" type="logic">
+            <obj_property name="ElementShortName">[22]</obj_property>
+            <obj_property name="ObjectShortName">[22]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/s_axis_tdata[21]" type="logic">
+            <obj_property name="ElementShortName">[21]</obj_property>
+            <obj_property name="ObjectShortName">[21]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/s_axis_tdata[20]" type="logic">
+            <obj_property name="ElementShortName">[20]</obj_property>
+            <obj_property name="ObjectShortName">[20]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/s_axis_tdata[19]" type="logic">
+            <obj_property name="ElementShortName">[19]</obj_property>
+            <obj_property name="ObjectShortName">[19]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/s_axis_tdata[18]" type="logic">
+            <obj_property name="ElementShortName">[18]</obj_property>
+            <obj_property name="ObjectShortName">[18]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/s_axis_tdata[17]" type="logic">
+            <obj_property name="ElementShortName">[17]</obj_property>
+            <obj_property name="ObjectShortName">[17]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/s_axis_tdata[16]" type="logic">
+            <obj_property name="ElementShortName">[16]</obj_property>
+            <obj_property name="ObjectShortName">[16]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/s_axis_tdata[15]" type="logic">
+            <obj_property name="ElementShortName">[15]</obj_property>
+            <obj_property name="ObjectShortName">[15]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/s_axis_tdata[14]" type="logic">
+            <obj_property name="ElementShortName">[14]</obj_property>
+            <obj_property name="ObjectShortName">[14]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/s_axis_tdata[13]" type="logic">
+            <obj_property name="ElementShortName">[13]</obj_property>
+            <obj_property name="ObjectShortName">[13]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/s_axis_tdata[12]" type="logic">
+            <obj_property name="ElementShortName">[12]</obj_property>
+            <obj_property name="ObjectShortName">[12]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/s_axis_tdata[11]" type="logic">
+            <obj_property name="ElementShortName">[11]</obj_property>
+            <obj_property name="ObjectShortName">[11]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/s_axis_tdata[10]" type="logic">
+            <obj_property name="ElementShortName">[10]</obj_property>
+            <obj_property name="ObjectShortName">[10]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/s_axis_tdata[9]" type="logic">
+            <obj_property name="ElementShortName">[9]</obj_property>
+            <obj_property name="ObjectShortName">[9]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/s_axis_tdata[8]" type="logic">
+            <obj_property name="ElementShortName">[8]</obj_property>
+            <obj_property name="ObjectShortName">[8]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/s_axis_tdata[7]" type="logic">
+            <obj_property name="ElementShortName">[7]</obj_property>
+            <obj_property name="ObjectShortName">[7]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/s_axis_tdata[6]" type="logic">
+            <obj_property name="ElementShortName">[6]</obj_property>
+            <obj_property name="ObjectShortName">[6]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/s_axis_tdata[5]" type="logic">
+            <obj_property name="ElementShortName">[5]</obj_property>
+            <obj_property name="ObjectShortName">[5]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/s_axis_tdata[4]" type="logic">
+            <obj_property name="ElementShortName">[4]</obj_property>
+            <obj_property name="ObjectShortName">[4]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/s_axis_tdata[3]" type="logic">
+            <obj_property name="ElementShortName">[3]</obj_property>
+            <obj_property name="ObjectShortName">[3]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/s_axis_tdata[2]" type="logic">
+            <obj_property name="ElementShortName">[2]</obj_property>
+            <obj_property name="ObjectShortName">[2]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/s_axis_tdata[1]" type="logic">
+            <obj_property name="ElementShortName">[1]</obj_property>
+            <obj_property name="ObjectShortName">[1]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/s_axis_tdata[0]" type="logic">
+            <obj_property name="ElementShortName">[0]</obj_property>
+            <obj_property name="ObjectShortName">[0]</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="vbus8901" type="vbus">
+         <obj_property name="label">IN_2_I</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/s_axis_tdata[95]" type="logic">
+            <obj_property name="ElementShortName">[95]</obj_property>
+            <obj_property name="ObjectShortName">[95]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/s_axis_tdata[94]" type="logic">
+            <obj_property name="ElementShortName">[94]</obj_property>
+            <obj_property name="ObjectShortName">[94]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/s_axis_tdata[93]" type="logic">
+            <obj_property name="ElementShortName">[93]</obj_property>
+            <obj_property name="ObjectShortName">[93]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/s_axis_tdata[92]" type="logic">
+            <obj_property name="ElementShortName">[92]</obj_property>
+            <obj_property name="ObjectShortName">[92]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/s_axis_tdata[91]" type="logic">
+            <obj_property name="ElementShortName">[91]</obj_property>
+            <obj_property name="ObjectShortName">[91]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/s_axis_tdata[90]" type="logic">
+            <obj_property name="ElementShortName">[90]</obj_property>
+            <obj_property name="ObjectShortName">[90]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/s_axis_tdata[89]" type="logic">
+            <obj_property name="ElementShortName">[89]</obj_property>
+            <obj_property name="ObjectShortName">[89]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/s_axis_tdata[88]" type="logic">
+            <obj_property name="ElementShortName">[88]</obj_property>
+            <obj_property name="ObjectShortName">[88]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/s_axis_tdata[87]" type="logic">
+            <obj_property name="ElementShortName">[87]</obj_property>
+            <obj_property name="ObjectShortName">[87]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/s_axis_tdata[86]" type="logic">
+            <obj_property name="ElementShortName">[86]</obj_property>
+            <obj_property name="ObjectShortName">[86]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/s_axis_tdata[85]" type="logic">
+            <obj_property name="ElementShortName">[85]</obj_property>
+            <obj_property name="ObjectShortName">[85]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/s_axis_tdata[84]" type="logic">
+            <obj_property name="ElementShortName">[84]</obj_property>
+            <obj_property name="ObjectShortName">[84]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/s_axis_tdata[83]" type="logic">
+            <obj_property name="ElementShortName">[83]</obj_property>
+            <obj_property name="ObjectShortName">[83]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/s_axis_tdata[82]" type="logic">
+            <obj_property name="ElementShortName">[82]</obj_property>
+            <obj_property name="ObjectShortName">[82]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/s_axis_tdata[81]" type="logic">
+            <obj_property name="ElementShortName">[81]</obj_property>
+            <obj_property name="ObjectShortName">[81]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/s_axis_tdata[80]" type="logic">
+            <obj_property name="ElementShortName">[80]</obj_property>
+            <obj_property name="ObjectShortName">[80]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/s_axis_tdata[79]" type="logic">
+            <obj_property name="ElementShortName">[79]</obj_property>
+            <obj_property name="ObjectShortName">[79]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/s_axis_tdata[78]" type="logic">
+            <obj_property name="ElementShortName">[78]</obj_property>
+            <obj_property name="ObjectShortName">[78]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/s_axis_tdata[77]" type="logic">
+            <obj_property name="ElementShortName">[77]</obj_property>
+            <obj_property name="ObjectShortName">[77]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/s_axis_tdata[76]" type="logic">
+            <obj_property name="ElementShortName">[76]</obj_property>
+            <obj_property name="ObjectShortName">[76]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/s_axis_tdata[75]" type="logic">
+            <obj_property name="ElementShortName">[75]</obj_property>
+            <obj_property name="ObjectShortName">[75]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/s_axis_tdata[74]" type="logic">
+            <obj_property name="ElementShortName">[74]</obj_property>
+            <obj_property name="ObjectShortName">[74]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/s_axis_tdata[73]" type="logic">
+            <obj_property name="ElementShortName">[73]</obj_property>
+            <obj_property name="ObjectShortName">[73]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/s_axis_tdata[72]" type="logic">
+            <obj_property name="ElementShortName">[72]</obj_property>
+            <obj_property name="ObjectShortName">[72]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/s_axis_tdata[71]" type="logic">
+            <obj_property name="ElementShortName">[71]</obj_property>
+            <obj_property name="ObjectShortName">[71]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/s_axis_tdata[70]" type="logic">
+            <obj_property name="ElementShortName">[70]</obj_property>
+            <obj_property name="ObjectShortName">[70]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/s_axis_tdata[69]" type="logic">
+            <obj_property name="ElementShortName">[69]</obj_property>
+            <obj_property name="ObjectShortName">[69]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/s_axis_tdata[68]" type="logic">
+            <obj_property name="ElementShortName">[68]</obj_property>
+            <obj_property name="ObjectShortName">[68]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/s_axis_tdata[67]" type="logic">
+            <obj_property name="ElementShortName">[67]</obj_property>
+            <obj_property name="ObjectShortName">[67]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/s_axis_tdata[66]" type="logic">
+            <obj_property name="ElementShortName">[66]</obj_property>
+            <obj_property name="ObjectShortName">[66]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/s_axis_tdata[65]" type="logic">
+            <obj_property name="ElementShortName">[65]</obj_property>
+            <obj_property name="ObjectShortName">[65]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/s_axis_tdata[64]" type="logic">
+            <obj_property name="ElementShortName">[64]</obj_property>
+            <obj_property name="ObjectShortName">[64]</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="vbus8868" type="vbus">
+         <obj_property name="label">IN_3_I</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/s_axis_tdata[159]" type="logic">
+            <obj_property name="ElementShortName">[159]</obj_property>
+            <obj_property name="ObjectShortName">[159]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/s_axis_tdata[158]" type="logic">
+            <obj_property name="ElementShortName">[158]</obj_property>
+            <obj_property name="ObjectShortName">[158]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/s_axis_tdata[157]" type="logic">
+            <obj_property name="ElementShortName">[157]</obj_property>
+            <obj_property name="ObjectShortName">[157]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/s_axis_tdata[156]" type="logic">
+            <obj_property name="ElementShortName">[156]</obj_property>
+            <obj_property name="ObjectShortName">[156]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/s_axis_tdata[155]" type="logic">
+            <obj_property name="ElementShortName">[155]</obj_property>
+            <obj_property name="ObjectShortName">[155]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/s_axis_tdata[154]" type="logic">
+            <obj_property name="ElementShortName">[154]</obj_property>
+            <obj_property name="ObjectShortName">[154]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/s_axis_tdata[153]" type="logic">
+            <obj_property name="ElementShortName">[153]</obj_property>
+            <obj_property name="ObjectShortName">[153]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/s_axis_tdata[152]" type="logic">
+            <obj_property name="ElementShortName">[152]</obj_property>
+            <obj_property name="ObjectShortName">[152]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/s_axis_tdata[151]" type="logic">
+            <obj_property name="ElementShortName">[151]</obj_property>
+            <obj_property name="ObjectShortName">[151]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/s_axis_tdata[150]" type="logic">
+            <obj_property name="ElementShortName">[150]</obj_property>
+            <obj_property name="ObjectShortName">[150]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/s_axis_tdata[149]" type="logic">
+            <obj_property name="ElementShortName">[149]</obj_property>
+            <obj_property name="ObjectShortName">[149]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/s_axis_tdata[148]" type="logic">
+            <obj_property name="ElementShortName">[148]</obj_property>
+            <obj_property name="ObjectShortName">[148]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/s_axis_tdata[147]" type="logic">
+            <obj_property name="ElementShortName">[147]</obj_property>
+            <obj_property name="ObjectShortName">[147]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/s_axis_tdata[146]" type="logic">
+            <obj_property name="ElementShortName">[146]</obj_property>
+            <obj_property name="ObjectShortName">[146]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/s_axis_tdata[145]" type="logic">
+            <obj_property name="ElementShortName">[145]</obj_property>
+            <obj_property name="ObjectShortName">[145]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/s_axis_tdata[144]" type="logic">
+            <obj_property name="ElementShortName">[144]</obj_property>
+            <obj_property name="ObjectShortName">[144]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/s_axis_tdata[143]" type="logic">
+            <obj_property name="ElementShortName">[143]</obj_property>
+            <obj_property name="ObjectShortName">[143]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/s_axis_tdata[142]" type="logic">
+            <obj_property name="ElementShortName">[142]</obj_property>
+            <obj_property name="ObjectShortName">[142]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/s_axis_tdata[141]" type="logic">
+            <obj_property name="ElementShortName">[141]</obj_property>
+            <obj_property name="ObjectShortName">[141]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/s_axis_tdata[140]" type="logic">
+            <obj_property name="ElementShortName">[140]</obj_property>
+            <obj_property name="ObjectShortName">[140]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/s_axis_tdata[139]" type="logic">
+            <obj_property name="ElementShortName">[139]</obj_property>
+            <obj_property name="ObjectShortName">[139]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/s_axis_tdata[138]" type="logic">
+            <obj_property name="ElementShortName">[138]</obj_property>
+            <obj_property name="ObjectShortName">[138]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/s_axis_tdata[137]" type="logic">
+            <obj_property name="ElementShortName">[137]</obj_property>
+            <obj_property name="ObjectShortName">[137]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/s_axis_tdata[136]" type="logic">
+            <obj_property name="ElementShortName">[136]</obj_property>
+            <obj_property name="ObjectShortName">[136]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/s_axis_tdata[135]" type="logic">
+            <obj_property name="ElementShortName">[135]</obj_property>
+            <obj_property name="ObjectShortName">[135]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/s_axis_tdata[134]" type="logic">
+            <obj_property name="ElementShortName">[134]</obj_property>
+            <obj_property name="ObjectShortName">[134]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/s_axis_tdata[133]" type="logic">
+            <obj_property name="ElementShortName">[133]</obj_property>
+            <obj_property name="ObjectShortName">[133]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/s_axis_tdata[132]" type="logic">
+            <obj_property name="ElementShortName">[132]</obj_property>
+            <obj_property name="ObjectShortName">[132]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/s_axis_tdata[131]" type="logic">
+            <obj_property name="ElementShortName">[131]</obj_property>
+            <obj_property name="ObjectShortName">[131]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/s_axis_tdata[130]" type="logic">
+            <obj_property name="ElementShortName">[130]</obj_property>
+            <obj_property name="ObjectShortName">[130]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/s_axis_tdata[129]" type="logic">
+            <obj_property name="ElementShortName">[129]</obj_property>
+            <obj_property name="ObjectShortName">[129]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/s_axis_tdata[128]" type="logic">
+            <obj_property name="ElementShortName">[128]</obj_property>
+            <obj_property name="ObjectShortName">[128]</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="vbus8835" type="vbus">
+         <obj_property name="label">IN_4_I</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/s_axis_tdata[223]" type="logic">
+            <obj_property name="ElementShortName">[223]</obj_property>
+            <obj_property name="ObjectShortName">[223]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/s_axis_tdata[222]" type="logic">
+            <obj_property name="ElementShortName">[222]</obj_property>
+            <obj_property name="ObjectShortName">[222]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/s_axis_tdata[221]" type="logic">
+            <obj_property name="ElementShortName">[221]</obj_property>
+            <obj_property name="ObjectShortName">[221]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/s_axis_tdata[220]" type="logic">
+            <obj_property name="ElementShortName">[220]</obj_property>
+            <obj_property name="ObjectShortName">[220]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/s_axis_tdata[219]" type="logic">
+            <obj_property name="ElementShortName">[219]</obj_property>
+            <obj_property name="ObjectShortName">[219]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/s_axis_tdata[218]" type="logic">
+            <obj_property name="ElementShortName">[218]</obj_property>
+            <obj_property name="ObjectShortName">[218]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/s_axis_tdata[217]" type="logic">
+            <obj_property name="ElementShortName">[217]</obj_property>
+            <obj_property name="ObjectShortName">[217]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/s_axis_tdata[216]" type="logic">
+            <obj_property name="ElementShortName">[216]</obj_property>
+            <obj_property name="ObjectShortName">[216]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/s_axis_tdata[215]" type="logic">
+            <obj_property name="ElementShortName">[215]</obj_property>
+            <obj_property name="ObjectShortName">[215]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/s_axis_tdata[214]" type="logic">
+            <obj_property name="ElementShortName">[214]</obj_property>
+            <obj_property name="ObjectShortName">[214]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/s_axis_tdata[213]" type="logic">
+            <obj_property name="ElementShortName">[213]</obj_property>
+            <obj_property name="ObjectShortName">[213]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/s_axis_tdata[212]" type="logic">
+            <obj_property name="ElementShortName">[212]</obj_property>
+            <obj_property name="ObjectShortName">[212]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/s_axis_tdata[211]" type="logic">
+            <obj_property name="ElementShortName">[211]</obj_property>
+            <obj_property name="ObjectShortName">[211]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/s_axis_tdata[210]" type="logic">
+            <obj_property name="ElementShortName">[210]</obj_property>
+            <obj_property name="ObjectShortName">[210]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/s_axis_tdata[209]" type="logic">
+            <obj_property name="ElementShortName">[209]</obj_property>
+            <obj_property name="ObjectShortName">[209]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/s_axis_tdata[208]" type="logic">
+            <obj_property name="ElementShortName">[208]</obj_property>
+            <obj_property name="ObjectShortName">[208]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/s_axis_tdata[207]" type="logic">
+            <obj_property name="ElementShortName">[207]</obj_property>
+            <obj_property name="ObjectShortName">[207]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/s_axis_tdata[206]" type="logic">
+            <obj_property name="ElementShortName">[206]</obj_property>
+            <obj_property name="ObjectShortName">[206]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/s_axis_tdata[205]" type="logic">
+            <obj_property name="ElementShortName">[205]</obj_property>
+            <obj_property name="ObjectShortName">[205]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/s_axis_tdata[204]" type="logic">
+            <obj_property name="ElementShortName">[204]</obj_property>
+            <obj_property name="ObjectShortName">[204]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/s_axis_tdata[203]" type="logic">
+            <obj_property name="ElementShortName">[203]</obj_property>
+            <obj_property name="ObjectShortName">[203]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/s_axis_tdata[202]" type="logic">
+            <obj_property name="ElementShortName">[202]</obj_property>
+            <obj_property name="ObjectShortName">[202]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/s_axis_tdata[201]" type="logic">
+            <obj_property name="ElementShortName">[201]</obj_property>
+            <obj_property name="ObjectShortName">[201]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/s_axis_tdata[200]" type="logic">
+            <obj_property name="ElementShortName">[200]</obj_property>
+            <obj_property name="ObjectShortName">[200]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/s_axis_tdata[199]" type="logic">
+            <obj_property name="ElementShortName">[199]</obj_property>
+            <obj_property name="ObjectShortName">[199]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/s_axis_tdata[198]" type="logic">
+            <obj_property name="ElementShortName">[198]</obj_property>
+            <obj_property name="ObjectShortName">[198]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/s_axis_tdata[197]" type="logic">
+            <obj_property name="ElementShortName">[197]</obj_property>
+            <obj_property name="ObjectShortName">[197]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/s_axis_tdata[196]" type="logic">
+            <obj_property name="ElementShortName">[196]</obj_property>
+            <obj_property name="ObjectShortName">[196]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/s_axis_tdata[195]" type="logic">
+            <obj_property name="ElementShortName">[195]</obj_property>
+            <obj_property name="ObjectShortName">[195]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/s_axis_tdata[194]" type="logic">
+            <obj_property name="ElementShortName">[194]</obj_property>
+            <obj_property name="ObjectShortName">[194]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/s_axis_tdata[193]" type="logic">
+            <obj_property name="ElementShortName">[193]</obj_property>
+            <obj_property name="ObjectShortName">[193]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/sum_0/inst/s_axis_tdata[192]" type="logic">
+            <obj_property name="ElementShortName">[192]</obj_property>
+            <obj_property name="ObjectShortName">[192]</obj_property>
+         </wvobject>
+      </wvobject>
    </wvobject>
-   <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/Mixer/mixer_0/m_axis_tdata" type="array">
-      <obj_property name="ElementShortName">m_axis_tdata[127:0]</obj_property>
-      <obj_property name="ObjectShortName">m_axis_tdata[127:0]</obj_property>
+   <wvobject fp_name="group7017" type="group">
+      <obj_property name="label">ANGLE</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject fp_name="group7015" type="group">
+         <obj_property name="label">S_AXIS</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="isExpanded"></obj_property>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/angle_0/inst/s_axis_tdata" type="array">
+            <obj_property name="ElementShortName">s_axis_tdata[63:0]</obj_property>
+            <obj_property name="ObjectShortName">s_axis_tdata[63:0]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/angle_0/inst/s_axis_tvalid" type="logic">
+            <obj_property name="ElementShortName">s_axis_tvalid</obj_property>
+            <obj_property name="ObjectShortName">s_axis_tvalid</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/angle_0/inst/s_axis_tlast" type="logic">
+            <obj_property name="ElementShortName">s_axis_tlast</obj_property>
+            <obj_property name="ObjectShortName">s_axis_tlast</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="group7016" type="group">
+         <obj_property name="label">M_AXIS</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="isExpanded"></obj_property>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/angle_0/inst/m_axis_tdata" type="array">
+            <obj_property name="ElementShortName">m_axis_tdata[31:0]</obj_property>
+            <obj_property name="ObjectShortName">m_axis_tdata[31:0]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/angle_0/inst/m_axis_tvalid" type="logic">
+            <obj_property name="ElementShortName">m_axis_tvalid</obj_property>
+            <obj_property name="ObjectShortName">m_axis_tvalid</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/angle_0/inst/m_axis_tlast" type="logic">
+            <obj_property name="ElementShortName">m_axis_tlast</obj_property>
+            <obj_property name="ObjectShortName">m_axis_tlast</obj_property>
+         </wvobject>
+      </wvobject>
    </wvobject>
-   <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/Mixer/mixer_0/m_axis_tvalid" type="logic">
-      <obj_property name="ElementShortName">m_axis_tvalid</obj_property>
-      <obj_property name="ObjectShortName">m_axis_tvalid</obj_property>
+   <wvobject fp_name="group13217" type="group">
+      <obj_property name="label">SCALE</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject fp_name="group13218" type="group">
+         <obj_property name="label">S_AXIS</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="isExpanded"></obj_property>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/scale_0/inst/s_axis_tdata" type="array">
+            <obj_property name="ElementShortName">s_axis_tdata[31:0]</obj_property>
+            <obj_property name="ObjectShortName">s_axis_tdata[31:0]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/scale_0/inst/s_axis_tvalid" type="logic">
+            <obj_property name="ElementShortName">s_axis_tvalid</obj_property>
+            <obj_property name="ObjectShortName">s_axis_tvalid</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="group13219" type="group">
+         <obj_property name="label">M_AXIS</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="isExpanded"></obj_property>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/scale_0/inst/m_axis_tdata" type="array">
+            <obj_property name="ElementShortName">m_axis_tdata[31:0]</obj_property>
+            <obj_property name="ObjectShortName">m_axis_tdata[31:0]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/scale_0/inst/m_axis_tvalid" type="logic">
+            <obj_property name="ElementShortName">m_axis_tvalid</obj_property>
+            <obj_property name="ObjectShortName">m_axis_tvalid</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/scale_0/inst/twos_complement" type="array">
+         <obj_property name="ElementShortName">twos_complement[31:0]</obj_property>
+         <obj_property name="ObjectShortName">twos_complement[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/scale_0/inst/freq_scaled" type="array">
+         <obj_property name="ElementShortName">freq_scaled[26:0]</obj_property>
+         <obj_property name="ObjectShortName">freq_scaled[26:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/scale_0/inst/dsp_macro_0_inst/P" type="array">
+         <obj_property name="ElementShortName">P[45:0]</obj_property>
+         <obj_property name="ObjectShortName">P[45:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
    </wvobject>
-   <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/Mixer/mixer_0/m_axis_tlast" type="logic">
-      <obj_property name="ElementShortName">m_axis_tlast</obj_property>
-      <obj_property name="ObjectShortName">m_axis_tlast</obj_property>
+   <wvobject fp_name="group18420" type="group">
+      <obj_property name="label">CONJ_1024</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject fp_name="group18421" type="group">
+         <obj_property name="label">S_AXIS</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="isExpanded"></obj_property>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/conj_1/inst/s_axis_tdata" type="array">
+            <obj_property name="ElementShortName">s_axis_tdata[127:0]</obj_property>
+            <obj_property name="ObjectShortName">s_axis_tdata[127:0]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/conj_1/inst/s_axis_tvalid" type="logic">
+            <obj_property name="ElementShortName">s_axis_tvalid</obj_property>
+            <obj_property name="ObjectShortName">s_axis_tvalid</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/conj_1/inst/s_axis_tlast" type="logic">
+            <obj_property name="ElementShortName">s_axis_tlast</obj_property>
+            <obj_property name="ObjectShortName">s_axis_tlast</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="group18422" type="group">
+         <obj_property name="label">M_AXIS</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="isExpanded"></obj_property>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/conj_1/inst/m_axis_tdata" type="array">
+            <obj_property name="ElementShortName">m_axis_tdata[127:0]</obj_property>
+            <obj_property name="ObjectShortName">m_axis_tdata[127:0]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/conj_1/inst/m_axis_tvalid" type="logic">
+            <obj_property name="ElementShortName">m_axis_tvalid</obj_property>
+            <obj_property name="ObjectShortName">m_axis_tvalid</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/conj_1/inst/m_axis_tlast" type="logic">
+            <obj_property name="ElementShortName">m_axis_tlast</obj_property>
+            <obj_property name="ObjectShortName">m_axis_tlast</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/conj_1/inst/i_negative_freq" type="logic">
+         <obj_property name="ElementShortName">i_negative_freq</obj_property>
+         <obj_property name="ObjectShortName">i_negative_freq</obj_property>
+      </wvobject>
    </wvobject>
-   <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/Mixer/dds_top_0/s_axis_tdata" type="array">
-      <obj_property name="ElementShortName">s_axis_tdata[31:0]</obj_property>
-      <obj_property name="ObjectShortName">s_axis_tdata[31:0]</obj_property>
+   <wvobject fp_name="group2570" type="group">
+      <obj_property name="label">MIXER</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject fp_name="group2567" type="group">
+         <obj_property name="label">S_1024_AXIS</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="isExpanded"></obj_property>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/Mixer/mixer_0/inst/s_axis0_tdata" type="array">
+            <obj_property name="ElementShortName">s_axis0_tdata[127:0]</obj_property>
+            <obj_property name="ObjectShortName">s_axis0_tdata[127:0]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/Mixer/mixer_0/inst/s_axis0_tvalid" type="logic">
+            <obj_property name="ElementShortName">s_axis0_tvalid</obj_property>
+            <obj_property name="ObjectShortName">s_axis0_tvalid</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/Mixer/mixer_0/inst/s_axis0_tlast" type="logic">
+            <obj_property name="ElementShortName">s_axis0_tlast</obj_property>
+            <obj_property name="ObjectShortName">s_axis0_tlast</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="group2568" type="group">
+         <obj_property name="label">S_DDS_AXIS</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="isExpanded"></obj_property>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/Mixer/mixer_0/inst/s_axis1_tdata" type="array">
+            <obj_property name="ElementShortName">s_axis1_tdata[127:0]</obj_property>
+            <obj_property name="ObjectShortName">s_axis1_tdata[127:0]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/Mixer/mixer_0/inst/s_axis1_tvalid" type="logic">
+            <obj_property name="ElementShortName">s_axis1_tvalid</obj_property>
+            <obj_property name="ObjectShortName">s_axis1_tvalid</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/Mixer/mixer_0/inst/s_axis1_tlast" type="logic">
+            <obj_property name="ElementShortName">s_axis1_tlast</obj_property>
+            <obj_property name="ObjectShortName">s_axis1_tlast</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="group2569" type="group">
+         <obj_property name="label">M_AXIS</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="isExpanded"></obj_property>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/Mixer/mixer_0/inst/m_axis_tdata" type="array">
+            <obj_property name="ElementShortName">m_axis_tdata[255:0]</obj_property>
+            <obj_property name="ObjectShortName">m_axis_tdata[255:0]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/Mixer/mixer_0/inst/m_axis_tvalid" type="logic">
+            <obj_property name="ElementShortName">m_axis_tvalid</obj_property>
+            <obj_property name="ObjectShortName">m_axis_tvalid</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/Mixer/mixer_0/inst/m_axis_tlast" type="logic">
+            <obj_property name="ElementShortName">m_axis_tlast</obj_property>
+            <obj_property name="ObjectShortName">m_axis_tlast</obj_property>
+         </wvobject>
+      </wvobject>
    </wvobject>
-   <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/Mixer/dds_top_0/s_axis_tvalid" type="logic">
-      <obj_property name="ElementShortName">s_axis_tvalid</obj_property>
-      <obj_property name="ObjectShortName">s_axis_tvalid</obj_property>
+   <wvobject fp_name="group2777" type="group">
+      <obj_property name="label">FIFO_1024</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject fp_name="group2775" type="group">
+         <obj_property name="label">S_AXIS</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="isExpanded"></obj_property>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/axis_data_fifo_1/inst/s_axis_tdata" type="array">
+            <obj_property name="ElementShortName">s_axis_tdata[127:0]</obj_property>
+            <obj_property name="ObjectShortName">s_axis_tdata[127:0]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/axis_data_fifo_1/inst/s_axis_tvalid" type="logic">
+            <obj_property name="ElementShortName">s_axis_tvalid</obj_property>
+            <obj_property name="ObjectShortName">s_axis_tvalid</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/axis_data_fifo_1/inst/s_axis_tready" type="logic">
+            <obj_property name="ElementShortName">s_axis_tready</obj_property>
+            <obj_property name="ObjectShortName">s_axis_tready</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/axis_data_fifo_1/inst/s_axis_tlast" type="logic">
+            <obj_property name="ElementShortName">s_axis_tlast</obj_property>
+            <obj_property name="ObjectShortName">s_axis_tlast</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="group2776" type="group">
+         <obj_property name="label">M_AXIS</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="isExpanded"></obj_property>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/axis_data_fifo_1/inst/m_axis_tdata" type="array">
+            <obj_property name="ElementShortName">m_axis_tdata[127:0]</obj_property>
+            <obj_property name="ObjectShortName">m_axis_tdata[127:0]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/axis_data_fifo_1/inst/m_axis_tvalid" type="logic">
+            <obj_property name="ElementShortName">m_axis_tvalid</obj_property>
+            <obj_property name="ObjectShortName">m_axis_tvalid</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/axis_data_fifo_1/inst/m_axis_tlast" type="logic">
+            <obj_property name="ElementShortName">m_axis_tlast</obj_property>
+            <obj_property name="ObjectShortName">m_axis_tlast</obj_property>
+         </wvobject>
+      </wvobject>
    </wvobject>
-   <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/Mixer/dds_top_0/m_axis_tdata" type="array">
-      <obj_property name="ElementShortName">m_axis_tdata[127:0]</obj_property>
-      <obj_property name="ObjectShortName">m_axis_tdata[127:0]</obj_property>
+   <wvobject fp_name="group2767" type="group">
+      <obj_property name="label">DELAY_1024</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject fp_name="group2765" type="group">
+         <obj_property name="label">S_AXIS</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="isExpanded"></obj_property>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/delay_1/inst/s_axis_tdata" type="array">
+            <obj_property name="ElementShortName">s_axis_tdata[127:0]</obj_property>
+            <obj_property name="ObjectShortName">s_axis_tdata[127:0]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/delay_1/inst/s_axis_tvalid" type="logic">
+            <obj_property name="ElementShortName">s_axis_tvalid</obj_property>
+            <obj_property name="ObjectShortName">s_axis_tvalid</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/delay_1/inst/s_axis_tlast" type="logic">
+            <obj_property name="ElementShortName">s_axis_tlast</obj_property>
+            <obj_property name="ObjectShortName">s_axis_tlast</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/delay_1/inst/s_axis_tready" type="logic">
+            <obj_property name="ElementShortName">s_axis_tready</obj_property>
+            <obj_property name="ObjectShortName">s_axis_tready</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="group2766" type="group">
+         <obj_property name="label">M_AXIS</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="isExpanded"></obj_property>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/delay_1/inst/m_axis_tdata" type="array">
+            <obj_property name="ElementShortName">m_axis_tdata[127:0]</obj_property>
+            <obj_property name="ObjectShortName">m_axis_tdata[127:0]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/delay_1/inst/m_axis_tvalid" type="logic">
+            <obj_property name="ElementShortName">m_axis_tvalid</obj_property>
+            <obj_property name="ObjectShortName">m_axis_tvalid</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/delay_1/inst/m_axis_tlast" type="logic">
+            <obj_property name="ElementShortName">m_axis_tlast</obj_property>
+            <obj_property name="ObjectShortName">m_axis_tlast</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/delay_1/inst/counter" type="array">
+         <obj_property name="ElementShortName">counter[9:0]</obj_property>
+         <obj_property name="ObjectShortName">counter[9:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/delay_1/inst/active_counter" type="array">
+         <obj_property name="ElementShortName">active_counter[8:0]</obj_property>
+         <obj_property name="ObjectShortName">active_counter[8:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/delay_1/inst/quiet_counter" type="array">
+         <obj_property name="ElementShortName">quiet_counter[6:0]</obj_property>
+         <obj_property name="ObjectShortName">quiet_counter[6:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/delay_1/inst/delay_valid" type="logic">
+         <obj_property name="ElementShortName">delay_valid</obj_property>
+         <obj_property name="ObjectShortName">delay_valid</obj_property>
+      </wvobject>
    </wvobject>
-   <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/Mixer/dds_top_0/m_axis_tvalid" type="logic">
-      <obj_property name="ElementShortName">m_axis_tvalid</obj_property>
-      <obj_property name="ObjectShortName">m_axis_tvalid</obj_property>
-   </wvobject>
-   <wvobject fp_name="/equalizer_top_tb/dds_actual_i_1" type="array">
-      <obj_property name="ElementShortName">dds_actual_i_1[15:0]</obj_property>
-      <obj_property name="ObjectShortName">dds_actual_i_1[15:0]</obj_property>
-      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
-      <obj_property name="WaveformStyle">STYLE_ANALOG</obj_property>
-      <obj_property name="CellHeight">100</obj_property>
-   </wvobject>
-   <wvobject fp_name="/equalizer_top_tb/dds_actual_q_1" type="array">
-      <obj_property name="ElementShortName">dds_actual_q_1[15:0]</obj_property>
-      <obj_property name="ObjectShortName">dds_actual_q_1[15:0]</obj_property>
-      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
-      <obj_property name="WaveformStyle">STYLE_ANALOG</obj_property>
-      <obj_property name="CellHeight">100</obj_property>
-   </wvobject>
-   <wvobject fp_name="/equalizer_top_tb/mixer_actual_i_1" type="array">
-      <obj_property name="ElementShortName">mixer_actual_i_1[15:0]</obj_property>
-      <obj_property name="ObjectShortName">mixer_actual_i_1[15:0]</obj_property>
-      <obj_property name="Radix">HEXRADIX</obj_property>
-      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-   </wvobject>
-   <wvobject fp_name="/equalizer_top_tb/mixer_actual_q_1" type="array">
-      <obj_property name="ElementShortName">mixer_actual_q_1[15:0]</obj_property>
-      <obj_property name="ObjectShortName">mixer_actual_q_1[15:0]</obj_property>
-      <obj_property name="Radix">HEXRADIX</obj_property>
-      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-   </wvobject>
-   <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/cp_rm_0/s_axis_tvalid" type="logic">
-      <obj_property name="ElementShortName">s_axis_tvalid</obj_property>
-      <obj_property name="ObjectShortName">s_axis_tvalid</obj_property>
-   </wvobject>
-   <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/cp_rm_0/s_axis_tdata" type="array">
-      <obj_property name="ElementShortName">s_axis_tdata[127:0]</obj_property>
-      <obj_property name="ObjectShortName">s_axis_tdata[127:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/cp_rm_0/s_axis_tlast" type="logic">
-      <obj_property name="ElementShortName">s_axis_tlast</obj_property>
-      <obj_property name="ObjectShortName">s_axis_tlast</obj_property>
-   </wvobject>
-   <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/Mixer/dds_top_0/inst/dds_inst/s_axis_phase_tvalid" type="logic">
-      <obj_property name="ElementShortName">s_axis_phase_tvalid</obj_property>
-      <obj_property name="ObjectShortName">s_axis_phase_tvalid</obj_property>
-   </wvobject>
-   <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/Mixer/dds_top_0/inst/dds_inst/s_axis_phase_tdata" type="array">
-      <obj_property name="ElementShortName">s_axis_phase_tdata[31:0]</obj_property>
-      <obj_property name="ObjectShortName">s_axis_phase_tdata[31:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/Mixer/dds_top_0/inst/dds_inst/m_axis_data_tvalid" type="logic">
-      <obj_property name="ElementShortName">m_axis_data_tvalid</obj_property>
-      <obj_property name="ObjectShortName">m_axis_data_tvalid</obj_property>
-   </wvobject>
-   <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/Mixer/dds_top_0/inst/dds_inst/m_axis_data_tdata" type="array">
-      <obj_property name="ElementShortName">m_axis_data_tdata[31:0]</obj_property>
-      <obj_property name="ObjectShortName">m_axis_data_tdata[31:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/equalizer_top_tb/mix_in_i_1" type="array">
-      <obj_property name="ElementShortName">mix_in_i_1[15:0]</obj_property>
-      <obj_property name="ObjectShortName">mix_in_i_1[15:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/equalizer_top_tb/mix_in_q_1" type="array">
-      <obj_property name="ElementShortName">mix_in_q_1[15:0]</obj_property>
-      <obj_property name="ObjectShortName">mix_in_q_1[15:0]</obj_property>
+   <wvobject fp_name="group16718" type="group">
+      <obj_property name="label">DDS</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject fp_name="group16719" type="group">
+         <obj_property name="label">S_AXIS</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="isExpanded"></obj_property>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/Mixer/dds_top_0/inst/dds_inst/s_axis_phase_tvalid" type="logic">
+            <obj_property name="ElementShortName">s_axis_phase_tvalid</obj_property>
+            <obj_property name="ObjectShortName">s_axis_phase_tvalid</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/Mixer/dds_top_0/inst/dds_inst/s_axis_phase_tdata" type="array">
+            <obj_property name="ElementShortName">s_axis_phase_tdata[31:0]</obj_property>
+            <obj_property name="ObjectShortName">s_axis_phase_tdata[31:0]</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="group16720" type="group">
+         <obj_property name="label">M_AXIS</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="isExpanded"></obj_property>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/Mixer/dds_top_0/inst/dds_inst/m_axis_data_tvalid" type="logic">
+            <obj_property name="ElementShortName">m_axis_data_tvalid</obj_property>
+            <obj_property name="ObjectShortName">m_axis_data_tvalid</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/Mixer/dds_top_0/inst/dds_inst/m_axis_data_tdata" type="array">
+            <obj_property name="ElementShortName">m_axis_data_tdata[31:0]</obj_property>
+            <obj_property name="ObjectShortName">m_axis_data_tdata[31:0]</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="vbus16770" type="vbus">
+         <obj_property name="label">I</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+         <obj_property name="WaveformStyle">STYLE_ANALOG</obj_property>
+         <obj_property name="CellHeight">100</obj_property>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/Mixer/dds_top_0/inst/dds_inst/m_axis_data_tdata[15]" type="logic">
+            <obj_property name="ElementShortName">[15]</obj_property>
+            <obj_property name="ObjectShortName">[15]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/Mixer/dds_top_0/inst/dds_inst/m_axis_data_tdata[14]" type="logic">
+            <obj_property name="ElementShortName">[14]</obj_property>
+            <obj_property name="ObjectShortName">[14]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/Mixer/dds_top_0/inst/dds_inst/m_axis_data_tdata[13]" type="logic">
+            <obj_property name="ElementShortName">[13]</obj_property>
+            <obj_property name="ObjectShortName">[13]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/Mixer/dds_top_0/inst/dds_inst/m_axis_data_tdata[12]" type="logic">
+            <obj_property name="ElementShortName">[12]</obj_property>
+            <obj_property name="ObjectShortName">[12]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/Mixer/dds_top_0/inst/dds_inst/m_axis_data_tdata[11]" type="logic">
+            <obj_property name="ElementShortName">[11]</obj_property>
+            <obj_property name="ObjectShortName">[11]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/Mixer/dds_top_0/inst/dds_inst/m_axis_data_tdata[10]" type="logic">
+            <obj_property name="ElementShortName">[10]</obj_property>
+            <obj_property name="ObjectShortName">[10]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/Mixer/dds_top_0/inst/dds_inst/m_axis_data_tdata[9]" type="logic">
+            <obj_property name="ElementShortName">[9]</obj_property>
+            <obj_property name="ObjectShortName">[9]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/Mixer/dds_top_0/inst/dds_inst/m_axis_data_tdata[8]" type="logic">
+            <obj_property name="ElementShortName">[8]</obj_property>
+            <obj_property name="ObjectShortName">[8]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/Mixer/dds_top_0/inst/dds_inst/m_axis_data_tdata[7]" type="logic">
+            <obj_property name="ElementShortName">[7]</obj_property>
+            <obj_property name="ObjectShortName">[7]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/Mixer/dds_top_0/inst/dds_inst/m_axis_data_tdata[6]" type="logic">
+            <obj_property name="ElementShortName">[6]</obj_property>
+            <obj_property name="ObjectShortName">[6]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/Mixer/dds_top_0/inst/dds_inst/m_axis_data_tdata[5]" type="logic">
+            <obj_property name="ElementShortName">[5]</obj_property>
+            <obj_property name="ObjectShortName">[5]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/Mixer/dds_top_0/inst/dds_inst/m_axis_data_tdata[4]" type="logic">
+            <obj_property name="ElementShortName">[4]</obj_property>
+            <obj_property name="ObjectShortName">[4]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/Mixer/dds_top_0/inst/dds_inst/m_axis_data_tdata[3]" type="logic">
+            <obj_property name="ElementShortName">[3]</obj_property>
+            <obj_property name="ObjectShortName">[3]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/Mixer/dds_top_0/inst/dds_inst/m_axis_data_tdata[2]" type="logic">
+            <obj_property name="ElementShortName">[2]</obj_property>
+            <obj_property name="ObjectShortName">[2]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/Mixer/dds_top_0/inst/dds_inst/m_axis_data_tdata[1]" type="logic">
+            <obj_property name="ElementShortName">[1]</obj_property>
+            <obj_property name="ObjectShortName">[1]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/Mixer/dds_top_0/inst/dds_inst/m_axis_data_tdata[0]" type="logic">
+            <obj_property name="ElementShortName">[0]</obj_property>
+            <obj_property name="ObjectShortName">[0]</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="vbus16753" type="vbus">
+         <obj_property name="label">Q</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+         <obj_property name="WaveformStyle">STYLE_ANALOG</obj_property>
+         <obj_property name="CellHeight">100</obj_property>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/Mixer/dds_top_0/inst/dds_inst/m_axis_data_tdata[31]" type="logic">
+            <obj_property name="ElementShortName">[31]</obj_property>
+            <obj_property name="ObjectShortName">[31]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/Mixer/dds_top_0/inst/dds_inst/m_axis_data_tdata[30]" type="logic">
+            <obj_property name="ElementShortName">[30]</obj_property>
+            <obj_property name="ObjectShortName">[30]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/Mixer/dds_top_0/inst/dds_inst/m_axis_data_tdata[29]" type="logic">
+            <obj_property name="ElementShortName">[29]</obj_property>
+            <obj_property name="ObjectShortName">[29]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/Mixer/dds_top_0/inst/dds_inst/m_axis_data_tdata[28]" type="logic">
+            <obj_property name="ElementShortName">[28]</obj_property>
+            <obj_property name="ObjectShortName">[28]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/Mixer/dds_top_0/inst/dds_inst/m_axis_data_tdata[27]" type="logic">
+            <obj_property name="ElementShortName">[27]</obj_property>
+            <obj_property name="ObjectShortName">[27]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/Mixer/dds_top_0/inst/dds_inst/m_axis_data_tdata[26]" type="logic">
+            <obj_property name="ElementShortName">[26]</obj_property>
+            <obj_property name="ObjectShortName">[26]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/Mixer/dds_top_0/inst/dds_inst/m_axis_data_tdata[25]" type="logic">
+            <obj_property name="ElementShortName">[25]</obj_property>
+            <obj_property name="ObjectShortName">[25]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/Mixer/dds_top_0/inst/dds_inst/m_axis_data_tdata[24]" type="logic">
+            <obj_property name="ElementShortName">[24]</obj_property>
+            <obj_property name="ObjectShortName">[24]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/Mixer/dds_top_0/inst/dds_inst/m_axis_data_tdata[23]" type="logic">
+            <obj_property name="ElementShortName">[23]</obj_property>
+            <obj_property name="ObjectShortName">[23]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/Mixer/dds_top_0/inst/dds_inst/m_axis_data_tdata[22]" type="logic">
+            <obj_property name="ElementShortName">[22]</obj_property>
+            <obj_property name="ObjectShortName">[22]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/Mixer/dds_top_0/inst/dds_inst/m_axis_data_tdata[21]" type="logic">
+            <obj_property name="ElementShortName">[21]</obj_property>
+            <obj_property name="ObjectShortName">[21]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/Mixer/dds_top_0/inst/dds_inst/m_axis_data_tdata[20]" type="logic">
+            <obj_property name="ElementShortName">[20]</obj_property>
+            <obj_property name="ObjectShortName">[20]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/Mixer/dds_top_0/inst/dds_inst/m_axis_data_tdata[19]" type="logic">
+            <obj_property name="ElementShortName">[19]</obj_property>
+            <obj_property name="ObjectShortName">[19]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/Mixer/dds_top_0/inst/dds_inst/m_axis_data_tdata[18]" type="logic">
+            <obj_property name="ElementShortName">[18]</obj_property>
+            <obj_property name="ObjectShortName">[18]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/Mixer/dds_top_0/inst/dds_inst/m_axis_data_tdata[17]" type="logic">
+            <obj_property name="ElementShortName">[17]</obj_property>
+            <obj_property name="ObjectShortName">[17]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/Mixer/dds_top_0/inst/dds_inst/m_axis_data_tdata[16]" type="logic">
+            <obj_property name="ElementShortName">[16]</obj_property>
+            <obj_property name="ObjectShortName">[16]</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="/equalizer_top_tb/dds_actual_i_1" type="array">
+         <obj_property name="ElementShortName">dds_actual_i_1[15:0]</obj_property>
+         <obj_property name="ObjectShortName">dds_actual_i_1[15:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+         <obj_property name="WaveformStyle">STYLE_ANALOG</obj_property>
+         <obj_property name="CellHeight">100</obj_property>
+      </wvobject>
+      <wvobject fp_name="/equalizer_top_tb/dds_actual_q_1" type="array">
+         <obj_property name="ElementShortName">dds_actual_q_1[15:0]</obj_property>
+         <obj_property name="ObjectShortName">dds_actual_q_1[15:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+         <obj_property name="WaveformStyle">STYLE_ANALOG</obj_property>
+         <obj_property name="CellHeight">100</obj_property>
+      </wvobject>
    </wvobject>
 </wave_config>

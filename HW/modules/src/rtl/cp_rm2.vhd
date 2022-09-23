@@ -26,7 +26,7 @@ entity cp_rm2 is
     m_axis_tuser                  : out std_logic_vector(7 downto 0);
     m_axis_tlast                  : out std_logic;
 
-    i_tlast_symbol                : in  std_logic
+    i_symbol                      : in  std_logic
   );
 end entity cp_rm2;
 
@@ -74,7 +74,9 @@ begin
         cp_counter                <= (others => '0');
       else
         if frame_current = '1' then
-          cp_counter              <= cp_counter + '1';
+          if cp_counter < "0011000000" then
+            cp_counter            <= cp_counter + '1';
+          end if;
         end if;
       end if;
     end if;

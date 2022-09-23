@@ -66,7 +66,8 @@ begin
     port map(
       aclk                        => axis_aclk,
       s_axis_phase_tvalid         => r_axis_tvalid,
-      s_axis_phase_tdata          => X"00400000",
+      --s_axis_phase_tdata          => X"003FA3B0",
+      s_axis_phase_tdata          => s_axis_tdata,
 
       m_axis_data_tvalid          => m_axis_tvalid,
       m_axis_data_tdata           => dout_tdata

@@ -81,9 +81,6 @@
 						"ACLK": { "actual": "s_axis_aclk_0"},
 						"ARESETN": { "actual": "s_axis_aresetn_0"},
 						"TDATA": { "actual": "s_axis_tdata"},
-						"TID": { "actual": "s_axis_tid"},
-						"TLAST": { "actual": "s_axis_tlast"},
-						"TUSER": { "actual": "s_axis_tuser"},
 						"TVALID": { "actual": "s_axis_tvalid"}
 					}
 				},
@@ -402,6 +399,24 @@
 						"TLAST": { "actual": "s_axis_tlast"},
 						"TREADY": { "actual": "s_axis_tready"},
 						"TUSER": { "actual": "s_axis_tuser"},
+						"TVALID": { "actual": "s_axis_tvalid"}
+					}
+				},
+				"/scale_0/m_axis": {
+					"interface": "xilinx.com:interface:axis:1.0",
+					"ports": {
+						"ACLK": { "actual": "axis_aclk"},
+						"ARESETN": { "actual": "axis_aresetn"},
+						"TDATA": { "actual": "m_axis_tdata"},
+						"TVALID": { "actual": "m_axis_tvalid"}
+					}
+				},
+				"/scale_0/s_axis": {
+					"interface": "xilinx.com:interface:axis:1.0",
+					"ports": {
+						"ACLK": { "actual": "axis_aclk"},
+						"ARESETN": { "actual": "axis_aresetn"},
+						"TDATA": { "actual": "s_axis_tdata"},
 						"TVALID": { "actual": "s_axis_tvalid"}
 					}
 				},

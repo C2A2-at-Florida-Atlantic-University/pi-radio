@@ -173,7 +173,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>b23978c6</spirit:value>
+            <spirit:value>08d88b12</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -186,7 +186,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>b23978c6</spirit:value>
+            <spirit:value>08d88b12</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -406,7 +406,7 @@
         </spirit:wire>
       </spirit:port>
       <spirit:port>
-        <spirit:name>i_tlast_symbol</spirit:name>
+        <spirit:name>i_symbol</spirit:name>
         <spirit:wire>
           <spirit:direction>in</spirit:direction>
           <spirit:wireTypeDefs>
@@ -423,7 +423,17 @@
       <spirit:modelParameter xsi:type="spirit:nameValueTypeType" spirit:dataType="integer">
         <spirit:name>g_DELAY_CYCLES</spirit:name>
         <spirit:displayName>G Delay Cycles</spirit:displayName>
-        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.g_DELAY_CYCLES" spirit:minimum="0">255</spirit:value>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.g_DELAY_CYCLES" spirit:minimum="0">191</spirit:value>
+      </spirit:modelParameter>
+      <spirit:modelParameter spirit:dataType="integer">
+        <spirit:name>g_ACTIVE_CYCLES</spirit:name>
+        <spirit:displayName>G Active Cycles</spirit:displayName>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.g_ACTIVE_CYCLES" spirit:minimum="0">256</spirit:value>
+      </spirit:modelParameter>
+      <spirit:modelParameter spirit:dataType="integer">
+        <spirit:name>g_QUIET_CYCLES</spirit:name>
+        <spirit:displayName>G Quiet Cycles</spirit:displayName>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.g_QUIET_CYCLES" spirit:minimum="0">64</spirit:value>
       </spirit:modelParameter>
     </spirit:modelParameters>
   </spirit:model>
@@ -440,7 +450,7 @@
       <spirit:file>
         <spirit:name>xgui/delay_v1_0.tcl</spirit:name>
         <spirit:fileType>tclSource</spirit:fileType>
-        <spirit:userFileType>CHECKSUM_68425bf2</spirit:userFileType>
+        <spirit:userFileType>CHECKSUM_27cc9859</spirit:userFileType>
         <spirit:userFileType>XGUI_VERSION_2</spirit:userFileType>
       </spirit:file>
     </spirit:fileSet>
@@ -450,7 +460,17 @@
     <spirit:parameter>
       <spirit:name>g_DELAY_CYCLES</spirit:name>
       <spirit:displayName>G Delay Cycles</spirit:displayName>
-      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.g_DELAY_CYCLES" spirit:minimum="0" spirit:rangeType="long">255</spirit:value>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.g_DELAY_CYCLES" spirit:minimum="0" spirit:rangeType="long">191</spirit:value>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>g_ACTIVE_CYCLES</spirit:name>
+      <spirit:displayName>G Active Cycles</spirit:displayName>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.g_ACTIVE_CYCLES" spirit:minimum="0" spirit:rangeType="long">256</spirit:value>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>g_QUIET_CYCLES</spirit:name>
+      <spirit:displayName>G Quiet Cycles</spirit:displayName>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.g_QUIET_CYCLES" spirit:minimum="0" spirit:rangeType="long">64</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>Component_Name</spirit:name>
@@ -472,7 +492,7 @@
         <xilinx:designToolContext>IPI</xilinx:designToolContext>
       </xilinx:designToolContexts>
       <xilinx:coreRevision>1</xilinx:coreRevision>
-      <xilinx:coreCreationDateTime>2022-08-31T05:28:13Z</xilinx:coreCreationDateTime>
+      <xilinx:coreCreationDateTime>2022-09-22T05:01:27Z</xilinx:coreCreationDateTime>
     </xilinx:coreExtensions>
     <xilinx:packagingInfo>
       <xilinx:xilinxVersion>2022.1</xilinx:xilinxVersion>

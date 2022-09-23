@@ -24,10 +24,17 @@
   "../../../bd/design_1/ip/design_1_angle_0_0/sim/design_1_angle_0_0.v" \
   "../../../bd/design_1/ip/design_1_axis_data_fifo_1_0/sim/design_1_axis_data_fifo_1_0.v" \
   "../../../bd/design_1/ip/design_1_delay_1_0/sim/design_1_delay_1_0.v" \
-  "../../../bd/design_1/ip/design_1_mixer_0_0/sim/design_1_mixer_0_0.v" \
   "../../../bd/design_1/ip/design_1_dds_top_0_0/sim/design_1_dds_top_0_0.v" \
-  "../../../bd/design_1/sim/design_1.v" \
+  "../../../bd/design_1/ip/design_1_mixer_0_0/sim/design_1_mixer_0_0.v" \
   "../../../bd/design_1/ip/design_1_conj_1_0/sim/design_1_conj_1_0.v" \
+  "../../../bd/design_1/ip/design_1_scale_0_0/sim/design_1_scale_0_0.v" \
+-endlib
+-makelib xcelium_lib/xlconstant_v1_1_7 \
+  "../../../../Equalizer_design.gen/sources_1/bd/design_1/ipshared/fcfc/hdl/xlconstant_v1_1_vl_rfs.v" \
+-endlib
+-makelib xcelium_lib/xil_defaultlib \
+  "../../../bd/design_1/ip/design_1_xlconstant_0_0/sim/design_1_xlconstant_0_0.v" \
+  "../../../bd/design_1/sim/design_1.v" \
 -endlib
 -makelib xcelium_lib/xil_defaultlib \
   glbl.v

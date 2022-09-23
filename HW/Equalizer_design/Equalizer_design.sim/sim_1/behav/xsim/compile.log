@@ -20,14 +20,54 @@ INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Projects/pi-radio/HW/Equalizer_d
 INFO: [VRFC 10-311] analyzing module design_1_axis_data_fifo_1_0
 INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Projects/pi-radio/HW/Equalizer_design/Equalizer_design.ip_user_files/bd/design_1/ip/design_1_delay_1_0/sim/design_1_delay_1_0.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module design_1_delay_1_0
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Projects/pi-radio/HW/Equalizer_design/Equalizer_design.ip_user_files/bd/design_1/ip/design_1_mixer_0_0/sim/design_1_mixer_0_0.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module design_1_mixer_0_0
 INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Projects/pi-radio/HW/Equalizer_design/Equalizer_design.ip_user_files/bd/design_1/ip/design_1_dds_top_0_0/sim/design_1_dds_top_0_0.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module design_1_dds_top_0_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Projects/pi-radio/HW/Equalizer_design/Equalizer_design.ip_user_files/bd/design_1/ip/design_1_mixer_0_0/sim/design_1_mixer_0_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module design_1_mixer_0_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Projects/pi-radio/HW/Equalizer_design/Equalizer_design.ip_user_files/bd/design_1/ip/design_1_conj_1_0/sim/design_1_conj_1_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module design_1_conj_1_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Projects/pi-radio/HW/Equalizer_design/Equalizer_design.ip_user_files/bd/design_1/ip/design_1_scale_0_0/sim/design_1_scale_0_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module design_1_scale_0_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Projects/pi-radio/HW/Equalizer_design/Equalizer_design.ip_user_files/bd/design_1/ip/design_1_xlconstant_0_0/sim/design_1_xlconstant_0_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module design_1_xlconstant_0_0
 INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Projects/pi-radio/HW/Equalizer_design/Equalizer_design.ip_user_files/bd/design_1/sim/design_1.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module Mixer_imp_1E3SM51
 INFO: [VRFC 10-311] analyzing module design_1
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Projects/pi-radio/HW/Equalizer_design/Equalizer_design.ip_user_files/bd/design_1/ip/design_1_conj_1_0/sim/design_1_conj_1_0.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module design_1_conj_1_0
 INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Projects/pi-radio/HW/Equalizer_design/Equalizer_design.gen/sources_1/bd/design_1/hdl/design_1_wrapper.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module design_1_wrapper
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Projects/pi-radio/HW/modules/sim/equalizer_top_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module equalizer_top_tb
+WARNING: [VRFC 10-3824] variable 'cordic_print' must explicitly be declared as automatic or static [C:/Projects/pi-radio/HW/modules/sim/equalizer_top_tb.sv:110]
+WARNING: [VRFC 10-3824] variable 'negative' must explicitly be declared as automatic or static [C:/Projects/pi-radio/HW/modules/sim/equalizer_top_tb.sv:111]
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Projects/pi-radio/HW/Equalizer_design/Equalizer_design.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Projects/pi-radio/HW/modules/src/rtl/axis_splitter.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'axis_splitter'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Projects/pi-radio/HW/modules/src/rtl/cp_rm2.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'cp_rm2'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Projects/pi-radio/HW/modules/src/rtl/delay.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'delay'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Projects/pi-radio/HW/modules/src/rtl/cp_rm.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'cp_rm'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Projects/pi-radio/HW/modules/src/rtl/conj.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'conj'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Projects/pi-radio/HW/Equalizer_design/Equalizer_design.gen/sources_1/ip/cmpy_0/sim/cmpy_0.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'cmpy_0'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Projects/pi-radio/HW/modules/src/rtl/complex_mult/rtl/complex_mult.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'complex_mult'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Projects/pi-radio/HW/modules/src/rtl/sum.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'sum'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Projects/pi-radio/HW/Equalizer_design/Equalizer_design.gen/sources_1/ip/cordic_0/sim/cordic_0.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'cordic_0'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Projects/pi-radio/HW/modules/src/rtl/angle.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'angle'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Projects/pi-radio/HW/Equalizer_design/Equalizer_design.gen/sources_1/ip/dds_compiler_0/sim/dds_compiler_0.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'dds_compiler_0'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Projects/pi-radio/HW/modules/src/rtl/dds_top.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'dds_top'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Projects/pi-radio/HW/modules/src/rtl/mixer.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'mixer'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Projects/pi-radio/HW/Equalizer_design/Equalizer_design.gen/sources_1/ip/dsp_macro_0/sim/dsp_macro_0.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'dsp_macro_0'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Projects/pi-radio/HW/modules/src/rtl/scale.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'scale'

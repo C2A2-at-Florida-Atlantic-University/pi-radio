@@ -149,7 +149,7 @@ BEGIN
       C_INPUT_WIDTH => 32,
       C_ITERATIONS => 0,
       C_OUTPUT_WIDTH => 32,
-      C_PHASE_FORMAT => 0,
+      C_PHASE_FORMAT => 1,
       C_PIPELINE_MODE => -2,
       C_PRECISION => 0,
       C_ROUND_MODE => 0,

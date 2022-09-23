@@ -20,7 +20,7 @@ entity sum is
     s_axis_tid                    : in  std_logic_vector(7 downto 0);
     s_axis_tlast                  : in  std_logic;
 
-    m_axis_tdata                  : out std_logic_vector(79 downto 0);
+    m_axis_tdata                  : out std_logic_vector(63 downto 0);
     m_axis_tvalid                 : out std_logic;
     m_axis_tuser                  : out std_logic_vector(7 downto 0);
     m_axis_tid                    : out std_logic_vector(7 downto 0);
@@ -38,7 +38,7 @@ architecture RTL of sum is
     signal is "ASSOCIATED_BUSIF axis_aclk:s_axis:m_axis, FREQ_HZ 250000000";
 
   signal r_tlast                    : std_logic;
-  signal accum_data                 : std_logic_vector(79 downto 0);
+  signal accum_data                 : std_logic_vector(63 downto 0);
   signal r_flip                     : std_logic;
 
 begin
@@ -55,18 +55,18 @@ begin
   end process P_TLAST;
 
   -- Process to accumulate output
-  P_ACCUM : process(axis_aclk)
+  P_ACCUM : process(axis_aclk,axis_aresetn)
   begin
     if axis_aresetn = '0' then
       accum_data                    <= (others => '0');
     elsif rising_edge(axis_aclk) then
       if (s_axis_tvalid = '1' or r_tlast = '1') then
-        accum_data(39 downto 0)     <= accum_data(39 downto 0) + 
-                                       (X"0" & s_axis_tdata(31  downto 0  )) + (X"0" & s_axis_tdata(95  downto 64 )) +
-                                       (X"0" & s_axis_tdata(159 downto 128)) + (X"0" & s_axis_tdata(223 downto 192));
-        accum_data(79 downto 40)    <= accum_data(79 downto 40) + 
-                                       (X"0" & s_axis_tdata(63  downto 32 )) + (X"0" & s_axis_tdata(127 downto 96 )) +
-                                       (X"0" & s_axis_tdata(191 downto 160)) + (X"0" & s_axis_tdata(255 downto 224));
+        accum_data(31 downto 0)     <= accum_data(31 downto 0) + 
+                                       (s_axis_tdata(31  downto 0  )) + (s_axis_tdata(95  downto 64 )) +
+                                       (s_axis_tdata(159 downto 128)) + (s_axis_tdata(223 downto 192));
+        accum_data(63 downto 32)    <= accum_data(63 downto 32) + 
+                                       (s_axis_tdata(63  downto 32 )) + (s_axis_tdata(127 downto 96 )) +
+                                       (s_axis_tdata(191 downto 160)) + (s_axis_tdata(255 downto 224));
         m_axis_tdata                <= (others => '0');
         m_axis_tvalid               <= '0';
         r_flip                      <= '1';
