@@ -19,130 +19,136 @@ Info: [XPM_MEMORY 20-1] MEMORY_PRIMITIVE (0) instructs Vivado Synthesis to choos
 Time: 1 ps  Iteration: 0  Process: /equalizer_top_tb/DUT/design_1_i/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/Initial299_73  Scope: equalizer_top_tb.DUT.design_1_i.axis_data_fifo_1.inst.\gen_fifo.xpm_fifo_axis_inst .xpm_fifo_base_inst.\gen_sdpram.xpm_memory_base_inst .config_drc  File: C:/Xilinx_2022.1/Vivado/2022.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv Line: 493
 Printing Samples
  -1165 + i   265
-  1045 + i   -71
-  -524 + i   445
-  -226 + i   609
+  1045 + i   -69
+  -526 + i   443
+  -229 + i   608
 ------------------------OFDM SYMBOL 0------------------------
-Expected angle value: 1.059330
-Actual angle value (signed): 0aca4d79
-Actual angle value: 00001010110010100100110101111001
-Actual angle value (converted): 0.337195
+Expected angle value: 2.996410
+Actual angle value (signed): 1e856bfe
+Actual angle value: 00011110100001010110101111111110
+Actual angle value (converted): 0.953787
  
 Expected cfo: 0.000000
-scs * angle = bb845218
+scs * angle = 10dff650
 Actual phase increment = 0
 ------------------------------------------------------------
  
  
 ------------------------OFDM SYMBOL 1------------------------
-Expected angle value: 1.059330
-Actual angle value (signed): 0aa46a0a
-Actual angle value: 00001010101001000110101000001010
-Actual angle value (converted): 0.669765
+Expected angle value: 2.996410
+Actual angle value (signed): 1e7e315d
+Actual angle value: 00011110011111100011000101011101
+Actual angle value (converted): 1.906691
  
 Expected cfo: 0.000000
-scs * angle = 08b14070
+scs * angle = 99306a78
 Actual phase increment = 0
 ------------------------------------------------------------
  
  
 ------------------------OFDM SYMBOL 2------------------------
-Expected angle value: 1.059330
-Actual angle value (signed): 0a8c4866
-Actual angle value: 00001010100011000100100001100110
-Actual angle value (converted): 0.999390
+Expected angle value: 2.996410
+Actual angle value (signed): 1e746a71
+Actual angle value: 00011110011101000110101001110001
+Actual angle value (converted): 2.858402
  
 Expected cfo: 0.000000
-scs * angle = 68fe0e10
+scs * angle = a0442358
 Actual phase increment = 0
 ------------------------------------------------------------
  
  
 ------------------------OFDM SYMBOL 3------------------------
-Expected angle value: 1.059330
-Actual angle value (signed): 0a9f739f
-Actual angle value: 00001010100111110111001110011111
-Actual angle value (converted): 1.331354
+Expected angle value: 2.996410
+Actual angle value (signed): 1e6b68a0
+Actual angle value: 00011110011010110110100010100000
+Actual angle value (converted): 3.809014
  
 Expected cfo: 0.000000
-scs * angle = 33f07a28
+scs * angle = 15bcc700
 Actual phase increment = 0
 ------------------------------------------------------------
  
  
 ------------------------OFDM SYMBOL 4------------------------
-Expected angle value: 1.059330
-Actual angle value (signed): 0aabcdd3
-Actual angle value: 00001010101010111100110111010011
-Actual angle value (converted): 1.664826
+Expected angle value: 2.996410
+Actual angle value (signed): 1e840957
+Actual angle value: 00011110100001000000100101010111
+Actual angle value (converted): 4.762631
  
 Expected cfo: 0.000000
-scs * angle = 2bf6a608
+scs * angle = 5c952d68
 Actual phase increment = 0
 ------------------------------------------------------------
  
  
 ------------------------OFDM SYMBOL 5------------------------
-Expected angle value: 1.059330
-Actual angle value (signed): 0aa89677
-Actual angle value: 00001010101010001001011001110111
-Actual angle value (converted): 1.997906
+Expected angle value: 2.996410
+Actual angle value (signed): 1e7fdc97
+Actual angle value: 00011110011111111101110010010111
+Actual angle value (converted): 5.715739
  
 Expected cfo: 0.000000
-scs * angle = fc22c068
+scs * angle = b6706b68
 Actual phase increment = 0
 ------------------------------------------------------------
  
  
 ------------------------OFDM SYMBOL 6------------------------
-Expected angle value: 1.059330
-Actual angle value (signed): 0a99fe76
-Actual angle value: 00001010100110011111111001110110
-Actual angle value (converted): 2.329204
+Expected angle value: 2.996410
+Actual angle value (signed): 1e8480c1
+Actual angle value: 00011110100001001000000011000001
+Actual angle value (converted): 6.669414
  
 Expected cfo: 0.000000
-scs * angle = 68e0eb90
+scs * angle = 260d36d8
 Actual phase increment = 0
 ------------------------------------------------------------
  
  
 ------------------------OFDM SYMBOL 7------------------------
-Expected angle value: 1.059330
-Actual angle value (signed): 0aa2a510
-Actual angle value: 00001010101000101010010100010000
-Actual angle value (converted): 2.661558
+Expected angle value: 2.996410
+Actual angle value (signed): 1e5ba3d9
+Actual angle value: 00011110010110111010001111011001
+Actual angle value (converted): 7.618101
  
 Expected cfo: 0.000000
-scs * angle = e6b88580
+scs * angle = a074b318
 Actual phase increment = 0
 ------------------------------------------------------------
  
  
 ------------------------OFDM SYMBOL 8------------------------
-Expected angle value: 1.059330
-Actual angle value (signed): 0a9bc1a1
-Actual angle value: 00001010100110111100000110100001
-Actual angle value (converted): 2.993071
+Expected angle value: 2.996410
+Actual angle value (signed): 1e7fc6f0
+Actual angle value: 00011110011111111100011011110000
+Actual angle value (converted): 8.571198
  
 Expected cfo: 0.000000
-scs * angle = 3a0d73d8
+scs * angle = e0c29a80
 Actual phase increment = 0
 ------------------------------------------------------------
  
  
 ------------------------OFDM SYMBOL 9------------------------
-Expected angle value: 1.059330
-Actual angle value (signed): 0aa4758c
-Actual angle value: 00001010101001000111010110001100
-Actual angle value (converted): 3.325647
+Expected angle value: 2.996410
+Actual angle value (signed): 1e7f10c3
+Actual angle value: 00011110011111110001000011000011
+Actual angle value (converted): 9.524209
  
 Expected cfo: 0.000000
-scs * angle = 51041e20
+scs * angle = 8ad9e088
 Actual phase increment = 0
 ------------------------------------------------------------
  
  
-$stop called at time : 14860 ns : File "C:/Projects/pi-radio/HW/modules/sim/equalizer_top_tb.sv" Line 680
+File was opened successfully: -20000 
+Printing Samples
+ -1165 + i   265
+  1045 + i   -69
+  -526 + i   443
+  -229 + i   608
+$stop called at time : 29720 ns : File "C:/Projects/pi-radio/HW/modules/sim/equalizer_top_tb.sv" Line 777
 File was opened successfully: -20000 
 File was opened successfully: -19999 
 File was opened successfully: -19998 
@@ -163,140 +169,141 @@ Info: [XPM_MEMORY 20-1] MEMORY_PRIMITIVE (0) instructs Vivado Synthesis to choos
 Time: 1 ps  Iteration: 0  Process: /equalizer_top_tb/DUT/design_1_i/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/Initial299_73  Scope: equalizer_top_tb.DUT.design_1_i.axis_data_fifo_1.inst.\gen_fifo.xpm_fifo_axis_inst .xpm_fifo_base_inst.\gen_sdpram.xpm_memory_base_inst .config_drc  File: C:/Xilinx_2022.1/Vivado/2022.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv Line: 493
 Printing Samples
  -1165 + i   265
-  1044 + i   -73
-  -522 + i   447
-  -222 + i   610
+  1044 + i   -75
+  -521 + i   449
+  -218 + i   611
 ------------------------OFDM SYMBOL 0------------------------
-Expected angle value: -1.041896
-Actual angle value (signed): f563281d
-Actual angle value (unsigned): 0a9cd7e3
-Actual angle value: 11110101011000110010100000011101
-Actual angle value (converted): -0.331646
+Expected angle value: -2.986785
+Actual angle value (signed): e193ace2
+Actual angle value (unsigned): 1e6c531e
+Actual angle value: 11100001100100111010110011100010
+Actual angle value (converted): -0.950723
  
 Expected cfo: -0.000000
-scs * angle = ebc79c78
+scs * angle = 4d8e86b0
 Actual phase increment = 0
 ------------------------------------------------------------
  
  
 ------------------------OFDM SYMBOL 1------------------------
-Expected angle value: -1.041896
-Actual angle value (signed): f54075e2
-Actual angle value (unsigned): 0abf8a1e
-Actual angle value: 11110101010000000111010111100010
-Actual angle value (converted): -0.667527
+Expected angle value: -2.986785
+Actual angle value (signed): e85c26e5
+Actual angle value (unsigned): 17a3d91b
+Actual angle value: 11101000010111000010011011100101
+Actual angle value (converted): -1.689474
  
 Expected cfo: -0.000000
-scs * angle = 248c1eb0
+scs * angle = 04723538
 Actual phase increment = 0
 ------------------------------------------------------------
  
  
 ------------------------OFDM SYMBOL 2------------------------
-Expected angle value: -1.041896
-Actual angle value (signed): f54f26b6
-Actual angle value (unsigned): 0ab0d94a
-Actual angle value: 11110101010011110010011010110110
-Actual angle value (converted): -1.001615
+Expected angle value: -2.986785
+Actual angle value (signed): ef13d76e
+Actual angle value (unsigned): 10ec2892
+Actual angle value: 11101111000100111101011101101110
+Actual angle value (converted): -2.218302
  
 Expected cfo: -0.000000
-scs * angle = 993fe190
+scs * angle = 11975cd0
 Actual phase increment = 0
 ------------------------------------------------------------
  
  
 ------------------------OFDM SYMBOL 3------------------------
-Expected angle value: -1.041896
-Actual angle value (signed): f550b616
-Actual angle value (unsigned): 0aaf49ea
-Actual angle value: 11110101010100001011011000010110
-Actual angle value (converted): -1.335513
+Expected angle value: -2.986785
+Actual angle value (signed): f5d10171
+Actual angle value (unsigned): 0a2efe8f
+Actual angle value: 11110101110100010000000101110001
+Actual angle value (converted): -2.536539
  
 Expected cfo: -0.000000
-scs * angle = a6d45a90
+scs * angle = e4af8b58
 Actual phase increment = 0
 ------------------------------------------------------------
  
  
 ------------------------OFDM SYMBOL 4------------------------
-Expected angle value: -1.041896
-Actual angle value (signed): f545cf77
-Actual angle value (unsigned): 0aba3089
-Actual angle value: 11110101010001011100111101110111
-Actual angle value (converted): -1.670741
+Expected angle value: -2.986785
+Actual angle value (signed): fcb1bddc
+Actual angle value (unsigned): 034e4224
+Actual angle value: 11111100101100011011110111011100
+Actual angle value (converted): -2.639842
  
 Expected cfo: -0.000000
-scs * angle = 9ebed868
+scs * angle = b75761a0
 Actual phase increment = 0
 ------------------------------------------------------------
  
  
 ------------------------OFDM SYMBOL 5------------------------
-Expected angle value: -1.041896
-Actual angle value (signed): f5584273
-Actual angle value (unsigned): 0aa7bd8d
-Actual angle value: 11110101010110000100001001110011
-Actual angle value (converted): -2.003717
+Expected angle value: -2.986785
+Actual angle value (signed): 035fd7c1
+Actual angle value: 00000011010111111101011111000001
+Actual angle value (converted): -2.745291
  
 Expected cfo: -0.000000
-scs * angle = ff858d08
+scs * angle = d46a9ed8
 Actual phase increment = 0
 ------------------------------------------------------------
  
  
 ------------------------OFDM SYMBOL 6------------------------
-Expected angle value: -1.041896
-Actual angle value (signed): f54b4712
-Actual angle value (unsigned): 0ab4b8ee
-Actual angle value: 11110101010010110100011100010010
-Actual angle value (converted): -2.338278
+Expected angle value: -2.986785
+Actual angle value (signed): 0a19e109
+Actual angle value: 00001010000110011110000100001001
+Actual angle value (converted): -3.060950
  
 Expected cfo: -0.000000
-scs * angle = 22cc5f30
+scs * angle = 64881398
 Actual phase increment = 0
 ------------------------------------------------------------
  
  
 ------------------------OFDM SYMBOL 7------------------------
-Expected angle value: -1.041896
-Actual angle value (signed): f56f310a
-Actual angle value (unsigned): 0a90cef6
-Actual angle value: 11110101011011110011000100001010
-Actual angle value (converted): -2.668455
+Expected angle value: -2.986785
+Actual angle value (signed): 10e0bbce
+Actual angle value: 00010000111000001011101111001110
+Actual angle value (converted): -3.588384
  
 Expected cfo: -0.000000
-scs * angle = 95d52870
+scs * angle = d4df8dd0
 Actual phase increment = 0
 ------------------------------------------------------------
  
  
 ------------------------OFDM SYMBOL 8------------------------
-Expected angle value: -1.041896
-Actual angle value (signed): f55b50d0
-Actual angle value (unsigned): 0aa4af30
-Actual angle value: 11110101010110110101000011010000
-Actual angle value (converted): -3.001058
+Expected angle value: -2.986785
+Actual angle value (signed): 17b362c2
+Actual angle value: 00010111101100110110001011000010
+Actual angle value (converted): -4.329031
  
 Expected cfo: -0.000000
-scs * angle = 5d946f80
+scs * angle = 81557bb0
 Actual phase increment = 0
 ------------------------------------------------------------
  
  
 ------------------------OFDM SYMBOL 9------------------------
-Expected angle value: -1.041896
-Actual angle value (signed): f5664981
-Actual angle value (unsigned): 0a99b67f
-Actual angle value: 11110101011001100100100110000001
-Actual angle value (converted): -3.332322
+Expected angle value: -2.986785
+Actual angle value (signed): 1e7f10c3
+Actual angle value: 00011110011111110001000011000011
+Actual angle value (converted): -5.282042
  
 Expected cfo: -0.000000
-scs * angle = 915d98d8
+scs * angle = 8ad9e088
 Actual phase increment = 0
 ------------------------------------------------------------
  
  
-$stop called at time : 14860 ns : File "C:/Projects/pi-radio/HW/modules/sim/equalizer_top_tb.sv" Line 680
+File was opened successfully: -20000 
+Printing Samples
+ -1165 + i   265
+  1044 + i   -75
+  -521 + i   449
+  -218 + i   611
+$stop called at time : 29720 ns : File "C:/Projects/pi-radio/HW/modules/sim/equalizer_top_tb.sv" Line 777
 File was opened successfully: -20000 
 File was opened successfully: -19999 
 File was opened successfully: -19998 
@@ -317,868 +324,35 @@ Info: [XPM_MEMORY 20-1] MEMORY_PRIMITIVE (0) instructs Vivado Synthesis to choos
 Time: 1 ps  Iteration: 0  Process: /equalizer_top_tb/DUT/design_1_i/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/Initial299_73  Scope: equalizer_top_tb.DUT.design_1_i.axis_data_fifo_1.inst.\gen_fifo.xpm_fifo_axis_inst .xpm_fifo_base_inst.\gen_sdpram.xpm_memory_base_inst .config_drc  File: C:/Xilinx_2022.1/Vivado/2022.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv Line: 493
 Printing Samples
  -1165 + i   265
-  1045 + i   -71
-  -524 + i   445
-  -226 + i   609
+  1045 + i   -69
+  -526 + i   443
+  -229 + i   608
 ------------------------OFDM SYMBOL 0------------------------
-Expected angle value: 1.059330
-Actual angle value (signed): 0aca4d79
-Actual angle value: 00001010110010100100110101111001
-Actual angle value (converted): 0.337195
+Expected angle value: 2.996410
+Actual angle value (signed): 1e856bfe
+Actual angle value: 00011110100001010110101111111110
+Actual angle value (converted): 0.953787
  
 Expected cfo: 0.000000
-scs * angle = bb845218
+scs * angle = 10dff650
 Actual phase increment = 0
 ------------------------------------------------------------
  
  
 ------------------------OFDM SYMBOL 1------------------------
-Expected angle value: 1.059330
-Actual angle value (signed): 0aa46a0a
-Actual angle value: 00001010101001000110101000001010
-Actual angle value (converted): 0.669765
+Expected angle value: 2.996410
+Actual angle value (signed): 1e7e315d
+Actual angle value: 00011110011111100011000101011101
+Actual angle value (converted): 1.906691
  
 Expected cfo: 0.000000
-scs * angle = 08b14070
+scs * angle = 99306a78
 Actual phase increment = 0
 ------------------------------------------------------------
  
  
 ------------------------OFDM SYMBOL 2------------------------
-Expected angle value: 1.059330
-Actual angle value (signed): 0a8c4866
-Actual angle value: 00001010100011000100100001100110
-Actual angle value (converted): 0.999390
- 
-Expected cfo: 0.000000
-scs * angle = 68fe0e10
-Actual phase increment = 0
-------------------------------------------------------------
- 
- 
-------------------------OFDM SYMBOL 3------------------------
-Expected angle value: 1.059330
-Actual angle value (signed): 0a9f739f
-Actual angle value: 00001010100111110111001110011111
-Actual angle value (converted): 1.331354
- 
-Expected cfo: 0.000000
-scs * angle = 33f07a28
-Actual phase increment = 0
-------------------------------------------------------------
- 
- 
-------------------------OFDM SYMBOL 4------------------------
-Expected angle value: 1.059330
-Actual angle value (signed): 0aabcdd3
-Actual angle value: 00001010101010111100110111010011
-Actual angle value (converted): 1.664826
- 
-Expected cfo: 0.000000
-scs * angle = 2bf6a608
-Actual phase increment = 0
-------------------------------------------------------------
- 
- 
-------------------------OFDM SYMBOL 5------------------------
-Expected angle value: 1.059330
-Actual angle value (signed): 0aa89677
-Actual angle value: 00001010101010001001011001110111
-Actual angle value (converted): 1.997906
- 
-Expected cfo: 0.000000
-scs * angle = fc22c068
-Actual phase increment = 0
-------------------------------------------------------------
- 
- 
-------------------------OFDM SYMBOL 6------------------------
-Expected angle value: 1.059330
-Actual angle value (signed): 0a99fe76
-Actual angle value: 00001010100110011111111001110110
-Actual angle value (converted): 2.329204
- 
-Expected cfo: 0.000000
-scs * angle = 68e0eb90
-Actual phase increment = 0
-------------------------------------------------------------
- 
- 
-------------------------OFDM SYMBOL 7------------------------
-Expected angle value: 1.059330
-Actual angle value (signed): 0aa2a510
-Actual angle value: 00001010101000101010010100010000
-Actual angle value (converted): 2.661558
- 
-Expected cfo: 0.000000
-scs * angle = e6b88580
-Actual phase increment = 0
-------------------------------------------------------------
- 
- 
-------------------------OFDM SYMBOL 8------------------------
-Expected angle value: 1.059330
-Actual angle value (signed): 0a9bc1a1
-Actual angle value: 00001010100110111100000110100001
-Actual angle value (converted): 2.993071
- 
-Expected cfo: 0.000000
-scs * angle = 3a0d73d8
-Actual phase increment = 0
-------------------------------------------------------------
- 
- 
-------------------------OFDM SYMBOL 9------------------------
-Expected angle value: 1.059330
-Actual angle value (signed): 0aa4758c
-Actual angle value: 00001010101001000111010110001100
-Actual angle value (converted): 3.325647
- 
-Expected cfo: 0.000000
-scs * angle = 51041e20
-Actual phase increment = 0
-------------------------------------------------------------
- 
- 
-$stop called at time : 14860 ns : File "C:/Projects/pi-radio/HW/modules/sim/equalizer_top_tb.sv" Line 680
-File was opened successfully: -20000 
-File was opened successfully: -19999 
-File was opened successfully: -19998 
-File was opened successfully: -19997 
-File was opened successfully: -19996 
-File was opened successfully: -19995 
-File was opened successfully: -19994 
-File was opened successfully: -19993 
-File was opened successfully: -19992 
-File was opened successfully: -19991 
-File was opened successfully: -19990 
-File was opened successfully: -19989 
-File was opened successfully: -19988 
-Number of OFDM symbols:          10
-Info: [XPM_MEMORY 20-1] MEMORY_PRIMITIVE (0) instructs Vivado Synthesis to choose the memory primitive type. Depending on their values, other XPM_MEMORY parameters may preclude the choice of certain memory primitive types. Review XPM_MEMORY documentation and parameter values to understand any limitations, or set MEMORY_PRIMITIVE to a different value. equalizer_top_tb.DUT.design_1_i.axis_data_fifo_0.inst.\gen_fifo.xpm_fifo_axis_inst .xpm_fifo_base_inst.\gen_sdpram.xpm_memory_base_inst .config_drc
-Time: 1 ps  Iteration: 0  Process: /equalizer_top_tb/DUT/design_1_i/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/Initial299_18  Scope: equalizer_top_tb.DUT.design_1_i.axis_data_fifo_0.inst.\gen_fifo.xpm_fifo_axis_inst .xpm_fifo_base_inst.\gen_sdpram.xpm_memory_base_inst .config_drc  File: C:/Xilinx_2022.1/Vivado/2022.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv Line: 493
-Info: [XPM_MEMORY 20-1] MEMORY_PRIMITIVE (0) instructs Vivado Synthesis to choose the memory primitive type. Depending on their values, other XPM_MEMORY parameters may preclude the choice of certain memory primitive types. Review XPM_MEMORY documentation and parameter values to understand any limitations, or set MEMORY_PRIMITIVE to a different value. equalizer_top_tb.DUT.design_1_i.axis_data_fifo_1.inst.\gen_fifo.xpm_fifo_axis_inst .xpm_fifo_base_inst.\gen_sdpram.xpm_memory_base_inst .config_drc
-Time: 1 ps  Iteration: 0  Process: /equalizer_top_tb/DUT/design_1_i/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/Initial299_73  Scope: equalizer_top_tb.DUT.design_1_i.axis_data_fifo_1.inst.\gen_fifo.xpm_fifo_axis_inst .xpm_fifo_base_inst.\gen_sdpram.xpm_memory_base_inst .config_drc  File: C:/Xilinx_2022.1/Vivado/2022.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv Line: 493
-Printing Samples
- -1165 + i   265
-  1045 + i   -71
-  -524 + i   445
-  -226 + i   609
-------------------------OFDM SYMBOL 0------------------------
-Expected angle value: 1.059330
-Actual angle value (signed): 0aca4d79
-Actual angle value: 00001010110010100100110101111001
-Actual angle value (converted): 0.337195
- 
-Expected cfo: 0.000000
-scs * angle = bb845218
-Actual phase increment = 0
-------------------------------------------------------------
- 
- 
-------------------------OFDM SYMBOL 1------------------------
-Expected angle value: 1.059330
-Actual angle value (signed): 0aa46a0a
-Actual angle value: 00001010101001000110101000001010
-Actual angle value (converted): 0.669765
- 
-Expected cfo: 0.000000
-scs * angle = 08b14070
-Actual phase increment = 0
-------------------------------------------------------------
- 
- 
-------------------------OFDM SYMBOL 2------------------------
-Expected angle value: 1.059330
-Actual angle value (signed): 0a8c4866
-Actual angle value: 00001010100011000100100001100110
-Actual angle value (converted): 0.999390
- 
-Expected cfo: 0.000000
-scs * angle = 68fe0e10
-Actual phase increment = 0
-------------------------------------------------------------
- 
- 
-------------------------OFDM SYMBOL 3------------------------
-Expected angle value: 1.059330
-Actual angle value (signed): 0a9f739f
-Actual angle value: 00001010100111110111001110011111
-Actual angle value (converted): 1.331354
- 
-Expected cfo: 0.000000
-scs * angle = 33f07a28
-Actual phase increment = 0
-------------------------------------------------------------
- 
- 
-------------------------OFDM SYMBOL 4------------------------
-Expected angle value: 1.059330
-Actual angle value (signed): 0aabcdd3
-Actual angle value: 00001010101010111100110111010011
-Actual angle value (converted): 1.664826
- 
-Expected cfo: 0.000000
-scs * angle = 2bf6a608
-Actual phase increment = 0
-------------------------------------------------------------
- 
- 
-------------------------OFDM SYMBOL 5------------------------
-Expected angle value: 1.059330
-Actual angle value (signed): 0aa89677
-Actual angle value: 00001010101010001001011001110111
-Actual angle value (converted): 1.997906
- 
-Expected cfo: 0.000000
-scs * angle = fc22c068
-Actual phase increment = 0
-------------------------------------------------------------
- 
- 
-------------------------OFDM SYMBOL 6------------------------
-Expected angle value: 1.059330
-Actual angle value (signed): 0a99fe76
-Actual angle value: 00001010100110011111111001110110
-Actual angle value (converted): 2.329204
- 
-Expected cfo: 0.000000
-scs * angle = 68e0eb90
-Actual phase increment = 0
-------------------------------------------------------------
- 
- 
-------------------------OFDM SYMBOL 7------------------------
-Expected angle value: 1.059330
-Actual angle value (signed): 0aa2a510
-Actual angle value: 00001010101000101010010100010000
-Actual angle value (converted): 2.661558
- 
-Expected cfo: 0.000000
-scs * angle = e6b88580
-Actual phase increment = 0
-------------------------------------------------------------
- 
- 
-------------------------OFDM SYMBOL 8------------------------
-Expected angle value: 1.059330
-Actual angle value (signed): 0a9bc1a1
-Actual angle value: 00001010100110111100000110100001
-Actual angle value (converted): 2.993071
- 
-Expected cfo: 0.000000
-scs * angle = 3a0d73d8
-Actual phase increment = 0
-------------------------------------------------------------
- 
- 
-------------------------OFDM SYMBOL 9------------------------
-Expected angle value: 1.059330
-Actual angle value (signed): 0aa4758c
-Actual angle value: 00001010101001000111010110001100
-Actual angle value (converted): 3.325647
- 
-Expected cfo: 0.000000
-scs * angle = 51041e20
-Actual phase increment = 0
-------------------------------------------------------------
- 
- 
-$stop called at time : 14860 ns : File "C:/Projects/pi-radio/HW/modules/sim/equalizer_top_tb.sv" Line 680
-File was opened successfully: -20000 
-File was opened successfully: -19999 
-File was opened successfully: -19998 
-File was opened successfully: -19997 
-File was opened successfully: -19996 
-File was opened successfully: -19995 
-File was opened successfully: -19994 
-File was opened successfully: -19993 
-File was opened successfully: -19992 
-File was opened successfully: -19991 
-File was opened successfully: -19990 
-File was opened successfully: -19989 
-File was opened successfully: -19988 
-Number of OFDM symbols:          10
-Info: [XPM_MEMORY 20-1] MEMORY_PRIMITIVE (0) instructs Vivado Synthesis to choose the memory primitive type. Depending on their values, other XPM_MEMORY parameters may preclude the choice of certain memory primitive types. Review XPM_MEMORY documentation and parameter values to understand any limitations, or set MEMORY_PRIMITIVE to a different value. equalizer_top_tb.DUT.design_1_i.axis_data_fifo_0.inst.\gen_fifo.xpm_fifo_axis_inst .xpm_fifo_base_inst.\gen_sdpram.xpm_memory_base_inst .config_drc
-Time: 1 ps  Iteration: 0  Process: /equalizer_top_tb/DUT/design_1_i/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/Initial299_18  Scope: equalizer_top_tb.DUT.design_1_i.axis_data_fifo_0.inst.\gen_fifo.xpm_fifo_axis_inst .xpm_fifo_base_inst.\gen_sdpram.xpm_memory_base_inst .config_drc  File: C:/Xilinx_2022.1/Vivado/2022.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv Line: 493
-Info: [XPM_MEMORY 20-1] MEMORY_PRIMITIVE (0) instructs Vivado Synthesis to choose the memory primitive type. Depending on their values, other XPM_MEMORY parameters may preclude the choice of certain memory primitive types. Review XPM_MEMORY documentation and parameter values to understand any limitations, or set MEMORY_PRIMITIVE to a different value. equalizer_top_tb.DUT.design_1_i.axis_data_fifo_1.inst.\gen_fifo.xpm_fifo_axis_inst .xpm_fifo_base_inst.\gen_sdpram.xpm_memory_base_inst .config_drc
-Time: 1 ps  Iteration: 0  Process: /equalizer_top_tb/DUT/design_1_i/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/Initial299_73  Scope: equalizer_top_tb.DUT.design_1_i.axis_data_fifo_1.inst.\gen_fifo.xpm_fifo_axis_inst .xpm_fifo_base_inst.\gen_sdpram.xpm_memory_base_inst .config_drc  File: C:/Xilinx_2022.1/Vivado/2022.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv Line: 493
-Printing Samples
- -1165 + i   265
-  1045 + i   -70
-  -525 + i   443
-  -228 + i   609
-------------------------OFDM SYMBOL 0------------------------
-Expected angle value: 2.103119
-Actual angle value (signed): 156c1533
-Actual angle value: 00010101011011000001010100110011
-Actual angle value (converted): 0.669444
- 
-Expected cfo: 0.000000
-scs * angle = c4d65f08
-Actual phase increment = 0
-------------------------------------------------------------
- 
- 
-------------------------OFDM SYMBOL 1------------------------
-Expected angle value: 2.103119
-Actual angle value (signed): 1547fb5f
-Actual angle value: 00010101010001111111101101011111
-Actual angle value (converted): 1.334481
- 
-Expected cfo: 0.000000
-scs * angle = e45e0428
-Actual phase increment = 0
-------------------------------------------------------------
- 
- 
-------------------------OFDM SYMBOL 2------------------------
-Expected angle value: 2.103119
-Actual angle value (signed): 1574bccc
-Actual angle value: 00010101011101001011110011001100
-Actual angle value (converted): 2.004981
- 
-Expected cfo: 0.000000
-scs * angle = 55313c20
-Actual phase increment = 0
-------------------------------------------------------------
- 
- 
-------------------------OFDM SYMBOL 3------------------------
-Expected angle value: 2.103119
-Actual angle value (signed): 15666d83
-Actual angle value: 00010101011001100110110110000011
-Actual angle value (converted): 2.673734
- 
-Expected cfo: 0.000000
-scs * angle = 086f2288
-Actual phase increment = 0
-------------------------------------------------------------
- 
- 
-------------------------OFDM SYMBOL 4------------------------
-Expected angle value: 2.103119
-Actual angle value (signed): 155e78ff
-Actual angle value: 00010101010111100111100011111111
-Actual angle value (converted): 3.341516
- 
-Expected cfo: 0.000000
-scs * angle = af988328
-Actual phase increment = 0
-------------------------------------------------------------
- 
- 
-------------------------OFDM SYMBOL 5------------------------
-Expected angle value: 2.103119
-Actual angle value (signed): 1555dc93
-Actual angle value: 00010101010101011101110010010011
-Actual angle value (converted): 4.008248
- 
-Expected cfo: 0.000000
-scs * angle = b6ba1808
-Actual phase increment = 0
-------------------------------------------------------------
- 
- 
-------------------------OFDM SYMBOL 6------------------------
-Expected angle value: 2.103119
-Actual angle value (signed): 156457ae
-Actual angle value: 00010101011001000101011110101110
-Actual angle value (converted): 4.676746
- 
-Expected cfo: 0.000000
-scs * angle = 33e892d0
-Actual phase increment = 0
-------------------------------------------------------------
- 
- 
-------------------------OFDM SYMBOL 7------------------------
-Expected angle value: 2.103119
-Actual angle value (signed): 15601a5c
-Actual angle value: 00010101011000000001101001011100
-Actual angle value (converted): 5.344728
- 
-Expected cfo: 0.000000
-scs * angle = fc6f6da0
-Actual phase increment = 0
-------------------------------------------------------------
- 
- 
-------------------------OFDM SYMBOL 8------------------------
-Expected angle value: 2.103119
-Actual angle value (signed): 15488752
-Actual angle value: 00010101010010001000011101010010
-Actual angle value (converted): 6.009831
- 
-Expected cfo: 0.000000
-scs * angle = 8ddf9530
-Actual phase increment = 0
-------------------------------------------------------------
- 
- 
-------------------------OFDM SYMBOL 9------------------------
-Expected angle value: 2.103119
-Actual angle value (signed): 154416e7
-Actual angle value: 00010101010001000001011011100111
-Actual angle value (converted): 6.674393
- 
-Expected cfo: 0.000000
-scs * angle = ed07dee8
-Actual phase increment = 0
-------------------------------------------------------------
- 
- 
-$stop called at time : 14860 ns : File "C:/Projects/pi-radio/HW/modules/sim/equalizer_top_tb.sv" Line 680
-File was opened successfully: -20000 
-File was opened successfully: -19999 
-File was opened successfully: -19998 
-File was opened successfully: -19997 
-File was opened successfully: -19996 
-File was opened successfully: -19995 
-File was opened successfully: -19994 
-File was opened successfully: -19993 
-File was opened successfully: -19992 
-File was opened successfully: -19991 
-File was opened successfully: -19990 
-File was opened successfully: -19989 
-File was opened successfully: -19988 
-Number of OFDM symbols:          10
-Info: [XPM_MEMORY 20-1] MEMORY_PRIMITIVE (0) instructs Vivado Synthesis to choose the memory primitive type. Depending on their values, other XPM_MEMORY parameters may preclude the choice of certain memory primitive types. Review XPM_MEMORY documentation and parameter values to understand any limitations, or set MEMORY_PRIMITIVE to a different value. equalizer_top_tb.DUT.design_1_i.axis_data_fifo_0.inst.\gen_fifo.xpm_fifo_axis_inst .xpm_fifo_base_inst.\gen_sdpram.xpm_memory_base_inst .config_drc
-Time: 1 ps  Iteration: 0  Process: /equalizer_top_tb/DUT/design_1_i/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/Initial299_18  Scope: equalizer_top_tb.DUT.design_1_i.axis_data_fifo_0.inst.\gen_fifo.xpm_fifo_axis_inst .xpm_fifo_base_inst.\gen_sdpram.xpm_memory_base_inst .config_drc  File: C:/Xilinx_2022.1/Vivado/2022.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv Line: 493
-Info: [XPM_MEMORY 20-1] MEMORY_PRIMITIVE (0) instructs Vivado Synthesis to choose the memory primitive type. Depending on their values, other XPM_MEMORY parameters may preclude the choice of certain memory primitive types. Review XPM_MEMORY documentation and parameter values to understand any limitations, or set MEMORY_PRIMITIVE to a different value. equalizer_top_tb.DUT.design_1_i.axis_data_fifo_1.inst.\gen_fifo.xpm_fifo_axis_inst .xpm_fifo_base_inst.\gen_sdpram.xpm_memory_base_inst .config_drc
-Time: 1 ps  Iteration: 0  Process: /equalizer_top_tb/DUT/design_1_i/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/Initial299_73  Scope: equalizer_top_tb.DUT.design_1_i.axis_data_fifo_1.inst.\gen_fifo.xpm_fifo_axis_inst .xpm_fifo_base_inst.\gen_sdpram.xpm_memory_base_inst .config_drc  File: C:/Xilinx_2022.1/Vivado/2022.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv Line: 493
-Printing Samples
- -1165 + i   265
-  1044 + i   -74
-  -521 + i   448
-  -220 + i   611
-------------------------OFDM SYMBOL 0------------------------
-Expected angle value: -2.091120
-Actual angle value (signed): eab33533
-Actual angle value (unsigned): 154ccacd
-Actual angle value: 11101010101100110011010100110011
-Actual angle value (converted): -0.665624
- 
-Expected cfo: -0.000000
-scs * angle = f7595f08
-Actual phase increment = 0
-------------------------------------------------------------
- 
- 
-------------------------OFDM SYMBOL 1------------------------
-Expected angle value: -2.091120
-Actual angle value (signed): eab2f637
-Actual angle value (unsigned): 154d09c9
-Actual angle value: 11101010101100101111011000110111
-Actual angle value (converted): -1.331278
- 
-Expected cfo: -0.000000
-scs * angle = 9ffe8a68
-Actual phase increment = 0
-------------------------------------------------------------
- 
- 
-------------------------OFDM SYMBOL 2------------------------
-Expected angle value: -2.091120
-Actual angle value (signed): eaa70596
-Actual angle value (unsigned): 1558fa6a
-Actual angle value: 11101010101001110000010110010110
-Actual angle value (converted): -1.998390
- 
-Expected cfo: -0.000000
-scs * angle = 551d6e90
-Actual phase increment = 0
-------------------------------------------------------------
- 
- 
-------------------------OFDM SYMBOL 3------------------------
-Expected angle value: -2.091120
-Actual angle value (signed): eaa11abc
-Actual angle value (unsigned): 155ee544
-Actual angle value: 11101010101000010001101010111100
-Actual angle value (converted): -2.666224
- 
-Expected cfo: -0.000000
-scs * angle = 25df3ea0
-Actual phase increment = 0
-------------------------------------------------------------
- 
- 
-------------------------OFDM SYMBOL 4------------------------
-Expected angle value: -2.091120
-Actual angle value (signed): eaa5b2a4
-Actual angle value (unsigned): 155a4d5c
-Actual angle value: 11101010101001011011001010100100
-Actual angle value (converted): -3.333497
- 
-Expected cfo: -0.000000
-scs * angle = fff98a60
-Actual phase increment = 0
-------------------------------------------------------------
- 
- 
-------------------------OFDM SYMBOL 5------------------------
-Expected angle value: -2.091120
-Actual angle value (signed): eab7c2a0
-Actual angle value (unsigned): 15483d60
-Actual angle value: 11101010101101111100001010100000
-Actual angle value (converted): -3.998565
- 
-Expected cfo: -0.000000
-scs * angle = 9430b700
-Actual phase increment = 0
-------------------------------------------------------------
- 
- 
-------------------------OFDM SYMBOL 6------------------------
-Expected angle value: -2.091120
-Actual angle value (signed): eab17843
-Actual angle value (unsigned): 154e87bd
-Actual angle value: 11101010101100010111100001000011
-Actual angle value (converted): -4.664401
- 
-Expected cfo: -0.000000
-scs * angle = 58b73488
-Actual phase increment = 0
-------------------------------------------------------------
- 
- 
-------------------------OFDM SYMBOL 7------------------------
-Expected angle value: -2.091120
-Actual angle value (signed): ea8bcf7b
-Actual angle value (unsigned): 15743085
-Actual angle value: 11101010100010111100111101111011
-Actual angle value (converted): -5.334835
- 
-Expected cfo: -0.000000
-scs * angle = 06152bc8
-Actual phase increment = 0
-------------------------------------------------------------
- 
- 
-------------------------OFDM SYMBOL 8------------------------
-Expected angle value: -2.091120
-Actual angle value (signed): ea9e1fb4
-Actual angle value (unsigned): 1561e04c
-Actual angle value: 11101010100111100001111110110100
-Actual angle value (converted): -6.003032
- 
-Expected cfo: -0.000000
-scs * angle = c6b2cfe0
-Actual phase increment = 0
-------------------------------------------------------------
- 
- 
-------------------------OFDM SYMBOL 9------------------------
-Expected angle value: -2.091120
-Actual angle value (signed): eac5eb9e
-Actual angle value (unsigned): 153a1462
-Actual angle value: 11101010110001011110101110011110
-Actual angle value (converted): -6.666372
- 
-Expected cfo: -0.000000
-scs * angle = 8ab42550
-Actual phase increment = 0
-------------------------------------------------------------
- 
- 
-$stop called at time : 14860 ns : File "C:/Projects/pi-radio/HW/modules/sim/equalizer_top_tb.sv" Line 680
-File was opened successfully: -20000 
-File was opened successfully: -19999 
-File was opened successfully: -19998 
-File was opened successfully: -19997 
-File was opened successfully: -19996 
-File was opened successfully: -19995 
-File was opened successfully: -19994 
-File was opened successfully: -19993 
-File was opened successfully: -19992 
-File was opened successfully: -19991 
-File was opened successfully: -19990 
-File was opened successfully: -19989 
-File was opened successfully: -19988 
-Number of OFDM symbols:          10
-Info: [XPM_MEMORY 20-1] MEMORY_PRIMITIVE (0) instructs Vivado Synthesis to choose the memory primitive type. Depending on their values, other XPM_MEMORY parameters may preclude the choice of certain memory primitive types. Review XPM_MEMORY documentation and parameter values to understand any limitations, or set MEMORY_PRIMITIVE to a different value. equalizer_top_tb.DUT.design_1_i.axis_data_fifo_0.inst.\gen_fifo.xpm_fifo_axis_inst .xpm_fifo_base_inst.\gen_sdpram.xpm_memory_base_inst .config_drc
-Time: 1 ps  Iteration: 0  Process: /equalizer_top_tb/DUT/design_1_i/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/Initial299_18  Scope: equalizer_top_tb.DUT.design_1_i.axis_data_fifo_0.inst.\gen_fifo.xpm_fifo_axis_inst .xpm_fifo_base_inst.\gen_sdpram.xpm_memory_base_inst .config_drc  File: C:/Xilinx_2022.1/Vivado/2022.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv Line: 493
-Info: [XPM_MEMORY 20-1] MEMORY_PRIMITIVE (0) instructs Vivado Synthesis to choose the memory primitive type. Depending on their values, other XPM_MEMORY parameters may preclude the choice of certain memory primitive types. Review XPM_MEMORY documentation and parameter values to understand any limitations, or set MEMORY_PRIMITIVE to a different value. equalizer_top_tb.DUT.design_1_i.axis_data_fifo_1.inst.\gen_fifo.xpm_fifo_axis_inst .xpm_fifo_base_inst.\gen_sdpram.xpm_memory_base_inst .config_drc
-Time: 1 ps  Iteration: 0  Process: /equalizer_top_tb/DUT/design_1_i/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/Initial299_73  Scope: equalizer_top_tb.DUT.design_1_i.axis_data_fifo_1.inst.\gen_fifo.xpm_fifo_axis_inst .xpm_fifo_base_inst.\gen_sdpram.xpm_memory_base_inst .config_drc  File: C:/Xilinx_2022.1/Vivado/2022.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv Line: 493
-Printing Samples
- -1165 + i   265
-  1045 + i   -70
-  -525 + i   443
-  -228 + i   609
-------------------------OFDM SYMBOL 0------------------------
-Expected angle value: 2.103119
-Actual angle value (signed): 156c1533
-Actual angle value: 00010101011011000001010100110011
-Actual angle value (converted): 0.669444
- 
-Expected cfo: 0.000000
-scs * angle = c4d65f08
-Actual phase increment = 0
-------------------------------------------------------------
- 
- 
-------------------------OFDM SYMBOL 1------------------------
-Expected angle value: 2.103119
-Actual angle value (signed): 1547fb5f
-Actual angle value: 00010101010001111111101101011111
-Actual angle value (converted): 1.334481
- 
-Expected cfo: 0.000000
-scs * angle = e45e0428
-Actual phase increment = 0
-------------------------------------------------------------
- 
- 
-------------------------OFDM SYMBOL 2------------------------
-Expected angle value: 2.103119
-Actual angle value (signed): 1574bccc
-Actual angle value: 00010101011101001011110011001100
-Actual angle value (converted): 2.004981
- 
-Expected cfo: 0.000000
-scs * angle = 55313c20
-Actual phase increment = 0
-------------------------------------------------------------
- 
- 
-------------------------OFDM SYMBOL 3------------------------
-Expected angle value: 2.103119
-Actual angle value (signed): 15666d83
-Actual angle value: 00010101011001100110110110000011
-Actual angle value (converted): 2.673734
- 
-Expected cfo: 0.000000
-scs * angle = 086f2288
-Actual phase increment = 0
-------------------------------------------------------------
- 
- 
-------------------------OFDM SYMBOL 4------------------------
-Expected angle value: 2.103119
-Actual angle value (signed): 155e78ff
-Actual angle value: 00010101010111100111100011111111
-Actual angle value (converted): 3.341516
- 
-Expected cfo: 0.000000
-scs * angle = af988328
-Actual phase increment = 0
-------------------------------------------------------------
- 
- 
-------------------------OFDM SYMBOL 5------------------------
-Expected angle value: 2.103119
-Actual angle value (signed): 1555dc93
-Actual angle value: 00010101010101011101110010010011
-Actual angle value (converted): 4.008248
- 
-Expected cfo: 0.000000
-scs * angle = b6ba1808
-Actual phase increment = 0
-------------------------------------------------------------
- 
- 
-------------------------OFDM SYMBOL 6------------------------
-Expected angle value: 2.103119
-Actual angle value (signed): 156457ae
-Actual angle value: 00010101011001000101011110101110
-Actual angle value (converted): 4.676746
- 
-Expected cfo: 0.000000
-scs * angle = 33e892d0
-Actual phase increment = 0
-------------------------------------------------------------
- 
- 
-------------------------OFDM SYMBOL 7------------------------
-Expected angle value: 2.103119
-Actual angle value (signed): 15601a5c
-Actual angle value: 00010101011000000001101001011100
-Actual angle value (converted): 5.344728
- 
-Expected cfo: 0.000000
-scs * angle = fc6f6da0
-Actual phase increment = 0
-------------------------------------------------------------
- 
- 
-------------------------OFDM SYMBOL 8------------------------
-Expected angle value: 2.103119
-Actual angle value (signed): 15488752
-Actual angle value: 00010101010010001000011101010010
-Actual angle value (converted): 6.009831
- 
-Expected cfo: 0.000000
-scs * angle = 8ddf9530
-Actual phase increment = 0
-------------------------------------------------------------
- 
- 
-------------------------OFDM SYMBOL 9------------------------
-Expected angle value: 2.103119
-Actual angle value (signed): 154416e7
-Actual angle value: 00010101010001000001011011100111
-Actual angle value (converted): 6.674393
- 
-Expected cfo: 0.000000
-scs * angle = ed07dee8
-Actual phase increment = 0
-------------------------------------------------------------
- 
- 
-$stop called at time : 14860 ns : File "C:/Projects/pi-radio/HW/modules/sim/equalizer_top_tb.sv" Line 680
-File was opened successfully: -20000 
-File was opened successfully: -19999 
-File was opened successfully: -19998 
-File was opened successfully: -19997 
-File was opened successfully: -19996 
-File was opened successfully: -19995 
-File was opened successfully: -19994 
-File was opened successfully: -19993 
-File was opened successfully: -19992 
-File was opened successfully: -19991 
-File was opened successfully: -19990 
-File was opened successfully: -19989 
-File was opened successfully: -19988 
-Number of OFDM symbols:          10
-Info: [XPM_MEMORY 20-1] MEMORY_PRIMITIVE (0) instructs Vivado Synthesis to choose the memory primitive type. Depending on their values, other XPM_MEMORY parameters may preclude the choice of certain memory primitive types. Review XPM_MEMORY documentation and parameter values to understand any limitations, or set MEMORY_PRIMITIVE to a different value. equalizer_top_tb.DUT.design_1_i.axis_data_fifo_0.inst.\gen_fifo.xpm_fifo_axis_inst .xpm_fifo_base_inst.\gen_sdpram.xpm_memory_base_inst .config_drc
-Time: 1 ps  Iteration: 0  Process: /equalizer_top_tb/DUT/design_1_i/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/Initial299_18  Scope: equalizer_top_tb.DUT.design_1_i.axis_data_fifo_0.inst.\gen_fifo.xpm_fifo_axis_inst .xpm_fifo_base_inst.\gen_sdpram.xpm_memory_base_inst .config_drc  File: C:/Xilinx_2022.1/Vivado/2022.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv Line: 493
-Info: [XPM_MEMORY 20-1] MEMORY_PRIMITIVE (0) instructs Vivado Synthesis to choose the memory primitive type. Depending on their values, other XPM_MEMORY parameters may preclude the choice of certain memory primitive types. Review XPM_MEMORY documentation and parameter values to understand any limitations, or set MEMORY_PRIMITIVE to a different value. equalizer_top_tb.DUT.design_1_i.axis_data_fifo_1.inst.\gen_fifo.xpm_fifo_axis_inst .xpm_fifo_base_inst.\gen_sdpram.xpm_memory_base_inst .config_drc
-Time: 1 ps  Iteration: 0  Process: /equalizer_top_tb/DUT/design_1_i/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/Initial299_73  Scope: equalizer_top_tb.DUT.design_1_i.axis_data_fifo_1.inst.\gen_fifo.xpm_fifo_axis_inst .xpm_fifo_base_inst.\gen_sdpram.xpm_memory_base_inst .config_drc  File: C:/Xilinx_2022.1/Vivado/2022.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv Line: 493
-Printing Samples
- -1165 + i   265
-  1044 + i   -74
-  -521 + i   448
-  -220 + i   611
-------------------------OFDM SYMBOL 0------------------------
-Expected angle value: -2.091120
-Actual angle value (signed): eab33533
-Actual angle value (unsigned): 154ccacd
-Actual angle value: 11101010101100110011010100110011
-Actual angle value (converted): -0.665624
- 
-Expected cfo: -0.000000
-scs * angle = f7595f08
-Actual phase increment = 0
-------------------------------------------------------------
- 
- 
-------------------------OFDM SYMBOL 1------------------------
-Expected angle value: -2.091120
-Actual angle value (signed): eab2f637
-Actual angle value (unsigned): 154d09c9
-Actual angle value: 11101010101100101111011000110111
-Actual angle value (converted): -1.331278
- 
-Expected cfo: -0.000000
-scs * angle = 9ffe8a68
-Actual phase increment = 0
-------------------------------------------------------------
- 
- 
-------------------------OFDM SYMBOL 2------------------------
-Expected angle value: -2.091120
-Actual angle value (signed): eaa70596
-Actual angle value (unsigned): 1558fa6a
-Actual angle value: 11101010101001110000010110010110
-Actual angle value (converted): -1.998390
- 
-Expected cfo: -0.000000
-scs * angle = 551d6e90
-Actual phase increment = 0
-------------------------------------------------------------
- 
- 
-------------------------OFDM SYMBOL 3------------------------
-Expected angle value: -2.091120
-Actual angle value (signed): eaa11abc
-Actual angle value (unsigned): 155ee544
-Actual angle value: 11101010101000010001101010111100
-Actual angle value (converted): -2.666224
- 
-Expected cfo: -0.000000
-scs * angle = 25df3ea0
-Actual phase increment = 0
-------------------------------------------------------------
- 
- 
-------------------------OFDM SYMBOL 4------------------------
-Expected angle value: -2.091120
-Actual angle value (signed): eaa5b2a4
-Actual angle value (unsigned): 155a4d5c
-Actual angle value: 11101010101001011011001010100100
-Actual angle value (converted): -3.333497
- 
-Expected cfo: -0.000000
-scs * angle = fff98a60
-Actual phase increment = 0
-------------------------------------------------------------
- 
- 
-------------------------OFDM SYMBOL 5------------------------
-Expected angle value: -2.091120
-Actual angle value (signed): eab7c2a0
-Actual angle value (unsigned): 15483d60
-Actual angle value: 11101010101101111100001010100000
-Actual angle value (converted): -3.998565
- 
-Expected cfo: -0.000000
-scs * angle = 9430b700
-Actual phase increment = 0
-------------------------------------------------------------
- 
- 
-------------------------OFDM SYMBOL 6------------------------
-Expected angle value: -2.091120
-Actual angle value (signed): eab17843
-Actual angle value (unsigned): 154e87bd
-Actual angle value: 11101010101100010111100001000011
-Actual angle value (converted): -4.664401
- 
-Expected cfo: -0.000000
-scs * angle = 58b73488
-Actual phase increment = 0
-------------------------------------------------------------
- 
- 
-------------------------OFDM SYMBOL 7------------------------
-Expected angle value: -2.091120
-Actual angle value (signed): ea8bcf7b
-Actual angle value (unsigned): 15743085
-Actual angle value: 11101010100010111100111101111011
-Actual angle value (converted): -5.334835
- 
-Expected cfo: -0.000000
-scs * angle = 06152bc8
-Actual phase increment = 0
-------------------------------------------------------------
- 
- 
-------------------------OFDM SYMBOL 8------------------------
-Expected angle value: -2.091120
-Actual angle value (signed): ea9e1fb4
-Actual angle value (unsigned): 1561e04c
-Actual angle value: 11101010100111100001111110110100
-Actual angle value (converted): -6.003032
- 
-Expected cfo: -0.000000
-scs * angle = c6b2cfe0
-Actual phase increment = 0
-------------------------------------------------------------
- 
- 
-------------------------OFDM SYMBOL 9------------------------
-Expected angle value: -2.091120
-Actual angle value (signed): eac5eb9e
-Actual angle value (unsigned): 153a1462
-Actual angle value: 11101010110001011110101110011110
-Actual angle value (converted): -6.666372
- 
-Expected cfo: -0.000000
-scs * angle = 8ab42550
-Actual phase increment = 0
-------------------------------------------------------------
- 
- 
-$stop called at time : 14860 ns : File "C:/Projects/pi-radio/HW/modules/sim/equalizer_top_tb.sv" Line 680
-INFO: xsimkernel Simulation Memory Usage: 37724 KB (Peak: 37724 KB), Simulation CPU Usage: 16014 ms
+Expected angle value: 2.996410
+Actual angle value (signed): 1e746a71
+Actual angle value: 00011110011101000110101001110001
+Actual angle value (converted): 2.85840

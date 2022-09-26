@@ -19,8 +19,8 @@ entity delay is
     g_QUIET_CYCLES                : natural := 64
   );
   port(
-    s_axis_aclk                   : in  std_logic;
-    s_axis_aresetn                : in  std_logic;
+    axis_aclk                     : in  std_logic;
+    axis_aresetn                  : in  std_logic;
 
     s_axis_tdata                  : in  std_logic_vector(127 downto 0);
     s_axis_tvalid                 : in  std_logic;
@@ -44,9 +44,9 @@ architecture RTL of delay is
   attribute X_INTERFACE_INFO      : string;
   attribute X_INTERFACE_PARAMETER : string;
   
-  attribute X_INTERFACE_INFO      of s_axis_aclk    : signal is "xilinx.com:signal:clock:1.0 s_axis_aclk CLK";
-  attribute X_INTERFACE_PARAMETER of s_axis_aclk    : 
-    signal is "ASSOCIATED_BUSIF s_axis_aclk:s_axis:m_axis, FREQ_HZ 250000000";
+  attribute X_INTERFACE_INFO      of axis_aclk    : signal is "xilinx.com:signal:clock:1.0 axis_aclk CLK";
+  attribute X_INTERFACE_PARAMETER of axis_aclk    : 
+    signal is "ASSOCIATED_BUSIF axis_aclk:s_axis:m_axis, FREQ_HZ 250000000";
 
   signal counter                  : std_logic_vector(integer(ceil(log2(real(g_DELAY_CYCLES)))) downto 0);
   signal active_counter           : std_logic_vector(integer(ceil(log2(real(g_ACTIVE_CYCLES)))) downto 0);
@@ -59,9 +59,9 @@ architecture RTL of delay is
 begin
 
   -- Process to create trigger signal
-  P_TRIGGER : process(s_axis_aclk)
+  P_TRIGGER : process(axis_aclk)
   begin
-    if rising_edge(s_axis_aclk) then
+    if rising_edge(axis_aclk) then
       if s_axis_tvalid = '1' then
         trigger                   <= '1';
       else
@@ -75,12 +75,12 @@ begin
   end process P_TRIGGER;
 
   -- Process to create delayed counter
-  P_DELAY : process(s_axis_aclk,s_axis_aresetn)
+  P_DELAY : process(axis_aclk,axis_aresetn)
   begin
-    if s_axis_aresetn = '0' then
+    if axis_aresetn = '0' then
       counter                     <= (others => '0');
       delay_valid                 <= '0';
-    elsif rising_edge(s_axis_aclk) then
+    elsif rising_edge(axis_aclk) then
       if s_axis_tvalid = '1' or r_flip = '1' then
         r_flip                    <= '1';
         if counter = g_DELAY_CYCLES then
@@ -94,6 +94,7 @@ begin
       else
         if i_symbol = '0' then
           r_flip                  <= '0';
+          counter                 <= (others => '0');
         end if;
         delay_valid               <= '0';
       end if;
@@ -101,9 +102,9 @@ begin
   end process P_DELAY;
 
   -- Process to time active cycles
-  P_ACTIVE_TIMING : process(s_axis_aclk)
+  P_ACTIVE_TIMING : process(axis_aclk)
   begin
-    if rising_edge(s_axis_aclk) then
+    if rising_edge(axis_aclk) then
       if delay_valid = '1' then --or r_delay_valid = '1' then
         if active_counter = g_ACTIVE_CYCLES then
           if quiet_counter  = g_QUIET_CYCLES-1 then
@@ -119,9 +120,9 @@ begin
   end process P_ACTIVE_TIMING;
 
   -- Process to time quiet cycles
-  P_QUIET_TIMING : process(s_axis_aclk)
+  P_QUIET_TIMING : process(axis_aclk)
   begin
-    if rising_edge(s_axis_aclk) then
+    if rising_edge(axis_aclk) then
       if active_counter = g_ACTIVE_CYCLES then
         if quiet_counter = g_QUIET_CYCLES-1 then
           quiet_counter           <= (others => '0');
@@ -135,9 +136,9 @@ begin
   end process P_QUIET_TIMING;
 
   -- Process to delay m_axis
-  P_AXIS : process(s_axis_aclk)
+  P_AXIS : process(axis_aclk)
   begin
-    if rising_edge(s_axis_aclk) then
+    if rising_edge(axis_aclk) then
       if delay_valid = '1' then
         m_axis_tdata              <= s_axis_tdata;
         m_axis_tvalid             <= s_axis_tvalid and w_axis_tready;

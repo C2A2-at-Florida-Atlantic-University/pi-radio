@@ -11,15 +11,15 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="0.000000 us"></ZoomStartTime>
-      <ZoomEndTime time="14.860001 us"></ZoomEndTime>
-      <Cursor1Time time="14.860000 us"></Cursor1Time>
+      <ZoomStartTime time="13.004708 us"></ZoomStartTime>
+      <ZoomEndTime time="17.023089 us"></ZoomEndTime>
+      <Cursor1Time time="13.864000 us"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="136"></NameColumnWidth>
-      <ValueColumnWidth column_width="58"></ValueColumnWidth>
+      <NameColumnWidth column_width="203"></NameColumnWidth>
+      <ValueColumnWidth column_width="98"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="14" />
+   <WVObjectSize size="15" />
    <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/Mixer/dds_top_0/inst/dds_inst/aclk" type="logic">
       <obj_property name="ElementShortName">aclk</obj_property>
       <obj_property name="ObjectShortName">aclk</obj_property>
@@ -27,6 +27,7 @@
    <wvobject fp_name="group672" type="group">
       <obj_property name="label">CP_RM</obj_property>
       <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
       <wvobject fp_name="vbus475" type="vbus">
          <obj_property name="label">4_I</obj_property>
          <obj_property name="DisplayName">label</obj_property>
@@ -287,9 +288,49 @@
          <obj_property name="ObjectShortName">cp_counter[9:0]</obj_property>
       </wvobject>
    </wvobject>
+   <wvobject fp_name="group7737" type="group">
+      <obj_property name="label">CONJ_CP</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject fp_name="group7738" type="group">
+         <obj_property name="label">S_AXIS</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="isExpanded"></obj_property>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/conj_0/s_axis_tdata" type="array">
+            <obj_property name="ElementShortName">s_axis_tdata[127:0]</obj_property>
+            <obj_property name="ObjectShortName">s_axis_tdata[127:0]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/conj_0/s_axis_tvalid" type="logic">
+            <obj_property name="ElementShortName">s_axis_tvalid</obj_property>
+            <obj_property name="ObjectShortName">s_axis_tvalid</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/conj_0/s_axis_tlast" type="logic">
+            <obj_property name="ElementShortName">s_axis_tlast</obj_property>
+            <obj_property name="ObjectShortName">s_axis_tlast</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="group7739" type="group">
+         <obj_property name="label">M_AXIS</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="isExpanded"></obj_property>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/conj_0/m_axis_tdata" type="array">
+            <obj_property name="ElementShortName">m_axis_tdata[127:0]</obj_property>
+            <obj_property name="ObjectShortName">m_axis_tdata[127:0]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/conj_0/m_axis_tvalid" type="logic">
+            <obj_property name="ElementShortName">m_axis_tvalid</obj_property>
+            <obj_property name="ObjectShortName">m_axis_tvalid</obj_property>
+         </wvobject>
+         <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/conj_0/m_axis_tlast" type="logic">
+            <obj_property name="ElementShortName">m_axis_tlast</obj_property>
+            <obj_property name="ObjectShortName">m_axis_tlast</obj_property>
+         </wvobject>
+      </wvobject>
+   </wvobject>
    <wvobject fp_name="group4058" type="group">
       <obj_property name="label">FIFO_CP</obj_property>
       <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
       <wvobject fp_name="group4056" type="group">
          <obj_property name="label">S_AXIS</obj_property>
          <obj_property name="DisplayName">label</obj_property>
@@ -336,6 +377,7 @@
    <wvobject fp_name="group686" type="group">
       <obj_property name="label">DELAY_CP</obj_property>
       <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
       <wvobject fp_name="group687" type="group">
          <obj_property name="label">S_AXIS</obj_property>
          <obj_property name="DisplayName">label</obj_property>
@@ -392,6 +434,7 @@
    <wvobject fp_name="group676" type="group">
       <obj_property name="label">CMPY</obj_property>
       <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
       <wvobject fp_name="group677" type="group">
          <obj_property name="label">S_CONJ_AXIS</obj_property>
          <obj_property name="DisplayName">label</obj_property>
@@ -1906,7 +1949,6 @@
    <wvobject fp_name="group18420" type="group">
       <obj_property name="label">CONJ_1024</obj_property>
       <obj_property name="DisplayName">label</obj_property>
-      <obj_property name="isExpanded"></obj_property>
       <wvobject fp_name="group18421" type="group">
          <obj_property name="label">S_AXIS</obj_property>
          <obj_property name="DisplayName">label</obj_property>
@@ -1949,6 +1991,7 @@
    <wvobject fp_name="group2570" type="group">
       <obj_property name="label">MIXER</obj_property>
       <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
       <wvobject fp_name="group2567" type="group">
          <obj_property name="label">S_1024_AXIS</obj_property>
          <obj_property name="DisplayName">label</obj_property>
@@ -1988,8 +2031,8 @@
          <obj_property name="DisplayName">label</obj_property>
          <obj_property name="isExpanded"></obj_property>
          <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/Mixer/mixer_0/inst/m_axis_tdata" type="array">
-            <obj_property name="ElementShortName">m_axis_tdata[255:0]</obj_property>
-            <obj_property name="ObjectShortName">m_axis_tdata[255:0]</obj_property>
+            <obj_property name="ElementShortName">m_axis_tdata[127:0]</obj_property>
+            <obj_property name="ObjectShortName">m_axis_tdata[127:0]</obj_property>
          </wvobject>
          <wvobject fp_name="/equalizer_top_tb/DUT/design_1_i/Mixer/mixer_0/inst/m_axis_tvalid" type="logic">
             <obj_property name="ElementShortName">m_axis_tvalid</obj_property>
@@ -1999,6 +2042,14 @@
             <obj_property name="ElementShortName">m_axis_tlast</obj_property>
             <obj_property name="ObjectShortName">m_axis_tlast</obj_property>
          </wvobject>
+      </wvobject>
+      <wvobject fp_name="/equalizer_top_tb/mixer_actual_i_1" type="array">
+         <obj_property name="ElementShortName">mixer_actual_i_1[15:0]</obj_property>
+         <obj_property name="ObjectShortName">mixer_actual_i_1[15:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/equalizer_top_tb/mixer_actual_q_1" type="array">
+         <obj_property name="ElementShortName">mixer_actual_q_1[15:0]</obj_property>
+         <obj_property name="ObjectShortName">mixer_actual_q_1[15:0]</obj_property>
       </wvobject>
    </wvobject>
    <wvobject fp_name="group2777" type="group">
@@ -2105,6 +2156,7 @@
    <wvobject fp_name="group16718" type="group">
       <obj_property name="label">DDS</obj_property>
       <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
       <wvobject fp_name="group16719" type="group">
          <obj_property name="label">S_AXIS</obj_property>
          <obj_property name="DisplayName">label</obj_property>

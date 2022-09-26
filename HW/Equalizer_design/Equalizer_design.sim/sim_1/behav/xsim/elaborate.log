@@ -1,6 +1,6 @@
 Vivado Simulator v2022.1
 Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
-Running: C:/Xilinx_2022.1/Vivado/2022.1/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L xbip_utils_v3_0_10 -L axi_utils_v2_0_6 -L xbip_pipe_v3_0_6 -L xbip_bram18k_v3_0_6 -L mult_gen_v12_0_18 -L cmpy_v6_0_21 -L c_reg_fd_v12_0_6 -L xbip_dsp48_wrapper_v3_0_4 -L xbip_dsp48_addsub_v3_0_6 -L xbip_addsub_v3_0_6 -L c_addsub_v12_0_14 -L cordic_v6_0_18 -L xbip_dsp48_multadd_v3_0_6 -L dds_compiler_v6_0_22 -L dsp_macro_v1_0_2 -L axis_infrastructure_v1_1_0 -L axis_data_fifo_v2_0_8 -L xlconstant_v1_1_7 -L uvm -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot equalizer_top_tb_behav xil_defaultlib.equalizer_top_tb xil_defaultlib.glbl -log elaborate.log 
+Running: C:/Xilinx_2022.1/Vivado/2022.1/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L xbip_utils_v3_0_10 -L axi_utils_v2_0_6 -L xbip_pipe_v3_0_6 -L xbip_bram18k_v3_0_6 -L mult_gen_v12_0_18 -L cmpy_v6_0_21 -L xbip_dsp48_wrapper_v3_0_4 -L xbip_dsp48_addsub_v3_0_6 -L xbip_dsp48_multadd_v3_0_6 -L dds_compiler_v6_0_22 -L c_reg_fd_v12_0_6 -L xbip_addsub_v3_0_6 -L c_addsub_v12_0_14 -L cordic_v6_0_18 -L dsp_macro_v1_0_2 -L axis_infrastructure_v1_1_0 -L axis_data_fifo_v2_0_8 -L xlconstant_v1_1_7 -L util_vector_logic_v2_0_2 -L uvm -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot equalizer_top_tb_behav xil_defaultlib.equalizer_top_tb xil_defaultlib.glbl -log elaborate.log 
 Using 2 slave threads.
 Starting static elaboration
 Pass Through NonSizing Optimizer
@@ -45,6 +45,8 @@ Compiling package c_addsub_v12_0_14.c_addsub_v12_0_14_pkg_legacy
 Compiling package c_reg_fd_v12_0_6.c_reg_fd_v12_0_6_viv_comp
 Compiling package dsp_macro_v1_0_2.dsp_macro_v1_0_2_viv_comp
 Compiling package dsp_macro_v1_0_2.dsp_macro_v1_0_2_pkg
+Compiling architecture rtl of entity xil_defaultlib.conj [conj_default]
+Compiling module xil_defaultlib.design_1_conj_0_1
 Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
 Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
 Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
@@ -220,9 +222,9 @@ Compiling module axis_data_fifo_v2_0_8.axis_data_fifo_v2_0_8_top(C_FAMI...
 Compiling module xil_defaultlib.design_1_axis_data_fifo_1_0
 Compiling architecture rtl of entity xil_defaultlib.axis_splitter [axis_splitter_default]
 Compiling module xil_defaultlib.design_1_axis_splitter_0_0
+Compiling module xil_defaultlib.design_1_axis_splitter_1_0
 Compiling architecture rtl of entity xil_defaultlib.complex_mult [complex_mult_default]
 Compiling module xil_defaultlib.design_1_complex_mult_0_0
-Compiling architecture rtl of entity xil_defaultlib.conj [conj_default]
 Compiling module xil_defaultlib.design_1_conj_0_0
 Compiling module xil_defaultlib.design_1_conj_1_0
 Compiling architecture rtl of entity xil_defaultlib.cp_rm2 [cp_rm2_default]
@@ -233,6 +235,8 @@ Compiling architecture rtl of entity xil_defaultlib.delay [\delay(g_delay_cycles
 Compiling module xil_defaultlib.design_1_delay_0_0
 Compiling architecture rtl of entity xil_defaultlib.delay [\delay(g_delay_cycles=310)\]
 Compiling module xil_defaultlib.design_1_delay_1_0
+Compiling architecture rtl of entity xil_defaultlib.mux [mux_default]
+Compiling module xil_defaultlib.design_1_mux_0_0
 Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_width=27...]
 Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_width=18...]
 Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_width=2)...]
@@ -252,22 +256,29 @@ Compiling architecture rtl of entity xil_defaultlib.scale [scale_default]
 Compiling module xil_defaultlib.design_1_scale_0_0
 Compiling architecture rtl of entity xil_defaultlib.sum [sum_default]
 Compiling module xil_defaultlib.design_1_sum_0_0
+Compiling module util_vector_logic_v2_0_2.util_vector_logic_v2_0_2_util_ve...
+Compiling module xil_defaultlib.design_1_util_vector_logic_0_0
 Compiling module xlconstant_v1_1_7.xlconstant_v1_1_7_xlconstant(CON...
 Compiling module xil_defaultlib.design_1_xlconstant_0_0
 Compiling module xil_defaultlib.design_1
 Compiling module xil_defaultlib.design_1_wrapper
 Compiling module xil_defaultlib.equalizer_top_tb
-WARNING: [XSIM 43-3373] "C:/Projects/pi-radio/HW/modules/sim/equalizer_top_tb.sv" Line 155. System function $fscanf is used as system task. This system function should have a LHS e.g. x=$fscanf().
-WARNING: [XSIM 43-3373] "C:/Projects/pi-radio/HW/modules/sim/equalizer_top_tb.sv" Line 210. System function $fscanf is used as system task. This system function should have a LHS e.g. x=$fscanf().
-WARNING: [XSIM 43-3373] "C:/Projects/pi-radio/HW/modules/sim/equalizer_top_tb.sv" Line 293. System function $fscanf is used as system task. This system function should have a LHS e.g. x=$fscanf().
-WARNING: [XSIM 43-3373] "C:/Projects/pi-radio/HW/modules/sim/equalizer_top_tb.sv" Line 379. System function $fscanf is used as system task. This system function should have a LHS e.g. x=$fscanf().
-WARNING: [XSIM 43-3373] "C:/Projects/pi-radio/HW/modules/sim/equalizer_top_tb.sv" Line 417. System function $fscanf is used as system task. This system function should have a LHS e.g. x=$fscanf().
-WARNING: [XSIM 43-3373] "C:/Projects/pi-radio/HW/modules/sim/equalizer_top_tb.sv" Line 474. System function $fscanf is used as system task. This system function should have a LHS e.g. x=$fscanf().
-WARNING: [XSIM 43-3373] "C:/Projects/pi-radio/HW/modules/sim/equalizer_top_tb.sv" Line 594. System function $fscanf is used as system task. This system function should have a LHS e.g. x=$fscanf().
-WARNING: [XSIM 43-3373] "C:/Projects/pi-radio/HW/modules/sim/equalizer_top_tb.sv" Line 658. System function $fscanf is used as system task. This system function should have a LHS e.g. x=$fscanf().
-WARNING: [XSIM 43-3373] "C:/Projects/pi-radio/HW/modules/sim/equalizer_top_tb.sv" Line 664. System function $fscanf is used as system task. This system function should have a LHS e.g. x=$fscanf().
-WARNING: [XSIM 43-3373] "C:/Projects/pi-radio/HW/modules/sim/equalizer_top_tb.sv" Line 665. System function $fscanf is used as system task. This system function should have a LHS e.g. x=$fscanf().
-WARNING: [XSIM 43-3373] "C:/Projects/pi-radio/HW/modules/sim/equalizer_top_tb.sv" Line 666. System function $fscanf is used as system task. This system function should have a LHS e.g. x=$fscanf().
-WARNING: [XSIM 43-3373] "C:/Projects/pi-radio/HW/modules/sim/equalizer_top_tb.sv" Line 667. System function $fscanf is used as system task. This system function should have a LHS e.g. x=$fscanf().
+WARNING: [XSIM 43-3373] "C:/Projects/pi-radio/HW/modules/sim/equalizer_top_tb.sv" Line 168. System function $fscanf is used as system task. This system function should have a LHS e.g. x=$fscanf().
+WARNING: [XSIM 43-3373] "C:/Projects/pi-radio/HW/modules/sim/equalizer_top_tb.sv" Line 223. System function $fscanf is used as system task. This system function should have a LHS e.g. x=$fscanf().
+WARNING: [XSIM 43-3373] "C:/Projects/pi-radio/HW/modules/sim/equalizer_top_tb.sv" Line 306. System function $fscanf is used as system task. This system function should have a LHS e.g. x=$fscanf().
+WARNING: [XSIM 43-3373] "C:/Projects/pi-radio/HW/modules/sim/equalizer_top_tb.sv" Line 392. System function $fscanf is used as system task. This system function should have a LHS e.g. x=$fscanf().
+WARNING: [XSIM 43-3373] "C:/Projects/pi-radio/HW/modules/sim/equalizer_top_tb.sv" Line 430. System function $fscanf is used as system task. This system function should have a LHS e.g. x=$fscanf().
+WARNING: [XSIM 43-3373] "C:/Projects/pi-radio/HW/modules/sim/equalizer_top_tb.sv" Line 487. System function $fscanf is used as system task. This system function should have a LHS e.g. x=$fscanf().
+WARNING: [XSIM 43-3373] "C:/Projects/pi-radio/HW/modules/sim/equalizer_top_tb.sv" Line 616. System function $fscanf is used as system task. This system function should have a LHS e.g. x=$fscanf().
+WARNING: [XSIM 43-3373] "C:/Projects/pi-radio/HW/modules/sim/equalizer_top_tb.sv" Line 645. System function $fscanf is used as system task. This system function should have a LHS e.g. x=$fscanf().
+WARNING: [XSIM 43-3373] "C:/Projects/pi-radio/HW/modules/sim/equalizer_top_tb.sv" Line 727. System function $fscanf is used as system task. This system function should have a LHS e.g. x=$fscanf().
+WARNING: [XSIM 43-3373] "C:/Projects/pi-radio/HW/modules/sim/equalizer_top_tb.sv" Line 733. System function $fscanf is used as system task. This system function should have a LHS e.g. x=$fscanf().
+WARNING: [XSIM 43-3373] "C:/Projects/pi-radio/HW/modules/sim/equalizer_top_tb.sv" Line 734. System function $fscanf is used as system task. This system function should have a LHS e.g. x=$fscanf().
+WARNING: [XSIM 43-3373] "C:/Projects/pi-radio/HW/modules/sim/equalizer_top_tb.sv" Line 735. System function $fscanf is used as system task. This system function should have a LHS e.g. x=$fscanf().
+WARNING: [XSIM 43-3373] "C:/Projects/pi-radio/HW/modules/sim/equalizer_top_tb.sv" Line 736. System function $fscanf is used as system task. This system function should have a LHS e.g. x=$fscanf().
+WARNING: [XSIM 43-3373] "C:/Projects/pi-radio/HW/modules/sim/equalizer_top_tb.sv" Line 760. System function $fscanf is used as system task. This system function should have a LHS e.g. x=$fscanf().
+WARNING: [XSIM 43-3373] "C:/Projects/pi-radio/HW/modules/sim/equalizer_top_tb.sv" Line 761. System function $fscanf is used as system task. This system function should have a LHS e.g. x=$fscanf().
+WARNING: [XSIM 43-3373] "C:/Projects/pi-radio/HW/modules/sim/equalizer_top_tb.sv" Line 762. System function $fscanf is used as system task. This system function should have a LHS e.g. x=$fscanf().
+WARNING: [XSIM 43-3373] "C:/Projects/pi-radio/HW/modules/sim/equalizer_top_tb.sv" Line 763. System function $fscanf is used as system task. This system function should have a LHS e.g. x=$fscanf().
 Compiling module xil_defaultlib.glbl
 Built simulation snapshot equalizer_top_tb_behav

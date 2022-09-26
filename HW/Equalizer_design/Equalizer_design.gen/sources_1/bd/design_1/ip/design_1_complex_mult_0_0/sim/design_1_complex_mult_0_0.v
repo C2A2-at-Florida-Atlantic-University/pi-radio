@@ -55,8 +55,8 @@
 (* IP_DEFINITION_SOURCE = "module_ref" *)
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module design_1_complex_mult_0_0 (
-  s_axis_aclk,
-  s_axis_aresetn,
+  axis_aclk,
+  axis_aresetn,
   s_axis0_tdata,
   s_axis0_tvalid,
   s_axis0_tid,
@@ -74,12 +74,12 @@ module design_1_complex_mult_0_0 (
   m_axis_tlast
 );
 
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME s_axis_aclk, ASSOCIATED_RESET s_axis_aresetn, ASSOCIATED_BUSIF s_axis_aclk:s_axis0:s_axis1:m_axis, FREQ_HZ 250000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN design_1_s_axis_aclk_0, INSERT_VIP 0" *)
-(* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 s_axis_aclk CLK" *)
-input wire s_axis_aclk;
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME s_axis_aresetn, POLARITY ACTIVE_LOW, INSERT_VIP 0" *)
-(* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 s_axis_aresetn RST" *)
-input wire s_axis_aresetn;
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME axis_aclk, ASSOCIATED_BUSIF axis_aclk:s_axis0:s_axis1:m_axis, ASSOCIATED_RESET axis_aresetn, FREQ_HZ 250000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN design_1_s_axis_aclk_0, INSERT_VIP 0" *)
+(* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 axis_aclk CLK" *)
+input wire axis_aclk;
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME axis_aresetn, POLARITY ACTIVE_LOW, INSERT_VIP 0" *)
+(* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 axis_aresetn RST" *)
+input wire axis_aresetn;
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 s_axis0 TDATA" *)
 input wire [127 : 0] s_axis0_tdata;
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 s_axis0 TVALID" *)
@@ -115,8 +115,8 @@ output wire [7 : 0] m_axis_tuser;
 output wire m_axis_tlast;
 
   complex_mult inst (
-    .s_axis_aclk(s_axis_aclk),
-    .s_axis_aresetn(s_axis_aresetn),
+    .axis_aclk(axis_aclk),
+    .axis_aresetn(axis_aresetn),
     .s_axis0_tdata(s_axis0_tdata),
     .s_axis0_tvalid(s_axis0_tvalid),
     .s_axis0_tid(s_axis0_tid),

@@ -11,8 +11,8 @@ use ieee.std_logic_unsigned.all;
 
 entity cp_rm2 is
   port(
-    s_axis_aclk                   : in  std_logic;
-    s_axis_aresetn                : in  std_logic;
+    axis_aclk                     : in  std_logic;
+    axis_aresetn                  : in  std_logic;
 
     s_axis_tdata                  : in  std_logic_vector(127 downto 0);
     s_axis_tvalid                 : in  std_logic;
@@ -35,9 +35,9 @@ architecture RTL of cp_rm2 is
   attribute X_INTERFACE_INFO      : string;
   attribute X_INTERFACE_PARAMETER : string;
    
-  attribute X_INTERFACE_INFO      of s_axis_aclk    : signal is "xilinx.com:signal:clock:1.0 s_axis_aclk CLK";
-  attribute X_INTERFACE_PARAMETER of s_axis_aclk    : 
-    signal is "ASSOCIATED_BUSIF s_axis_aclk:s_axis:m_axis, FREQ_HZ 250000000";
+  attribute X_INTERFACE_INFO      of axis_aclk    : signal is "xilinx.com:signal:clock:1.0 axis_aclk CLK";
+  attribute X_INTERFACE_PARAMETER of axis_aclk    : 
+    signal is "ASSOCIATED_BUSIF axis_aclk:s_axis:m_axis, FREQ_HZ 250000000";
 
   signal cp_counter               : std_logic_vector(9 downto 0);
   signal frame_current            : std_logic;
@@ -54,9 +54,9 @@ architecture RTL of cp_rm2 is
 begin
 
   -- Assert frame_current to indicate a packet is being received
-  P_FRAME : process(s_axis_aclk)
+  P_FRAME : process(axis_aclk)
   begin
-    if rising_edge(s_axis_aclk) then
+    if rising_edge(axis_aclk) then
       if s_axis_tvalid = '1' then
         frame_current             <= '1';
       end if;
@@ -67,9 +67,9 @@ begin
   r_tvalid_rising                 <= s_axis_tvalid and not r_tvalid;
 
   -- Create counter to cycle all samples of OFDM symbol
-  P_COUNTER : process(s_axis_aclk)
+  P_COUNTER : process(axis_aclk)
   begin
-    if rising_edge(s_axis_aclk) then
+    if rising_edge(axis_aclk) then
       if r_tvalid_rising = '1' then
         cp_counter                <= (others => '0');
       else
@@ -83,9 +83,9 @@ begin
   end process P_COUNTER;
 
   -- Register input AXIS
-  P_AXIS_REGISTER : process(s_axis_aclk)
+  P_AXIS_REGISTER : process(axis_aclk)
   begin
-    if rising_edge(s_axis_aclk) then
+    if rising_edge(axis_aclk) then
       in_tdata                    <= s_axis_tdata;
       in_tvalid                   <= s_axis_tvalid;
       in_tid                      <= s_axis_tid;
@@ -95,9 +95,9 @@ begin
   end process P_AXIS_REGISTER;
 
   -- Create cp removed stream and cp stream
-  P_CP : process(s_axis_aclk)
+  P_CP : process(axis_aclk)
   begin
-    if rising_edge(s_axis_aclk) then
+    if rising_edge(axis_aclk) then
       case in_tvalid is
         when '0' =>
           m_axis_tdata            <= (others => '0');

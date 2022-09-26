@@ -11,8 +11,8 @@ use ieee.std_logic_unsigned.all;
 
 entity conj is
   port(
-    s_axis_aclk                   : in  std_logic;
-    s_axis_aresetn                : in  std_logic;
+    axis_aclk                     : in  std_logic;
+    axis_aresetn                  : in  std_logic;
 
     s_axis_tdata                  : in  std_logic_vector(127 downto 0);
     s_axis_tvalid                 : in  std_logic;
@@ -35,9 +35,9 @@ architecture RTL of conj is
   attribute X_INTERFACE_INFO      : string;
   attribute X_INTERFACE_PARAMETER : string;
   
-  attribute X_INTERFACE_INFO      of s_axis_aclk    : signal is "xilinx.com:signal:clock:1.0 s_axis_aclk CLK";
-  attribute X_INTERFACE_PARAMETER of s_axis_aclk    : 
-    signal is "ASSOCIATED_BUSIF s_axis_aclk:s_axis:m_axis, FREQ_HZ 250000000";
+  attribute X_INTERFACE_INFO      of axis_aclk    : signal is "xilinx.com:signal:clock:1.0 axis_aclk CLK";
+  attribute X_INTERFACE_PARAMETER of axis_aclk    : 
+    signal is "ASSOCIATED_BUSIF axis_aclk:s_axis:m_axis, FREQ_HZ 250000000";
 
   signal i_data1                  : std_logic_vector(15 downto 0);
   signal q_data1_conj             : std_logic_vector(15 downto 0);
@@ -75,9 +75,9 @@ begin
   q_data4                         <= s_axis_tdata(127 downto 112);
   --q_data4_conj                    <= s_axis_tdata(127 downto 112);
 
-  P_CONJ : process(s_axis_aclk)
+  P_CONJ : process(axis_aclk)
   begin
-    if rising_edge(s_axis_aclk) then
+    if rising_edge(axis_aclk) then
       if i_negative_freq = '0' then
         m_axis_tdata              <= q_data4_conj & i_data4 &
                                      q_data3_conj & i_data3 & 

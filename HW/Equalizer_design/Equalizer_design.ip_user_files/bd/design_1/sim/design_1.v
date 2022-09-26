@@ -1,7 +1,7 @@
 //Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2022.1 (win64) Build 3526262 Mon Apr 18 15:48:16 MDT 2022
-//Date        : Fri Sep 23 09:15:59 2022
+//Date        : Sun Sep 25 16:46:22 2022
 //Host        : DESKTOP-1UDCE0K running 64-bit major release  (build 9200)
 //Command     : generate_target design_1.bd
 //Design      : design_1
@@ -10,7 +10,8 @@
 `timescale 1 ps / 1 ps
 
 module Mixer_imp_1E3SM51
-   (m_axis_0_tdata,
+   (i_negative_freq,
+    m_axis_0_tdata,
     m_axis_0_tid,
     m_axis_0_tlast,
     m_axis_0_tuser,
@@ -24,7 +25,8 @@ module Mixer_imp_1E3SM51
     s_axis_aresetn_0,
     s_axis_tdata,
     s_axis_tvalid);
-  output [255:0]m_axis_0_tdata;
+  input i_negative_freq;
+  output [127:0]m_axis_0_tdata;
   output [7:0]m_axis_0_tid;
   output m_axis_0_tlast;
   output [7:0]m_axis_0_tuser;
@@ -39,13 +41,18 @@ module Mixer_imp_1E3SM51
   input [31:0]s_axis_tdata;
   input s_axis_tvalid;
 
-  wire [255:0]Conn1_TDATA;
+  wire [127:0]Conn1_TDATA;
   wire [7:0]Conn1_TID;
   wire Conn1_TLAST;
   wire [7:0]Conn1_TUSER;
   wire Conn1_TVALID;
   wire [31:0]angle_0_m_axis_TDATA;
   wire angle_0_m_axis_TVALID;
+  wire [127:0]conj_0_m_axis_TDATA;
+  wire [7:0]conj_0_m_axis_TID;
+  wire conj_0_m_axis_TLAST;
+  wire [7:0]conj_0_m_axis_TUSER;
+  wire conj_0_m_axis_TVALID;
   wire [127:0]dds_top_0_m_axis_TDATA;
   wire [7:0]dds_top_0_m_axis_TID;
   wire dds_top_0_m_axis_TLAST;
@@ -56,6 +63,7 @@ module Mixer_imp_1E3SM51
   wire delay_1_m_axis_TLAST;
   wire [7:0]delay_1_m_axis_TUSER;
   wire delay_1_m_axis_TVALID;
+  wire i_negative_freq_1;
   wire s_axis_aclk_0_1;
   wire s_axis_aresetn_0_1;
 
@@ -66,13 +74,28 @@ module Mixer_imp_1E3SM51
   assign delay_1_m_axis_TLAST = s_axis0_tlast;
   assign delay_1_m_axis_TUSER = s_axis0_tuser[7:0];
   assign delay_1_m_axis_TVALID = s_axis0_tvalid;
-  assign m_axis_0_tdata[255:0] = Conn1_TDATA;
+  assign i_negative_freq_1 = i_negative_freq;
+  assign m_axis_0_tdata[127:0] = Conn1_TDATA;
   assign m_axis_0_tid[7:0] = Conn1_TID;
   assign m_axis_0_tlast = Conn1_TLAST;
   assign m_axis_0_tuser[7:0] = Conn1_TUSER;
   assign m_axis_0_tvalid = Conn1_TVALID;
   assign s_axis_aclk_0_1 = s_axis_aclk_0;
   assign s_axis_aresetn_0_1 = s_axis_aresetn_0;
+  design_1_conj_0_1 conj_0
+       (.axis_aclk(s_axis_aclk_0_1),
+        .axis_aresetn(s_axis_aresetn_0_1),
+        .i_negative_freq(i_negative_freq_1),
+        .m_axis_tdata(conj_0_m_axis_TDATA),
+        .m_axis_tid(conj_0_m_axis_TID),
+        .m_axis_tlast(conj_0_m_axis_TLAST),
+        .m_axis_tuser(conj_0_m_axis_TUSER),
+        .m_axis_tvalid(conj_0_m_axis_TVALID),
+        .s_axis_tdata(dds_top_0_m_axis_TDATA),
+        .s_axis_tid(dds_top_0_m_axis_TID),
+        .s_axis_tlast(dds_top_0_m_axis_TLAST),
+        .s_axis_tuser(dds_top_0_m_axis_TUSER),
+        .s_axis_tvalid(dds_top_0_m_axis_TVALID));
   design_1_dds_top_0_0 dds_top_0
        (.axis_aclk(s_axis_aclk_0_1),
         .axis_aresetn(s_axis_aresetn_0_1),
@@ -99,16 +122,17 @@ module Mixer_imp_1E3SM51
         .s_axis0_tlast(delay_1_m_axis_TLAST),
         .s_axis0_tuser(delay_1_m_axis_TUSER),
         .s_axis0_tvalid(delay_1_m_axis_TVALID),
-        .s_axis1_tdata(dds_top_0_m_axis_TDATA),
-        .s_axis1_tid(dds_top_0_m_axis_TID),
-        .s_axis1_tlast(dds_top_0_m_axis_TLAST),
-        .s_axis1_tuser(dds_top_0_m_axis_TUSER),
-        .s_axis1_tvalid(dds_top_0_m_axis_TVALID));
+        .s_axis1_tdata(conj_0_m_axis_TDATA),
+        .s_axis1_tid(conj_0_m_axis_TID),
+        .s_axis1_tlast(conj_0_m_axis_TLAST),
+        .s_axis1_tuser(conj_0_m_axis_TUSER),
+        .s_axis1_tvalid(conj_0_m_axis_TVALID));
 endmodule
 
-(* CORE_GENERATION_INFO = "design_1,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=design_1,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=17,numReposBlks=16,numNonXlnxBlks=0,numHierBlks=1,maxHierDepth=1,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=13,numPkgbdBlks=0,bdsource=USER,synth_mode=OOC_per_IP}" *) (* HW_HANDOFF = "design_1.hwdef" *) 
+(* CORE_GENERATION_INFO = "design_1,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=design_1,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=21,numReposBlks=20,numNonXlnxBlks=0,numHierBlks=1,maxHierDepth=1,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=16,numPkgbdBlks=0,bdsource=USER,synth_mode=OOC_per_IP}" *) (* HW_HANDOFF = "design_1.hwdef" *) 
 module design_1
-   (m_axis_0_tdata,
+   (bypass,
+    m_axis_0_tdata,
     m_axis_0_tid,
     m_axis_0_tlast,
     m_axis_0_tuser,
@@ -120,7 +144,8 @@ module design_1
     s_axis_0_tvalid,
     s_axis_aclk_0,
     s_axis_aresetn_0);
-  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 m_axis_0 TDATA" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME m_axis_0, CLK_DOMAIN design_1_s_axis_aclk_0, FREQ_HZ 250000000, HAS_TKEEP 0, HAS_TLAST 1, HAS_TREADY 0, HAS_TSTRB 0, INSERT_VIP 0, LAYERED_METADATA undef, PHASE 0.0, TDATA_NUM_BYTES 32, TDEST_WIDTH 0, TID_WIDTH 8, TUSER_WIDTH 8" *) output [255:0]m_axis_0_tdata;
+  input bypass;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 m_axis_0 TDATA" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME m_axis_0, CLK_DOMAIN design_1_s_axis_aclk_0, FREQ_HZ 250000000, HAS_TKEEP 0, HAS_TLAST 1, HAS_TREADY 0, HAS_TSTRB 0, INSERT_VIP 0, LAYERED_METADATA undef, PHASE 0.0, TDATA_NUM_BYTES 16, TDEST_WIDTH 0, TID_WIDTH 8, TUSER_WIDTH 8" *) output [127:0]m_axis_0_tdata;
   (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 m_axis_0 TID" *) output [7:0]m_axis_0_tid;
   (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 m_axis_0 TLAST" *) output m_axis_0_tlast;
   (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 m_axis_0 TUSER" *) output [7:0]m_axis_0_tuser;
@@ -133,7 +158,7 @@ module design_1
   (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.S_AXIS_ACLK_0 CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.S_AXIS_ACLK_0, ASSOCIATED_BUSIF s_axis_0:m_axis_0, ASSOCIATED_RESET s_axis_aresetn_0, CLK_DOMAIN design_1_s_axis_aclk_0, FREQ_HZ 250000000, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 0.0" *) input s_axis_aclk_0;
   (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 RST.S_AXIS_ARESETN_0 RST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME RST.S_AXIS_ARESETN_0, INSERT_VIP 0, POLARITY ACTIVE_LOW" *) input s_axis_aresetn_0;
 
-  wire [255:0]Mixer_m_axis_0_TDATA;
+  wire [127:0]Mixer_m_axis_0_TDATA;
   wire [7:0]Mixer_m_axis_0_TID;
   wire Mixer_m_axis_0_TLAST;
   wire [7:0]Mixer_m_axis_0_TUSER;
@@ -162,6 +187,16 @@ module design_1
   wire axis_splitter_0_m_axis1_TLAST;
   wire [7:0]axis_splitter_0_m_axis1_TUSER;
   wire axis_splitter_0_m_axis1_TVALID;
+  wire [127:0]axis_splitter_1_m_axis0_TDATA;
+  wire [7:0]axis_splitter_1_m_axis0_TID;
+  wire axis_splitter_1_m_axis0_TLAST;
+  wire [7:0]axis_splitter_1_m_axis0_TUSER;
+  wire axis_splitter_1_m_axis0_TVALID;
+  wire [127:0]axis_splitter_1_m_axis1_TDATA;
+  wire [7:0]axis_splitter_1_m_axis1_TID;
+  wire axis_splitter_1_m_axis1_TLAST;
+  wire [7:0]axis_splitter_1_m_axis1_TUSER;
+  wire axis_splitter_1_m_axis1_TVALID;
   wire [255:0]complex_mult_0_m_axis_TDATA;
   wire [7:0]complex_mult_0_m_axis_TID;
   wire complex_mult_0_m_axis_TLAST;
@@ -203,6 +238,12 @@ module design_1
   wire delay_1_m_axis_TLAST;
   wire [7:0]delay_1_m_axis_TUSER;
   wire delay_1_m_axis_TVALID;
+  wire i_select_0_1;
+  wire [127:0]mux_0_m_axis_TDATA;
+  wire [7:0]mux_0_m_axis_TID;
+  wire mux_0_m_axis_TLAST;
+  wire [7:0]mux_0_m_axis_TUSER;
+  wire mux_0_m_axis_TVALID;
   wire [127:0]s_axis_0_1_TDATA;
   wire [7:0]s_axis_0_1_TID;
   wire s_axis_0_1_TLAST;
@@ -218,13 +259,15 @@ module design_1
   wire sum_0_m_axis_TLAST;
   wire [7:0]sum_0_m_axis_TUSER;
   wire sum_0_m_axis_TVALID;
+  wire [0:0]util_vector_logic_0_Res;
   wire [0:0]xlconstant_0_dout;
 
-  assign m_axis_0_tdata[255:0] = Mixer_m_axis_0_TDATA;
-  assign m_axis_0_tid[7:0] = Mixer_m_axis_0_TID;
-  assign m_axis_0_tlast = Mixer_m_axis_0_TLAST;
-  assign m_axis_0_tuser[7:0] = Mixer_m_axis_0_TUSER;
-  assign m_axis_0_tvalid = Mixer_m_axis_0_TVALID;
+  assign i_select_0_1 = bypass;
+  assign m_axis_0_tdata[127:0] = mux_0_m_axis_TDATA;
+  assign m_axis_0_tid[7:0] = mux_0_m_axis_TID;
+  assign m_axis_0_tlast = mux_0_m_axis_TLAST;
+  assign m_axis_0_tuser[7:0] = mux_0_m_axis_TUSER;
+  assign m_axis_0_tvalid = mux_0_m_axis_TVALID;
   assign s_axis_0_1_TDATA = s_axis_0_tdata[127:0];
   assign s_axis_0_1_TID = s_axis_0_tid[7:0];
   assign s_axis_0_1_TLAST = s_axis_0_tlast;
@@ -233,7 +276,8 @@ module design_1
   assign s_axis_aclk_0_1 = s_axis_aclk_0;
   assign s_axis_aresetn_0_1 = s_axis_aresetn_0;
   Mixer_imp_1E3SM51 Mixer
-       (.m_axis_0_tdata(Mixer_m_axis_0_TDATA),
+       (.i_negative_freq(util_vector_logic_0_Res),
+        .m_axis_0_tdata(Mixer_m_axis_0_TDATA),
         .m_axis_0_tid(Mixer_m_axis_0_TID),
         .m_axis_0_tlast(Mixer_m_axis_0_TLAST),
         .m_axis_0_tuser(Mixer_m_axis_0_TUSER),
@@ -280,13 +324,15 @@ module design_1
         .m_axis_tvalid(axis_data_fifo_1_M_AXIS_TVALID),
         .s_axis_aclk(s_axis_aclk_0_1),
         .s_axis_aresetn(s_axis_aresetn_0_1),
-        .s_axis_tdata(axis_splitter_0_m_axis1_TDATA),
-        .s_axis_tid(axis_splitter_0_m_axis1_TID),
-        .s_axis_tlast(axis_splitter_0_m_axis1_TLAST),
-        .s_axis_tuser(axis_splitter_0_m_axis1_TUSER),
-        .s_axis_tvalid(axis_splitter_0_m_axis1_TVALID));
+        .s_axis_tdata(axis_splitter_1_m_axis0_TDATA),
+        .s_axis_tid(axis_splitter_1_m_axis0_TID),
+        .s_axis_tlast(axis_splitter_1_m_axis0_TLAST),
+        .s_axis_tuser(axis_splitter_1_m_axis0_TUSER),
+        .s_axis_tvalid(axis_splitter_1_m_axis0_TVALID));
   design_1_axis_splitter_0_0 axis_splitter_0
-       (.m_axis0_tdata(axis_splitter_0_m_axis0_TDATA),
+       (.axis_aclk(s_axis_aclk_0_1),
+        .axis_aresetn(s_axis_aresetn_0_1),
+        .m_axis0_tdata(axis_splitter_0_m_axis0_TDATA),
         .m_axis0_tid(axis_splitter_0_m_axis0_TID),
         .m_axis0_tlast(axis_splitter_0_m_axis0_TLAST),
         .m_axis0_tuser(axis_splitter_0_m_axis0_TUSER),
@@ -296,15 +342,33 @@ module design_1
         .m_axis1_tlast(axis_splitter_0_m_axis1_TLAST),
         .m_axis1_tuser(axis_splitter_0_m_axis1_TUSER),
         .m_axis1_tvalid(axis_splitter_0_m_axis1_TVALID),
-        .s_axis_aclk(s_axis_aclk_0_1),
-        .s_axis_aresetn(s_axis_aresetn_0_1),
         .s_axis_tdata(cp_rm_0_m_axis_TDATA),
         .s_axis_tid(cp_rm_0_m_axis_TID),
         .s_axis_tlast(cp_rm_0_m_axis_TLAST),
         .s_axis_tuser(cp_rm_0_m_axis_TUSER),
         .s_axis_tvalid(cp_rm_0_m_axis_TVALID));
+  design_1_axis_splitter_1_0 axis_splitter_1
+       (.axis_aclk(s_axis_aclk_0_1),
+        .axis_aresetn(s_axis_aresetn_0_1),
+        .m_axis0_tdata(axis_splitter_1_m_axis0_TDATA),
+        .m_axis0_tid(axis_splitter_1_m_axis0_TID),
+        .m_axis0_tlast(axis_splitter_1_m_axis0_TLAST),
+        .m_axis0_tuser(axis_splitter_1_m_axis0_TUSER),
+        .m_axis0_tvalid(axis_splitter_1_m_axis0_TVALID),
+        .m_axis1_tdata(axis_splitter_1_m_axis1_TDATA),
+        .m_axis1_tid(axis_splitter_1_m_axis1_TID),
+        .m_axis1_tlast(axis_splitter_1_m_axis1_TLAST),
+        .m_axis1_tuser(axis_splitter_1_m_axis1_TUSER),
+        .m_axis1_tvalid(axis_splitter_1_m_axis1_TVALID),
+        .s_axis_tdata(axis_splitter_0_m_axis1_TDATA),
+        .s_axis_tid(axis_splitter_0_m_axis1_TID),
+        .s_axis_tlast(axis_splitter_0_m_axis1_TLAST),
+        .s_axis_tuser(axis_splitter_0_m_axis1_TUSER),
+        .s_axis_tvalid(axis_splitter_0_m_axis1_TVALID));
   design_1_complex_mult_0_0 complex_mult_0
-       (.m_axis_tdata(complex_mult_0_m_axis_TDATA),
+       (.axis_aclk(s_axis_aclk_0_1),
+        .axis_aresetn(s_axis_aresetn_0_1),
+        .m_axis_tdata(complex_mult_0_m_axis_TDATA),
         .m_axis_tid(complex_mult_0_m_axis_TID),
         .m_axis_tlast(complex_mult_0_m_axis_TLAST),
         .m_axis_tuser(complex_mult_0_m_axis_TUSER),
@@ -318,53 +382,53 @@ module design_1
         .s_axis1_tid(cp_rm2_0_m_axis_TID),
         .s_axis1_tlast(cp_rm2_0_m_axis_TLAST),
         .s_axis1_tuser(cp_rm2_0_m_axis_TUSER),
-        .s_axis1_tvalid(cp_rm2_0_m_axis_TVALID),
-        .s_axis_aclk(s_axis_aclk_0_1),
-        .s_axis_aresetn(s_axis_aresetn_0_1));
+        .s_axis1_tvalid(cp_rm2_0_m_axis_TVALID));
   design_1_conj_0_0 conj_0
-       (.i_negative_freq(xlconstant_0_dout),
+       (.axis_aclk(s_axis_aclk_0_1),
+        .axis_aresetn(s_axis_aresetn_0_1),
+        .i_negative_freq(xlconstant_0_dout),
         .m_axis_tdata(conj_0_m_axis_TDATA),
         .m_axis_tid(conj_0_m_axis_TID),
         .m_axis_tlast(conj_0_m_axis_TLAST),
         .m_axis_tuser(conj_0_m_axis_TUSER),
         .m_axis_tvalid(conj_0_m_axis_TVALID),
-        .s_axis_aclk(s_axis_aclk_0_1),
-        .s_axis_aresetn(s_axis_aresetn_0_1),
         .s_axis_tdata(cp_rm_0_m_cp_axis_TDATA),
         .s_axis_tid(cp_rm_0_m_cp_axis_TID),
         .s_axis_tlast(cp_rm_0_m_cp_axis_TLAST),
         .s_axis_tuser(cp_rm_0_m_cp_axis_TUSER),
         .s_axis_tvalid(cp_rm_0_m_cp_axis_TVALID));
   design_1_conj_1_0 conj_1
-       (.i_negative_freq(scale_0_o_negative_freq),
+       (.axis_aclk(s_axis_aclk_0_1),
+        .axis_aresetn(s_axis_aresetn_0_1),
+        .i_negative_freq(xlconstant_0_dout),
         .m_axis_tdata(conj_1_m_axis_TDATA),
         .m_axis_tid(conj_1_m_axis_TID),
         .m_axis_tlast(conj_1_m_axis_TLAST),
         .m_axis_tuser(conj_1_m_axis_TUSER),
         .m_axis_tvalid(conj_1_m_axis_TVALID),
-        .s_axis_aclk(s_axis_aclk_0_1),
-        .s_axis_aresetn(s_axis_aresetn_0_1),
         .s_axis_tdata(delay_1_m_axis_TDATA),
         .s_axis_tid(delay_1_m_axis_TID),
         .s_axis_tlast(delay_1_m_axis_TLAST),
         .s_axis_tuser(delay_1_m_axis_TUSER),
         .s_axis_tvalid(delay_1_m_axis_TVALID));
   design_1_cp_rm2_0_0 cp_rm2_0
-       (.i_symbol(cp_rm_0_o_symbol),
+       (.axis_aclk(s_axis_aclk_0_1),
+        .axis_aresetn(s_axis_aresetn_0_1),
+        .i_symbol(cp_rm_0_o_symbol),
         .m_axis_tdata(cp_rm2_0_m_axis_TDATA),
         .m_axis_tid(cp_rm2_0_m_axis_TID),
         .m_axis_tlast(cp_rm2_0_m_axis_TLAST),
         .m_axis_tuser(cp_rm2_0_m_axis_TUSER),
         .m_axis_tvalid(cp_rm2_0_m_axis_TVALID),
-        .s_axis_aclk(s_axis_aclk_0_1),
-        .s_axis_aresetn(s_axis_aresetn_0_1),
         .s_axis_tdata(axis_splitter_0_m_axis0_TDATA),
         .s_axis_tid(axis_splitter_0_m_axis0_TID),
         .s_axis_tlast(axis_splitter_0_m_axis0_TLAST),
         .s_axis_tuser(axis_splitter_0_m_axis0_TUSER),
         .s_axis_tvalid(axis_splitter_0_m_axis0_TVALID));
   design_1_cp_rm_0_0 cp_rm_0
-       (.m_axis_tdata(cp_rm_0_m_axis_TDATA),
+       (.axis_aclk(s_axis_aclk_0_1),
+        .axis_aresetn(s_axis_aresetn_0_1),
+        .m_axis_tdata(cp_rm_0_m_axis_TDATA),
         .m_axis_tid(cp_rm_0_m_axis_TID),
         .m_axis_tlast(cp_rm_0_m_axis_TLAST),
         .m_axis_tuser(cp_rm_0_m_axis_TUSER),
@@ -375,22 +439,20 @@ module design_1
         .m_cp_axis_tuser(cp_rm_0_m_cp_axis_TUSER),
         .m_cp_axis_tvalid(cp_rm_0_m_cp_axis_TVALID),
         .o_symbol(cp_rm_0_o_symbol),
-        .s_axis_aclk(s_axis_aclk_0_1),
-        .s_axis_aresetn(s_axis_aresetn_0_1),
         .s_axis_tdata(s_axis_0_1_TDATA),
         .s_axis_tid(s_axis_0_1_TID),
         .s_axis_tlast(s_axis_0_1_TLAST),
         .s_axis_tuser(s_axis_0_1_TUSER),
         .s_axis_tvalid(s_axis_0_1_TVALID));
   design_1_delay_0_0 delay_0
-       (.i_symbol(cp_rm_0_o_symbol),
+       (.axis_aclk(s_axis_aclk_0_1),
+        .axis_aresetn(s_axis_aresetn_0_1),
+        .i_symbol(cp_rm_0_o_symbol),
         .m_axis_tdata(delay_0_m_axis_TDATA),
         .m_axis_tid(delay_0_m_axis_TID),
         .m_axis_tlast(delay_0_m_axis_TLAST),
         .m_axis_tuser(delay_0_m_axis_TUSER),
         .m_axis_tvalid(delay_0_m_axis_TVALID),
-        .s_axis_aclk(s_axis_aclk_0_1),
-        .s_axis_aresetn(s_axis_aresetn_0_1),
         .s_axis_tdata(axis_data_fifo_0_M_AXIS_TDATA),
         .s_axis_tid(axis_data_fifo_0_M_AXIS_TID),
         .s_axis_tlast(axis_data_fifo_0_M_AXIS_TLAST),
@@ -398,20 +460,39 @@ module design_1
         .s_axis_tuser(axis_data_fifo_0_M_AXIS_TUSER),
         .s_axis_tvalid(axis_data_fifo_0_M_AXIS_TVALID));
   design_1_delay_1_0 delay_1
-       (.i_symbol(cp_rm_0_o_symbol),
+       (.axis_aclk(s_axis_aclk_0_1),
+        .axis_aresetn(s_axis_aresetn_0_1),
+        .i_symbol(cp_rm_0_o_symbol),
         .m_axis_tdata(delay_1_m_axis_TDATA),
         .m_axis_tid(delay_1_m_axis_TID),
         .m_axis_tlast(delay_1_m_axis_TLAST),
         .m_axis_tuser(delay_1_m_axis_TUSER),
         .m_axis_tvalid(delay_1_m_axis_TVALID),
-        .s_axis_aclk(s_axis_aclk_0_1),
-        .s_axis_aresetn(s_axis_aresetn_0_1),
         .s_axis_tdata(axis_data_fifo_1_M_AXIS_TDATA),
         .s_axis_tid(axis_data_fifo_1_M_AXIS_TID),
         .s_axis_tlast(axis_data_fifo_1_M_AXIS_TLAST),
         .s_axis_tready(axis_data_fifo_1_M_AXIS_TREADY),
         .s_axis_tuser(axis_data_fifo_1_M_AXIS_TUSER),
         .s_axis_tvalid(axis_data_fifo_1_M_AXIS_TVALID));
+  design_1_mux_0_0 mux_0
+       (.axis_aclk(s_axis_aclk_0_1),
+        .axis_aresetn(s_axis_aresetn_0_1),
+        .i_select(i_select_0_1),
+        .m_axis_tdata(mux_0_m_axis_TDATA),
+        .m_axis_tid(mux_0_m_axis_TID),
+        .m_axis_tlast(mux_0_m_axis_TLAST),
+        .m_axis_tuser(mux_0_m_axis_TUSER),
+        .m_axis_tvalid(mux_0_m_axis_TVALID),
+        .s_axis0_tdata(Mixer_m_axis_0_TDATA),
+        .s_axis0_tid(Mixer_m_axis_0_TID),
+        .s_axis0_tlast(Mixer_m_axis_0_TLAST),
+        .s_axis0_tuser(Mixer_m_axis_0_TUSER),
+        .s_axis0_tvalid(Mixer_m_axis_0_TVALID),
+        .s_axis1_tdata(axis_splitter_1_m_axis1_TDATA),
+        .s_axis1_tid(axis_splitter_1_m_axis1_TID),
+        .s_axis1_tlast(axis_splitter_1_m_axis1_TLAST),
+        .s_axis1_tuser(axis_splitter_1_m_axis1_TUSER),
+        .s_axis1_tvalid(axis_splitter_1_m_axis1_TVALID));
   design_1_scale_0_0 scale_0
        (.axis_aclk(s_axis_aclk_0_1),
         .axis_aresetn(s_axis_aresetn_0_1),
@@ -434,6 +515,9 @@ module design_1
         .s_axis_tlast(complex_mult_0_m_axis_TLAST),
         .s_axis_tuser(complex_mult_0_m_axis_TUSER),
         .s_axis_tvalid(complex_mult_0_m_axis_TVALID));
+  design_1_util_vector_logic_0_0 util_vector_logic_0
+       (.Op1(scale_0_o_negative_freq),
+        .Res(util_vector_logic_0_Res));
   design_1_xlconstant_0_0 xlconstant_0
        (.dout(xlconstant_0_dout));
 endmodule

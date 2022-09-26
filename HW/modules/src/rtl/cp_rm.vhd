@@ -17,8 +17,8 @@ entity cp_rm is
     g_PROCESSING_CYCLES           : integer := 383
   );
   port(
-    s_axis_aclk                   : in  std_logic;
-    s_axis_aresetn                : in  std_logic;
+    axis_aclk                   : in  std_logic;
+    axis_aresetn                : in  std_logic;
 
     s_axis_tdata                  : in  std_logic_vector(127 downto 0);
     s_axis_tvalid                 : in  std_logic;
@@ -48,9 +48,9 @@ architecture RTL of cp_rm is
   attribute X_INTERFACE_INFO      : string;
   attribute X_INTERFACE_PARAMETER : string;
   
-  attribute X_INTERFACE_INFO      of s_axis_aclk    : signal is "xilinx.com:signal:clock:1.0 s_axis_aclk CLK";
-  attribute X_INTERFACE_PARAMETER of s_axis_aclk    : 
-    signal is "ASSOCIATED_BUSIF s_axis_aclk:s_axis:m_axis:m_cp_axis, FREQ_HZ 250000000";
+  attribute X_INTERFACE_INFO      of axis_aclk    : signal is "xilinx.com:signal:clock:1.0 axis_aclk CLK";
+  attribute X_INTERFACE_PARAMETER of axis_aclk    : 
+    signal is "ASSOCIATED_BUSIF axis_aclk:s_axis:m_axis:m_cp_axis, FREQ_HZ 250000000";
 
   signal cp_counter               : std_logic_vector(9 downto 0);
   signal frame_current            : std_logic;
@@ -71,9 +71,9 @@ architecture RTL of cp_rm is
 begin
 
   -- Assert frame_current to indicate a packet is being received
-  P_FRAME : process(s_axis_aclk)
+  P_FRAME : process(axis_aclk)
   begin
-    if rising_edge(s_axis_aclk) then
+    if rising_edge(axis_aclk) then
       if s_axis_tvalid = '1' then
         frame_current             <= '1';
       end if;
@@ -84,11 +84,11 @@ begin
   tvalid_rising                   <= s_axis_tvalid and not in_tvalid;
 
   -- Create counter to cycle between all samples of OFDM symbol
-  P_COUNTER : process(s_axis_aclk,s_axis_aresetn)
+  P_COUNTER : process(axis_aclk,axis_aresetn)
   begin
-    if s_axis_aresetn = '0' then
+    if axis_aresetn = '0' then
       cp_counter                  <= (others => '0');
-    elsif rising_edge(s_axis_aclk) then
+    elsif rising_edge(axis_aclk) then
       if in_tlast = '1' or tvalid_rising = '1' then
         cp_counter                <= (others => '0');
       else
@@ -100,9 +100,9 @@ begin
   end process P_COUNTER;
 
   -- Register input AXIS
-  P_AXIS_REGISTER : process(s_axis_aclk)
+  P_AXIS_REGISTER : process(axis_aclk)
   begin
-    if rising_edge(s_axis_aclk) then
+    if rising_edge(axis_aclk) then
       in_tdata                    <= s_axis_tdata;
       in_tvalid                   <= s_axis_tvalid;
       in_tid                      <= s_axis_tid;
@@ -112,9 +112,9 @@ begin
   end process P_AXIS_REGISTER;
 
   -- Create cp removed stream and cp stream
-  P_CP : process(s_axis_aclk)
+  P_CP : process(axis_aclk)
   begin
-    if rising_edge(s_axis_aclk) then
+    if rising_edge(axis_aclk) then
       case s_axis_tvalid or in_tvalid is
         when '0' =>
           m_axis_tdata            <= (others => '0');
@@ -171,12 +171,12 @@ begin
   end process P_CP;
 
   -- Process to assert o_tlast_symbol for entire OFDM packet + processing time
-  P_OFDM_PACKET_TIMING : process(s_axis_aclk,s_axis_aresetn)
+  P_OFDM_PACKET_TIMING : process(axis_aclk,axis_aresetn)
   begin
-    if s_axis_aresetn = '0' then
+    if axis_aresetn = '0' then
       r_symbol                    <= '0';
       out_counter                 <= (others => '0');
-    elsif rising_edge(s_axis_aclk) then
+    elsif rising_edge(axis_aclk) then
       if s_axis_tvalid = '1' then
         out_counter               <= (others => '0');
         r_symbol                  <= '1';
@@ -193,11 +193,11 @@ begin
   o_symbol                        <= r_symbol;
 
   -- Process to calculate current OFDM symbol
-  P_SYMBOL_COUNTER : process(s_axis_aclk,s_axis_aresetn)
+  P_SYMBOL_COUNTER : process(axis_aclk,axis_aresetn)
   begin
-    if s_axis_aresetn = '0' then
+    if axis_aresetn = '0' then
       symbol_counter              <= (others => '0');
-    elsif rising_edge(s_axis_aclk) then
+    elsif rising_edge(axis_aclk) then
       -- Number of OFDM packets per symbol (max 256)
       if r_symbol = '1' then
         if in_tlast = '1' then

@@ -1,6 +1,6 @@
 
 ################################################################
-# This is a generated script based on design: design_1
+# This is a generated script based on design: Equalizer
 #
 # Though there are limitations about the generated script,
 # the main purpose of this utility is to make learning
@@ -34,12 +34,12 @@ if { [string first $scripts_vivado_version $current_vivado_version] == -1 } {
 ################################################################
 
 # To test this script, run the following commands from Vivado Tcl console:
-# source design_1_script.tcl
+# source Equalizer_script.tcl
 
 
 # The design that will be created by this Tcl script contains the following 
 # module references:
-# angle, axis_splitter, complex_mult_sum, conj, cp_rm2, cp_rm, delay
+# axis_splitter, mux
 
 # Please add the sources of those modules before sourcing this Tcl script.
 
@@ -56,7 +56,7 @@ if { $list_projs eq "" } {
 
 # CHANGE DESIGN NAME HERE
 variable design_name
-set design_name design_1
+set design_name Equalizer
 
 # If you do not already have an existing IP Integrator design open,
 # you can create a design using the following command:
@@ -125,44 +125,13 @@ if { $nRet != 0 } {
 
 set bCheckIPsPassed 1
 ##################################################################
-# CHECK IPs
-##################################################################
-set bCheckIPs 1
-if { $bCheckIPs == 1 } {
-   set list_check_ips "\ 
-xilinx.com:ip:axis_data_fifo:*\
-"
-
-   set list_ips_missing ""
-   common::send_gid_msg -ssname BD::TCL -id 2011 -severity "INFO" "Checking if the following IPs exist in the project's IP catalog: $list_check_ips ."
-
-   foreach ip_vlnv $list_check_ips {
-      set ip_obj [get_ipdefs -all $ip_vlnv]
-      if { $ip_obj eq "" } {
-         lappend list_ips_missing $ip_vlnv
-      }
-   }
-
-   if { $list_ips_missing ne "" } {
-      catch {common::send_gid_msg -ssname BD::TCL -id 2012 -severity "ERROR" "The following IPs are not found in the IP Catalog:\n  $list_ips_missing\n\nResolution: Please add the repository containing the IP(s) to the project." }
-      set bCheckIPsPassed 0
-   }
-
-}
-
-##################################################################
 # CHECK Modules
 ##################################################################
 set bCheckModules 1
 if { $bCheckModules == 1 } {
    set list_check_mods "\ 
-angle\
 axis_splitter\
-complex_mult_sum\
-conj\
-cp_rm2\
-cp_rm\
-delay\
+mux\
 "
 
    set list_mods_missing ""
@@ -225,7 +194,12 @@ proc create_root_design { parentCell } {
 
 
   # Create interface ports
-  set s_axis_0 [ create_bd_intf_port -mode Slave -vlnv xilinx.com:interface:axis_rtl:1.0 s_axis_0 ]
+  set m_axis [ create_bd_intf_port -mode Master -vlnv xilinx.com:interface:axis_rtl:1.0 m_axis ]
+  set_property -dict [ list \
+   CONFIG.FREQ_HZ {250000000} \
+   ] $m_axis
+
+  set s_axis [ create_bd_intf_port -mode Slave -vlnv xilinx.com:interface:axis_rtl:1.0 s_axis ]
   set_property -dict [ list \
    CONFIG.FREQ_HZ {250000000} \
    CONFIG.HAS_TKEEP {0} \
@@ -237,33 +211,16 @@ proc create_root_design { parentCell } {
    CONFIG.TDEST_WIDTH {0} \
    CONFIG.TID_WIDTH {8} \
    CONFIG.TUSER_WIDTH {8} \
-   ] $s_axis_0
+   ] $s_axis
 
 
   # Create ports
-  set s_axis_aclk_0 [ create_bd_port -dir I -type clk -freq_hz 250000000 s_axis_aclk_0 ]
+  set axis_aclk [ create_bd_port -dir I -type clk -freq_hz 250000000 axis_aclk ]
   set_property -dict [ list \
-   CONFIG.ASSOCIATED_BUSIF {s_axis_0} \
- ] $s_axis_aclk_0
-  set s_axis_aresetn_0 [ create_bd_port -dir I -type rst s_axis_aresetn_0 ]
-
-  # Create instance: angle_0, and set properties
-  set block_name angle
-  set block_cell_name angle_0
-  if { [catch {set angle_0 [create_bd_cell -type module -reference $block_name $block_cell_name] } errmsg] } {
-     catch {common::send_gid_msg -ssname BD::TCL -id 2095 -severity "ERROR" "Unable to add referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
-     return 1
-   } elseif { $angle_0 eq "" } {
-     catch {common::send_gid_msg -ssname BD::TCL -id 2096 -severity "ERROR" "Unable to referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
-     return 1
-   }
-  
-  set_property -dict [ list \
-   CONFIG.FREQ_HZ {250000000} \
- ] [get_bd_intf_pins /angle_0/s_axis]
-
-  # Create instance: axis_data_fifo_0, and set properties
-  set axis_data_fifo_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:axis_data_fifo axis_data_fifo_0 ]
+   CONFIG.ASSOCIATED_RESET {axis_aresetn} \
+ ] $axis_aclk
+  set axis_aresetn [ create_bd_port -dir I -type rst axis_aresetn ]
+  set bypass [ create_bd_port -dir I bypass ]
 
   # Create instance: axis_splitter_0, and set properties
   set block_name axis_splitter
@@ -276,112 +233,27 @@ proc create_root_design { parentCell } {
      return 1
    }
   
-  set_property -dict [ list \
-   CONFIG.FREQ_HZ {250000000} \
- ] [get_bd_intf_pins /axis_splitter_0/m_axis0]
-
-  set_property -dict [ list \
-   CONFIG.FREQ_HZ {250000000} \
- ] [get_bd_intf_pins /axis_splitter_0/m_axis1]
-
-  # Create instance: complex_mult_sum_0, and set properties
-  set block_name complex_mult_sum
-  set block_cell_name complex_mult_sum_0
-  if { [catch {set complex_mult_sum_0 [create_bd_cell -type module -reference $block_name $block_cell_name] } errmsg] } {
+  # Create instance: mux_0, and set properties
+  set block_name mux
+  set block_cell_name mux_0
+  if { [catch {set mux_0 [create_bd_cell -type module -reference $block_name $block_cell_name] } errmsg] } {
      catch {common::send_gid_msg -ssname BD::TCL -id 2095 -severity "ERROR" "Unable to add referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
      return 1
-   } elseif { $complex_mult_sum_0 eq "" } {
+   } elseif { $mux_0 eq "" } {
      catch {common::send_gid_msg -ssname BD::TCL -id 2096 -severity "ERROR" "Unable to referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
      return 1
    }
   
-  set_property -dict [ list \
-   CONFIG.FREQ_HZ {250000000} \
- ] [get_bd_intf_pins /complex_mult_sum_0/m_axis]
-
-  # Create instance: conj_0, and set properties
-  set block_name conj
-  set block_cell_name conj_0
-  if { [catch {set conj_0 [create_bd_cell -type module -reference $block_name $block_cell_name] } errmsg] } {
-     catch {common::send_gid_msg -ssname BD::TCL -id 2095 -severity "ERROR" "Unable to add referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
-     return 1
-   } elseif { $conj_0 eq "" } {
-     catch {common::send_gid_msg -ssname BD::TCL -id 2096 -severity "ERROR" "Unable to referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
-     return 1
-   }
-  
-  set_property -dict [ list \
-   CONFIG.FREQ_HZ {250000000} \
-   CONFIG.CLK_DOMAIN {design_1_s_axis_aclk_0} \
- ] [get_bd_intf_pins /conj_0/m_axis]
-
-  set_property -dict [ list \
-   CONFIG.CLK_DOMAIN {design_1_s_axis_aclk_0} \
- ] [get_bd_pins /conj_0/s_axis_aclk]
-
-  # Create instance: cp_rm2_0, and set properties
-  set block_name cp_rm2
-  set block_cell_name cp_rm2_0
-  if { [catch {set cp_rm2_0 [create_bd_cell -type module -reference $block_name $block_cell_name] } errmsg] } {
-     catch {common::send_gid_msg -ssname BD::TCL -id 2095 -severity "ERROR" "Unable to add referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
-     return 1
-   } elseif { $cp_rm2_0 eq "" } {
-     catch {common::send_gid_msg -ssname BD::TCL -id 2096 -severity "ERROR" "Unable to referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
-     return 1
-   }
-  
-  set_property -dict [ list \
-   CONFIG.FREQ_HZ {250000000} \
- ] [get_bd_intf_pins /cp_rm2_0/m_axis]
-
-  # Create instance: cp_rm_0, and set properties
-  set block_name cp_rm
-  set block_cell_name cp_rm_0
-  if { [catch {set cp_rm_0 [create_bd_cell -type module -reference $block_name $block_cell_name] } errmsg] } {
-     catch {common::send_gid_msg -ssname BD::TCL -id 2095 -severity "ERROR" "Unable to add referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
-     return 1
-   } elseif { $cp_rm_0 eq "" } {
-     catch {common::send_gid_msg -ssname BD::TCL -id 2096 -severity "ERROR" "Unable to referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
-     return 1
-   }
-  
-  set_property -dict [ list \
-   CONFIG.ASSOCIATED_PORT {} \
- ] [get_bd_pins /cp_rm_0/s_axis_aclk]
-
-  # Create instance: delay_0, and set properties
-  set block_name delay
-  set block_cell_name delay_0
-  if { [catch {set delay_0 [create_bd_cell -type module -reference $block_name $block_cell_name] } errmsg] } {
-     catch {common::send_gid_msg -ssname BD::TCL -id 2095 -severity "ERROR" "Unable to add referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
-     return 1
-   } elseif { $delay_0 eq "" } {
-     catch {common::send_gid_msg -ssname BD::TCL -id 2096 -severity "ERROR" "Unable to referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
-     return 1
-   }
-    set_property -dict [ list \
-   CONFIG.g_DELAY_CYCLES {264} \
- ] $delay_0
-
-  set_property -dict [ list \
-   CONFIG.FREQ_HZ {250000000} \
- ] [get_bd_intf_pins /delay_0/m_axis]
-
   # Create interface connections
-  connect_bd_intf_net -intf_net axis_data_fifo_0_M_AXIS [get_bd_intf_pins axis_data_fifo_0/M_AXIS] [get_bd_intf_pins delay_0/s_axis]
-  connect_bd_intf_net -intf_net axis_splitter_0_m_axis0 [get_bd_intf_pins axis_splitter_0/m_axis0] [get_bd_intf_pins cp_rm2_0/s_axis]
-  connect_bd_intf_net -intf_net complex_mult_sum_0_m_axis [get_bd_intf_pins angle_0/s_axis] [get_bd_intf_pins complex_mult_sum_0/m_axis]
-  connect_bd_intf_net -intf_net conj_0_m_axis [get_bd_intf_pins axis_data_fifo_0/S_AXIS] [get_bd_intf_pins conj_0/m_axis]
-  connect_bd_intf_net -intf_net cp_rm2_0_m_axis [get_bd_intf_pins complex_mult_sum_0/s_axis1] [get_bd_intf_pins cp_rm2_0/m_axis]
-  connect_bd_intf_net -intf_net cp_rm_0_m_axis [get_bd_intf_pins axis_splitter_0/s_axis] [get_bd_intf_pins cp_rm_0/m_axis]
-  connect_bd_intf_net -intf_net cp_rm_0_m_cp_axis [get_bd_intf_pins conj_0/s_axis] [get_bd_intf_pins cp_rm_0/m_cp_axis]
-  connect_bd_intf_net -intf_net delay_0_m_axis [get_bd_intf_pins complex_mult_sum_0/s_axis0] [get_bd_intf_pins delay_0/m_axis]
-  connect_bd_intf_net -intf_net s_axis_0_1 [get_bd_intf_ports s_axis_0] [get_bd_intf_pins cp_rm_0/s_axis]
+  connect_bd_intf_net -intf_net axis_splitter_0_m_axis0 [get_bd_intf_pins axis_splitter_0/m_axis0] [get_bd_intf_pins mux_0/s_axis0]
+  connect_bd_intf_net -intf_net axis_splitter_0_m_axis1 [get_bd_intf_pins axis_splitter_0/m_axis1] [get_bd_intf_pins mux_0/s_axis1]
+  connect_bd_intf_net -intf_net mux_0_m_axis [get_bd_intf_ports m_axis] [get_bd_intf_pins mux_0/m_axis]
+  connect_bd_intf_net -intf_net s_axis_0_1 [get_bd_intf_ports s_axis] [get_bd_intf_pins axis_splitter_0/s_axis]
 
   # Create port connections
-  connect_bd_net -net cp_rm_0_o_tlast_symbol [get_bd_pins cp_rm2_0/i_tlast_symbol] [get_bd_pins cp_rm_0/o_tlast_symbol] [get_bd_pins delay_0/i_tlast_symbol]
-  connect_bd_net -net s_axis_aclk_0_1 [get_bd_ports s_axis_aclk_0] [get_bd_pins angle_0/axis_aclk] [get_bd_pins axis_data_fifo_0/s_axis_aclk] [get_bd_pins axis_splitter_0/s_axis_aclk] [get_bd_pins complex_mult_sum_0/s_axis_aclk] [get_bd_pins conj_0/s_axis_aclk] [get_bd_pins cp_rm2_0/s_axis_aclk] [get_bd_pins cp_rm_0/s_axis_aclk] [get_bd_pins delay_0/s_axis_aclk]
-  connect_bd_net -net s_axis_aresetn_0_1 [get_bd_ports s_axis_aresetn_0] [get_bd_pins angle_0/axis_aresetn] [get_bd_pins axis_data_fifo_0/s_axis_aresetn] [get_bd_pins axis_splitter_0/s_axis_aresetn] [get_bd_pins complex_mult_sum_0/s_axis_aresetn] [get_bd_pins conj_0/s_axis_aresetn] [get_bd_pins cp_rm2_0/s_axis_aresetn] [get_bd_pins cp_rm_0/s_axis_aresetn] [get_bd_pins delay_0/s_axis_aresetn]
+  connect_bd_net -net aclk_0_1 [get_bd_ports axis_aclk] [get_bd_pins axis_splitter_0/axis_aclk] [get_bd_pins mux_0/axis_aclk]
+  connect_bd_net -net aresetn_0_1 [get_bd_ports axis_aresetn] [get_bd_pins axis_splitter_0/axis_aresetn] [get_bd_pins mux_0/axis_aresetn]
+  connect_bd_net -net i_select_0_1 [get_bd_ports bypass] [get_bd_pins mux_0/i_select]
 
   # Create address segments
 

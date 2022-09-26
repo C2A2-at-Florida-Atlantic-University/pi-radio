@@ -12,8 +12,8 @@ use ieee.math_real.all;
 
 entity axis_splitter is
   port(
-    s_axis_aclk                   : in  std_logic;
-    s_axis_aresetn                : in  std_logic;
+    axis_aclk                     : in  std_logic;
+    axis_aresetn                  : in  std_logic;
 
     s_axis_tdata                  : in  std_logic_vector(127 downto 0);
     s_axis_tvalid                 : in  std_logic;
@@ -40,15 +40,15 @@ architecture RTL of axis_splitter is
   attribute X_INTERFACE_INFO      : string;
   attribute X_INTERFACE_PARAMETER : string;
   
-  attribute X_INTERFACE_INFO      of s_axis_aclk    : signal is "xilinx.com:signal:clock:1.0 s_axis_aclk CLK";
-  attribute X_INTERFACE_PARAMETER of s_axis_aclk    : 
-    signal is "ASSOCIATED_BUSIF s_axis_aclk:s_axis:m_axis0:m_axis1, FREQ_HZ 250000000";
+  attribute X_INTERFACE_INFO      of axis_aclk    : signal is "xilinx.com:signal:clock:1.0 axis_aclk CLK";
+  attribute X_INTERFACE_PARAMETER of axis_aclk    : 
+    signal is "ASSOCIATED_BUSIF axis_aclk:s_axis:m_axis0:m_axis1, FREQ_HZ 250000000";
 
 begin
 
-  P_SPLITTER : process(s_axis_aclk)
+  P_SPLITTER : process(axis_aclk)
   begin
-    if rising_edge(s_axis_aclk) then
+    if rising_edge(axis_aclk) then
       m_axis0_tdata                 <= s_axis_tdata;
       m_axis0_tvalid                <= s_axis_tvalid;
       m_axis0_tid                   <= s_axis_tid;

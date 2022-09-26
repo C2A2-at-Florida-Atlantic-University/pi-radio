@@ -73,18 +73,31 @@ module equalizer_top_tb();
   logic [15:0]                      mix_in_i_3,mix_in_q_3;
   logic [15:0]                      mix_in_i_4,mix_in_q_4;
   
-  logic [31:0]                      mixer_sample_i_1,mixer_sample_q_1,mixer_actual_i_1,mixer_actual_q_1;
-  logic [31:0]                      mixer_sample_i_2,mixer_sample_q_2,mixer_actual_i_2,mixer_actual_q_2;
-  logic [31:0]                      mixer_sample_i_3,mixer_sample_q_3,mixer_actual_i_3,mixer_actual_q_3;
-  logic [31:0]                      mixer_sample_i_4,mixer_sample_q_4,mixer_actual_i_4,mixer_actual_q_4;
+//  logic [31:0]                      mixer_sample_i_1,mixer_sample_q_1,mixer_actual_i_1,mixer_actual_q_1;
+//  logic [31:0]                      mixer_sample_i_2,mixer_sample_q_2,mixer_actual_i_2,mixer_actual_q_2;
+//  logic [31:0]                      mixer_sample_i_3,mixer_sample_q_3,mixer_actual_i_3,mixer_actual_q_3;
+//  logic [31:0]                      mixer_sample_i_4,mixer_sample_q_4,mixer_actual_i_4,mixer_actual_q_4;
+
+  logic [15:0]                      mixer_sample_i_1,mixer_sample_q_1,mixer_actual_i_1,mixer_actual_q_1;
+  logic [15:0]                      mixer_sample_i_2,mixer_sample_q_2,mixer_actual_i_2,mixer_actual_q_2;
+  logic [15:0]                      mixer_sample_i_3,mixer_sample_q_3,mixer_actual_i_3,mixer_actual_q_3;
+  logic [15:0]                      mixer_sample_i_4,mixer_sample_q_4,mixer_actual_i_4,mixer_actual_q_4;
 
 //---------------------------------------------------------------
 // DUT
 //---------------------------------------------------------------
   design_1_wrapper DUT (
-    .s_axis_aclk_0          (r_clk),
-    .s_axis_aresetn_0       (r_nRst),
+    .s_axis_aclk_0                  (r_clk),
+    .s_axis_aresetn_0               (r_nRst),
     
+    .bypass                         (1'b0),
+
+    .m_axis_0_tdata                 (),
+    .m_axis_0_tid                   (),
+    .m_axis_0_tlast                 (),
+    .m_axis_0_tuser                 (),
+    .m_axis_0_tvalid                (),
+
     .s_axis_0_tdata                 (in_axis_tdata),
     .s_axis_0_tid                   (in_axis_tid),
     .s_axis_0_tlast                 (in_axis_tlast),
@@ -462,7 +475,7 @@ module equalizer_top_tb();
       $stop;
     end
 
-    #(CLOCK_PERIOD*(c_PRECISION+356)); //351
+    #(CLOCK_PERIOD*(c_PRECISION+357)); //351
 
     for (int i = 0; i < (ofdm_symbols*256); i++) begin
       
@@ -475,14 +488,23 @@ module equalizer_top_tb();
         dds_sample_q_1,dds_sample_i_2,dds_sample_q_2,dds_sample_i_3,
         dds_sample_q_3,dds_sample_i_4,dds_sample_q_4);
 
-      dds_actual_i_1 = DUT.design_1_i.Mixer.dds_top_0.m_axis_tdata[15:0];
-      dds_actual_q_1 = DUT.design_1_i.Mixer.dds_top_0.m_axis_tdata[31:16];
-      dds_actual_i_2 = DUT.design_1_i.Mixer.dds_top_0.m_axis_tdata[47:32];
-      dds_actual_q_2 = DUT.design_1_i.Mixer.dds_top_0.m_axis_tdata[63:48];
-      dds_actual_i_3 = DUT.design_1_i.Mixer.dds_top_0.m_axis_tdata[79:64];
-      dds_actual_q_3 = DUT.design_1_i.Mixer.dds_top_0.m_axis_tdata[95:80];
-      dds_actual_i_4 = DUT.design_1_i.Mixer.dds_top_0.m_axis_tdata[111:96];
-      dds_actual_q_4 = DUT.design_1_i.Mixer.dds_top_0.m_axis_tdata[127:112];
+//      dds_actual_i_1 = DUT.design_1_i.Mixer.dds_top_0.m_axis_tdata[15:0];
+//      dds_actual_q_1 = DUT.design_1_i.Mixer.dds_top_0.m_axis_tdata[31:16];
+//      dds_actual_i_2 = DUT.design_1_i.Mixer.dds_top_0.m_axis_tdata[47:32];
+//      dds_actual_q_2 = DUT.design_1_i.Mixer.dds_top_0.m_axis_tdata[63:48];
+//      dds_actual_i_3 = DUT.design_1_i.Mixer.dds_top_0.m_axis_tdata[79:64];
+//      dds_actual_q_3 = DUT.design_1_i.Mixer.dds_top_0.m_axis_tdata[95:80];
+//      dds_actual_i_4 = DUT.design_1_i.Mixer.dds_top_0.m_axis_tdata[111:96];
+//      dds_actual_q_4 = DUT.design_1_i.Mixer.dds_top_0.m_axis_tdata[127:112];
+
+      dds_actual_i_1 = DUT.design_1_i.Mixer.conj_0.m_axis_tdata[15:0];
+      dds_actual_q_1 = DUT.design_1_i.Mixer.conj_0.m_axis_tdata[31:16];
+      dds_actual_i_2 = DUT.design_1_i.Mixer.conj_0.m_axis_tdata[47:32];
+      dds_actual_q_2 = DUT.design_1_i.Mixer.conj_0.m_axis_tdata[63:48];
+      dds_actual_i_3 = DUT.design_1_i.Mixer.conj_0.m_axis_tdata[79:64];
+      dds_actual_q_3 = DUT.design_1_i.Mixer.conj_0.m_axis_tdata[95:80];
+      dds_actual_i_4 = DUT.design_1_i.Mixer.conj_0.m_axis_tdata[111:96];
+      dds_actual_q_4 = DUT.design_1_i.Mixer.conj_0.m_axis_tdata[127:112];
 
       $fdisplay(fd_dds_out,"%d, %d\n%d, %d\n%d, %d\n%d, %d",$signed(dds_actual_i_1),
         $signed(dds_actual_q_1),$signed(dds_actual_i_2),$signed(dds_actual_q_2),
@@ -537,7 +559,7 @@ module equalizer_top_tb();
       $stop;
     end
 
-    #(CLOCK_PERIOD*(c_PRECISION+356));
+    #(CLOCK_PERIOD*(c_PRECISION+357));
 
     for (int i = 0; i < (ofdm_symbols*256); i++) begin
 
@@ -582,7 +604,7 @@ module equalizer_top_tb();
       $stop;
     end
     
-    #(CLOCK_PERIOD*(c_PRECISION+363));
+    #(CLOCK_PERIOD*(c_PRECISION+365));
     
     for (int i = 0; i < (ofdm_symbols*256); i++) begin
 
@@ -595,14 +617,14 @@ module equalizer_top_tb();
         mixer_sample_q_1,mixer_sample_i_2,mixer_sample_q_2,mixer_sample_i_3,
         mixer_sample_q_3,mixer_sample_i_4,mixer_sample_q_4);
 
-      mixer_actual_i_1 = DUT.design_1_i.Mixer.mixer_0.m_axis_tdata[31:0];
-      mixer_actual_q_1 = DUT.design_1_i.Mixer.mixer_0.m_axis_tdata[63:32];
-      mixer_actual_i_2 = DUT.design_1_i.Mixer.mixer_0.m_axis_tdata[95:64];
-      mixer_actual_q_2 = DUT.design_1_i.Mixer.mixer_0.m_axis_tdata[127:96];
-      mixer_actual_i_3 = DUT.design_1_i.Mixer.mixer_0.m_axis_tdata[159:128];
-      mixer_actual_q_3 = DUT.design_1_i.Mixer.mixer_0.m_axis_tdata[191:160];
-      mixer_actual_i_4 = DUT.design_1_i.Mixer.mixer_0.m_axis_tdata[223:192];
-      mixer_actual_q_4 = DUT.design_1_i.Mixer.mixer_0.m_axis_tdata[255:224];
+      mixer_actual_i_1 = DUT.design_1_i.mux_0.m_axis_tdata[15:0];
+      mixer_actual_q_1 = DUT.design_1_i.mux_0.m_axis_tdata[31:16];
+      mixer_actual_i_2 = DUT.design_1_i.mux_0.m_axis_tdata[47:32];
+      mixer_actual_q_2 = DUT.design_1_i.mux_0.m_axis_tdata[63:48];
+      mixer_actual_i_3 = DUT.design_1_i.mux_0.m_axis_tdata[79:64];
+      mixer_actual_q_3 = DUT.design_1_i.mux_0.m_axis_tdata[95:80];
+      mixer_actual_i_4 = DUT.design_1_i.mux_0.m_axis_tdata[111:96];
+      mixer_actual_q_4 = DUT.design_1_i.mux_0.m_axis_tdata[127:112];
 
       $fdisplay(fd_mixer_out,"%d, %d\n%d, %d\n%d, %d\n%d, %d",$signed(mixer_actual_i_1),
         $signed(mixer_actual_q_1),$signed(mixer_actual_i_2),$signed(mixer_actual_q_2),
@@ -611,6 +633,34 @@ module equalizer_top_tb();
 
     end
     
+    #(579*CLOCK_PERIOD);
+
+    for (int i = 0; i < (ofdm_symbols*256); i++) begin
+
+      if (!(i%256)&&(i!=0))
+        #(CLOCK_PERIOD*64);
+
+      #CLOCK_PERIOD;
+
+      $fscanf(fd_mixer,"%f, %f\n%f, %f\n%f, %f\n%f, %f\n",mixer_sample_i_1,
+        mixer_sample_q_1,mixer_sample_i_2,mixer_sample_q_2,mixer_sample_i_3,
+        mixer_sample_q_3,mixer_sample_i_4,mixer_sample_q_4);
+      
+      mixer_actual_i_1 = DUT.design_1_i.mux_0.m_axis_tdata[15:0];
+      mixer_actual_q_1 = DUT.design_1_i.mux_0.m_axis_tdata[31:16];
+      mixer_actual_i_2 = DUT.design_1_i.mux_0.m_axis_tdata[47:32];
+      mixer_actual_q_2 = DUT.design_1_i.mux_0.m_axis_tdata[63:48];
+      mixer_actual_i_3 = DUT.design_1_i.mux_0.m_axis_tdata[79:64];
+      mixer_actual_q_3 = DUT.design_1_i.mux_0.m_axis_tdata[95:80];
+      mixer_actual_i_4 = DUT.design_1_i.mux_0.m_axis_tdata[111:96];
+      mixer_actual_q_4 = DUT.design_1_i.mux_0.m_axis_tdata[127:112];
+
+      $fdisplay(fd_mixer_out,"%d, %d\n%d, %d\n%d, %d\n%d, %d",$signed(mixer_actual_i_1),
+        $signed(mixer_actual_q_1),$signed(mixer_actual_i_2),$signed(mixer_actual_q_2),
+        $signed(mixer_actual_i_3),$signed(mixer_actual_q_3),$signed(mixer_actual_i_4),
+        $signed(mixer_actual_q_4));
+
+    end
     $fclose(fd_mixer);
     $fclose(fd_mixer_out);
   end
@@ -620,6 +670,25 @@ module equalizer_top_tb();
 //---------------------------------------------------------------
   initial begin
     r_nRst                          <= 1'b0;
+    #CLOCK_PERIOD;
+    r_nRst                          <= 1'b1;
+    #(4*CLOCK_PERIOD);
+    #CLOCK_PERIOD;
+    in_axis_tvalid                  <= 1'b1;
+    in_axis_tuser                   <= '0;
+    in_axis_tid                     <= '0;
+    for (int i = 0; i < (ofdm_symbols*320); i++) begin
+      if (!((i+1)%320)&&(i!=0))
+        in_axis_tlast               <= 1'b1;
+      if (!(i%320)&&(i!=0))
+        in_axis_tlast               <= 1'b0;
+      #CLOCK_PERIOD;
+    end
+    in_axis_tlast                   <= 1'b0;
+    in_axis_tvalid                  <= 1'b0;
+
+    #(2000+((ofdm_symbols-1)*CLOCK_PERIOD));
+
     #CLOCK_PERIOD;
     r_nRst                          <= 1'b1;
     #(4*CLOCK_PERIOD);
@@ -677,7 +746,36 @@ module equalizer_top_tb();
       #CLOCK_PERIOD;
     end
     $fclose(fd);
-    #(2000+((ofdm_symbols-1)*CLOCK_PERIOD)) $stop;
+    #(2000+((ofdm_symbols-1)*CLOCK_PERIOD));
+    fd = $fopen("../../../../../modules/sim/equalizer_input_samples.txt","r");
+    if (fd) $display("File was opened successfully: %0d ",fd);
+    else begin   
+      $display("File was NOT opened successfully: %0d",fd);
+      $stop;
+    end
+
+    #(CLOCK_PERIOD*6);
+
+    for (int i = 0; i < (ofdm_symbols*320); i++) begin
+      $fscanf(fd,"%d, %d",i_data1,q_data1);
+      $fscanf(fd,"%d, %d",i_data2,q_data2);
+      $fscanf(fd,"%d, %d",i_data3,q_data3);
+      $fscanf(fd,"%d, %d",i_data4,q_data4);
+      if (i == 0) begin
+        $display("Printing Samples");
+        $display("%D + i%D",$signed(i_data1),$signed(q_data1));
+        $display("%D + i%D",$signed(i_data2),$signed(q_data2));
+        $display("%D + i%D",$signed(i_data3),$signed(q_data3));
+        $display("%D + i%D",$signed(i_data4),$signed(q_data4));
+      end
+      in_axis_tdata                 <= {q_data4,i_data4,q_data3,i_data3,
+                                       q_data2,i_data2,q_data1,i_data1};
+      #CLOCK_PERIOD;
+    end
+    $fclose(fd);
+    $fclose(fd_info);
+    #(2000+((ofdm_symbols-1)*CLOCK_PERIOD)); $stop;
+
   end
 
 endmodule
