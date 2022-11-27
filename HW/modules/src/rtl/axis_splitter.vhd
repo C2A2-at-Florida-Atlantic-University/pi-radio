@@ -42,7 +42,7 @@ architecture RTL of axis_splitter is
   
   attribute X_INTERFACE_INFO      of axis_aclk    : signal is "xilinx.com:signal:clock:1.0 axis_aclk CLK";
   attribute X_INTERFACE_PARAMETER of axis_aclk    : 
-    signal is "ASSOCIATED_BUSIF axis_aclk:s_axis:m_axis0:m_axis1, FREQ_HZ 250000000";
+    signal is "ASSOCIATED_BUSIF axis_aclk:s_axis:m_axis0:m_axis1, FREQ_HZ 99999001";
 
 begin
 

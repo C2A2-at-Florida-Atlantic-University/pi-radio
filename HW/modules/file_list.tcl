@@ -10,5 +10,6 @@ import_ip src/ip/dsp_macro_0.xci
 
 upgrade_ip [get_ips {*}]
 
-add_files -fileset sim_1 sim/equalizer_top_tb.sv
-set_property top equalizer_top_tb [get_filesets sim_1]
+add_files -fileset sim_1 sim/cfo_correction_top_tb.sv
+add_files -fileset sim_1 sim/tlast_gen_tb.sv
+set_property top cfo_correction_top_tb [get_filesets sim_1]

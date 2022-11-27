@@ -130,7 +130,7 @@ set bCheckIPsPassed 1
 set bCheckIPs 1
 if { $bCheckIPs == 1 } {
    set list_check_ips "\ 
-xilinx.com:ip:xfft:*\
+xilinx.com:user:ssr_FFT:*\
 "
 
    set list_ips_missing ""
@@ -233,20 +233,10 @@ proc create_root_design { parentCell } {
 
 
   # Create interface ports
-  set S_AXIS_CONFIG_0 [ create_bd_intf_port -mode Slave -vlnv xilinx.com:interface:axis_rtl:1.0 S_AXIS_CONFIG_0 ]
-  set_property -dict [ list \
-   CONFIG.HAS_TKEEP {0} \
-   CONFIG.HAS_TLAST {0} \
-   CONFIG.HAS_TREADY {1} \
-   CONFIG.HAS_TSTRB {0} \
-   CONFIG.LAYERED_METADATA {undef} \
-   CONFIG.TDATA_NUM_BYTES {12} \
-   CONFIG.TDEST_WIDTH {0} \
-   CONFIG.TID_WIDTH {0} \
-   CONFIG.TUSER_WIDTH {0} \
-   ] $S_AXIS_CONFIG_0
-
   set m_axis_0_0 [ create_bd_intf_port -mode Master -vlnv xilinx.com:interface:axis_rtl:1.0 m_axis_0_0 ]
+  set_property -dict [ list \
+   CONFIG.FREQ_HZ {250000000} \
+   ] $m_axis_0_0
 
   set s_axis_0 [ create_bd_intf_port -mode Slave -vlnv xilinx.com:interface:axis_rtl:1.0 s_axis_0 ]
   set_property -dict [ list \
@@ -265,6 +255,9 @@ proc create_root_design { parentCell } {
 
   # Create ports
   set aclk_0 [ create_bd_port -dir I -type clk -freq_hz 250000000 aclk_0 ]
+  set_property -dict [ list \
+   CONFIG.ASSOCIATED_BUSIF {m_axis_0_0:s_axis_0} \
+ ] $aclk_0
   set aresetn_0 [ create_bd_port -dir I -type rst aresetn_0 ]
   set bypass_cfo [ create_bd_port -dir I bypass_cfo ]
   set bypass_equalizer [ create_bd_port -dir I bypass_equalizer ]
@@ -291,27 +284,18 @@ proc create_root_design { parentCell } {
    CONFIG.LOCK_PROPAGATE {0} \
  ] $cfo_correction_0
 
-  # Create instance: xfft_0, and set properties
-  set xfft_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:xfft xfft_0 ]
-  set_property -dict [ list \
-   CONFIG.aresetn {true} \
-   CONFIG.channels {4} \
-   CONFIG.data_format {fixed_point} \
-   CONFIG.implementation_options {automatically_select} \
-   CONFIG.number_of_stages_using_block_ram_for_data_and_phase_factors {0} \
-   CONFIG.target_data_throughput {150} \
- ] $xfft_0
+  # Create instance: ssr_FFT_0, and set properties
+  set ssr_FFT_0 [ create_bd_cell -type ip -vlnv xilinx.com:user:ssr_FFT ssr_FFT_0 ]
 
   # Create interface connections
   connect_bd_intf_net -intf_net Equalizer_0_m_axis_0 [get_bd_intf_ports m_axis_0_0] [get_bd_intf_pins Equalizer_0/m_axis]
-  connect_bd_intf_net -intf_net S_AXIS_CONFIG_0_1 [get_bd_intf_ports S_AXIS_CONFIG_0] [get_bd_intf_pins xfft_0/S_AXIS_CONFIG]
-  connect_bd_intf_net -intf_net cfo_correction_0_m_axis_0 [get_bd_intf_pins cfo_correction_0/m_axis] [get_bd_intf_pins xfft_0/S_AXIS_DATA]
+  connect_bd_intf_net -intf_net cfo_correction_0_m_axis [get_bd_intf_pins cfo_correction_0/m_axis] [get_bd_intf_pins ssr_FFT_0/s00_axis]
   connect_bd_intf_net -intf_net s_axis_0_1 [get_bd_intf_ports s_axis_0] [get_bd_intf_pins cfo_correction_0/s_axis]
-  connect_bd_intf_net -intf_net xfft_0_M_AXIS_DATA [get_bd_intf_pins Equalizer_0/s_axis] [get_bd_intf_pins xfft_0/M_AXIS_DATA]
+  connect_bd_intf_net -intf_net ssr_FFT_0_m00_axis [get_bd_intf_pins Equalizer_0/s_axis] [get_bd_intf_pins ssr_FFT_0/m00_axis]
 
   # Create port connections
-  connect_bd_net -net aclk_0_1 [get_bd_ports aclk_0] [get_bd_pins Equalizer_0/axis_aclk] [get_bd_pins cfo_correction_0/axis_aclk] [get_bd_pins xfft_0/aclk]
-  connect_bd_net -net aresetn_0_1 [get_bd_ports aresetn_0] [get_bd_pins Equalizer_0/axis_aresetn] [get_bd_pins cfo_correction_0/axis_aresetn] [get_bd_pins xfft_0/aresetn]
+  connect_bd_net -net aclk_0_1 [get_bd_ports aclk_0] [get_bd_pins Equalizer_0/axis_aclk] [get_bd_pins cfo_correction_0/axis_aclk] [get_bd_pins ssr_FFT_0/axis_aclk]
+  connect_bd_net -net aresetn_0_1 [get_bd_ports aresetn_0] [get_bd_pins Equalizer_0/axis_aresetn] [get_bd_pins cfo_correction_0/axis_aresetn] [get_bd_pins ssr_FFT_0/axis_aresetn]
   connect_bd_net -net bypass_0_1 [get_bd_ports bypass_cfo] [get_bd_pins cfo_correction_0/bypass]
   connect_bd_net -net bypass_0_2 [get_bd_ports bypass_equalizer] [get_bd_pins Equalizer_0/bypass]
 

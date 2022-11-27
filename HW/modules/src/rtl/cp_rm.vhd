@@ -50,7 +50,7 @@ architecture RTL of cp_rm is
   
   attribute X_INTERFACE_INFO      of axis_aclk    : signal is "xilinx.com:signal:clock:1.0 axis_aclk CLK";
   attribute X_INTERFACE_PARAMETER of axis_aclk    : 
-    signal is "ASSOCIATED_BUSIF axis_aclk:s_axis:m_axis:m_cp_axis, FREQ_HZ 250000000";
+    signal is "ASSOCIATED_BUSIF axis_aclk:s_axis:m_axis:m_cp_axis, FREQ_HZ 99999001";
 
   signal cp_counter               : std_logic_vector(9 downto 0);
   signal frame_current            : std_logic;
@@ -66,7 +66,7 @@ architecture RTL of cp_rm is
   signal r_tlast_symbol           : std_logic;
 
   signal out_counter              : std_logic_vector(integer(ceil(log2(real(g_PROCESSING_CYCLES)))) downto 0);
-  signal r_symbol                 : std_logic;
+  signal r_symbol                 : std_logic := '0';
 
 begin
 
@@ -169,12 +169,12 @@ begin
       end case;
     end if;
   end process P_CP;
-
-  -- Process to assert o_tlast_symbol for entire OFDM packet + processing time
+ 
+  -- Process to assert o_symbol for entire OFDM packet + processing time
   P_OFDM_PACKET_TIMING : process(axis_aclk,axis_aresetn)
   begin
     if axis_aresetn = '0' then
-      r_symbol                    <= '0';
+--      r_symbol                    <= '0';
       out_counter                 <= (others => '0');
     elsif rising_edge(axis_aclk) then
       if s_axis_tvalid = '1' then
@@ -185,6 +185,7 @@ begin
           r_symbol                <= '0';
         else
           out_counter             <= out_counter + '1';
+          r_symbol                <= '1';
         end if;
       end if;
     end if;
