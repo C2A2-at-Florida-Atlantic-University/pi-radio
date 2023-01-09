@@ -1,0 +1,4 @@
+vhdl xil_defaultlib  \
+"../../../../zf_equalizer.gen/sources_1/bd/zf_equalizer/ip/zf_equalizer_axi_bram_ctrl_0_0/sim/zf_equalizer_axi_bram_ctrl_0_0.vhd" \
+
+nosort

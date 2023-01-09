@@ -1,0 +1,1 @@
+vopt +acc=npr -l elaborate.log -L xil_defaultlib -L xpm -L axi_bram_ctrl_v4_1_6 -L blk_mem_gen_v8_4_5 -L axis_infrastructure_v1_1_0 -L axis_data_fifo_v2_0_8 -L unisims_ver -L unimacro_ver -L secureip -work xil_defaultlib xil_defaultlib.zf_equalizer xil_defaultlib.glbl -o zf_equalizer_opt

@@ -768,8 +768,9 @@ module cfo_correction_top_tb();
                                        q_data2,i_data2,q_data1,i_data1};
       //$fdisplay(fd_coe_file,"%4h%04h%04h%04h%04h%04h%04h%04h,",q_data4,i_data4,q_data3,i_data3,
       //                                          q_data2,i_data2,q_data1,i_data1);
-      $fdisplay(fd_coe_file,"%4h%04h%04h%04h%04h%04h%04h%04h,",$signed(q_data4),$signed(i_data4),$signed(q_data3),$signed(i_data3),
-                                                $signed(q_data2),$signed(i_data2),$signed(q_data1),$signed(i_data1));
+      $fdisplay(fd_coe_file,"%4h%04h%04h%04h%04h%04h%04h%04h,",$signed(q_data4),$signed(i_data4),
+                                                $signed(q_data3),$signed(i_data3),$signed(q_data2),
+                                                $signed(i_data2),$signed(q_data1),$signed(i_data1));
       #CLOCK_PERIOD;
     end
     $fclose(fd);

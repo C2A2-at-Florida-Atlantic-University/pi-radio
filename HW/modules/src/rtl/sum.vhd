@@ -35,7 +35,7 @@ architecture RTL of sum is
   
   attribute X_INTERFACE_INFO      of axis_aclk      : signal is "xilinx.com:signal:clock:1.0 axis_aclk CLK";
   attribute X_INTERFACE_PARAMETER of axis_aclk      : 
-    signal is "ASSOCIATED_BUSIF axis_aclk:s_axis:m_axis, FREQ_HZ 99999001";
+    signal is "ASSOCIATED_BUSIF axis_aclk:s_axis:m_axis, FREQ_HZ 249997498";
 
   signal r_tlast                    : std_logic;
   signal accum_data                 : std_logic_vector(63 downto 0);

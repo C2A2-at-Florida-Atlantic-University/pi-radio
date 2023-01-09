@@ -1,0 +1,181 @@
+Time resolution is 1 ps
+File was opened successfully: -20000 
+File was opened successfully: -19999 
+File was opened successfully: -19998 
+File was opened successfully: -19997 
+File was opened successfully: -19996 
+File was opened successfully: -19995 
+File was opened successfully: -19994 
+File was opened successfully: -19993 
+File was opened successfully: -19992 
+File was opened successfully: -19991 
+File was opened successfully: -19990 
+File was opened successfully: -19989 
+File was opened successfully: -19988 
+File was opened successfully: -19987 
+Number of OFDM symbols:          10
+Info: [XPM_MEMORY 20-1] MEMORY_PRIMITIVE (0) instructs Vivado Synthesis to choose the memory primitive type. Depending on their values, other XPM_MEMORY parameters may preclude the choice of certain memory primitive types. Review XPM_MEMORY documentation and parameter values to understand any limitations, or set MEMORY_PRIMITIVE to a different value. cfo_correction_top_tb.DUT.cfo_correction_i.axis_data_fifo_0.inst.\gen_fifo.xpm_fifo_axis_inst .xpm_fifo_base_inst.\gen_sdpram.xpm_memory_base_inst .config_drc
+Time: 1 ps  Iteration: 0  Process: /cfo_correction_top_tb/DUT/cfo_correction_i/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/Initial299_18  Scope: cfo_correction_top_tb.DUT.cfo_correction_i.axis_data_fifo_0.inst.\gen_fifo.xpm_fifo_axis_inst .xpm_fifo_base_inst.\gen_sdpram.xpm_memory_base_inst .config_drc  File: C:/Xilinx_2022.1/Vivado/2022.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv Line: 493
+Info: [XPM_MEMORY 20-1] MEMORY_PRIMITIVE (0) instructs Vivado Synthesis to choose the memory primitive type. Depending on their values, other XPM_MEMORY parameters may preclude the choice of certain memory primitive types. Review XPM_MEMORY documentation and parameter values to understand any limitations, or set MEMORY_PRIMITIVE to a different value. cfo_correction_top_tb.DUT.cfo_correction_i.axis_data_fifo_1.inst.\gen_fifo.xpm_fifo_axis_inst .xpm_fifo_base_inst.\gen_sdpram.xpm_memory_base_inst .config_drc
+Time: 1 ps  Iteration: 0  Process: /cfo_correction_top_tb/DUT/cfo_correction_i/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/Initial299_73  Scope: cfo_correction_top_tb.DUT.cfo_correction_i.axis_data_fifo_1.inst.\gen_fifo.xpm_fifo_axis_inst .xpm_fifo_base_inst.\gen_sdpram.xpm_memory_base_inst .config_drc  File: C:/Xilinx_2022.1/Vivado/2022.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv Line: 493
+Printing Samples
+   -96 + i   251
+   779 + i  -210
+  -316 + i  -184
+  -143 + i   118
+File was opened successfully: -20000 
+File was opened successfully: -19999 
+File was opened successfully: -19998 
+File was opened successfully: -19997 
+File was opened successfully: -19996 
+File was opened successfully: -19995 
+File was opened successfully: -19994 
+File was opened successfully: -19993 
+File was opened successfully: -19992 
+File was opened successfully: -19991 
+File was opened successfully: -19990 
+File was opened successfully: -19989 
+File was opened successfully: -19988 
+File was opened successfully: -19987 
+Number of OFDM symbols:          10
+Info: [XPM_MEMORY 20-1] MEMORY_PRIMITIVE (0) instructs Vivado Synthesis to choose the memory primitive type. Depending on their values, other XPM_MEMORY parameters may preclude the choice of certain memory primitive types. Review XPM_MEMORY documentation and parameter values to understand any limitations, or set MEMORY_PRIMITIVE to a different value. cfo_correction_top_tb.DUT.cfo_correction_i.axis_data_fifo_0.inst.\gen_fifo.xpm_fifo_axis_inst .xpm_fifo_base_inst.\gen_sdpram.xpm_memory_base_inst .config_drc
+Time: 1 ps  Iteration: 0  Process: /cfo_correction_top_tb/DUT/cfo_correction_i/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/Initial299_18  Scope: cfo_correction_top_tb.DUT.cfo_correction_i.axis_data_fifo_0.inst.\gen_fifo.xpm_fifo_axis_inst .xpm_fifo_base_inst.\gen_sdpram.xpm_memory_base_inst .config_drc  File: C:/Xilinx_2022.1/Vivado/2022.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv Line: 493
+Info: [XPM_MEMORY 20-1] MEMORY_PRIMITIVE (0) instructs Vivado Synthesis to choose the memory primitive type. Depending on their values, other XPM_MEMORY parameters may preclude the choice of certain memory primitive types. Review XPM_MEMORY documentation and parameter values to understand any limitations, or set MEMORY_PRIMITIVE to a different value. cfo_correction_top_tb.DUT.cfo_correction_i.axis_data_fifo_1.inst.\gen_fifo.xpm_fifo_axis_inst .xpm_fifo_base_inst.\gen_sdpram.xpm_memory_base_inst .config_drc
+Time: 1 ps  Iteration: 0  Process: /cfo_correction_top_tb/DUT/cfo_correction_i/axis_data_fifo_1/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/Initial299_73  Scope: cfo_correction_top_tb.DUT.cfo_correction_i.axis_data_fifo_1.inst.\gen_fifo.xpm_fifo_axis_inst .xpm_fifo_base_inst.\gen_sdpram.xpm_memory_base_inst .config_drc  File: C:/Xilinx_2022.1/Vivado/2022.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv Line: 493
+Printing Samples
+   -96 + i   251
+   779 + i  -210
+  -316 + i  -184
+  -143 + i   118
+------------------------OFDM SYMBOL 0------------------------
+Expected angle value: 2.989147
+Actual angle value (signed): 1e727b7c
+Actual angle value: 00011110011100100111101101111100
+Actual angle value (converted): 0.951475
+ 
+Expected cfo: 0.000000
+scs * angle = 9737e0a0
+Actual phase increment = 0
+------------------------------------------------------------
+ 
+ 
+------------------------OFDM SYMBOL 1------------------------
+Expected angle value: 2.989147
+Actual angle value (signed): 17af6921
+Actual angle value: 00010111101011110110100100100001
+Actual angle value (converted): 1.691637
+ 
+Expected cfo: 0.000000
+scs * angle = 3ef8c7d8
+Actual phase increment = 0
+------------------------------------------------------------
+ 
+ 
+------------------------OFDM SYMBOL 2------------------------
+Expected angle value: 2.989147
+Actual angle value (signed): 10ddabc7
+Actual angle value: 00010000110111011010101111000111
+Actual angle value (converted): 2.218697
+ 
+Expected cfo: 0.000000
+scs * angle = 038efbe8
+Actual phase increment = 0
+------------------------------------------------------------
+ 
+ 
+------------------------OFDM SYMBOL 3------------------------
+Expected angle value: 2.989147
+Actual angle value (signed): 0a1dd608
+Actual angle value: 00001010000111011101011000001000
+Actual angle value (converted): 2.534839
+ 
+Expected cfo: 0.000000
+scs * angle = f77136c0
+Actual phase increment = 0
+------------------------------------------------------------
+ 
+ 
+------------------------OFDM SYMBOL 4------------------------
+Expected angle value: 2.989147
+Actual angle value (signed): 035ce2b4
+Actual angle value: 00000011010111001110001010110100
+Actual angle value (converted): 2.639927
+ 
+Expected cfo: 0.000000
+scs * angle = e36357e0
+Actual phase increment = 0
+------------------------------------------------------------
+ 
+ 
+------------------------OFDM SYMBOL 5------------------------
+Expected angle value: 2.989147
+Actual angle value (signed): fc9b1351
+Actual angle value (unsigned): 0364ecaf
+Actual angle value: 11111100100110110001001101010001
+Actual angle value (converted): -2.745997
+ 
+Expected cfo: 0.000000
+scs * angle = c1642058
+Actual phase increment = 0
+------------------------------------------------------------
+ 
+ 
+------------------------OFDM SYMBOL 6------------------------
+Expected angle value: 2.989147
+Actual angle value (signed): f5de4796
+Actual angle value (unsigned): 0a21b86a
+Actual angle value: 11110101110111100100011110010110
+Actual angle value (converted): -3.062614
+ 
+Expected cfo: 0.000000
+scs * angle = 1fe51e90
+Actual phase increment = 0
+------------------------------------------------------------
+ 
+ 
+------------------------OFDM SYMBOL 7------------------------
+Expected angle value: 2.989147
+Actual angle value (signed): ef1604ed
+Actual angle value (unsigned): 10e9fb13
+Actual angle value: 11101111000101100000010011101101
+Actual angle value (converted): -3.591176
+ 
+Expected cfo: 0.000000
+scs * angle = dc2a2bf8
+Actual phase increment = 0
+------------------------------------------------------------
+ 
+ 
+------------------------OFDM SYMBOL 8------------------------
+Expected angle value: 2.989147
+Actual angle value (signed): e85e0dc6
+Actual angle value (unsigned): 17a1f23a
+Actual angle value: 11101000010111100000110111000110
+Actual angle value (converted): -4.329695
+ 
+Expected cfo: 0.000000
+scs * angle = 93781710
+Actual phase increment = 0
+------------------------------------------------------------
+ 
+ 
+------------------------OFDM SYMBOL 9------------------------
+Expected angle value: 2.989147
+Actual angle value (signed): e1930c27
+Actual angle value (unsigned): 1e6cf3d9
+Actual angle value: 11100001100100110000110000100111
+Actual angle value (converted): -5.280494
+ 
+Expected cfo: 0.000000
+scs * angle = feafcce8
+Actual phase increment = 0
+------------------------------------------------------------
+ 
+ 
+File was opened successfully: -20000 
+Printing Samples
+   -96 + i   251
+   779 + i  -210
+  -316 + i  -184
+  -143 + i   118
+$stop called at time : 29720 ns : File "c:/Projects/pi-radio/HW/modules/sim/cfo_correction_top_tb.sv" Line 806

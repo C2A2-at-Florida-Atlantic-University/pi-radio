@@ -1,0 +1,1 @@
+set_property -dict [list CONFIG.Coe_File {C:/Projects/pi-radio/HW/modules/sim/zf_equalizer/bram_pilot_init.coe}] [get_bd_cells blk_mem_gen_0]

@@ -16,14 +16,14 @@ entity conj is
 
     s_axis_tdata                  : in  std_logic_vector(127 downto 0);
     s_axis_tvalid                 : in  std_logic;
-    s_axis_tid                    : in  std_logic_vector(7 downto 0);
-    s_axis_tuser                  : in  std_logic_vector(7 downto 0);
+    --s_axis_tid                    : in  std_logic_vector(7 downto 0);
+    --s_axis_tuser                  : in  std_logic_vector(7 downto 0);
     s_axis_tlast                  : in  std_logic;
 
     m_axis_tdata                  : out std_logic_vector(127 downto 0);
     m_axis_tvalid                 : out std_logic;
-    m_axis_tid                    : out std_logic_vector(7 downto 0);
-    m_axis_tuser                  : out std_logic_vector(7 downto 0);
+    --m_axis_tid                    : out std_logic_vector(7 downto 0);
+    --m_axis_tuser                  : out std_logic_vector(7 downto 0);
     m_axis_tlast                  : out std_logic;
 
     i_negative_freq               : in  std_logic
@@ -37,7 +37,7 @@ architecture RTL of conj is
   
   attribute X_INTERFACE_INFO      of axis_aclk    : signal is "xilinx.com:signal:clock:1.0 axis_aclk CLK";
   attribute X_INTERFACE_PARAMETER of axis_aclk    : 
-    signal is "ASSOCIATED_BUSIF axis_aclk:s_axis:m_axis, FREQ_HZ 99999001";
+    signal is "ASSOCIATED_BUSIF axis_aclk:s_axis:m_axis, FREQ_HZ 249997498";
 
   signal i_data1                  : std_logic_vector(15 downto 0);
   signal q_data1_conj             : std_logic_vector(15 downto 0);
@@ -83,7 +83,7 @@ begin
                                      q_data3_conj & i_data3 & 
                                      q_data2_conj & i_data2 &
                                      q_data1_conj & i_data1;
-        else
+      else
         m_axis_tdata              <= q_data4 & i_data4 &
                                      q_data3 & i_data3 & 
                                      q_data2 & i_data2 &
@@ -91,8 +91,8 @@ begin
       end if;
 
       m_axis_tvalid               <= s_axis_tvalid;
-      m_axis_tid                  <= s_axis_tid;
-      m_axis_tuser                <= s_axis_tuser;
+      --m_axis_tid                  <= s_axis_tid;
+      --m_axis_tuser                <= s_axis_tuser;
       m_axis_tlast                <= s_axis_tlast;
     end if;
   end process P_CONJ;

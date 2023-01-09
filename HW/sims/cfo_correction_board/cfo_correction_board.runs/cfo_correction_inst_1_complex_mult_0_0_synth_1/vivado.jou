@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Vivado v2022.1 (64-bit)
+# SW Build 3526262 on Mon Apr 18 15:48:16 MDT 2022
+# IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
+# Start of session at: Wed Oct 19 00:25:25 2022
+# Process ID: 101920
+# Current directory: c:/Projects/pi-radio/HW/sims/cfo_correction_board/cfo_correction_board.runs/cfo_correction_inst_1_complex_mult_0_0_synth_1
+# Command line: vivado.exe -log cfo_correction_inst_1_complex_mult_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source cfo_correction_inst_1_complex_mult_0_0.tcl
+# Log file: c:/Projects/pi-radio/HW/sims/cfo_correction_board/cfo_correction_board.runs/cfo_correction_inst_1_complex_mult_0_0_synth_1/cfo_correction_inst_1_complex_mult_0_0.vds
+# Journal file: c:/Projects/pi-radio/HW/sims/cfo_correction_board/cfo_correction_board.runs/cfo_correction_inst_1_complex_mult_0_0_synth_1\vivado.jou
+# Running On: DESKTOP-1UDCE0K, OS: Windows, CPU Frequency: 3187 MHz, CPU Physical cores: 16, Host memory: 137149 MB
+#-----------------------------------------------------------
+source cfo_correction_inst_1_complex_mult_0_0.tcl -notrace

@@ -1,0 +1,1312 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="zf_equalizer_tb_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="axi_bram_ctrl_funcs" />
+            <top_module name="glbl" />
+            <top_module name="vcomponents" />
+            <top_module name="zf_equalizer_tb" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="265.000 ns"></ZoomStartTime>
+      <ZoomEndTime time="550.001 ns"></ZoomEndTime>
+      <Cursor1Time time="340.000 ns"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="285"></NameColumnWidth>
+      <ValueColumnWidth column_width="59"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="8" />
+   <wvobject fp_name="/zf_equalizer_tb/r_clk" type="logic">
+      <obj_property name="ElementShortName">r_clk</obj_property>
+      <obj_property name="ObjectShortName">r_clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/zf_equalizer_tb/r_nRst" type="logic">
+      <obj_property name="ElementShortName">r_nRst</obj_property>
+      <obj_property name="ObjectShortName">r_nRst</obj_property>
+   </wvobject>
+   <wvobject fp_name="group32" type="group">
+      <obj_property name="label">ZF_Equalizer_S_AXIS</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject fp_name="/zf_equalizer_tb/in_axis_tdata" type="array">
+         <obj_property name="ElementShortName">in_axis_tdata[127:0]</obj_property>
+         <obj_property name="ObjectShortName">in_axis_tdata[127:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/zf_equalizer_tb/in_axis_tlast" type="logic">
+         <obj_property name="ElementShortName">in_axis_tlast</obj_property>
+         <obj_property name="ObjectShortName">in_axis_tlast</obj_property>
+      </wvobject>
+      <wvobject fp_name="/zf_equalizer_tb/in_axis_tvalid" type="logic">
+         <obj_property name="ElementShortName">in_axis_tvalid</obj_property>
+         <obj_property name="ObjectShortName">in_axis_tvalid</obj_property>
+      </wvobject>
+      <wvobject fp_name="group42" type="group">
+         <obj_property name="label">TX PILOTS</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="isExpanded"></obj_property>
+         <wvobject fp_name="/zf_equalizer_tb/i_tx_pilot" type="array">
+            <obj_property name="ElementShortName">i_tx_pilot[15:0]</obj_property>
+            <obj_property name="ObjectShortName">i_tx_pilot[15:0]</obj_property>
+            <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+         </wvobject>
+         <wvobject fp_name="/zf_equalizer_tb/q_tx_pilot" type="array">
+            <obj_property name="ElementShortName">q_tx_pilot[15:0]</obj_property>
+            <obj_property name="ObjectShortName">q_tx_pilot[15:0]</obj_property>
+            <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+         </wvobject>
+         <wvobject fp_name="/zf_equalizer_tb/pilot_tx_tdata" type="array">
+            <obj_property name="ElementShortName">pilot_tx_tdata[31:0]</obj_property>
+            <obj_property name="ObjectShortName">pilot_tx_tdata[31:0]</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="group136" type="group">
+         <obj_property name="label">RX_Pilots</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="isExpanded"></obj_property>
+         <wvobject fp_name="/zf_equalizer_tb/i_rx_pilot" type="array">
+            <obj_property name="ElementShortName">i_rx_pilot[15:0]</obj_property>
+            <obj_property name="ObjectShortName">i_rx_pilot[15:0]</obj_property>
+            <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+         </wvobject>
+         <wvobject fp_name="/zf_equalizer_tb/q_rx_pilot" type="array">
+            <obj_property name="ElementShortName">q_rx_pilot[15:0]</obj_property>
+            <obj_property name="ObjectShortName">q_rx_pilot[15:0]</obj_property>
+            <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+         </wvobject>
+         <wvobject fp_name="/zf_equalizer_tb/pilot_rx_tdata" type="array">
+            <obj_property name="ElementShortName">pilot_rx_tdata[31:0]</obj_property>
+            <obj_property name="ObjectShortName">pilot_rx_tdata[31:0]</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="group51" type="group">
+         <obj_property name="label">I_DATA</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject fp_name="/zf_equalizer_tb/i_data1" type="array">
+            <obj_property name="ElementShortName">i_data1[15:0]</obj_property>
+            <obj_property name="ObjectShortName">i_data1[15:0]</obj_property>
+            <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+         </wvobject>
+         <wvobject fp_name="/zf_equalizer_tb/q_data1" type="array">
+            <obj_property name="ElementShortName">q_data1[15:0]</obj_property>
+            <obj_property name="ObjectShortName">q_data1[15:0]</obj_property>
+            <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+         </wvobject>
+         <wvobject fp_name="/zf_equalizer_tb/i_data2" type="array">
+            <obj_property name="ElementShortName">i_data2[15:0]</obj_property>
+            <obj_property name="ObjectShortName">i_data2[15:0]</obj_property>
+            <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+         </wvobject>
+         <wvobject fp_name="/zf_equalizer_tb/q_data2" type="array">
+            <obj_property name="ElementShortName">q_data2[15:0]</obj_property>
+            <obj_property name="ObjectShortName">q_data2[15:0]</obj_property>
+            <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+         </wvobject>
+         <wvobject fp_name="/zf_equalizer_tb/i_data3" type="array">
+            <obj_property name="ElementShortName">i_data3[15:0]</obj_property>
+            <obj_property name="ObjectShortName">i_data3[15:0]</obj_property>
+            <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+         </wvobject>
+         <wvobject fp_name="/zf_equalizer_tb/q_data3" type="array">
+            <obj_property name="ElementShortName">q_data3[15:0]</obj_property>
+            <obj_property name="ObjectShortName">q_data3[15:0]</obj_property>
+            <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+         </wvobject>
+         <wvobject fp_name="/zf_equalizer_tb/i_data4" type="array">
+            <obj_property name="ElementShortName">i_data4[15:0]</obj_property>
+            <obj_property name="ObjectShortName">i_data4[15:0]</obj_property>
+            <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+         </wvobject>
+         <wvobject fp_name="/zf_equalizer_tb/q_data4" type="array">
+            <obj_property name="ElementShortName">q_data4[15:0]</obj_property>
+            <obj_property name="ObjectShortName">q_data4[15:0]</obj_property>
+            <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+         </wvobject>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="group133" type="group">
+      <obj_property name="label">Pilot_Removal</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject fp_name="group132" type="group">
+         <obj_property name="label">M_AXIS_PILOTS</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="isExpanded"></obj_property>
+         <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/Normalized_ZF_stage_1/pilot_removal_0/inst/m_pilot_axis_tdata" type="array">
+            <obj_property name="ElementShortName">m_pilot_axis_tdata[31:0]</obj_property>
+            <obj_property name="ObjectShortName">m_pilot_axis_tdata[31:0]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/Normalized_ZF_stage_1/pilot_removal_0/inst/m_pilot_axis_tvalid" type="logic">
+            <obj_property name="ElementShortName">m_pilot_axis_tvalid</obj_property>
+            <obj_property name="ObjectShortName">m_pilot_axis_tvalid</obj_property>
+         </wvobject>
+         <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/Normalized_ZF_stage_1/pilot_removal_0/inst/m_pilot_axis_tlast" type="logic">
+            <obj_property name="ElementShortName">m_pilot_axis_tlast</obj_property>
+            <obj_property name="ObjectShortName">m_pilot_axis_tlast</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/Normalized_ZF_stage_1/pilot_removal_0/inst/o_symbol_number" type="array">
+         <obj_property name="ElementShortName">o_symbol_number[7:0]</obj_property>
+         <obj_property name="ObjectShortName">o_symbol_number[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="group142" type="group">
+         <obj_property name="label">M_AXIS</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="isExpanded"></obj_property>
+         <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/Normalized_ZF_stage_1/pilot_removal_0/m_axis_tdata" type="array">
+            <obj_property name="ElementShortName">m_axis_tdata[127:0]</obj_property>
+            <obj_property name="ObjectShortName">m_axis_tdata[127:0]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/Normalized_ZF_stage_1/pilot_removal_0/m_axis_tvalid" type="logic">
+            <obj_property name="ElementShortName">m_axis_tvalid</obj_property>
+            <obj_property name="ObjectShortName">m_axis_tvalid</obj_property>
+         </wvobject>
+         <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/Normalized_ZF_stage_1/pilot_removal_0/m_axis_tlast" type="logic">
+            <obj_property name="ElementShortName">m_axis_tlast</obj_property>
+            <obj_property name="ObjectShortName">m_axis_tlast</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="group146" type="group">
+         <obj_property name="label">S_AXIS</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="isExpanded"></obj_property>
+         <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/Normalized_ZF_stage_1/pilot_removal_0/s_axis_tdata" type="array">
+            <obj_property name="ElementShortName">s_axis_tdata[127:0]</obj_property>
+            <obj_property name="ObjectShortName">s_axis_tdata[127:0]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/Normalized_ZF_stage_1/pilot_removal_0/s_axis_tvalid" type="logic">
+            <obj_property name="ElementShortName">s_axis_tvalid</obj_property>
+            <obj_property name="ObjectShortName">s_axis_tvalid</obj_property>
+         </wvobject>
+         <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/Normalized_ZF_stage_1/pilot_removal_0/s_axis_tlast" type="logic">
+            <obj_property name="ElementShortName">s_axis_tlast</obj_property>
+            <obj_property name="ObjectShortName">s_axis_tlast</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/Normalized_ZF_stage_1/pilot_removal_0/inst/nfft_counter" type="array">
+         <obj_property name="ElementShortName">nfft_counter[7:0]</obj_property>
+         <obj_property name="ObjectShortName">nfft_counter[7:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="group315" type="group">
+      <obj_property name="label">CH_EST_1</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject fp_name="group302" type="group">
+         <obj_property name="label">CORDIC_TX</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="isExpanded"></obj_property>
+         <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/Normalized_ZF_stage_1/channel_estimate_0/inst/cordic_inst_tx/s_axis_cartesian_tvalid" type="logic">
+            <obj_property name="ElementShortName">s_axis_cartesian_tvalid</obj_property>
+            <obj_property name="ObjectShortName">s_axis_cartesian_tvalid</obj_property>
+         </wvobject>
+         <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/Normalized_ZF_stage_1/channel_estimate_0/inst/cordic_inst_tx/s_axis_cartesian_tdata" type="array">
+            <obj_property name="ElementShortName">s_axis_cartesian_tdata[31:0]</obj_property>
+            <obj_property name="ObjectShortName">s_axis_cartesian_tdata[31:0]</obj_property>
+         </wvobject>
+         <wvobject fp_name="vbus1511" type="vbus">
+            <obj_property name="label">i</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/Normalized_ZF_stage_1/channel_estimate_0/inst/cordic_inst_tx/s_axis_cartesian_tdata[15]" type="logic">
+               <obj_property name="ElementShortName">[15]</obj_property>
+               <obj_property name="ObjectShortName">[15]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/Normalized_ZF_stage_1/channel_estimate_0/inst/cordic_inst_tx/s_axis_cartesian_tdata[14]" type="logic">
+               <obj_property name="ElementShortName">[14]</obj_property>
+               <obj_property name="ObjectShortName">[14]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/Normalized_ZF_stage_1/channel_estimate_0/inst/cordic_inst_tx/s_axis_cartesian_tdata[13]" type="logic">
+               <obj_property name="ElementShortName">[13]</obj_property>
+               <obj_property name="ObjectShortName">[13]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/Normalized_ZF_stage_1/channel_estimate_0/inst/cordic_inst_tx/s_axis_cartesian_tdata[12]" type="logic">
+               <obj_property name="ElementShortName">[12]</obj_property>
+               <obj_property name="ObjectShortName">[12]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/Normalized_ZF_stage_1/channel_estimate_0/inst/cordic_inst_tx/s_axis_cartesian_tdata[11]" type="logic">
+               <obj_property name="ElementShortName">[11]</obj_property>
+               <obj_property name="ObjectShortName">[11]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/Normalized_ZF_stage_1/channel_estimate_0/inst/cordic_inst_tx/s_axis_cartesian_tdata[10]" type="logic">
+               <obj_property name="ElementShortName">[10]</obj_property>
+               <obj_property name="ObjectShortName">[10]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/Normalized_ZF_stage_1/channel_estimate_0/inst/cordic_inst_tx/s_axis_cartesian_tdata[9]" type="logic">
+               <obj_property name="ElementShortName">[9]</obj_property>
+               <obj_property name="ObjectShortName">[9]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/Normalized_ZF_stage_1/channel_estimate_0/inst/cordic_inst_tx/s_axis_cartesian_tdata[8]" type="logic">
+               <obj_property name="ElementShortName">[8]</obj_property>
+               <obj_property name="ObjectShortName">[8]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/Normalized_ZF_stage_1/channel_estimate_0/inst/cordic_inst_tx/s_axis_cartesian_tdata[7]" type="logic">
+               <obj_property name="ElementShortName">[7]</obj_property>
+               <obj_property name="ObjectShortName">[7]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/Normalized_ZF_stage_1/channel_estimate_0/inst/cordic_inst_tx/s_axis_cartesian_tdata[6]" type="logic">
+               <obj_property name="ElementShortName">[6]</obj_property>
+               <obj_property name="ObjectShortName">[6]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/Normalized_ZF_stage_1/channel_estimate_0/inst/cordic_inst_tx/s_axis_cartesian_tdata[5]" type="logic">
+               <obj_property name="ElementShortName">[5]</obj_property>
+               <obj_property name="ObjectShortName">[5]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/Normalized_ZF_stage_1/channel_estimate_0/inst/cordic_inst_tx/s_axis_cartesian_tdata[4]" type="logic">
+               <obj_property name="ElementShortName">[4]</obj_property>
+               <obj_property name="ObjectShortName">[4]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/Normalized_ZF_stage_1/channel_estimate_0/inst/cordic_inst_tx/s_axis_cartesian_tdata[3]" type="logic">
+               <obj_property name="ElementShortName">[3]</obj_property>
+               <obj_property name="ObjectShortName">[3]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/Normalized_ZF_stage_1/channel_estimate_0/inst/cordic_inst_tx/s_axis_cartesian_tdata[2]" type="logic">
+               <obj_property name="ElementShortName">[2]</obj_property>
+               <obj_property name="ObjectShortName">[2]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/Normalized_ZF_stage_1/channel_estimate_0/inst/cordic_inst_tx/s_axis_cartesian_tdata[1]" type="logic">
+               <obj_property name="ElementShortName">[1]</obj_property>
+               <obj_property name="ObjectShortName">[1]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/Normalized_ZF_stage_1/channel_estimate_0/inst/cordic_inst_tx/s_axis_cartesian_tdata[0]" type="logic">
+               <obj_property name="ElementShortName">[0]</obj_property>
+               <obj_property name="ObjectShortName">[0]</obj_property>
+            </wvobject>
+         </wvobject>
+         <wvobject fp_name="vbus1494" type="vbus">
+            <obj_property name="label">q</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/Normalized_ZF_stage_1/channel_estimate_0/inst/cordic_inst_tx/s_axis_cartesian_tdata[31]" type="logic">
+               <obj_property name="ElementShortName">[31]</obj_property>
+               <obj_property name="ObjectShortName">[31]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/Normalized_ZF_stage_1/channel_estimate_0/inst/cordic_inst_tx/s_axis_cartesian_tdata[30]" type="logic">
+               <obj_property name="ElementShortName">[30]</obj_property>
+               <obj_property name="ObjectShortName">[30]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/Normalized_ZF_stage_1/channel_estimate_0/inst/cordic_inst_tx/s_axis_cartesian_tdata[29]" type="logic">
+               <obj_property name="ElementShortName">[29]</obj_property>
+               <obj_property name="ObjectShortName">[29]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/Normalized_ZF_stage_1/channel_estimate_0/inst/cordic_inst_tx/s_axis_cartesian_tdata[28]" type="logic">
+               <obj_property name="ElementShortName">[28]</obj_property>
+               <obj_property name="ObjectShortName">[28]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/Normalized_ZF_stage_1/channel_estimate_0/inst/cordic_inst_tx/s_axis_cartesian_tdata[27]" type="logic">
+               <obj_property name="ElementShortName">[27]</obj_property>
+               <obj_property name="ObjectShortName">[27]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/Normalized_ZF_stage_1/channel_estimate_0/inst/cordic_inst_tx/s_axis_cartesian_tdata[26]" type="logic">
+               <obj_property name="ElementShortName">[26]</obj_property>
+               <obj_property name="ObjectShortName">[26]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/Normalized_ZF_stage_1/channel_estimate_0/inst/cordic_inst_tx/s_axis_cartesian_tdata[25]" type="logic">
+               <obj_property name="ElementShortName">[25]</obj_property>
+               <obj_property name="ObjectShortName">[25]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/Normalized_ZF_stage_1/channel_estimate_0/inst/cordic_inst_tx/s_axis_cartesian_tdata[24]" type="logic">
+               <obj_property name="ElementShortName">[24]</obj_property>
+               <obj_property name="ObjectShortName">[24]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/Normalized_ZF_stage_1/channel_estimate_0/inst/cordic_inst_tx/s_axis_cartesian_tdata[23]" type="logic">
+               <obj_property name="ElementShortName">[23]</obj_property>
+               <obj_property name="ObjectShortName">[23]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/Normalized_ZF_stage_1/channel_estimate_0/inst/cordic_inst_tx/s_axis_cartesian_tdata[22]" type="logic">
+               <obj_property name="ElementShortName">[22]</obj_property>
+               <obj_property name="ObjectShortName">[22]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/Normalized_ZF_stage_1/channel_estimate_0/inst/cordic_inst_tx/s_axis_cartesian_tdata[21]" type="logic">
+               <obj_property name="ElementShortName">[21]</obj_property>
+               <obj_property name="ObjectShortName">[21]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/Normalized_ZF_stage_1/channel_estimate_0/inst/cordic_inst_tx/s_axis_cartesian_tdata[20]" type="logic">
+               <obj_property name="ElementShortName">[20]</obj_property>
+               <obj_property name="ObjectShortName">[20]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/Normalized_ZF_stage_1/channel_estimate_0/inst/cordic_inst_tx/s_axis_cartesian_tdata[19]" type="logic">
+               <obj_property name="ElementShortName">[19]</obj_property>
+               <obj_property name="ObjectShortName">[19]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/Normalized_ZF_stage_1/channel_estimate_0/inst/cordic_inst_tx/s_axis_cartesian_tdata[18]" type="logic">
+               <obj_property name="ElementShortName">[18]</obj_property>
+               <obj_property name="ObjectShortName">[18]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/Normalized_ZF_stage_1/channel_estimate_0/inst/cordic_inst_tx/s_axis_cartesian_tdata[17]" type="logic">
+               <obj_property name="ElementShortName">[17]</obj_property>
+               <obj_property name="ObjectShortName">[17]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/Normalized_ZF_stage_1/channel_estimate_0/inst/cordic_inst_tx/s_axis_cartesian_tdata[16]" type="logic">
+               <obj_property name="ElementShortName">[16]</obj_property>
+               <obj_property name="ObjectShortName">[16]</obj_property>
+            </wvobject>
+         </wvobject>
+         <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/Normalized_ZF_stage_1/channel_estimate_0/inst/cordic_inst_tx/m_axis_dout_tvalid" type="logic">
+            <obj_property name="ElementShortName">m_axis_dout_tvalid</obj_property>
+            <obj_property name="ObjectShortName">m_axis_dout_tvalid</obj_property>
+         </wvobject>
+         <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/Normalized_ZF_stage_1/channel_estimate_0/inst/cordic_inst_tx/m_axis_dout_tdata" type="array">
+            <obj_property name="ElementShortName">m_axis_dout_tdata[31:0]</obj_property>
+            <obj_property name="ObjectShortName">m_axis_dout_tdata[31:0]</obj_property>
+         </wvobject>
+         <wvobject fp_name="vbus4060" type="vbus">
+            <obj_property name="label">Magnitude</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/Normalized_ZF_stage_1/channel_estimate_0/inst/cordic_inst_tx/m_axis_dout_tdata[15]" type="logic">
+               <obj_property name="ElementShortName">[15]</obj_property>
+               <obj_property name="ObjectShortName">[15]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/Normalized_ZF_stage_1/channel_estimate_0/inst/cordic_inst_tx/m_axis_dout_tdata[14]" type="logic">
+               <obj_property name="ElementShortName">[14]</obj_property>
+               <obj_property name="ObjectShortName">[14]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/Normalized_ZF_stage_1/channel_estimate_0/inst/cordic_inst_tx/m_axis_dout_tdata[13]" type="logic">
+               <obj_property name="ElementShortName">[13]</obj_property>
+               <obj_property name="ObjectShortName">[13]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/Normalized_ZF_stage_1/channel_estimate_0/inst/cordic_inst_tx/m_axis_dout_tdata[12]" type="logic">
+               <obj_property name="ElementShortName">[12]</obj_property>
+               <obj_property name="ObjectShortName">[12]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/Normalized_ZF_stage_1/channel_estimate_0/inst/cordic_inst_tx/m_axis_dout_tdata[11]" type="logic">
+               <obj_property name="ElementShortName">[11]</obj_property>
+               <obj_property name="ObjectShortName">[11]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/Normalized_ZF_stage_1/channel_estimate_0/inst/cordic_inst_tx/m_axis_dout_tdata[10]" type="logic">
+               <obj_property name="ElementShortName">[10]</obj_property>
+               <obj_property name="ObjectShortName">[10]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/Normalized_ZF_stage_1/channel_estimate_0/inst/cordic_inst_tx/m_axis_dout_tdata[9]" type="logic">
+               <obj_property name="ElementShortName">[9]</obj_property>
+               <obj_property name="ObjectShortName">[9]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/Normalized_ZF_stage_1/channel_estimate_0/inst/cordic_inst_tx/m_axis_dout_tdata[8]" type="logic">
+               <obj_property name="ElementShortName">[8]</obj_property>
+               <obj_property name="ObjectShortName">[8]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/Normalized_ZF_stage_1/channel_estimate_0/inst/cordic_inst_tx/m_axis_dout_tdata[7]" type="logic">
+               <obj_property name="ElementShortName">[7]</obj_property>
+               <obj_property name="ObjectShortName">[7]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/Normalized_ZF_stage_1/channel_estimate_0/inst/cordic_inst_tx/m_axis_dout_tdata[6]" type="logic">
+               <obj_property name="ElementShortName">[6]</obj_property>
+               <obj_property name="ObjectShortName">[6]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/Normalized_ZF_stage_1/channel_estimate_0/inst/cordic_inst_tx/m_axis_dout_tdata[5]" type="logic">
+               <obj_property name="ElementShortName">[5]</obj_property>
+               <obj_property name="ObjectShortName">[5]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/Normalized_ZF_stage_1/channel_estimate_0/inst/cordic_inst_tx/m_axis_dout_tdata[4]" type="logic">
+               <obj_property name="ElementShortName">[4]</obj_property>
+               <obj_property name="ObjectShortName">[4]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/Normalized_ZF_stage_1/channel_estimate_0/inst/cordic_inst_tx/m_axis_dout_tdata[3]" type="logic">
+               <obj_property name="ElementShortName">[3]</obj_property>
+               <obj_property name="ObjectShortName">[3]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/Normalized_ZF_stage_1/channel_estimate_0/inst/cordic_inst_tx/m_axis_dout_tdata[2]" type="logic">
+               <obj_property name="ElementShortName">[2]</obj_property>
+               <obj_property name="ObjectShortName">[2]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/Normalized_ZF_stage_1/channel_estimate_0/inst/cordic_inst_tx/m_axis_dout_tdata[1]" type="logic">
+               <obj_property name="ElementShortName">[1]</obj_property>
+               <obj_property name="ObjectShortName">[1]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/Normalized_ZF_stage_1/channel_estimate_0/inst/cordic_inst_tx/m_axis_dout_tdata[0]" type="logic">
+               <obj_property name="ElementShortName">[0]</obj_property>
+               <obj_property name="ObjectShortName">[0]</obj_property>
+            </wvobject>
+         </wvobject>
+         <wvobject fp_name="vbus4043" type="vbus">
+            <obj_property name="label">Phase</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/Normalized_ZF_stage_1/channel_estimate_0/inst/cordic_inst_tx/m_axis_dout_tdata[31]" type="logic">
+               <obj_property name="ElementShortName">[31]</obj_property>
+               <obj_property name="ObjectShortName">[31]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/Normalized_ZF_stage_1/channel_estimate_0/inst/cordic_inst_tx/m_axis_dout_tdata[30]" type="logic">
+               <obj_property name="ElementShortName">[30]</obj_property>
+               <obj_property name="ObjectShortName">[30]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/Normalized_ZF_stage_1/channel_estimate_0/inst/cordic_inst_tx/m_axis_dout_tdata[29]" type="logic">
+               <obj_property name="ElementShortName">[29]</obj_property>
+               <obj_property name="ObjectShortName">[29]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/Normalized_ZF_stage_1/channel_estimate_0/inst/cordic_inst_tx/m_axis_dout_tdata[28]" type="logic">
+               <obj_property name="ElementShortName">[28]</obj_property>
+               <obj_property name="ObjectShortName">[28]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/Normalized_ZF_stage_1/channel_estimate_0/inst/cordic_inst_tx/m_axis_dout_tdata[27]" type="logic">
+               <obj_property name="ElementShortName">[27]</obj_property>
+               <obj_property name="ObjectShortName">[27]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/Normalized_ZF_stage_1/channel_estimate_0/inst/cordic_inst_tx/m_axis_dout_tdata[26]" type="logic">
+               <obj_property name="ElementShortName">[26]</obj_property>
+               <obj_property name="ObjectShortName">[26]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/Normalized_ZF_stage_1/channel_estimate_0/inst/cordic_inst_tx/m_axis_dout_tdata[25]" type="logic">
+               <obj_property name="ElementShortName">[25]</obj_property>
+               <obj_property name="ObjectShortName">[25]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/Normalized_ZF_stage_1/channel_estimate_0/inst/cordic_inst_tx/m_axis_dout_tdata[24]" type="logic">
+               <obj_property name="ElementShortName">[24]</obj_property>
+               <obj_property name="ObjectShortName">[24]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/Normalized_ZF_stage_1/channel_estimate_0/inst/cordic_inst_tx/m_axis_dout_tdata[23]" type="logic">
+               <obj_property name="ElementShortName">[23]</obj_property>
+               <obj_property name="ObjectShortName">[23]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/Normalized_ZF_stage_1/channel_estimate_0/inst/cordic_inst_tx/m_axis_dout_tdata[22]" type="logic">
+               <obj_property name="ElementShortName">[22]</obj_property>
+               <obj_property name="ObjectShortName">[22]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/Normalized_ZF_stage_1/channel_estimate_0/inst/cordic_inst_tx/m_axis_dout_tdata[21]" type="logic">
+               <obj_property name="ElementShortName">[21]</obj_property>
+               <obj_property name="ObjectShortName">[21]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/Normalized_ZF_stage_1/channel_estimate_0/inst/cordic_inst_tx/m_axis_dout_tdata[20]" type="logic">
+               <obj_property name="ElementShortName">[20]</obj_property>
+               <obj_property name="ObjectShortName">[20]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/Normalized_ZF_stage_1/channel_estimate_0/inst/cordic_inst_tx/m_axis_dout_tdata[19]" type="logic">
+               <obj_property name="ElementShortName">[19]</obj_property>
+               <obj_property name="ObjectShortName">[19]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/Normalized_ZF_stage_1/channel_estimate_0/inst/cordic_inst_tx/m_axis_dout_tdata[18]" type="logic">
+               <obj_property name="ElementShortName">[18]</obj_property>
+               <obj_property name="ObjectShortName">[18]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/Normalized_ZF_stage_1/channel_estimate_0/inst/cordic_inst_tx/m_axis_dout_tdata[17]" type="logic">
+               <obj_property name="ElementShortName">[17]</obj_property>
+               <obj_property name="ObjectShortName">[17]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/Normalized_ZF_stage_1/channel_estimate_0/inst/cordic_inst_tx/m_axis_dout_tdata[16]" type="logic">
+               <obj_property name="ElementShortName">[16]</obj_property>
+               <obj_property name="ObjectShortName">[16]</obj_property>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="group307" type="group">
+         <obj_property name="label">CORDIC_RX</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="isExpanded"></obj_property>
+         <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/Normalized_ZF_stage_1/channel_estimate_0/inst/cordic_inst_rx/s_axis_cartesian_tvalid" type="logic">
+            <obj_property name="ElementShortName">s_axis_cartesian_tvalid</obj_property>
+            <obj_property name="ObjectShortName">s_axis_cartesian_tvalid</obj_property>
+         </wvobject>
+         <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/Normalized_ZF_stage_1/channel_estimate_0/inst/cordic_inst_rx/s_axis_cartesian_tdata" type="array">
+            <obj_property name="ElementShortName">s_axis_cartesian_tdata[31:0]</obj_property>
+            <obj_property name="ObjectShortName">s_axis_cartesian_tdata[31:0]</obj_property>
+         </wvobject>
+         <wvobject fp_name="vbus1577" type="vbus">
+            <obj_property name="label">I</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/Normalized_ZF_stage_1/channel_estimate_0/inst/cordic_inst_rx/s_axis_cartesian_tdata[15]" type="logic">
+               <obj_property name="ElementShortName">[15]</obj_property>
+               <obj_property name="ObjectShortName">[15]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/Normalized_ZF_stage_1/channel_estimate_0/inst/cordic_inst_rx/s_axis_cartesian_tdata[14]" type="logic">
+               <obj_property name="ElementShortName">[14]</obj_property>
+               <obj_property name="ObjectShortName">[14]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/Normalized_ZF_stage_1/channel_estimate_0/inst/cordic_inst_rx/s_axis_cartesian_tdata[13]" type="logic">
+               <obj_property name="ElementShortName">[13]</obj_property>
+               <obj_property name="ObjectShortName">[13]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/Normalized_ZF_stage_1/channel_estimate_0/inst/cordic_inst_rx/s_axis_cartesian_tdata[12]" type="logic">
+               <obj_property name="ElementShortName">[12]</obj_property>
+               <obj_property name="ObjectShortName">[12]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/Normalized_ZF_stage_1/channel_estimate_0/inst/cordic_inst_rx/s_axis_cartesian_tdata[11]" type="logic">
+               <obj_property name="ElementShortName">[11]</obj_property>
+               <obj_property name="ObjectShortName">[11]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/Normalized_ZF_stage_1/channel_estimate_0/inst/cordic_inst_rx/s_axis_cartesian_tdata[10]" type="logic">
+               <obj_property name="ElementShortName">[10]</obj_property>
+               <obj_property name="ObjectShortName">[10]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/Normalized_ZF_stage_1/channel_estimate_0/inst/cordic_inst_rx/s_axis_cartesian_tdata[9]" type="logic">
+               <obj_property name="ElementShortName">[9]</obj_property>
+               <obj_property name="ObjectShortName">[9]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/Normalized_ZF_stage_1/channel_estimate_0/inst/cordic_inst_rx/s_axis_cartesian_tdata[8]" type="logic">
+               <obj_property name="ElementShortName">[8]</obj_property>
+               <obj_property name="ObjectShortName">[8]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/Normalized_ZF_stage_1/channel_estimate_0/inst/cordic_inst_rx/s_axis_cartesian_tdata[7]" type="logic">
+               <obj_property name="ElementShortName">[7]</obj_property>
+               <obj_property name="ObjectShortName">[7]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/Normalized_ZF_stage_1/channel_estimate_0/inst/cordic_inst_rx/s_axis_cartesian_tdata[6]" type="logic">
+               <obj_property name="ElementShortName">[6]</obj_property>
+               <obj_property name="ObjectShortName">[6]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/Normalized_ZF_stage_1/channel_estimate_0/inst/cordic_inst_rx/s_axis_cartesian_tdata[5]" type="logic">
+               <obj_property name="ElementShortName">[5]</obj_property>
+               <obj_property name="ObjectShortName">[5]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/Normalized_ZF_stage_1/channel_estimate_0/inst/cordic_inst_rx/s_axis_cartesian_tdata[4]" type="logic">
+               <obj_property name="ElementShortName">[4]</obj_property>
+               <obj_property name="ObjectShortName">[4]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/Normalized_ZF_stage_1/channel_estimate_0/inst/cordic_inst_rx/s_axis_cartesian_tdata[3]" type="logic">
+               <obj_property name="ElementShortName">[3]</obj_property>
+               <obj_property name="ObjectShortName">[3]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/Normalized_ZF_stage_1/channel_estimate_0/inst/cordic_inst_rx/s_axis_cartesian_tdata[2]" type="logic">
+               <obj_property name="ElementShortName">[2]</obj_property>
+               <obj_property name="ObjectShortName">[2]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/Normalized_ZF_stage_1/channel_estimate_0/inst/cordic_inst_rx/s_axis_cartesian_tdata[1]" type="logic">
+               <obj_property name="ElementShortName">[1]</obj_property>
+               <obj_property name="ObjectShortName">[1]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/Normalized_ZF_stage_1/channel_estimate_0/inst/cordic_inst_rx/s_axis_cartesian_tdata[0]" type="logic">
+               <obj_property name="ElementShortName">[0]</obj_property>
+               <obj_property name="ObjectShortName">[0]</obj_property>
+            </wvobject>
+         </wvobject>
+         <wvobject fp_name="vbus1560" type="vbus">
+            <obj_property name="label">Q</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/Normalized_ZF_stage_1/channel_estimate_0/inst/cordic_inst_rx/s_axis_cartesian_tdata[31]" type="logic">
+               <obj_property name="ElementShortName">[31]</obj_property>
+               <obj_property name="ObjectShortName">[31]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/Normalized_ZF_stage_1/channel_estimate_0/inst/cordic_inst_rx/s_axis_cartesian_tdata[30]" type="logic">
+               <obj_property name="ElementShortName">[30]</obj_property>
+               <obj_property name="ObjectShortName">[30]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/Normalized_ZF_stage_1/channel_estimate_0/inst/cordic_inst_rx/s_axis_cartesian_tdata[29]" type="logic">
+               <obj_property name="ElementShortName">[29]</obj_property>
+               <obj_property name="ObjectShortName">[29]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/Normalized_ZF_stage_1/channel_estimate_0/inst/cordic_inst_rx/s_axis_cartesian_tdata[28]" type="logic">
+               <obj_property name="ElementShortName">[28]</obj_property>
+               <obj_property name="ObjectShortName">[28]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/Normalized_ZF_stage_1/channel_estimate_0/inst/cordic_inst_rx/s_axis_cartesian_tdata[27]" type="logic">
+               <obj_property name="ElementShortName">[27]</obj_property>
+               <obj_property name="ObjectShortName">[27]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/Normalized_ZF_stage_1/channel_estimate_0/inst/cordic_inst_rx/s_axis_cartesian_tdata[26]" type="logic">
+               <obj_property name="ElementShortName">[26]</obj_property>
+               <obj_property name="ObjectShortName">[26]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/Normalized_ZF_stage_1/channel_estimate_0/inst/cordic_inst_rx/s_axis_cartesian_tdata[25]" type="logic">
+               <obj_property name="ElementShortName">[25]</obj_property>
+               <obj_property name="ObjectShortName">[25]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/Normalized_ZF_stage_1/channel_estimate_0/inst/cordic_inst_rx/s_axis_cartesian_tdata[24]" type="logic">
+               <obj_property name="ElementShortName">[24]</obj_property>
+               <obj_property name="ObjectShortName">[24]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/Normalized_ZF_stage_1/channel_estimate_0/inst/cordic_inst_rx/s_axis_cartesian_tdata[23]" type="logic">
+               <obj_property name="ElementShortName">[23]</obj_property>
+               <obj_property name="ObjectShortName">[23]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/Normalized_ZF_stage_1/channel_estimate_0/inst/cordic_inst_rx/s_axis_cartesian_tdata[22]" type="logic">
+               <obj_property name="ElementShortName">[22]</obj_property>
+               <obj_property name="ObjectShortName">[22]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/Normalized_ZF_stage_1/channel_estimate_0/inst/cordic_inst_rx/s_axis_cartesian_tdata[21]" type="logic">
+               <obj_property name="ElementShortName">[21]</obj_property>
+               <obj_property name="ObjectShortName">[21]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/Normalized_ZF_stage_1/channel_estimate_0/inst/cordic_inst_rx/s_axis_cartesian_tdata[20]" type="logic">
+               <obj_property name="ElementShortName">[20]</obj_property>
+               <obj_property name="ObjectShortName">[20]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/Normalized_ZF_stage_1/channel_estimate_0/inst/cordic_inst_rx/s_axis_cartesian_tdata[19]" type="logic">
+               <obj_property name="ElementShortName">[19]</obj_property>
+               <obj_property name="ObjectShortName">[19]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/Normalized_ZF_stage_1/channel_estimate_0/inst/cordic_inst_rx/s_axis_cartesian_tdata[18]" type="logic">
+               <obj_property name="ElementShortName">[18]</obj_property>
+               <obj_property name="ObjectShortName">[18]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/Normalized_ZF_stage_1/channel_estimate_0/inst/cordic_inst_rx/s_axis_cartesian_tdata[17]" type="logic">
+               <obj_property name="ElementShortName">[17]</obj_property>
+               <obj_property name="ObjectShortName">[17]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/Normalized_ZF_stage_1/channel_estimate_0/inst/cordic_inst_rx/s_axis_cartesian_tdata[16]" type="logic">
+               <obj_property name="ElementShortName">[16]</obj_property>
+               <obj_property name="ObjectShortName">[16]</obj_property>
+            </wvobject>
+         </wvobject>
+         <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/Normalized_ZF_stage_1/channel_estimate_0/inst/cordic_inst_rx/m_axis_dout_tvalid" type="logic">
+            <obj_property name="ElementShortName">m_axis_dout_tvalid</obj_property>
+            <obj_property name="ObjectShortName">m_axis_dout_tvalid</obj_property>
+         </wvobject>
+         <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/Normalized_ZF_stage_1/channel_estimate_0/inst/cordic_inst_rx/m_axis_dout_tdata" type="array">
+            <obj_property name="ElementShortName">m_axis_dout_tdata[31:0]</obj_property>
+            <obj_property name="ObjectShortName">m_axis_dout_tdata[31:0]</obj_property>
+         </wvobject>
+         <wvobject fp_name="vbus6412" type="vbus">
+            <obj_property name="label">Magnitude</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/Normalized_ZF_stage_1/channel_estimate_0/inst/cordic_inst_rx/m_axis_dout_tdata[15]" type="logic">
+               <obj_property name="ElementShortName">[15]</obj_property>
+               <obj_property name="ObjectShortName">[15]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/Normalized_ZF_stage_1/channel_estimate_0/inst/cordic_inst_rx/m_axis_dout_tdata[14]" type="logic">
+               <obj_property name="ElementShortName">[14]</obj_property>
+               <obj_property name="ObjectShortName">[14]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/Normalized_ZF_stage_1/channel_estimate_0/inst/cordic_inst_rx/m_axis_dout_tdata[13]" type="logic">
+               <obj_property name="ElementShortName">[13]</obj_property>
+               <obj_property name="ObjectShortName">[13]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/Normalized_ZF_stage_1/channel_estimate_0/inst/cordic_inst_rx/m_axis_dout_tdata[12]" type="logic">
+               <obj_property name="ElementShortName">[12]</obj_property>
+               <obj_property name="ObjectShortName">[12]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/Normalized_ZF_stage_1/channel_estimate_0/inst/cordic_inst_rx/m_axis_dout_tdata[11]" type="logic">
+               <obj_property name="ElementShortName">[11]</obj_property>
+               <obj_property name="ObjectShortName">[11]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/Normalized_ZF_stage_1/channel_estimate_0/inst/cordic_inst_rx/m_axis_dout_tdata[10]" type="logic">
+               <obj_property name="ElementShortName">[10]</obj_property>
+               <obj_property name="ObjectShortName">[10]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/Normalized_ZF_stage_1/channel_estimate_0/inst/cordic_inst_rx/m_axis_dout_tdata[9]" type="logic">
+               <obj_property name="ElementShortName">[9]</obj_property>
+               <obj_property name="ObjectShortName">[9]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/Normalized_ZF_stage_1/channel_estimate_0/inst/cordic_inst_rx/m_axis_dout_tdata[8]" type="logic">
+               <obj_property name="ElementShortName">[8]</obj_property>
+               <obj_property name="ObjectShortName">[8]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/Normalized_ZF_stage_1/channel_estimate_0/inst/cordic_inst_rx/m_axis_dout_tdata[7]" type="logic">
+               <obj_property name="ElementShortName">[7]</obj_property>
+               <obj_property name="ObjectShortName">[7]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/Normalized_ZF_stage_1/channel_estimate_0/inst/cordic_inst_rx/m_axis_dout_tdata[6]" type="logic">
+               <obj_property name="ElementShortName">[6]</obj_property>
+               <obj_property name="ObjectShortName">[6]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/Normalized_ZF_stage_1/channel_estimate_0/inst/cordic_inst_rx/m_axis_dout_tdata[5]" type="logic">
+               <obj_property name="ElementShortName">[5]</obj_property>
+               <obj_property name="ObjectShortName">[5]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/Normalized_ZF_stage_1/channel_estimate_0/inst/cordic_inst_rx/m_axis_dout_tdata[4]" type="logic">
+               <obj_property name="ElementShortName">[4]</obj_property>
+               <obj_property name="ObjectShortName">[4]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/Normalized_ZF_stage_1/channel_estimate_0/inst/cordic_inst_rx/m_axis_dout_tdata[3]" type="logic">
+               <obj_property name="ElementShortName">[3]</obj_property>
+               <obj_property name="ObjectShortName">[3]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/Normalized_ZF_stage_1/channel_estimate_0/inst/cordic_inst_rx/m_axis_dout_tdata[2]" type="logic">
+               <obj_property name="ElementShortName">[2]</obj_property>
+               <obj_property name="ObjectShortName">[2]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/Normalized_ZF_stage_1/channel_estimate_0/inst/cordic_inst_rx/m_axis_dout_tdata[1]" type="logic">
+               <obj_property name="ElementShortName">[1]</obj_property>
+               <obj_property name="ObjectShortName">[1]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/Normalized_ZF_stage_1/channel_estimate_0/inst/cordic_inst_rx/m_axis_dout_tdata[0]" type="logic">
+               <obj_property name="ElementShortName">[0]</obj_property>
+               <obj_property name="ObjectShortName">[0]</obj_property>
+            </wvobject>
+         </wvobject>
+         <wvobject fp_name="vbus6395" type="vbus">
+            <obj_property name="label">Phase</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/Normalized_ZF_stage_1/channel_estimate_0/inst/cordic_inst_rx/m_axis_dout_tdata[31]" type="logic">
+               <obj_property name="ElementShortName">[31]</obj_property>
+               <obj_property name="ObjectShortName">[31]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/Normalized_ZF_stage_1/channel_estimate_0/inst/cordic_inst_rx/m_axis_dout_tdata[30]" type="logic">
+               <obj_property name="ElementShortName">[30]</obj_property>
+               <obj_property name="ObjectShortName">[30]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/Normalized_ZF_stage_1/channel_estimate_0/inst/cordic_inst_rx/m_axis_dout_tdata[29]" type="logic">
+               <obj_property name="ElementShortName">[29]</obj_property>
+               <obj_property name="ObjectShortName">[29]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/Normalized_ZF_stage_1/channel_estimate_0/inst/cordic_inst_rx/m_axis_dout_tdata[28]" type="logic">
+               <obj_property name="ElementShortName">[28]</obj_property>
+               <obj_property name="ObjectShortName">[28]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/Normalized_ZF_stage_1/channel_estimate_0/inst/cordic_inst_rx/m_axis_dout_tdata[27]" type="logic">
+               <obj_property name="ElementShortName">[27]</obj_property>
+               <obj_property name="ObjectShortName">[27]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/Normalized_ZF_stage_1/channel_estimate_0/inst/cordic_inst_rx/m_axis_dout_tdata[26]" type="logic">
+               <obj_property name="ElementShortName">[26]</obj_property>
+               <obj_property name="ObjectShortName">[26]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/Normalized_ZF_stage_1/channel_estimate_0/inst/cordic_inst_rx/m_axis_dout_tdata[25]" type="logic">
+               <obj_property name="ElementShortName">[25]</obj_property>
+               <obj_property name="ObjectShortName">[25]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/Normalized_ZF_stage_1/channel_estimate_0/inst/cordic_inst_rx/m_axis_dout_tdata[24]" type="logic">
+               <obj_property name="ElementShortName">[24]</obj_property>
+               <obj_property name="ObjectShortName">[24]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/Normalized_ZF_stage_1/channel_estimate_0/inst/cordic_inst_rx/m_axis_dout_tdata[23]" type="logic">
+               <obj_property name="ElementShortName">[23]</obj_property>
+               <obj_property name="ObjectShortName">[23]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/Normalized_ZF_stage_1/channel_estimate_0/inst/cordic_inst_rx/m_axis_dout_tdata[22]" type="logic">
+               <obj_property name="ElementShortName">[22]</obj_property>
+               <obj_property name="ObjectShortName">[22]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/Normalized_ZF_stage_1/channel_estimate_0/inst/cordic_inst_rx/m_axis_dout_tdata[21]" type="logic">
+               <obj_property name="ElementShortName">[21]</obj_property>
+               <obj_property name="ObjectShortName">[21]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/Normalized_ZF_stage_1/channel_estimate_0/inst/cordic_inst_rx/m_axis_dout_tdata[20]" type="logic">
+               <obj_property name="ElementShortName">[20]</obj_property>
+               <obj_property name="ObjectShortName">[20]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/Normalized_ZF_stage_1/channel_estimate_0/inst/cordic_inst_rx/m_axis_dout_tdata[19]" type="logic">
+               <obj_property name="ElementShortName">[19]</obj_property>
+               <obj_property name="ObjectShortName">[19]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/Normalized_ZF_stage_1/channel_estimate_0/inst/cordic_inst_rx/m_axis_dout_tdata[18]" type="logic">
+               <obj_property name="ElementShortName">[18]</obj_property>
+               <obj_property name="ObjectShortName">[18]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/Normalized_ZF_stage_1/channel_estimate_0/inst/cordic_inst_rx/m_axis_dout_tdata[17]" type="logic">
+               <obj_property name="ElementShortName">[17]</obj_property>
+               <obj_property name="ObjectShortName">[17]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/Normalized_ZF_stage_1/channel_estimate_0/inst/cordic_inst_rx/m_axis_dout_tdata[16]" type="logic">
+               <obj_property name="ElementShortName">[16]</obj_property>
+               <obj_property name="ObjectShortName">[16]</obj_property>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="group314" type="group">
+         <obj_property name="label">DIVIDE</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="isExpanded"></obj_property>
+         <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/Normalized_ZF_stage_1/channel_estimate_0/inst/div_gen_inst/s_axis_divisor_tdata" type="array">
+            <obj_property name="ElementShortName">s_axis_divisor_tdata[15:0]</obj_property>
+            <obj_property name="ObjectShortName">s_axis_divisor_tdata[15:0]</obj_property>
+            <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+         </wvobject>
+         <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/Normalized_ZF_stage_1/channel_estimate_0/inst/div_gen_inst/s_axis_divisor_tvalid" type="logic">
+            <obj_property name="ElementShortName">s_axis_divisor_tvalid</obj_property>
+            <obj_property name="ObjectShortName">s_axis_divisor_tvalid</obj_property>
+         </wvobject>
+         <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/Normalized_ZF_stage_1/channel_estimate_0/inst/div_gen_inst/s_axis_dividend_tdata" type="array">
+            <obj_property name="ElementShortName">s_axis_dividend_tdata[15:0]</obj_property>
+            <obj_property name="ObjectShortName">s_axis_dividend_tdata[15:0]</obj_property>
+            <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+         </wvobject>
+         <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/Normalized_ZF_stage_1/channel_estimate_0/inst/div_gen_inst/s_axis_dividend_tvalid" type="logic">
+            <obj_property name="ElementShortName">s_axis_dividend_tvalid</obj_property>
+            <obj_property name="ObjectShortName">s_axis_dividend_tvalid</obj_property>
+         </wvobject>
+         <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/Normalized_ZF_stage_1/channel_estimate_0/inst/div_gen_inst/m_axis_dout_tdata" type="array">
+            <obj_property name="ElementShortName">m_axis_dout_tdata[23:0]</obj_property>
+            <obj_property name="ObjectShortName">m_axis_dout_tdata[23:0]</obj_property>
+         </wvobject>
+         <wvobject fp_name="vbus7142" type="vbus">
+            <obj_property name="label">Res</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/Normalized_ZF_stage_1/channel_estimate_0/inst/div_gen_inst/m_axis_dout_tdata[23]" type="logic">
+               <obj_property name="ElementShortName">[23]</obj_property>
+               <obj_property name="ObjectShortName">[23]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/Normalized_ZF_stage_1/channel_estimate_0/inst/div_gen_inst/m_axis_dout_tdata[22]" type="logic">
+               <obj_property name="ElementShortName">[22]</obj_property>
+               <obj_property name="ObjectShortName">[22]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/Normalized_ZF_stage_1/channel_estimate_0/inst/div_gen_inst/m_axis_dout_tdata[21]" type="logic">
+               <obj_property name="ElementShortName">[21]</obj_property>
+               <obj_property name="ObjectShortName">[21]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/Normalized_ZF_stage_1/channel_estimate_0/inst/div_gen_inst/m_axis_dout_tdata[20]" type="logic">
+               <obj_property name="ElementShortName">[20]</obj_property>
+               <obj_property name="ObjectShortName">[20]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/Normalized_ZF_stage_1/channel_estimate_0/inst/div_gen_inst/m_axis_dout_tdata[19]" type="logic">
+               <obj_property name="ElementShortName">[19]</obj_property>
+               <obj_property name="ObjectShortName">[19]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/Normalized_ZF_stage_1/channel_estimate_0/inst/div_gen_inst/m_axis_dout_tdata[18]" type="logic">
+               <obj_property name="ElementShortName">[18]</obj_property>
+               <obj_property name="ObjectShortName">[18]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/Normalized_ZF_stage_1/channel_estimate_0/inst/div_gen_inst/m_axis_dout_tdata[17]" type="logic">
+               <obj_property name="ElementShortName">[17]</obj_property>
+               <obj_property name="ObjectShortName">[17]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/Normalized_ZF_stage_1/channel_estimate_0/inst/div_gen_inst/m_axis_dout_tdata[16]" type="logic">
+               <obj_property name="ElementShortName">[16]</obj_property>
+               <obj_property name="ObjectShortName">[16]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/Normalized_ZF_stage_1/channel_estimate_0/inst/div_gen_inst/m_axis_dout_tdata[15]" type="logic">
+               <obj_property name="ElementShortName">[15]</obj_property>
+               <obj_property name="ObjectShortName">[15]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/Normalized_ZF_stage_1/channel_estimate_0/inst/div_gen_inst/m_axis_dout_tdata[14]" type="logic">
+               <obj_property name="ElementShortName">[14]</obj_property>
+               <obj_property name="ObjectShortName">[14]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/Normalized_ZF_stage_1/channel_estimate_0/inst/div_gen_inst/m_axis_dout_tdata[13]" type="logic">
+               <obj_property name="ElementShortName">[13]</obj_property>
+               <obj_property name="ObjectShortName">[13]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/Normalized_ZF_stage_1/channel_estimate_0/inst/div_gen_inst/m_axis_dout_tdata[12]" type="logic">
+               <obj_property name="ElementShortName">[12]</obj_property>
+               <obj_property name="ObjectShortName">[12]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/Normalized_ZF_stage_1/channel_estimate_0/inst/div_gen_inst/m_axis_dout_tdata[11]" type="logic">
+               <obj_property name="ElementShortName">[11]</obj_property>
+               <obj_property name="ObjectShortName">[11]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/Normalized_ZF_stage_1/channel_estimate_0/inst/div_gen_inst/m_axis_dout_tdata[10]" type="logic">
+               <obj_property name="ElementShortName">[10]</obj_property>
+               <obj_property name="ObjectShortName">[10]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/Normalized_ZF_stage_1/channel_estimate_0/inst/div_gen_inst/m_axis_dout_tdata[9]" type="logic">
+               <obj_property name="ElementShortName">[9]</obj_property>
+               <obj_property name="ObjectShortName">[9]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/Normalized_ZF_stage_1/channel_estimate_0/inst/div_gen_inst/m_axis_dout_tdata[8]" type="logic">
+               <obj_property name="ElementShortName">[8]</obj_property>
+               <obj_property name="ObjectShortName">[8]</obj_property>
+            </wvobject>
+         </wvobject>
+         <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/Normalized_ZF_stage_1/channel_estimate_0/inst/div_gen_inst/m_axis_dout_tvalid" type="logic">
+            <obj_property name="ElementShortName">m_axis_dout_tvalid</obj_property>
+            <obj_property name="ObjectShortName">m_axis_dout_tvalid</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="group1940" type="group">
+         <obj_property name="label">ANGLE_AXIS</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/Normalized_ZF_stage_1/channel_estimate_0/inst/m_angle_ch_est_axis_tdata" type="array">
+            <obj_property name="ElementShortName">m_angle_ch_est_axis_tdata[15:0]</obj_property>
+            <obj_property name="ObjectShortName">m_angle_ch_est_axis_tdata[15:0]</obj_property>
+            <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+         </wvobject>
+         <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/Normalized_ZF_stage_1/channel_estimate_0/inst/m_angle_ch_est_axis_tvalid" type="logic">
+            <obj_property name="ElementShortName">m_angle_ch_est_axis_tvalid</obj_property>
+            <obj_property name="ObjectShortName">m_angle_ch_est_axis_tvalid</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="group2590" type="group">
+         <obj_property name="label">M_AXIS</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/Normalized_ZF_stage_1/channel_estimate_0/m_axis_tdata" type="array">
+            <obj_property name="ElementShortName">m_axis_tdata[31:0]</obj_property>
+            <obj_property name="ObjectShortName">m_axis_tdata[31:0]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/Normalized_ZF_stage_1/channel_estimate_0/m_axis_tvalid" type="logic">
+            <obj_property name="ElementShortName">m_axis_tvalid</obj_property>
+            <obj_property name="ObjectShortName">m_axis_tvalid</obj_property>
+         </wvobject>
+         <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/Normalized_ZF_stage_1/channel_estimate_0/m_axis_tlast" type="logic">
+            <obj_property name="ElementShortName">m_axis_tlast</obj_property>
+            <obj_property name="ObjectShortName">m_axis_tlast</obj_property>
+         </wvobject>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="group343" type="group">
+      <obj_property name="label">PILOT_SCHEDULER</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/pilot_scheduler_0/i_stage_1_en" type="logic">
+         <obj_property name="ElementShortName">i_stage_1_en</obj_property>
+         <obj_property name="ObjectShortName">i_stage_1_en</obj_property>
+      </wvobject>
+      <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/pilot_scheduler_0/i_stage_2_en" type="logic">
+         <obj_property name="ElementShortName">i_stage_2_en</obj_property>
+         <obj_property name="ObjectShortName">i_stage_2_en</obj_property>
+      </wvobject>
+      <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/pilot_scheduler_0/i_stage_3_en" type="logic">
+         <obj_property name="ElementShortName">i_stage_3_en</obj_property>
+         <obj_property name="ObjectShortName">i_stage_3_en</obj_property>
+      </wvobject>
+      <wvobject fp_name="group327" type="group">
+         <obj_property name="label">BRAM</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="isExpanded"></obj_property>
+         <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/pilot_scheduler_0/BRAM_PORT_addr" type="array">
+            <obj_property name="ElementShortName">BRAM_PORT_addr[31:0]</obj_property>
+            <obj_property name="ObjectShortName">BRAM_PORT_addr[31:0]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/pilot_scheduler_0/BRAM_PORT_clk" type="logic">
+            <obj_property name="ElementShortName">BRAM_PORT_clk</obj_property>
+            <obj_property name="ObjectShortName">BRAM_PORT_clk</obj_property>
+         </wvobject>
+         <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/pilot_scheduler_0/BRAM_PORT_din" type="array">
+            <obj_property name="ElementShortName">BRAM_PORT_din[31:0]</obj_property>
+            <obj_property name="ObjectShortName">BRAM_PORT_din[31:0]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/pilot_scheduler_0/BRAM_PORT_dout" type="array">
+            <obj_property name="ElementShortName">BRAM_PORT_dout[31:0]</obj_property>
+            <obj_property name="ObjectShortName">BRAM_PORT_dout[31:0]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/pilot_scheduler_0/BRAM_PORT_en" type="logic">
+            <obj_property name="ElementShortName">BRAM_PORT_en</obj_property>
+            <obj_property name="ObjectShortName">BRAM_PORT_en</obj_property>
+         </wvobject>
+         <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/pilot_scheduler_0/BRAM_PORT_rst" type="logic">
+            <obj_property name="ElementShortName">BRAM_PORT_rst</obj_property>
+            <obj_property name="ObjectShortName">BRAM_PORT_rst</obj_property>
+         </wvobject>
+         <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/pilot_scheduler_0/BRAM_PORT_we" type="array">
+            <obj_property name="ElementShortName">BRAM_PORT_we[0:0]</obj_property>
+            <obj_property name="ObjectShortName">BRAM_PORT_we[0:0]</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="group340" type="group">
+         <obj_property name="label">M_AXIS_1</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="isExpanded"></obj_property>
+         <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/pilot_scheduler_0/M_AXIS_1_tdata" type="array">
+            <obj_property name="ElementShortName">M_AXIS_1_tdata[31:0]</obj_property>
+            <obj_property name="ObjectShortName">M_AXIS_1_tdata[31:0]</obj_property>
+         </wvobject>
+         <wvobject fp_name="vbus3994" type="vbus">
+            <obj_property name="label">I</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/pilot_scheduler_0/M_AXIS_1_tdata[15]" type="logic">
+               <obj_property name="ElementShortName">[15]</obj_property>
+               <obj_property name="ObjectShortName">[15]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/pilot_scheduler_0/M_AXIS_1_tdata[14]" type="logic">
+               <obj_property name="ElementShortName">[14]</obj_property>
+               <obj_property name="ObjectShortName">[14]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/pilot_scheduler_0/M_AXIS_1_tdata[13]" type="logic">
+               <obj_property name="ElementShortName">[13]</obj_property>
+               <obj_property name="ObjectShortName">[13]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/pilot_scheduler_0/M_AXIS_1_tdata[12]" type="logic">
+               <obj_property name="ElementShortName">[12]</obj_property>
+               <obj_property name="ObjectShortName">[12]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/pilot_scheduler_0/M_AXIS_1_tdata[11]" type="logic">
+               <obj_property name="ElementShortName">[11]</obj_property>
+               <obj_property name="ObjectShortName">[11]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/pilot_scheduler_0/M_AXIS_1_tdata[10]" type="logic">
+               <obj_property name="ElementShortName">[10]</obj_property>
+               <obj_property name="ObjectShortName">[10]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/pilot_scheduler_0/M_AXIS_1_tdata[9]" type="logic">
+               <obj_property name="ElementShortName">[9]</obj_property>
+               <obj_property name="ObjectShortName">[9]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/pilot_scheduler_0/M_AXIS_1_tdata[8]" type="logic">
+               <obj_property name="ElementShortName">[8]</obj_property>
+               <obj_property name="ObjectShortName">[8]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/pilot_scheduler_0/M_AXIS_1_tdata[7]" type="logic">
+               <obj_property name="ElementShortName">[7]</obj_property>
+               <obj_property name="ObjectShortName">[7]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/pilot_scheduler_0/M_AXIS_1_tdata[6]" type="logic">
+               <obj_property name="ElementShortName">[6]</obj_property>
+               <obj_property name="ObjectShortName">[6]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/pilot_scheduler_0/M_AXIS_1_tdata[5]" type="logic">
+               <obj_property name="ElementShortName">[5]</obj_property>
+               <obj_property name="ObjectShortName">[5]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/pilot_scheduler_0/M_AXIS_1_tdata[4]" type="logic">
+               <obj_property name="ElementShortName">[4]</obj_property>
+               <obj_property name="ObjectShortName">[4]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/pilot_scheduler_0/M_AXIS_1_tdata[3]" type="logic">
+               <obj_property name="ElementShortName">[3]</obj_property>
+               <obj_property name="ObjectShortName">[3]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/pilot_scheduler_0/M_AXIS_1_tdata[2]" type="logic">
+               <obj_property name="ElementShortName">[2]</obj_property>
+               <obj_property name="ObjectShortName">[2]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/pilot_scheduler_0/M_AXIS_1_tdata[1]" type="logic">
+               <obj_property name="ElementShortName">[1]</obj_property>
+               <obj_property name="ObjectShortName">[1]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/pilot_scheduler_0/M_AXIS_1_tdata[0]" type="logic">
+               <obj_property name="ElementShortName">[0]</obj_property>
+               <obj_property name="ObjectShortName">[0]</obj_property>
+            </wvobject>
+         </wvobject>
+         <wvobject fp_name="vbus3977" type="vbus">
+            <obj_property name="label">Q</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/pilot_scheduler_0/M_AXIS_1_tdata[31]" type="logic">
+               <obj_property name="ElementShortName">[31]</obj_property>
+               <obj_property name="ObjectShortName">[31]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/pilot_scheduler_0/M_AXIS_1_tdata[30]" type="logic">
+               <obj_property name="ElementShortName">[30]</obj_property>
+               <obj_property name="ObjectShortName">[30]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/pilot_scheduler_0/M_AXIS_1_tdata[29]" type="logic">
+               <obj_property name="ElementShortName">[29]</obj_property>
+               <obj_property name="ObjectShortName">[29]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/pilot_scheduler_0/M_AXIS_1_tdata[28]" type="logic">
+               <obj_property name="ElementShortName">[28]</obj_property>
+               <obj_property name="ObjectShortName">[28]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/pilot_scheduler_0/M_AXIS_1_tdata[27]" type="logic">
+               <obj_property name="ElementShortName">[27]</obj_property>
+               <obj_property name="ObjectShortName">[27]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/pilot_scheduler_0/M_AXIS_1_tdata[26]" type="logic">
+               <obj_property name="ElementShortName">[26]</obj_property>
+               <obj_property name="ObjectShortName">[26]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/pilot_scheduler_0/M_AXIS_1_tdata[25]" type="logic">
+               <obj_property name="ElementShortName">[25]</obj_property>
+               <obj_property name="ObjectShortName">[25]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/pilot_scheduler_0/M_AXIS_1_tdata[24]" type="logic">
+               <obj_property name="ElementShortName">[24]</obj_property>
+               <obj_property name="ObjectShortName">[24]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/pilot_scheduler_0/M_AXIS_1_tdata[23]" type="logic">
+               <obj_property name="ElementShortName">[23]</obj_property>
+               <obj_property name="ObjectShortName">[23]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/pilot_scheduler_0/M_AXIS_1_tdata[22]" type="logic">
+               <obj_property name="ElementShortName">[22]</obj_property>
+               <obj_property name="ObjectShortName">[22]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/pilot_scheduler_0/M_AXIS_1_tdata[21]" type="logic">
+               <obj_property name="ElementShortName">[21]</obj_property>
+               <obj_property name="ObjectShortName">[21]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/pilot_scheduler_0/M_AXIS_1_tdata[20]" type="logic">
+               <obj_property name="ElementShortName">[20]</obj_property>
+               <obj_property name="ObjectShortName">[20]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/pilot_scheduler_0/M_AXIS_1_tdata[19]" type="logic">
+               <obj_property name="ElementShortName">[19]</obj_property>
+               <obj_property name="ObjectShortName">[19]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/pilot_scheduler_0/M_AXIS_1_tdata[18]" type="logic">
+               <obj_property name="ElementShortName">[18]</obj_property>
+               <obj_property name="ObjectShortName">[18]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/pilot_scheduler_0/M_AXIS_1_tdata[17]" type="logic">
+               <obj_property name="ElementShortName">[17]</obj_property>
+               <obj_property name="ObjectShortName">[17]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/pilot_scheduler_0/M_AXIS_1_tdata[16]" type="logic">
+               <obj_property name="ElementShortName">[16]</obj_property>
+               <obj_property name="ObjectShortName">[16]</obj_property>
+            </wvobject>
+         </wvobject>
+         <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/pilot_scheduler_0/M_AXIS_1_tvalid" type="logic">
+            <obj_property name="ElementShortName">M_AXIS_1_tvalid</obj_property>
+            <obj_property name="ObjectShortName">M_AXIS_1_tvalid</obj_property>
+         </wvobject>
+         <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/pilot_scheduler_0/M_AXIS_1_tlast" type="logic">
+            <obj_property name="ElementShortName">M_AXIS_1_tlast</obj_property>
+            <obj_property name="ObjectShortName">M_AXIS_1_tlast</obj_property>
+         </wvobject>
+         <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/pilot_scheduler_0/M_AXIS_1_tready" type="logic">
+            <obj_property name="ElementShortName">M_AXIS_1_tready</obj_property>
+            <obj_property name="ObjectShortName">M_AXIS_1_tready</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="group341" type="group">
+         <obj_property name="label">M_AXIS_2</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/pilot_scheduler_0/M_AXIS_2_tdata" type="array">
+            <obj_property name="ElementShortName">M_AXIS_2_tdata[31:0]</obj_property>
+            <obj_property name="ObjectShortName">M_AXIS_2_tdata[31:0]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/pilot_scheduler_0/M_AXIS_2_tvalid" type="logic">
+            <obj_property name="ElementShortName">M_AXIS_2_tvalid</obj_property>
+            <obj_property name="ObjectShortName">M_AXIS_2_tvalid</obj_property>
+         </wvobject>
+         <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/pilot_scheduler_0/M_AXIS_2_tlast" type="logic">
+            <obj_property name="ElementShortName">M_AXIS_2_tlast</obj_property>
+            <obj_property name="ObjectShortName">M_AXIS_2_tlast</obj_property>
+         </wvobject>
+         <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/pilot_scheduler_0/M_AXIS_2_tready" type="logic">
+            <obj_property name="ElementShortName">M_AXIS_2_tready</obj_property>
+            <obj_property name="ObjectShortName">M_AXIS_2_tready</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="group342" type="group">
+         <obj_property name="label">M_AXIS_3</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/pilot_scheduler_0/M_AXIS_3_tdata" type="array">
+            <obj_property name="ElementShortName">M_AXIS_3_tdata[31:0]</obj_property>
+            <obj_property name="ObjectShortName">M_AXIS_3_tdata[31:0]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/pilot_scheduler_0/M_AXIS_3_tvalid" type="logic">
+            <obj_property name="ElementShortName">M_AXIS_3_tvalid</obj_property>
+            <obj_property name="ObjectShortName">M_AXIS_3_tvalid</obj_property>
+         </wvobject>
+         <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/pilot_scheduler_0/M_AXIS_3_tlast" type="logic">
+            <obj_property name="ElementShortName">M_AXIS_3_tlast</obj_property>
+            <obj_property name="ObjectShortName">M_AXIS_3_tlast</obj_property>
+         </wvobject>
+         <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/pilot_scheduler_0/M_AXIS_3_tready" type="logic">
+            <obj_property name="ElementShortName">M_AXIS_3_tready</obj_property>
+            <obj_property name="ObjectShortName">M_AXIS_3_tready</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/pilot_scheduler_0/i_valid_frame" type="logic">
+         <obj_property name="ElementShortName">i_valid_frame</obj_property>
+         <obj_property name="ObjectShortName">i_valid_frame</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="group2931" type="group">
+      <obj_property name="label">Pipeline</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject fp_name="group2929" type="group">
+         <obj_property name="label">S_AXIS</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="isExpanded"></obj_property>
+         <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/Normalized_ZF_stage_1/channel_estimate_0/inst/pipeline_inst/s_axis_tdata" type="array">
+            <obj_property name="ElementShortName">s_axis_tdata[15:0]</obj_property>
+            <obj_property name="ObjectShortName">s_axis_tdata[15:0]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/Normalized_ZF_stage_1/channel_estimate_0/inst/pipeline_inst/s_axis_tvalid" type="logic">
+            <obj_property name="ElementShortName">s_axis_tvalid</obj_property>
+            <obj_property name="ObjectShortName">s_axis_tvalid</obj_property>
+         </wvobject>
+         <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/Normalized_ZF_stage_1/channel_estimate_0/inst/pipeline_inst/s_axis_tlast" type="logic">
+            <obj_property name="ElementShortName">s_axis_tlast</obj_property>
+            <obj_property name="ObjectShortName">s_axis_tlast</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="group2930" type="group">
+         <obj_property name="label">M_AXIS</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="isExpanded"></obj_property>
+         <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/Normalized_ZF_stage_1/channel_estimate_0/inst/pipeline_inst/m_axis_tdata" type="array">
+            <obj_property name="ElementShortName">m_axis_tdata[15:0]</obj_property>
+            <obj_property name="ObjectShortName">m_axis_tdata[15:0]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/Normalized_ZF_stage_1/channel_estimate_0/inst/pipeline_inst/m_axis_tvalid" type="logic">
+            <obj_property name="ElementShortName">m_axis_tvalid</obj_property>
+            <obj_property name="ObjectShortName">m_axis_tvalid</obj_property>
+         </wvobject>
+         <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/Normalized_ZF_stage_1/channel_estimate_0/inst/pipeline_inst/m_axis_tlast" type="logic">
+            <obj_property name="ElementShortName">m_axis_tlast</obj_property>
+            <obj_property name="ObjectShortName">m_axis_tlast</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/Normalized_ZF_stage_1/channel_estimate_0/inst/pipeline_inst/pipeline_tdata" type="array">
+         <obj_property name="ElementShortName">pipeline_tdata[0:18][15:0]</obj_property>
+         <obj_property name="ObjectShortName">pipeline_tdata[0:18][15:0]</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="group1197" type="group">
+      <obj_property name="label">VERIF</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject fp_name="/zf_equalizer_tb/i_tx_in_cordic" type="array">
+         <obj_property name="ElementShortName">i_tx_in_cordic[15:0]</obj_property>
+         <obj_property name="ObjectShortName">i_tx_in_cordic[15:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/zf_equalizer_tb/q_tx_in_cordic" type="array">
+         <obj_property name="ElementShortName">q_tx_in_cordic[15:0]</obj_property>
+         <obj_property name="ObjectShortName">q_tx_in_cordic[15:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/zf_equalizer_tb/i_rx_in_cordic" type="array">
+         <obj_property name="ElementShortName">i_rx_in_cordic[15:0]</obj_property>
+         <obj_property name="ObjectShortName">i_rx_in_cordic[15:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/zf_equalizer_tb/q_rx_in_cordic" type="array">
+         <obj_property name="ElementShortName">q_rx_in_cordic[15:0]</obj_property>
+         <obj_property name="ObjectShortName">q_rx_in_cordic[15:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/zf_equalizer_tb/div1_amp" type="array">
+         <obj_property name="ElementShortName">div1_amp[15:0]</obj_property>
+         <obj_property name="ObjectShortName">div1_amp[15:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/zf_equalizer_tb/div1_phase" type="array">
+         <obj_property name="ElementShortName">div1_phase[15:0]</obj_property>
+         <obj_property name="ObjectShortName">div1_phase[15:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/zf_equalizer_tb/i_tx_out_cordic" type="array">
+         <obj_property name="ElementShortName">i_tx_out_cordic[15:0]</obj_property>
+         <obj_property name="ObjectShortName">i_tx_out_cordic[15:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/zf_equalizer_tb/q_tx_out_cordic" type="array">
+         <obj_property name="ElementShortName">q_tx_out_cordic[15:0]</obj_property>
+         <obj_property name="ObjectShortName">q_tx_out_cordic[15:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/zf_equalizer_tb/i_rx_out_cordic" type="array">
+         <obj_property name="ElementShortName">i_rx_out_cordic[15:0]</obj_property>
+         <obj_property name="ObjectShortName">i_rx_out_cordic[15:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/zf_equalizer_tb/q_rx_out_cordic" type="array">
+         <obj_property name="ElementShortName">q_rx_out_cordic[15:0]</obj_property>
+         <obj_property name="ObjectShortName">q_rx_out_cordic[15:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/zf_equalizer_tb/div1_amp" type="array">
+         <obj_property name="ElementShortName">div1_amp[15:0]</obj_property>
+         <obj_property name="ObjectShortName">div1_amp[15:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/zf_equalizer_tb/div1_phase" type="array">
+         <obj_property name="ElementShortName">div1_phase[15:0]</obj_property>
+         <obj_property name="ObjectShortName">div1_phase[15:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/zf_equalizer_tb/div1_abs_denom" type="array">
+         <obj_property name="ElementShortName">div1_abs_denom[15:0]</obj_property>
+         <obj_property name="ObjectShortName">div1_abs_denom[15:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/zf_equalizer_tb/div1_abs_num" type="array">
+         <obj_property name="ElementShortName">div1_abs_num[15:0]</obj_property>
+         <obj_property name="ObjectShortName">div1_abs_num[15:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/zf_equalizer_tb/div1_ang_denom" type="array">
+         <obj_property name="ElementShortName">div1_ang_denom[15:0]</obj_property>
+         <obj_property name="ObjectShortName">div1_ang_denom[15:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/zf_equalizer_tb/div1_ang_num" type="array">
+         <obj_property name="ElementShortName">div1_ang_num[15:0]</obj_property>
+         <obj_property name="ObjectShortName">div1_ang_num[15:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/zf_equalizer_tb/div1_full" type="array">
+         <obj_property name="ElementShortName">div1_full[15:0]</obj_property>
+         <obj_property name="ObjectShortName">div1_full[15:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/zf_equalizer_tb/div1_full_ang" type="array">
+         <obj_property name="ElementShortName">div1_full_ang[15:0]</obj_property>
+         <obj_property name="ObjectShortName">div1_full_ang[15:0]</obj_property>
+      </wvobject>
+   </wvobject>
+</wave_config>

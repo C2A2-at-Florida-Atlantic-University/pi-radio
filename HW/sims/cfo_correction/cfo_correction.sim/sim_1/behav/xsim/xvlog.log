@@ -1,0 +1,4 @@
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "c:/Projects/pi-radio/HW/modules/sim/cfo_correction_top_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cfo_correction_top_tb
+WARNING: [VRFC 10-3824] variable 'cordic_print' must explicitly be declared as automatic or static [c:/Projects/pi-radio/HW/modules/sim/cfo_correction_top_tb.sv:125]
+WARNING: [VRFC 10-3824] variable 'negative' must explicitly be declared as automatic or static [c:/Projects/pi-radio/HW/modules/sim/cfo_correction_top_tb.sv:126]

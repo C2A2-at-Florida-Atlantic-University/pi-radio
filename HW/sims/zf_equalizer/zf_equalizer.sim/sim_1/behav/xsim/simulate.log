@@ -1,0 +1,20 @@
+Time resolution is 1 ps
+ Block Memory Generator module loading initial data...
+ Block Memory Generator data initialization complete.
+Block Memory Generator module zf_equalizer_tb.DUT.zf_equalizer_i.blk_mem_gen_0.inst.\native_mem_module.blk_mem_gen_v8_4_5_inst  is using a behavioral model for simulation which will not precisely model memory collision behavior.
+File was opened successfully: -20000 
+File was opened successfully: -19999 
+File was opened successfully: -19998 
+File was opened successfully: -19997 
+File was opened successfully: -19996 
+File was opened successfully: -19995 
+File was opened successfully: -19994 
+File was opened successfully: -19993 
+File was opened successfully: -19992 
+File was opened successfully: -19991 
+File was opened successfully: -19990 
+File was opened successfully: -19989 
+Number of OFDM symbols:           3
+Info: [XPM_MEMORY 20-1] MEMORY_PRIMITIVE (0) instructs Vivado Synthesis to choose the memory primitive type. Depending on their values, other XPM_MEMORY parameters may preclude the choice of certain memory primitive types. Review XPM_MEMORY documentation and parameter values to understand any limitations, or set MEMORY_PRIMITIVE to a different value. zf_equalizer_tb.DUT.zf_equalizer_i.Normalized_ZF_stage_1.axis_data_fifo_0.inst.\gen_fifo.xpm_fifo_axis_inst .xpm_fifo_base_inst.\gen_sdpram.xpm_memory_base_inst .config_drc
+Time: 1 ps  Iteration: 0  Process: /zf_equalizer_tb/DUT/zf_equalizer_i/Normalized_ZF_stage_1/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/Initial299_18  Scope: zf_equalizer_tb.DUT.zf_equalizer_i.Normalized_ZF_stage_1.axis_data_fifo_0.inst.\gen_fifo.xpm_fifo_axis_inst .xpm_fifo_base_inst.\gen_sdpram.xpm_memory_base_inst .config_drc  File: C:/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv Line: 493
+$stop called at time : 9704 ns : File "C:/Projects/pi-radio/HW/modules/sim/zf_equalizer/zf_equalizer_tb.sv" Line 385
