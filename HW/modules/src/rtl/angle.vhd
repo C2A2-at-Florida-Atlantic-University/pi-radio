@@ -45,7 +45,7 @@ architecture RTL of angle is
   signal dout_tvalid              : std_logic;
   signal dout_tdata               : std_logic_vector(g_PRECISION*2-1 downto 0);
   
-  component cordic_0 is
+  component cordic_rec_to_polar is
     port(
       aclk                        : in  std_logic;
       s_axis_cartesian_tvalid     : in  std_logic;
@@ -53,14 +53,14 @@ architecture RTL of angle is
       m_axis_dout_tvalid          : out std_logic;
       m_axis_dout_tdata           : out std_logic_vector(g_PRECISION*2-1 downto 0)
     );
-  end component cordic_0;
+  end component cordic_rec_to_polar;
 
 begin
 
   din_tdata                       <= s_axis_tdata(63 downto 63-g_PRECISION+1) & 
                                      s_axis_tdata(31 downto 31-g_PRECISION+1);
 
-  cordic_inst : cordic_0
+  cordic_inst : cordic_rec_to_polar
     port map(
       aclk                        => axis_aclk,
       s_axis_cartesian_tvalid     => s_axis_tvalid,

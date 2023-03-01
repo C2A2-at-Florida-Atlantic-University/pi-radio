@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='C:/Projects/pi-radio/HW/sims/zf_equalizer/zf_equalizer.runs/div_gen_0_synth_1'
+HD_PWD='c:/Projects/pi-radio/HW/sims/zf_equalizer/zf_equalizer.runs/div_gen_0_synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

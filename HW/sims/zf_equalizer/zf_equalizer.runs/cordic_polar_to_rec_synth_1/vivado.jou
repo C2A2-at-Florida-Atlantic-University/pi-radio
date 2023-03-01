@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Vivado v2022.1 (64-bit)
+# SW Build 3526262 on Mon Apr 18 15:48:16 MDT 2022
+# IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
+# Start of session at: Tue Feb 28 21:01:02 2023
+# Process ID: 33844
+# Current directory: c:/Projects/pi-radio/HW/sims/zf_equalizer/zf_equalizer.runs/cordic_polar_to_rec_synth_1
+# Command line: vivado.exe -log cordic_polar_to_rec.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source cordic_polar_to_rec.tcl
+# Log file: c:/Projects/pi-radio/HW/sims/zf_equalizer/zf_equalizer.runs/cordic_polar_to_rec_synth_1/cordic_polar_to_rec.vds
+# Journal file: c:/Projects/pi-radio/HW/sims/zf_equalizer/zf_equalizer.runs/cordic_polar_to_rec_synth_1\vivado.jou
+# Running On: DESKTOP-1UDCE0K, OS: Windows, CPU Frequency: 3187 MHz, CPU Physical cores: 16, Host memory: 137149 MB
+#-----------------------------------------------------------
+source cordic_polar_to_rec.tcl -notrace

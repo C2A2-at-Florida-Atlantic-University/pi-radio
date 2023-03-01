@@ -95,17 +95,18 @@ architecture tb of tb_div_gen_0 is
 
   -- Slave channel DIVIDEND inputs
   signal s_axis_dividend_tvalid    : std_logic := '0';  -- TVALID for channel A
+  signal s_axis_dividend_tlast     : std_logic := '0';  -- TLAST for channel A
   signal s_axis_dividend_tdata     : std_logic_vector(15 downto 0) := (others => 'X');  -- TDATA for channel A
 
   -- Slave channel DIVISOR inputs
   signal s_axis_divisor_tvalid    : std_logic := '0';  -- TVALID for channel B
-  signal s_axis_divisor_tdata     : std_logic_vector(15 downto 0) := (others => 'X');  -- TDATA for channel B
+  signal s_axis_divisor_tdata     : std_logic_vector(7 downto 0) := (others => 'X');  -- TDATA for channel B
 
 
   -- Breakout signals. These signals are the application-specific operands which
   -- become subfields of the TDATA fields.
   signal dividend : std_logic_vector(15 downto 0) := (others => '0');
-  signal divisor  : std_logic_vector(15 downto 0) := (others => '0');
+  signal divisor  : std_logic_vector(7 downto 0) := (others => '0');
   signal quotient : std_logic_vector(15 downto 0) := (others => '0');
   signal fractional : std_logic_vector(1 downto 0) := (others => '0');
   -----------------------------------------------------------------------
@@ -114,6 +115,7 @@ architecture tb of tb_div_gen_0 is
 
   -- Master channel DOUT outputs
   signal m_axis_dout_tvalid : std_logic := '0';  -- TVALID for channel DOUT
+  signal m_axis_dout_tlast  : std_logic := '0';  -- TLAST for channel DOUT
   signal m_axis_dout_tdata  : std_logic_vector(23 downto 0) := (others => '0');  -- TDATA for channel DOUT
 
   -----------------------------------------------------------------------
@@ -132,7 +134,7 @@ architecture tb of tb_div_gen_0 is
   constant IP_dividend_DEPTH : integer := 30;
   constant IP_dividend_WIDTH : integer := 16;
   constant IP_divisor_DEPTH : integer := 32;
-  constant IP_divisor_WIDTH : integer := 16;
+  constant IP_divisor_WIDTH : integer := 8;
   subtype T_IP_dividend_ENTRY is std_logic_vector(IP_dividend_WIDTH-1 downto 0);
   subtype T_IP_divisor_ENTRY is std_logic_vector(IP_divisor_WIDTH-1 downto 0);
   type T_IP_dividend_TABLE is array (0 to IP_dividend_DEPTH-1) of T_IP_dividend_ENTRY;
@@ -182,10 +184,12 @@ begin
       aclk                => aclk,
       aresetn             => aresetn,
       s_axis_dividend_tvalid     => s_axis_dividend_tvalid,
+      s_axis_dividend_tlast      => s_axis_dividend_tlast,
       s_axis_dividend_tdata      => s_axis_dividend_tdata,
       s_axis_divisor_tvalid     => s_axis_divisor_tvalid,
       s_axis_divisor_tdata      => s_axis_divisor_tdata,
       m_axis_dout_tvalid  => m_axis_dout_tvalid,
+      m_axis_dout_tlast   => m_axis_dout_tlast,
       m_axis_dout_tdata   => m_axis_dout_tdata
       );
 
@@ -295,9 +299,16 @@ begin
       -- Drive 'X's on payload signals when not valid
       if dividend_tvalid_nxt /= '1' then
         s_axis_dividend_tdata <= (others => INVALID);
+        s_axis_dividend_tlast <= INVALID;
       else
         -- TDATA: This holds the dividend operand. It is 16 bits wide and byte-aligned with the operand in the LSBs
         s_axis_dividend_tdata <= std_logic_vector(resize(signed(IP_dividend_DATA(ip_dividend_index)),16));
+        -- TLAST: Drive high for the last data value from the input data table
+        if ip_dividend_index = IP_dividend_DEPTH - 1 then
+          s_axis_dividend_tlast <= '1';
+        else
+          s_axis_dividend_tlast <= '0';
+        end if;
       end if;
 
       -- Drive AXI slave channel B payload
@@ -305,8 +316,8 @@ begin
       if divisor_tvalid_nxt /= '1' then
         s_axis_divisor_tdata <= (others => INVALID);
       else
-        -- TDATA: Holds the divisor operand. It is 16 bits wide and byte-aligned with the operand in the LSBs
-            s_axis_divisor_tdata <= std_logic_vector(resize(signed(IP_divisor_DATA(ip_divisor_index)),16));
+        -- TDATA: Holds the divisor operand. It is 8 bits wide and byte-aligned with the operand in the LSBs
+            s_axis_divisor_tdata <= std_logic_vector(resize(signed(IP_divisor_DATA(ip_divisor_index)),8));
       end if;
 
       -- Increment input data indices
@@ -349,6 +360,10 @@ begin
         report "ERROR: m_axis_dout_tdata is invalid when m_axis_dout_tvalid is high" severity error;
         check_ok := false;
       end if;
+      if is_x(m_axis_dout_tlast) then
+        report "ERROR: m_axis_dout_tlast is invalid when m_axis_dout_tvalid is high" severity error;
+        check_ok := false;
+      end if;
 
     end if;
 
@@ -361,7 +376,7 @@ begin
   -- Assign TDATA fields to aliases, for easy simulator waveform viewing
   -----------------------------------------------------------------------
 
-  divisor  <= s_axis_divisor_tdata(15 downto 0);
+  divisor  <= s_axis_divisor_tdata(7 downto 0);
   dividend <= s_axis_dividend_tdata(15 downto 0);
   fractional <= m_axis_dout_tdata(1 downto 0);
   quotient <= m_axis_dout_tdata(17 downto 2);

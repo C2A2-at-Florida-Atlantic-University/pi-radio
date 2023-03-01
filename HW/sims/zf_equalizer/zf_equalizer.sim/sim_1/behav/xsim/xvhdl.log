@@ -1,2 +1,2 @@
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Projects/pi-radio/HW/modules/src/rtl/channel_estimate.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'channel_estimate'
+INFO: [VRFC 10-163] Analyzing VHDL file "c:/Projects/pi-radio/HW/modules/src/rtl/polar_to_cartesian_cordic.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'polar_to_cartesian_cordic'

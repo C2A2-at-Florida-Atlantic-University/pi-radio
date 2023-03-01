@@ -1,7 +1,7 @@
 //Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2022.1 (win64) Build 3526262 Mon Apr 18 15:48:16 MDT 2022
-//Date        : Mon Jan  9 10:12:58 2023
+//Date        : Wed Mar  1 11:33:33 2023
 //Host        : DESKTOP-1UDCE0K running 64-bit major release  (build 9200)
 //Command     : generate_target zf_equalizer_wrapper.bd
 //Design      : zf_equalizer_wrapper
@@ -57,7 +57,7 @@ module zf_equalizer_wrapper
   input aclk;
   input aresetn;
   input bypass;
-  output [127:0]m_axis_tdata;
+  output [95:0]m_axis_tdata;
   output m_axis_tlast;
   input m_axis_tready;
   output [15:0]m_axis_tstrb;
@@ -102,7 +102,7 @@ module zf_equalizer_wrapper
   wire aclk;
   wire aresetn;
   wire bypass;
-  wire [127:0]m_axis_tdata;
+  wire [95:0]m_axis_tdata;
   wire m_axis_tlast;
   wire m_axis_tready;
   wire [15:0]m_axis_tstrb;

@@ -1,19 +1,17 @@
 # compile verilog/system verilog design source files
-verilog xil_defaultlib  --include "../../../../zf_equalizer.gen/sources_1/bd/zf_equalizer/ipshared/8713/hdl" \
-"../../../../zf_equalizer.gen/sources_1/bd/zf_equalizer/ip/zf_equalizer_axis_splitter_0_0/sim/zf_equalizer_axis_splitter_0_0.v" \
-"../../../../zf_equalizer.gen/sources_1/bd/zf_equalizer/ip/zf_equalizer_mux_0_0/sim/zf_equalizer_mux_0_0.v" \
+verilog xil_defaultlib  \
 "../../../../zf_equalizer.gen/sources_1/bd/zf_equalizer/ip/zf_equalizer_blk_mem_gen_0_0/sim/zf_equalizer_blk_mem_gen_0_0.v" \
 "../../../../zf_equalizer.gen/sources_1/bd/zf_equalizer/ip/zf_equalizer_pilot_removal_0_0/sim/zf_equalizer_pilot_removal_0_0.v" \
-"../../../../zf_equalizer.gen/sources_1/bd/zf_equalizer/ip/zf_equalizer_pilot_scheduler_0_0/sim/zf_equalizer_pilot_scheduler_0_0.v" \
-"../../../../zf_equalizer.gen/sources_1/bd/zf_equalizer/ip/zf_equalizer_channel_estimate_0_0/sim/zf_equalizer_channel_estimate_0_0.v" \
-"../../../../zf_equalizer.gen/sources_1/bd/zf_equalizer/ip/zf_equalizer_average_0_0/sim/zf_equalizer_average_0_0.v" \
-"../../../../zf_equalizer.gen/sources_1/bd/zf_equalizer/ip/zf_equalizer_axis_data_fifo_0_0/sim/zf_equalizer_axis_data_fifo_0_0.v" \
-"../../../../zf_equalizer.gen/sources_1/bd/zf_equalizer/ip/zf_equalizer_delay_0_0/sim/zf_equalizer_delay_0_0.v" \
 "../../../../zf_equalizer.gen/sources_1/bd/zf_equalizer/ip/zf_equalizer_equalization_0_0/sim/zf_equalizer_equalization_0_0.v" \
+"../../../../zf_equalizer.gen/sources_1/bd/zf_equalizer/ip/zf_equalizer_channel_estimate_0_0/sim/zf_equalizer_channel_estimate_0_0.v" \
+"../../../../zf_equalizer.gen/sources_1/bd/zf_equalizer/ip/zf_equalizer_axis_splitter_0_0/sim/zf_equalizer_axis_splitter_0_0.v" \
+"../../../../zf_equalizer.gen/sources_1/bd/zf_equalizer/ip/zf_equalizer_mux_0_0/sim/zf_equalizer_mux_0_0.v" \
+"../../../../zf_equalizer.gen/sources_1/bd/zf_equalizer/ip/zf_equalizer_pilot_scheduler_0_0/sim/zf_equalizer_pilot_scheduler_0_0.v" \
+"../../../../zf_equalizer.gen/sources_1/bd/zf_equalizer/ip/zf_equalizer_polar_to_cartesian_c_0_0/sim/zf_equalizer_polar_to_cartesian_c_0_0.v" \
 "../../../../zf_equalizer.gen/sources_1/bd/zf_equalizer/sim/zf_equalizer.v" \
 "../../../../zf_equalizer.gen/sources_1/bd/zf_equalizer/hdl/zf_equalizer_wrapper.v" \
 
-sv xil_defaultlib  --include "../../../../zf_equalizer.gen/sources_1/bd/zf_equalizer/ipshared/8713/hdl" \
+sv xil_defaultlib  \
 "../../../../../../modules/sim/zf_equalizer/zf_equalizer_tb.sv" \
 
 # compile glbl module

@@ -1,57 +1,56 @@
 {
    "ActiveEmotionalView":"Default View",
-   "Default View_ScaleFactor":"0.507171",
-   "Default View_TopLeft":"-97,-32",
-   "ExpandedHierarchyInLayout":"/Normalized_ZF_stage_1",
+   "Default View_ScaleFactor":"1.03431",
+   "Default View_TopLeft":"804,28",
+   "ExpandedHierarchyInLayout":"",
    "guistr":"# # String gsaved with Nlview 7.0r6  2020-01-29 bk=1.5227 VDI=41 GEI=36 GUI=JA:10.0 non-TLS
 #  -string -flagsOSRD
-preplace port m_axis -pg 1 -lvl 4 -x 2320 -y 560 -defaultsOSRD
-preplace port s_axis -pg 1 -lvl 0 -x 0 -y 60 -defaultsOSRD
-preplace port s_axi -pg 1 -lvl 0 -x 0 -y 930 -defaultsOSRD
-preplace port port-id_aclk -pg 1 -lvl 0 -x 0 -y 80 -defaultsOSRD
-preplace port port-id_aresetn -pg 1 -lvl 0 -x 0 -y 100 -defaultsOSRD
-preplace port port-id_bypass -pg 1 -lvl 0 -x 0 -y 1030 -defaultsOSRD
-preplace inst axi_bram_ctrl_0 -pg 1 -lvl 1 -x 200 -y 950 -defaultsOSRD
-preplace inst blk_mem_gen_0 -pg 1 -lvl 2 -x 600 -y 960 -defaultsOSRD
-preplace inst Normalized_ZF_stage_1 -pg 1 -lvl 2 -x 600 -y 180 -defaultsOSRD
-preplace inst axis_splitter_0 -pg 1 -lvl 1 -x 200 -y 80 -defaultsOSRD
-preplace inst mux_0 -pg 1 -lvl 3 -x 2170 -y 560 -defaultsOSRD
-preplace inst pilot_scheduler_0 -pg 1 -lvl 1 -x 200 -y 780 -defaultsOSRD
-preplace inst Normalized_ZF_stage_1|pilot_removal_0 -pg 1 -lvl 1 -x 690 -y 490 -defaultsOSRD
-preplace inst Normalized_ZF_stage_1|axis_data_fifo_0 -pg 1 -lvl 2 -x 1000 -y 480 -defaultsOSRD
-preplace inst Normalized_ZF_stage_1|delay_0 -pg 1 -lvl 3 -x 1350 -y 510 -defaultsOSRD
-preplace inst Normalized_ZF_stage_1|channel_estimate_0 -pg 1 -lvl 3 -x 1350 -y 270 -defaultsOSRD
-preplace inst Normalized_ZF_stage_1|equalization_0 -pg 1 -lvl 4 -x 1710 -y 520 -defaultsOSRD
-preplace netloc aclk_0_1 1 0 3 30 400 370 640 2020J
-preplace netloc aresetn_0_1 1 0 3 20 510 350 650 2030J
-preplace netloc i_select_0_1 1 0 3 NJ 1030 NJ 1030 2040J
-preplace netloc Normalized_ZF_stage_1_o_read_tx_pilots 1 0 3 40 660 NJ 660 2010
-preplace netloc Normalized_ZF_stage_1_o_valid_frame 1 0 3 50 670 NJ 670 2000
-preplace netloc axis_splitter_0_m_axis1 1 1 2 NJ 90 2040
-preplace netloc mux_0_m_axis 1 3 1 N 560
-preplace netloc s_axis_0_1 1 0 1 NJ 60
-preplace netloc S_AXI_0_1 1 0 1 NJ 930
-preplace netloc axi_bram_ctrl_0_BRAM_PORTA 1 1 1 N 950
-preplace netloc pilot_scheduler_0_BRAM_PORT 1 1 1 350 750n
-preplace netloc axis_splitter_0_m_axis0 1 1 1 370 70n
-preplace netloc pilot_scheduler_0_M_AXIS_1 1 1 1 360 260n
-preplace netloc Normalized_ZF_stage_1_m_axis 1 2 1 N 520
-preplace netloc Normalized_ZF_stage_1|aclk_1 1 0 4 530 400 880 560 1120 420 1560
-preplace netloc Normalized_ZF_stage_1|aresetn_1 1 0 4 520 580 860 570 1130 600 1570J
-preplace netloc Normalized_ZF_stage_1|channel_estimate_0_o_read_tx_pilots 1 3 2 N 360 1850J
-preplace netloc Normalized_ZF_stage_1|pilot_removal_0_o_valid_frame 1 1 4 870 580 1140 610 NJ 610 NJ
-preplace netloc Normalized_ZF_stage_1|Conn1 1 0 1 520 240n
-preplace netloc Normalized_ZF_stage_1|pilot_removal_0_m_pilot_axis 1 1 2 850 240 NJ
-preplace netloc Normalized_ZF_stage_1|Conn2 1 0 3 NJ 260 NJ 260 NJ
-preplace netloc Normalized_ZF_stage_1|pilot_removal_0_m_axis 1 1 1 N 460
-preplace netloc Normalized_ZF_stage_1|axis_data_fifo_0_M_AXIS 1 2 1 N 480
-preplace netloc Normalized_ZF_stage_1|delay_0_m_axis 1 3 1 N 510
-preplace netloc Normalized_ZF_stage_1|channel_estimate_0_m_axis 1 3 1 1570 240n
-preplace netloc Normalized_ZF_stage_1|Conn3 1 4 1 N 520
-levelinfo -pg 1 0 200 600 2170 2320
-levelinfo -hier Normalized_ZF_stage_1 * 690 1000 1350 1710 *
-pagesize -pg 1 -db -bbox -sgen -100 0 2420 1050
-pagesize -hier Normalized_ZF_stage_1 -db -bbox -sgen 490 120 1880 620
+preplace port m_axis -pg 1 -lvl 5 -x 2410 -y 400 -defaultsOSRD
+preplace port s_axis -pg 1 -lvl 0 -x -10 -y 500 -defaultsOSRD
+preplace port s_axi -pg 1 -lvl 0 -x -10 -y 640 -defaultsOSRD
+preplace port port-id_aclk -pg 1 -lvl 0 -x -10 -y 520 -defaultsOSRD
+preplace port port-id_aresetn -pg 1 -lvl 0 -x -10 -y 540 -defaultsOSRD
+preplace port port-id_bypass -pg 1 -lvl 0 -x -10 -y 440 -defaultsOSRD
+preplace inst axi_bram_ctrl_0 -pg 1 -lvl 1 -x 190 -y 660 -defaultsOSRD
+preplace inst blk_mem_gen_0 -pg 1 -lvl 2 -x 630 -y 680 -defaultsOSRD
+preplace inst Normalized_ZF_stage_1 -pg 1 -lvl 2 -x 630 -y 90 -defaultsOSRD
+preplace inst axis_splitter_0 -pg 1 -lvl 1 -x 190 -y 520 -defaultsOSRD
+preplace inst mux_0 -pg 1 -lvl 4 -x 2260 -y 400 -defaultsOSRD
+preplace inst pilot_scheduler_0 -pg 1 -lvl 1 -x 190 -y 300 -defaultsOSRD
+preplace inst polar_to_cartesian -pg 1 -lvl 3 -x 1980 -y 310 -defaultsOSRD
+preplace inst Normalized_ZF_stage_1|equalization_0 -pg 1 -lvl 3 -x 1500 -y 190 -defaultsOSRD
+preplace inst Normalized_ZF_stage_1|pilot_removal_0 -pg 1 -lvl 1 -x 720 -y 210 -defaultsOSRD
+preplace inst Normalized_ZF_stage_1|channel_estimate_0 -pg 1 -lvl 2 -x 1120 -y 220 -defaultsOSRD
+preplace netloc Normalized_ZF_stage_1_o_read_tx_pilots 1 0 3 30 -10 NJ -10 1790
+preplace netloc Normalized_ZF_stage_1_o_valid_frame 1 0 3 30 420 370J 540 1790
+preplace netloc aclk_0_1 1 0 4 10 190 340 0 1810 230 2130
+preplace netloc aresetn_0_1 1 0 4 20 430 380 550 1810 540 2120
+preplace netloc i_select_0_1 1 0 4 NJ 440 340J 560 NJ 560 2130J
+preplace netloc S_AXI_0_1 1 0 1 NJ 640
+preplace netloc axi_bram_ctrl_0_BRAM_PORTA 1 1 1 340 660n
+preplace netloc axis_splitter_0_m_axis0 1 1 1 360 190n
+preplace netloc axis_splitter_0_m_axis1 1 1 3 NJ 530 NJ 530 2110
+preplace netloc mux_0_m_axis 1 4 1 N 400
+preplace netloc pilot_scheduler_0_BRAM_PORT 1 1 1 350 270n
+preplace netloc pilot_scheduler_0_M_AXIS_1 1 1 1 380 290n
+preplace netloc s_axis_0_1 1 0 1 NJ 500
+preplace netloc Normalized_ZF_stage_1_m_axis 1 2 1 1800 190n
+preplace netloc polar_to_cartesian_c_0_m_axis 1 3 1 2110 310n
+preplace netloc Normalized_ZF_stage_1|aclk_1 1 0 3 550 310 900 60 1340J
+preplace netloc Normalized_ZF_stage_1|aresetn_1 1 0 3 560 320 890 50 1350
+preplace netloc Normalized_ZF_stage_1|channel_estimate_0_o_read_tx_pilots 1 2 2 N 320 NJ
+preplace netloc Normalized_ZF_stage_1|pilot_removal_0_o_valid_frame 1 1 3 880 40 NJ 40 1640J
+preplace netloc Normalized_ZF_stage_1|Conn1 1 0 1 N 190
+preplace netloc Normalized_ZF_stage_1|Conn2 1 0 2 NJ 300 910
+preplace netloc Normalized_ZF_stage_1|Conn3 1 3 1 N 190
+preplace netloc Normalized_ZF_stage_1|channel_estimate_0_m_axis 1 2 1 N 180
+preplace netloc Normalized_ZF_stage_1|channel_estimate_0_m_ch_est_axis 1 2 1 1330 160n
+preplace netloc Normalized_ZF_stage_1|pilot_removal_0_m_axis 1 1 1 N 180
+preplace netloc Normalized_ZF_stage_1|pilot_removal_0_m_pilot_axis 1 1 1 N 200
+levelinfo -pg 1 -10 190 630 1980 2260 2410
+levelinfo -hier Normalized_ZF_stage_1 * 720 1120 1500 *
+pagesize -pg 1 -db -bbox -sgen -110 -70 2510 750
+pagesize -hier Normalized_ZF_stage_1 -db -bbox -sgen 520 30 1670 380
 "
 }
-
+0

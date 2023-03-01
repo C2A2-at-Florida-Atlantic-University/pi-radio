@@ -55,10 +55,12 @@ COMPONENT div_gen_0
     aclk : IN STD_LOGIC;
     aresetn : IN STD_LOGIC;
     s_axis_divisor_tvalid : IN STD_LOGIC;
-    s_axis_divisor_tdata : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
+    s_axis_divisor_tdata : IN STD_LOGIC_VECTOR(7 DOWNTO 0);
     s_axis_dividend_tvalid : IN STD_LOGIC;
+    s_axis_dividend_tlast : IN STD_LOGIC;
     s_axis_dividend_tdata : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
     m_axis_dout_tvalid : OUT STD_LOGIC;
+    m_axis_dout_tlast : OUT STD_LOGIC;
     m_axis_dout_tdata : OUT STD_LOGIC_VECTOR(23 DOWNTO 0) 
   );
 END COMPONENT;
@@ -75,8 +77,10 @@ your_instance_name : div_gen_0
     s_axis_divisor_tvalid => s_axis_divisor_tvalid,
     s_axis_divisor_tdata => s_axis_divisor_tdata,
     s_axis_dividend_tvalid => s_axis_dividend_tvalid,
+    s_axis_dividend_tlast => s_axis_dividend_tlast,
     s_axis_dividend_tdata => s_axis_dividend_tdata,
     m_axis_dout_tvalid => m_axis_dout_tvalid,
+    m_axis_dout_tlast => m_axis_dout_tlast,
     m_axis_dout_tdata => m_axis_dout_tdata
   );
 -- INST_TAG_END ------ End INSTANTIATION Template ---------

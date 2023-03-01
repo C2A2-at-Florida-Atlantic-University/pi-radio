@@ -19,8 +19,13 @@ module zf_equalizer_tb();
   int fd_cordic_rx_out_file;
   int fd_div_abs_in_1_file;
   int fd_div_ang_in_1_file;
-  int fd_div_1_file;
   int fd_div_1_full_file;
+  int fd_eq_est_1_file;
+  int fd_eq_din_1_file;
+  int fd_eq_1_file;
+  int fd_data_polar;
+  int fd_out_file;
+  int fd_dds_file;
 
   int ofdm_symbols;
 
@@ -40,12 +45,30 @@ module zf_equalizer_tb();
 
   logic [15:0]                      div1_full;
   logic [15:0]                      div1_full_ang;
-  logic [15:0]                      div1_amp,div1_phase;
+  logic [15:0]                      div1_amp;
+  logic [15:0]                      div1_phase;
 
   logic [15:0]                      i_tx_in_cordic,q_tx_in_cordic;
   logic [15:0]                      i_rx_in_cordic,q_rx_in_cordic;
   logic [15:0]                      i_tx_out_cordic,q_tx_out_cordic;
   logic [15:0]                      i_rx_out_cordic,q_rx_out_cordic;
+
+  logic [15:0]                      data_ang0,data_abs0;
+  logic [15:0]                      data_ang1,data_abs1;
+  logic [15:0]                      data_ang2,data_abs2;
+  logic [15:0]                      data_ang3,data_abs3;
+
+  logic [15:0]                      din_ang ,din_amp ;
+  logic [15:0]                      din_ang0,din_amp0;
+  logic [15:0]                      din_ang1,din_amp1;
+  logic [15:0]                      din_ang2,din_amp2;
+  logic [15:0]                      din_ang3,din_amp3;
+
+  logic [15:0]                      eq1_0_abs,eq1_1_abs,eq1_2_abs,eq1_3_abs;
+  logic [15:0]                      eq1_0_ang,eq1_1_ang,eq1_2_ang,eq1_3_ang;
+
+  logic [15:0]                      eq_0_i,eq_1_i,eq_2_i;
+  logic [15:0]                      eq_0_q,eq_1_q,eq_2_q;
 
   logic                             r_clk;
   logic                             r_nRst;
@@ -251,13 +274,6 @@ module zf_equalizer_tb();
 // Scoreboard divide output of stage 1
 //---------------------------------------------------------------
   initial begin
-    fd_div_1_file = $fopen("c:/Projects/pi-radio/HW/modules/sim/zf_equalizer/div_1.txt","w");
-    if (fd_div_1_file) $display("File was opened successfully: %0d ",fd_div_1_file);
-    else begin
-      $display("File was NOT opened successfully: %0d",fd_div_1_file);
-      $stop;
-    end
-
     fd_div_1_full_file = $fopen("c:/Projects/pi-radio/HW/modules/sim/zf_equalizer/div_1_full.txt","w");
     if (fd_div_1_full_file) $display("File was opened successfully: %0d ",fd_div_1_full_file);
     else begin
@@ -265,25 +281,184 @@ module zf_equalizer_tb();
       $stop;
     end
 
-    #(CLOCK_PERIOD*81);
+    fd_data_polar = $fopen("c:/Projects/pi-radio/HW/modules/sim/zf_equalizer/polar_data.txt","w");
+    if (fd_data_polar) $display("File was opened successfully: %0d ",fd_data_polar);
+    else begin
+      $display("File was NOT opened successfully: %0d",fd_data_polar);
+      $stop;
+    end
+
+    #(CLOCK_PERIOD*86);
 
     for (int k = 0; k < ofdm_symbols; k++) begin
       for (int i = 0; i < 256; i++) begin
-        if (DUT.zf_equalizer_i.Normalized_ZF_stage_1.channel_estimate_0.m_axis_tvalid == 1) begin
-          div1_amp = DUT.zf_equalizer_i.Normalized_ZF_stage_1.channel_estimate_0.m_axis_tdata[15:0];
-          div1_phase = DUT.zf_equalizer_i.Normalized_ZF_stage_1.channel_estimate_0.m_axis_tdata[31:16];
-          $fdisplay(fd_div_1_file,"%d, %d",$signed(div1_amp),$signed(div1_phase));
-          div1_full = DUT.zf_equalizer_i.Normalized_ZF_stage_1.channel_estimate_0.m_abs_res_axis_tdata[15:0];
+        if (DUT.zf_equalizer_i.Normalized_ZF_stage_1.channel_estimate_0.m_ch_est_axis_tvalid == 1) begin
+          //div1_amp = DUT.zf_equalizer_i.Normalized_ZF_stage_1.channel_estimate_0.m_axis_tdata[17:2];
+          //div1_phase = DUT.zf_equalizer_i.Normalized_ZF_stage_1.channel_estimate_0.m_axis_tdata[31:16];
+          //$fdisplay(fd_div_1_file,"%d, %d",$signed(div1_amp),$signed(div1_phase));
+          div1_full = DUT.zf_equalizer_i.Normalized_ZF_stage_1.channel_estimate_0.m_abs_res_axis_tdata[17:2];
           div1_full_ang = DUT.zf_equalizer_i.Normalized_ZF_stage_1.channel_estimate_0.m_ang_res_axis_tdata;
           $fdisplay(fd_div_1_full_file,"%d, %d",$signed(div1_full),$signed(div1_full_ang));
+
+          if (i != 0) begin
+            data_abs0 = DUT.zf_equalizer_i.Normalized_ZF_stage_1.channel_estimate_0.m_axis_tdata[15:0];
+            data_ang0 = DUT.zf_equalizer_i.Normalized_ZF_stage_1.channel_estimate_0.m_axis_tdata[31:16];
+            $fdisplay(fd_data_polar,"%d, %d",$signed(data_abs0),$signed(data_ang0));
+            data_abs1 = DUT.zf_equalizer_i.Normalized_ZF_stage_1.channel_estimate_0.m_axis_tdata[47:32];
+            data_ang1 = DUT.zf_equalizer_i.Normalized_ZF_stage_1.channel_estimate_0.m_axis_tdata[63:48];
+            $fdisplay(fd_data_polar,"%d, %d",$signed(data_abs1),$signed(data_ang1));
+            data_abs2 = DUT.zf_equalizer_i.Normalized_ZF_stage_1.channel_estimate_0.m_axis_tdata[79:64];
+            data_ang2 = DUT.zf_equalizer_i.Normalized_ZF_stage_1.channel_estimate_0.m_axis_tdata[95:80];
+            $fdisplay(fd_data_polar,"%d, %d",$signed(data_abs2),$signed(data_ang2));
+          end
+            data_abs3 = DUT.zf_equalizer_i.Normalized_ZF_stage_1.channel_estimate_0.m_axis_tdata[111:96];
+            data_ang3 = DUT.zf_equalizer_i.Normalized_ZF_stage_1.channel_estimate_0.m_axis_tdata[127:112];
+            $fdisplay(fd_data_polar,"%d, %d",$signed(data_abs3),$signed(data_ang3));
         end
         #CLOCK_PERIOD;
       end
       #(CLOCK_PERIOD*64);
     end
 
-    $fclose(fd_div_1_file);
     $fclose(fd_div_1_full_file);
+    $fclose(fd_data_polar);
+
+  end
+
+//---------------------------------------------------------------
+// Scoreboard Equalizer stage 1 input
+//---------------------------------------------------------------
+  initial begin
+    fd_eq_din_1_file = $fopen("c:/Projects/pi-radio/HW/modules/sim/zf_equalizer/eq_din_1.txt","w");
+    if (fd_eq_din_1_file) $display("File was opened successfully: %0d ",fd_eq_din_1_file);
+    else begin
+      $display("File was NOT opened successfully: %0d",fd_eq_din_1_file);
+      $stop;
+    end
+
+    fd_eq_est_1_file = $fopen("c:/Projects/pi-radio/HW/modules/sim/zf_equalizer/eq_est_1.txt","w");
+    if (fd_eq_est_1_file) $display("File was opened successfully: %0d ",fd_eq_est_1_file);
+    else begin
+      $display("File was NOT opened successfully: %0d",fd_eq_est_1_file);
+      $stop;
+    end
+
+    #(CLOCK_PERIOD*86);
+
+    for (int k = 0; k < ofdm_symbols; k++) begin
+      for (int i = 0; i < 256; i++) begin
+        if (DUT.zf_equalizer_i.Normalized_ZF_stage_1.equalization_0.s_ch_est_axis_tvalid == 1) begin
+          if (i != 0) begin 
+            din_amp0 = 
+              DUT.zf_equalizer_i.Normalized_ZF_stage_1.equalization_0.s_din_axis_tdata[15:0];
+            din_ang0 = 
+              DUT.zf_equalizer_i.Normalized_ZF_stage_1.equalization_0.s_din_axis_tdata[31:16];
+            $fdisplay(fd_eq_din_1_file,"%d, %d",$signed(din_amp0),$signed(din_ang0));
+            din_amp1 = 
+              DUT.zf_equalizer_i.Normalized_ZF_stage_1.equalization_0.s_din_axis_tdata[47:32];
+            din_ang1 = 
+              DUT.zf_equalizer_i.Normalized_ZF_stage_1.equalization_0.s_din_axis_tdata[63:48];
+            $fdisplay(fd_eq_din_1_file,"%d, %d",$signed(din_amp1),$signed(din_ang1));
+            din_amp2 = 
+              DUT.zf_equalizer_i.Normalized_ZF_stage_1.equalization_0.s_din_axis_tdata[79:64];
+            din_ang2 = 
+              DUT.zf_equalizer_i.Normalized_ZF_stage_1.equalization_0.s_din_axis_tdata[95:80];
+            $fdisplay(fd_eq_din_1_file,"%d, %d",$signed(din_amp2),$signed(din_ang2));
+          end
+          din_amp3 = 
+            DUT.zf_equalizer_i.Normalized_ZF_stage_1.equalization_0.s_din_axis_tdata[111:96];
+          din_ang3 = 
+            DUT.zf_equalizer_i.Normalized_ZF_stage_1.equalization_0.s_din_axis_tdata[127:112];
+          $fdisplay(fd_eq_din_1_file,"%d, %d",$signed(din_amp3),$signed(din_ang3));
+          din_amp = 
+            DUT.zf_equalizer_i.Normalized_ZF_stage_1.equalization_0.s_ch_est_axis_tdata[15:0];
+          din_ang = 
+            DUT.zf_equalizer_i.Normalized_ZF_stage_1.equalization_0.s_ch_est_axis_tdata[31:16];
+          $fdisplay(fd_eq_est_1_file,"%d, %d",$signed(din_amp),$signed(din_ang));
+        end
+        #CLOCK_PERIOD;
+      end
+      #(CLOCK_PERIOD*64);
+    end
+
+    $fclose(fd_eq_est_1_file);
+    $fclose(fd_eq_din_1_file);
+
+  end
+
+//---------------------------------------------------------------
+// Scoreboard Equalizer stage 1 output
+//---------------------------------------------------------------
+  initial begin
+    fd_eq_1_file = $fopen("c:/Projects/pi-radio/HW/modules/sim/zf_equalizer/eq_1.txt","w");
+    if (fd_eq_1_file) $display("File was opened successfully: %0d ",fd_eq_1_file);
+    else begin
+      $display("File was NOT opened successfully: %0d",fd_eq_1_file);
+      $stop;
+    end
+
+    #(CLOCK_PERIOD*109);
+
+    for (int k = 0; k < ofdm_symbols; k++) begin
+      for (int i = 0; i < 256; i++) begin
+        if (DUT.zf_equalizer_i.Normalized_ZF_stage_1.equalization_0.m_axis_tvalid == 1) begin
+          eq1_0_abs = DUT.zf_equalizer_i.Normalized_ZF_stage_1.equalization_0.m_axis_tdata[15:0];
+          eq1_0_ang = DUT.zf_equalizer_i.Normalized_ZF_stage_1.equalization_0.m_axis_tdata[31:16];
+          eq1_1_abs = DUT.zf_equalizer_i.Normalized_ZF_stage_1.equalization_0.m_axis_tdata[47:32];
+          eq1_1_ang = DUT.zf_equalizer_i.Normalized_ZF_stage_1.equalization_0.m_axis_tdata[63:48];
+          eq1_2_abs = DUT.zf_equalizer_i.Normalized_ZF_stage_1.equalization_0.m_axis_tdata[79:64];
+          eq1_2_ang = DUT.zf_equalizer_i.Normalized_ZF_stage_1.equalization_0.m_axis_tdata[95:80];
+          eq1_3_abs = DUT.zf_equalizer_i.Normalized_ZF_stage_1.equalization_0.m_axis_tdata[111:96];
+          eq1_3_ang = DUT.zf_equalizer_i.Normalized_ZF_stage_1.equalization_0.m_axis_tdata[127:112];
+          if (i != 0) begin
+            $fdisplay(fd_eq_1_file,"%d, %d",$signed(eq1_0_abs),$signed(eq1_0_ang));
+            $fdisplay(fd_eq_1_file,"%d, %d",$signed(eq1_1_abs),$signed(eq1_1_ang));
+            $fdisplay(fd_eq_1_file,"%d, %d",$signed(eq1_2_abs),$signed(eq1_2_ang));
+          end
+          $fdisplay(fd_eq_1_file,"%d, %d",$signed(eq1_3_abs),$signed(eq1_3_ang));
+        end
+        #CLOCK_PERIOD;
+      end
+      #(CLOCK_PERIOD*64);
+    end
+
+    $fclose(fd_eq_1_file);
+
+  end
+
+//---------------------------------------------------------------
+// Scoreboard polar to cartesian conversion
+//---------------------------------------------------------------
+  initial begin
+    
+    fd_out_file = $fopen("c:/Projects/pi-radio/HW/modules/sim/zf_equalizer/eq_out.txt","w");
+    if (fd_out_file) $display("File was opened successfully: %0d ",fd_out_file);
+    else begin
+      $display("File was NOT opened successfully: %0d",fd_out_file);
+      $stop;
+    end
+
+    #(CLOCK_PERIOD*100);
+
+    for (int k = 0; k < ofdm_symbols; k++) begin
+      for (int i = 0; i < 256; i++) begin
+        if (DUT.zf_equalizer_i.polar_to_cartesian.m_axis_tvalid == 1) begin
+          eq_0_i = DUT.zf_equalizer_i.polar_to_cartesian.m_axis_tdata[15:0];
+          eq_0_q = DUT.zf_equalizer_i.polar_to_cartesian.m_axis_tdata[31:16];
+          eq_1_i = DUT.zf_equalizer_i.polar_to_cartesian.m_axis_tdata[47:32];
+          eq_1_q = DUT.zf_equalizer_i.polar_to_cartesian.m_axis_tdata[63:48];
+          eq_2_i = DUT.zf_equalizer_i.polar_to_cartesian.m_axis_tdata[79:64];
+          eq_2_q = DUT.zf_equalizer_i.polar_to_cartesian.m_axis_tdata[95:80];
+          $fdisplay(fd_out_file,"%d, %d",$signed(eq_0_i),$signed(eq_0_q));
+          $fdisplay(fd_out_file,"%d, %d",$signed(eq_1_i),$signed(eq_1_q));
+          $fdisplay(fd_out_file,"%d, %d",$signed(eq_2_i),$signed(eq_2_q));
+        end
+        #CLOCK_PERIOD;
+      end
+      #(CLOCK_PERIOD*64);
+    end
+
+    $fclose(fd_out_file);
 
   end
 

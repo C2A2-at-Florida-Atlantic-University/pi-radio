@@ -1,17 +1,17 @@
 # compile vhdl design source files
 vhdl xil_defaultlib  \
+"../../../../../../modules/src/rtl/pilot_removal.vhd" \
+"../../../../zf_equalizer.gen/sources_1/ip/div_gen_0/sim/div_gen_0.vhd" \
+"../../../../../../modules/src/rtl/pipeline.vhd" \
+"../../../../../../modules/src/rtl/equalization.vhd" \
+"../../../../zf_equalizer.gen/sources_1/ip/cordic_rec_to_polar/sim/cordic_rec_to_polar.vhd" \
+"../../../../../../modules/src/rtl/conj.vhd" \
+"../../../../../../modules/src/rtl/channel_estimate.vhd" \
 "../../../../../../modules/src/rtl/axis_splitter.vhd" \
 "../../../../../../modules/src/rtl/mux.vhd" \
-"../../../../../../modules/src/rtl/pilot_removal.vhd" \
 "../../../../../../modules/src/rtl/pilot_scheduler.vhd" \
-"../../../../zf_equalizer.gen/sources_1/ip/div_gen_0/sim/div_gen_0.vhd" \
-"../../../../zf_equalizer.gen/sources_1/ip/cordic_0_1/sim/cordic_0.vhd" \
-"../../../../../../modules/src/rtl/conj.vhd" \
-"../../../../../../modules/src/rtl/pipeline.vhd" \
-"../../../../../../modules/src/rtl/channel_estimate.vhd" \
-"../../../../../../modules/src/rtl/average.vhd" \
-"../../../../../../modules/src/rtl/delay.vhd" \
-"../../../../../../modules/src/rtl/equalization.vhd" \
+"../../../../zf_equalizer.gen/sources_1/ip/cordic_polar_to_rec/sim/cordic_polar_to_rec.vhd" \
+"../../../../../../modules/src/rtl/polar_to_cartesian_cordic.vhd" \
 "../../../../zf_equalizer.gen/sources_1/bd/zf_equalizer/ip/zf_equalizer_axi_bram_ctrl_0_0/sim/zf_equalizer_axi_bram_ctrl_0_0.vhd" \
 
 # Do not sort compile order

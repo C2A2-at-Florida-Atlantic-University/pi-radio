@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="cordic_polar_to_rec_synth_1" LaunchPart="xczu28dr-ffvg1517-2-e" LaunchTime="1677636056">
+  <File Type="PA-TCL" Name="cordic_polar_to_rec.tcl"/>
+  <File Type="RDS-PROPCONSTRS" Name="cordic_polar_to_rec_drc_synth.rpt"/>
+  <File Type="REPORTS-TCL" Name="cordic_polar_to_rec_reports.tcl"/>
+  <File Type="RDS-RDS" Name="cordic_polar_to_rec.vds"/>
+  <File Type="RDS-UTIL" Name="cordic_polar_to_rec_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="cordic_polar_to_rec_utilization_synth.pb"/>
+  <File Type="RDS-DCP" Name="cordic_polar_to_rec.dcp"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="cordic_polar_to_rec_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="cordic_polar_to_rec_timing_summary_synth.pb"/>
+  <FileSet Name="sources" Type="BlockSrcs" RelSrcDir="$PSRCDIR/cordic_polar_to_rec">
+    <File Path="$PSRCDIR/sources_1/ip/cordic_polar_to_rec/cordic_polar_to_rec.xci">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../modules/src/ip/cordic_polar_to_rec.xci"/>
+        <Attr Name="ImportTime" Val="1677633052"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="TopModule" Val="cordic_polar_to_rec"/>
+      <Option Name="UseBlackboxStub" Val="1"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="BlockSrcs" RelSrcDir="$PSRCDIR/cordic_polar_to_rec">
+    <File Path="$PSRCDIR/sources_1/ip/cordic_polar_to_rec/cordic_polar_to_rec.xci">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../modules/src/ip/cordic_polar_to_rec.xci"/>
+        <Attr Name="ImportTime" Val="1677633052"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="TopModule" Val="cordic_polar_to_rec"/>
+      <Option Name="UseBlackboxStub" Val="1"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="utils" Type="Utils" RelSrcDir="$PSRCDIR/utils_1">
+    <Filter Type="Utils"/>
+    <Config>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2022">
+      <Desc>Vivado Synthesis Defaults</Desc>
+    </StratHandle>
+    <Step Id="synth_design"/>
+  </Strategy>
+</GenRun>

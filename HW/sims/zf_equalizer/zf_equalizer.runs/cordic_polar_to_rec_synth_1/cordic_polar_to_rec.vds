@@ -1,0 +1,373 @@
+#-----------------------------------------------------------
+# Vivado v2022.1 (64-bit)
+# SW Build 3526262 on Mon Apr 18 15:48:16 MDT 2022
+# IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
+# Start of session at: Tue Feb 28 21:01:02 2023
+# Process ID: 33844
+# Current directory: c:/Projects/pi-radio/HW/sims/zf_equalizer/zf_equalizer.runs/cordic_polar_to_rec_synth_1
+# Command line: vivado.exe -log cordic_polar_to_rec.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source cordic_polar_to_rec.tcl
+# Log file: c:/Projects/pi-radio/HW/sims/zf_equalizer/zf_equalizer.runs/cordic_polar_to_rec_synth_1/cordic_polar_to_rec.vds
+# Journal file: c:/Projects/pi-radio/HW/sims/zf_equalizer/zf_equalizer.runs/cordic_polar_to_rec_synth_1\vivado.jou
+# Running On: DESKTOP-1UDCE0K, OS: Windows, CPU Frequency: 3187 MHz, CPU Physical cores: 16, Host memory: 137149 MB
+#-----------------------------------------------------------
+source cordic_polar_to_rec.tcl -notrace
+Command: synth_design -top cordic_polar_to_rec -part xczu28dr-ffvg1517-2-e -incremental_mode off -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xczu28dr'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xczu28dr'
+INFO: [Device 21-403] Loading part xczu28dr-ffvg1517-2-e
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 19468
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2124.391 ; gain = 269.625
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'cordic_polar_to_rec' [c:/Projects/pi-radio/HW/sims/zf_equalizer/zf_equalizer.gen/sources_1/ip/cordic_polar_to_rec/synth/cordic_polar_to_rec.vhd:74]
+	Parameter C_ARCHITECTURE bound to: 2 - type: integer 
+	Parameter C_CORDIC_FUNCTION bound to: 0 - type: integer 
+	Parameter C_COARSE_ROTATE bound to: 1 - type: integer 
+	Parameter C_DATA_FORMAT bound to: 0 - type: integer 
+	Parameter C_XDEVICEFAMILY bound to: zynquplus - type: string 
+	Parameter C_HAS_ACLKEN bound to: 0 - type: integer 
+	Parameter C_HAS_ACLK bound to: 1 - type: integer 
+	Parameter C_HAS_S_AXIS_CARTESIAN bound to: 1 - type: integer 
+	Parameter C_HAS_S_AXIS_PHASE bound to: 1 - type: integer 
+	Parameter C_HAS_ARESETN bound to: 0 - type: integer 
+	Parameter C_INPUT_WIDTH bound to: 16 - type: integer 
+	Parameter C_ITERATIONS bound to: 0 - type: integer 
+	Parameter C_OUTPUT_WIDTH bound to: 16 - type: integer 
+	Parameter C_PHASE_FORMAT bound to: 1 - type: integer 
+	Parameter C_PIPELINE_MODE bound to: -2 - type: integer 
+	Parameter C_PRECISION bound to: 0 - type: integer 
+	Parameter C_ROUND_MODE bound to: 0 - type: integer 
+	Parameter C_SCALE_COMP bound to: 3 - type: integer 
+	Parameter C_THROTTLE_SCHEME bound to: 3 - type: integer 
+	Parameter C_TLAST_RESOLUTION bound to: 1 - type: integer 
+	Parameter C_HAS_S_AXIS_PHASE_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_S_AXIS_PHASE_TLAST bound to: 1 - type: integer 
+	Parameter C_S_AXIS_PHASE_TDATA_WIDTH bound to: 16 - type: integer 
+	Parameter C_S_AXIS_PHASE_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_HAS_S_AXIS_CARTESIAN_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_S_AXIS_CARTESIAN_TLAST bound to: 1 - type: integer 
+	Parameter C_S_AXIS_CARTESIAN_TDATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S_AXIS_CARTESIAN_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_M_AXIS_DOUT_TDATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_M_AXIS_DOUT_TUSER_WIDTH bound to: 1 - type: integer 
+INFO: [Synth 8-3491] module 'cordic_v6_0_18' declared at 'c:/Projects/pi-radio/HW/sims/zf_equalizer/zf_equalizer.gen/sources_1/ip/cordic_polar_to_rec/hdl/cordic_v6_0_vh_rfs.vhd:10135' bound to instance 'U0' of component 'cordic_v6_0_18' [c:/Projects/pi-radio/HW/sims/zf_equalizer/zf_equalizer.gen/sources_1/ip/cordic_polar_to_rec/synth/cordic_polar_to_rec.vhd:155]
+INFO: [Synth 8-256] done synthesizing module 'cordic_polar_to_rec' (0#1) [c:/Projects/pi-radio/HW/sims/zf_equalizer/zf_equalizer.gen/sources_1/ip/cordic_polar_to_rec/synth/cordic_polar_to_rec.vhd:74]
+WARNING: [Synth 8-7129] Port round_in[3] in module cordic_round is either unconnected or has no load
+WARNING: [Synth 8-7129] Port round_in[2] in module cordic_round is either unconnected or has no load
+WARNING: [Synth 8-7129] Port round_in[1] in module cordic_round is either unconnected or has no load
+WARNING: [Synth 8-7129] Port round_in[0] in module cordic_round is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SCLR in module delay_bit__parameterized6 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CLK in module delay_line__parameterized4 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CE in module delay_line__parameterized4 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SCLR in module delay_line__parameterized4 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CE in module delay_line__parameterized3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SCLR in module delay_line__parameterized3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CLK in module delay_line__parameterized2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CE in module delay_line__parameterized2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SCLR in module delay_line__parameterized2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CLK in module delay_line__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CE in module delay_line__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SCLR in module delay_line__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CLK in module delay_line__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CE in module delay_line__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SCLR in module delay_line__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CLK in module delay_line is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CE in module delay_line is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SCLR in module delay_line is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_PORT[24] in module dsp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_PORT[23] in module dsp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_PORT[22] in module dsp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_PORT[21] in module dsp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_PORT[20] in module dsp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_PORT[19] in module dsp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_PORT[18] in module dsp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_PORT[17] in module dsp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_PORT[16] in module dsp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_PORT[15] in module dsp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_PORT[14] in module dsp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_PORT[13] in module dsp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_PORT[12] in module dsp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_PORT[11] in module dsp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_PORT[10] in module dsp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_PORT[9] in module dsp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_PORT[8] in module dsp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_PORT[7] in module dsp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_PORT[6] in module dsp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_PORT[5] in module dsp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_PORT[4] in module dsp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_PORT[3] in module dsp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_PORT[2] in module dsp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_PORT[1] in module dsp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_PORT[0] in module dsp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CARRY_IN in module dsp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port B[19] in module ccm is either unconnected or has no load
+WARNING: [Synth 8-7129] Port B[18] in module ccm is either unconnected or has no load
+WARNING: [Synth 8-7129] Port B[17] in module ccm is either unconnected or has no load
+WARNING: [Synth 8-7129] Port B[16] in module ccm is either unconnected or has no load
+WARNING: [Synth 8-7129] Port B[15] in module ccm is either unconnected or has no load
+WARNING: [Synth 8-7129] Port B[14] in module ccm is either unconnected or has no load
+WARNING: [Synth 8-7129] Port B[13] in module ccm is either unconnected or has no load
+WARNING: [Synth 8-7129] Port B[12] in module ccm is either unconnected or has no load
+WARNING: [Synth 8-7129] Port B[11] in module ccm is either unconnected or has no load
+WARNING: [Synth 8-7129] Port B[10] in module ccm is either unconnected or has no load
+WARNING: [Synth 8-7129] Port B[9] in module ccm is either unconnected or has no load
+WARNING: [Synth 8-7129] Port B[8] in module ccm is either unconnected or has no load
+WARNING: [Synth 8-7129] Port B[7] in module ccm is either unconnected or has no load
+WARNING: [Synth 8-7129] Port B[6] in module ccm is either unconnected or has no load
+WARNING: [Synth 8-7129] Port B[5] in module ccm is either unconnected or has no load
+WARNING: [Synth 8-7129] Port B[4] in module ccm is either unconnected or has no load
+WARNING: [Synth 8-7129] Port B[3] in module ccm is either unconnected or has no load
+WARNING: [Synth 8-7129] Port B[2] in module ccm is either unconnected or has no load
+WARNING: [Synth 8-7129] Port B[1] in module ccm is either unconnected or has no load
+WARNING: [Synth 8-7129] Port B[0] in module ccm is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CE in module mult_gen_v12_0_18_viv is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SCLR in module mult_gen_v12_0_18_viv is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SCLR in module delay_bit is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WE in module delay__parameterized6 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CE in module delay__parameterized6 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SCLR in module delay__parameterized6 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CLK in module delay__parameterized6 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CE in module c_reg_fd_v12_0_6_viv__parameterized2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AINIT in module c_reg_fd_v12_0_6_viv__parameterized2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ACLR in module c_reg_fd_v12_0_6_viv__parameterized2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ASET in module c_reg_fd_v12_0_6_viv__parameterized2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SINIT in module c_reg_fd_v12_0_6_viv__parameterized2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SCLR in module c_reg_fd_v12_0_6_viv__parameterized2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SSET in module c_reg_fd_v12_0_6_viv__parameterized2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port c_in in module c_addsub_v12_0_14_lut6_legacy__parameterized3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ce in module c_addsub_v12_0_14_lut6_legacy__parameterized3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port bypass in module c_addsub_v12_0_14_lut6_legacy__parameterized3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sclr in module c_addsub_v12_0_14_lut6_legacy__parameterized3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sset in module c_addsub_v12_0_14_lut6_legacy__parameterized3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sinit in module c_addsub_v12_0_14_lut6_legacy__parameterized3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port c_in in module c_addsub_v12_0_14_legacy__parameterized3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port b_in in module c_addsub_v12_0_14_legacy__parameterized3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port a_signed in module c_addsub_v12_0_14_legacy__parameterized3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port b_signed in module c_addsub_v12_0_14_legacy__parameterized3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port C_IN in module c_addsub_v12_0_14_viv__parameterized3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WE in module delay_bit__parameterized3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CE in module delay_bit__parameterized3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SCLR in module delay_bit__parameterized3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CLK in module delay_bit__parameterized3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port aclr in module cordic_out_config is either unconnected or has no load
+WARNING: [Synth 8-7129] Port aclr in module cordic_ctrl_slice_par is either unconnected or has no load
+WARNING: [Synth 8-7129] Port nd_in in module cordic_eng is either unconnected or has no load
+INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 2462.754 ; gain = 607.988
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 2462.754 ; gain = 607.988
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 2462.754 ; gain = 607.988
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.136 . Memory (MB): peak = 2462.754 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 2140 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [c:/Projects/pi-radio/HW/sims/zf_equalizer/zf_equalizer.gen/sources_1/ip/cordic_polar_to_rec/cordic_polar_to_rec_ooc.xdc] for cell 'U0'
+Finished Parsing XDC File [c:/Projects/pi-radio/HW/sims/zf_equalizer/zf_equalizer.gen/sources_1/ip/cordic_polar_to_rec/cordic_polar_to_rec_ooc.xdc] for cell 'U0'
+Parsing XDC File [c:/Projects/pi-radio/HW/sims/zf_equalizer/zf_equalizer.runs/cordic_polar_to_rec_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [c:/Projects/pi-radio/HW/sims/zf_equalizer/zf_equalizer.runs/cordic_polar_to_rec_synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 2481.875 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 4 instances were transformed.
+  DSP48E2 => DSP48E2 (DSP_ALU, DSP_A_B_DATA, DSP_C_DATA, DSP_MULTIPLIER, DSP_M_DATA, DSP_OUTPUT, DSP_PREADD, DSP_PREADD_DATA): 4 instances
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.060 . Memory (MB): peak = 2481.934 ; gain = 0.059
+INFO: [Designutils 20-5008] Incremental synthesis strategy off
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:20 ; elapsed = 00:00:20 . Memory (MB): peak = 2481.934 ; gain = 627.168
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xczu28dr-ffvg1517-2-e
+INFO: [Synth 8-6742] Reading net delay rules and data
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:20 ; elapsed = 00:00:20 . Memory (MB): peak = 2481.934 ; gain = 627.168
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property KEEP_HIERARCHY = SOFT for U0. (constraint file  c:/Projects/pi-radio/HW/sims/zf_equalizer/zf_equalizer.runs/cordic_polar_to_rec_synth_1/dont_touch.xdc, line 9).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:20 ; elapsed = 00:00:20 . Memory (MB): peak = 2481.934 ; gain = 627.168
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:20 ; elapsed = 00:00:20 . Memory (MB): peak = 2481.934 ; gain = 627.168
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 4272 (col length:192)
+BRAMs: 2160 (col length: RAMB18 192 RAMB36 96)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 2481.934 ; gain = 627.168
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:27 ; elapsed = 00:00:28 . Memory (MB): peak = 2717.930 ; gain = 863.164
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:27 ; elapsed = 00:00:28 . Memory (MB): peak = 2725.418 ; gain = 870.652
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:28 ; elapsed = 00:00:29 . Memory (MB): peak = 2744.539 ; gain = 889.773
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:29 ; elapsed = 00:00:31 . Memory (MB): peak = 2750.250 ; gain = 895.484
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:29 ; elapsed = 00:00:31 . Memory (MB): peak = 2750.250 ; gain = 895.484
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 2750.250 ; gain = 895.484
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 2750.250 ; gain = 895.484
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 2750.250 ; gain = 895.484
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 2750.250 ; gain = 895.484
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+DSP Final Report (the ' indicates corresponding REG is set)
++------------+--------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name | DSP Mapping        | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++------------+--------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|dsp_7       | C+(A'*B')'         | 27     | 17     | 0      | -      | 17     | 1    | 1    | 1    | -    | -     | 1    | 0    | 
+|dsp_7       | (PCIN>>17+A'*B'')' | 0      | 1      | -      | -      | 45     | 1    | 2    | -    | -    | -     | 0    | 1    | 
+|dsp         | C+(A'*B')'         | 27     | 17     | 0      | -      | 17     | 1    | 1    | 1    | -    | -     | 1    | 0    | 
+|dsp         | (PCIN>>17+A'*B'')' | 0      | 1      | -      | -      | 45     | 1    | 2    | -    | -    | -     | 0    | 1    | 
++------------+--------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+----------------+------+
+|      |Cell            |Count |
++------+----------------+------+
+|1     |DSP_ALU         |     4|
+|3     |DSP_A_B_DATA    |     4|
+|5     |DSP_C_DATA      |     4|
+|6     |DSP_MULTIPLIER  |     4|
+|7     |DSP_M_DATA      |     4|
+|9     |DSP_OUTPUT      |     4|
+|11    |DSP_PREADD      |     4|
+|12    |DSP_PREADD_DATA |     4|
+|13    |LUT1            |    90|
+|14    |LUT2            |   416|
+|15    |LUT3            |   600|
+|16    |LUT4            |    36|
+|17    |LUT5            |     3|
+|18    |LUT6            |    15|
+|19    |MUXCY           |   971|
+|20    |SRL16E          |     5|
+|21    |SRLC32E         |     2|
+|22    |XORCY           |   925|
+|23    |FDRE            |  1123|
++------+----------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 2750.250 ; gain = 895.484
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 365 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:13 ; elapsed = 00:00:26 . Memory (MB): peak = 2750.250 ; gain = 876.305
+Synthesis Optimization Complete : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 2750.250 ; gain = 895.484
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.072 . Memory (MB): peak = 2750.250 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 1900 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 2825.930 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 157 instances were transformed.
+  (CARRY4) => CARRY8: 153 instances
+  DSP48E2 => DSP48E2 (DSP_ALU, DSP_A_B_DATA, DSP_C_DATA, DSP_MULTIPLIER, DSP_M_DATA, DSP_OUTPUT, DSP_PREADD, DSP_PREADD_DATA): 4 instances
+
+Synth Design complete, checksum: 9c41b5bc
+INFO: [Common 17-83] Releasing license: Synthesis
+22 Infos, 101 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:35 ; elapsed = 00:00:37 . Memory (MB): peak = 2825.930 ; gain = 1159.539
+INFO: [Common 17-1381] The checkpoint 'c:/Projects/pi-radio/HW/sims/zf_equalizer/zf_equalizer.runs/cordic_polar_to_rec_synth_1/cordic_polar_to_rec.dcp' has been generated.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP cordic_polar_to_rec, cache-ID = 81418943a43cadc7
+INFO: [Coretcl 2-1174] Renamed 380 cell refs.
+INFO: [Common 17-1381] The checkpoint 'c:/Projects/pi-radio/HW/sims/zf_equalizer/zf_equalizer.runs/cordic_polar_to_rec_synth_1/cordic_polar_to_rec.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file cordic_polar_to_rec_utilization_synth.rpt -pb cordic_polar_to_rec_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Tue Feb 28 21:01:47 2023...

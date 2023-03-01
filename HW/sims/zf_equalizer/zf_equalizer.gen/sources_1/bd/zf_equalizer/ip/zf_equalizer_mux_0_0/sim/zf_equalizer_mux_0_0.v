@@ -77,14 +77,14 @@ module zf_equalizer_mux_0_0 (
   i_select
 );
 
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME axis_aclk, ASSOCIATED_BUSIF axis_aclk:s_axis1:s_axis0:m_axis, ASSOCIATED_RESET axis_aresetn, FREQ_HZ 249997498, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN zf_equalizer_axis_aclk, INSERT_VIP 0" *)
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME axis_aclk, ASSOCIATED_BUSIF axis_aclk:s_axis1:s_axis0:m_axis, ASSOCIATED_RESET axis_aresetn, FREQ_HZ 249997498, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN zf_equalizer_aclk, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 axis_aclk CLK" *)
 input wire axis_aclk;
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME axis_aresetn, POLARITY ACTIVE_LOW, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 axis_aresetn RST" *)
 input wire axis_aresetn;
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 s_axis0 TDATA" *)
-input wire [127 : 0] s_axis0_tdata;
+input wire [95 : 0] s_axis0_tdata;
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 s_axis0 TVALID" *)
 input wire s_axis0_tvalid;
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 s_axis0 TID" *)
@@ -93,11 +93,11 @@ input wire [7 : 0] s_axis0_tid;
 input wire [7 : 0] s_axis0_tuser;
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 s_axis0 TLAST" *)
 input wire s_axis0_tlast;
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME s_axis0, TDATA_NUM_BYTES 16, TDEST_WIDTH 0, TID_WIDTH 8, TUSER_WIDTH 8, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 1, FREQ_HZ 249997498, PHASE 0.0, CLK_DOMAIN zf_equalizer_axis_aclk, LAYERED_METADATA undef, INSERT_VIP 0" *)
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME s_axis0, TDATA_NUM_BYTES 12, TDEST_WIDTH 0, TID_WIDTH 8, TUSER_WIDTH 8, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 1, FREQ_HZ 249997498, PHASE 0.0, CLK_DOMAIN zf_equalizer_aclk, LAYERED_METADATA undef, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 s_axis0 TREADY" *)
 output wire s_axis0_tready;
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 s_axis1 TDATA" *)
-input wire [127 : 0] s_axis1_tdata;
+input wire [95 : 0] s_axis1_tdata;
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 s_axis1 TVALID" *)
 input wire s_axis1_tvalid;
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 s_axis1 TID" *)
@@ -106,24 +106,24 @@ input wire [7 : 0] s_axis1_tid;
 input wire [7 : 0] s_axis1_tuser;
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 s_axis1 TLAST" *)
 input wire s_axis1_tlast;
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME s_axis1, TDATA_NUM_BYTES 16, TDEST_WIDTH 0, TID_WIDTH 8, TUSER_WIDTH 8, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 1, FREQ_HZ 249997498, PHASE 0.0, CLK_DOMAIN zf_equalizer_axis_aclk, LAYERED_METADATA undef, INSERT_VIP 0" *)
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME s_axis1, TDATA_NUM_BYTES 12, TDEST_WIDTH 0, TID_WIDTH 8, TUSER_WIDTH 8, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 1, FREQ_HZ 249997498, PHASE 0.0, CLK_DOMAIN zf_equalizer_aclk, LAYERED_METADATA undef, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 s_axis1 TREADY" *)
 output wire s_axis1_tready;
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 m_axis TDATA" *)
-output wire [127 : 0] m_axis_tdata;
+output wire [95 : 0] m_axis_tdata;
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 m_axis TVALID" *)
 output wire m_axis_tvalid;
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 m_axis TLAST" *)
 output wire m_axis_tlast;
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 m_axis TREADY" *)
 input wire m_axis_tready;
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME m_axis, TDATA_NUM_BYTES 16, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 1, HAS_TSTRB 1, HAS_TKEEP 0, HAS_TLAST 1, FREQ_HZ 249997498, PHASE 0.0, CLK_DOMAIN zf_equalizer_axis_aclk, LAYERED_METADATA undef, INSERT_VIP 0" *)
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME m_axis, TDATA_NUM_BYTES 12, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 1, HAS_TSTRB 1, HAS_TKEEP 0, HAS_TLAST 1, FREQ_HZ 249997498, PHASE 0.0, CLK_DOMAIN zf_equalizer_aclk, LAYERED_METADATA undef, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 m_axis TSTRB" *)
 output wire [15 : 0] m_axis_tstrb;
 input wire i_select;
 
   mux #(
-    .g_TDATA_WIDTH(128)
+    .g_TDATA_WIDTH(96)
   ) inst (
     .axis_aclk(axis_aclk),
     .axis_aresetn(axis_aresetn),
