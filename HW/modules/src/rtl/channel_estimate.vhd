@@ -47,8 +47,11 @@ entity channel_estimate is
     m_rx_cordic_out_axis_tdata    : out std_logic_vector(31 downto 0);
     m_rx_cordic_out_axis_tvalid   : out std_logic;
     m_abs_denom_in_axis_tdata     : out std_logic_vector(15 downto 0);
+    m_abs_denom_in_axis_tvalid    : out std_logic;
     m_abs_num_in_axis_tdata       : out std_logic_vector(15 downto 0);
+    m_abs_num_in_axis_tvalid      : out std_logic;
     m_ang_denom_in_axis_tdata     : out std_logic_vector(15 downto 0);
+    m_ang_denom_in_axis_tvalid    : out std_logic;
     m_ang_num_in_axis_tdata       : out std_logic_vector(15 downto 0);
     m_ang_num_in_axis_tvalid      : out std_logic;
     m_abs_res_axis_tdata          : out std_logic_vector(23 downto 0);
@@ -69,8 +72,12 @@ architecture RTL of channel_estimate is
   attribute X_INTERFACE_PARAMETER : string;
   
   attribute X_INTERFACE_INFO      of axis_aclk    : signal is "xilinx.com:signal:clock:1.0 axis_aclk CLK";
-  attribute X_INTERFACE_PARAMETER of axis_aclk    : 
-    signal is "ASSOCIATED_BUSIF axis_aclk:s_pilot_tx_axis:s_pilot_rx_axis:s_data_axis:m_axis:m_ch_est_axis, FREQ_HZ 249997498";
+  --attribute X_INTERFACE_PARAMETER of axis_aclk    : 
+  --  signal is "ASSOCIATED_BUSIF axis_aclk:s_pilot_tx_axis:s_pilot_rx_axis:s_data_axis:m_axis:m_ch_est_axis, FREQ_HZ 249997498";
+
+  -- Simulation only
+  attribute X_INTERFACE_PARAMETER of axis_aclk   : 
+    signal is "ASSOCIATED_BUSIF axis_aclk:s_pilot_tx_axis:s_pilot_rx_axis:s_data_axis:m_axis:m_ch_est_axis:m_tx_cordic_out_axis:m_rx_cordic_out_axis:m_abs_denom_in_axis:m_abs_num_in_axis:m_ang_denom_in_axis:m_ang_num_in_axis:m_abs_res_axis:m_ang_res_axis, FREQ_HZ 249997498";
 
   component conj is
     port(

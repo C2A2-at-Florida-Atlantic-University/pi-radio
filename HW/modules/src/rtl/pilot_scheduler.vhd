@@ -17,8 +17,8 @@ entity pilot_scheduler is
     axis_aresetn                  : in  std_logic;
 
     i_stage_1_en                  : in  std_logic;
-    i_stage_2_en                  : in  std_logic;
-    i_stage_3_en                  : in  std_logic;
+--    i_stage_2_en                  : in  std_logic;
+--    i_stage_3_en                  : in  std_logic;
 
     i_valid_frame                 : in  std_logic;
 
@@ -33,17 +33,17 @@ entity pilot_scheduler is
     M_AXIS_1_tdata                : out std_logic_vector(31 downto 0);
     M_AXIS_1_tvalid               : out std_logic;
     M_AXIS_1_tlast                : out std_logic;
-    M_AXIS_1_tready               : in  std_logic;
+    M_AXIS_1_tready               : in  std_logic
 
-    M_AXIS_2_tdata                : out std_logic_vector(31 downto 0);
-    M_AXIS_2_tvalid               : out std_logic;
-    M_AXIS_2_tlast                : out std_logic;
-    M_AXIS_2_tready               : in  std_logic;
+--    M_AXIS_2_tdata                : out std_logic_vector(31 downto 0);
+--    M_AXIS_2_tvalid               : out std_logic;
+--    M_AXIS_2_tlast                : out std_logic;
+--    M_AXIS_2_tready               : in  std_logic;
 
-    M_AXIS_3_tdata                : out std_logic_vector(31 downto 0);
-    M_AXIS_3_tvalid               : out std_logic;
-    M_AXIS_3_tlast                : out std_logic;
-    M_AXIS_3_tready               : in  std_logic
+--    M_AXIS_3_tdata                : out std_logic_vector(31 downto 0);
+--    M_AXIS_3_tvalid               : out std_logic;
+--    M_AXIS_3_tlast                : out std_logic;
+--    M_AXIS_3_tready               : in  std_logic
   );
 end entity pilot_scheduler;
 
@@ -116,7 +116,7 @@ begin
   end process P_AXIS_SEND;
       
   M_AXIS_1_tlast                  <= '0';
-  M_AXIS_2_tlast                  <= '0';
-  M_AXIS_3_tlast                  <= '0';
+  --M_AXIS_2_tlast                  <= '0';
+  --M_AXIS_3_tlast                  <= '0';
 
 end architecture RTL;

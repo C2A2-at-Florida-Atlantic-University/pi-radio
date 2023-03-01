@@ -1,4 +1,0 @@
-vhdl xil_defaultlib  \
-"../../../../zf_equalizer.gen/sources_1/ip/cordic_0_1/sim/cordic_0.vhd" \
-
-nosort

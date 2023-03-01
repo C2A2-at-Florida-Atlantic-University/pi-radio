@@ -39,7 +39,7 @@ if { [string first $scripts_vivado_version $current_vivado_version] == -1 } {
 
 # The design that will be created by this Tcl script contains the following 
 # module references:
-# axis_splitter, mux, pilot_scheduler, channel_estimate, delay, equalization, pilot_removal
+# axis_splitter, mux, pilot_delete, pilot_scheduler, polar_to_cartesian_cordic, channel_estimate, equalization, pilot_removal
 
 # Please add the sources of those modules before sourcing this Tcl script.
 
@@ -132,7 +132,6 @@ if { $bCheckIPs == 1 } {
    set list_check_ips "\ 
 xilinx.com:ip:axi_bram_ctrl:*\
 xilinx.com:ip:blk_mem_gen:*\
-xilinx.com:ip:axis_data_fifo:*\
 "
 
    set list_ips_missing ""
@@ -160,9 +159,10 @@ if { $bCheckModules == 1 } {
    set list_check_mods "\ 
 axis_splitter\
 mux\
+pilot_delete\
 pilot_scheduler\
+polar_to_cartesian_cordic\
 channel_estimate\
-delay\
 equalization\
 pilot_removal\
 "
@@ -241,9 +241,6 @@ proc create_hier_cell_Normalized_ZF_stage_1 { parentCell nameHier } {
   create_bd_pin -dir O o_read_tx_pilots
   create_bd_pin -dir O o_valid_frame
 
-  # Create instance: axis_data_fifo_0, and set properties
-  set axis_data_fifo_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:axis_data_fifo axis_data_fifo_0 ]
-
   # Create instance: channel_estimate_0, and set properties
   set block_name channel_estimate
   set block_cell_name channel_estimate_0
@@ -259,21 +256,6 @@ proc create_hier_cell_Normalized_ZF_stage_1 { parentCell nameHier } {
    CONFIG.FREQ_HZ {249997498} \
  ] [get_bd_intf_pins /Normalized_ZF_stage_1/channel_estimate_0/m_axis]
 
-  set_property -dict [ list \
-   CONFIG.FREQ_HZ {249997498} \
- ] [get_bd_intf_pins /Normalized_ZF_stage_1/channel_estimate_0/s_pilot_rx_axis]
-
-  # Create instance: delay_0, and set properties
-  set block_name delay
-  set block_cell_name delay_0
-  if { [catch {set delay_0 [create_bd_cell -type module -reference $block_name $block_cell_name] } errmsg] } {
-     catch {common::send_gid_msg -ssname BD::TCL -id 2095 -severity "ERROR" "Unable to add referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
-     return 1
-   } elseif { $delay_0 eq "" } {
-     catch {common::send_gid_msg -ssname BD::TCL -id 2096 -severity "ERROR" "Unable to referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
-     return 1
-   }
-  
   # Create instance: equalization_0, and set properties
   set block_name equalization
   set block_cell_name equalization_0
@@ -300,17 +282,16 @@ proc create_hier_cell_Normalized_ZF_stage_1 { parentCell nameHier } {
   connect_bd_intf_net -intf_net Conn1 [get_bd_intf_pins s_axis] [get_bd_intf_pins pilot_removal_0/s_axis]
   connect_bd_intf_net -intf_net Conn2 [get_bd_intf_pins s_pilot_tx_axis] [get_bd_intf_pins channel_estimate_0/s_pilot_tx_axis]
   connect_bd_intf_net -intf_net Conn3 [get_bd_intf_pins m_axis] [get_bd_intf_pins equalization_0/m_axis]
-  connect_bd_intf_net -intf_net axis_data_fifo_0_M_AXIS [get_bd_intf_pins axis_data_fifo_0/M_AXIS] [get_bd_intf_pins delay_0/s_axis]
-  connect_bd_intf_net -intf_net channel_estimate_0_m_axis [get_bd_intf_pins channel_estimate_0/m_axis] [get_bd_intf_pins equalization_0/s_ch_est_axis]
-  connect_bd_intf_net -intf_net delay_0_m_axis [get_bd_intf_pins delay_0/m_axis] [get_bd_intf_pins equalization_0/s_din_axis]
-  connect_bd_intf_net -intf_net pilot_removal_0_m_axis [get_bd_intf_pins axis_data_fifo_0/S_AXIS] [get_bd_intf_pins pilot_removal_0/m_axis]
+  connect_bd_intf_net -intf_net channel_estimate_0_m_axis [get_bd_intf_pins channel_estimate_0/m_axis] [get_bd_intf_pins equalization_0/s_din_axis]
+  connect_bd_intf_net -intf_net channel_estimate_0_m_ch_est_axis [get_bd_intf_pins channel_estimate_0/m_ch_est_axis] [get_bd_intf_pins equalization_0/s_ch_est_axis]
+  connect_bd_intf_net -intf_net pilot_removal_0_m_axis [get_bd_intf_pins channel_estimate_0/s_data_axis] [get_bd_intf_pins pilot_removal_0/m_axis]
   connect_bd_intf_net -intf_net pilot_removal_0_m_pilot_axis [get_bd_intf_pins channel_estimate_0/s_pilot_rx_axis] [get_bd_intf_pins pilot_removal_0/m_pilot_axis]
 
   # Create port connections
-  connect_bd_net -net aclk_1 [get_bd_pins aclk] [get_bd_pins axis_data_fifo_0/s_axis_aclk] [get_bd_pins channel_estimate_0/axis_aclk] [get_bd_pins delay_0/axis_aclk] [get_bd_pins equalization_0/axis_aclk] [get_bd_pins pilot_removal_0/axis_aclk]
-  connect_bd_net -net aresetn_1 [get_bd_pins aresetn] [get_bd_pins axis_data_fifo_0/s_axis_aresetn] [get_bd_pins channel_estimate_0/axis_aresetn] [get_bd_pins delay_0/axis_aresetn] [get_bd_pins equalization_0/axis_aresetn] [get_bd_pins pilot_removal_0/axis_aresetn]
+  connect_bd_net -net aclk_1 [get_bd_pins aclk] [get_bd_pins channel_estimate_0/axis_aclk] [get_bd_pins equalization_0/axis_aclk] [get_bd_pins pilot_removal_0/axis_aclk]
+  connect_bd_net -net aresetn_1 [get_bd_pins aresetn] [get_bd_pins channel_estimate_0/axis_aresetn] [get_bd_pins equalization_0/axis_aresetn] [get_bd_pins pilot_removal_0/axis_aresetn]
   connect_bd_net -net channel_estimate_0_o_read_tx_pilots [get_bd_pins o_read_tx_pilots] [get_bd_pins channel_estimate_0/o_read_tx_pilots]
-  connect_bd_net -net pilot_removal_0_o_valid_frame [get_bd_pins o_valid_frame] [get_bd_pins delay_0/i_symbol] [get_bd_pins pilot_removal_0/o_valid_frame]
+  connect_bd_net -net pilot_removal_0_o_valid_frame [get_bd_pins o_valid_frame] [get_bd_pins pilot_removal_0/o_valid_frame]
 
   # Restore current instance
   current_bd_instance $oldCurInst
@@ -465,6 +446,20 @@ proc create_root_design { parentCell } {
      catch {common::send_gid_msg -ssname BD::TCL -id 2096 -severity "ERROR" "Unable to referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
      return 1
    }
+    set_property -dict [ list \
+   CONFIG.g_TDATA_WIDTH {96} \
+ ] $mux_0
+
+  # Create instance: pilot_delete_0, and set properties
+  set block_name pilot_delete
+  set block_cell_name pilot_delete_0
+  if { [catch {set pilot_delete_0 [create_bd_cell -type module -reference $block_name $block_cell_name] } errmsg] } {
+     catch {common::send_gid_msg -ssname BD::TCL -id 2095 -severity "ERROR" "Unable to add referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
+     return 1
+   } elseif { $pilot_delete_0 eq "" } {
+     catch {common::send_gid_msg -ssname BD::TCL -id 2096 -severity "ERROR" "Unable to referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
+     return 1
+   }
   
   # Create instance: pilot_scheduler_0, and set properties
   set block_name pilot_scheduler
@@ -481,30 +476,35 @@ proc create_root_design { parentCell } {
    CONFIG.FREQ_HZ {249997498} \
  ] [get_bd_intf_pins /pilot_scheduler_0/M_AXIS_1]
 
-  set_property -dict [ list \
-   CONFIG.FREQ_HZ {249997498} \
- ] [get_bd_intf_pins /pilot_scheduler_0/M_AXIS_2]
-
-  set_property -dict [ list \
-   CONFIG.FREQ_HZ {249997498} \
- ] [get_bd_intf_pins /pilot_scheduler_0/M_AXIS_3]
-
+  # Create instance: polar_to_cartesian, and set properties
+  set block_name polar_to_cartesian_cordic
+  set block_cell_name polar_to_cartesian
+  if { [catch {set polar_to_cartesian [create_bd_cell -type module -reference $block_name $block_cell_name] } errmsg] } {
+     catch {common::send_gid_msg -ssname BD::TCL -id 2095 -severity "ERROR" "Unable to add referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
+     return 1
+   } elseif { $polar_to_cartesian eq "" } {
+     catch {common::send_gid_msg -ssname BD::TCL -id 2096 -severity "ERROR" "Unable to referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
+     return 1
+   }
+  
   # Create interface connections
-  connect_bd_intf_net -intf_net Normalized_ZF_stage_1_m_axis [get_bd_intf_pins Normalized_ZF_stage_1/m_axis] [get_bd_intf_pins mux_0/s_axis0]
+  connect_bd_intf_net -intf_net Normalized_ZF_stage_1_m_axis [get_bd_intf_pins Normalized_ZF_stage_1/m_axis] [get_bd_intf_pins polar_to_cartesian/s_axis]
   connect_bd_intf_net -intf_net S_AXI_0_1 [get_bd_intf_ports s_axi] [get_bd_intf_pins axi_bram_ctrl_0/S_AXI]
   connect_bd_intf_net -intf_net axi_bram_ctrl_0_BRAM_PORTA [get_bd_intf_pins axi_bram_ctrl_0/BRAM_PORTA] [get_bd_intf_pins blk_mem_gen_0/BRAM_PORTA]
   connect_bd_intf_net -intf_net axis_splitter_0_m_axis0 [get_bd_intf_pins Normalized_ZF_stage_1/s_axis] [get_bd_intf_pins axis_splitter_0/m_axis0]
-  connect_bd_intf_net -intf_net axis_splitter_0_m_axis1 [get_bd_intf_pins axis_splitter_0/m_axis1] [get_bd_intf_pins mux_0/s_axis1]
+  connect_bd_intf_net -intf_net axis_splitter_0_m_axis1 [get_bd_intf_pins axis_splitter_0/m_axis1] [get_bd_intf_pins pilot_delete_0/s_axis]
   connect_bd_intf_net -intf_net mux_0_m_axis [get_bd_intf_ports m_axis] [get_bd_intf_pins mux_0/m_axis]
+  connect_bd_intf_net -intf_net pilot_delete_0_m_axis [get_bd_intf_pins mux_0/s_axis1] [get_bd_intf_pins pilot_delete_0/m_axis]
   connect_bd_intf_net -intf_net pilot_scheduler_0_BRAM_PORT [get_bd_intf_pins blk_mem_gen_0/BRAM_PORTB] [get_bd_intf_pins pilot_scheduler_0/BRAM_PORT]
   connect_bd_intf_net -intf_net pilot_scheduler_0_M_AXIS_1 [get_bd_intf_pins Normalized_ZF_stage_1/s_pilot_tx_axis] [get_bd_intf_pins pilot_scheduler_0/M_AXIS_1]
+  connect_bd_intf_net -intf_net polar_to_cartesian_c_0_m_axis [get_bd_intf_pins mux_0/s_axis0] [get_bd_intf_pins polar_to_cartesian/m_axis]
   connect_bd_intf_net -intf_net s_axis_0_1 [get_bd_intf_ports s_axis] [get_bd_intf_pins axis_splitter_0/s_axis]
 
   # Create port connections
   connect_bd_net -net Normalized_ZF_stage_1_o_read_tx_pilots [get_bd_pins Normalized_ZF_stage_1/o_read_tx_pilots] [get_bd_pins pilot_scheduler_0/i_stage_1_en]
   connect_bd_net -net Normalized_ZF_stage_1_o_valid_frame [get_bd_pins Normalized_ZF_stage_1/o_valid_frame] [get_bd_pins pilot_scheduler_0/i_valid_frame]
-  connect_bd_net -net aclk_0_1 [get_bd_ports aclk] [get_bd_pins Normalized_ZF_stage_1/aclk] [get_bd_pins axi_bram_ctrl_0/s_axi_aclk] [get_bd_pins axis_splitter_0/axis_aclk] [get_bd_pins mux_0/axis_aclk] [get_bd_pins pilot_scheduler_0/axis_aclk]
-  connect_bd_net -net aresetn_0_1 [get_bd_ports aresetn] [get_bd_pins Normalized_ZF_stage_1/aresetn] [get_bd_pins axi_bram_ctrl_0/s_axi_aresetn] [get_bd_pins axis_splitter_0/axis_aresetn] [get_bd_pins mux_0/axis_aresetn] [get_bd_pins pilot_scheduler_0/axis_aresetn]
+  connect_bd_net -net aclk_0_1 [get_bd_ports aclk] [get_bd_pins Normalized_ZF_stage_1/aclk] [get_bd_pins axi_bram_ctrl_0/s_axi_aclk] [get_bd_pins axis_splitter_0/axis_aclk] [get_bd_pins mux_0/axis_aclk] [get_bd_pins pilot_delete_0/axis_aclk] [get_bd_pins pilot_scheduler_0/axis_aclk] [get_bd_pins polar_to_cartesian/axis_aclk]
+  connect_bd_net -net aresetn_0_1 [get_bd_ports aresetn] [get_bd_pins Normalized_ZF_stage_1/aresetn] [get_bd_pins axi_bram_ctrl_0/s_axi_aresetn] [get_bd_pins axis_splitter_0/axis_aresetn] [get_bd_pins mux_0/axis_aresetn] [get_bd_pins pilot_delete_0/axis_aresetn] [get_bd_pins pilot_scheduler_0/axis_aresetn] [get_bd_pins polar_to_cartesian/axis_aresetn]
   connect_bd_net -net i_select_0_1 [get_bd_ports bypass] [get_bd_pins mux_0/i_select]
 
   # Create address segments

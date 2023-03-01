@@ -1,1 +1,0 @@
---incr --debug typical --relax --mt auto -L axi_bram_ctrl_v4_1_6 -L xil_defaultlib -L blk_mem_gen_v8_4_5 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot zf_equalizer xil_defaultlib.zf_equalizer xil_defaultlib.glbl -log elaborate.log

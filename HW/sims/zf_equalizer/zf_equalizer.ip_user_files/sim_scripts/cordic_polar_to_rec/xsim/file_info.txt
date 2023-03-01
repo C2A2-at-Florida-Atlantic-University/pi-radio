@@ -1,2 +1,0 @@
-cordic_polar_to_rec.vhd,vhdl,xil_defaultlib,../../../../zf_equalizer.gen/sources_1/ip/cordic_polar_to_rec/sim/cordic_polar_to_rec.vhd,
-glbl.v,Verilog,xil_defaultlib,glbl.v
