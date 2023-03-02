@@ -9,9 +9,7 @@
 						"ACLK": { "actual": "axis_aclk"},
 						"ARESETN": { "actual": "axis_aresetn"},
 						"TDATA": { "actual": "m_axis_tdata"},
-						"TID": { "actual": "m_axis_tid"},
 						"TLAST": { "actual": "m_axis_tlast"},
-						"TUSER": { "actual": "m_axis_tuser"},
 						"TVALID": { "actual": "m_axis_tvalid"}
 					}
 				},
@@ -21,9 +19,7 @@
 						"ACLK": { "actual": "axis_aclk"},
 						"ARESETN": { "actual": "axis_aresetn"},
 						"TDATA": { "actual": "s_axis_tdata"},
-						"TID": { "actual": "s_axis_tid"},
 						"TLAST": { "actual": "s_axis_tlast"},
-						"TUSER": { "actual": "s_axis_tuser"},
 						"TVALID": { "actual": "s_axis_tvalid"}
 					}
 				},
@@ -112,9 +108,7 @@
 						"ACLK": { "actual": "s_axis_aclk_0"},
 						"ARESETN": { "actual": "s_axis_aresetn_0"},
 						"TDATA": { "actual": "s_axis0_tdata"},
-						"TID": { "actual": "s_axis0_tid"},
 						"TLAST": { "actual": "s_axis0_tlast"},
-						"TUSER": { "actual": "s_axis0_tuser"},
 						"TVALID": { "actual": "s_axis0_tvalid"}
 					}
 				},
@@ -148,10 +142,8 @@
 						"ACLK": { "actual": "s_axis_aclk"},
 						"ARESETN": { "actual": "s_axis_aresetn"},
 						"TDATA": { "actual": "m_axis_tdata"},
-						"TID": { "actual": "m_axis_tid"},
 						"TLAST": { "actual": "m_axis_tlast"},
 						"TREADY": { "actual": "m_axis_tready"},
-						"TUSER": { "actual": "m_axis_tuser"},
 						"TVALID": { "actual": "m_axis_tvalid"}
 					}
 				},
@@ -161,10 +153,8 @@
 						"ACLK": { "actual": "s_axis_aclk"},
 						"ARESETN": { "actual": "s_axis_aresetn"},
 						"TDATA": { "actual": "s_axis_tdata"},
-						"TID": { "actual": "s_axis_tid"},
 						"TLAST": { "actual": "s_axis_tlast"},
 						"TREADY": { "actual": "s_axis_tready"},
-						"TUSER": { "actual": "s_axis_tuser"},
 						"TVALID": { "actual": "s_axis_tvalid"}
 					}
 				},
@@ -308,9 +298,7 @@
 						"ACLK": { "actual": "axis_aclk"},
 						"ARESETN": { "actual": "axis_aresetn"},
 						"TDATA": { "actual": "m_axis_tdata"},
-						"TID": { "actual": "m_axis_tid"},
 						"TLAST": { "actual": "m_axis_tlast"},
-						"TUSER": { "actual": "m_axis_tuser"},
 						"TVALID": { "actual": "m_axis_tvalid"}
 					}
 				},
@@ -320,9 +308,7 @@
 						"ACLK": { "actual": "axis_aclk"},
 						"ARESETN": { "actual": "axis_aresetn"},
 						"TDATA": { "actual": "s_axis_tdata"},
-						"TID": { "actual": "s_axis_tid"},
 						"TLAST": { "actual": "s_axis_tlast"},
-						"TUSER": { "actual": "s_axis_tuser"},
 						"TVALID": { "actual": "s_axis_tvalid"}
 					}
 				},
@@ -332,9 +318,7 @@
 						"ACLK": { "actual": "axis_aclk"},
 						"ARESETN": { "actual": "axis_aresetn"},
 						"TDATA": { "actual": "m_axis_tdata"},
-						"TID": { "actual": "m_axis_tid"},
 						"TLAST": { "actual": "m_axis_tlast"},
-						"TUSER": { "actual": "m_axis_tuser"},
 						"TVALID": { "actual": "m_axis_tvalid"}
 					}
 				},
@@ -344,9 +328,7 @@
 						"ACLK": { "actual": "axis_aclk"},
 						"ARESETN": { "actual": "axis_aresetn"},
 						"TDATA": { "actual": "s_axis_tdata"},
-						"TID": { "actual": "s_axis_tid"},
 						"TLAST": { "actual": "s_axis_tlast"},
-						"TUSER": { "actual": "s_axis_tuser"},
 						"TVALID": { "actual": "s_axis_tvalid"}
 					}
 				},

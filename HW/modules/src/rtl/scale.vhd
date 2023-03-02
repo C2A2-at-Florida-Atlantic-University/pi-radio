@@ -15,7 +15,8 @@ entity scale is
     axis_aclk                     : in  std_logic;
     axis_aresetn                  : in  std_logic;
 
-    s_axis_tdata                  : in  std_logic_vector(31 downto 0);
+    --s_axis_tdata                  : in  std_logic_vector(31 downto 0);
+    s_axis_tdata                  : in  std_logic_vector(15 downto 0);
     s_axis_tvalid                 : in  std_logic;
 
     m_axis_tdata                  : out std_logic_vector(31 downto 0);
@@ -38,7 +39,8 @@ architecture RTL of scale is
   constant DELAY_VAL              : integer         := 4;
   signal tvalid_pipe              : std_logic_vector(DELAY_VAL-1 downto 0);
   
-  signal twos_complement          : std_logic_vector(31 downto 0);
+  --signal twos_complement          : std_logic_vector(31 downto 0);
+  signal twos_complement          : std_logic_vector(15 downto 0);
   signal freq_scaled              : std_logic_vector(26 downto 0);
   signal dsp_out                  : std_logic_vector(45 downto 0);
   signal w_axis_tvalid            : std_logic;
@@ -70,8 +72,10 @@ begin
 
   P_NEGATIVE_FREQ : process(s_axis_tdata)
   begin
-    if s_axis_tdata(31) = '1' then
-      twos_complement             <= X"00000000" - s_axis_tdata;
+    --if s_axis_tdata(31) = '1' then
+    if s_axis_tdata(15) = '1' then
+      --twos_complement             <= X"00000000" - s_axis_tdata;
+      twos_complement             <= X"0000" - s_axis_tdata;
     else
       twos_complement             <= s_axis_tdata;
     end if;
@@ -81,7 +85,8 @@ begin
   begin
     if rising_edge(axis_aclk) then
       if s_axis_tvalid = '1' then
-        if s_axis_tdata(31) = '1' then
+        --if s_axis_tdata(31) = '1' then
+        if s_axis_tdata(15) = '1' then
           o_negative_freq         <= '0';
         else
           o_negative_freq         <= '1';
@@ -90,7 +95,8 @@ begin
     end if;
   end process P_NEGATIVE_FREQ_OUT;
 
-  freq_scaled                     <= twos_complement(31 downto 5);
+  --freq_scaled                     <= twos_complement(31 downto 5);
+  freq_scaled                     <= twos_complement & X"00" & "000";
 
   dsp_macro_0_inst : dsp_macro_0
     port map(

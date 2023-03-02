@@ -1,5 +1,8 @@
 //---------------------------------------------------------------
 // Jared Hermans
+//
+// IMPORTANT: change directories to vivado project root for 
+//  relative paths to work
 //---------------------------------------------------------------
 `timescale 1 ns / 1 ps
 
@@ -110,7 +113,8 @@ module zf_equalizer_tb();
 // Scoreboard cordic in rx
 //---------------------------------------------------------------
   initial begin
-    fd_cordic_rx_in_file = $fopen("c:/Projects/pi-radio/HW/modules/sim/zf_equalizer/cordic_rx_in.txt","w");
+    //fd_cordic_rx_in_file = $fopen("c:/Projects/pi-radio/HW/modules/sim/zf_equalizer/cordic_rx_in.txt","w");
+    fd_cordic_rx_in_file = $fopen("../../../../../../modules/sim/zf_equalizer/cordic_rx_in.txt","w");
     if (fd_cordic_rx_in_file) $display("File was opened successfully: %0d ",fd_cordic_rx_in_file);
     else begin
       $display("File was NOT opened successfully: %0d",fd_cordic_rx_in_file);
@@ -141,7 +145,8 @@ module zf_equalizer_tb();
 // Scoreboard cordic in tx
 //---------------------------------------------------------------
   initial begin
-    fd_cordic_tx_in_file = $fopen("c:/Projects/pi-radio/HW/modules/sim/zf_equalizer/cordic_tx_in.txt","w");
+    //fd_cordic_tx_in_file = $fopen("c:/Projects/pi-radio/HW/modules/sim/zf_equalizer/cordic_tx_in.txt","w");
+    fd_cordic_tx_in_file = $fopen("../../../../../../modules/sim/zf_equalizer/cordic_tx_in.txt","w");
     if (fd_cordic_tx_in_file) $display("File was opened successfully: %0d ",fd_cordic_tx_in_file);
     else begin
       $display("File was NOT opened successfully: %0d",fd_cordic_tx_in_file);
@@ -172,7 +177,8 @@ module zf_equalizer_tb();
 // Scoreboard cordic out rx
 //---------------------------------------------------------------
   initial begin
-    fd_cordic_rx_out_file = $fopen("c:/Projects/pi-radio/HW/modules/sim/zf_equalizer/cordic_rx_out.txt","w");
+    //fd_cordic_rx_out_file = $fopen("c:/Projects/pi-radio/HW/modules/sim/zf_equalizer/cordic_rx_out.txt","w");
+    fd_cordic_rx_out_file = $fopen("../../../../../../modules/sim/zf_equalizer/cordic_rx_out.txt","w");
     if (fd_cordic_rx_out_file) $display("File was opened successfully: %0d ",fd_cordic_rx_out_file);
     else begin
       $display("File was NOT opened successfully: %0d",fd_cordic_rx_out_file);
@@ -203,7 +209,8 @@ module zf_equalizer_tb();
 // Scoreboard cordic out tx
 //---------------------------------------------------------------
   initial begin
-    fd_cordic_tx_out_file = $fopen("c:/Projects/pi-radio/HW/modules/sim/zf_equalizer/cordic_tx_out.txt","w");
+    //fd_cordic_tx_out_file = $fopen("c:/Projects/pi-radio/HW/modules/sim/zf_equalizer/cordic_tx_out.txt","w");
+    fd_cordic_tx_out_file = $fopen("../../../../../../modules/sim/zf_equalizer/cordic_tx_out.txt","w");
     if (fd_cordic_tx_out_file) $display("File was opened successfully: %0d ",fd_cordic_tx_out_file);
     else begin
       $display("File was NOT opened successfully: %0d",fd_cordic_tx_out_file);
@@ -234,14 +241,16 @@ module zf_equalizer_tb();
 // Scoreboard divide input of stage 1
 //---------------------------------------------------------------
   initial begin
-    fd_div_abs_in_1_file = $fopen("c:/Projects/pi-radio/HW/modules/sim/zf_equalizer/div_abs_in.txt","w");
+    //fd_div_abs_in_1_file = $fopen("c:/Projects/pi-radio/HW/modules/sim/zf_equalizer/div_abs_in.txt","w");
+    fd_div_abs_in_1_file = $fopen("../../../../../../modules/sim/zf_equalizer/div_abs_in.txt","w");
     if (fd_div_abs_in_1_file) $display("File was opened successfully: %0d ",fd_div_abs_in_1_file);
     else begin
       $display("File was NOT opened successfully: %0d",fd_div_abs_in_1_file);
       $stop;
     end
 
-    fd_div_ang_in_1_file = $fopen("c:/Projects/pi-radio/HW/modules/sim/zf_equalizer/div_ang_in.txt","w");
+    //fd_div_ang_in_1_file = $fopen("c:/Projects/pi-radio/HW/modules/sim/zf_equalizer/div_ang_in.txt","w");
+    fd_div_ang_in_1_file = $fopen("../../../../../../modules/sim/zf_equalizer/div_ang_in.txt","w");
     if (fd_div_ang_in_1_file) $display("File was opened successfully: %0d ",fd_div_ang_in_1_file);
     else begin
       $display("File was NOT opened successfully: %0d",fd_div_ang_in_1_file);
@@ -274,14 +283,16 @@ module zf_equalizer_tb();
 // Scoreboard divide output of stage 1
 //---------------------------------------------------------------
   initial begin
-    fd_div_1_full_file = $fopen("c:/Projects/pi-radio/HW/modules/sim/zf_equalizer/div_1_full.txt","w");
+    //fd_div_1_full_file = $fopen("c:/Projects/pi-radio/HW/modules/sim/zf_equalizer/div_1_full.txt","w");
+    fd_div_1_full_file = $fopen("../../../../../../modules/sim/zf_equalizer/div_1_full.txt","w");
     if (fd_div_1_full_file) $display("File was opened successfully: %0d ",fd_div_1_full_file);
     else begin
       $display("File was NOT opened successfully: %0d",fd_div_1_full_file);
       $stop;
     end
 
-    fd_data_polar = $fopen("c:/Projects/pi-radio/HW/modules/sim/zf_equalizer/polar_data.txt","w");
+    //fd_data_polar = $fopen("c:/Projects/pi-radio/HW/modules/sim/zf_equalizer/polar_data.txt","w");
+    fd_data_polar = $fopen("../../../../../../modules/sim/zf_equalizer/polar_data.txt","w");
     if (fd_data_polar) $display("File was opened successfully: %0d ",fd_data_polar);
     else begin
       $display("File was NOT opened successfully: %0d",fd_data_polar);
@@ -329,14 +340,16 @@ module zf_equalizer_tb();
 // Scoreboard Equalizer stage 1 input
 //---------------------------------------------------------------
   initial begin
-    fd_eq_din_1_file = $fopen("c:/Projects/pi-radio/HW/modules/sim/zf_equalizer/eq_din_1.txt","w");
+    //fd_eq_din_1_file = $fopen("c:/Projects/pi-radio/HW/modules/sim/zf_equalizer/eq_din_1.txt","w");
+    fd_eq_din_1_file = $fopen("../../../../../../modules/sim/zf_equalizer/eq_din_1.txt","w");
     if (fd_eq_din_1_file) $display("File was opened successfully: %0d ",fd_eq_din_1_file);
     else begin
       $display("File was NOT opened successfully: %0d",fd_eq_din_1_file);
       $stop;
     end
 
-    fd_eq_est_1_file = $fopen("c:/Projects/pi-radio/HW/modules/sim/zf_equalizer/eq_est_1.txt","w");
+    //fd_eq_est_1_file = $fopen("c:/Projects/pi-radio/HW/modules/sim/zf_equalizer/eq_est_1.txt","w");
+    fd_eq_est_1_file = $fopen("../../../../../../modules/sim/zf_equalizer/eq_est_1.txt","w");
     if (fd_eq_est_1_file) $display("File was opened successfully: %0d ",fd_eq_est_1_file);
     else begin
       $display("File was NOT opened successfully: %0d",fd_eq_est_1_file);
@@ -390,7 +403,8 @@ module zf_equalizer_tb();
 // Scoreboard Equalizer stage 1 output
 //---------------------------------------------------------------
   initial begin
-    fd_eq_1_file = $fopen("c:/Projects/pi-radio/HW/modules/sim/zf_equalizer/eq_1.txt","w");
+    //fd_eq_1_file = $fopen("c:/Projects/pi-radio/HW/modules/sim/zf_equalizer/eq_1.txt","w");
+    fd_eq_1_file = $fopen("../../../../../../modules/sim/zf_equalizer/eq_1.txt","w");
     if (fd_eq_1_file) $display("File was opened successfully: %0d ",fd_eq_1_file);
     else begin
       $display("File was NOT opened successfully: %0d",fd_eq_1_file);
@@ -431,7 +445,8 @@ module zf_equalizer_tb();
 //---------------------------------------------------------------
   initial begin
     
-    fd_out_file = $fopen("c:/Projects/pi-radio/HW/modules/sim/zf_equalizer/eq_out.txt","w");
+    //fd_out_file = $fopen("c:/Projects/pi-radio/HW/modules/sim/zf_equalizer/eq_out.txt","w");
+    fd_out_file = $fopen("../../../../../../modules/sim/zf_equalizer/eq_out.txt","w");
     if (fd_out_file) $display("File was opened successfully: %0d ",fd_out_file);
     else begin
       $display("File was NOT opened successfully: %0d",fd_out_file);
@@ -498,28 +513,32 @@ module zf_equalizer_tb();
 //---------------------------------------------------------------
   initial begin
 
-    fd = $fopen("c:/Projects/pi-radio/HW/modules/sim/zf_equalizer/fft_out.txt","r");
+    //fd = $fopen("c:/Projects/pi-radio/HW/modules/sim/zf_equalizer/fft_out.txt","r");
+    fd = $fopen("../../../../../../modules/sim/zf_equalizer/fft_out.txt","r");
     if (fd) $display("File was opened successfully: %0d ",fd);
     else begin   
       $display("File was NOT opened successfully: %0d",fd);
       $stop;
     end
 
-    fd_info = $fopen("c:/Projects/pi-radio/HW/modules/sim/zf_equalizer/info.txt","r");
+    //fd_info = $fopen("c:/Projects/pi-radio/HW/modules/sim/zf_equalizer/info.txt","r");
+    fd_info = $fopen("../../../../../../modules/sim/zf_equalizer/info.txt","r");
     if (fd_info) $display("File was opened successfully: %0d ",fd_info);
     else begin
       $display("File was NOT opened successfully: %0d",fd_info);
       $stop;
     end
 
-    fd_coe_file = $fopen("c:/Projects/pi-radio/HW/modules/sim/zf_equalizer/coe_signed_samples.txt","w");
+    //fd_coe_file = $fopen("c:/Projects/pi-radio/HW/modules/sim/zf_equalizer/coe_signed_samples.txt","w");
+    fd_coe_file = $fopen("../../../../../../modules/sim/zf_equalizer/coe_signed_samples.txt","w");
     if (fd_coe_file) $display("File was opened successfully: %0d ",fd_coe_file);
     else begin
       $display("File was NOT opened successfully: %0d",fd_coe_file);
-      $stop;
+        $stop;
     end
 
-    fd_pilot_file = $fopen("c:/Projects/pi-radio/HW/modules/sim/zf_equalizer/pilot_data.txt","r");
+    //fd_pilot_file = $fopen("c:/Projects/pi-radio/HW/modules/sim/zf_equalizer/pilot_data.txt","r");
+    fd_pilot_file = $fopen("../../../../../../modules/sim/zf_equalizer/pilot_data.txt","r");
     if (fd_pilot_file) $display("File was opened successfully: %0d ",fd_pilot_file);
     else begin
       $display("File was NOT opened successfully: %0d",fd_pilot_file);

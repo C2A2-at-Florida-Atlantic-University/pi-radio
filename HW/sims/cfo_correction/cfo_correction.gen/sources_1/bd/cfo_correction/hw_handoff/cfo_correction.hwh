@@ -1,53 +1,53 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Mon Oct 17 09:47:58 2022" VIVADOVERSION="2022.1">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Thu Mar  2 11:10:49 2023" VIVADOVERSION="2022.1">
 
   <SYSTEMINFO ARCH="zynquplusRFSOC" BOARD="xilinx.com:zcu111:part0:1.4" DEVICE="xczu28dr" NAME="cfo_correction" PACKAGE="ffvg1517" SPEEDGRADE="-2"/>
 
   <EXTERNALPORTS>
     <PORT CLKFREQUENCY="249997498" DIR="I" NAME="axis_aclk" SIGIS="clk" SIGNAME="External_Ports_axis_aclk">
       <CONNECTIONS>
-        <CONNECTION INSTANCE="Mixer_conj_0" PORT="axis_aclk"/>
         <CONNECTION INSTANCE="Mixer_dds_top_0" PORT="axis_aclk"/>
         <CONNECTION INSTANCE="Mixer_mixer_0" PORT="axis_aclk"/>
+        <CONNECTION INSTANCE="Mixer_conj_0" PORT="axis_aclk"/>
         <CONNECTION INSTANCE="axis_data_fifo_0" PORT="s_axis_aclk"/>
         <CONNECTION INSTANCE="axis_data_fifo_1" PORT="s_axis_aclk"/>
-        <CONNECTION INSTANCE="angle_0" PORT="axis_aclk"/>
         <CONNECTION INSTANCE="axis_splitter_0" PORT="axis_aclk"/>
         <CONNECTION INSTANCE="axis_splitter_1" PORT="axis_aclk"/>
         <CONNECTION INSTANCE="complex_mult_0" PORT="axis_aclk"/>
-        <CONNECTION INSTANCE="conj_0" PORT="axis_aclk"/>
-        <CONNECTION INSTANCE="conj_1" PORT="axis_aclk"/>
         <CONNECTION INSTANCE="cp_rm2_0" PORT="axis_aclk"/>
         <CONNECTION INSTANCE="delay_0" PORT="axis_aclk"/>
         <CONNECTION INSTANCE="delay_1" PORT="axis_aclk"/>
         <CONNECTION INSTANCE="mux_0" PORT="axis_aclk"/>
-        <CONNECTION INSTANCE="scale_0" PORT="axis_aclk"/>
         <CONNECTION INSTANCE="sum_0" PORT="axis_aclk"/>
         <CONNECTION INSTANCE="cp_rm_0" PORT="axis_aclk"/>
         <CONNECTION INSTANCE="tlast_symbol_0" PORT="axis_aclk"/>
+        <CONNECTION INSTANCE="conj_0" PORT="axis_aclk"/>
+        <CONNECTION INSTANCE="conj_1" PORT="axis_aclk"/>
+        <CONNECTION INSTANCE="angle_0" PORT="axis_aclk"/>
+        <CONNECTION INSTANCE="scale_0" PORT="axis_aclk"/>
       </CONNECTIONS>
     </PORT>
     <PORT DIR="I" NAME="axis_aresetn" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="External_Ports_axis_aresetn">
       <CONNECTIONS>
-        <CONNECTION INSTANCE="Mixer_conj_0" PORT="axis_aresetn"/>
         <CONNECTION INSTANCE="Mixer_dds_top_0" PORT="axis_aresetn"/>
         <CONNECTION INSTANCE="Mixer_mixer_0" PORT="axis_aresetn"/>
+        <CONNECTION INSTANCE="Mixer_conj_0" PORT="axis_aresetn"/>
         <CONNECTION INSTANCE="axis_data_fifo_0" PORT="s_axis_aresetn"/>
         <CONNECTION INSTANCE="axis_data_fifo_1" PORT="s_axis_aresetn"/>
-        <CONNECTION INSTANCE="angle_0" PORT="axis_aresetn"/>
         <CONNECTION INSTANCE="axis_splitter_0" PORT="axis_aresetn"/>
         <CONNECTION INSTANCE="axis_splitter_1" PORT="axis_aresetn"/>
         <CONNECTION INSTANCE="complex_mult_0" PORT="axis_aresetn"/>
-        <CONNECTION INSTANCE="conj_0" PORT="axis_aresetn"/>
-        <CONNECTION INSTANCE="conj_1" PORT="axis_aresetn"/>
         <CONNECTION INSTANCE="cp_rm2_0" PORT="axis_aresetn"/>
         <CONNECTION INSTANCE="delay_0" PORT="axis_aresetn"/>
         <CONNECTION INSTANCE="delay_1" PORT="axis_aresetn"/>
         <CONNECTION INSTANCE="mux_0" PORT="axis_aresetn"/>
-        <CONNECTION INSTANCE="scale_0" PORT="axis_aresetn"/>
         <CONNECTION INSTANCE="sum_0" PORT="axis_aresetn"/>
         <CONNECTION INSTANCE="cp_rm_0" PORT="axis_aresetn"/>
         <CONNECTION INSTANCE="tlast_symbol_0" PORT="axis_aresetn"/>
+        <CONNECTION INSTANCE="conj_0" PORT="axis_aresetn"/>
+        <CONNECTION INSTANCE="conj_1" PORT="axis_aresetn"/>
+        <CONNECTION INSTANCE="angle_0" PORT="axis_aresetn"/>
+        <CONNECTION INSTANCE="scale_0" PORT="axis_aresetn"/>
       </CONNECTIONS>
     </PORT>
     <PORT DIR="I" NAME="bypass" SIGIS="undef" SIGNAME="External_Ports_bypass">
@@ -182,16 +182,6 @@
             <CONNECTION INSTANCE="Mixer_dds_top_0" PORT="m_axis_tvalid"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="7" NAME="s_axis_tid" RIGHT="0" SIGIS="undef" SIGNAME="Mixer_conj_0_s_axis_tid">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="Mixer_dds_top_0" PORT="m_axis_tid"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="7" NAME="s_axis_tuser" RIGHT="0" SIGIS="undef" SIGNAME="Mixer_conj_0_s_axis_tuser">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="Mixer_dds_top_0" PORT="m_axis_tuser"/>
-          </CONNECTIONS>
-        </PORT>
         <PORT DIR="I" NAME="s_axis_tlast" SIGIS="undef" SIGNAME="Mixer_conj_0_s_axis_tlast">
           <CONNECTIONS>
             <CONNECTION INSTANCE="Mixer_dds_top_0" PORT="m_axis_tlast"/>
@@ -205,16 +195,6 @@
         <PORT DIR="O" NAME="m_axis_tvalid" SIGIS="undef" SIGNAME="Mixer_conj_0_m_axis_tvalid">
           <CONNECTIONS>
             <CONNECTION INSTANCE="Mixer_mixer_0" PORT="s_axis1_tvalid"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="7" NAME="m_axis_tid" RIGHT="0" SIGIS="undef" SIGNAME="Mixer_conj_0_m_axis_tid">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="Mixer_mixer_0" PORT="s_axis1_tid"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="7" NAME="m_axis_tuser" RIGHT="0" SIGIS="undef" SIGNAME="Mixer_conj_0_m_axis_tuser">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="Mixer_mixer_0" PORT="s_axis1_tuser"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="m_axis_tlast" SIGIS="undef" SIGNAME="Mixer_conj_0_m_axis_tlast">
@@ -232,8 +212,8 @@
         <BUSINTERFACE BUSNAME="Mixer_conj_0_m_axis" NAME="m_axis" TYPE="INITIATOR" VLNV="xilinx.com:interface:axis:1.0">
           <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="16"/>
           <PARAMETER NAME="TDEST_WIDTH" VALUE="0"/>
-          <PARAMETER NAME="TID_WIDTH" VALUE="8"/>
-          <PARAMETER NAME="TUSER_WIDTH" VALUE="8"/>
+          <PARAMETER NAME="TID_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="TUSER_WIDTH" VALUE="0"/>
           <PARAMETER NAME="HAS_TREADY" VALUE="0"/>
           <PARAMETER NAME="HAS_TSTRB" VALUE="0"/>
           <PARAMETER NAME="HAS_TKEEP" VALUE="0"/>
@@ -244,18 +224,16 @@
           <PARAMETER NAME="LAYERED_METADATA" VALUE="undef"/>
           <PARAMETER NAME="INSERT_VIP" VALUE="0"/>
           <PORTMAPS>
-            <PORTMAP LOGICAL="TID" PHYSICAL="m_axis_tid"/>
             <PORTMAP LOGICAL="TDATA" PHYSICAL="m_axis_tdata"/>
             <PORTMAP LOGICAL="TLAST" PHYSICAL="m_axis_tlast"/>
-            <PORTMAP LOGICAL="TUSER" PHYSICAL="m_axis_tuser"/>
             <PORTMAP LOGICAL="TVALID" PHYSICAL="m_axis_tvalid"/>
           </PORTMAPS>
         </BUSINTERFACE>
         <BUSINTERFACE BUSNAME="Mixer_dds_top_0_m_axis" NAME="s_axis" TYPE="TARGET" VLNV="xilinx.com:interface:axis:1.0">
           <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="16"/>
           <PARAMETER NAME="TDEST_WIDTH" VALUE="0"/>
-          <PARAMETER NAME="TID_WIDTH" VALUE="8"/>
-          <PARAMETER NAME="TUSER_WIDTH" VALUE="8"/>
+          <PARAMETER NAME="TID_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="TUSER_WIDTH" VALUE="0"/>
           <PARAMETER NAME="HAS_TREADY" VALUE="0"/>
           <PARAMETER NAME="HAS_TSTRB" VALUE="0"/>
           <PARAMETER NAME="HAS_TKEEP" VALUE="0"/>
@@ -266,10 +244,8 @@
           <PARAMETER NAME="LAYERED_METADATA" VALUE="undef"/>
           <PARAMETER NAME="INSERT_VIP" VALUE="0"/>
           <PORTMAPS>
-            <PORTMAP LOGICAL="TID" PHYSICAL="s_axis_tid"/>
             <PORTMAP LOGICAL="TDATA" PHYSICAL="s_axis_tdata"/>
             <PORTMAP LOGICAL="TLAST" PHYSICAL="s_axis_tlast"/>
-            <PORTMAP LOGICAL="TUSER" PHYSICAL="s_axis_tuser"/>
             <PORTMAP LOGICAL="TVALID" PHYSICAL="s_axis_tvalid"/>
           </PORTMAPS>
         </BUSINTERFACE>
@@ -316,16 +292,8 @@
             <CONNECTION INSTANCE="Mixer_conj_0" PORT="s_axis_tvalid"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="7" NAME="m_axis_tuser" RIGHT="0" SIGIS="undef" SIGNAME="Mixer_conj_0_s_axis_tuser">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="Mixer_conj_0" PORT="s_axis_tuser"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="7" NAME="m_axis_tid" RIGHT="0" SIGIS="undef" SIGNAME="Mixer_conj_0_s_axis_tid">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="Mixer_conj_0" PORT="s_axis_tid"/>
-          </CONNECTIONS>
-        </PORT>
+        <PORT DIR="O" LEFT="7" NAME="m_axis_tuser" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="7" NAME="m_axis_tid" RIGHT="0" SIGIS="undef"/>
         <PORT DIR="O" NAME="m_axis_tlast" SIGIS="undef" SIGNAME="Mixer_conj_0_s_axis_tlast">
           <CONNECTIONS>
             <CONNECTION INSTANCE="Mixer_conj_0" PORT="s_axis_tlast"/>
@@ -407,16 +375,8 @@
             <CONNECTION INSTANCE="conj_1" PORT="m_axis_tvalid"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="7" NAME="s_axis0_tid" RIGHT="0" SIGIS="undef" SIGNAME="Mixer_mixer_0_s_axis0_tid">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="conj_1" PORT="m_axis_tid"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="7" NAME="s_axis0_tuser" RIGHT="0" SIGIS="undef" SIGNAME="Mixer_mixer_0_s_axis0_tuser">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="conj_1" PORT="m_axis_tuser"/>
-          </CONNECTIONS>
-        </PORT>
+        <PORT DIR="I" LEFT="7" NAME="s_axis0_tid" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="7" NAME="s_axis0_tuser" RIGHT="0" SIGIS="undef"/>
         <PORT DIR="I" NAME="s_axis0_tlast" SIGIS="undef" SIGNAME="Mixer_mixer_0_s_axis0_tlast">
           <CONNECTIONS>
             <CONNECTION INSTANCE="conj_1" PORT="m_axis_tlast"/>
@@ -432,16 +392,8 @@
             <CONNECTION INSTANCE="Mixer_conj_0" PORT="m_axis_tvalid"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="7" NAME="s_axis1_tid" RIGHT="0" SIGIS="undef" SIGNAME="Mixer_conj_0_m_axis_tid">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="Mixer_conj_0" PORT="m_axis_tid"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="7" NAME="s_axis1_tuser" RIGHT="0" SIGIS="undef" SIGNAME="Mixer_conj_0_m_axis_tuser">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="Mixer_conj_0" PORT="m_axis_tuser"/>
-          </CONNECTIONS>
-        </PORT>
+        <PORT DIR="I" LEFT="7" NAME="s_axis1_tid" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="7" NAME="s_axis1_tuser" RIGHT="0" SIGIS="undef"/>
         <PORT DIR="I" NAME="s_axis1_tlast" SIGIS="undef" SIGNAME="Mixer_conj_0_m_axis_tlast">
           <CONNECTIONS>
             <CONNECTION INSTANCE="Mixer_conj_0" PORT="m_axis_tlast"/>
@@ -537,7 +489,7 @@
     <MODULE COREREVISION="1" FULLNAME="/angle_0" HWVERSION="1.0" INSTANCE="angle_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="angle" VLNV="xilinx.com:module_ref:angle:1.0">
       <DOCUMENTS/>
       <PARAMETERS>
-        <PARAMETER NAME="g_PRECISION" VALUE="32"/>
+        <PARAMETER NAME="g_PRECISION" VALUE="16"/>
         <PARAMETER NAME="Component_Name" VALUE="cfo_correction_angle_0_0"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
@@ -577,7 +529,7 @@
             <CONNECTION INSTANCE="sum_0" PORT="m_axis_tlast"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="31" NAME="m_axis_tdata" RIGHT="0" SIGIS="undef" SIGNAME="angle_0_m_axis_tdata">
+        <PORT DIR="O" LEFT="15" NAME="m_axis_tdata" RIGHT="0" SIGIS="undef" SIGNAME="angle_0_m_axis_tdata">
           <CONNECTIONS>
             <CONNECTION INSTANCE="scale_0" PORT="s_axis_tdata"/>
           </CONNECTIONS>
@@ -593,7 +545,7 @@
       </PORTS>
       <BUSINTERFACES>
         <BUSINTERFACE BUSNAME="angle_0_m_axis" NAME="m_axis" TYPE="INITIATOR" VLNV="xilinx.com:interface:axis:1.0">
-          <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="4"/>
+          <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="2"/>
           <PARAMETER NAME="TDEST_WIDTH" VALUE="0"/>
           <PARAMETER NAME="TID_WIDTH" VALUE="8"/>
           <PARAMETER NAME="TUSER_WIDTH" VALUE="8"/>
@@ -645,10 +597,10 @@
       <PARAMETERS>
         <PARAMETER NAME="C_FAMILY" VALUE="zynquplus"/>
         <PARAMETER NAME="C_AXIS_TDATA_WIDTH" VALUE="128"/>
-        <PARAMETER NAME="C_AXIS_TID_WIDTH" VALUE="8"/>
+        <PARAMETER NAME="C_AXIS_TID_WIDTH" VALUE="1"/>
         <PARAMETER NAME="C_AXIS_TDEST_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="C_AXIS_TUSER_WIDTH" VALUE="8"/>
-        <PARAMETER NAME="C_AXIS_SIGNAL_SET" VALUE="0b00000000000000000000000010110011"/>
+        <PARAMETER NAME="C_AXIS_TUSER_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="C_AXIS_SIGNAL_SET" VALUE="0b00000000000000000000000000010011"/>
         <PARAMETER NAME="C_FIFO_DEPTH" VALUE="512"/>
         <PARAMETER NAME="C_FIFO_MODE" VALUE="1"/>
         <PARAMETER NAME="C_IS_ACLK_ASYNC" VALUE="0"/>
@@ -660,9 +612,9 @@
         <PARAMETER NAME="C_PROG_EMPTY_THRESH" VALUE="5"/>
         <PARAMETER NAME="C_PROG_FULL_THRESH" VALUE="11"/>
         <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="16"/>
-        <PARAMETER NAME="TID_WIDTH" VALUE="8"/>
+        <PARAMETER NAME="TID_WIDTH" VALUE="0"/>
         <PARAMETER NAME="TDEST_WIDTH" VALUE="0"/>
-        <PARAMETER NAME="TUSER_WIDTH" VALUE="8"/>
+        <PARAMETER NAME="TUSER_WIDTH" VALUE="0"/>
         <PARAMETER NAME="FIFO_DEPTH" VALUE="512"/>
         <PARAMETER NAME="FIFO_MODE" VALUE="1"/>
         <PARAMETER NAME="IS_ACLK_ASYNC" VALUE="0"/>
@@ -713,16 +665,6 @@
             <CONNECTION INSTANCE="conj_0" PORT="m_axis_tlast"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="7" NAME="s_axis_tid" RIGHT="0" SIGIS="undef" SIGNAME="axis_data_fifo_0_s_axis_tid">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="conj_0" PORT="m_axis_tid"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="7" NAME="s_axis_tuser" RIGHT="0" SIGIS="undef" SIGNAME="axis_data_fifo_0_s_axis_tuser">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="conj_0" PORT="m_axis_tuser"/>
-          </CONNECTIONS>
-        </PORT>
         <PORT DIR="O" NAME="m_axis_tvalid" SIGIS="undef" SIGNAME="axis_data_fifo_0_m_axis_tvalid">
           <CONNECTIONS>
             <CONNECTION INSTANCE="delay_0" PORT="s_axis_tvalid"/>
@@ -743,23 +685,13 @@
             <CONNECTION INSTANCE="delay_0" PORT="s_axis_tlast"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="7" NAME="m_axis_tid" RIGHT="0" SIGIS="undef" SIGNAME="axis_data_fifo_0_m_axis_tid">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="delay_0" PORT="s_axis_tid"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="7" NAME="m_axis_tuser" RIGHT="0" SIGIS="undef" SIGNAME="axis_data_fifo_0_m_axis_tuser">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="delay_0" PORT="s_axis_tuser"/>
-          </CONNECTIONS>
-        </PORT>
       </PORTS>
       <BUSINTERFACES>
         <BUSINTERFACE BUSNAME="conj_0_m_axis" NAME="S_AXIS" TYPE="SLAVE" VLNV="xilinx.com:interface:axis:1.0">
           <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="16"/>
           <PARAMETER NAME="TDEST_WIDTH" VALUE="0"/>
-          <PARAMETER NAME="TID_WIDTH" VALUE="8"/>
-          <PARAMETER NAME="TUSER_WIDTH" VALUE="8"/>
+          <PARAMETER NAME="TID_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="TUSER_WIDTH" VALUE="0"/>
           <PARAMETER NAME="HAS_TREADY" VALUE="1"/>
           <PARAMETER NAME="HAS_TSTRB" VALUE="0"/>
           <PARAMETER NAME="HAS_TKEEP" VALUE="0"/>
@@ -771,18 +703,16 @@
           <PARAMETER NAME="INSERT_VIP" VALUE="0"/>
           <PORTMAPS>
             <PORTMAP LOGICAL="TDATA" PHYSICAL="s_axis_tdata"/>
-            <PORTMAP LOGICAL="TID" PHYSICAL="s_axis_tid"/>
             <PORTMAP LOGICAL="TLAST" PHYSICAL="s_axis_tlast"/>
             <PORTMAP LOGICAL="TREADY" PHYSICAL="s_axis_tready"/>
-            <PORTMAP LOGICAL="TUSER" PHYSICAL="s_axis_tuser"/>
             <PORTMAP LOGICAL="TVALID" PHYSICAL="s_axis_tvalid"/>
           </PORTMAPS>
         </BUSINTERFACE>
         <BUSINTERFACE BUSNAME="axis_data_fifo_0_M_AXIS" NAME="M_AXIS" TYPE="MASTER" VLNV="xilinx.com:interface:axis:1.0">
           <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="16"/>
           <PARAMETER NAME="TDEST_WIDTH" VALUE="0"/>
-          <PARAMETER NAME="TID_WIDTH" VALUE="8"/>
-          <PARAMETER NAME="TUSER_WIDTH" VALUE="8"/>
+          <PARAMETER NAME="TID_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="TUSER_WIDTH" VALUE="0"/>
           <PARAMETER NAME="HAS_TREADY" VALUE="1"/>
           <PARAMETER NAME="HAS_TSTRB" VALUE="0"/>
           <PARAMETER NAME="HAS_TKEEP" VALUE="0"/>
@@ -794,10 +724,8 @@
           <PARAMETER NAME="INSERT_VIP" VALUE="0"/>
           <PORTMAPS>
             <PORTMAP LOGICAL="TDATA" PHYSICAL="m_axis_tdata"/>
-            <PORTMAP LOGICAL="TID" PHYSICAL="m_axis_tid"/>
             <PORTMAP LOGICAL="TLAST" PHYSICAL="m_axis_tlast"/>
             <PORTMAP LOGICAL="TREADY" PHYSICAL="m_axis_tready"/>
-            <PORTMAP LOGICAL="TUSER" PHYSICAL="m_axis_tuser"/>
             <PORTMAP LOGICAL="TVALID" PHYSICAL="m_axis_tvalid"/>
           </PORTMAPS>
         </BUSINTERFACE>
@@ -1481,16 +1409,6 @@
             <CONNECTION INSTANCE="cp_rm_0" PORT="m_cp_axis_tvalid"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="7" NAME="s_axis_tid" RIGHT="0" SIGIS="undef" SIGNAME="conj_0_s_axis_tid">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="cp_rm_0" PORT="m_cp_axis_tid"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="7" NAME="s_axis_tuser" RIGHT="0" SIGIS="undef" SIGNAME="conj_0_s_axis_tuser">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="cp_rm_0" PORT="m_cp_axis_tuser"/>
-          </CONNECTIONS>
-        </PORT>
         <PORT DIR="I" NAME="s_axis_tlast" SIGIS="undef" SIGNAME="conj_0_s_axis_tlast">
           <CONNECTIONS>
             <CONNECTION INSTANCE="cp_rm_0" PORT="m_cp_axis_tlast"/>
@@ -1504,16 +1422,6 @@
         <PORT DIR="O" NAME="m_axis_tvalid" SIGIS="undef" SIGNAME="axis_data_fifo_0_s_axis_tvalid">
           <CONNECTIONS>
             <CONNECTION INSTANCE="axis_data_fifo_0" PORT="s_axis_tvalid"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="7" NAME="m_axis_tid" RIGHT="0" SIGIS="undef" SIGNAME="axis_data_fifo_0_s_axis_tid">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="axis_data_fifo_0" PORT="s_axis_tid"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="7" NAME="m_axis_tuser" RIGHT="0" SIGIS="undef" SIGNAME="axis_data_fifo_0_s_axis_tuser">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="axis_data_fifo_0" PORT="s_axis_tuser"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="m_axis_tlast" SIGIS="undef" SIGNAME="axis_data_fifo_0_s_axis_tlast">
@@ -1531,8 +1439,8 @@
         <BUSINTERFACE BUSNAME="conj_0_m_axis" NAME="m_axis" TYPE="MASTER" VLNV="xilinx.com:interface:axis:1.0">
           <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="16"/>
           <PARAMETER NAME="TDEST_WIDTH" VALUE="0"/>
-          <PARAMETER NAME="TID_WIDTH" VALUE="8"/>
-          <PARAMETER NAME="TUSER_WIDTH" VALUE="8"/>
+          <PARAMETER NAME="TID_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="TUSER_WIDTH" VALUE="0"/>
           <PARAMETER NAME="HAS_TREADY" VALUE="0"/>
           <PARAMETER NAME="HAS_TSTRB" VALUE="0"/>
           <PARAMETER NAME="HAS_TKEEP" VALUE="0"/>
@@ -1543,18 +1451,16 @@
           <PARAMETER NAME="LAYERED_METADATA" VALUE="undef"/>
           <PARAMETER NAME="INSERT_VIP" VALUE="0"/>
           <PORTMAPS>
-            <PORTMAP LOGICAL="TID" PHYSICAL="m_axis_tid"/>
             <PORTMAP LOGICAL="TDATA" PHYSICAL="m_axis_tdata"/>
             <PORTMAP LOGICAL="TLAST" PHYSICAL="m_axis_tlast"/>
-            <PORTMAP LOGICAL="TUSER" PHYSICAL="m_axis_tuser"/>
             <PORTMAP LOGICAL="TVALID" PHYSICAL="m_axis_tvalid"/>
           </PORTMAPS>
         </BUSINTERFACE>
         <BUSINTERFACE BUSNAME="cp_rm_0_m_cp_axis" NAME="s_axis" TYPE="TARGET" VLNV="xilinx.com:interface:axis:1.0">
           <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="16"/>
           <PARAMETER NAME="TDEST_WIDTH" VALUE="0"/>
-          <PARAMETER NAME="TID_WIDTH" VALUE="8"/>
-          <PARAMETER NAME="TUSER_WIDTH" VALUE="8"/>
+          <PARAMETER NAME="TID_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="TUSER_WIDTH" VALUE="0"/>
           <PARAMETER NAME="HAS_TREADY" VALUE="0"/>
           <PARAMETER NAME="HAS_TSTRB" VALUE="0"/>
           <PARAMETER NAME="HAS_TKEEP" VALUE="0"/>
@@ -1565,10 +1471,8 @@
           <PARAMETER NAME="LAYERED_METADATA" VALUE="undef"/>
           <PARAMETER NAME="INSERT_VIP" VALUE="0"/>
           <PORTMAPS>
-            <PORTMAP LOGICAL="TID" PHYSICAL="s_axis_tid"/>
             <PORTMAP LOGICAL="TDATA" PHYSICAL="s_axis_tdata"/>
             <PORTMAP LOGICAL="TLAST" PHYSICAL="s_axis_tlast"/>
-            <PORTMAP LOGICAL="TUSER" PHYSICAL="s_axis_tuser"/>
             <PORTMAP LOGICAL="TVALID" PHYSICAL="s_axis_tvalid"/>
           </PORTMAPS>
         </BUSINTERFACE>
@@ -1601,16 +1505,6 @@
             <CONNECTION INSTANCE="delay_1" PORT="m_axis_tvalid"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="7" NAME="s_axis_tid" RIGHT="0" SIGIS="undef" SIGNAME="conj_1_s_axis_tid">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="delay_1" PORT="m_axis_tid"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="7" NAME="s_axis_tuser" RIGHT="0" SIGIS="undef" SIGNAME="conj_1_s_axis_tuser">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="delay_1" PORT="m_axis_tuser"/>
-          </CONNECTIONS>
-        </PORT>
         <PORT DIR="I" NAME="s_axis_tlast" SIGIS="undef" SIGNAME="conj_1_s_axis_tlast">
           <CONNECTIONS>
             <CONNECTION INSTANCE="delay_1" PORT="m_axis_tlast"/>
@@ -1624,16 +1518,6 @@
         <PORT DIR="O" NAME="m_axis_tvalid" SIGIS="undef" SIGNAME="Mixer_mixer_0_s_axis0_tvalid">
           <CONNECTIONS>
             <CONNECTION INSTANCE="Mixer_mixer_0" PORT="s_axis0_tvalid"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="7" NAME="m_axis_tid" RIGHT="0" SIGIS="undef" SIGNAME="Mixer_mixer_0_s_axis0_tid">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="Mixer_mixer_0" PORT="s_axis0_tid"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="7" NAME="m_axis_tuser" RIGHT="0" SIGIS="undef" SIGNAME="Mixer_mixer_0_s_axis0_tuser">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="Mixer_mixer_0" PORT="s_axis0_tuser"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="m_axis_tlast" SIGIS="undef" SIGNAME="Mixer_mixer_0_s_axis0_tlast">
@@ -1651,8 +1535,8 @@
         <BUSINTERFACE BUSNAME="conj_1_m_axis" NAME="m_axis" TYPE="INITIATOR" VLNV="xilinx.com:interface:axis:1.0">
           <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="16"/>
           <PARAMETER NAME="TDEST_WIDTH" VALUE="0"/>
-          <PARAMETER NAME="TID_WIDTH" VALUE="8"/>
-          <PARAMETER NAME="TUSER_WIDTH" VALUE="8"/>
+          <PARAMETER NAME="TID_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="TUSER_WIDTH" VALUE="0"/>
           <PARAMETER NAME="HAS_TREADY" VALUE="0"/>
           <PARAMETER NAME="HAS_TSTRB" VALUE="0"/>
           <PARAMETER NAME="HAS_TKEEP" VALUE="0"/>
@@ -1663,18 +1547,16 @@
           <PARAMETER NAME="LAYERED_METADATA" VALUE="undef"/>
           <PARAMETER NAME="INSERT_VIP" VALUE="0"/>
           <PORTMAPS>
-            <PORTMAP LOGICAL="TID" PHYSICAL="m_axis_tid"/>
             <PORTMAP LOGICAL="TDATA" PHYSICAL="m_axis_tdata"/>
             <PORTMAP LOGICAL="TLAST" PHYSICAL="m_axis_tlast"/>
-            <PORTMAP LOGICAL="TUSER" PHYSICAL="m_axis_tuser"/>
             <PORTMAP LOGICAL="TVALID" PHYSICAL="m_axis_tvalid"/>
           </PORTMAPS>
         </BUSINTERFACE>
         <BUSINTERFACE BUSNAME="delay_1_m_axis" NAME="s_axis" TYPE="TARGET" VLNV="xilinx.com:interface:axis:1.0">
           <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="16"/>
           <PARAMETER NAME="TDEST_WIDTH" VALUE="0"/>
-          <PARAMETER NAME="TID_WIDTH" VALUE="8"/>
-          <PARAMETER NAME="TUSER_WIDTH" VALUE="8"/>
+          <PARAMETER NAME="TID_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="TUSER_WIDTH" VALUE="0"/>
           <PARAMETER NAME="HAS_TREADY" VALUE="0"/>
           <PARAMETER NAME="HAS_TSTRB" VALUE="0"/>
           <PARAMETER NAME="HAS_TKEEP" VALUE="0"/>
@@ -1685,10 +1567,8 @@
           <PARAMETER NAME="LAYERED_METADATA" VALUE="undef"/>
           <PARAMETER NAME="INSERT_VIP" VALUE="0"/>
           <PORTMAPS>
-            <PORTMAP LOGICAL="TID" PHYSICAL="s_axis_tid"/>
             <PORTMAP LOGICAL="TDATA" PHYSICAL="s_axis_tdata"/>
             <PORTMAP LOGICAL="TLAST" PHYSICAL="s_axis_tlast"/>
-            <PORTMAP LOGICAL="TUSER" PHYSICAL="s_axis_tuser"/>
             <PORTMAP LOGICAL="TVALID" PHYSICAL="s_axis_tvalid"/>
           </PORTMAPS>
         </BUSINTERFACE>
@@ -1892,16 +1772,8 @@
             <CONNECTION INSTANCE="conj_0" PORT="s_axis_tvalid"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="7" NAME="m_cp_axis_tid" RIGHT="0" SIGIS="undef" SIGNAME="conj_0_s_axis_tid">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="conj_0" PORT="s_axis_tid"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="7" NAME="m_cp_axis_tuser" RIGHT="0" SIGIS="undef" SIGNAME="conj_0_s_axis_tuser">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="conj_0" PORT="s_axis_tuser"/>
-          </CONNECTIONS>
-        </PORT>
+        <PORT DIR="O" LEFT="7" NAME="m_cp_axis_tid" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="7" NAME="m_cp_axis_tuser" RIGHT="0" SIGIS="undef"/>
         <PORT DIR="O" NAME="m_cp_axis_tlast" SIGIS="undef" SIGNAME="conj_0_s_axis_tlast">
           <CONNECTIONS>
             <CONNECTION INSTANCE="conj_0" PORT="s_axis_tlast"/>
@@ -2016,16 +1888,8 @@
             <CONNECTION INSTANCE="axis_data_fifo_0" PORT="m_axis_tvalid"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="7" NAME="s_axis_tid" RIGHT="0" SIGIS="undef" SIGNAME="axis_data_fifo_0_m_axis_tid">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="axis_data_fifo_0" PORT="m_axis_tid"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="7" NAME="s_axis_tuser" RIGHT="0" SIGIS="undef" SIGNAME="axis_data_fifo_0_m_axis_tuser">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="axis_data_fifo_0" PORT="m_axis_tuser"/>
-          </CONNECTIONS>
-        </PORT>
+        <PORT DIR="I" LEFT="7" NAME="s_axis_tid" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="7" NAME="s_axis_tuser" RIGHT="0" SIGIS="undef"/>
         <PORT DIR="I" NAME="s_axis_tlast" SIGIS="undef" SIGNAME="axis_data_fifo_0_m_axis_tlast">
           <CONNECTIONS>
             <CONNECTION INSTANCE="axis_data_fifo_0" PORT="m_axis_tlast"/>
@@ -2175,16 +2039,8 @@
             <CONNECTION INSTANCE="conj_1" PORT="s_axis_tvalid"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="7" NAME="m_axis_tid" RIGHT="0" SIGIS="undef" SIGNAME="conj_1_s_axis_tid">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="conj_1" PORT="s_axis_tid"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="7" NAME="m_axis_tuser" RIGHT="0" SIGIS="undef" SIGNAME="conj_1_s_axis_tuser">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="conj_1" PORT="s_axis_tuser"/>
-          </CONNECTIONS>
-        </PORT>
+        <PORT DIR="O" LEFT="7" NAME="m_axis_tid" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="7" NAME="m_axis_tuser" RIGHT="0" SIGIS="undef"/>
         <PORT DIR="O" NAME="m_axis_tlast" SIGIS="undef" SIGNAME="conj_1_s_axis_tlast">
           <CONNECTIONS>
             <CONNECTION INSTANCE="conj_1" PORT="s_axis_tlast"/>
@@ -2425,7 +2281,7 @@
             <CONNECTION INSTANCE="External_Ports" PORT="axis_aresetn"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="31" NAME="s_axis_tdata" RIGHT="0" SIGIS="undef" SIGNAME="angle_0_m_axis_tdata">
+        <PORT DIR="I" LEFT="15" NAME="s_axis_tdata" RIGHT="0" SIGIS="undef" SIGNAME="angle_0_m_axis_tdata">
           <CONNECTIONS>
             <CONNECTION INSTANCE="angle_0" PORT="m_axis_tdata"/>
           </CONNECTIONS>
@@ -2477,7 +2333,7 @@
           </PORTMAPS>
         </BUSINTERFACE>
         <BUSINTERFACE BUSNAME="angle_0_m_axis" NAME="s_axis" TYPE="TARGET" VLNV="xilinx.com:interface:axis:1.0">
-          <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="4"/>
+          <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="2"/>
           <PARAMETER NAME="TDEST_WIDTH" VALUE="0"/>
           <PARAMETER NAME="TID_WIDTH" VALUE="0"/>
           <PARAMETER NAME="TUSER_WIDTH" VALUE="0"/>

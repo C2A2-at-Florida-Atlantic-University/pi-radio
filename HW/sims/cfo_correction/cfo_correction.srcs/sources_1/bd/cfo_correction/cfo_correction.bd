@@ -12,28 +12,28 @@
     },
     "design_tree": {
       "Mixer": {
-        "conj_0": "",
         "dds_top_0": "",
-        "mixer_0": ""
+        "mixer_0": "",
+        "conj_0": ""
       },
       "axis_data_fifo_0": "",
       "axis_data_fifo_1": "",
       "util_vector_logic_0": "",
       "xlconstant_0": "",
-      "angle_0": "",
       "axis_splitter_0": "",
       "axis_splitter_1": "",
       "complex_mult_0": "",
-      "conj_0": "",
-      "conj_1": "",
       "cp_rm2_0": "",
       "delay_0": "",
       "delay_1": "",
       "mux_0": "",
-      "scale_0": "",
       "sum_0": "",
       "cp_rm_0": "",
-      "tlast_symbol_0": ""
+      "tlast_symbol_0": "",
+      "conj_0": "",
+      "conj_1": "",
+      "angle_0": "",
+      "scale_0": ""
     },
     "interface_ports": {
       "m_axis": {
@@ -227,216 +227,6 @@
           }
         },
         "components": {
-          "conj_0": {
-            "vlnv": "xilinx.com:module_ref:conj:1.0",
-            "xci_name": "cfo_correction_conj_0_0",
-            "xci_path": "ip\\cfo_correction_conj_0_0\\cfo_correction_conj_0_0.xci",
-            "inst_hier_path": "Mixer/conj_0",
-            "reference_info": {
-              "ref_type": "hdl",
-              "ref_name": "conj",
-              "boundary_crc": "0x0"
-            },
-            "interface_ports": {
-              "m_axis": {
-                "mode": "Master",
-                "vlnv_bus_definition": "xilinx.com:interface:axis:1.0",
-                "vlnv": "xilinx.com:interface:axis_rtl:1.0",
-                "parameters": {
-                  "TDATA_NUM_BYTES": {
-                    "value": "16",
-                    "value_src": "constant"
-                  },
-                  "TDEST_WIDTH": {
-                    "value": "0",
-                    "value_src": "constant"
-                  },
-                  "TID_WIDTH": {
-                    "value": "8",
-                    "value_src": "constant"
-                  },
-                  "TUSER_WIDTH": {
-                    "value": "8",
-                    "value_src": "constant"
-                  },
-                  "HAS_TREADY": {
-                    "value": "0",
-                    "value_src": "constant"
-                  },
-                  "HAS_TSTRB": {
-                    "value": "0",
-                    "value_src": "constant"
-                  },
-                  "HAS_TKEEP": {
-                    "value": "0",
-                    "value_src": "constant"
-                  },
-                  "HAS_TLAST": {
-                    "value": "1",
-                    "value_src": "constant"
-                  },
-                  "FREQ_HZ": {
-                    "value": "249997498",
-                    "value_src": "constant"
-                  },
-                  "CLK_DOMAIN": {
-                    "value": "cfo_correction_axis_aclk",
-                    "value_src": "default_prop"
-                  }
-                },
-                "port_maps": {
-                  "TID": {
-                    "physical_name": "m_axis_tid",
-                    "direction": "O",
-                    "left": "7",
-                    "right": "0"
-                  },
-                  "TDATA": {
-                    "physical_name": "m_axis_tdata",
-                    "direction": "O",
-                    "left": "127",
-                    "right": "0"
-                  },
-                  "TLAST": {
-                    "physical_name": "m_axis_tlast",
-                    "direction": "O"
-                  },
-                  "TUSER": {
-                    "physical_name": "m_axis_tuser",
-                    "direction": "O",
-                    "left": "7",
-                    "right": "0"
-                  },
-                  "TVALID": {
-                    "physical_name": "m_axis_tvalid",
-                    "direction": "O"
-                  }
-                }
-              },
-              "s_axis": {
-                "mode": "Slave",
-                "vlnv_bus_definition": "xilinx.com:interface:axis:1.0",
-                "vlnv": "xilinx.com:interface:axis_rtl:1.0",
-                "parameters": {
-                  "TDATA_NUM_BYTES": {
-                    "value": "16",
-                    "value_src": "constant"
-                  },
-                  "TDEST_WIDTH": {
-                    "value": "0",
-                    "value_src": "constant"
-                  },
-                  "TID_WIDTH": {
-                    "value": "8",
-                    "value_src": "constant"
-                  },
-                  "TUSER_WIDTH": {
-                    "value": "8",
-                    "value_src": "constant"
-                  },
-                  "HAS_TREADY": {
-                    "value": "0",
-                    "value_src": "constant"
-                  },
-                  "HAS_TSTRB": {
-                    "value": "0",
-                    "value_src": "constant"
-                  },
-                  "HAS_TKEEP": {
-                    "value": "0",
-                    "value_src": "constant"
-                  },
-                  "HAS_TLAST": {
-                    "value": "1",
-                    "value_src": "constant"
-                  },
-                  "FREQ_HZ": {
-                    "value": "249997498",
-                    "value_src": "constant"
-                  },
-                  "CLK_DOMAIN": {
-                    "value": "cfo_correction_axis_aclk",
-                    "value_src": "default_prop"
-                  }
-                },
-                "port_maps": {
-                  "TID": {
-                    "physical_name": "s_axis_tid",
-                    "direction": "I",
-                    "left": "7",
-                    "right": "0"
-                  },
-                  "TDATA": {
-                    "physical_name": "s_axis_tdata",
-                    "direction": "I",
-                    "left": "127",
-                    "right": "0"
-                  },
-                  "TLAST": {
-                    "physical_name": "s_axis_tlast",
-                    "direction": "I"
-                  },
-                  "TUSER": {
-                    "physical_name": "s_axis_tuser",
-                    "direction": "I",
-                    "left": "7",
-                    "right": "0"
-                  },
-                  "TVALID": {
-                    "physical_name": "s_axis_tvalid",
-                    "direction": "I"
-                  }
-                }
-              }
-            },
-            "ports": {
-              "axis_aclk": {
-                "type": "clk",
-                "direction": "I",
-                "parameters": {
-                  "ASSOCIATED_BUSIF": {
-                    "value": "axis_aclk:s_axis:m_axis",
-                    "value_src": "constant"
-                  },
-                  "ASSOCIATED_RESET": {
-                    "value": "axis_aresetn",
-                    "value_src": "constant"
-                  },
-                  "FREQ_HZ": {
-                    "value": "249997498",
-                    "value_src": "constant"
-                  },
-                  "CLK_DOMAIN": {
-                    "value": "cfo_correction_axis_aclk",
-                    "value_src": "default_prop"
-                  }
-                }
-              },
-              "axis_aresetn": {
-                "type": "rst",
-                "direction": "I",
-                "parameters": {
-                  "POLARITY": {
-                    "value": "ACTIVE_LOW",
-                    "value_src": "constant"
-                  }
-                }
-              },
-              "i_negative_freq": {
-                "direction": "I",
-                "parameters": {
-                  "PortType": {
-                    "value": "undef",
-                    "value_src": "ip_prop"
-                  },
-                  "PortType.PROP_SRC": {
-                    "value": "false",
-                    "value_src": "ip_prop"
-                  }
-                }
-              }
-            }
-          },
           "dds_top_0": {
             "vlnv": "xilinx.com:module_ref:dds_top:1.0",
             "xci_name": "cfo_correction_dds_top_0_0",
@@ -905,6 +695,192 @@
                 }
               }
             }
+          },
+          "conj_0": {
+            "vlnv": "xilinx.com:module_ref:conj:1.0",
+            "xci_name": "cfo_correction_conj_0_0",
+            "xci_path": "ip\\cfo_correction_conj_0_0\\cfo_correction_conj_0_0.xci",
+            "inst_hier_path": "Mixer/conj_0",
+            "reference_info": {
+              "ref_type": "hdl",
+              "ref_name": "conj",
+              "boundary_crc": "0x0"
+            },
+            "interface_ports": {
+              "m_axis": {
+                "mode": "Master",
+                "vlnv_bus_definition": "xilinx.com:interface:axis:1.0",
+                "vlnv": "xilinx.com:interface:axis_rtl:1.0",
+                "parameters": {
+                  "TDATA_NUM_BYTES": {
+                    "value": "16",
+                    "value_src": "constant"
+                  },
+                  "TDEST_WIDTH": {
+                    "value": "0",
+                    "value_src": "constant"
+                  },
+                  "TID_WIDTH": {
+                    "value": "0",
+                    "value_src": "constant"
+                  },
+                  "TUSER_WIDTH": {
+                    "value": "0",
+                    "value_src": "constant"
+                  },
+                  "HAS_TREADY": {
+                    "value": "0",
+                    "value_src": "constant"
+                  },
+                  "HAS_TSTRB": {
+                    "value": "0",
+                    "value_src": "constant"
+                  },
+                  "HAS_TKEEP": {
+                    "value": "0",
+                    "value_src": "constant"
+                  },
+                  "HAS_TLAST": {
+                    "value": "1",
+                    "value_src": "constant"
+                  },
+                  "FREQ_HZ": {
+                    "value": "249997498",
+                    "value_src": "constant"
+                  },
+                  "CLK_DOMAIN": {
+                    "value": "cfo_correction_axis_aclk",
+                    "value_src": "default_prop"
+                  }
+                },
+                "port_maps": {
+                  "TDATA": {
+                    "physical_name": "m_axis_tdata",
+                    "direction": "O",
+                    "left": "127",
+                    "right": "0"
+                  },
+                  "TLAST": {
+                    "physical_name": "m_axis_tlast",
+                    "direction": "O"
+                  },
+                  "TVALID": {
+                    "physical_name": "m_axis_tvalid",
+                    "direction": "O"
+                  }
+                }
+              },
+              "s_axis": {
+                "mode": "Slave",
+                "vlnv_bus_definition": "xilinx.com:interface:axis:1.0",
+                "vlnv": "xilinx.com:interface:axis_rtl:1.0",
+                "parameters": {
+                  "TDATA_NUM_BYTES": {
+                    "value": "16",
+                    "value_src": "constant"
+                  },
+                  "TDEST_WIDTH": {
+                    "value": "0",
+                    "value_src": "constant"
+                  },
+                  "TID_WIDTH": {
+                    "value": "0",
+                    "value_src": "constant"
+                  },
+                  "TUSER_WIDTH": {
+                    "value": "0",
+                    "value_src": "constant"
+                  },
+                  "HAS_TREADY": {
+                    "value": "0",
+                    "value_src": "constant"
+                  },
+                  "HAS_TSTRB": {
+                    "value": "0",
+                    "value_src": "constant"
+                  },
+                  "HAS_TKEEP": {
+                    "value": "0",
+                    "value_src": "constant"
+                  },
+                  "HAS_TLAST": {
+                    "value": "1",
+                    "value_src": "constant"
+                  },
+                  "FREQ_HZ": {
+                    "value": "249997498",
+                    "value_src": "constant"
+                  },
+                  "CLK_DOMAIN": {
+                    "value": "cfo_correction_axis_aclk",
+                    "value_src": "default_prop"
+                  }
+                },
+                "port_maps": {
+                  "TDATA": {
+                    "physical_name": "s_axis_tdata",
+                    "direction": "I",
+                    "left": "127",
+                    "right": "0"
+                  },
+                  "TLAST": {
+                    "physical_name": "s_axis_tlast",
+                    "direction": "I"
+                  },
+                  "TVALID": {
+                    "physical_name": "s_axis_tvalid",
+                    "direction": "I"
+                  }
+                }
+              }
+            },
+            "ports": {
+              "axis_aclk": {
+                "type": "clk",
+                "direction": "I",
+                "parameters": {
+                  "ASSOCIATED_BUSIF": {
+                    "value": "axis_aclk:s_axis:m_axis",
+                    "value_src": "constant"
+                  },
+                  "ASSOCIATED_RESET": {
+                    "value": "axis_aresetn",
+                    "value_src": "constant"
+                  },
+                  "FREQ_HZ": {
+                    "value": "249997498",
+                    "value_src": "constant"
+                  },
+                  "CLK_DOMAIN": {
+                    "value": "cfo_correction_axis_aclk",
+                    "value_src": "default_prop"
+                  }
+                }
+              },
+              "axis_aresetn": {
+                "type": "rst",
+                "direction": "I",
+                "parameters": {
+                  "POLARITY": {
+                    "value": "ACTIVE_LOW",
+                    "value_src": "constant"
+                  }
+                }
+              },
+              "i_negative_freq": {
+                "direction": "I",
+                "parameters": {
+                  "PortType": {
+                    "value": "undef",
+                    "value_src": "ip_prop"
+                  },
+                  "PortType.PROP_SRC": {
+                    "value": "false",
+                    "value_src": "ip_prop"
+                  }
+                }
+              }
+            }
           }
         },
         "interface_nets": {
@@ -949,17 +925,17 @@
           "s_axis_aclk_0_1": {
             "ports": [
               "s_axis_aclk_0",
-              "conj_0/axis_aclk",
               "dds_top_0/axis_aclk",
-              "mixer_0/axis_aclk"
+              "mixer_0/axis_aclk",
+              "conj_0/axis_aclk"
             ]
           },
           "s_axis_aresetn_0_1": {
             "ports": [
               "s_axis_aresetn_0",
-              "conj_0/axis_aresetn",
               "dds_top_0/axis_aresetn",
-              "mixer_0/axis_aresetn"
+              "mixer_0/axis_aresetn",
+              "conj_0/axis_aresetn"
             ]
           }
         }
@@ -1003,203 +979,6 @@
         "parameters": {
           "CONST_VAL": {
             "value": "0"
-          }
-        }
-      },
-      "angle_0": {
-        "vlnv": "xilinx.com:module_ref:angle:1.0",
-        "xci_name": "cfo_correction_angle_0_0",
-        "xci_path": "ip\\cfo_correction_angle_0_0\\cfo_correction_angle_0_0.xci",
-        "inst_hier_path": "angle_0",
-        "reference_info": {
-          "ref_type": "hdl",
-          "ref_name": "angle",
-          "boundary_crc": "0x0"
-        },
-        "interface_ports": {
-          "m_axis": {
-            "mode": "Master",
-            "vlnv_bus_definition": "xilinx.com:interface:axis:1.0",
-            "vlnv": "xilinx.com:interface:axis_rtl:1.0",
-            "parameters": {
-              "TDATA_NUM_BYTES": {
-                "value": "4",
-                "value_src": "auto"
-              },
-              "TDEST_WIDTH": {
-                "value": "0",
-                "value_src": "constant"
-              },
-              "TID_WIDTH": {
-                "value": "8",
-                "value_src": "constant"
-              },
-              "TUSER_WIDTH": {
-                "value": "8",
-                "value_src": "constant"
-              },
-              "HAS_TREADY": {
-                "value": "0",
-                "value_src": "constant"
-              },
-              "HAS_TSTRB": {
-                "value": "0",
-                "value_src": "constant"
-              },
-              "HAS_TKEEP": {
-                "value": "0",
-                "value_src": "constant"
-              },
-              "HAS_TLAST": {
-                "value": "1",
-                "value_src": "constant"
-              },
-              "FREQ_HZ": {
-                "value": "249997498",
-                "value_src": "constant"
-              },
-              "CLK_DOMAIN": {
-                "value": "cfo_correction_axis_aclk",
-                "value_src": "default_prop"
-              }
-            },
-            "port_maps": {
-              "TID": {
-                "physical_name": "m_axis_tid",
-                "direction": "O",
-                "left": "7",
-                "right": "0"
-              },
-              "TDATA": {
-                "physical_name": "m_axis_tdata",
-                "direction": "O",
-                "left": "31",
-                "right": "0"
-              },
-              "TLAST": {
-                "physical_name": "m_axis_tlast",
-                "direction": "O"
-              },
-              "TUSER": {
-                "physical_name": "m_axis_tuser",
-                "direction": "O",
-                "left": "7",
-                "right": "0"
-              },
-              "TVALID": {
-                "physical_name": "m_axis_tvalid",
-                "direction": "O"
-              }
-            }
-          },
-          "s_axis": {
-            "mode": "Slave",
-            "vlnv_bus_definition": "xilinx.com:interface:axis:1.0",
-            "vlnv": "xilinx.com:interface:axis_rtl:1.0",
-            "parameters": {
-              "TDATA_NUM_BYTES": {
-                "value": "8",
-                "value_src": "constant"
-              },
-              "TDEST_WIDTH": {
-                "value": "0",
-                "value_src": "constant"
-              },
-              "TID_WIDTH": {
-                "value": "8",
-                "value_src": "constant"
-              },
-              "TUSER_WIDTH": {
-                "value": "8",
-                "value_src": "constant"
-              },
-              "HAS_TREADY": {
-                "value": "0",
-                "value_src": "constant"
-              },
-              "HAS_TSTRB": {
-                "value": "0",
-                "value_src": "constant"
-              },
-              "HAS_TKEEP": {
-                "value": "0",
-                "value_src": "constant"
-              },
-              "HAS_TLAST": {
-                "value": "1",
-                "value_src": "constant"
-              },
-              "FREQ_HZ": {
-                "value": "249997498",
-                "value_src": "constant"
-              },
-              "CLK_DOMAIN": {
-                "value": "cfo_correction_axis_aclk",
-                "value_src": "default_prop"
-              }
-            },
-            "port_maps": {
-              "TID": {
-                "physical_name": "s_axis_tid",
-                "direction": "I",
-                "left": "7",
-                "right": "0"
-              },
-              "TDATA": {
-                "physical_name": "s_axis_tdata",
-                "direction": "I",
-                "left": "63",
-                "right": "0"
-              },
-              "TLAST": {
-                "physical_name": "s_axis_tlast",
-                "direction": "I"
-              },
-              "TUSER": {
-                "physical_name": "s_axis_tuser",
-                "direction": "I",
-                "left": "7",
-                "right": "0"
-              },
-              "TVALID": {
-                "physical_name": "s_axis_tvalid",
-                "direction": "I"
-              }
-            }
-          }
-        },
-        "ports": {
-          "axis_aclk": {
-            "type": "clk",
-            "direction": "I",
-            "parameters": {
-              "ASSOCIATED_BUSIF": {
-                "value": "axis_aclk:s_axis:m_axis",
-                "value_src": "constant"
-              },
-              "ASSOCIATED_RESET": {
-                "value": "axis_aresetn",
-                "value_src": "constant"
-              },
-              "FREQ_HZ": {
-                "value": "249997498",
-                "value_src": "constant"
-              },
-              "CLK_DOMAIN": {
-                "value": "cfo_correction_axis_aclk",
-                "value_src": "default_prop"
-              }
-            }
-          },
-          "axis_aresetn": {
-            "type": "rst",
-            "direction": "I",
-            "parameters": {
-              "POLARITY": {
-                "value": "ACTIVE_LOW",
-                "value_src": "constant"
-              }
-            }
           }
         }
       },
@@ -2016,406 +1795,6 @@
                 "value_src": "constant"
               }
             }
-          }
-        }
-      },
-      "conj_0": {
-        "vlnv": "xilinx.com:module_ref:conj:1.0",
-        "xci_name": "cfo_correction_conj_0_1",
-        "xci_path": "ip\\cfo_correction_conj_0_1\\cfo_correction_conj_0_1.xci",
-        "inst_hier_path": "conj_0",
-        "reference_info": {
-          "ref_type": "hdl",
-          "ref_name": "conj",
-          "boundary_crc": "0x0"
-        },
-        "interface_ports": {
-          "m_axis": {
-            "mode": "Master",
-            "vlnv_bus_definition": "xilinx.com:interface:axis:1.0",
-            "vlnv": "xilinx.com:interface:axis_rtl:1.0",
-            "parameters": {
-              "TDATA_NUM_BYTES": {
-                "value": "16",
-                "value_src": "constant"
-              },
-              "TDEST_WIDTH": {
-                "value": "0",
-                "value_src": "constant"
-              },
-              "TID_WIDTH": {
-                "value": "8",
-                "value_src": "constant"
-              },
-              "TUSER_WIDTH": {
-                "value": "8",
-                "value_src": "constant"
-              },
-              "HAS_TREADY": {
-                "value": "0",
-                "value_src": "constant"
-              },
-              "HAS_TSTRB": {
-                "value": "0",
-                "value_src": "constant"
-              },
-              "HAS_TKEEP": {
-                "value": "0",
-                "value_src": "constant"
-              },
-              "HAS_TLAST": {
-                "value": "1",
-                "value_src": "constant"
-              },
-              "FREQ_HZ": {
-                "value": "249997498",
-                "value_src": "constant"
-              },
-              "CLK_DOMAIN": {
-                "value": "cfo_correction_axis_aclk",
-                "value_src": "default_prop"
-              }
-            },
-            "port_maps": {
-              "TID": {
-                "physical_name": "m_axis_tid",
-                "direction": "O",
-                "left": "7",
-                "right": "0"
-              },
-              "TDATA": {
-                "physical_name": "m_axis_tdata",
-                "direction": "O",
-                "left": "127",
-                "right": "0"
-              },
-              "TLAST": {
-                "physical_name": "m_axis_tlast",
-                "direction": "O"
-              },
-              "TUSER": {
-                "physical_name": "m_axis_tuser",
-                "direction": "O",
-                "left": "7",
-                "right": "0"
-              },
-              "TVALID": {
-                "physical_name": "m_axis_tvalid",
-                "direction": "O"
-              }
-            }
-          },
-          "s_axis": {
-            "mode": "Slave",
-            "vlnv_bus_definition": "xilinx.com:interface:axis:1.0",
-            "vlnv": "xilinx.com:interface:axis_rtl:1.0",
-            "parameters": {
-              "TDATA_NUM_BYTES": {
-                "value": "16",
-                "value_src": "constant"
-              },
-              "TDEST_WIDTH": {
-                "value": "0",
-                "value_src": "constant"
-              },
-              "TID_WIDTH": {
-                "value": "8",
-                "value_src": "constant"
-              },
-              "TUSER_WIDTH": {
-                "value": "8",
-                "value_src": "constant"
-              },
-              "HAS_TREADY": {
-                "value": "0",
-                "value_src": "constant"
-              },
-              "HAS_TSTRB": {
-                "value": "0",
-                "value_src": "constant"
-              },
-              "HAS_TKEEP": {
-                "value": "0",
-                "value_src": "constant"
-              },
-              "HAS_TLAST": {
-                "value": "1",
-                "value_src": "constant"
-              },
-              "FREQ_HZ": {
-                "value": "249997498",
-                "value_src": "constant"
-              },
-              "CLK_DOMAIN": {
-                "value": "cfo_correction_axis_aclk",
-                "value_src": "default_prop"
-              }
-            },
-            "port_maps": {
-              "TID": {
-                "physical_name": "s_axis_tid",
-                "direction": "I",
-                "left": "7",
-                "right": "0"
-              },
-              "TDATA": {
-                "physical_name": "s_axis_tdata",
-                "direction": "I",
-                "left": "127",
-                "right": "0"
-              },
-              "TLAST": {
-                "physical_name": "s_axis_tlast",
-                "direction": "I"
-              },
-              "TUSER": {
-                "physical_name": "s_axis_tuser",
-                "direction": "I",
-                "left": "7",
-                "right": "0"
-              },
-              "TVALID": {
-                "physical_name": "s_axis_tvalid",
-                "direction": "I"
-              }
-            }
-          }
-        },
-        "ports": {
-          "axis_aclk": {
-            "type": "clk",
-            "direction": "I",
-            "parameters": {
-              "ASSOCIATED_BUSIF": {
-                "value": "axis_aclk:s_axis:m_axis",
-                "value_src": "constant"
-              },
-              "ASSOCIATED_RESET": {
-                "value": "axis_aresetn",
-                "value_src": "constant"
-              },
-              "FREQ_HZ": {
-                "value": "249997498",
-                "value_src": "constant"
-              },
-              "CLK_DOMAIN": {
-                "value": "cfo_correction_axis_aclk",
-                "value_src": "default_prop"
-              }
-            }
-          },
-          "axis_aresetn": {
-            "type": "rst",
-            "direction": "I",
-            "parameters": {
-              "POLARITY": {
-                "value": "ACTIVE_LOW",
-                "value_src": "constant"
-              }
-            }
-          },
-          "i_negative_freq": {
-            "direction": "I"
-          }
-        }
-      },
-      "conj_1": {
-        "vlnv": "xilinx.com:module_ref:conj:1.0",
-        "xci_name": "cfo_correction_conj_1_0",
-        "xci_path": "ip\\cfo_correction_conj_1_0\\cfo_correction_conj_1_0.xci",
-        "inst_hier_path": "conj_1",
-        "reference_info": {
-          "ref_type": "hdl",
-          "ref_name": "conj",
-          "boundary_crc": "0x0"
-        },
-        "interface_ports": {
-          "m_axis": {
-            "mode": "Master",
-            "vlnv_bus_definition": "xilinx.com:interface:axis:1.0",
-            "vlnv": "xilinx.com:interface:axis_rtl:1.0",
-            "parameters": {
-              "TDATA_NUM_BYTES": {
-                "value": "16",
-                "value_src": "constant"
-              },
-              "TDEST_WIDTH": {
-                "value": "0",
-                "value_src": "constant"
-              },
-              "TID_WIDTH": {
-                "value": "8",
-                "value_src": "constant"
-              },
-              "TUSER_WIDTH": {
-                "value": "8",
-                "value_src": "constant"
-              },
-              "HAS_TREADY": {
-                "value": "0",
-                "value_src": "constant"
-              },
-              "HAS_TSTRB": {
-                "value": "0",
-                "value_src": "constant"
-              },
-              "HAS_TKEEP": {
-                "value": "0",
-                "value_src": "constant"
-              },
-              "HAS_TLAST": {
-                "value": "1",
-                "value_src": "constant"
-              },
-              "FREQ_HZ": {
-                "value": "249997498",
-                "value_src": "constant"
-              },
-              "CLK_DOMAIN": {
-                "value": "cfo_correction_axis_aclk",
-                "value_src": "default_prop"
-              }
-            },
-            "port_maps": {
-              "TID": {
-                "physical_name": "m_axis_tid",
-                "direction": "O",
-                "left": "7",
-                "right": "0"
-              },
-              "TDATA": {
-                "physical_name": "m_axis_tdata",
-                "direction": "O",
-                "left": "127",
-                "right": "0"
-              },
-              "TLAST": {
-                "physical_name": "m_axis_tlast",
-                "direction": "O"
-              },
-              "TUSER": {
-                "physical_name": "m_axis_tuser",
-                "direction": "O",
-                "left": "7",
-                "right": "0"
-              },
-              "TVALID": {
-                "physical_name": "m_axis_tvalid",
-                "direction": "O"
-              }
-            }
-          },
-          "s_axis": {
-            "mode": "Slave",
-            "vlnv_bus_definition": "xilinx.com:interface:axis:1.0",
-            "vlnv": "xilinx.com:interface:axis_rtl:1.0",
-            "parameters": {
-              "TDATA_NUM_BYTES": {
-                "value": "16",
-                "value_src": "constant"
-              },
-              "TDEST_WIDTH": {
-                "value": "0",
-                "value_src": "constant"
-              },
-              "TID_WIDTH": {
-                "value": "8",
-                "value_src": "constant"
-              },
-              "TUSER_WIDTH": {
-                "value": "8",
-                "value_src": "constant"
-              },
-              "HAS_TREADY": {
-                "value": "0",
-                "value_src": "constant"
-              },
-              "HAS_TSTRB": {
-                "value": "0",
-                "value_src": "constant"
-              },
-              "HAS_TKEEP": {
-                "value": "0",
-                "value_src": "constant"
-              },
-              "HAS_TLAST": {
-                "value": "1",
-                "value_src": "constant"
-              },
-              "FREQ_HZ": {
-                "value": "249997498",
-                "value_src": "constant"
-              },
-              "CLK_DOMAIN": {
-                "value": "cfo_correction_axis_aclk",
-                "value_src": "default_prop"
-              }
-            },
-            "port_maps": {
-              "TID": {
-                "physical_name": "s_axis_tid",
-                "direction": "I",
-                "left": "7",
-                "right": "0"
-              },
-              "TDATA": {
-                "physical_name": "s_axis_tdata",
-                "direction": "I",
-                "left": "127",
-                "right": "0"
-              },
-              "TLAST": {
-                "physical_name": "s_axis_tlast",
-                "direction": "I"
-              },
-              "TUSER": {
-                "physical_name": "s_axis_tuser",
-                "direction": "I",
-                "left": "7",
-                "right": "0"
-              },
-              "TVALID": {
-                "physical_name": "s_axis_tvalid",
-                "direction": "I"
-              }
-            }
-          }
-        },
-        "ports": {
-          "axis_aclk": {
-            "type": "clk",
-            "direction": "I",
-            "parameters": {
-              "ASSOCIATED_BUSIF": {
-                "value": "axis_aclk:s_axis:m_axis",
-                "value_src": "constant"
-              },
-              "ASSOCIATED_RESET": {
-                "value": "axis_aresetn",
-                "value_src": "constant"
-              },
-              "FREQ_HZ": {
-                "value": "249997498",
-                "value_src": "constant"
-              },
-              "CLK_DOMAIN": {
-                "value": "cfo_correction_axis_aclk",
-                "value_src": "default_prop"
-              }
-            }
-          },
-          "axis_aresetn": {
-            "type": "rst",
-            "direction": "I",
-            "parameters": {
-              "POLARITY": {
-                "value": "ACTIVE_LOW",
-                "value_src": "constant"
-              }
-            }
-          },
-          "i_negative_freq": {
-            "direction": "I"
           }
         }
       },
@@ -3324,187 +2703,6 @@
           }
         }
       },
-      "scale_0": {
-        "vlnv": "xilinx.com:module_ref:scale:1.0",
-        "xci_name": "cfo_correction_scale_0_0",
-        "xci_path": "ip\\cfo_correction_scale_0_0\\cfo_correction_scale_0_0.xci",
-        "inst_hier_path": "scale_0",
-        "reference_info": {
-          "ref_type": "hdl",
-          "ref_name": "scale",
-          "boundary_crc": "0x0"
-        },
-        "interface_ports": {
-          "m_axis": {
-            "mode": "Master",
-            "vlnv_bus_definition": "xilinx.com:interface:axis:1.0",
-            "vlnv": "xilinx.com:interface:axis_rtl:1.0",
-            "parameters": {
-              "TDATA_NUM_BYTES": {
-                "value": "4",
-                "value_src": "constant"
-              },
-              "TDEST_WIDTH": {
-                "value": "0",
-                "value_src": "constant"
-              },
-              "TID_WIDTH": {
-                "value": "0",
-                "value_src": "constant"
-              },
-              "TUSER_WIDTH": {
-                "value": "0",
-                "value_src": "constant"
-              },
-              "HAS_TREADY": {
-                "value": "0",
-                "value_src": "constant"
-              },
-              "HAS_TSTRB": {
-                "value": "0",
-                "value_src": "constant"
-              },
-              "HAS_TKEEP": {
-                "value": "0",
-                "value_src": "constant"
-              },
-              "HAS_TLAST": {
-                "value": "0",
-                "value_src": "constant"
-              },
-              "FREQ_HZ": {
-                "value": "249997498",
-                "value_src": "constant"
-              },
-              "CLK_DOMAIN": {
-                "value": "cfo_correction_axis_aclk",
-                "value_src": "default_prop"
-              }
-            },
-            "port_maps": {
-              "TDATA": {
-                "physical_name": "m_axis_tdata",
-                "direction": "O",
-                "left": "31",
-                "right": "0"
-              },
-              "TVALID": {
-                "physical_name": "m_axis_tvalid",
-                "direction": "O"
-              }
-            }
-          },
-          "s_axis": {
-            "mode": "Slave",
-            "vlnv_bus_definition": "xilinx.com:interface:axis:1.0",
-            "vlnv": "xilinx.com:interface:axis_rtl:1.0",
-            "parameters": {
-              "TDATA_NUM_BYTES": {
-                "value": "4",
-                "value_src": "constant"
-              },
-              "TDEST_WIDTH": {
-                "value": "0",
-                "value_src": "constant"
-              },
-              "TID_WIDTH": {
-                "value": "0",
-                "value_src": "constant"
-              },
-              "TUSER_WIDTH": {
-                "value": "0",
-                "value_src": "constant"
-              },
-              "HAS_TREADY": {
-                "value": "0",
-                "value_src": "constant"
-              },
-              "HAS_TSTRB": {
-                "value": "0",
-                "value_src": "constant"
-              },
-              "HAS_TKEEP": {
-                "value": "0",
-                "value_src": "constant"
-              },
-              "HAS_TLAST": {
-                "value": "0",
-                "value_src": "constant"
-              },
-              "FREQ_HZ": {
-                "value": "249997498",
-                "value_src": "constant"
-              },
-              "CLK_DOMAIN": {
-                "value": "cfo_correction_axis_aclk",
-                "value_src": "default_prop"
-              }
-            },
-            "port_maps": {
-              "TDATA": {
-                "physical_name": "s_axis_tdata",
-                "direction": "I",
-                "left": "31",
-                "right": "0"
-              },
-              "TVALID": {
-                "physical_name": "s_axis_tvalid",
-                "direction": "I"
-              }
-            }
-          }
-        },
-        "ports": {
-          "axis_aclk": {
-            "type": "clk",
-            "direction": "I",
-            "parameters": {
-              "ASSOCIATED_BUSIF": {
-                "value": "axis_aclk:s_axis:m_axis",
-                "value_src": "constant"
-              },
-              "ASSOCIATED_RESET": {
-                "value": "axis_aresetn",
-                "value_src": "constant"
-              },
-              "FREQ_HZ": {
-                "value": "249997498",
-                "value_src": "constant"
-              },
-              "CLK_DOMAIN": {
-                "value": "cfo_correction_axis_aclk",
-                "value_src": "default_prop"
-              }
-            }
-          },
-          "axis_aresetn": {
-            "type": "rst",
-            "direction": "I",
-            "parameters": {
-              "POLARITY": {
-                "value": "ACTIVE_LOW",
-                "value_src": "constant"
-              }
-            }
-          },
-          "i_symbol": {
-            "direction": "I"
-          },
-          "o_negative_freq": {
-            "direction": "O",
-            "parameters": {
-              "PortType": {
-                "value": "undef",
-                "value_src": "ip_prop"
-              },
-              "PortType.PROP_SRC": {
-                "value": "false",
-                "value_src": "ip_prop"
-              }
-            }
-          }
-        }
-      },
       "sum_0": {
         "vlnv": "xilinx.com:module_ref:sum:1.0",
         "xci_name": "cfo_correction_sum_0_0",
@@ -4158,6 +3356,736 @@
             }
           }
         }
+      },
+      "conj_0": {
+        "vlnv": "xilinx.com:module_ref:conj:1.0",
+        "xci_name": "cfo_correction_conj_0_1",
+        "xci_path": "ip\\cfo_correction_conj_0_1\\cfo_correction_conj_0_1.xci",
+        "inst_hier_path": "conj_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "conj",
+          "boundary_crc": "0x0"
+        },
+        "interface_ports": {
+          "m_axis": {
+            "mode": "Master",
+            "vlnv_bus_definition": "xilinx.com:interface:axis:1.0",
+            "vlnv": "xilinx.com:interface:axis_rtl:1.0",
+            "parameters": {
+              "TDATA_NUM_BYTES": {
+                "value": "16",
+                "value_src": "constant"
+              },
+              "TDEST_WIDTH": {
+                "value": "0",
+                "value_src": "constant"
+              },
+              "TID_WIDTH": {
+                "value": "0",
+                "value_src": "constant"
+              },
+              "TUSER_WIDTH": {
+                "value": "0",
+                "value_src": "constant"
+              },
+              "HAS_TREADY": {
+                "value": "0",
+                "value_src": "constant"
+              },
+              "HAS_TSTRB": {
+                "value": "0",
+                "value_src": "constant"
+              },
+              "HAS_TKEEP": {
+                "value": "0",
+                "value_src": "constant"
+              },
+              "HAS_TLAST": {
+                "value": "1",
+                "value_src": "constant"
+              },
+              "FREQ_HZ": {
+                "value": "249997498",
+                "value_src": "constant"
+              },
+              "CLK_DOMAIN": {
+                "value": "cfo_correction_axis_aclk",
+                "value_src": "default_prop"
+              }
+            },
+            "port_maps": {
+              "TDATA": {
+                "physical_name": "m_axis_tdata",
+                "direction": "O",
+                "left": "127",
+                "right": "0"
+              },
+              "TLAST": {
+                "physical_name": "m_axis_tlast",
+                "direction": "O"
+              },
+              "TVALID": {
+                "physical_name": "m_axis_tvalid",
+                "direction": "O"
+              }
+            }
+          },
+          "s_axis": {
+            "mode": "Slave",
+            "vlnv_bus_definition": "xilinx.com:interface:axis:1.0",
+            "vlnv": "xilinx.com:interface:axis_rtl:1.0",
+            "parameters": {
+              "TDATA_NUM_BYTES": {
+                "value": "16",
+                "value_src": "constant"
+              },
+              "TDEST_WIDTH": {
+                "value": "0",
+                "value_src": "constant"
+              },
+              "TID_WIDTH": {
+                "value": "0",
+                "value_src": "constant"
+              },
+              "TUSER_WIDTH": {
+                "value": "0",
+                "value_src": "constant"
+              },
+              "HAS_TREADY": {
+                "value": "0",
+                "value_src": "constant"
+              },
+              "HAS_TSTRB": {
+                "value": "0",
+                "value_src": "constant"
+              },
+              "HAS_TKEEP": {
+                "value": "0",
+                "value_src": "constant"
+              },
+              "HAS_TLAST": {
+                "value": "1",
+                "value_src": "constant"
+              },
+              "FREQ_HZ": {
+                "value": "249997498",
+                "value_src": "constant"
+              },
+              "CLK_DOMAIN": {
+                "value": "cfo_correction_axis_aclk",
+                "value_src": "default_prop"
+              }
+            },
+            "port_maps": {
+              "TDATA": {
+                "physical_name": "s_axis_tdata",
+                "direction": "I",
+                "left": "127",
+                "right": "0"
+              },
+              "TLAST": {
+                "physical_name": "s_axis_tlast",
+                "direction": "I"
+              },
+              "TVALID": {
+                "physical_name": "s_axis_tvalid",
+                "direction": "I"
+              }
+            }
+          }
+        },
+        "ports": {
+          "axis_aclk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "ASSOCIATED_BUSIF": {
+                "value": "axis_aclk:s_axis:m_axis",
+                "value_src": "constant"
+              },
+              "ASSOCIATED_RESET": {
+                "value": "axis_aresetn",
+                "value_src": "constant"
+              },
+              "FREQ_HZ": {
+                "value": "249997498",
+                "value_src": "constant"
+              },
+              "CLK_DOMAIN": {
+                "value": "cfo_correction_axis_aclk",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "axis_aresetn": {
+            "type": "rst",
+            "direction": "I",
+            "parameters": {
+              "POLARITY": {
+                "value": "ACTIVE_LOW",
+                "value_src": "constant"
+              }
+            }
+          },
+          "i_negative_freq": {
+            "direction": "I"
+          }
+        }
+      },
+      "conj_1": {
+        "vlnv": "xilinx.com:module_ref:conj:1.0",
+        "xci_name": "cfo_correction_conj_1_0",
+        "xci_path": "ip\\cfo_correction_conj_1_0\\cfo_correction_conj_1_0.xci",
+        "inst_hier_path": "conj_1",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "conj",
+          "boundary_crc": "0x0"
+        },
+        "interface_ports": {
+          "m_axis": {
+            "mode": "Master",
+            "vlnv_bus_definition": "xilinx.com:interface:axis:1.0",
+            "vlnv": "xilinx.com:interface:axis_rtl:1.0",
+            "parameters": {
+              "TDATA_NUM_BYTES": {
+                "value": "16",
+                "value_src": "constant"
+              },
+              "TDEST_WIDTH": {
+                "value": "0",
+                "value_src": "constant"
+              },
+              "TID_WIDTH": {
+                "value": "0",
+                "value_src": "constant"
+              },
+              "TUSER_WIDTH": {
+                "value": "0",
+                "value_src": "constant"
+              },
+              "HAS_TREADY": {
+                "value": "0",
+                "value_src": "constant"
+              },
+              "HAS_TSTRB": {
+                "value": "0",
+                "value_src": "constant"
+              },
+              "HAS_TKEEP": {
+                "value": "0",
+                "value_src": "constant"
+              },
+              "HAS_TLAST": {
+                "value": "1",
+                "value_src": "constant"
+              },
+              "FREQ_HZ": {
+                "value": "249997498",
+                "value_src": "constant"
+              },
+              "CLK_DOMAIN": {
+                "value": "cfo_correction_axis_aclk",
+                "value_src": "default_prop"
+              }
+            },
+            "port_maps": {
+              "TDATA": {
+                "physical_name": "m_axis_tdata",
+                "direction": "O",
+                "left": "127",
+                "right": "0"
+              },
+              "TLAST": {
+                "physical_name": "m_axis_tlast",
+                "direction": "O"
+              },
+              "TVALID": {
+                "physical_name": "m_axis_tvalid",
+                "direction": "O"
+              }
+            }
+          },
+          "s_axis": {
+            "mode": "Slave",
+            "vlnv_bus_definition": "xilinx.com:interface:axis:1.0",
+            "vlnv": "xilinx.com:interface:axis_rtl:1.0",
+            "parameters": {
+              "TDATA_NUM_BYTES": {
+                "value": "16",
+                "value_src": "constant"
+              },
+              "TDEST_WIDTH": {
+                "value": "0",
+                "value_src": "constant"
+              },
+              "TID_WIDTH": {
+                "value": "0",
+                "value_src": "constant"
+              },
+              "TUSER_WIDTH": {
+                "value": "0",
+                "value_src": "constant"
+              },
+              "HAS_TREADY": {
+                "value": "0",
+                "value_src": "constant"
+              },
+              "HAS_TSTRB": {
+                "value": "0",
+                "value_src": "constant"
+              },
+              "HAS_TKEEP": {
+                "value": "0",
+                "value_src": "constant"
+              },
+              "HAS_TLAST": {
+                "value": "1",
+                "value_src": "constant"
+              },
+              "FREQ_HZ": {
+                "value": "249997498",
+                "value_src": "constant"
+              },
+              "CLK_DOMAIN": {
+                "value": "cfo_correction_axis_aclk",
+                "value_src": "default_prop"
+              }
+            },
+            "port_maps": {
+              "TDATA": {
+                "physical_name": "s_axis_tdata",
+                "direction": "I",
+                "left": "127",
+                "right": "0"
+              },
+              "TLAST": {
+                "physical_name": "s_axis_tlast",
+                "direction": "I"
+              },
+              "TVALID": {
+                "physical_name": "s_axis_tvalid",
+                "direction": "I"
+              }
+            }
+          }
+        },
+        "ports": {
+          "axis_aclk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "ASSOCIATED_BUSIF": {
+                "value": "axis_aclk:s_axis:m_axis",
+                "value_src": "constant"
+              },
+              "ASSOCIATED_RESET": {
+                "value": "axis_aresetn",
+                "value_src": "constant"
+              },
+              "FREQ_HZ": {
+                "value": "249997498",
+                "value_src": "constant"
+              },
+              "CLK_DOMAIN": {
+                "value": "cfo_correction_axis_aclk",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "axis_aresetn": {
+            "type": "rst",
+            "direction": "I",
+            "parameters": {
+              "POLARITY": {
+                "value": "ACTIVE_LOW",
+                "value_src": "constant"
+              }
+            }
+          },
+          "i_negative_freq": {
+            "direction": "I"
+          }
+        }
+      },
+      "angle_0": {
+        "vlnv": "xilinx.com:module_ref:angle:1.0",
+        "xci_name": "cfo_correction_angle_0_0",
+        "xci_path": "ip\\cfo_correction_angle_0_0\\cfo_correction_angle_0_0.xci",
+        "inst_hier_path": "angle_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "angle",
+          "boundary_crc": "0x0"
+        },
+        "interface_ports": {
+          "m_axis": {
+            "mode": "Master",
+            "vlnv_bus_definition": "xilinx.com:interface:axis:1.0",
+            "vlnv": "xilinx.com:interface:axis_rtl:1.0",
+            "parameters": {
+              "TDATA_NUM_BYTES": {
+                "value": "2",
+                "value_src": "auto"
+              },
+              "TDEST_WIDTH": {
+                "value": "0",
+                "value_src": "constant"
+              },
+              "TID_WIDTH": {
+                "value": "8",
+                "value_src": "constant"
+              },
+              "TUSER_WIDTH": {
+                "value": "8",
+                "value_src": "constant"
+              },
+              "HAS_TREADY": {
+                "value": "0",
+                "value_src": "constant"
+              },
+              "HAS_TSTRB": {
+                "value": "0",
+                "value_src": "constant"
+              },
+              "HAS_TKEEP": {
+                "value": "0",
+                "value_src": "constant"
+              },
+              "HAS_TLAST": {
+                "value": "1",
+                "value_src": "constant"
+              },
+              "FREQ_HZ": {
+                "value": "249997498",
+                "value_src": "constant"
+              },
+              "CLK_DOMAIN": {
+                "value": "cfo_correction_axis_aclk",
+                "value_src": "default_prop"
+              }
+            },
+            "port_maps": {
+              "TID": {
+                "physical_name": "m_axis_tid",
+                "direction": "O",
+                "left": "7",
+                "right": "0"
+              },
+              "TDATA": {
+                "physical_name": "m_axis_tdata",
+                "direction": "O",
+                "left": "15",
+                "right": "0"
+              },
+              "TLAST": {
+                "physical_name": "m_axis_tlast",
+                "direction": "O"
+              },
+              "TUSER": {
+                "physical_name": "m_axis_tuser",
+                "direction": "O",
+                "left": "7",
+                "right": "0"
+              },
+              "TVALID": {
+                "physical_name": "m_axis_tvalid",
+                "direction": "O"
+              }
+            }
+          },
+          "s_axis": {
+            "mode": "Slave",
+            "vlnv_bus_definition": "xilinx.com:interface:axis:1.0",
+            "vlnv": "xilinx.com:interface:axis_rtl:1.0",
+            "parameters": {
+              "TDATA_NUM_BYTES": {
+                "value": "8",
+                "value_src": "constant"
+              },
+              "TDEST_WIDTH": {
+                "value": "0",
+                "value_src": "constant"
+              },
+              "TID_WIDTH": {
+                "value": "8",
+                "value_src": "constant"
+              },
+              "TUSER_WIDTH": {
+                "value": "8",
+                "value_src": "constant"
+              },
+              "HAS_TREADY": {
+                "value": "0",
+                "value_src": "constant"
+              },
+              "HAS_TSTRB": {
+                "value": "0",
+                "value_src": "constant"
+              },
+              "HAS_TKEEP": {
+                "value": "0",
+                "value_src": "constant"
+              },
+              "HAS_TLAST": {
+                "value": "1",
+                "value_src": "constant"
+              },
+              "FREQ_HZ": {
+                "value": "249997498",
+                "value_src": "constant"
+              },
+              "CLK_DOMAIN": {
+                "value": "cfo_correction_axis_aclk",
+                "value_src": "default_prop"
+              }
+            },
+            "port_maps": {
+              "TID": {
+                "physical_name": "s_axis_tid",
+                "direction": "I",
+                "left": "7",
+                "right": "0"
+              },
+              "TDATA": {
+                "physical_name": "s_axis_tdata",
+                "direction": "I",
+                "left": "63",
+                "right": "0"
+              },
+              "TLAST": {
+                "physical_name": "s_axis_tlast",
+                "direction": "I"
+              },
+              "TUSER": {
+                "physical_name": "s_axis_tuser",
+                "direction": "I",
+                "left": "7",
+                "right": "0"
+              },
+              "TVALID": {
+                "physical_name": "s_axis_tvalid",
+                "direction": "I"
+              }
+            }
+          }
+        },
+        "ports": {
+          "axis_aclk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "ASSOCIATED_BUSIF": {
+                "value": "axis_aclk:s_axis:m_axis",
+                "value_src": "constant"
+              },
+              "ASSOCIATED_RESET": {
+                "value": "axis_aresetn",
+                "value_src": "constant"
+              },
+              "FREQ_HZ": {
+                "value": "249997498",
+                "value_src": "constant"
+              },
+              "CLK_DOMAIN": {
+                "value": "cfo_correction_axis_aclk",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "axis_aresetn": {
+            "type": "rst",
+            "direction": "I",
+            "parameters": {
+              "POLARITY": {
+                "value": "ACTIVE_LOW",
+                "value_src": "constant"
+              }
+            }
+          }
+        }
+      },
+      "scale_0": {
+        "vlnv": "xilinx.com:module_ref:scale:1.0",
+        "xci_name": "cfo_correction_scale_0_0",
+        "xci_path": "ip\\cfo_correction_scale_0_0\\cfo_correction_scale_0_0.xci",
+        "inst_hier_path": "scale_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "scale",
+          "boundary_crc": "0x0"
+        },
+        "interface_ports": {
+          "m_axis": {
+            "mode": "Master",
+            "vlnv_bus_definition": "xilinx.com:interface:axis:1.0",
+            "vlnv": "xilinx.com:interface:axis_rtl:1.0",
+            "parameters": {
+              "TDATA_NUM_BYTES": {
+                "value": "4",
+                "value_src": "constant"
+              },
+              "TDEST_WIDTH": {
+                "value": "0",
+                "value_src": "constant"
+              },
+              "TID_WIDTH": {
+                "value": "0",
+                "value_src": "constant"
+              },
+              "TUSER_WIDTH": {
+                "value": "0",
+                "value_src": "constant"
+              },
+              "HAS_TREADY": {
+                "value": "0",
+                "value_src": "constant"
+              },
+              "HAS_TSTRB": {
+                "value": "0",
+                "value_src": "constant"
+              },
+              "HAS_TKEEP": {
+                "value": "0",
+                "value_src": "constant"
+              },
+              "HAS_TLAST": {
+                "value": "0",
+                "value_src": "constant"
+              },
+              "FREQ_HZ": {
+                "value": "249997498",
+                "value_src": "constant"
+              },
+              "CLK_DOMAIN": {
+                "value": "cfo_correction_axis_aclk",
+                "value_src": "default_prop"
+              }
+            },
+            "port_maps": {
+              "TDATA": {
+                "physical_name": "m_axis_tdata",
+                "direction": "O",
+                "left": "31",
+                "right": "0"
+              },
+              "TVALID": {
+                "physical_name": "m_axis_tvalid",
+                "direction": "O"
+              }
+            }
+          },
+          "s_axis": {
+            "mode": "Slave",
+            "vlnv_bus_definition": "xilinx.com:interface:axis:1.0",
+            "vlnv": "xilinx.com:interface:axis_rtl:1.0",
+            "parameters": {
+              "TDATA_NUM_BYTES": {
+                "value": "2",
+                "value_src": "constant"
+              },
+              "TDEST_WIDTH": {
+                "value": "0",
+                "value_src": "constant"
+              },
+              "TID_WIDTH": {
+                "value": "0",
+                "value_src": "constant"
+              },
+              "TUSER_WIDTH": {
+                "value": "0",
+                "value_src": "constant"
+              },
+              "HAS_TREADY": {
+                "value": "0",
+                "value_src": "constant"
+              },
+              "HAS_TSTRB": {
+                "value": "0",
+                "value_src": "constant"
+              },
+              "HAS_TKEEP": {
+                "value": "0",
+                "value_src": "constant"
+              },
+              "HAS_TLAST": {
+                "value": "0",
+                "value_src": "constant"
+              },
+              "FREQ_HZ": {
+                "value": "249997498",
+                "value_src": "constant"
+              },
+              "CLK_DOMAIN": {
+                "value": "cfo_correction_axis_aclk",
+                "value_src": "default_prop"
+              }
+            },
+            "port_maps": {
+              "TDATA": {
+                "physical_name": "s_axis_tdata",
+                "direction": "I",
+                "left": "15",
+                "right": "0"
+              },
+              "TVALID": {
+                "physical_name": "s_axis_tvalid",
+                "direction": "I"
+              }
+            }
+          }
+        },
+        "ports": {
+          "axis_aclk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "ASSOCIATED_BUSIF": {
+                "value": "axis_aclk:s_axis:m_axis",
+                "value_src": "constant"
+              },
+              "ASSOCIATED_RESET": {
+                "value": "axis_aresetn",
+                "value_src": "constant"
+              },
+              "FREQ_HZ": {
+                "value": "249997498",
+                "value_src": "constant"
+              },
+              "CLK_DOMAIN": {
+                "value": "cfo_correction_axis_aclk",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "axis_aresetn": {
+            "type": "rst",
+            "direction": "I",
+            "parameters": {
+              "POLARITY": {
+                "value": "ACTIVE_LOW",
+                "value_src": "constant"
+              }
+            }
+          },
+          "i_symbol": {
+            "direction": "I"
+          },
+          "o_negative_freq": {
+            "direction": "O",
+            "parameters": {
+              "PortType": {
+                "value": "undef",
+                "value_src": "ip_prop"
+              },
+              "PortType.PROP_SRC": {
+                "value": "false",
+                "value_src": "ip_prop"
+              }
+            }
+          }
+        }
       }
     },
     "interface_nets": {
@@ -4310,20 +4238,20 @@
           "Mixer/s_axis_aclk_0",
           "axis_data_fifo_0/s_axis_aclk",
           "axis_data_fifo_1/s_axis_aclk",
-          "angle_0/axis_aclk",
           "axis_splitter_0/axis_aclk",
           "axis_splitter_1/axis_aclk",
           "complex_mult_0/axis_aclk",
-          "conj_0/axis_aclk",
-          "conj_1/axis_aclk",
           "cp_rm2_0/axis_aclk",
           "delay_0/axis_aclk",
           "delay_1/axis_aclk",
           "mux_0/axis_aclk",
-          "scale_0/axis_aclk",
           "sum_0/axis_aclk",
           "cp_rm_0/axis_aclk",
-          "tlast_symbol_0/axis_aclk"
+          "tlast_symbol_0/axis_aclk",
+          "conj_0/axis_aclk",
+          "conj_1/axis_aclk",
+          "angle_0/axis_aclk",
+          "scale_0/axis_aclk"
         ]
       },
       "s_axis_aresetn_0_1": {
@@ -4332,20 +4260,20 @@
           "Mixer/s_axis_aresetn_0",
           "axis_data_fifo_0/s_axis_aresetn",
           "axis_data_fifo_1/s_axis_aresetn",
-          "angle_0/axis_aresetn",
           "axis_splitter_0/axis_aresetn",
           "axis_splitter_1/axis_aresetn",
           "complex_mult_0/axis_aresetn",
-          "conj_0/axis_aresetn",
-          "conj_1/axis_aresetn",
           "cp_rm2_0/axis_aresetn",
           "delay_0/axis_aresetn",
           "delay_1/axis_aresetn",
           "mux_0/axis_aresetn",
-          "scale_0/axis_aresetn",
           "sum_0/axis_aresetn",
           "cp_rm_0/axis_aresetn",
-          "tlast_symbol_0/axis_aresetn"
+          "tlast_symbol_0/axis_aresetn",
+          "conj_0/axis_aresetn",
+          "conj_1/axis_aresetn",
+          "angle_0/axis_aresetn",
+          "scale_0/axis_aresetn"
         ]
       },
       "scale_0_o_negative_freq": {

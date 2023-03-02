@@ -1,7 +1,7 @@
 //Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2022.1 (win64) Build 3526262 Mon Apr 18 15:48:16 MDT 2022
-//Date        : Mon Oct 17 09:47:58 2022
+//Date        : Thu Mar  2 11:10:49 2023
 //Host        : DESKTOP-1UDCE0K running 64-bit major release  (build 9200)
 //Command     : generate_target cfo_correction.bd
 //Design      : cfo_correction
@@ -15,9 +15,7 @@ module Mixer_imp_1KVXAAW
     m_axis_0_tlast,
     m_axis_0_tvalid,
     s_axis0_tdata,
-    s_axis0_tid,
     s_axis0_tlast,
-    s_axis0_tuser,
     s_axis0_tvalid,
     s_axis_aclk_0,
     s_axis_aresetn_0,
@@ -28,9 +26,7 @@ module Mixer_imp_1KVXAAW
   output m_axis_0_tlast;
   output m_axis_0_tvalid;
   input [127:0]s_axis0_tdata;
-  input [7:0]s_axis0_tid;
   input s_axis0_tlast;
-  input [7:0]s_axis0_tuser;
   input s_axis0_tvalid;
   input s_axis_aclk_0;
   input s_axis_aresetn_0;
@@ -43,19 +39,13 @@ module Mixer_imp_1KVXAAW
   wire [31:0]angle_0_m_axis_TDATA;
   wire angle_0_m_axis_TVALID;
   wire [127:0]conj_0_m_axis_TDATA;
-  wire [7:0]conj_0_m_axis_TID;
   wire conj_0_m_axis_TLAST;
-  wire [7:0]conj_0_m_axis_TUSER;
   wire conj_0_m_axis_TVALID;
   wire [127:0]dds_top_0_m_axis_TDATA;
-  wire [7:0]dds_top_0_m_axis_TID;
   wire dds_top_0_m_axis_TLAST;
-  wire [7:0]dds_top_0_m_axis_TUSER;
   wire dds_top_0_m_axis_TVALID;
   wire [127:0]delay_1_m_axis_TDATA;
-  wire [7:0]delay_1_m_axis_TID;
   wire delay_1_m_axis_TLAST;
-  wire [7:0]delay_1_m_axis_TUSER;
   wire delay_1_m_axis_TVALID;
   wire i_negative_freq_1;
   wire s_axis_aclk_0_1;
@@ -64,9 +54,7 @@ module Mixer_imp_1KVXAAW
   assign angle_0_m_axis_TDATA = s_axis_tdata[31:0];
   assign angle_0_m_axis_TVALID = s_axis_tvalid;
   assign delay_1_m_axis_TDATA = s_axis0_tdata[127:0];
-  assign delay_1_m_axis_TID = s_axis0_tid[7:0];
   assign delay_1_m_axis_TLAST = s_axis0_tlast;
-  assign delay_1_m_axis_TUSER = s_axis0_tuser[7:0];
   assign delay_1_m_axis_TVALID = s_axis0_tvalid;
   assign i_negative_freq_1 = i_negative_freq;
   assign m_axis_0_tdata[127:0] = Conn1_TDATA;
@@ -79,22 +67,16 @@ module Mixer_imp_1KVXAAW
         .axis_aresetn(s_axis_aresetn_0_1),
         .i_negative_freq(i_negative_freq_1),
         .m_axis_tdata(conj_0_m_axis_TDATA),
-        .m_axis_tid(conj_0_m_axis_TID),
         .m_axis_tlast(conj_0_m_axis_TLAST),
-        .m_axis_tuser(conj_0_m_axis_TUSER),
         .m_axis_tvalid(conj_0_m_axis_TVALID),
         .s_axis_tdata(dds_top_0_m_axis_TDATA),
-        .s_axis_tid(dds_top_0_m_axis_TID),
         .s_axis_tlast(dds_top_0_m_axis_TLAST),
-        .s_axis_tuser(dds_top_0_m_axis_TUSER),
         .s_axis_tvalid(dds_top_0_m_axis_TVALID));
   cfo_correction_dds_top_0_0 dds_top_0
        (.axis_aclk(s_axis_aclk_0_1),
         .axis_aresetn(s_axis_aresetn_0_1),
         .m_axis_tdata(dds_top_0_m_axis_TDATA),
-        .m_axis_tid(dds_top_0_m_axis_TID),
         .m_axis_tlast(dds_top_0_m_axis_TLAST),
-        .m_axis_tuser(dds_top_0_m_axis_TUSER),
         .m_axis_tvalid(dds_top_0_m_axis_TVALID),
         .s_axis_tdata(angle_0_m_axis_TDATA),
         .s_axis_tid({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
@@ -108,14 +90,14 @@ module Mixer_imp_1KVXAAW
         .m_axis_tlast(Conn1_TLAST),
         .m_axis_tvalid(Conn1_TVALID),
         .s_axis0_tdata(delay_1_m_axis_TDATA),
-        .s_axis0_tid(delay_1_m_axis_TID),
+        .s_axis0_tid({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
         .s_axis0_tlast(delay_1_m_axis_TLAST),
-        .s_axis0_tuser(delay_1_m_axis_TUSER),
+        .s_axis0_tuser({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
         .s_axis0_tvalid(delay_1_m_axis_TVALID),
         .s_axis1_tdata(conj_0_m_axis_TDATA),
-        .s_axis1_tid(conj_0_m_axis_TID),
+        .s_axis1_tid({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
         .s_axis1_tlast(conj_0_m_axis_TLAST),
-        .s_axis1_tuser(conj_0_m_axis_TUSER),
+        .s_axis1_tuser({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
         .s_axis1_tvalid(conj_0_m_axis_TVALID));
 endmodule
 
@@ -151,13 +133,11 @@ module cfo_correction
   wire [127:0]Mixer_m_axis_0_TDATA;
   wire Mixer_m_axis_0_TLAST;
   wire Mixer_m_axis_0_TVALID;
-  wire [31:0]angle_0_m_axis_TDATA;
+  wire [15:0]angle_0_m_axis_TDATA;
   wire angle_0_m_axis_TVALID;
   wire [127:0]axis_data_fifo_0_M_AXIS_TDATA;
-  wire [7:0]axis_data_fifo_0_M_AXIS_TID;
   wire axis_data_fifo_0_M_AXIS_TLAST;
   wire axis_data_fifo_0_M_AXIS_TREADY;
-  wire [7:0]axis_data_fifo_0_M_AXIS_TUSER;
   wire axis_data_fifo_0_M_AXIS_TVALID;
   wire [127:0]axis_data_fifo_1_M_AXIS_TDATA;
   wire [7:0]axis_data_fifo_1_M_AXIS_TID;
@@ -191,14 +171,10 @@ module cfo_correction
   wire [7:0]complex_mult_0_m_axis_TUSER;
   wire complex_mult_0_m_axis_TVALID;
   wire [127:0]conj_0_m_axis_TDATA;
-  wire [7:0]conj_0_m_axis_TID;
   wire conj_0_m_axis_TLAST;
-  wire [7:0]conj_0_m_axis_TUSER;
   wire conj_0_m_axis_TVALID;
   wire [127:0]conj_1_m_axis_TDATA;
-  wire [7:0]conj_1_m_axis_TID;
   wire conj_1_m_axis_TLAST;
-  wire [7:0]conj_1_m_axis_TUSER;
   wire conj_1_m_axis_TVALID;
   wire [127:0]cp_rm2_0_m_axis_TDATA;
   wire [7:0]cp_rm2_0_m_axis_TID;
@@ -211,9 +187,7 @@ module cfo_correction
   wire [7:0]cp_rm_0_m_axis_TUSER;
   wire cp_rm_0_m_axis_TVALID;
   wire [127:0]cp_rm_0_m_cp_axis_TDATA;
-  wire [7:0]cp_rm_0_m_cp_axis_TID;
   wire cp_rm_0_m_cp_axis_TLAST;
-  wire [7:0]cp_rm_0_m_cp_axis_TUSER;
   wire cp_rm_0_m_cp_axis_TVALID;
   wire cp_rm_0_o_symbol;
   wire [127:0]delay_0_m_axis_TDATA;
@@ -222,9 +196,7 @@ module cfo_correction
   wire [7:0]delay_0_m_axis_TUSER;
   wire delay_0_m_axis_TVALID;
   wire [127:0]delay_1_m_axis_TDATA;
-  wire [7:0]delay_1_m_axis_TID;
   wire delay_1_m_axis_TLAST;
-  wire [7:0]delay_1_m_axis_TUSER;
   wire delay_1_m_axis_TVALID;
   wire i_select_0_1;
   wire [127:0]mux_0_m_axis_TDATA;
@@ -272,9 +244,7 @@ module cfo_correction
         .m_axis_0_tlast(Mixer_m_axis_0_TLAST),
         .m_axis_0_tvalid(Mixer_m_axis_0_TVALID),
         .s_axis0_tdata(conj_1_m_axis_TDATA),
-        .s_axis0_tid(conj_1_m_axis_TID),
         .s_axis0_tlast(conj_1_m_axis_TLAST),
-        .s_axis0_tuser(conj_1_m_axis_TUSER),
         .s_axis0_tvalid(conj_1_m_axis_TVALID),
         .s_axis_aclk_0(s_axis_aclk_0_1),
         .s_axis_aresetn_0(s_axis_aresetn_0_1),
@@ -292,17 +262,13 @@ module cfo_correction
         .s_axis_tvalid(sum_0_m_axis_TVALID));
   cfo_correction_axis_data_fifo_0_0 axis_data_fifo_0
        (.m_axis_tdata(axis_data_fifo_0_M_AXIS_TDATA),
-        .m_axis_tid(axis_data_fifo_0_M_AXIS_TID),
         .m_axis_tlast(axis_data_fifo_0_M_AXIS_TLAST),
         .m_axis_tready(axis_data_fifo_0_M_AXIS_TREADY),
-        .m_axis_tuser(axis_data_fifo_0_M_AXIS_TUSER),
         .m_axis_tvalid(axis_data_fifo_0_M_AXIS_TVALID),
         .s_axis_aclk(s_axis_aclk_0_1),
         .s_axis_aresetn(s_axis_aresetn_0_1),
         .s_axis_tdata(conj_0_m_axis_TDATA),
-        .s_axis_tid(conj_0_m_axis_TID),
         .s_axis_tlast(conj_0_m_axis_TLAST),
-        .s_axis_tuser(conj_0_m_axis_TUSER),
         .s_axis_tvalid(conj_0_m_axis_TVALID));
   cfo_correction_axis_data_fifo_1_0 axis_data_fifo_1
        (.m_axis_tdata(axis_data_fifo_1_M_AXIS_TDATA),
@@ -377,28 +343,20 @@ module cfo_correction
         .axis_aresetn(s_axis_aresetn_0_1),
         .i_negative_freq(xlconstant_0_dout),
         .m_axis_tdata(conj_0_m_axis_TDATA),
-        .m_axis_tid(conj_0_m_axis_TID),
         .m_axis_tlast(conj_0_m_axis_TLAST),
-        .m_axis_tuser(conj_0_m_axis_TUSER),
         .m_axis_tvalid(conj_0_m_axis_TVALID),
         .s_axis_tdata(cp_rm_0_m_cp_axis_TDATA),
-        .s_axis_tid(cp_rm_0_m_cp_axis_TID),
         .s_axis_tlast(cp_rm_0_m_cp_axis_TLAST),
-        .s_axis_tuser(cp_rm_0_m_cp_axis_TUSER),
         .s_axis_tvalid(cp_rm_0_m_cp_axis_TVALID));
   cfo_correction_conj_1_0 conj_1
        (.axis_aclk(s_axis_aclk_0_1),
         .axis_aresetn(s_axis_aresetn_0_1),
         .i_negative_freq(xlconstant_0_dout),
         .m_axis_tdata(conj_1_m_axis_TDATA),
-        .m_axis_tid(conj_1_m_axis_TID),
         .m_axis_tlast(conj_1_m_axis_TLAST),
-        .m_axis_tuser(conj_1_m_axis_TUSER),
         .m_axis_tvalid(conj_1_m_axis_TVALID),
         .s_axis_tdata(delay_1_m_axis_TDATA),
-        .s_axis_tid(delay_1_m_axis_TID),
         .s_axis_tlast(delay_1_m_axis_TLAST),
-        .s_axis_tuser(delay_1_m_axis_TUSER),
         .s_axis_tvalid(delay_1_m_axis_TVALID));
   cfo_correction_cp_rm2_0_0 cp_rm2_0
        (.axis_aclk(s_axis_aclk_0_1),
@@ -423,9 +381,7 @@ module cfo_correction
         .m_axis_tuser(cp_rm_0_m_axis_TUSER),
         .m_axis_tvalid(cp_rm_0_m_axis_TVALID),
         .m_cp_axis_tdata(cp_rm_0_m_cp_axis_TDATA),
-        .m_cp_axis_tid(cp_rm_0_m_cp_axis_TID),
         .m_cp_axis_tlast(cp_rm_0_m_cp_axis_TLAST),
-        .m_cp_axis_tuser(cp_rm_0_m_cp_axis_TUSER),
         .m_cp_axis_tvalid(cp_rm_0_m_cp_axis_TVALID),
         .o_symbol(cp_rm_0_o_symbol),
         .s_axis_tdata(s_axis_0_1_TDATA),
@@ -443,19 +399,17 @@ module cfo_correction
         .m_axis_tuser(delay_0_m_axis_TUSER),
         .m_axis_tvalid(delay_0_m_axis_TVALID),
         .s_axis_tdata(axis_data_fifo_0_M_AXIS_TDATA),
-        .s_axis_tid(axis_data_fifo_0_M_AXIS_TID),
+        .s_axis_tid({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
         .s_axis_tlast(axis_data_fifo_0_M_AXIS_TLAST),
         .s_axis_tready(axis_data_fifo_0_M_AXIS_TREADY),
-        .s_axis_tuser(axis_data_fifo_0_M_AXIS_TUSER),
+        .s_axis_tuser({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
         .s_axis_tvalid(axis_data_fifo_0_M_AXIS_TVALID));
   cfo_correction_delay_1_0 delay_1
        (.axis_aclk(s_axis_aclk_0_1),
         .axis_aresetn(s_axis_aresetn_0_1),
         .i_symbol(cp_rm_0_o_symbol),
         .m_axis_tdata(delay_1_m_axis_TDATA),
-        .m_axis_tid(delay_1_m_axis_TID),
         .m_axis_tlast(delay_1_m_axis_TLAST),
-        .m_axis_tuser(delay_1_m_axis_TUSER),
         .m_axis_tvalid(delay_1_m_axis_TVALID),
         .s_axis_tdata(axis_data_fifo_1_M_AXIS_TDATA),
         .s_axis_tid(axis_data_fifo_1_M_AXIS_TID),

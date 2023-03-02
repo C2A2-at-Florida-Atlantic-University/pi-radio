@@ -233,21 +233,21 @@
     <Step Id="write_bitstream"/>
     <Step Id="write_device_image"/>
   </Strategy>
-  <BlockFileSet Type="BlockSrcs" Name="cfo_correction_complex_mult_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="cfo_correction_delay_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="cfo_correction_sum_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="cfo_correction_axis_data_fifo_1_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="cfo_correction_delay_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="cfo_correction_complex_mult_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="cfo_correction_mux_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="cfo_correction_axis_data_fifo_1_0"/>
   <BlockFileSet Type="BlockSrcs" Name="cfo_correction_conj_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="cfo_correction_cp_rm2_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="cfo_correction_dds_top_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="cfo_correction_mixer_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="cfo_correction_cp_rm2_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="cfo_correction_util_vector_logic_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="cfo_correction_axis_data_fifo_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="cfo_correction_util_vector_logic_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="cfo_correction_angle_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="cfo_correction_axis_splitter_1_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="cfo_correction_conj_1_0"/>
   <BlockFileSet Type="BlockSrcs" Name="cfo_correction_conj_0_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="cfo_correction_conj_1_0"/>
   <BlockFileSet Type="BlockSrcs" Name="cfo_correction_axis_splitter_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="cfo_correction_delay_1_0"/>
   <BlockFileSet Type="BlockSrcs" Name="cfo_correction_scale_0_0"/>

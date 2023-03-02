@@ -11,7 +11,7 @@ use ieee.std_logic_unsigned.all;
 
 entity angle is
   generic(
-    g_PRECISION                   : integer := 32
+    g_PRECISION                   : integer := 16
   );
   port(
     axis_aclk                     : in  std_logic;
@@ -49,8 +49,10 @@ architecture RTL of angle is
     port(
       aclk                        : in  std_logic;
       s_axis_cartesian_tvalid     : in  std_logic;
+      s_axis_cartesian_tlast      : in  std_logic;
       s_axis_cartesian_tdata      : in  std_logic_vector(g_PRECISION*2-1 downto 0);
       m_axis_dout_tvalid          : out std_logic;
+      m_axis_dout_tlast           : out std_logic;
       m_axis_dout_tdata           : out std_logic_vector(g_PRECISION*2-1 downto 0)
     );
   end component cordic_rec_to_polar;
@@ -64,8 +66,10 @@ begin
     port map(
       aclk                        => axis_aclk,
       s_axis_cartesian_tvalid     => s_axis_tvalid,
+      s_axis_cartesian_tlast      => '0',
       s_axis_cartesian_tdata      => din_tdata,
       m_axis_dout_tvalid          => dout_tvalid,
+      m_axis_dout_tlast           => open,
       m_axis_dout_tdata           => dout_tdata
     );
 

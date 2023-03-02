@@ -1,0 +1,4 @@
+vhdl xil_defaultlib  \
+"../../../../cfo_correction.gen/sources_1/ip/cordic_rec_to_polar/sim/cordic_rec_to_polar.vhd" \
+
+nosort

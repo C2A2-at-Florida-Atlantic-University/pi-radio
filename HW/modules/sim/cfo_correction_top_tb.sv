@@ -7,7 +7,7 @@ module cfo_correction_top_tb();
 
   localparam                        CLOCK_PERIOD      = 4;
   localparam                        CLOCK_CYCLE       = CLOCK_PERIOD/2;
-  localparam                        c_PRECISION       = 32;
+  localparam                        c_PRECISION       = 16;
 
   int                               fd;
   int                               fd_info;
@@ -724,7 +724,7 @@ module cfo_correction_top_tb();
 // Stimulate design
 //---------------------------------------------------------------
   initial begin
-    fd = $fopen("../../../../../modules/sim/cw_input_samples.txt","r");
+    fd = $fopen("../../../../../../modules/sim/cw_input_samples.txt","r");
     //fd = $fopen("../../../../../../modules/sim/equalizer_input_samples.txt","r");
     //fd = $fopen("c:/Projects/pi-radio/HW/modules/sim/equalizer_input_samples.txt","r");
     if (fd) $display("File was opened successfully: %0d ",fd);

@@ -1,4 +1,4 @@
-// (c) Copyright 1995-2022 Xilinx, Inc. All rights reserved.
+// (c) Copyright 1995-2023 Xilinx, Inc. All rights reserved.
 // 
 // This file contains confidential and proprietary information
 // of Xilinx, Inc. and is protected under U.S. and
@@ -59,13 +59,9 @@ module cfo_correction_conj_0_1 (
   axis_aresetn,
   s_axis_tdata,
   s_axis_tvalid,
-  s_axis_tid,
-  s_axis_tuser,
   s_axis_tlast,
   m_axis_tdata,
   m_axis_tvalid,
-  m_axis_tid,
-  m_axis_tuser,
   m_axis_tlast,
   i_negative_freq
 );
@@ -80,22 +76,14 @@ input wire axis_aresetn;
 input wire [127 : 0] s_axis_tdata;
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 s_axis TVALID" *)
 input wire s_axis_tvalid;
-(* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 s_axis TID" *)
-input wire [7 : 0] s_axis_tid;
-(* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 s_axis TUSER" *)
-input wire [7 : 0] s_axis_tuser;
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME s_axis, TDATA_NUM_BYTES 16, TDEST_WIDTH 0, TID_WIDTH 8, TUSER_WIDTH 8, HAS_TREADY 0, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 1, FREQ_HZ 249997498, PHASE 0.0, CLK_DOMAIN cfo_correction_axis_aclk, LAYERED_METADATA undef, INSERT_VIP 0" *)
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME s_axis, TDATA_NUM_BYTES 16, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 0, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 1, FREQ_HZ 249997498, PHASE 0.0, CLK_DOMAIN cfo_correction_axis_aclk, LAYERED_METADATA undef, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 s_axis TLAST" *)
 input wire s_axis_tlast;
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 m_axis TDATA" *)
 output wire [127 : 0] m_axis_tdata;
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 m_axis TVALID" *)
 output wire m_axis_tvalid;
-(* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 m_axis TID" *)
-output wire [7 : 0] m_axis_tid;
-(* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 m_axis TUSER" *)
-output wire [7 : 0] m_axis_tuser;
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME m_axis, TDATA_NUM_BYTES 16, TDEST_WIDTH 0, TID_WIDTH 8, TUSER_WIDTH 8, HAS_TREADY 0, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 1, FREQ_HZ 249997498, PHASE 0.0, CLK_DOMAIN cfo_correction_axis_aclk, LAYERED_METADATA undef, INSERT_VIP 0" *)
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME m_axis, TDATA_NUM_BYTES 16, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 0, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 1, FREQ_HZ 249997498, PHASE 0.0, CLK_DOMAIN cfo_correction_axis_aclk, LAYERED_METADATA undef, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 m_axis TLAST" *)
 output wire m_axis_tlast;
 input wire i_negative_freq;
@@ -105,13 +93,9 @@ input wire i_negative_freq;
     .axis_aresetn(axis_aresetn),
     .s_axis_tdata(s_axis_tdata),
     .s_axis_tvalid(s_axis_tvalid),
-    .s_axis_tid(s_axis_tid),
-    .s_axis_tuser(s_axis_tuser),
     .s_axis_tlast(s_axis_tlast),
     .m_axis_tdata(m_axis_tdata),
     .m_axis_tvalid(m_axis_tvalid),
-    .m_axis_tid(m_axis_tid),
-    .m_axis_tuser(m_axis_tuser),
     .m_axis_tlast(m_axis_tlast),
     .i_negative_freq(i_negative_freq)
   );
