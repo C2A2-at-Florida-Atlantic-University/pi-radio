@@ -3,11 +3,11 @@
 *.jou
 *.str
 *.swp
-*.cache
-*.gen
-*.hw
-*.ip_user_files
-*.sim
-*.srcs
+*cache
+*gen
+*hw
+*ip_user_files
+*sim
+*srcs
 *.xpr
 *.xsa
