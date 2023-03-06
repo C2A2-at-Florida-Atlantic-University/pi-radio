@@ -1,4 +1,0 @@
-Running: xsim.dir/cfo_correction_top_tb_func_synth/xsimk.exe -simmode gui -wdb cfo_correction_top_tb_func_synth.wdb -simrunnum 0 -socket 57053
-Design successfully loaded
-Design Loading Memory Usage: 66476 KB (Peak: 66476 KB)
-Design Loading CPU Usage: 93 ms

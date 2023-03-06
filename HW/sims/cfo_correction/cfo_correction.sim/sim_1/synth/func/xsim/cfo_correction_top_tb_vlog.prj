@@ -1,9 +1,0 @@
-# compile verilog/system verilog design source files
-verilog xil_defaultlib  --include "../../../../../cfo_correction.gen/sources_1/bd/cfo_correction/ipshared/8713/hdl" \
-"cfo_correction_top_tb_func_synth.v" \
-
-sv xil_defaultlib  --include "../../../../../cfo_correction.gen/sources_1/bd/cfo_correction/ipshared/8713/hdl" \
-"../../../../../../../modules/sim/cfo_correction_top_tb.sv" \
-
-# Do not sort compile order
-nosort
