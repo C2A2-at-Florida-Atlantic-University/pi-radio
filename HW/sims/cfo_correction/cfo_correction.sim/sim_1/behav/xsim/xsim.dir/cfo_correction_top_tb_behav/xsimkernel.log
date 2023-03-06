@@ -2,3 +2,6 @@ Running: xsim.dir/cfo_correction_top_tb_behav/xsimk.exe -simmode gui -wdb cfo_co
 Design successfully loaded
 Design Loading Memory Usage: 20864 KB (Peak: 20864 KB)
 Design Loading CPU Usage: 31 ms
+Simulation completed
+Simulation Memory Usage: 32272 KB (Peak: 32272 KB)
+Simulation CPU Usage: 4343 ms

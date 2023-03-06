@@ -76,6 +76,8 @@ architecture RTL of equalization is
     );
   end component div_gen_0;
 
+  signal s_ch_est_axis_tdata_pipe : std_logic_vector(15 downto 0);
+
   signal div_sample_0             : std_logic_vector(23 downto 0);
   signal div_sample_1             : std_logic_vector(23 downto 0);
   signal div_sample_2             : std_logic_vector(23 downto 0);
@@ -101,6 +103,15 @@ architecture RTL of equalization is
   signal pipeline_ang_3_tdata     : std_logic_vector(15 downto 0);
 
 begin
+
+  -- Rotate data and delay channel estimate to properly aligh with
+  -- previous hold interpolation type
+  p_ALIGN : process(axis_aclk)
+  begin
+    if rising_edge(axis_aclk) then
+      s_ch_est_axis_tdata_pipe    <= s_ch_est_axis_tdata(31 downto 16);
+    end if;
+  end process p_ALIGN;
 
   -- 4 samples per clock (3 data 1 pilot). Equalize pilot sample as well
   ----------------------------------------------------------------------
@@ -132,7 +143,8 @@ begin
       if s_ch_est_axis_tvalid = '1' and s_din_axis_tvalid = '1' then
         pipeline_ang_0_tvalid     <= '1';
         pipeline_ang_0_tdata      <= s_din_axis_tdata(31 downto 16) + 
-                                     (s_ch_est_axis_tdata(31 downto 16));
+                                     --(s_ch_est_axis_tdata(31 downto 16));
+                                     s_ch_est_axis_tdata_pipe;
       else
         pipeline_ang_0_tvalid     <= '0';
         pipeline_ang_0_tdata      <= (others => '0');
@@ -143,7 +155,7 @@ begin
   -- Pipeline Equalized phase value to alight with equalized magnitude value
   pipeline_inst_0 : pipeline
     generic map(
-      g_DELAY_CYCLES              => 21,
+      g_DELAY_CYCLES              => 19,
       g_TDATA_WIDTH               => 16
     )
     port map(
@@ -186,7 +198,8 @@ begin
     elsif rising_edge(axis_aclk) then
       if s_ch_est_axis_tvalid = '1' and s_din_axis_tvalid = '1' then
         pipeline_ang_1_tdata      <= s_din_axis_tdata(63 downto 48) +
-                                     (s_ch_est_axis_tdata(31 downto 16));
+                                     --(s_ch_est_axis_tdata(31 downto 16));
+                                     s_ch_est_axis_tdata_pipe;
       else
         pipeline_ang_1_tdata      <= (others => '0');
       end if;
@@ -196,7 +209,7 @@ begin
   -- Pipeline Equalized phase value to alight with equalized magnitude value
   pipeline_inst_1 : pipeline
     generic map(
-      g_DELAY_CYCLES              => 21,
+      g_DELAY_CYCLES              => 19,
       g_TDATA_WIDTH               => 16
     )
     port map(
@@ -239,7 +252,8 @@ begin
     elsif rising_edge(axis_aclk) then
       if s_ch_est_axis_tvalid = '1' and s_din_axis_tvalid = '1' then
         pipeline_ang_2_tdata      <= s_din_axis_tdata(95 downto 80) +
-                                     (s_ch_est_axis_tdata(31 downto 16));
+                                     --(s_ch_est_axis_tdata(31 downto 16));
+                                     s_ch_est_axis_tdata_pipe;
       else
         pipeline_ang_2_tdata      <= (others => '0');
       end if;
@@ -249,7 +263,7 @@ begin
   -- Pipeline Equalized phase value to alight with equalized magnitude value
   pipeline_inst_2 : pipeline
     generic map(
-      g_DELAY_CYCLES              => 21,
+      g_DELAY_CYCLES              => 19,
       g_TDATA_WIDTH               => 16
     )
     port map(
@@ -302,7 +316,7 @@ begin
   -- Pipeline Equalized phase value to alight with equalized magnitude value
   pipeline_inst_3 : pipeline
     generic map(
-      g_DELAY_CYCLES              => 21,
+      g_DELAY_CYCLES              => 19,
       g_TDATA_WIDTH               => 16
     )
     port map(
@@ -314,7 +328,7 @@ begin
       s_axis_tlast                => '0',
 
       m_axis_tdata                => angle_res_3,
-      m_axis_tvalid               => angle_tvalid,
+      m_axis_tvalid               => open,
       m_axis_tlast                => open
     );
 

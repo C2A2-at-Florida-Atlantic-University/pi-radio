@@ -57,11 +57,21 @@ architecture RTL of polar_to_cartesian_cordic is
   signal cordic_iq_1              : std_logic_vector(31 downto 0);
   signal cordic_iq_2              : std_logic_vector(31 downto 0);
 
-  signal w_axis_tdata             : std_logic_vector(95 downto 0);
-  signal w_axis_tdata_1           : std_logic_vector(95 downto 0);
-  signal w_axis_tdata_2           : std_logic_vector(95 downto 0);
+  signal w_axis_tvalid            : std_logic;
+  signal s_axis_tvalid_rising     : std_logic;
+  signal w_axis_tvalid_no_pilot   : std_logic;
 
 begin
+
+  p_SKIP_PILOT : process(axis_aclk)
+  begin
+    if rising_edge(axis_aclk) then
+      w_axis_tvalid               <= s_axis_tvalid;
+    end if;
+  end process p_SKIP_PILOT;
+
+  s_axis_tvalid_rising            <= s_axis_tvalid and not w_axis_tvalid;
+  w_axis_tvalid_no_pilot          <= s_axis_tvalid and not s_axis_tvalid_rising;
 
   ----------------------------------------------------------------------
   -- Sample 0
@@ -70,10 +80,10 @@ begin
   cordic_polar_to_rec_inst_0 : cordic_polar_to_rec
     port map(
       aclk                        => axis_aclk,
-      s_axis_phase_tvalid         => s_axis_tvalid,
+      s_axis_phase_tvalid         => w_axis_tvalid_no_pilot,
       s_axis_phase_tlast          => s_axis_tlast,
       s_axis_phase_tdata          => s_axis_tdata(31 downto 16),
-      s_axis_cartesian_tvalid     => s_axis_tvalid,
+      s_axis_cartesian_tvalid     => w_axis_tvalid_no_pilot,
       s_axis_cartesian_tlast      => s_axis_tlast,
       s_axis_cartesian_tdata      => cordic_mag_0,
       m_axis_dout_tvalid          => m_axis_tvalid,
@@ -88,10 +98,10 @@ begin
   cordic_polar_to_rec_inst_1 : cordic_polar_to_rec
     port map(
       aclk                        => axis_aclk,
-      s_axis_phase_tvalid         => s_axis_tvalid,
+      s_axis_phase_tvalid         => w_axis_tvalid_no_pilot,
       s_axis_phase_tlast          => s_axis_tlast,
       s_axis_phase_tdata          => s_axis_tdata(63 downto 48),
-      s_axis_cartesian_tvalid     => s_axis_tvalid,
+      s_axis_cartesian_tvalid     => w_axis_tvalid_no_pilot,
       s_axis_cartesian_tlast      => s_axis_tlast,
       s_axis_cartesian_tdata      => cordic_mag_1,
       m_axis_dout_tvalid          => open,
@@ -106,10 +116,10 @@ begin
   cordic_polar_to_rec_inst_2 : cordic_polar_to_rec
     port map(
       aclk                        => axis_aclk,
-      s_axis_phase_tvalid         => s_axis_tvalid,
+      s_axis_phase_tvalid         => w_axis_tvalid_no_pilot,
       s_axis_phase_tlast          => s_axis_tlast,
       s_axis_phase_tdata          => s_axis_tdata(95 downto 80),
-      s_axis_cartesian_tvalid     => s_axis_tvalid,
+      s_axis_cartesian_tvalid     => w_axis_tvalid_no_pilot,
       s_axis_cartesian_tlast      => s_axis_tlast,
       s_axis_cartesian_tdata      => cordic_mag_2,
       m_axis_dout_tvalid          => open,
@@ -124,9 +134,8 @@ begin
   p_DELAY_TDATA : process(axis_aclk)
   begin
     if rising_edge(axis_aclk) then
-      w_axis_tdata_1              <= w_axis_tdata;
-      w_axis_tdata_2              <= w_axis_tdata_1;
---      m_axis_tdata                <= w_axis_tdata_2;
+      --m_axis_tvalid               <= w_axis_tvalid;
+      --m_axis_tlast                <= w_axis_tlast;
     end if;
   end process p_DELAY_TDATA;
 

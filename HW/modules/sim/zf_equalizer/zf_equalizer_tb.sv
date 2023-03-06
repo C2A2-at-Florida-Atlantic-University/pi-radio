@@ -291,6 +291,29 @@ module zf_equalizer_tb();
       $stop;
     end
 
+    #(CLOCK_PERIOD*83);
+
+    for (int k = 0; k < ofdm_symbols; k++) begin
+      for (int i = 0; i < 256; i++) begin
+        if (DUT.zf_equalizer_i.Normalized_ZF_stage_1.channel_estimate_0.m_ch_est_axis_tvalid == 1) begin
+          div1_full = DUT.zf_equalizer_i.Normalized_ZF_stage_1.channel_estimate_0.m_ch_est_axis_tdata[15:0];
+          div1_full_ang = DUT.zf_equalizer_i.Normalized_ZF_stage_1.channel_estimate_0.m_ch_est_axis_tdata[31:16];
+          $fdisplay(fd_div_1_full_file,"%d, %d",div1_full,$signed(div1_full_ang));
+        end
+        #CLOCK_PERIOD;
+      end
+      #(CLOCK_PERIOD*64);
+    end
+
+    $fclose(fd_div_1_full_file);
+
+  end
+
+
+//---------------------------------------------------------------
+// Scoreboard divide output of stage 1
+//---------------------------------------------------------------
+  initial begin
     //fd_data_polar = $fopen("c:/Projects/pi-radio/HW/modules/sim/zf_equalizer/polar_data.txt","w");
     fd_data_polar = $fopen("../../../../../../modules/sim/zf_equalizer/polar_data.txt","w");
     if (fd_data_polar) $display("File was opened successfully: %0d ",fd_data_polar);
@@ -299,18 +322,11 @@ module zf_equalizer_tb();
       $stop;
     end
 
-    #(CLOCK_PERIOD*86);
+    #(CLOCK_PERIOD*85);
 
     for (int k = 0; k < ofdm_symbols; k++) begin
       for (int i = 0; i < 256; i++) begin
-        if (DUT.zf_equalizer_i.Normalized_ZF_stage_1.channel_estimate_0.m_ch_est_axis_tvalid == 1) begin
-          //div1_amp = DUT.zf_equalizer_i.Normalized_ZF_stage_1.channel_estimate_0.m_axis_tdata[17:2];
-          //div1_phase = DUT.zf_equalizer_i.Normalized_ZF_stage_1.channel_estimate_0.m_axis_tdata[31:16];
-          //$fdisplay(fd_div_1_file,"%d, %d",$signed(div1_amp),$signed(div1_phase));
-          div1_full = DUT.zf_equalizer_i.Normalized_ZF_stage_1.channel_estimate_0.m_abs_res_axis_tdata[17:2];
-          div1_full_ang = DUT.zf_equalizer_i.Normalized_ZF_stage_1.channel_estimate_0.m_ang_res_axis_tdata;
-          $fdisplay(fd_div_1_full_file,"%d, %d",$signed(div1_full),$signed(div1_full_ang));
-
+        if (DUT.zf_equalizer_i.Normalized_ZF_stage_1.channel_estimate_0.m_axis_tvalid == 1) begin
           if (i != 0) begin
             data_abs0 = DUT.zf_equalizer_i.Normalized_ZF_stage_1.channel_estimate_0.m_axis_tdata[15:0];
             data_ang0 = DUT.zf_equalizer_i.Normalized_ZF_stage_1.channel_estimate_0.m_axis_tdata[31:16];
@@ -331,7 +347,6 @@ module zf_equalizer_tb();
       #(CLOCK_PERIOD*64);
     end
 
-    $fclose(fd_div_1_full_file);
     $fclose(fd_data_polar);
 
   end
@@ -356,7 +371,7 @@ module zf_equalizer_tb();
       $stop;
     end
 
-    #(CLOCK_PERIOD*86);
+    #(CLOCK_PERIOD*85);
 
     for (int k = 0; k < ofdm_symbols; k++) begin
       for (int i = 0; i < 256; i++) begin
@@ -411,7 +426,7 @@ module zf_equalizer_tb();
       $stop;
     end
 
-    #(CLOCK_PERIOD*109);
+    #(CLOCK_PERIOD*106);
 
     for (int k = 0; k < ofdm_symbols; k++) begin
       for (int i = 0; i < 256; i++) begin
@@ -453,7 +468,7 @@ module zf_equalizer_tb();
       $stop;
     end
 
-    #(CLOCK_PERIOD*100);
+    #(CLOCK_PERIOD*128);
 
     for (int k = 0; k < ofdm_symbols; k++) begin
       for (int i = 0; i < 256; i++) begin

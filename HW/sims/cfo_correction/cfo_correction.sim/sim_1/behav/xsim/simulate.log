@@ -48172,4 +48172,55 @@ ERROR: mult output sample         638
 Mult out I3:    81004192
 Expected:     -782620
 ERROR: mult output sample         638
-Mult out Q3: 
+Mult out Q3:           0
+Expected:       -6267
+ 
+ERROR: mult output sample         639
+Mult out I0:    80994850
+Expected:      -36116
+ERROR: mult output sample         639
+Mult out Q0:           0
+Expected:      -20335
+ERROR: mult output sample         639
+Mult out I1:    80991560
+Expected:     -183642
+ERROR: mult output sample         639
+Mult out Q1:           0
+Expected:       21936
+ERROR: mult output sample         639
+Mult out I2:    80994101
+Expected:     -622146
+ERROR: mult output sample         639
+Mult out Q2:           0
+Expected:     -140784
+ERROR: mult output sample         639
+Mult out I3:    81003025
+Expected:     -622146
+ERROR: mult output sample         639
+Mult out Q3:           0
+Expected:      -88366
+ 
+------------------------OFDM SYMBOL 9------------------------
+ERROR: summation real expected:  -114054914
+Actual:  -738658068
+ERROR: summation imaginary expected:   -16637188
+Actual:           0
+------------------------OFDM SYMBOL 9------------------------
+Expected angle value: 2.993944
+Actual angle value (signed): 00000000
+Actual angle value: 00000000000000000000000000000000
+Actual angle value (converted): 0.000000
+ 
+Expected cfo: 0.000000
+scs * angle = 00000000
+Actual phase increment = 0
+------------------------------------------------------------
+ 
+ 
+File was opened successfully: -20000 
+Printing Samples
+  -596 + i    76
+   674 + i   278
+  -291 + i   609
+  -302 + i   -56
+$stop called at time : 29720 ns : File "C:/Projects/pi-radio/HW/modules/sim/cfo_correction_top_tb.sv" Line 807

@@ -148,6 +148,10 @@ architecture RTL of channel_estimate is
 
   signal axis_pilot_tx_tdata      : std_logic_vector(127 downto 0);
   signal axis_pilot_rx_tdata      : std_logic_vector(127 downto 0);
+
+  signal w_ch_est_axis_tvalid     : std_logic;
+  signal w_ch_est_axis_tlast      : std_logic;
+  signal w_ch_est_axis_tdata      : std_logic_vector(31 downto 0);
   
   signal m_pilot_tx_conj_axis_tdata    : std_logic_vector(127 downto 0);
   signal m_pilot_tx_conj_axis_tvalid   : std_logic;
@@ -321,7 +325,7 @@ begin
 
   pipeline_inst : pipeline
     generic map(
-      g_DELAY_CYCLES              => 21,
+      g_DELAY_CYCLES              => 19,
       g_TDATA_WIDTH               => 16
     )
     port map(
@@ -337,6 +341,7 @@ begin
       m_axis_tlast                => open
     );
 
+  ------------------------------------------------------------------------------------
   -- Simulation Only
   m_abs_denom_in_axis_tdata       <= m_pilot_tx_cordic_axis_tdata(15 downto 0);
   m_abs_num_in_axis_tdata         <= m_pilot_rx_cordic_axis_tdata(15 downto 0);
@@ -347,7 +352,8 @@ begin
   m_abs_res_axis_tvalid           <= m_amplitude_ch_est_axis_tvalid;
   m_ang_res_axis_tdata            <= m_pipeline_ch_est_axis_tdata;
   m_ang_res_axis_tvalid           <= m_angle_ch_est_axis_tvalid;
-
+  ------------------------------------------------------------------------------------
+ 
   -- Channel estimate amplitude
   div_gen_inst : div_gen_0
     port map(
@@ -368,10 +374,20 @@ begin
     );
 
   m_amplitude_ch_est_axis_tdata2  <= m_amplitude_ch_est_axis_tdata(17 downto 2);
-  m_ch_est_axis_tdata             <= m_pipeline_ch_est_axis_tdata &
+  --m_amplitude_ch_est_axis_tdata2  <= m_amplitude_ch_est_axis_tdata(23 downto 8);
+  w_ch_est_axis_tdata             <= m_pipeline_ch_est_axis_tdata &
                                      m_amplitude_ch_est_axis_tdata2; --(15 downto 0);
-  m_ch_est_axis_tvalid            <= m_amplitude_ch_est_axis_tvalid;
-  m_ch_est_axis_tlast             <= m_amplitude_ch_est_axis_tlast;
+  w_ch_est_axis_tvalid            <= m_amplitude_ch_est_axis_tvalid;
+  w_ch_est_axis_tlast             <= m_amplitude_ch_est_axis_tlast;
+
+  p_DELAY_TDATA_TVALID : process(axis_aclk)
+  begin
+    if rising_edge(axis_aclk) then
+      m_ch_est_axis_tvalid        <= w_ch_est_axis_tvalid;
+      m_ch_est_axis_tlast         <= w_ch_est_axis_tlast;
+      m_ch_est_axis_tdata         <= w_ch_est_axis_tdata;
+    end if;
+  end process p_DELAY_TDATA_TVALID;
 
 -----------------------------------------------------------------
   -- Pipeline data
@@ -458,7 +474,7 @@ begin
   -- Delay Data to alight with delay in calculating channel estimate
   pipeline_data_inst : pipeline
     generic map(
-      g_DELAY_CYCLES              => 22,
+      g_DELAY_CYCLES              => 21,
       g_TDATA_WIDTH               => 128
     )
     port map(

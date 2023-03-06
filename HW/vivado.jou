@@ -1,0 +1,18 @@
+#-----------------------------------------------------------
+# Vivado v2022.1 (64-bit)
+# SW Build 3526262 on Mon Apr 18 15:48:16 MDT 2022
+# IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
+# Start of session at: Thu Mar  2 13:25:44 2023
+# Process ID: 57532
+# Current directory: c:/Projects/pi-radio/HW
+# Command line: vivado.exe
+# Log file: c:/Projects/pi-radio/HW/vivado.log
+# Journal file: c:/Projects/pi-radio/HW\vivado.jou
+# Running On: DESKTOP-1UDCE0K, OS: Windows, CPU Frequency: 3187 MHz, CPU Physical cores: 16, Host memory: 137149 MB
+#-----------------------------------------------------------
+start_gui
+open_project C:/Projects/pi-radio/HW/sims/cfo_correction/cfo_correction.xpr
+update_compile_order -fileset sources_1
+set PI_RADIO_REPO_PATH $::env(PI_RADIO_REPO_PATH)
+exec set PI_RADIO_REPO_PATH
+exec printenv PI_RADIO_REPO_PATH

@@ -88,12 +88,6 @@
   <FileSets Version="1" Minor="31">
     <FileSet Name="sources_1" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
       <Filter Type="Srcs"/>
-      <File Path="$PPRDIR/../../modules/src/rtl/conj.vhd">
-        <FileInfo>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
       <File Path="$PSRCDIR/sources_1/ip/dds_compiler_0/dds_compiler_0.xci">
         <FileInfo>
           <Attr Name="ImportPath" Val="$PPRDIR/../../modules/src/ip/dds_compiler_0.xci"/>
@@ -124,16 +118,7 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/ip/cordic_rec_to_polar/cordic_rec_to_polar.xci">
-        <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../modules/src/ip/cordic_rec_to_polar.xci"/>
-          <Attr Name="ImportTime" Val="1677703380"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PPRDIR/../../modules/src/rtl/angle.vhd">
+      <File Path="$PPRDIR/../../modules/src/rtl/conj.vhd">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
@@ -169,21 +154,6 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/ip/dsp_macro_0/dsp_macro_0.xci">
-        <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../modules/src/ip/dsp_macro_0.xci"/>
-          <Attr Name="ImportTime" Val="1664039383"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PPRDIR/../../modules/src/rtl/scale.vhd">
-        <FileInfo>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
       <File Path="$PPRDIR/../../modules/src/rtl/sum.vhd">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
@@ -197,6 +167,36 @@
         </FileInfo>
       </File>
       <File Path="$PPRDIR/../../modules/src/rtl/tlast_symbol.vhd">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/ip/cordic_rec_to_polar/cordic_rec_to_polar.xci">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../modules/src/ip/cordic_rec_to_polar.xci"/>
+          <Attr Name="ImportTime" Val="1677703380"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/../../modules/src/rtl/angle.vhd">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/ip/dsp_macro_0/dsp_macro_0.xci">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../modules/src/ip/dsp_macro_0.xci"/>
+          <Attr Name="ImportTime" Val="1664039383"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/../../modules/src/rtl/scale.vhd">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
