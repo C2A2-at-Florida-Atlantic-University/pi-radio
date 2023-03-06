@@ -1,0 +1,513 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="zf_equalizer_tb_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="axi_bram_ctrl_funcs" />
+            <top_module name="glbl" />
+            <top_module name="vcomponents" />
+            <top_module name="zf_equalizer_tb" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0.000000 us"></ZoomStartTime>
+      <ZoomEndTime time="9.704001 us"></ZoomEndTime>
+      <Cursor1Time time="9.704000 us"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="205"></NameColumnWidth>
+      <ValueColumnWidth column_width="101"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="2" />
+   <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/polar_to_cartesian/axis_aclk" type="logic">
+      <obj_property name="ElementShortName">axis_aclk</obj_property>
+      <obj_property name="ObjectShortName">axis_aclk</obj_property>
+   </wvobject>
+   <wvobject fp_name="group119" type="group">
+      <obj_property name="label">polar_to_cartesian</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject fp_name="group185" type="group">
+         <obj_property name="label">S_AXIS</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/polar_to_cartesian/s_axis_tdata" type="array">
+            <obj_property name="ElementShortName">s_axis_tdata[127:0]</obj_property>
+            <obj_property name="ObjectShortName">s_axis_tdata[127:0]</obj_property>
+         </wvobject>
+         <wvobject fp_name="vbus400" type="vbus">
+            <obj_property name="label">ANG_2</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/polar_to_cartesian/s_axis_tdata[95]" type="logic">
+               <obj_property name="ElementShortName">[95]</obj_property>
+               <obj_property name="ObjectShortName">[95]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/polar_to_cartesian/s_axis_tdata[94]" type="logic">
+               <obj_property name="ElementShortName">[94]</obj_property>
+               <obj_property name="ObjectShortName">[94]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/polar_to_cartesian/s_axis_tdata[93]" type="logic">
+               <obj_property name="ElementShortName">[93]</obj_property>
+               <obj_property name="ObjectShortName">[93]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/polar_to_cartesian/s_axis_tdata[92]" type="logic">
+               <obj_property name="ElementShortName">[92]</obj_property>
+               <obj_property name="ObjectShortName">[92]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/polar_to_cartesian/s_axis_tdata[91]" type="logic">
+               <obj_property name="ElementShortName">[91]</obj_property>
+               <obj_property name="ObjectShortName">[91]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/polar_to_cartesian/s_axis_tdata[90]" type="logic">
+               <obj_property name="ElementShortName">[90]</obj_property>
+               <obj_property name="ObjectShortName">[90]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/polar_to_cartesian/s_axis_tdata[89]" type="logic">
+               <obj_property name="ElementShortName">[89]</obj_property>
+               <obj_property name="ObjectShortName">[89]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/polar_to_cartesian/s_axis_tdata[88]" type="logic">
+               <obj_property name="ElementShortName">[88]</obj_property>
+               <obj_property name="ObjectShortName">[88]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/polar_to_cartesian/s_axis_tdata[87]" type="logic">
+               <obj_property name="ElementShortName">[87]</obj_property>
+               <obj_property name="ObjectShortName">[87]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/polar_to_cartesian/s_axis_tdata[86]" type="logic">
+               <obj_property name="ElementShortName">[86]</obj_property>
+               <obj_property name="ObjectShortName">[86]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/polar_to_cartesian/s_axis_tdata[85]" type="logic">
+               <obj_property name="ElementShortName">[85]</obj_property>
+               <obj_property name="ObjectShortName">[85]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/polar_to_cartesian/s_axis_tdata[84]" type="logic">
+               <obj_property name="ElementShortName">[84]</obj_property>
+               <obj_property name="ObjectShortName">[84]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/polar_to_cartesian/s_axis_tdata[83]" type="logic">
+               <obj_property name="ElementShortName">[83]</obj_property>
+               <obj_property name="ObjectShortName">[83]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/polar_to_cartesian/s_axis_tdata[82]" type="logic">
+               <obj_property name="ElementShortName">[82]</obj_property>
+               <obj_property name="ObjectShortName">[82]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/polar_to_cartesian/s_axis_tdata[81]" type="logic">
+               <obj_property name="ElementShortName">[81]</obj_property>
+               <obj_property name="ObjectShortName">[81]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/polar_to_cartesian/s_axis_tdata[80]" type="logic">
+               <obj_property name="ElementShortName">[80]</obj_property>
+               <obj_property name="ObjectShortName">[80]</obj_property>
+            </wvobject>
+         </wvobject>
+         <wvobject fp_name="vbus383" type="vbus">
+            <obj_property name="label">ANG_1</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/polar_to_cartesian/s_axis_tdata[63]" type="logic">
+               <obj_property name="ElementShortName">[63]</obj_property>
+               <obj_property name="ObjectShortName">[63]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/polar_to_cartesian/s_axis_tdata[62]" type="logic">
+               <obj_property name="ElementShortName">[62]</obj_property>
+               <obj_property name="ObjectShortName">[62]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/polar_to_cartesian/s_axis_tdata[61]" type="logic">
+               <obj_property name="ElementShortName">[61]</obj_property>
+               <obj_property name="ObjectShortName">[61]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/polar_to_cartesian/s_axis_tdata[60]" type="logic">
+               <obj_property name="ElementShortName">[60]</obj_property>
+               <obj_property name="ObjectShortName">[60]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/polar_to_cartesian/s_axis_tdata[59]" type="logic">
+               <obj_property name="ElementShortName">[59]</obj_property>
+               <obj_property name="ObjectShortName">[59]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/polar_to_cartesian/s_axis_tdata[58]" type="logic">
+               <obj_property name="ElementShortName">[58]</obj_property>
+               <obj_property name="ObjectShortName">[58]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/polar_to_cartesian/s_axis_tdata[57]" type="logic">
+               <obj_property name="ElementShortName">[57]</obj_property>
+               <obj_property name="ObjectShortName">[57]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/polar_to_cartesian/s_axis_tdata[56]" type="logic">
+               <obj_property name="ElementShortName">[56]</obj_property>
+               <obj_property name="ObjectShortName">[56]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/polar_to_cartesian/s_axis_tdata[55]" type="logic">
+               <obj_property name="ElementShortName">[55]</obj_property>
+               <obj_property name="ObjectShortName">[55]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/polar_to_cartesian/s_axis_tdata[54]" type="logic">
+               <obj_property name="ElementShortName">[54]</obj_property>
+               <obj_property name="ObjectShortName">[54]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/polar_to_cartesian/s_axis_tdata[53]" type="logic">
+               <obj_property name="ElementShortName">[53]</obj_property>
+               <obj_property name="ObjectShortName">[53]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/polar_to_cartesian/s_axis_tdata[52]" type="logic">
+               <obj_property name="ElementShortName">[52]</obj_property>
+               <obj_property name="ObjectShortName">[52]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/polar_to_cartesian/s_axis_tdata[51]" type="logic">
+               <obj_property name="ElementShortName">[51]</obj_property>
+               <obj_property name="ObjectShortName">[51]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/polar_to_cartesian/s_axis_tdata[50]" type="logic">
+               <obj_property name="ElementShortName">[50]</obj_property>
+               <obj_property name="ObjectShortName">[50]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/polar_to_cartesian/s_axis_tdata[49]" type="logic">
+               <obj_property name="ElementShortName">[49]</obj_property>
+               <obj_property name="ObjectShortName">[49]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/polar_to_cartesian/s_axis_tdata[48]" type="logic">
+               <obj_property name="ElementShortName">[48]</obj_property>
+               <obj_property name="ObjectShortName">[48]</obj_property>
+            </wvobject>
+         </wvobject>
+         <wvobject fp_name="vbus366" type="vbus">
+            <obj_property name="label">ANG_0</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/polar_to_cartesian/s_axis_tdata[31]" type="logic">
+               <obj_property name="ElementShortName">[31]</obj_property>
+               <obj_property name="ObjectShortName">[31]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/polar_to_cartesian/s_axis_tdata[30]" type="logic">
+               <obj_property name="ElementShortName">[30]</obj_property>
+               <obj_property name="ObjectShortName">[30]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/polar_to_cartesian/s_axis_tdata[29]" type="logic">
+               <obj_property name="ElementShortName">[29]</obj_property>
+               <obj_property name="ObjectShortName">[29]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/polar_to_cartesian/s_axis_tdata[28]" type="logic">
+               <obj_property name="ElementShortName">[28]</obj_property>
+               <obj_property name="ObjectShortName">[28]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/polar_to_cartesian/s_axis_tdata[27]" type="logic">
+               <obj_property name="ElementShortName">[27]</obj_property>
+               <obj_property name="ObjectShortName">[27]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/polar_to_cartesian/s_axis_tdata[26]" type="logic">
+               <obj_property name="ElementShortName">[26]</obj_property>
+               <obj_property name="ObjectShortName">[26]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/polar_to_cartesian/s_axis_tdata[25]" type="logic">
+               <obj_property name="ElementShortName">[25]</obj_property>
+               <obj_property name="ObjectShortName">[25]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/polar_to_cartesian/s_axis_tdata[24]" type="logic">
+               <obj_property name="ElementShortName">[24]</obj_property>
+               <obj_property name="ObjectShortName">[24]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/polar_to_cartesian/s_axis_tdata[23]" type="logic">
+               <obj_property name="ElementShortName">[23]</obj_property>
+               <obj_property name="ObjectShortName">[23]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/polar_to_cartesian/s_axis_tdata[22]" type="logic">
+               <obj_property name="ElementShortName">[22]</obj_property>
+               <obj_property name="ObjectShortName">[22]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/polar_to_cartesian/s_axis_tdata[21]" type="logic">
+               <obj_property name="ElementShortName">[21]</obj_property>
+               <obj_property name="ObjectShortName">[21]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/polar_to_cartesian/s_axis_tdata[20]" type="logic">
+               <obj_property name="ElementShortName">[20]</obj_property>
+               <obj_property name="ObjectShortName">[20]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/polar_to_cartesian/s_axis_tdata[19]" type="logic">
+               <obj_property name="ElementShortName">[19]</obj_property>
+               <obj_property name="ObjectShortName">[19]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/polar_to_cartesian/s_axis_tdata[18]" type="logic">
+               <obj_property name="ElementShortName">[18]</obj_property>
+               <obj_property name="ObjectShortName">[18]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/polar_to_cartesian/s_axis_tdata[17]" type="logic">
+               <obj_property name="ElementShortName">[17]</obj_property>
+               <obj_property name="ObjectShortName">[17]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/polar_to_cartesian/s_axis_tdata[16]" type="logic">
+               <obj_property name="ElementShortName">[16]</obj_property>
+               <obj_property name="ObjectShortName">[16]</obj_property>
+            </wvobject>
+         </wvobject>
+         <wvobject fp_name="vbus349" type="vbus">
+            <obj_property name="label">ABS_2</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/polar_to_cartesian/s_axis_tdata[79]" type="logic">
+               <obj_property name="ElementShortName">[79]</obj_property>
+               <obj_property name="ObjectShortName">[79]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/polar_to_cartesian/s_axis_tdata[78]" type="logic">
+               <obj_property name="ElementShortName">[78]</obj_property>
+               <obj_property name="ObjectShortName">[78]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/polar_to_cartesian/s_axis_tdata[77]" type="logic">
+               <obj_property name="ElementShortName">[77]</obj_property>
+               <obj_property name="ObjectShortName">[77]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/polar_to_cartesian/s_axis_tdata[76]" type="logic">
+               <obj_property name="ElementShortName">[76]</obj_property>
+               <obj_property name="ObjectShortName">[76]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/polar_to_cartesian/s_axis_tdata[75]" type="logic">
+               <obj_property name="ElementShortName">[75]</obj_property>
+               <obj_property name="ObjectShortName">[75]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/polar_to_cartesian/s_axis_tdata[74]" type="logic">
+               <obj_property name="ElementShortName">[74]</obj_property>
+               <obj_property name="ObjectShortName">[74]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/polar_to_cartesian/s_axis_tdata[73]" type="logic">
+               <obj_property name="ElementShortName">[73]</obj_property>
+               <obj_property name="ObjectShortName">[73]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/polar_to_cartesian/s_axis_tdata[72]" type="logic">
+               <obj_property name="ElementShortName">[72]</obj_property>
+               <obj_property name="ObjectShortName">[72]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/polar_to_cartesian/s_axis_tdata[71]" type="logic">
+               <obj_property name="ElementShortName">[71]</obj_property>
+               <obj_property name="ObjectShortName">[71]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/polar_to_cartesian/s_axis_tdata[70]" type="logic">
+               <obj_property name="ElementShortName">[70]</obj_property>
+               <obj_property name="ObjectShortName">[70]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/polar_to_cartesian/s_axis_tdata[69]" type="logic">
+               <obj_property name="ElementShortName">[69]</obj_property>
+               <obj_property name="ObjectShortName">[69]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/polar_to_cartesian/s_axis_tdata[68]" type="logic">
+               <obj_property name="ElementShortName">[68]</obj_property>
+               <obj_property name="ObjectShortName">[68]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/polar_to_cartesian/s_axis_tdata[67]" type="logic">
+               <obj_property name="ElementShortName">[67]</obj_property>
+               <obj_property name="ObjectShortName">[67]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/polar_to_cartesian/s_axis_tdata[66]" type="logic">
+               <obj_property name="ElementShortName">[66]</obj_property>
+               <obj_property name="ObjectShortName">[66]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/polar_to_cartesian/s_axis_tdata[65]" type="logic">
+               <obj_property name="ElementShortName">[65]</obj_property>
+               <obj_property name="ObjectShortName">[65]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/polar_to_cartesian/s_axis_tdata[64]" type="logic">
+               <obj_property name="ElementShortName">[64]</obj_property>
+               <obj_property name="ObjectShortName">[64]</obj_property>
+            </wvobject>
+         </wvobject>
+         <wvobject fp_name="vbus332" type="vbus">
+            <obj_property name="label">ABS_1</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/polar_to_cartesian/s_axis_tdata[47]" type="logic">
+               <obj_property name="ElementShortName">[47]</obj_property>
+               <obj_property name="ObjectShortName">[47]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/polar_to_cartesian/s_axis_tdata[46]" type="logic">
+               <obj_property name="ElementShortName">[46]</obj_property>
+               <obj_property name="ObjectShortName">[46]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/polar_to_cartesian/s_axis_tdata[45]" type="logic">
+               <obj_property name="ElementShortName">[45]</obj_property>
+               <obj_property name="ObjectShortName">[45]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/polar_to_cartesian/s_axis_tdata[44]" type="logic">
+               <obj_property name="ElementShortName">[44]</obj_property>
+               <obj_property name="ObjectShortName">[44]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/polar_to_cartesian/s_axis_tdata[43]" type="logic">
+               <obj_property name="ElementShortName">[43]</obj_property>
+               <obj_property name="ObjectShortName">[43]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/polar_to_cartesian/s_axis_tdata[42]" type="logic">
+               <obj_property name="ElementShortName">[42]</obj_property>
+               <obj_property name="ObjectShortName">[42]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/polar_to_cartesian/s_axis_tdata[41]" type="logic">
+               <obj_property name="ElementShortName">[41]</obj_property>
+               <obj_property name="ObjectShortName">[41]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/polar_to_cartesian/s_axis_tdata[40]" type="logic">
+               <obj_property name="ElementShortName">[40]</obj_property>
+               <obj_property name="ObjectShortName">[40]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/polar_to_cartesian/s_axis_tdata[39]" type="logic">
+               <obj_property name="ElementShortName">[39]</obj_property>
+               <obj_property name="ObjectShortName">[39]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/polar_to_cartesian/s_axis_tdata[38]" type="logic">
+               <obj_property name="ElementShortName">[38]</obj_property>
+               <obj_property name="ObjectShortName">[38]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/polar_to_cartesian/s_axis_tdata[37]" type="logic">
+               <obj_property name="ElementShortName">[37]</obj_property>
+               <obj_property name="ObjectShortName">[37]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/polar_to_cartesian/s_axis_tdata[36]" type="logic">
+               <obj_property name="ElementShortName">[36]</obj_property>
+               <obj_property name="ObjectShortName">[36]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/polar_to_cartesian/s_axis_tdata[35]" type="logic">
+               <obj_property name="ElementShortName">[35]</obj_property>
+               <obj_property name="ObjectShortName">[35]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/polar_to_cartesian/s_axis_tdata[34]" type="logic">
+               <obj_property name="ElementShortName">[34]</obj_property>
+               <obj_property name="ObjectShortName">[34]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/polar_to_cartesian/s_axis_tdata[33]" type="logic">
+               <obj_property name="ElementShortName">[33]</obj_property>
+               <obj_property name="ObjectShortName">[33]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/polar_to_cartesian/s_axis_tdata[32]" type="logic">
+               <obj_property name="ElementShortName">[32]</obj_property>
+               <obj_property name="ObjectShortName">[32]</obj_property>
+            </wvobject>
+         </wvobject>
+         <wvobject fp_name="vbus315" type="vbus">
+            <obj_property name="label">ABS_0</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/polar_to_cartesian/s_axis_tdata[15]" type="logic">
+               <obj_property name="ElementShortName">[15]</obj_property>
+               <obj_property name="ObjectShortName">[15]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/polar_to_cartesian/s_axis_tdata[14]" type="logic">
+               <obj_property name="ElementShortName">[14]</obj_property>
+               <obj_property name="ObjectShortName">[14]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/polar_to_cartesian/s_axis_tdata[13]" type="logic">
+               <obj_property name="ElementShortName">[13]</obj_property>
+               <obj_property name="ObjectShortName">[13]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/polar_to_cartesian/s_axis_tdata[12]" type="logic">
+               <obj_property name="ElementShortName">[12]</obj_property>
+               <obj_property name="ObjectShortName">[12]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/polar_to_cartesian/s_axis_tdata[11]" type="logic">
+               <obj_property name="ElementShortName">[11]</obj_property>
+               <obj_property name="ObjectShortName">[11]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/polar_to_cartesian/s_axis_tdata[10]" type="logic">
+               <obj_property name="ElementShortName">[10]</obj_property>
+               <obj_property name="ObjectShortName">[10]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/polar_to_cartesian/s_axis_tdata[9]" type="logic">
+               <obj_property name="ElementShortName">[9]</obj_property>
+               <obj_property name="ObjectShortName">[9]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/polar_to_cartesian/s_axis_tdata[8]" type="logic">
+               <obj_property name="ElementShortName">[8]</obj_property>
+               <obj_property name="ObjectShortName">[8]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/polar_to_cartesian/s_axis_tdata[7]" type="logic">
+               <obj_property name="ElementShortName">[7]</obj_property>
+               <obj_property name="ObjectShortName">[7]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/polar_to_cartesian/s_axis_tdata[6]" type="logic">
+               <obj_property name="ElementShortName">[6]</obj_property>
+               <obj_property name="ObjectShortName">[6]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/polar_to_cartesian/s_axis_tdata[5]" type="logic">
+               <obj_property name="ElementShortName">[5]</obj_property>
+               <obj_property name="ObjectShortName">[5]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/polar_to_cartesian/s_axis_tdata[4]" type="logic">
+               <obj_property name="ElementShortName">[4]</obj_property>
+               <obj_property name="ObjectShortName">[4]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/polar_to_cartesian/s_axis_tdata[3]" type="logic">
+               <obj_property name="ElementShortName">[3]</obj_property>
+               <obj_property name="ObjectShortName">[3]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/polar_to_cartesian/s_axis_tdata[2]" type="logic">
+               <obj_property name="ElementShortName">[2]</obj_property>
+               <obj_property name="ObjectShortName">[2]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/polar_to_cartesian/s_axis_tdata[1]" type="logic">
+               <obj_property name="ElementShortName">[1]</obj_property>
+               <obj_property name="ObjectShortName">[1]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/polar_to_cartesian/s_axis_tdata[0]" type="logic">
+               <obj_property name="ElementShortName">[0]</obj_property>
+               <obj_property name="ObjectShortName">[0]</obj_property>
+            </wvobject>
+         </wvobject>
+         <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/polar_to_cartesian/s_axis_tvalid" type="logic">
+            <obj_property name="ElementShortName">s_axis_tvalid</obj_property>
+            <obj_property name="ObjectShortName">s_axis_tvalid</obj_property>
+         </wvobject>
+         <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/polar_to_cartesian/s_axis_tlast" type="logic">
+            <obj_property name="ElementShortName">s_axis_tlast</obj_property>
+            <obj_property name="ObjectShortName">s_axis_tlast</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="group186" type="group">
+         <obj_property name="label">M_AXIS</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/polar_to_cartesian/m_axis_tdata" type="array">
+            <obj_property name="ElementShortName">m_axis_tdata[95:0]</obj_property>
+            <obj_property name="ObjectShortName">m_axis_tdata[95:0]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/polar_to_cartesian/m_axis_tvalid" type="logic">
+            <obj_property name="ElementShortName">m_axis_tvalid</obj_property>
+            <obj_property name="ObjectShortName">m_axis_tvalid</obj_property>
+         </wvobject>
+         <wvobject fp_name="/zf_equalizer_tb/DUT/zf_equalizer_i/polar_to_cartesian/m_axis_tlast" type="logic">
+            <obj_property name="ElementShortName">m_axis_tlast</obj_property>
+            <obj_property name="ObjectShortName">m_axis_tlast</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="group118" type="group">
+         <obj_property name="label">tb</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject fp_name="/zf_equalizer_tb/pre_eq_0_i" type="array">
+            <obj_property name="ElementShortName">pre_eq_0_i[15:0]</obj_property>
+            <obj_property name="ObjectShortName">pre_eq_0_i[15:0]</obj_property>
+            <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+         </wvobject>
+         <wvobject fp_name="/zf_equalizer_tb/pre_eq_1_i" type="array">
+            <obj_property name="ElementShortName">pre_eq_1_i[15:0]</obj_property>
+            <obj_property name="ObjectShortName">pre_eq_1_i[15:0]</obj_property>
+            <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+         </wvobject>
+         <wvobject fp_name="/zf_equalizer_tb/pre_eq_2_i" type="array">
+            <obj_property name="ElementShortName">pre_eq_2_i[15:0]</obj_property>
+            <obj_property name="ObjectShortName">pre_eq_2_i[15:0]</obj_property>
+            <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+         </wvobject>
+         <wvobject fp_name="/zf_equalizer_tb/pre_eq_0_q" type="array">
+            <obj_property name="ElementShortName">pre_eq_0_q[15:0]</obj_property>
+            <obj_property name="ObjectShortName">pre_eq_0_q[15:0]</obj_property>
+            <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+         </wvobject>
+         <wvobject fp_name="/zf_equalizer_tb/pre_eq_1_q" type="array">
+            <obj_property name="ElementShortName">pre_eq_1_q[15:0]</obj_property>
+            <obj_property name="ObjectShortName">pre_eq_1_q[15:0]</obj_property>
+            <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+         </wvobject>
+         <wvobject fp_name="/zf_equalizer_tb/pre_eq_2_q" type="array">
+            <obj_property name="ElementShortName">pre_eq_2_q[15:0]</obj_property>
+            <obj_property name="ObjectShortName">pre_eq_2_q[15:0]</obj_property>
+            <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+         </wvobject>
+      </wvobject>
+   </wvobject>
+</wave_config>

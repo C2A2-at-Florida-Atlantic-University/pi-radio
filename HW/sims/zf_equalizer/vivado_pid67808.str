@@ -1,0 +1,338 @@
+/*
+
+Xilinx Vivado v2022.1 (64-bit) [Major: 2022, Minor: 1]
+SW Build: 3526262 on Mon Apr 18 15:48:16 MDT 2022
+IP Build: 3524634 on Mon Apr 18 20:55:01 MDT 2022
+
+Process ID (PID): 67808
+License: Customer
+Mode: GUI Mode
+
+Current time: 	Mon Mar 06 12:24:44 EST 2023
+Time zone: 	Eastern Standard Time (America/New_York)
+
+OS: Windows 10
+OS Version: 10.0
+OS Architecture: amd64
+Available processors (cores): 24
+
+Screen size: 1920x1080
+Screen resolution (DPI): 100
+Available screens: 1
+Default font: family=Dialog,name=Dialog,style=plain,size=12
+Scale size: 12
+
+Java version: 	11.0.11 64-bit
+Java home: 	C:/Xilinx/Vivado/2022.1/tps/win64/jre11.0.11_9
+Java executable: 	C:/Xilinx/Vivado/2022.1/tps/win64/jre11.0.11_9/bin/java.exe
+Java arguments: 	[-Dsun.java2d.pmoffscreen=false, -Dhttps.protocols=TLSv1,TLSv1.1,TLSv1.2, -Dsun.java2d.xrender=false, -Dsun.java2d.d3d=false, -Dsun.awt.nopixfmt=true, -Dsun.java2d.dpiaware=true, -Dsun.java2d.uiScale.enabled=false, -Xverify:none, -Dswing.aatext=true, -XX:-UsePerfData, -Djdk.map.althashing.threshold=512, -XX:StringTableSize=4072, --add-opens=java.desktop/com.sun.awt=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.plaf.synth=ALL-UNNAMED, --add-opens=java.base/java.nio=ALL-UNNAMED, --add-opens=java.desktop/sun.swing=ALL-UNNAMED, --add-opens=java.desktop/javax.swing=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.tree=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.plaf.basic=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.plaf.synth=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.plaf.basic=ALL-UNNAMED, --add-opens=java.desktop/javax.swing=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.tree=ALL-UNNAMED, --add-opens=java.desktop/java.awt.event=ALL-UNNAMED, --add-exports=java.desktop/javax.swing.plaf.synth=ALL-UNNAMED, --add-exports=java.base/java.nio=ALL-UNNAMED, --add-exports=java.desktop/sun.swing=ALL-UNNAMED, --add-exports=java.desktop/javax.swing=ALL-UNNAMED, --add-exports=java.desktop/javax.swing.tree=ALL-UNNAMED, --add-exports=java.desktop/javax.swing.plaf.basic=ALL-UNNAMED, --add-exports=java.desktop/sun.swing=ALL-UNNAMED, --add-exports=java.desktop/sun.swing.table=ALL-UNNAMED, --add-exports=java.desktop/sun.swing.plaf.synth=ALL-UNNAMED, --add-exports=java.desktop/sun.awt.shell=ALL-UNNAMED, --add-exports=java.base/sun.security.action=ALL-UNNAMED, --add-exports=java.desktop/sun.font=ALL-UNNAMED, -XX:NewSize=60m, -XX:MaxNewSize=60m, -Xms256m, -Xmx3072m, -Xss5m]
+Java initial memory (-Xms): 	256 MB
+Java maximum memory (-Xmx):	 3 GB
+
+
+User name: 	herma
+User home directory: C:/Users/herma
+User working directory: c:/Projects/pi-radio/HW/sims/zf_equalizer
+User country: 	US
+User language: 	en
+User locale: 	en_US
+
+RDI_BASEROOT: C:/Xilinx/Vivado
+HDI_APPROOT: C:/Xilinx/Vivado/2022.1
+RDI_DATADIR: C:/Xilinx/Vivado/2022.1/data
+RDI_BINDIR: C:/Xilinx/Vivado/2022.1/bin
+
+Vivado preferences file: C:/Users/herma/AppData/Roaming/Xilinx/Vivado/2022.1/vivado.xml
+Vivado preferences directory: C:/Users/herma/AppData/Roaming/Xilinx/Vivado/2022.1/
+Vivado layouts directory: C:/Users/herma/AppData/Roaming/Xilinx/Vivado/2022.1/data/layouts
+PlanAhead jar file: 	C:/Xilinx/Vivado/2022.1/lib/classes/planAhead.jar
+Vivado log file: 	c:/Projects/pi-radio/HW/sims/vivado.log
+Vivado journal file: 	c:/Projects/pi-radio/HW/sims/vivado.jou
+Engine tmp dir: 	c:/Projects/pi-radio/HW/sims/.Xil/Vivado-67808-DESKTOP-1UDCE0K
+
+Xilinx Environment Variables
+----------------------------
+XILINX: C:/Xilinx/Vivado/2022.1/ids_lite/ISE
+XILINX_DSP: C:/Xilinx/Vivado/2022.1/ids_lite/ISE
+XILINX_HLS: C:/Xilinx/Vitis_HLS/2022.1
+XILINX_PLANAHEAD: C:/Xilinx/Vivado/2022.1
+XILINX_SDK: C:/Xilinx/Vitis/2022.1
+XILINX_VITIS: C:/Xilinx/Vitis/2022.1
+XILINX_VIVADO: C:/Xilinx/Vivado/2022.1
+XILINX_VIVADO_HLS: C:/Xilinx/Vivado/2022.1
+
+
+GUI allocated memory:	388 MB
+GUI max memory:		3,072 MB
+Engine allocated memory: 1,915 MB
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// [GUI Memory]: 98 MB (+100078kb) [00:00:05]
+// [Engine Memory]: 1,734 MB (+1667197kb) [00:00:05]
+// [GUI Memory]: 158 MB (+57800kb) [00:00:06]
+// [Engine Memory]: 1,854 MB (+34611kb) [00:00:06]
+// [GUI Memory]: 189 MB (+24059kb) [00:00:07]
+// TclEventType: START_PROGRESS_DIALOG
+// JavaFX intialization before: 1678123484842
+// JavaFX initialization after: 1678123485162
+// WARNING: HTimer (Open addressing views timer) is taking 381ms to process. Increasing delay to 1300 ms.
+// TclEventType: START_PROGRESS_DIALOG
+// TclEventType: STOP_PROGRESS_DIALOG
+dismissDialog("Sourcing Tcl script 'build_zf_equalizer_sim.tcl'"); // bA
+// [GUI Memory]: 216 MB (+18242kb) [00:00:08]
+// [Engine Memory]: 1,998 MB (+53408kb) [00:00:08]
+// HMemoryUtils.trashcanNow. Engine heap size: 2,040 MB. GUI used memory: 168 MB. Current time: 3/6/23, 12:24:49 PM EST
+// Tcl Message: update_compile_order -fileset sources_1 
+// Elapsed time: 52 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Simulation, Run Simulation]", 10, false); // n
+selectMenuItem(PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL, "Run Behavioral Simulation"); // ar
+// Run Command: PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL
+selectButton(PAResourceQtoS.SaveProjectUtils_SAVE, "Save"); // a
+dismissDialog("Save Project"); // al
+// TclEventType: RSB_SAVE_DIAGRAM
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SAVE_DIAGRAM
+// Tcl Message: save_bd_design 
+// Tcl Message: Wrote  : <c:\Projects\pi-radio\HW\sims\zf_equalizer\zf_equalizer.srcs\sources_1\bd\zf_equalizer\zf_equalizer.bd>  
+dismissDialog("Save Constraints"); // bA
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: INFO: [Vivado 12-5457] ref source:c:/Projects/pi-radio/HW/sims/zf_equalizer/zf_equalizer.srcs/sources_1/ip/cordic_rec_to_polar/cordic_rec_to_polar.xci 
+// Tcl Message: generate_target Simulation [get_files c:/Projects/pi-radio/HW/sims/zf_equalizer/zf_equalizer.srcs/sources_1/ip/cordic_rec_to_polar/cordic_rec_to_polar.xci] 
+// Tcl Message: INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'cordic_rec_to_polar'... 
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: INFO: [Vivado 12-5457] ref source:c:/Projects/pi-radio/HW/sims/zf_equalizer/zf_equalizer.srcs/sources_1/ip/div_gen_0/div_gen_0.xci 
+// Tcl Message: generate_target Simulation [get_files c:/Projects/pi-radio/HW/sims/zf_equalizer/zf_equalizer.srcs/sources_1/ip/div_gen_0/div_gen_0.xci] 
+// Tcl Message: INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'div_gen_0'... 
+// Tcl Message: INFO: [Vivado 12-5457] ref source:c:/Projects/pi-radio/HW/sims/zf_equalizer/zf_equalizer.srcs/sources_1/ip/div_gen_0/div_gen_0.xci 
+// Tcl Message: generate_target Simulation [get_files c:/Projects/pi-radio/HW/sims/zf_equalizer/zf_equalizer.srcs/sources_1/ip/div_gen_0/div_gen_0.xci] 
+// Tcl Message: INFO: [IP_Flow 19-1706] Not generating 'Simulation' target for IP 'div_gen_0'. Target already exists and is up to date. 
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: INFO: [Vivado 12-5457] ref source:c:/Projects/pi-radio/HW/sims/zf_equalizer/zf_equalizer.srcs/sources_1/ip/cordic_polar_to_rec/cordic_polar_to_rec.xci 
+// Tcl Message: generate_target Simulation [get_files c:/Projects/pi-radio/HW/sims/zf_equalizer/zf_equalizer.srcs/sources_1/ip/cordic_polar_to_rec/cordic_polar_to_rec.xci] 
+// Tcl Message: INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'cordic_polar_to_rec'... 
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_SAVE_DIAGRAM
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SAVE_DIAGRAM
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SAVE_DIAGRAM
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: generate_target Simulation [get_files c:/Projects/pi-radio/HW/sims/zf_equalizer/zf_equalizer.srcs/sources_1/bd/zf_equalizer/zf_equalizer.bd] 
+// Tcl Message: Wrote  : <c:\Projects\pi-radio\HW\sims\zf_equalizer\zf_equalizer.srcs\sources_1\bd\zf_equalizer\zf_equalizer.bd>  
+// Tcl Message: Verilog Output written to : c:/Projects/pi-radio/HW/sims/zf_equalizer/zf_equalizer.gen/sources_1/bd/zf_equalizer/synth/zf_equalizer.v 
+// Tcl Message: Verilog Output written to : c:/Projects/pi-radio/HW/sims/zf_equalizer/zf_equalizer.gen/sources_1/bd/zf_equalizer/sim/zf_equalizer.v Verilog Output written to : c:/Projects/pi-radio/HW/sims/zf_equalizer/zf_equalizer.gen/sources_1/bd/zf_equalizer/hdl/zf_equalizer_wrapper.v 
+// Tcl Message: Exporting to file c:/Projects/pi-radio/HW/sims/zf_equalizer/zf_equalizer.gen/sources_1/bd/zf_equalizer/hw_handoff/zf_equalizer.hwh Generated Hardware Definition File c:/Projects/pi-radio/HW/sims/zf_equalizer/zf_equalizer.gen/sources_1/bd/zf_equalizer/synth/zf_equalizer.hwdef 
+// TclEventType: STOP_PROGRESS_DIALOG
+// Tcl Message: export_ip_user_files -of_objects [get_files c:/Projects/pi-radio/HW/sims/zf_equalizer/zf_equalizer.srcs/sources_1/bd/zf_equalizer/zf_equalizer.bd] -no_script -sync -force -quiet 
+// TclEventType: STOP_PROGRESS_DIALOG
+// TclEventType: PROJECT_CHANGE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: LAUNCH_SIM
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// Tcl Message: launch_simulation 
+// Tcl Message: Command: launch_simulation  
+// Tcl Message: INFO: [Vivado 12-12493] Simulation top is 'zf_equalizer_tb' 
+// Tcl Message: INFO: [USF-XSim-97] Finding global include files... INFO: [USF-XSim-98] Fetching design files from 'sim_1'... INFO: [USF-XSim-2] XSim::Compile design INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'c:/Projects/pi-radio/HW/sims/zf_equalizer/zf_equalizer.sim/sim_1/behav/xsim' 
+// TclEventType: LAUNCH_SIM_LOG
+// Tcl Message: INFO: [USF-XSim-69] 'compile' step finished in '2' seconds INFO: [USF-XSim-3] XSim::Elaborate design INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'c:/Projects/pi-radio/HW/sims/zf_equalizer/zf_equalizer.sim/sim_1/behav/xsim' 
+// Tcl Message: Pass Through NonSizing Optimizer 
+// HMemoryUtils.trashcanNow. Engine heap size: 2,053 MB. GUI used memory: 169 MB. Current time: 3/6/23, 12:26:09 PM EST
+// TclEventType: LAUNCH_SIM
+// TclEventType: STOP_PROGRESS_DIALOG
+// TclEventType: LOAD_FEATURE
+// Tcl Message: Built simulation snapshot zf_equalizer_tb_behav 
+// Tcl Message: run_program: Time (s): cpu = 00:00:01 ; elapsed = 00:00:20 . Memory (MB): peak = 2162.027 ; gain = 14.719 
+// Tcl Message: INFO: [USF-XSim-69] 'elaborate' step finished in '20' seconds INFO: [USF-XSim-4] XSim::Simulate design INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'c:/Projects/pi-radio/HW/sims/zf_equalizer/zf_equalizer.sim/sim_1/behav/xsim' INFO: [USF-XSim-98] *** Running xsim 
+// Tcl Message:    with args "zf_equalizer_tb_behav -key {Behavioral:sim_1:Functional:zf_equalizer_tb} -tclbatch {zf_equalizer_tb.tcl} -protoinst "protoinst_files/zf_equalizer.protoinst" -view {c:/Projects/pi-radio/HW/sims/zf_equalizer/zf_equalizer_tb_behav.wcfg} -log {simulate.log}" 
+// Tcl Message: INFO: [USF-XSim-8] Loading simulator feature 
+// TclEventType: SIMULATION_CREATE_SIMULATION_OBJECT
+// TclEventType: SIMULATION_UPDATE_SIMULATION_STATE
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_UPDATE_STACKS
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_UPDATE_PROTOCOL_INSTANCE_TREE
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_UPDATE_STACKS
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_UPDATE_PROTOCOL_INSTANCE_TREE
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_UPDATE_STACKS
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_UPDATE_PROTOCOL_INSTANCE_TREE
+// Elapsed time: 34 seconds
+closeView(PAResourceOtoP.PAViews_PROJECT_SUMMARY, "Project Summary"); // v
+// Tcl Message: Time resolution is 1 ps 
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_UPDATE_STACKS
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_UPDATE_PROTOCOL_INSTANCE_TREE
+// TclEventType: WAVEFORM_UPDATE_TITLE
+// TclEventType: WAVEFORM_OPEN_WCFG
+// TclEventType: WAVEFORM_DELAYED_MODEL_EVENT
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// Tcl Message: open_wave_config c:/Projects/pi-radio/HW/sims/zf_equalizer/zf_equalizer_tb_behav.wcfg 
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: STOP_PROGRESS_DIALOG
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: STOP_PROGRESS_DIALOG
+// Tcl Message: source zf_equalizer_tb.tcl 
+// Tcl Message: # set curr_wave [current_wave_config] # if { [string length $curr_wave] == 0 } { #   if { [llength [get_objects]] > 0} { #     add_wave / #     set_property needs_save false [current_wave_config] #   } else { #      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console." #   } # } 
+// Tcl Message: INFO: [USF-XSim-96] XSim completed. Design snapshot 'zf_equalizer_tb_behav' loaded. 
+// HMemoryUtils.trashcanNow. Engine heap size: 2,067 MB. GUI used memory: 175 MB. Current time: 3/6/23, 12:26:14 PM EST
+// Tcl Message: launch_simulation: Time (s): cpu = 00:00:06 ; elapsed = 00:00:25 . Memory (MB): peak = 2162.027 ; gain = 14.719 
+// 'd' command handler elapsed time: 36 seconds
+dismissDialog("Run Simulation"); // e
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_MODEL_EVENT
+// Elapsed time: 14 seconds
+selectButton(PAResourceAtoD.CmdMsgDialog_OK, "OK"); // f
+dismissDialog("Critical Messages"); // a
+selectButton(PAResourceCommand.PACommandNames_SIMULATION_LIVE_RUN_ALL, "simulation_live_run_all"); // D
+// Run Command: PAResourceCommand.PACommandNames_SIMULATION_LIVE_RUN_ALL
+// TclEventType: SIMULATION_UPDATE_SIMULATION_STATE
+// TclEventType: SIMULATION_CLEAR_CURRENT_LINE
+// Tcl Message: run all 
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_MOVE_CURSOR
+// TclEventType: SIMULATION_UPDATE_LATEST_TIME
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// [GUI Memory]: 234 MB (+7909kb) [00:01:57]
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_MOVE_CURSOR
+// TclEventType: SIMULATION_UPDATE_LATEST_TIME
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_MOVE_CURSOR
+// TclEventType: SIMULATION_UPDATE_LATEST_TIME
+// TclEventType: SIMULATION_OBJECT_TREE_RESTORED
+// HMemoryUtils.trashcanNow. Engine heap size: 2,074 MB. GUI used memory: 175 MB. Current time: 3/6/23, 12:26:34 PM EST
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: SIMULATION_UPDATE_LATEST_TIME
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_DELAYED_MODEL_EVENT
+// TclEventType: SIMULATION_CURRENT_SCOPE_CHANGED
+// TclEventType: SIMULATION_CURRENT_STACK_CHANGED
+// TclEventType: SIMULATION_UPDATE_STACK_FRAMES
+// TclEventType: SIMULATION_CURRENT_STACK_FRAME_CHANGED
+// TclEventType: SIMULATION_UPDATE_LOCALS
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_UPDATE_STACKS
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_STOPPED
+// TclEventType: SIMULATION_UPDATE_SIMULATION_STATE
+// WARNING: HEventQueue.dispatchEvent() is taking  1162 ms.
+// Tcl Message: $stop called at time : 9704 ns : File "c:/Projects/pi-radio/HW/modules/sim/zf_equalizer/zf_equalizer_tb.sv" Line 637 
+// TclEventType: SIMULATION_UPDATE_SIMULATION_STATE
+// [Engine Memory]: 2,116 MB (+19157kb) [00:01:59]
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_MODEL_EVENT
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "zf_equalizer_tb_behav.wcfg", 0); // m
+expandTree(RDIResource.WaveformNameTree_WAVEFORM_NAME_TREE, "[true, polar_to_cartesian]", 1); // r
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_SELECTED_WAVE_OBJECT_NAMES
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_SELECTED_WAVE_OBJECT_NAMES
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_SELECTED_WAVE_OBJECT_NAMES
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_SELECTED_WAVE_OBJECT_NAMES
+expandTree(RDIResource.WaveformNameTree_WAVEFORM_NAME_TREE, "[true, polar_to_cartesian, S_AXIS]", 2); // r
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_SELECTED_WAVE_OBJECT_NAMES
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+expandTree(RDIResource.WaveformNameTree_WAVEFORM_NAME_TREE, "[true, polar_to_cartesian, M_AXIS]", 12); // r
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_SELECTED_WAVE_OBJECT_NAMES
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+expandTree(RDIResource.WaveformNameTree_WAVEFORM_NAME_TREE, "[true, polar_to_cartesian, tb]", 16); // r
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_SELECTED_WAVE_OBJECT_NAMES
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// HMemoryUtils.trashcanNow. Engine heap size: 2,117 MB. GUI used memory: 218 MB. Current time: 3/6/23, 12:26:42 PM EST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_SELECTED_WAVE_OBJECT_NAMES
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 2,117 MB. GUI used memory: 177 MB. Current time: 3/6/23, 12:56:38 PM EST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM

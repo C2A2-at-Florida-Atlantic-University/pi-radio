@@ -29,6 +29,7 @@ module zf_equalizer_tb();
   int fd_data_polar;
   int fd_out_file;
   int fd_dds_file;
+  int fd_polar_to_cart_file;
 
   int ofdm_symbols;
 
@@ -72,6 +73,9 @@ module zf_equalizer_tb();
 
   logic [15:0]                      eq_0_i,eq_1_i,eq_2_i;
   logic [15:0]                      eq_0_q,eq_1_q,eq_2_q;
+  
+  logic [15:0]                      pre_eq_0_i,pre_eq_1_i,pre_eq_2_i;
+  logic [15:0]                      pre_eq_0_q,pre_eq_1_q,pre_eq_2_q;
 
   logic                             r_clk;
   logic                             r_nRst;
@@ -456,7 +460,46 @@ module zf_equalizer_tb();
   end
 
 //---------------------------------------------------------------
-// Scoreboard polar to cartesian conversion
+// Scoreboard polar to cartesian conversion Input
+//---------------------------------------------------------------
+  initial begin
+    
+    //fd_out_file = $fopen("c:/Projects/pi-radio/HW/modules/sim/zf_equalizer/polar_to_cart.txt","w");
+    fd_polar_to_cart_file = $fopen("../../../../../../modules/sim/zf_equalizer/polar_to_cart.txt","w");
+    if (fd_polar_to_cart_file) $display("File was opened successfully: %0d ",fd_polar_to_cart_file);
+    else begin
+      $display("File was NOT opened successfully: %0d",fd_polar_to_cart_file);
+      $stop;
+    end
+
+    #(CLOCK_PERIOD*106);
+
+    for (int k = 0; k < ofdm_symbols; k++) begin
+      for (int i = 0; i < 256; i++) begin
+        if (DUT.zf_equalizer_i.polar_to_cartesian.s_axis_tvalid == 1) begin
+          if (i != 0) begin
+            pre_eq_0_i = DUT.zf_equalizer_i.polar_to_cartesian.s_axis_tdata[15:0];
+            pre_eq_0_q = DUT.zf_equalizer_i.polar_to_cartesian.s_axis_tdata[31:16];
+            pre_eq_1_i = DUT.zf_equalizer_i.polar_to_cartesian.s_axis_tdata[47:32];
+            pre_eq_1_q = DUT.zf_equalizer_i.polar_to_cartesian.s_axis_tdata[63:48];
+            pre_eq_2_i = DUT.zf_equalizer_i.polar_to_cartesian.s_axis_tdata[79:64];
+            pre_eq_2_q = DUT.zf_equalizer_i.polar_to_cartesian.s_axis_tdata[95:80];
+            $fdisplay(fd_polar_to_cart_file,"%d, %d",$signed(pre_eq_0_i),$signed(pre_eq_0_q));
+            $fdisplay(fd_polar_to_cart_file,"%d, %d",$signed(pre_eq_1_i),$signed(pre_eq_1_q));
+            $fdisplay(fd_polar_to_cart_file,"%d, %d",$signed(pre_eq_2_i),$signed(pre_eq_2_q));
+          end
+        end
+        #CLOCK_PERIOD;
+      end
+      #(CLOCK_PERIOD*64);
+    end
+
+    $fclose(fd_polar_to_cart_file);
+
+  end
+
+//---------------------------------------------------------------
+// Scoreboard polar to cartesian conversion Output
 //---------------------------------------------------------------
   initial begin
     

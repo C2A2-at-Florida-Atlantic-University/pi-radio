@@ -131,12 +131,4 @@ begin
   -- Combine samples and drop pilot sample
   m_axis_tdata                    <= cordic_iq_2 & cordic_iq_1 & cordic_iq_0;
 
-  p_DELAY_TDATA : process(axis_aclk)
-  begin
-    if rising_edge(axis_aclk) then
-      --m_axis_tvalid               <= w_axis_tvalid;
-      --m_axis_tlast                <= w_axis_tlast;
-    end if;
-  end process p_DELAY_TDATA;
-
 end architecture RTL;
