@@ -24,7 +24,6 @@ update_compile_order -fileset sim_1
 set_property -name {xsim.simulate.runtime} -value {} -objects [get_filesets sim_1]
 cd $PI_RADIO_REPO_PATH/HW/sims/zf_equalizer
 open_bd_design {zf_equalizer.srcs/sources_1/bd/zf_equalizer/zf_equalizer.bd}
-set_property -dict [list CONFIG.Coe_File {C:/Projects/pi-radio/HW/modules/sim/zf_equalizer/bram_pilot_init.coe}] [get_bd_cells blk_mem_gen_0]
 
 add_files -fileset sim_1 -norecurse $PI_RADIO_REPO_PATH/HW/sims/zf_equalizer/zf_equalizer_tb_behav.wcfg
 set_property xsim.view $PI_RADIO_REPO_PATH/HW/sims/zf_equalizer/zf_equalizer_tb_behav.wcfg [get_filesets sim_1]
