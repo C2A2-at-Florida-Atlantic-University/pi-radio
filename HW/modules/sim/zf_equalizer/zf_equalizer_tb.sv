@@ -74,8 +74,8 @@ module zf_equalizer_tb();
   logic [15:0]                      eq_0_i,eq_1_i,eq_2_i;
   logic [15:0]                      eq_0_q,eq_1_q,eq_2_q;
   
-  logic [15:0]                      pre_eq_0_i,pre_eq_1_i,pre_eq_2_i;
-  logic [15:0]                      pre_eq_0_q,pre_eq_1_q,pre_eq_2_q;
+  logic [15:0]                      pre_eq_0_i,pre_eq_1_i,pre_eq_2_i,pre_eq_3_i;
+  logic [15:0]                      pre_eq_0_q,pre_eq_1_q,pre_eq_2_q,pre_eq_3_q;
 
   logic                             r_clk;
   logic                             r_nRst;
@@ -125,7 +125,7 @@ module zf_equalizer_tb();
       $stop;
     end
 
-    #(CLOCK_PERIOD*37);
+    #(CLOCK_PERIOD*38);
     
     for (int k = 0; k < ofdm_symbols; k++) begin
       for (int i = 0; i < 256; i++) begin
@@ -157,7 +157,7 @@ module zf_equalizer_tb();
       $stop;
     end
 
-    #(CLOCK_PERIOD*40);
+    #(CLOCK_PERIOD*41);
 
     for (int k = 0; k < ofdm_symbols; k++) begin
       for (int i = 0; i < 256; i++) begin
@@ -189,7 +189,7 @@ module zf_equalizer_tb();
       $stop;
     end
 
-    #(CLOCK_PERIOD*60);
+    #(CLOCK_PERIOD*61);
 
     for (int k = 0; k < ofdm_symbols; k++) begin
       for (int i = 0; i < 256; i++) begin
@@ -221,7 +221,7 @@ module zf_equalizer_tb();
       $stop;
     end
 
-    #(CLOCK_PERIOD*60);
+    #(CLOCK_PERIOD*61);
 
     for (int k = 0; k < ofdm_symbols; k++) begin
       for (int i = 0; i < 256; i++) begin
@@ -261,7 +261,7 @@ module zf_equalizer_tb();
       $stop;
     end
 
-    #(CLOCK_PERIOD*61);
+    #(CLOCK_PERIOD*62);
 
     for (int k = 0; k < ofdm_symbols; k++) begin
       for (int i = 0; i < 256; i++) begin
@@ -295,7 +295,7 @@ module zf_equalizer_tb();
       $stop;
     end
 
-    #(CLOCK_PERIOD*83);
+    #(CLOCK_PERIOD*84);
 
     for (int k = 0; k < ofdm_symbols; k++) begin
       for (int i = 0; i < 256; i++) begin
@@ -326,7 +326,7 @@ module zf_equalizer_tb();
       $stop;
     end
 
-    #(CLOCK_PERIOD*85);
+    #(CLOCK_PERIOD*86);
 
     for (int k = 0; k < ofdm_symbols; k++) begin
       for (int i = 0; i < 256; i++) begin
@@ -375,7 +375,7 @@ module zf_equalizer_tb();
       $stop;
     end
 
-    #(CLOCK_PERIOD*85);
+    #(CLOCK_PERIOD*86);
 
     for (int k = 0; k < ofdm_symbols; k++) begin
       for (int i = 0; i < 256; i++) begin
@@ -430,7 +430,7 @@ module zf_equalizer_tb();
       $stop;
     end
 
-    #(CLOCK_PERIOD*106);
+    #(CLOCK_PERIOD*107);
 
     for (int k = 0; k < ofdm_symbols; k++) begin
       for (int i = 0; i < 256; i++) begin
@@ -472,7 +472,7 @@ module zf_equalizer_tb();
       $stop;
     end
 
-    #(CLOCK_PERIOD*106);
+    #(CLOCK_PERIOD*107);
 
     for (int k = 0; k < ofdm_symbols; k++) begin
       for (int i = 0; i < 256; i++) begin
@@ -484,9 +484,11 @@ module zf_equalizer_tb();
             pre_eq_1_q = DUT.zf_equalizer_i.polar_to_cartesian.s_axis_tdata[63:48];
             pre_eq_2_i = DUT.zf_equalizer_i.polar_to_cartesian.s_axis_tdata[79:64];
             pre_eq_2_q = DUT.zf_equalizer_i.polar_to_cartesian.s_axis_tdata[95:80];
-            $fdisplay(fd_polar_to_cart_file,"%d, %d",$signed(pre_eq_0_i),$signed(pre_eq_0_q));
-            $fdisplay(fd_polar_to_cart_file,"%d, %d",$signed(pre_eq_1_i),$signed(pre_eq_1_q));
-            $fdisplay(fd_polar_to_cart_file,"%d, %d",$signed(pre_eq_2_i),$signed(pre_eq_2_q));
+            pre_eq_3_i = DUT.zf_equalizer_i.polar_to_cartesian.s_axis_tdata[111:96];
+            pre_eq_3_q = DUT.zf_equalizer_i.polar_to_cartesian.s_axis_tdata[127:112];
+            $fdisplay(fd_polar_to_cart_file,"%d, %d",$signed(pre_eq_0_i),$signed(pre_eq_1_q));
+            $fdisplay(fd_polar_to_cart_file,"%d, %d",$signed(pre_eq_1_i),$signed(pre_eq_2_q));
+            $fdisplay(fd_polar_to_cart_file,"%d, %d",$signed(pre_eq_2_i),$signed(pre_eq_3_q));
           end
         end
         #CLOCK_PERIOD;
