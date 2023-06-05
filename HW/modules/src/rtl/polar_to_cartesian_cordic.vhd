@@ -56,19 +56,24 @@ architecture RTL of polar_to_cartesian_cordic is
   signal cordic_iq_0              : std_logic_vector(31 downto 0);
   signal cordic_iq_1              : std_logic_vector(31 downto 0);
   signal cordic_iq_2              : std_logic_vector(31 downto 0);
+  signal ang0_shift               : std_logic_vector(15 downto 0);
+  signal ang1_shift               : std_logic_vector(15 downto 0);
+  signal ang2_shift               : std_logic_vector(15 downto 0);
 
 begin
 
   ----------------------------------------------------------------------
   -- Sample 0
   cordic_mag_0                    <= X"0000" & s_axis_tdata(15 downto 0);
-
+  ang0_shift                      <= s_axis_tdata(31 downto 16);
+  ang1_shift                      <= s_axis_tdata(63 downto 48);
+  ang2_shift                      <= s_axis_tdata(95 downto 80);
   cordic_polar_to_rec_inst_0 : cordic_polar_to_rec
     port map(
       aclk                        => axis_aclk,
       s_axis_phase_tvalid         => s_axis_tvalid,
       s_axis_phase_tlast          => s_axis_tlast,
-      s_axis_phase_tdata          => s_axis_tdata(31 downto 16),
+      s_axis_phase_tdata          => ang0_shift,
       s_axis_cartesian_tvalid     => s_axis_tvalid,
       s_axis_cartesian_tlast      => s_axis_tlast,
       s_axis_cartesian_tdata      => cordic_mag_0,
@@ -86,7 +91,7 @@ begin
       aclk                        => axis_aclk,
       s_axis_phase_tvalid         => s_axis_tvalid,
       s_axis_phase_tlast          => s_axis_tlast,
-      s_axis_phase_tdata          => s_axis_tdata(63 downto 48),
+      s_axis_phase_tdata          => ang1_shift,
       s_axis_cartesian_tvalid     => s_axis_tvalid,
       s_axis_cartesian_tlast      => s_axis_tlast,
       s_axis_cartesian_tdata      => cordic_mag_1,
@@ -104,7 +109,7 @@ begin
       aclk                        => axis_aclk,
       s_axis_phase_tvalid         => s_axis_tvalid,
       s_axis_phase_tlast          => s_axis_tlast,
-      s_axis_phase_tdata          => s_axis_tdata(95 downto 80),
+      s_axis_phase_tdata          => ang2_shift,
       s_axis_cartesian_tvalid     => s_axis_tvalid,
       s_axis_cartesian_tlast      => s_axis_tlast,
       s_axis_cartesian_tdata      => cordic_mag_2,

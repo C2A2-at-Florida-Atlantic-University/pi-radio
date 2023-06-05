@@ -31,7 +31,7 @@ module zf_equalizer_tb();
   int fd_dds_file;
   int fd_polar_to_cart_file;
 
-  int ofdm_symbols;
+  int ofdm_symbols = 3;
 
   logic [15:0]                      i_data1,q_data1;
   logic [15:0]                      i_data2,q_data2;
@@ -96,7 +96,6 @@ module zf_equalizer_tb();
     .m_axis_tdata                   (),
     .m_axis_tlast                   (),
     .m_axis_tvalid                  (),
-    .m_axis_tready                  (1'b1),
 
     .s_axis_tdata                   (in_axis_tdata),
     .s_axis_tlast                   (in_axis_tlast),
@@ -208,7 +207,8 @@ module zf_equalizer_tb();
     $fclose(fd_cordic_rx_out_file);
 
   end
-
+    logic [12 : 0] count_data = 0;
+    logic [31 : 0] data [0 : 10000];
 //---------------------------------------------------------------
 // Scoreboard cordic out tx
 //---------------------------------------------------------------
@@ -462,6 +462,11 @@ module zf_equalizer_tb();
 //---------------------------------------------------------------
 // Scoreboard polar to cartesian conversion Input
 //---------------------------------------------------------------
+
+//    {DUT.zf_equalizer_i.polar_to_cartesian.inst.cordic_polar_to_rec_inst_0.s_axis_phase_tdata[15 : 0],
+//                                         DUT.zf_equalizer_i.polar_to_cartesian.s_axis_tdata[0 +:16]};
+    logic [15 : 0] test;
+    
   initial begin
     
     //fd_out_file = $fopen("c:/Projects/pi-radio/HW/modules/sim/zf_equalizer/polar_to_cart.txt","w");
@@ -484,6 +489,7 @@ module zf_equalizer_tb();
             pre_eq_1_q = DUT.zf_equalizer_i.polar_to_cartesian.s_axis_tdata[63:48];
             pre_eq_2_i = DUT.zf_equalizer_i.polar_to_cartesian.s_axis_tdata[79:64];
             pre_eq_2_q = DUT.zf_equalizer_i.polar_to_cartesian.s_axis_tdata[95:80];
+
             //pre_eq_3_i = DUT.zf_equalizer_i.polar_to_cartesian.s_axis_tdata[111:96];
             //pre_eq_3_q = DUT.zf_equalizer_i.polar_to_cartesian.s_axis_tdata[127:112];
             $fdisplay(fd_polar_to_cart_file,"%d, %d",$signed(pre_eq_0_i),$signed(pre_eq_0_q));
@@ -503,6 +509,8 @@ module zf_equalizer_tb();
 //---------------------------------------------------------------
 // Scoreboard polar to cartesian conversion Output
 //---------------------------------------------------------------
+
+
   initial begin
     
     //fd_out_file = $fopen("c:/Projects/pi-radio/HW/modules/sim/zf_equalizer/eq_out.txt","w");
@@ -525,6 +533,11 @@ module zf_equalizer_tb();
           eq_1_q = DUT.zf_equalizer_i.polar_to_cartesian.m_axis_tdata[63:48];
           eq_2_i = DUT.zf_equalizer_i.polar_to_cartesian.m_axis_tdata[79:64];
           eq_2_q = DUT.zf_equalizer_i.polar_to_cartesian.m_axis_tdata[95:80];
+            data[count_data] <= DUT.zf_equalizer_i.polar_to_cartesian.m_axis_tdata[0 +:32];
+            data[count_data + 1 ] <= DUT.zf_equalizer_i.polar_to_cartesian.m_axis_tdata[32 +:32];
+            data[count_data + 2 ] <= DUT.zf_equalizer_i.polar_to_cartesian.m_axis_tdata[64 +:32];
+            count_data <= count_data + 3;
+
           $fdisplay(fd_out_file,"%d, %d",$signed(eq_0_i),$signed(eq_0_q));
           $fdisplay(fd_out_file,"%d, %d",$signed(eq_1_i),$signed(eq_1_q));
           $fdisplay(fd_out_file,"%d, %d",$signed(eq_2_i),$signed(eq_2_q));
@@ -567,7 +580,13 @@ module zf_equalizer_tb();
 
     #2000;
   end
-      
+  
+  logic [31 : 0] samples_in [0 : 10200];
+  
+  initial begin
+    $readmemh("../../../../../../modules/sim/zf_equalizer/fft_out.txt", samples_in, 0, 3*1024);
+  end
+ int i,k;     
 
 //---------------------------------------------------------------
 // Stimulate design
@@ -606,19 +625,22 @@ module zf_equalizer_tb();
       $stop;
     end
 
-    $fscanf(fd_info,"%d",ofdm_symbols);
-    $display("Number of OFDM symbols: %d",ofdm_symbols);
-    
+    //$fscanf(fd_info,"%d",ofdm_symbols);
+    //$display("Number of OFDM symbols: %d",ofdm_symbols);
     #(CLOCK_PERIOD*6);
-
-    for (int k = 0; k < ofdm_symbols; k++) begin
-      for (int i = 0; i < 256; i++) begin
-        $fscanf(fd,"%d, %d",i_data1,q_data1);
-        $fscanf(fd,"%d, %d",i_data2,q_data2);
-        $fscanf(fd,"%d, %d",i_data3,q_data3);
-        $fscanf(fd,"%d, %d",i_data4,q_data4);
-        in_axis_tdata                 <= {q_data4,i_data4,q_data3,i_data3,
-                                          q_data2,i_data2,q_data1,i_data1};
+    
+    for ( k = 0; k < ofdm_symbols; k++) begin
+      for ( i = 0; i < 256; i++) begin
+//        $fscanf(c(),"%d, %d",i_data1,q_data1);
+//        $fscanf(fd,"%d, %d",i_data2,q_data2);
+//        $fscanf(fd,"%d, %d",i_data3,q_data3);
+//        $fscanf(fd,"%d, %d",i_data4,q_data4);
+//        in_axis_tdata                 <= {q_data4,i_data4,q_data3,i_data3,
+//                                          q_data2,i_data2,q_data1,i_data1};
+        in_axis_tdata                 <= {samples_in[(k*1024 + i * 4 + 3)],
+                                            samples_in[(k*1024 + i * 4 + 2)],
+                                            samples_in[(k*1024 + i * 4 + 1)], 
+                                            samples_in[(k*1024 + i * 4)]};
         i_rx_pilot                    <= i_data4;
         q_rx_pilot                    <= q_data4;
         pilot_rx_tdata                <= {q_data4,i_data4};
@@ -637,7 +659,7 @@ module zf_equalizer_tb();
     $fclose(fd);
     $fclose(fd_info);
     $fclose(fd_coe_file);
-    $stop;
+     $stop;
   end
 
 endmodule
