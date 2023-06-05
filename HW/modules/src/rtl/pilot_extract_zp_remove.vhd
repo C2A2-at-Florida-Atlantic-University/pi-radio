@@ -45,7 +45,9 @@ architecture RTL of pilot_extract_zp_remove is
   -- ZP_LOW from 0 to 110
   constant ZP_LOW                 : integer := 112/4;
   -- ZP_HIGH from 912 to 1023
-  constant ZP_HIGH                : integer := 912/4;
+  constant ZP_HIGH                : integer := 912/4 + 1;
+  
+  constant ZP_MIDDLE              : integer := 512/4;
 
   attribute X_INTERFACE_INFO      : string;
   attribute X_INTERFACE_PARAMETER : string;
@@ -66,6 +68,11 @@ architecture RTL of pilot_extract_zp_remove is
   signal o_tdata                  : std_logic_vector(127 downto 0);
   signal o_tvalid                 : std_logic;
   signal o_tlast                  : std_logic;
+  
+  signal out_sr                   : std_logic_vector(255 downto 0);
+  signal avail                    : std_logic_vector(7 downto 0);
+  signal pilot_valid              : std_logic;
+  signal data_valid               : std_logic;
 
 begin
 
@@ -106,33 +113,83 @@ begin
   end process p_CREATE_COUNTERS;
 
   o_symbol_number                 <= symbol_counter;
-
+  o_tvalid                        <= '1' when avail = std_logic_vector(to_unsigned(4, 8)) else '0';
+  o_tdata                         <= out_sr(255 downto 128);
   -- Process to remove zero carriers
   p_REMOVE_ZP_CARRIERS : process(axis_aclk, axis_aresetn)
   begin
     if axis_aresetn = '0' then
+       pilot_valid <= '0';
+       data_valid <= '0';
       NULL;
     elsif rising_edge(axis_aclk) then
-      if nfft_counter < ZP_LOW then
-        o_tdata                   <= (others => '0');
-        o_tvalid                  <= '0';
-        o_tlast                   <= '0';
-      elsif nfft_counter = ZP_LOW then
-        o_tdata                   <= r_tdata(127 downto 96) & X"000000000000000000000000";
-        o_tvalid                  <= '1';
-        o_tlast                   <= '0';
-      elsif nfft_counter < ZP_HIGH then
-        o_tdata                   <= r_tdata;
-        o_tvalid                  <= '1';
-        o_tlast                   <= '0';
-      elsif nfft_counter = ZP_HIGH then
-        o_tdata                   <= r_tdata;
-        o_tvalid                  <= '1';
-        o_tlast                   <= '1';
-      elsif nfft_counter > ZP_HIGH then
-        o_tdata                   <= (others => '0');
-        o_tvalid                  <= '0';
-        o_tlast                   <= '0';
+--      if nfft_counter < ZP_LOW then
+--        o_tdata                   <= (others => '0');
+--        o_tvalid                  <= '0';
+--        o_tlast                   <= '0';
+--      elsif nfft_counter = ZP_LOW then
+--        o_tdata                   <= r_tdata(127 downto 96) & X"000000000000000000000000";
+--        o_tvalid                  <= '1';
+--        o_tlast                   <= '0';
+--      elsif nfft_counter < ZP_HIGH then
+--        o_tdata                   <= r_tdata;
+--        o_tvalid                  <= '1';
+--        o_tlast                   <= '0';
+--      elsif nfft_counter = ZP_HIGH then
+--        o_tdata                   <= r_tdata;
+--        o_tvalid                  <= '1';
+--        o_tlast                   <= '1';
+--      elsif nfft_counter > ZP_HIGH then
+--        o_tdata                   <= (others => '0');
+--        o_tvalid                  <= '0';
+--        o_tlast                   <= '0';
+        if nfft_counter < ZP_LOW then
+            avail <= std_logic_vector(to_unsigned(0, 8));
+        elsif nfft_counter = ZP_LOW then
+            pilot_valid <= '0';
+            avail <= std_logic_vector(to_unsigned(0, 8));                        
+            out_sr <=r_tdata(127 downto 0) & X"00000000000000000000000000000000";
+        elsif nfft_counter = ZP_LOW + 1 then
+            pilot_valid <= '1';
+            data_valid <= '1';
+            avail <= std_logic_vector(to_unsigned(4, 8));                        
+            out_sr <= out_sr(255 downto 224) & r_tdata(95 downto 0) & r_tdata(127 downto 96) & X"000000000000000000000000";
+        elsif (nfft_counter > ZP_LOW + 1) and (nfft_counter < ZP_MIDDLE) then
+            data_valid <= '1';
+            pilot_valid <= '1';
+            avail <= std_logic_vector(to_unsigned(4, 8));
+            out_sr <=  out_sr(127 downto 96) & r_tdata(95 downto 0) & r_tdata(127 downto 96) & X"000000000000000000000000";
+        elsif (nfft_counter = ZP_MIDDLE) then
+            data_valid <= '1';
+            pilot_valid <= '1';
+            avail <= std_logic_vector(to_unsigned(4, 8));
+            out_sr <= out_sr(127 downto 96) & r_tdata(95 downto 0) & X"00000000000000000000000000000000";
+        elsif (nfft_counter = ZP_MIDDLE + 1) then
+            data_valid <= '0';
+            pilot_valid <= '0';
+            avail <= std_logic_vector(to_unsigned(3, 8));
+            out_sr <=r_tdata(63 downto 32) & X"00000000" & r_tdata(127 downto 64)& X"00000000000000000000000000000000";
+        elsif (nfft_counter = ZP_MIDDLE + 2 ) then
+            data_valid <= '1';
+            pilot_valid <= '1';
+            avail <= std_logic_vector(to_unsigned(4, 8));
+            out_sr <= out_sr(255 downto 224) & r_tdata(31 downto 0) & out_sr(191 downto 128) 
+                                & r_tdata(63 downto 32) & X"00000000" & r_tdata(127 downto 64);
+        elsif(nfft_counter > ZP_MIDDLE + 2 and nfft_counter < ZP_HIGH) then
+            data_valid <= '1';
+            pilot_valid <= '1';
+            avail <= std_logic_vector(to_unsigned(4, 8));
+            out_sr <= out_sr(127 downto 96) & r_tdata(31 downto 0) & out_sr(63 downto 0) &
+                                 r_tdata(63 downto 32) & X"00000000" & r_tdata(127 downto 64) ;
+        elsif (nfft_counter = ZP_HIGH) then
+            data_valid <= '1';
+            pilot_valid <= '1';
+            avail <= std_logic_vector(to_unsigned(4, 8));
+            out_sr <= out_sr(127 downto 96) & r_tdata(31 downto 0) & out_sr(63 downto 0) & X"00000000000000000000000000000000";
+        else
+            data_valid <= '0';
+            pilot_valid <= '0';
+            avail <= std_logic_vector(to_unsigned(0, 8));
       end if;
     end if;
   end process p_REMOVE_ZP_CARRIERS;
