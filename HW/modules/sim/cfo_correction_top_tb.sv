@@ -485,7 +485,7 @@ module cfo_correction_top_tb();
       $stop;
     end
 
-    #(CLOCK_PERIOD*(c_PRECISION+357)); //351
+    #(CLOCK_PERIOD*(c_PRECISION+361)); //351
 
     for (int i = 0; i < (ofdm_symbols*256); i++) begin
       
@@ -570,7 +570,7 @@ module cfo_correction_top_tb();
       $stop;
     end
 
-    #(CLOCK_PERIOD*(c_PRECISION+357));
+    #(CLOCK_PERIOD*(c_PRECISION+374));
 
     for (int i = 0; i < (ofdm_symbols*256); i++) begin
 
@@ -617,7 +617,7 @@ module cfo_correction_top_tb();
       $stop;
     end
     
-    #(CLOCK_PERIOD*(c_PRECISION+365));
+    #(CLOCK_PERIOD*(c_PRECISION+382));
     
     for (int i = 0; i < (ofdm_symbols*256); i++) begin
 
@@ -724,8 +724,8 @@ module cfo_correction_top_tb();
 // Stimulate design
 //---------------------------------------------------------------
   initial begin
-    fd = $fopen("../../../../../../modules/sim/cw_input_samples.txt","r");
-    //fd = $fopen("../../../../../../modules/sim/equalizer_input_samples.txt","r");
+    //fd = $fopen("../../../../../../modules/sim/cw_input_samples.txt","r");
+    fd = $fopen("../../../../../../modules/sim/equalizer_input_samples.txt","r");
     //fd = $fopen("c:/Projects/pi-radio/HW/modules/sim/equalizer_input_samples.txt","r");
     if (fd) $display("File was opened successfully: %0d ",fd);
     else begin   

@@ -43,7 +43,7 @@ architecture RTL of playback_bram is
   
   attribute X_INTERFACE_INFO      of axis_aclk    : signal is "xilinx.com:signal:clock:1.0 axis_aclk CLK";
   attribute X_INTERFACE_PARAMETER of axis_aclk    : 
-    signal is "ASSOCIATED_BUSIF axis_aclk:M_AXIS, FREQ_HZ 249997498";
+    signal is "ASSOCIATED_BUSIF axis_aclk:M_AXIS, FREQ_HZ 250000000";
 
   attribute X_INTERFACE_INFO      of BRAM_PORT_addr   : signal is "xilinx.com:interface:bram:1.0 BRAM_PORT ADDR";
   attribute X_INTERFACE_INFO      of BRAM_PORT_clk    : signal is "xilinx.com:interface:bram:1.0 BRAM_PORT CLK";

@@ -36,7 +36,7 @@ architecture RTL of pipeline is
   
   attribute X_INTERFACE_INFO      of axis_aclk    : signal is "xilinx.com:signal:clock:1.0 axis_aclk CLK";
   attribute X_INTERFACE_PARAMETER of axis_aclk    : 
-    signal is "ASSOCIATED_BUSIF axis_aclk:s_axis:m_axis, FREQ_HZ 249997498";
+    signal is "ASSOCIATED_BUSIF axis_aclk:s_axis:m_axis, FREQ_HZ 250000000";
 
   type t_data_array is array (0 to g_DELAY_CYCLES-1) of std_logic_vector(g_TDATA_WIDTH-1 downto 0);
   signal pipeline_tdata           : t_data_array := (others => (others => '0'));

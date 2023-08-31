@@ -36,7 +36,7 @@ architecture RTL of polar_to_cartesian is
   
   attribute X_INTERFACE_INFO      of axis_aclk    : signal is "xilinx.com:signal:clock:1.0 axis_aclk CLK";
   attribute X_INTERFACE_PARAMETER of axis_aclk    : 
-    signal is "ASSOCIATED_BUSIF axis_aclk:s_axis:m_axis, FREQ_HZ 249997498";
+    signal is "ASSOCIATED_BUSIF axis_aclk:s_axis:m_axis, FREQ_HZ 250000000";
 
   signal dds_tvalid               : std_logic;
   signal dds_0_tdata              : std_logic_vector(31 downto 0);

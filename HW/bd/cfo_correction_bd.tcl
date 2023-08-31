@@ -335,12 +335,12 @@ proc create_root_design { parentCell } {
   # Create interface ports
   set m_axis [ create_bd_intf_port -mode Master -vlnv xilinx.com:interface:axis_rtl:1.0 m_axis ]
   set_property -dict [ list \
-   CONFIG.FREQ_HZ {99999001} \
+   CONFIG.FREQ_HZ {250000000} \
    ] $m_axis
 
   set s_axis [ create_bd_intf_port -mode Slave -vlnv xilinx.com:interface:axis_rtl:1.0 s_axis ]
   set_property -dict [ list \
-   CONFIG.FREQ_HZ {99999001} \
+   CONFIG.FREQ_HZ {250000000} \
    CONFIG.HAS_TKEEP {0} \
    CONFIG.HAS_TLAST {1} \
    CONFIG.HAS_TREADY {0} \
@@ -354,7 +354,7 @@ proc create_root_design { parentCell } {
 
 
   # Create ports
-  set axis_aclk [ create_bd_port -dir I -type clk -freq_hz 99999001 axis_aclk ]
+  set axis_aclk [ create_bd_port -dir I -type clk -freq_hz 250000000 axis_aclk ]
   set_property -dict [ list \
    CONFIG.ASSOCIATED_BUSIF {s_axis:m_axis} \
    CONFIG.ASSOCIATED_RESET {axis_aresetn} \

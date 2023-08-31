@@ -46,7 +46,7 @@ architecture RTL of mixer is
   
   attribute X_INTERFACE_INFO      of axis_aclk      : signal is "xilinx.com:signal:clock:1.0 axis_aclk CLK";
   attribute X_INTERFACE_PARAMETER of axis_aclk      : 
-    signal is "ASSOCIATED_BUSIF axis_aclk:s_axis0:s_axis1:m_axis, FREQ_HZ 249997498";
+    signal is "ASSOCIATED_BUSIF axis_aclk:s_axis0:s_axis1:m_axis, FREQ_HZ 250000000";
 
   constant DELAY_VAL              : integer         := 6;
   signal tlast_pipe               : std_logic_vector(DELAY_VAL-1 downto 0);
@@ -88,7 +88,6 @@ begin
  
         m_axis_dout_tvalid          => out_tvalid(i),
         m_axis_dout_tdata           => out_tdata(80+80*i-1 downto 80*i)
-        --m_axis_dout_tdata           => m_axis_tdata(80+80*i-1 downto 80*i)
       );
   end generate gen_mults;
 
@@ -98,6 +97,10 @@ begin
                                        out_tdata(231 downto 200) & out_tdata(191 downto 160) &
                                        out_tdata(151 downto 120) & out_tdata(111 downto 80) &
                                        out_tdata(71  downto 40)  & out_tdata(31  downto 0);
+  --w_axis_tdata                      <= out_tdata(312 downto 281) & out_tdata(272 downto 241) &
+  --                                     out_tdata(232 downto 201) & out_tdata(192 downto 161) &
+  --                                     out_tdata(152 downto 121) & out_tdata(112 downto 81) &
+  --                                     out_tdata(72  downto 41)  & out_tdata(32  downto 1);
   -- Drop 16 bits of IQ data
   m_axis_tdata                      <= w_axis_tdata(255 downto 240) & w_axis_tdata(223 downto 208) &
                                        w_axis_tdata(191 downto 176) & w_axis_tdata(159 downto 144) &
