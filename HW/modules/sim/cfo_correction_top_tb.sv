@@ -570,7 +570,7 @@ module cfo_correction_top_tb();
       $stop;
     end
 
-    #(CLOCK_PERIOD*(c_PRECISION+374));
+    #(CLOCK_PERIOD*(c_PRECISION+361));
 
     for (int i = 0; i < (ofdm_symbols*256); i++) begin
 
@@ -617,7 +617,7 @@ module cfo_correction_top_tb();
       $stop;
     end
     
-    #(CLOCK_PERIOD*(c_PRECISION+382));
+    #(CLOCK_PERIOD*(c_PRECISION+369));
     
     for (int i = 0; i < (ofdm_symbols*256); i++) begin
 

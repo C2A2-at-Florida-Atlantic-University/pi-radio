@@ -67,6 +67,8 @@ architecture RTL of mixer is
       s_axis_b_tdata              : in  std_logic_vector(31 downto 0);
 
       m_axis_dout_tvalid          : out std_logic;
+      -- i sample: 32:0
+      -- q sample: 72:40
       m_axis_dout_tdata           : out std_logic_vector(79 downto 0)
     );
   end component cmpy_0;
@@ -101,11 +103,28 @@ begin
   --                                     out_tdata(232 downto 201) & out_tdata(192 downto 161) &
   --                                     out_tdata(152 downto 121) & out_tdata(112 downto 81) &
   --                                     out_tdata(72  downto 41)  & out_tdata(32  downto 1);
+  -- w_axis_tdata [319:0]
+  --    sample 3 Q: [312:280]
+  --    sample 3 I: [272:240]
+  --    sample 2 Q: [232:200]
+  --    sample 2 I: [192:160]
+  --    sample 1 Q: [152:120]
+  --    sample 1 I: [112: 80]
+  --    sample 0 Q: [ 72: 40]
+  --    sample 0 I: [ 32:  0]
   -- Drop 16 bits of IQ data
-  m_axis_tdata                      <= w_axis_tdata(255 downto 240) & w_axis_tdata(223 downto 208) &
-                                       w_axis_tdata(191 downto 176) & w_axis_tdata(159 downto 144) &
-                                       w_axis_tdata(127 downto 112) & w_axis_tdata(95  downto 80 ) &
-                                       w_axis_tdata(63  downto 48 ) & w_axis_tdata(31  downto 16 );
+  --m_axis_tdata                      <= w_axis_tdata(255 downto 240) & w_axis_tdata(223 downto 208) &
+  --                                     w_axis_tdata(191 downto 176) & w_axis_tdata(159 downto 144) &
+  --                                     w_axis_tdata(127 downto 112) & w_axis_tdata(95  downto 80 ) &
+  --                                     w_axis_tdata(63  downto 48 ) & w_axis_tdata(31  downto 16 );
+  --m_axis_tdata                      <= w_axis_tdata(254 downto 239) & w_axis_tdata(222 downto 207) &
+  --                                     w_axis_tdata(190 downto 175) & w_axis_tdata(158 downto 143) &
+  --                                     w_axis_tdata(126 downto 111) & w_axis_tdata(94  downto 79 ) &
+  --                                     w_axis_tdata(62  downto 47 ) & w_axis_tdata(30  downto 15 );
+  m_axis_tdata                      <= w_axis_tdata(253 downto 238) & w_axis_tdata(221 downto 206) &
+                                       w_axis_tdata(189 downto 174) & w_axis_tdata(157 downto 142) &
+                                       w_axis_tdata(125 downto 110) & w_axis_tdata(93  downto 78 ) &
+                                       w_axis_tdata(61  downto 46 ) & w_axis_tdata(29  downto 14 );
 
   -- Process to delay tlast 7 clock cycles
   P_TLAST_DELAY : process(axis_aclk)

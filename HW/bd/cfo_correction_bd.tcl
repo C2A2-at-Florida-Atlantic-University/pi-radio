@@ -131,7 +131,6 @@ set bCheckIPs 1
 if { $bCheckIPs == 1 } {
    set list_check_ips "\ 
 xilinx.com:ip:axis_data_fifo:*\
-xilinx.com:ip:util_vector_logic:*\
 xilinx.com:ip:xlconstant:*\
 "
 
@@ -489,7 +488,7 @@ proc create_root_design { parentCell } {
      return 1
    }
     set_property -dict [ list \
-   CONFIG.g_DELAY_CYCLES {310} \
+   CONFIG.g_DELAY_CYCLES {297} \
  ] $delay_1
 
   # Create instance: mux_0, and set properties
@@ -536,19 +535,17 @@ proc create_root_design { parentCell } {
      return 1
    }
   
-  # Create instance: util_vector_logic_0, and set properties
-  set util_vector_logic_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:util_vector_logic util_vector_logic_0 ]
-  set_property -dict [ list \
-   CONFIG.C_OPERATION {not} \
-   CONFIG.C_SIZE {1} \
-   CONFIG.LOGO_FILE {data/sym_notgate.png} \
- ] $util_vector_logic_0
-
   # Create instance: xlconstant_0, and set properties
   set xlconstant_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlconstant xlconstant_0 ]
   set_property -dict [ list \
-   CONFIG.CONST_VAL {0} \
+   CONFIG.CONST_VAL {1} \
  ] $xlconstant_0
+
+  # Create instance: xlconstant_1, and set properties
+  set xlconstant_1 [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlconstant xlconstant_1 ]
+  set_property -dict [ list \
+   CONFIG.CONST_VAL {0} \
+ ] $xlconstant_1
 
   # Create interface connections
   connect_bd_intf_net -intf_net Mixer_m_axis_0 [get_bd_intf_pins Mixer/m_axis_0] [get_bd_intf_pins tlast_symbol_0/s_axis]
@@ -575,12 +572,12 @@ proc create_root_design { parentCell } {
 
   # Create port connections
   connect_bd_net -net cp_rm_0_o_symbol [get_bd_pins cp_rm2_0/i_symbol] [get_bd_pins cp_rm_0/o_symbol] [get_bd_pins delay_0/i_symbol] [get_bd_pins delay_1/i_symbol] [get_bd_pins scale_0/i_symbol]
+  connect_bd_net -net i_negative_freq_1 [get_bd_pins Mixer/i_negative_freq] [get_bd_pins scale_0/o_negative_freq]
   connect_bd_net -net i_select_0_1 [get_bd_ports bypass] [get_bd_pins mux_0/i_select]
   connect_bd_net -net s_axis_aclk_0_1 [get_bd_ports axis_aclk] [get_bd_pins Mixer/s_axis_aclk_0] [get_bd_pins angle_0/axis_aclk] [get_bd_pins axis_data_fifo_0/s_axis_aclk] [get_bd_pins axis_data_fifo_1/s_axis_aclk] [get_bd_pins axis_splitter_0/axis_aclk] [get_bd_pins axis_splitter_1/axis_aclk] [get_bd_pins complex_mult_0/axis_aclk] [get_bd_pins conj_0/axis_aclk] [get_bd_pins conj_1/axis_aclk] [get_bd_pins cp_rm2_0/axis_aclk] [get_bd_pins cp_rm_0/axis_aclk] [get_bd_pins delay_0/axis_aclk] [get_bd_pins delay_1/axis_aclk] [get_bd_pins mux_0/axis_aclk] [get_bd_pins scale_0/axis_aclk] [get_bd_pins sum_0/axis_aclk] [get_bd_pins tlast_symbol_0/axis_aclk]
   connect_bd_net -net s_axis_aresetn_0_1 [get_bd_ports axis_aresetn] [get_bd_pins Mixer/s_axis_aresetn_0] [get_bd_pins angle_0/axis_aresetn] [get_bd_pins axis_data_fifo_0/s_axis_aresetn] [get_bd_pins axis_data_fifo_1/s_axis_aresetn] [get_bd_pins axis_splitter_0/axis_aresetn] [get_bd_pins axis_splitter_1/axis_aresetn] [get_bd_pins complex_mult_0/axis_aresetn] [get_bd_pins conj_0/axis_aresetn] [get_bd_pins conj_1/axis_aresetn] [get_bd_pins cp_rm2_0/axis_aresetn] [get_bd_pins cp_rm_0/axis_aresetn] [get_bd_pins delay_0/axis_aresetn] [get_bd_pins delay_1/axis_aresetn] [get_bd_pins mux_0/axis_aresetn] [get_bd_pins scale_0/axis_aresetn] [get_bd_pins sum_0/axis_aresetn] [get_bd_pins tlast_symbol_0/axis_aresetn]
-  connect_bd_net -net scale_0_o_negative_freq [get_bd_pins scale_0/o_negative_freq] [get_bd_pins util_vector_logic_0/Op1]
-  connect_bd_net -net util_vector_logic_0_Res [get_bd_pins Mixer/i_negative_freq] [get_bd_pins util_vector_logic_0/Res]
-  connect_bd_net -net xlconstant_0_dout [get_bd_pins conj_0/i_negative_freq] [get_bd_pins conj_1/i_negative_freq] [get_bd_pins xlconstant_0/dout]
+  connect_bd_net -net xlconstant_0_dout [get_bd_pins conj_1/i_negative_freq] [get_bd_pins xlconstant_0/dout]
+  connect_bd_net -net xlconstant_1_dout [get_bd_pins conj_0/i_negative_freq] [get_bd_pins xlconstant_1/dout]
 
   # Create address segments
 

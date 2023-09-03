@@ -53,7 +53,7 @@ ofdm_scaled_signal = round(10000*ofdm_signal).'; % Scale
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Create input file for Vivado sim
-file = fopen('../../../HW/modules/sim/equalizer_input_samples_test.txt','wt');
+file = fopen('../../../HW/modules/sim/equalizer_input_samples.txt','wt');
 fprintf(file,"%d, %d\n",[int16(real(ofdm_scaled_signal));int16(imag(ofdm_scaled_signal))]);
 fclose(file);
 
@@ -96,6 +96,7 @@ for i = 1:ofdm_symbols
 end
 freq_scaled = freq * 2^14;
 
+ofdm_cfo_signal_par_eq = ofdm_cfo_signal_par_eq/(2^14);
 cp_rm_cfo = ofdm_cfo_signal_par_eq;
 
 % Take FFT
@@ -129,22 +130,20 @@ demod_data = qamdemod(data_carriers_out,M);
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Read output of Vivado sim
 file = fopen('../../../HW/modules/sim/mixer_vivado_samples.txt','r');
-cfo_out1 = fscanf(file,"%d, %d\n",[2 nfft*ofdm_symbols*2]);
+%cfo_out1 = fscanf(file,"%d, %d\n",[2 nfft*ofdm_symbols*2]);
+cfo_out1 = fscanf(file,"%d, %d\n",[2 nfft*ofdm_symbols]);
 fclose(file);
 cfo_out1 = complex(cfo_out1(1,:),cfo_out1(2,:));
-cfo_out1 = cfo_out1*64000;
 
 % Error check
-if length(cfo_out1)~=nfft*ofdm_symbols*2
+if length(cfo_out1)~=nfft*ofdm_symbols
     disp("ERROR: Run Vivado sim")
     cfo_out1 = zeros(1,nfft*ofdm_symbols);
 end
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Finish OFDM demod of Vivado sim output samples
-cfo_out1(ofdm_symbols*nfft+1:ofdm_symbols*nfft*2) = [];
-cp_rm_hw = reshape(cfo_out1',[nfft ofdm_symbols]);
-%cp_rm_hw = reshape(cfo_out1',[nfft ofdm_symbols*2]);
+cp_rm_hw = reshape(cfo_out1,[nfft ofdm_symbols]);
 fft_out_hw = fft(cp_rm_hw,nfft);
 fft_out_hw2 = fft_out_hw(:,1:ofdm_symbols);
 data_carriers_hw = fft_out_hw;
@@ -161,6 +160,20 @@ end
 equalized_hw = fft_out_hw2;
 equalized_hw([zp_index,pilot_index],:) = [];
 demod_data_hw = qamdemod(equalized_hw,M);
+
+figure(),subplot(2,2,1),plot(real(cp_rm_cfo(:,1)),'LineWidth',2),hold on
+plot(real(cp_rm_hw(:,1))),title('Real'),xlabel('Samples')
+legend('MATLAB','Vivado'),subplot(2,2,2),plot(imag(cp_rm_cfo(:,1)), ...
+    'LineWidth',2),hold on,plot(imag(cp_rm_hw(:,1))),title('Imaginary')
+xlabel('Samples'),legend('MATLAB','Vivado'),subplot(2,2,3)
+plot(real(reshape(cp_rm_cfo,[1 nfft*ofdm_symbols])),'LineWidth',2)
+hold on,plot(real(reshape(cp_rm_hw,[1 nfft*ofdm_symbols])))
+title('Real: Full Signal'),xlabel('Samples')
+legend('MATLAB','Vivado'),subplot(2,2,4)
+plot(imag(reshape(cp_rm_cfo,[1 nfft*ofdm_symbols])),'LineWidth',2)
+hold on,plot(imag(reshape(cp_rm_hw,[1 ofdm_symbols*nfft])))
+title('Imaginary: Full Signal'),xlabel('Samples')
+legend('MATLAB','Vivado'),sgtitle('CFO Correction FFT Input')
 
 figure(),subplot(2,2,1),plot(real(data_carriers_out_cfo(:,1)),'LineWidth',2),hold on
 plot(real(data_carriers_hw(:,1))),title('Real'),xlabel('Samples')
@@ -190,9 +203,9 @@ grid on,title('CFO Correction (HW)'),sgtitle({'End to End CFO Correction ' ...
     'Simulation',['CFO = ',num2str(cfo(1)),'Hz to ',num2str(cfo(end)),'Hz, ' ...
     'SNR = ',num2str(snr),'dB']})
 subplot(2,3,3),scatter(real(equalized_cfo),imag(equalized_cfo),'.'),grid on
-title('CFO Correction + Equalization (MATLAB)'),subplot(2,3,6)
+title('CFO Correction (MATLAB) + Equalization (MATLAB)'),subplot(2,3,6)
 scatter(real(equalized_hw),imag(equalized_hw),'.')
-title('CFO Correction (HW) Equalization (MATLAB)')
+title('CFO Correction (HW) + Equalization (MATLAB)')
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Read Multiplier output between CP and end of symbol
@@ -219,36 +232,40 @@ file = fopen('../../../HW/modules/sim/dds_vivado_samples.txt','r');
 cfo_out1 = fscanf(file,"%d, %d\n", [2 nfft*ofdm_symbols]);
 fclose(file);
 cfo_out1 = complex(cfo_out1(1,:), cfo_out1(2,:));
-cfo_out1 = cfo_out1';
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Correct CFO in MATLAB from Vivado sim CFO estimate
-cp_rm2 = cp_rm(1:nfft,:);
-cp_rm = cp_rm(1:nfft);
-dds_signal_par_eq = cp_rm(:).*cfo_out1(1:nfft);
-mat_signal_par_eq = cp_rm(:).*freq_scaled(1:nfft,1);
+cp_rm = cp_rm(1:nfft,:);
+dds_signal_par_eq = cp_rm.*reshape(cfo_out1,[nfft ofdm_symbols]);
+mat_signal_par_eq = cp_rm.*freq_scaled(1:nfft,:);
 fft_out_dds = fft(dds_signal_par_eq,nfft);
 fft_out_mat = fft(mat_signal_par_eq,nfft);
 pilot_recovered_dds = fft_out_dds(pilot_index,:);
 data_carriers_out_dds = fft_out_dds;
-data_carriers_out_dds([zp_index,pilot_index]) = [];
+data_carriers_out_dds([zp_index,pilot_index],:) = [];
 data_carriers_out_mat = fft_out_mat;
-data_carriers_out_mat([zp_index,pilot_index]) = [];
-figure(),subplot(2,1,1),scatter(real(data_carriers_out_dds),imag( ...
-    data_carriers_out_dds),'.','LineWidth',2),grid on,title('Vivado sim')
-subplot(2,1,2),scatter(real(data_carriers_out_mat),imag(data_carriers_out_mat), ...
-    '.','LineWidth',2),grid on,title('Matlab sim')
+data_carriers_out_mat([zp_index,pilot_index],:) = [];
+
+figure(),subplot(2,2,1),scatter(real(data_carriers_out_mat(:,1)),imag( ...
+    data_carriers_out_mat(:,1)),'.','LineWidth',2),grid on,title('MATLAB')
+subplot(2,2,2),scatter(real(data_carriers_out_dds(:,1)), ...
+    imag(data_carriers_out_dds(:,1)),'.','LineWidth',2),grid on,title('Vivado Sim')
+subplot(2,2,3),scatter(real(data_carriers_out_mat),imag(data_carriers_out_mat), ...
+    '.','LineWidth',2),grid on,title('MATLAB All Symbols')
+subplot(2,2,4),scatter(real(data_carriers_out_dds),imag(data_carriers_out_dds), ...
+    '.','LineWidth',2),grid on,title('Vivado Sim All Symbols')
+sgtitle('Vivado CFO Estimation with MATLAB CFO Correction')
 
 figure(),subplot(2,2,1),plot(real(freq_scaled(1:nfft,plot_symbol)),'LineWidth',2)
-hold on,plot(real(cfo_out1(1:nfft))),legend('MATLAB','Vivado'),xlabel('Seconds')
+hold on,plot(real(cfo_out1(1:nfft))),legend('MATLAB','Vivado'),xlabel('Samples')
 title('Real'),subplot(2,2,2),
-plot(imag(freq_scaled(1:nfft,plot_symbol)),'LineWidth',2),xlabel('Seconds')
+plot(imag(freq_scaled(1:nfft,plot_symbol)),'LineWidth',2),xlabel('Samples')
 title('Imaginary'),hold on,plot(imag(cfo_out1(1:nfft))),legend('MATLAB','Vivado')
 subplot(2,2,3),plot(real(reshape(freq_scaled(1:nfft,:),[1 nfft*ofdm_symbols])),'LineWidth',2)
-hold on,plot(real(cfo_out1)),legend('MATLAB','Vivado'),xlabel('Seconds')
+hold on,plot(real(cfo_out1)),legend('MATLAB','Vivado'),xlabel('Samples')
 title('Real: Full Signal'),subplot(2,2,4)
 plot(imag(reshape(freq_scaled(1:nfft,:),[1 nfft*ofdm_symbols])),'LineWidth',2)
-hold on,plot(imag(cfo_out1)),legend('MATLAB','Vivado'),xlabel('Seconds')
+hold on,plot(imag(cfo_out1)),legend('MATLAB','Vivado'),xlabel('Samples')
 title('Imag: Full Signal'),sgtitle('DDS Frequency')
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -257,12 +274,13 @@ file = fopen('../../../HW/modules/sim/mixer_out_samples.txt','r');
 cfo_out1 = fscanf(file,"%d, %d\n", [2 nfft*ofdm_symbols]);
 fclose(file);
 cfo_out1 = complex(cfo_out1(1,:), cfo_out1(2,:));
-figure(),subplot(2,2,1),plot(real(cp_rm),'LineWidth',2),hold on
+
+figure(),subplot(2,2,1),plot(real(cp_rm(1:nfft)),'LineWidth',2),hold on
 plot(real(cfo_out1(1:nfft))),title('Real'),legend('MATLAB','Vivado'),
-subplot(2,2,2),plot(imag(cp_rm),'LineWidth',2),hold on,plot(imag(cfo_out1(1:nfft)))
-title('Imaginary'),legend('MATLAB','Vivado'),subplot(2,2,3),
-plot(real(reshape(cp_rm2,[1,nfft*ofdm_symbols])),'LineWidth',2),hold on
-plot(real(cfo_out1)),title('Real: Full Signal'),legend('MATLAB','Vivado')
-subplot(2,2,4),plot(imag(reshape(cp_rm2,[1,nfft*ofdm_symbols])),'LineWidth',2)
+subplot(2,2,2),plot(imag(cp_rm(1:nfft)),'LineWidth',2),hold on
+plot(imag(cfo_out1(1:nfft))),title('Imaginary'),legend('MATLAB','Vivado')
+subplot(2,2,3),plot(real(reshape(cp_rm,[1,nfft*ofdm_symbols])),'LineWidth',2)
+hold on,plot(real(cfo_out1)),title('Real: Full Signal'),legend('MATLAB','Vivado')
+subplot(2,2,4),plot(imag(reshape(cp_rm,[1,nfft*ofdm_symbols])),'LineWidth',2)
 hold on,plot(imag(cfo_out1))
 title('Imag: Full Signal'),legend('MATLAB','Vivado'),sgtitle('Mixer Input')
