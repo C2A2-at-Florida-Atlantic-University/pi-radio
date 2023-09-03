@@ -1,5 +1,8 @@
 clear; clc; close all; fclose('all');
 addpath('../');
+ADD_WHITE_NOISE = true;
+ADD_CFO = true;
+ADD_MULTIPATH = true;
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % OFDM Parameters
@@ -8,28 +11,34 @@ BW = 1000000000;                % Bandwidth of subcarriers (-F/2 F/2)
 M = 8;                          % Baseband modulation order
 cp_len = nfft/4;                % Cyclic Prefix length
 ofdm_symbols =  10;             % Number of ofdm symbols to transmit
-ebno_test = -5:2:30;
-symbol_plot = 4;
 rep = 4;                        % Repetition of pilots
-pilot_index = 112:rep:913;    % Insert a pilot every 5 data sub-carriers
-pilot_val = -0.7072+0.7072i;    % Set value of pilot subcarriers
+pilot_index = 112:rep:913;      % Insert a pilot every 5 data sub-carriers
 data_index = 1:nfft;            % Index of data subcarriers
-cw_tone = BW/nfft;
 set_cw = 0; 
-snr = 20;
+if (ADD_WHITE_NOISE)
+    snr = 23;
+else
+    snr = 1000;
+end
+
 % Set 224 zero padded subcarriers: 111 on lower and upper subcarriers
 % and 2 on each side of carrier
 zp_index = [1:111,914:1024];
-multipath = [0 1 0.02 0.8];            % Multipath taps
-no_multi = [1 0 0 0];
+if (ADD_MULTIPATH)
+    multipath = [0 1 0.02 0.8 0 0 0 0];            % Multipath taps
+else
+    no_multi = [1 0 0 0 0 0 0 0];
+end
 %multipath = [1 0.3 0.5 0];
 data_index([zp_index,pilot_index]) = [];
 scs = BW/nfft;
-cfo = scs/2.1;
+if (ADD_CFO)
+    cfo = scs/2.1;
+else
+    cfo = 0;
+end
 cfo = linspace(-cfo,cfo,ofdm_symbols);
 %cfo = cfo*ones(1,ofdm_symbols);
-plot_v = 0;
-plot_symbol = 1;
 pilot_carriers = length(pilot_index);   % Number of pilot carriers
 data_carriers = length(data_index);
 
@@ -39,7 +48,6 @@ num_data_bits = length(data_index)*ofdm_symbols;
 % Modulate
 [ofdm_signal_1,reference_pilot,mod_data,t,t2]=ofdm_transmit(nfft,BW,M,cp_len, ...
     ofdm_symbols,zp_index,pilot_index,0,1,1);
-cw_signal = cos(2*pi*cw_tone*t2)'+i*sin(2*pi*cw_tone*t2)';
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Channel
@@ -49,6 +57,7 @@ for i = 1:ofdm_symbols
 end
 ofdm_signal = cfo_err'.*ofdm_signal_1;
 [ofdm_signal,nvar] = awgn(ofdm_signal,snr,'measured');
+ofdm_signal = filter(multipath,1,ofdm_signal);
 ofdm_scaled_signal = round(10000*ofdm_signal).'; % Scale
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -200,7 +209,10 @@ subplot(2,3,2),scatter(real(data_carriers_out_cfo),imag(data_carriers_out_cfo), 
 grid on,title('CFO Correction (MATLAB)'),subplot(2,3,5)
 scatter(real(data_carriers_hw),imag(data_carriers_hw),'.','LineWidth',2)
 grid on,title('CFO Correction (HW)'),sgtitle({'End to End CFO Correction ' ...
-    'Simulation',['CFO = ',num2str(cfo(1)),'Hz to ',num2str(cfo(end)),'Hz, ' ...
+    ['Multipath Taps: [',num2str(multipath(1)),',',num2str(multipath(2)) ...
+    ',',num2str(multipath(3)),',',num2str(multipath(4)),',',num2str(multipath(5)), ...
+    ',',num2str(multipath(6)),',',num2str(multipath(7)),',',num2str(multipath(8)), ...
+    ']'],['CFO = ',num2str(cfo(1)),'Hz to ',num2str(cfo(end)),'Hz, ' ...
     'SNR = ',num2str(snr),'dB']})
 subplot(2,3,3),scatter(real(equalized_cfo),imag(equalized_cfo),'.'),grid on
 title('CFO Correction (MATLAB) + Equalization (MATLAB)'),subplot(2,3,6)
@@ -256,10 +268,10 @@ subplot(2,2,4),scatter(real(data_carriers_out_dds),imag(data_carriers_out_dds), 
     '.','LineWidth',2),grid on,title('Vivado Sim All Symbols')
 sgtitle('Vivado CFO Estimation with MATLAB CFO Correction')
 
-figure(),subplot(2,2,1),plot(real(freq_scaled(1:nfft,plot_symbol)),'LineWidth',2)
+figure(),subplot(2,2,1),plot(real(freq_scaled(1:nfft,1)),'LineWidth',2)
 hold on,plot(real(cfo_out1(1:nfft))),legend('MATLAB','Vivado'),xlabel('Samples')
 title('Real'),subplot(2,2,2),
-plot(imag(freq_scaled(1:nfft,plot_symbol)),'LineWidth',2),xlabel('Samples')
+plot(imag(freq_scaled(1:nfft,1)),'LineWidth',2),xlabel('Samples')
 title('Imaginary'),hold on,plot(imag(cfo_out1(1:nfft))),legend('MATLAB','Vivado')
 subplot(2,2,3),plot(real(reshape(freq_scaled(1:nfft,:),[1 nfft*ofdm_symbols])),'LineWidth',2)
 hold on,plot(real(cfo_out1)),legend('MATLAB','Vivado'),xlabel('Samples')
