@@ -11,6 +11,9 @@ use ieee.std_logic_unsigned.all;
 use ieee.math_real.all;
 
 entity equalization is
+  generic(
+    g_EQUALIZE_PILOTS             : boolean := false
+  );
   port(
     axis_aclk                     : in  std_logic;
     axis_aresetn                  : in  std_logic;
@@ -19,7 +22,7 @@ entity equalization is
     s_din_axis_tvalid             : in  std_logic;
     s_din_axis_tlast              : in  std_logic;
 
-    s_ch_est_axis_tdata           : in  std_logic_vector(31 downto 0);
+    s_ch_est_axis_tdata           : in  std_logic_vector(47 downto 0);
     s_ch_est_axis_tvalid          : in  std_logic;
     s_ch_est_axis_tlast           : in  std_logic;
 
@@ -57,31 +60,31 @@ architecture RTL of equalization is
     );
   end component pipeline;
 
-  component div_gen_0 is
+  component div_gen_1 is
     port(
       aclk                        : in  std_logic;
       aresetn                     : in  std_logic;
 
-      s_axis_divisor_tdata        : in  std_logic_vector(7 downto 0);
+      s_axis_divisor_tdata        : in  std_logic_vector(31 downto 0);
       s_axis_divisor_tvalid       : in  std_logic;
       --s_axis_divisor_tlast        : in  std_logic;
       
-      s_axis_dividend_tdata       : in  std_logic_vector(15 downto 0);
+      s_axis_dividend_tdata       : in  std_logic_vector(39 downto 0);
       s_axis_dividend_tvalid      : in  std_logic;
       s_axis_dividend_tlast       : in  std_logic;
 
-      m_axis_dout_tdata           : out std_logic_vector(23 downto 0);
+      m_axis_dout_tdata           : out std_logic_vector(47 downto 0);
       m_axis_dout_tvalid          : out std_logic;
       m_axis_dout_tlast           : out std_logic
     );
-  end component div_gen_0;
+  end component div_gen_1;
 
   signal s_ch_est_axis_tdata_pipe : std_logic_vector(15 downto 0);
 
-  signal div_sample_0             : std_logic_vector(23 downto 0);
-  signal div_sample_1             : std_logic_vector(23 downto 0);
-  signal div_sample_2             : std_logic_vector(23 downto 0);
-  signal div_sample_3             : std_logic_vector(23 downto 0);
+  signal div_sample_0             : std_logic_vector(47 downto 0);
+  signal div_sample_1             : std_logic_vector(47 downto 0);
+  signal div_sample_2             : std_logic_vector(47 downto 0);
+  signal div_sample_3             : std_logic_vector(47 downto 0) := (others => '0');
   signal div_tvalid               : std_logic;
   signal div_tlast                : std_logic;
 
@@ -94,7 +97,7 @@ architecture RTL of equalization is
   signal angle_res_0              : std_logic_vector(15 downto 0);
   signal angle_res_1              : std_logic_vector(15 downto 0);
   signal angle_res_2              : std_logic_vector(15 downto 0);
-  signal angle_res_3              : std_logic_vector(15 downto 0);
+  signal angle_res_3              : std_logic_vector(15 downto 0) := (others => '0');
 
   signal pipeline_ang_0_tvalid    : std_logic;
   signal pipeline_ang_0_tdata     : std_logic_vector(15 downto 0);
@@ -102,8 +105,18 @@ architecture RTL of equalization is
   signal pipeline_ang_2_tdata     : std_logic_vector(15 downto 0);
   signal pipeline_ang_3_tdata     : std_logic_vector(15 downto 0);
 
+  signal s_din_axis_tvalid_d1     : std_logic;
+  signal s_din_axis_tvalid_d2     : std_logic;
+  signal s_ch_est_axis_tvalid_d1  : std_logic;
+  signal s_ch_est_axis_tvalid_d2  : std_logic;
+
+  signal diff0                    : std_logic_vector(15 downto 0);
+  signal diff1                    : std_logic_vector(15 downto 0);
+  signal diff2                    : std_logic_vector(15 downto 0);
+
 begin
 
+    --s_ch_est_axis_tdata_pipe    <= s_ch_est_axis_tdata(47 downto 32);
   -- Rotate data and delay channel estimate to properly aligh with
   -- previous hold interpolation type
   p_ALIGN : process(axis_aclk)
@@ -116,23 +129,26 @@ begin
   -- 4 samples per clock (3 data 1 pilot). Equalize pilot sample as well
   ----------------------------------------------------------------------
   -- Equalize magnitude
-  div_inst_0 : div_gen_0
+  div_inst_0 : div_gen_1
     port map(
       aclk                        => axis_aclk,
       aresetn                     => axis_aresetn,
 
-      s_axis_divisor_tdata        => s_ch_est_axis_tdata(7 downto 0),
-      s_axis_divisor_tvalid       => s_ch_est_axis_tvalid,
+      s_axis_divisor_tdata        => "000000" & s_ch_est_axis_tdata(25 downto 0),
+      s_axis_divisor_tvalid       => s_ch_est_axis_tvalid_d2,
       --s_axis_divisor_tlast        => s_ch_est_axis_tlast,
 
-      s_axis_dividend_tdata       => s_din_axis_tdata(15 downto 0),
-      s_axis_dividend_tvalid      => s_din_axis_tvalid,
+      s_axis_dividend_tdata       => s_din_axis_tdata(15 downto 0) & X"000000",
+      s_axis_dividend_tvalid      => s_din_axis_tvalid_d2,
       s_axis_dividend_tlast       => s_din_axis_tlast,
 
       m_axis_dout_tdata           => div_sample_0,
       m_axis_dout_tvalid          => div_tvalid,
       m_axis_dout_tlast           => div_tlast
     );
+  diff0 <= s_din_axis_tdata(31 downto 16) + s_ch_est_axis_tdata_pipe;
+  diff1 <= s_din_axis_tdata(63 downto 48) + s_ch_est_axis_tdata_pipe;
+  diff2 <= s_din_axis_tdata(95 downto 80) + s_ch_est_axis_tdata_pipe;
 
   -- Equalize Phase
   p_CH_EST_ANG_0 : process(axis_aclk, axis_aresetn)
@@ -140,11 +156,10 @@ begin
     if axis_aresetn = '0' then
       NULL;
     elsif rising_edge(axis_aclk) then
-      if s_ch_est_axis_tvalid = '1' and s_din_axis_tvalid = '1' then
+      if s_ch_est_axis_tvalid_d2 = '1' and s_din_axis_tvalid_d2 = '1' then
         pipeline_ang_0_tvalid     <= '1';
         pipeline_ang_0_tdata      <= s_din_axis_tdata(31 downto 16) + 
-                                     --(s_ch_est_axis_tdata(31 downto 16));
-                                     s_ch_est_axis_tdata_pipe;
+                                     s_ch_est_axis_tdata(47 downto 32);
       else
         pipeline_ang_0_tvalid     <= '0';
         pipeline_ang_0_tdata      <= (others => '0');
@@ -155,7 +170,7 @@ begin
   -- Pipeline Equalized phase value to alight with equalized magnitude value
   pipeline_inst_0 : pipeline
     generic map(
-      g_DELAY_CYCLES              => 19,
+      g_DELAY_CYCLES              => 43,
       g_TDATA_WIDTH               => 16
     )
     port map(
@@ -173,16 +188,16 @@ begin
 
   ----------------------------------------------------------------------
   -- Equalize magnitude
-  div_inst_1 : div_gen_0
+  div_inst_1 : div_gen_1
     port map(
       aclk                        => axis_aclk,
       aresetn                     => axis_aresetn,
 
-      s_axis_divisor_tdata        => s_ch_est_axis_tdata(7 downto 0),
-      s_axis_divisor_tvalid       => s_ch_est_axis_tvalid,
+      s_axis_divisor_tdata        => "000000" & s_ch_est_axis_tdata(25 downto 0),
+      s_axis_divisor_tvalid       => s_ch_est_axis_tvalid_d2,
 
-      s_axis_dividend_tdata       => s_din_axis_tdata(47 downto 32),
-      s_axis_dividend_tvalid      => s_din_axis_tvalid,
+      s_axis_dividend_tdata       => s_din_axis_tdata(47 downto 32) & X"000000",
+      s_axis_dividend_tvalid      => s_din_axis_tvalid_d2,
       s_axis_dividend_tlast       => '0',
 
       m_axis_dout_tdata           => div_sample_1,
@@ -196,10 +211,9 @@ begin
     if axis_aresetn = '0' then
       NULL;
     elsif rising_edge(axis_aclk) then
-      if s_ch_est_axis_tvalid = '1' and s_din_axis_tvalid = '1' then
+      if s_ch_est_axis_tvalid_d2 = '1' and s_din_axis_tvalid_d2 = '1' then
         pipeline_ang_1_tdata      <= s_din_axis_tdata(63 downto 48) +
-                                     --(s_ch_est_axis_tdata(31 downto 16));
-                                     s_ch_est_axis_tdata_pipe;
+                                     s_ch_est_axis_tdata(47 downto 32);
       else
         pipeline_ang_1_tdata      <= (others => '0');
       end if;
@@ -209,7 +223,7 @@ begin
   -- Pipeline Equalized phase value to alight with equalized magnitude value
   pipeline_inst_1 : pipeline
     generic map(
-      g_DELAY_CYCLES              => 19,
+      g_DELAY_CYCLES              => 43,
       g_TDATA_WIDTH               => 16
     )
     port map(
@@ -227,16 +241,16 @@ begin
 
   ----------------------------------------------------------------------
   -- Equalize magnitude
-  div_inst_2 : div_gen_0
+  div_inst_2 : div_gen_1
     port map(
       aclk                        => axis_aclk,
       aresetn                     => axis_aresetn,
 
-      s_axis_divisor_tdata        => s_ch_est_axis_tdata(7 downto 0),
-      s_axis_divisor_tvalid       => s_ch_est_axis_tvalid,
+      s_axis_divisor_tdata        => "000000" & s_ch_est_axis_tdata(25 downto 0),
+      s_axis_divisor_tvalid       => s_ch_est_axis_tvalid_d2,
 
-      s_axis_dividend_tdata       => s_din_axis_tdata(79 downto 64),
-      s_axis_dividend_tvalid      => s_din_axis_tvalid,
+      s_axis_dividend_tdata       => s_din_axis_tdata(79 downto 64) & X"000000",
+      s_axis_dividend_tvalid      => s_din_axis_tvalid_d2,
       s_axis_dividend_tlast       => '0',
 
       m_axis_dout_tdata           => div_sample_2,
@@ -250,10 +264,9 @@ begin
     if axis_aresetn = '0' then
       NULL;
     elsif rising_edge(axis_aclk) then
-      if s_ch_est_axis_tvalid = '1' and s_din_axis_tvalid = '1' then
+      if s_ch_est_axis_tvalid_d2 = '1' and s_din_axis_tvalid_d2 = '1' then
         pipeline_ang_2_tdata      <= s_din_axis_tdata(95 downto 80) +
-                                     --(s_ch_est_axis_tdata(31 downto 16));
-                                     s_ch_est_axis_tdata_pipe;
+                                     s_ch_est_axis_tdata(47 downto 32);
       else
         pipeline_ang_2_tdata      <= (others => '0');
       end if;
@@ -263,7 +276,7 @@ begin
   -- Pipeline Equalized phase value to alight with equalized magnitude value
   pipeline_inst_2 : pipeline
     generic map(
-      g_DELAY_CYCLES              => 19,
+      g_DELAY_CYCLES              => 43,
       g_TDATA_WIDTH               => 16
     )
     port map(
@@ -278,66 +291,93 @@ begin
       m_axis_tvalid               => open,
       m_axis_tlast                => open
     );
-
+ 
   ----------------------------------------------------------------------
-  -- Equalize magnitude
-  div_inst_3 : div_gen_0
-    port map(
-      aclk                        => axis_aclk,
-      aresetn                     => axis_aresetn,
+  SKIP_EQUALIZE_PILOTS : if g_EQUALIZE_PILOTS=false generate
 
-      s_axis_divisor_tdata        => s_ch_est_axis_tdata(7 downto 0),
-      s_axis_divisor_tvalid       => s_ch_est_axis_tvalid,
-
-      s_axis_dividend_tdata       => s_din_axis_tdata(111 downto 96),
-      s_axis_dividend_tvalid      => s_din_axis_tvalid,
-      s_axis_dividend_tlast       => '0',
-
-      m_axis_dout_tdata           => div_sample_3,
-      m_axis_dout_tvalid          => open,
-      m_axis_dout_tlast           => open
-    );
-
-  -- Equalize Phase
-  p_CH_EST_ANG_3 : process(axis_aclk, axis_aresetn)
-  begin
-    if axis_aresetn = '0' then
-      NULL;
-    elsif rising_edge(axis_aclk) then
-      if s_ch_est_axis_tvalid = '1' and s_din_axis_tvalid = '1' then
-        pipeline_ang_3_tdata      <= s_din_axis_tdata(127 downto 112) +
-                                     (s_ch_est_axis_tdata(31 downto 16));
-      else
-        pipeline_ang_3_tdata      <= (others => '0');
+    process (axis_aclk)
+    begin
+      if rising_edge(axis_aclk) then
+        s_din_axis_tvalid_d1      <= s_din_axis_tvalid;
+        s_ch_est_axis_tvalid_d1   <= s_ch_est_axis_tvalid;
       end if;
-    end if;
-  end process p_CH_EST_ANG_3;
+    end process;
 
-  -- Pipeline Equalized phase value to alight with equalized magnitude value
-  pipeline_inst_3 : pipeline
-    generic map(
-      g_DELAY_CYCLES              => 19,
-      g_TDATA_WIDTH               => 16
-    )
-    port map(
-      axis_aclk                   => axis_aclk,
-      axis_aresetn                => axis_aresetn,
+    --s_din_axis_tvalid_d2          <= s_din_axis_tvalid_d1 and s_din_axis_tvalid;
+    --s_ch_est_axis_tvalid_d2       <= s_ch_est_axis_tvalid_d1 and s_ch_est_axis_tvalid;
+    s_din_axis_tvalid_d2          <= s_din_axis_tvalid;
+    s_ch_est_axis_tvalid_d2       <= s_ch_est_axis_tvalid;
 
-      s_axis_tdata                => pipeline_ang_3_tdata,
-      s_axis_tvalid               => pipeline_ang_0_tvalid,
-      s_axis_tlast                => '0',
+  end generate SKIP_EQUALIZE_PILotS;
 
-      m_axis_tdata                => angle_res_3,
-      m_axis_tvalid               => open,
-      m_axis_tlast                => open
+  GEN_EQUALIZE_PILOTS : if g_EQUALIZE_PILOTS=true generate 
+
+    s_din_axis_tvalid_d2          <= s_din_axis_tvalid;
+    s_ch_est_axis_tvalid_d2       <= s_ch_est_axis_tvalid;
+   
+    -- Equalize magnitude
+    div_inst_3 : div_gen_1
+      port map(
+        aclk                      => axis_aclk,
+        aresetn                   => axis_aresetn,
+  
+        s_axis_divisor_tdata      => "000000" & s_ch_est_axis_tdata(25 downto 0),
+        s_axis_divisor_tvalid     => s_ch_est_axis_tvalid_d2,
+
+        s_axis_dividend_tdata     => s_din_axis_tdata(111 downto 96) & X"000000",
+        s_axis_dividend_tvalid    => s_din_axis_tvalid_d2,
+        s_axis_dividend_tlast     => '0',
+
+        m_axis_dout_tdata         => div_sample_3,
+        m_axis_dout_tvalid        => open,
+        m_axis_dout_tlast         => open
+      );
+
+    -- Equalize Phase
+    p_CH_EST_ANG_3 : process(axis_aclk, axis_aresetn)
+    begin
+      if axis_aresetn = '0' then
+        NULL;
+      elsif rising_edge(axis_aclk) then
+        if s_ch_est_axis_tvalid_d2 = '1' and s_din_axis_tvalid_d2 = '1' then
+          pipeline_ang_3_tdata      <= s_din_axis_tdata(127 downto 112) +
+                                       s_ch_est_axis_tdata(47 downto 32);
+        else
+          pipeline_ang_3_tdata      <= (others => '0');
+        end if;
+      end if;
+    end process p_CH_EST_ANG_3;
+
+    -- Pipeline Equalized phase value to alight with equalized magnitude value
+    pipeline_inst_3 : pipeline
+      generic map(
+        g_DELAY_CYCLES              => 43,
+        g_TDATA_WIDTH               => 16
+      )
+      port map(
+        axis_aclk                   => axis_aclk,
+        axis_aresetn                => axis_aresetn,
+  
+        s_axis_tdata                => pipeline_ang_3_tdata,
+        s_axis_tvalid               => pipeline_ang_0_tvalid,
+        s_axis_tlast                => '0',
+ 
+        m_axis_tdata                => angle_res_3,
+        m_axis_tvalid               => open,
+        m_axis_tlast                => open
     );
+  end generate GEN_EQUALIZE_PILOTS;
 
   ----------------------------------------------------------------------
   -- Pick up quotient and drop fractional part
-  abs_res_0                       <= div_sample_0(17 downto 2);
-  abs_res_1                       <= div_sample_1(17 downto 2);
-  abs_res_2                       <= div_sample_2(17 downto 2);
-  abs_res_3                       <= div_sample_3(17 downto 2);
+  --abs_res_0                       <= div_sample_0(17 downto 2);
+  --abs_res_1                       <= div_sample_1(17 downto 2);
+  --abs_res_2                       <= div_sample_2(17 downto 2);
+  --abs_res_3                       <= div_sample_3(17 downto 2);
+  abs_res_0                       <= div_sample_0(24 downto 9);
+  abs_res_1                       <= div_sample_1(24 downto 9);
+  abs_res_2                       <= div_sample_2(24 downto 9);
+  abs_res_3                       <= div_sample_3(24 downto 9);
   -- Concatenate into m_axis
   p_M_AXIS : process(axis_aclk, axis_aresetn)
   begin

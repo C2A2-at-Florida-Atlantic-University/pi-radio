@@ -31,7 +31,7 @@ entity channel_estimate is
     s_data_axis_tvalid            : in  std_logic;
     s_data_axis_tlast             : in  std_logic;
 
-    m_ch_est_axis_tdata           : out std_logic_vector(31 downto 0);
+    m_ch_est_axis_tdata           : out std_logic_vector(47 downto 0);
     m_ch_est_axis_tvalid          : out std_logic;
     m_ch_est_axis_tlast           : out std_logic;
 
@@ -54,7 +54,7 @@ entity channel_estimate is
     m_ang_denom_in_axis_tvalid    : out std_logic;
     m_ang_num_in_axis_tdata       : out std_logic_vector(15 downto 0);
     m_ang_num_in_axis_tvalid      : out std_logic;
-    m_abs_res_axis_tdata          : out std_logic_vector(23 downto 0);
+    m_abs_res_axis_tdata          : out std_logic_vector(31 downto 0);
     m_abs_res_axis_tvalid         : out std_logic;
     m_ang_res_axis_tdata          : out std_logic_vector(15 downto 0);
     m_ang_res_axis_tvalid         : out std_logic;
@@ -140,7 +140,7 @@ architecture RTL of channel_estimate is
       s_axis_dividend_tvalid      : in  std_logic;
       s_axis_dividend_tlast       : in  std_logic;
 
-      m_axis_dout_tdata           : out std_logic_vector(23 downto 0);
+      m_axis_dout_tdata           : out std_logic_vector(31 downto 0);
       m_axis_dout_tvalid          : out std_logic;
       m_axis_dout_tlast           : out std_logic
     );
@@ -151,7 +151,7 @@ architecture RTL of channel_estimate is
 
   signal w_ch_est_axis_tvalid     : std_logic;
   signal w_ch_est_axis_tlast      : std_logic;
-  signal w_ch_est_axis_tdata      : std_logic_vector(31 downto 0);
+  signal w_ch_est_axis_tdata      : std_logic_vector(47 downto 0);
   
   signal m_pilot_tx_conj_axis_tdata    : std_logic_vector(127 downto 0);
   signal m_pilot_tx_conj_axis_tvalid   : std_logic;
@@ -168,8 +168,8 @@ architecture RTL of channel_estimate is
   signal m_pilot_rx_cordic_axis_tdata  : std_logic_vector(31 downto 0);
   signal m_pilot_rx_cordic_axis_tvalid : std_logic;
 
-  signal m_amplitude_ch_est_axis_tdata : std_logic_vector(23 downto 0);
-  signal m_amplitude_ch_est_axis_tdata2: std_logic_vector(15 downto 0);
+  signal m_amplitude_ch_est_axis_tdata : std_logic_vector(31 downto 0);
+  signal m_amplitude_ch_est_axis_tdata2: std_logic_vector(25 downto 0);
   signal m_amplitude_ch_est_axis_tvalid: std_logic;
   signal m_amplitude_ch_est_axis_tlast : std_logic;
 
@@ -209,6 +209,8 @@ architecture RTL of channel_estimate is
   signal w_axis_tdata                  : std_logic_vector(127 downto 0);
   signal w_axis_tvalid                 : std_logic;
   signal w_axis_tlast                  : std_logic;
+  signal diff                          : std_logic_vector(15 downto 0);
+  signal signed_diff                   : signed(15 downto 0);
 
 begin
 
@@ -305,7 +307,8 @@ begin
   m_tx_cordic_out_axis_tvalid     <= m_pilot_tx_cordic_axis_tvalid;
   m_rx_cordic_out_axis_tdata      <= m_pilot_rx_cordic_axis_tdata;
   m_rx_cordic_out_axis_tvalid     <= m_pilot_rx_cordic_axis_tvalid;
-
+  diff                            <= m_pilot_rx_cordic_axis_tdata(31 downto 16) - 
+                                     m_pilot_tx_cordic_axis_tdata(31 downto 16);
   -- Channel estimate angle
   p_CH_EST_ANG : process(axis_aclk, axis_aresetn)
   begin
@@ -314,8 +317,15 @@ begin
     elsif rising_edge(axis_aclk) then
       if m_pilot_tx_cordic_axis_tvalid = '1' and m_pilot_rx_cordic_axis_tvalid = '1' then
         m_angle_ch_est_axis_tvalid<= '1';
-        m_angle_ch_est_axis_tdata <= m_pilot_rx_cordic_axis_tdata(31 downto 16) - 
-                                     m_pilot_tx_cordic_axis_tdata(31 downto 16);
+--        m_angle_ch_est_axis_tdata <= diff  when 
+--                                     else ;
+          if((diff < X"2000" or diff > X"E000")) then
+            m_angle_ch_est_axis_tdata <= diff;
+          elsif (diff > X"8000") then
+            m_angle_ch_est_axis_tdata <= diff + X"3FFF";
+          else
+            m_angle_ch_est_axis_tdata <= diff - X"3FFF";
+          end if;
       else
         m_angle_ch_est_axis_tvalid<= '0';
         m_angle_ch_est_axis_tdata <= (others => '0');
@@ -325,7 +335,7 @@ begin
 
   pipeline_inst : pipeline
     generic map(
-      g_DELAY_CYCLES              => 19,
+      g_DELAY_CYCLES              => 27,
       g_TDATA_WIDTH               => 16
     )
     port map(
@@ -373,10 +383,10 @@ begin
       m_axis_dout_tlast           => m_amplitude_ch_est_axis_tlast
     );
 
-  m_amplitude_ch_est_axis_tdata2  <= m_amplitude_ch_est_axis_tdata(17 downto 2);
+  m_amplitude_ch_est_axis_tdata2  <= m_amplitude_ch_est_axis_tdata(25 downto 0);
   --m_amplitude_ch_est_axis_tdata2  <= m_amplitude_ch_est_axis_tdata(23 downto 8);
   w_ch_est_axis_tdata             <= m_pipeline_ch_est_axis_tdata &
-                                     m_amplitude_ch_est_axis_tdata2; --(15 downto 0);
+                                     "000000" & m_amplitude_ch_est_axis_tdata2; --(15 downto 0);
   w_ch_est_axis_tvalid            <= m_amplitude_ch_est_axis_tvalid;
   w_ch_est_axis_tlast             <= m_amplitude_ch_est_axis_tlast;
 
@@ -396,9 +406,11 @@ begin
     if axis_aresetn = '0' then
       NULL;
     else
-      r_data_axis_tdata           <= s_data_axis_tdata;
-      r_data_axis_tvalid          <= s_data_axis_tvalid;
-      r_data_axis_tlast           <= s_data_axis_tlast;
+      if rising_edge(axis_aclk) then
+        r_data_axis_tdata           <= s_data_axis_tdata;
+        r_data_axis_tvalid          <= s_data_axis_tvalid;
+        r_data_axis_tlast           <= s_data_axis_tlast;
+      end if;
     end if;
   end process p_DATA_IN_PIPE;
 
@@ -451,7 +463,7 @@ begin
   -- Pipeline
   pipeline_data_inst_0 : pipeline
     generic map(
-      g_DELAY_CYCLES              => 4,
+      g_DELAY_CYCLES              => 3,
       g_TDATA_WIDTH               => 96
     )
     port map(
@@ -474,7 +486,7 @@ begin
   -- Delay Data to alight with delay in calculating channel estimate
   pipeline_data_inst : pipeline
     generic map(
-      g_DELAY_CYCLES              => 21,
+      g_DELAY_CYCLES              => 29,
       g_TDATA_WIDTH               => 128
     )
     port map(

@@ -8,6 +8,7 @@ import_ip src/ip/cordic_rec_to_polar.xci
 import_ip src/ip/dds_compiler_0.xci
 import_ip src/ip/dsp_macro_0.xci
 import_ip src/ip/div_gen_0.xci
+import_ip src/ip/div_gen_1.xci
 
 upgrade_ip [get_ips {*}]
 

@@ -47,7 +47,7 @@ module zf_equalizer_tb();
   logic [15:0]                      div1_ang_denom;
   logic [15:0]                      div1_ang_num;
 
-  logic [15:0]                      div1_full;
+  logic [25:0]                      div1_full;
   logic [15:0]                      div1_full_ang;
   logic [15:0]                      div1_amp;
   logic [15:0]                      div1_phase;
@@ -62,7 +62,8 @@ module zf_equalizer_tb();
   logic [15:0]                      data_ang2,data_abs2;
   logic [15:0]                      data_ang3,data_abs3;
 
-  logic [15:0]                      din_ang ,din_amp ;
+  logic [25:0]                      din_amp;
+  logic [15:0]                      din_ang ;
   logic [15:0]                      din_ang0,din_amp0;
   logic [15:0]                      din_ang1,din_amp1;
   logic [15:0]                      din_ang2,din_amp2;
@@ -300,8 +301,8 @@ module zf_equalizer_tb();
     for (int k = 0; k < ofdm_symbols; k++) begin
       for (int i = 0; i < 256; i++) begin
         if (DUT.zf_equalizer_i.Normalized_ZF_stage_1.channel_estimate_0.m_ch_est_axis_tvalid == 1) begin
-          div1_full = DUT.zf_equalizer_i.Normalized_ZF_stage_1.channel_estimate_0.m_ch_est_axis_tdata[15:0];
-          div1_full_ang = DUT.zf_equalizer_i.Normalized_ZF_stage_1.channel_estimate_0.m_ch_est_axis_tdata[31:16];
+          div1_full = DUT.zf_equalizer_i.Normalized_ZF_stage_1.channel_estimate_0.m_ch_est_axis_tdata[25:0];
+          div1_full_ang = DUT.zf_equalizer_i.Normalized_ZF_stage_1.channel_estimate_0.m_ch_est_axis_tdata[47:32];
           $fdisplay(fd_div_1_full_file,"%d, %d",div1_full,$signed(div1_full_ang));
         end
         #CLOCK_PERIOD;
@@ -326,7 +327,7 @@ module zf_equalizer_tb();
       $stop;
     end
 
-    #(CLOCK_PERIOD*86);
+    #(CLOCK_PERIOD*94);
 
     for (int k = 0; k < ofdm_symbols; k++) begin
       for (int i = 0; i < 256; i++) begin
@@ -375,7 +376,7 @@ module zf_equalizer_tb();
       $stop;
     end
 
-    #(CLOCK_PERIOD*86);
+    #(CLOCK_PERIOD*94);
 
     for (int k = 0; k < ofdm_symbols; k++) begin
       for (int i = 0; i < 256; i++) begin
@@ -403,9 +404,9 @@ module zf_equalizer_tb();
             DUT.zf_equalizer_i.Normalized_ZF_stage_1.equalization_0.s_din_axis_tdata[127:112];
           $fdisplay(fd_eq_din_1_file,"%d, %d",$signed(din_amp3),$signed(din_ang3));
           din_amp = 
-            DUT.zf_equalizer_i.Normalized_ZF_stage_1.equalization_0.s_ch_est_axis_tdata[15:0];
+            DUT.zf_equalizer_i.Normalized_ZF_stage_1.equalization_0.s_ch_est_axis_tdata[25:0];
           din_ang = 
-            DUT.zf_equalizer_i.Normalized_ZF_stage_1.equalization_0.s_ch_est_axis_tdata[31:16];
+            DUT.zf_equalizer_i.Normalized_ZF_stage_1.equalization_0.s_ch_est_axis_tdata[47:32];
           $fdisplay(fd_eq_est_1_file,"%d, %d",$signed(din_amp),$signed(din_ang));
         end
         #CLOCK_PERIOD;
@@ -430,7 +431,7 @@ module zf_equalizer_tb();
       $stop;
     end
 
-    #(CLOCK_PERIOD*107);
+    #(CLOCK_PERIOD*139);
 
     for (int k = 0; k < ofdm_symbols; k++) begin
       for (int i = 0; i < 256; i++) begin

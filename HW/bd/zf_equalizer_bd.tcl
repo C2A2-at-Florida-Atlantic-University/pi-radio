@@ -271,7 +271,7 @@ proc create_hier_cell_Normalized_ZF_stage_1 { parentCell nameHier } {
    }
   
   set_property -dict [ list \
-   CONFIG.FREQ_HZ {249997498} \
+   CONFIG.FREQ_HZ {250000000} \
  ] [get_bd_intf_pins /Normalized_ZF_stage_1/channel_estimate_0/m_axis]
 
   # Create instance: equalization_0, and set properties
@@ -354,7 +354,7 @@ proc create_root_design { parentCell } {
   # Create interface ports
   set m_axis [ create_bd_intf_port -mode Master -vlnv xilinx.com:interface:axis_rtl:1.0 m_axis ]
   set_property -dict [ list \
-   CONFIG.FREQ_HZ {249997498} \
+   CONFIG.FREQ_HZ {250000000} \
    ] $m_axis
 
   set s_axi [ create_bd_intf_port -mode Slave -vlnv xilinx.com:interface:aximm_rtl:1.0 s_axi ]
@@ -364,7 +364,7 @@ proc create_root_design { parentCell } {
    CONFIG.AWUSER_WIDTH {0} \
    CONFIG.BUSER_WIDTH {0} \
    CONFIG.DATA_WIDTH {32} \
-   CONFIG.FREQ_HZ {249997498} \
+   CONFIG.FREQ_HZ {250000000} \
    CONFIG.HAS_BRESP {1} \
    CONFIG.HAS_BURST {1} \
    CONFIG.HAS_CACHE {1} \
@@ -391,7 +391,7 @@ proc create_root_design { parentCell } {
 
   set s_axis [ create_bd_intf_port -mode Slave -vlnv xilinx.com:interface:axis_rtl:1.0 s_axis ]
   set_property -dict [ list \
-   CONFIG.FREQ_HZ {249997498} \
+   CONFIG.FREQ_HZ {250000000} \
    CONFIG.HAS_TKEEP {0} \
    CONFIG.HAS_TLAST {1} \
    CONFIG.HAS_TREADY {0} \
@@ -405,7 +405,7 @@ proc create_root_design { parentCell } {
 
 
   # Create ports
-  set aclk [ create_bd_port -dir I -type clk -freq_hz 249997498 aclk ]
+  set aclk [ create_bd_port -dir I -type clk -freq_hz 250000000 aclk ]
   set_property -dict [ list \
    CONFIG.ASSOCIATED_BUSIF {m_axis:s_axis:s_axi} \
    CONFIG.ASSOCIATED_RESET {aresetn} \
@@ -494,7 +494,7 @@ proc create_root_design { parentCell } {
    }
   
   set_property -dict [ list \
-   CONFIG.FREQ_HZ {249997498} \
+   CONFIG.FREQ_HZ {250000000} \
  ] [get_bd_intf_pins /pilot_scheduler_0/M_AXIS_1]
 
   # Create instance: polar_to_cartesian, and set properties

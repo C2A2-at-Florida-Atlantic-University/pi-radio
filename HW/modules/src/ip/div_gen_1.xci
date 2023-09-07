@@ -6,7 +6,7 @@
   <spirit:version>1.0</spirit:version>
   <spirit:componentInstances>
     <spirit:componentInstance>
-      <spirit:instanceName>div_gen_0</spirit:instanceName>
+      <spirit:instanceName>div_gen_1</spirit:instanceName>
       <spirit:componentRef spirit:vendor="xilinx.com" spirit:library="ip" spirit:name="div_gen" spirit:version="5.1"/>
       <spirit:configurableElementValues>
         <spirit:configurableElementValue spirit:referenceId="BUSIFPARAM_VALUE.ACLK_INTF.ASSOCIATED_PORT"/>
@@ -81,7 +81,7 @@
         <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.SIGNED_B">0</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.ACLKEN">false</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.ARESETN">true</spirit:configurableElementValue>
-        <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.Component_Name">div_gen_0</spirit:configurableElementValue>
+        <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.Component_Name">div_gen_1</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.FlowControl">NonBlocking</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.OptimizeGoal">Performance</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.OutTLASTBehv">Pass_Dividend_TLAST</spirit:configurableElementValue>
@@ -118,7 +118,7 @@
         <spirit:configurableElementValue spirit:referenceId="RUNTIME_PARAM.IPCONTEXT">IP_Flow</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="RUNTIME_PARAM.IPREVISION">19</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="RUNTIME_PARAM.MANAGED">TRUE</spirit:configurableElementValue>
-        <spirit:configurableElementValue spirit:referenceId="RUNTIME_PARAM.OUTPUTDIR">../../../../zf_equalizer.gen/sources_1/ip/div_gen_0</spirit:configurableElementValue>
+        <spirit:configurableElementValue spirit:referenceId="RUNTIME_PARAM.OUTPUTDIR">../../../../zf_equalizer.gen/sources_1/ip/div_gen_1</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="RUNTIME_PARAM.SELECTEDSIMMODEL"/>
         <spirit:configurableElementValue spirit:referenceId="RUNTIME_PARAM.SHAREDDIR">.</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="RUNTIME_PARAM.SWVERSION">2022.1</spirit:configurableElementValue>
