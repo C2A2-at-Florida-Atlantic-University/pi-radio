@@ -473,7 +473,7 @@ module zf_equalizer_tb();
       $stop;
     end
 
-    #(CLOCK_PERIOD*107);
+    #(CLOCK_PERIOD*139);
 
     for (int k = 0; k < ofdm_symbols; k++) begin
       for (int i = 0; i < 256; i++) begin
@@ -487,9 +487,9 @@ module zf_equalizer_tb();
             pre_eq_2_q = DUT.zf_equalizer_i.polar_to_cartesian.s_axis_tdata[95:80];
             //pre_eq_3_i = DUT.zf_equalizer_i.polar_to_cartesian.s_axis_tdata[111:96];
             //pre_eq_3_q = DUT.zf_equalizer_i.polar_to_cartesian.s_axis_tdata[127:112];
-            $fdisplay(fd_polar_to_cart_file,"%d, %d",$signed(pre_eq_0_i),$signed(pre_eq_0_q));
-            $fdisplay(fd_polar_to_cart_file,"%d, %d",$signed(pre_eq_1_i),$signed(pre_eq_1_q));
-            $fdisplay(fd_polar_to_cart_file,"%d, %d",$signed(pre_eq_2_i),$signed(pre_eq_2_q));
+             $fdisplay(fd_polar_to_cart_file,"%d, %d",$signed(pre_eq_0_i),$signed(pre_eq_0_q));
+             $fdisplay(fd_polar_to_cart_file,"%d, %d",$signed(pre_eq_1_i),$signed(pre_eq_1_q));
+             $fdisplay(fd_polar_to_cart_file,"%d, %d",$signed(pre_eq_2_i),$signed(pre_eq_2_q));
           end
         end
         #CLOCK_PERIOD;
@@ -515,7 +515,7 @@ module zf_equalizer_tb();
     end
 
     // cordic latency of 23 equals total latency of 128
-    #(CLOCK_PERIOD*128);
+    #(CLOCK_PERIOD*162);
 
     for (int k = 0; k < ofdm_symbols; k++) begin
       for (int i = 0; i < 256; i++) begin
@@ -526,9 +526,11 @@ module zf_equalizer_tb();
           eq_1_q = DUT.zf_equalizer_i.polar_to_cartesian.m_axis_tdata[63:48];
           eq_2_i = DUT.zf_equalizer_i.polar_to_cartesian.m_axis_tdata[79:64];
           eq_2_q = DUT.zf_equalizer_i.polar_to_cartesian.m_axis_tdata[95:80];
-          $fdisplay(fd_out_file,"%d, %d",$signed(eq_0_i),$signed(eq_0_q));
-          $fdisplay(fd_out_file,"%d, %d",$signed(eq_1_i),$signed(eq_1_q));
-          $fdisplay(fd_out_file,"%d, %d",$signed(eq_2_i),$signed(eq_2_q));
+          if (i != 0) begin
+            $fdisplay(fd_out_file,"%d, %d",$signed(eq_0_i),$signed(eq_0_q));
+            $fdisplay(fd_out_file,"%d, %d",$signed(eq_1_i),$signed(eq_1_q));
+            $fdisplay(fd_out_file,"%d, %d",$signed(eq_2_i),$signed(eq_2_q));
+          end
         end
         #CLOCK_PERIOD;
       end

@@ -79,7 +79,6 @@ architecture RTL of equalization is
     );
   end component div_gen_1;
 
-  signal s_ch_est_axis_tdata_pipe : std_logic_vector(15 downto 0);
 
   signal div_sample_0             : std_logic_vector(47 downto 0);
   signal div_sample_1             : std_logic_vector(47 downto 0);
@@ -113,18 +112,10 @@ architecture RTL of equalization is
   signal diff0                    : std_logic_vector(15 downto 0);
   signal diff1                    : std_logic_vector(15 downto 0);
   signal diff2                    : std_logic_vector(15 downto 0);
+  signal diff3                    : std_logic_vector(15 downto 0);
 
 begin
 
-    --s_ch_est_axis_tdata_pipe    <= s_ch_est_axis_tdata(47 downto 32);
-  -- Rotate data and delay channel estimate to properly aligh with
-  -- previous hold interpolation type
-  p_ALIGN : process(axis_aclk)
-  begin
-    if rising_edge(axis_aclk) then
-      s_ch_est_axis_tdata_pipe    <= s_ch_est_axis_tdata(31 downto 16);
-    end if;
-  end process p_ALIGN;
 
   -- 4 samples per clock (3 data 1 pilot). Equalize pilot sample as well
   ----------------------------------------------------------------------
@@ -146,9 +137,10 @@ begin
       m_axis_dout_tvalid          => div_tvalid,
       m_axis_dout_tlast           => div_tlast
     );
-  diff0 <= s_din_axis_tdata(31 downto 16) + s_ch_est_axis_tdata_pipe;
-  diff1 <= s_din_axis_tdata(63 downto 48) + s_ch_est_axis_tdata_pipe;
-  diff2 <= s_din_axis_tdata(95 downto 80) + s_ch_est_axis_tdata_pipe;
+  diff0 <= s_din_axis_tdata(31 downto 16) + s_ch_est_axis_tdata(47 downto 32);
+  diff1 <= s_din_axis_tdata(63 downto 48) + s_ch_est_axis_tdata(47 downto 32);
+  diff2 <= s_din_axis_tdata(95 downto 80) + s_ch_est_axis_tdata(47 downto 32);
+  diff3 <= s_din_axis_tdata(127 downto 112) + s_ch_est_axis_tdata(47 downto 32);
 
   -- Equalize Phase
   p_CH_EST_ANG_0 : process(axis_aclk, axis_aresetn)
@@ -158,8 +150,13 @@ begin
     elsif rising_edge(axis_aclk) then
       if s_ch_est_axis_tvalid_d2 = '1' and s_din_axis_tvalid_d2 = '1' then
         pipeline_ang_0_tvalid     <= '1';
-        pipeline_ang_0_tdata      <= s_din_axis_tdata(31 downto 16) + 
-                                     s_ch_est_axis_tdata(47 downto 32);
+        if((diff0 < X"2000" or diff0 > X"E000")) then
+          pipeline_ang_0_tdata <= diff0;
+        elsif (diff0 > X"8000") then
+          pipeline_ang_0_tdata <= diff0 + X"3FFF";
+        else
+          pipeline_ang_0_tdata <= diff0 - X"3FFF";
+        end if;                   
       else
         pipeline_ang_0_tvalid     <= '0';
         pipeline_ang_0_tdata      <= (others => '0');
@@ -211,9 +208,14 @@ begin
     if axis_aresetn = '0' then
       NULL;
     elsif rising_edge(axis_aclk) then
-      if s_ch_est_axis_tvalid_d2 = '1' and s_din_axis_tvalid_d2 = '1' then
-        pipeline_ang_1_tdata      <= s_din_axis_tdata(63 downto 48) +
-                                     s_ch_est_axis_tdata(47 downto 32);
+      if s_ch_est_axis_tvalid = '1' and s_din_axis_tvalid = '1' then
+        if((diff1 < X"2000" or diff1 > X"E000")) then
+          pipeline_ang_1_tdata <= diff1;
+        elsif (diff1 > X"8000") then
+          pipeline_ang_1_tdata <= diff1 + X"3FFF";
+        else
+          pipeline_ang_1_tdata <= diff1 - X"3FFF";
+        end if;  
       else
         pipeline_ang_1_tdata      <= (others => '0');
       end if;
@@ -264,9 +266,14 @@ begin
     if axis_aresetn = '0' then
       NULL;
     elsif rising_edge(axis_aclk) then
-      if s_ch_est_axis_tvalid_d2 = '1' and s_din_axis_tvalid_d2 = '1' then
-        pipeline_ang_2_tdata      <= s_din_axis_tdata(95 downto 80) +
-                                     s_ch_est_axis_tdata(47 downto 32);
+      if s_ch_est_axis_tvalid = '1' and s_din_axis_tvalid = '1' then
+        if((diff2 < X"2000" or diff2 > X"E000")) then
+          pipeline_ang_2_tdata <= diff2;
+        elsif (diff2 > X"8000") then
+          pipeline_ang_2_tdata <= diff2 + X"3FFF";
+        else
+          pipeline_ang_2_tdata <= diff2 - X"3FFF";
+        end if;  
       else
         pipeline_ang_2_tdata      <= (others => '0');
       end if;
@@ -339,9 +346,14 @@ begin
       if axis_aresetn = '0' then
         NULL;
       elsif rising_edge(axis_aclk) then
-        if s_ch_est_axis_tvalid_d2 = '1' and s_din_axis_tvalid_d2 = '1' then
-          pipeline_ang_3_tdata      <= s_din_axis_tdata(127 downto 112) +
-                                       s_ch_est_axis_tdata(47 downto 32);
+        if s_ch_est_axis_tvalid = '1' and s_din_axis_tvalid = '1' then
+          if((diff3 < X"2000" or diff3 > X"E000")) then
+            pipeline_ang_3_tdata <= diff3;
+          elsif (diff3 > X"8000") then
+            pipeline_ang_3_tdata <= diff3 + X"3FFF";
+          else
+            pipeline_ang_3_tdata <= diff3 - X"3FFF";
+          end if;  
         else
           pipeline_ang_3_tdata      <= (others => '0');
         end if;
