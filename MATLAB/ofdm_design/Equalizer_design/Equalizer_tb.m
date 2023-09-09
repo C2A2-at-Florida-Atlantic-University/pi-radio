@@ -1,6 +1,5 @@
 clear; clc; close all; fclose('all');
 addpath(append(pwd,'/../'));
-OFDM Parameters
 nfft = 1024;                    % nfft size equal to number of subcarriers
 BW = 1000000000;                % Bandwidth of subcarriers (-F/2 F/2)
 M = 128;                        % Baseband modulation order
@@ -13,10 +12,11 @@ snr = 30;                       % Signal to noise ratio
 
 % Set 224 zero padded subcarriers: 111 on lower and upper subcarriers
 % and 2 on each side of carrier
+zp_index = [1:111,512,513,913:1024];
 zp_index = [1:111,913:1024];
 no_multi = [1 0 0 0 0 0 0 0];
 %multipath = [0 0 0 0 0 0.3 0.9 0.4];
-multipath = [0 1 0 0 0 0 0 0];
+multipath = [0 0 0 0 0 0 0 1];
 %multipath = [1 0 0 0 0 0 0 0];
 cpo = pi/2;
 cfo = 0;
@@ -34,10 +34,9 @@ scale = 2.6e3;
 plot_length = 1:pilot_carriers*ofdm_symbols;
 plot_length_data = 1:(data_carriers+pilot_carriers)*ofdm_symbols;
 plot_length_data_no_pi = 1:(data_carriers)*ofdm_symbols;
-num_data_bits = length(data_index)*ofdm_symbols
+num_data_bits = length(data_index)*ofdm_symbols;
 file = fopen('../../../HW/modules/sim/zf_equalizer/info.txt','wt');
 fprintf(file,"%d",ofdm_symbols);
-Modulate:
 [ofdm_signal,P1,mod_data,t,t2,freq_signal]=ofdm_transmit(nfft,BW,M,cp_len, ...
     ofdm_symbols,zp_index,pilot_index,1,1,tx_scale);
 
@@ -53,11 +52,9 @@ for i = 1:length(reference_pilot_scaled)
         fprintf(file,"%d\n",int16(imag(reference_pilot_scaled(i))));
     end
 end
-Channel:
 [ofdm_signal_rx,nvar] = awgn(ofdm_signal,snr,'measured');
 ofdm_signal_rx1 = filter(multipath,1,ofdm_signal_rx);
 %ofdm_signal_rx = ofdm_signal_rx * exp(-1j*cpo);
-Demodulate:
 [demod_data,ser] = ofdm_receive(ofdm_signal_rx,P1,nfft,BW,M,cp_len,ofdm_symbols, ...
     zp_index,pilot_index,rep,mod_data,[1 1],freq_signal,cfo,multipath,snr,cpo,nvar,1,2,ofdm_signal,tx_scale);
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -103,6 +100,9 @@ end
 
 fft_out_cfo_awgn = fft(ofdm_signal_par_awgn,nfft);
 fft_out_cfo_awgn = round(1.3e5*fft_out_cfo_awgn);
+
+val = max(max(abs(fft_out_cfo)));
+val = max(max(angle(fft_out_cfo)));
 
 file = fopen('../../../HW/modules/sim/zf_equalizer/fft_out.txt','wt');
 fft_out_cfo_scaled = reshape(fft_out_cfo,[1 nfft*ofdm_symbols]);
@@ -216,7 +216,8 @@ for i = 1:length(mat_data)
 end
 
 figure(),subplot(2,1,1),plot(abs(mat_data(plot_length_data)),LineWidth=2),hold on,plot(vivado_abs(plot_length_data)),title('Magnitude'),legend('MATLAB','Vivado')
-subplot(2,1,2),plot(scale*angle(mat_data(plot_length_data)),LineWidth=2),hold on,plot(vivado_ang(plot_length_data)),title('Angle'),sgtitle('FFT Output (Polar)')
+subplot(2,1,2),plot(scale*angle(mat_data(plot_length_data)),LineWidth=2),hold on,plot(vivado_ang(plot_length_data)),title('Angle'),
+sgtitle({'FFT Output (Polar)','Data + Pilot Carriers'})
 
 file = fopen('../../../HW/modules/sim/zf_equalizer/div_abs_in.txt','r');
 file2 = fopen('../../../HW/modules/sim/zf_equalizer/div_ang_in.txt','r');
@@ -248,15 +249,16 @@ num_ang = reshape(num_ang, [1 ofdm_symbols*pilot_carriers]);
 H_abs = reshape(H_abs, [1 ofdm_symbols*pilot_carriers]);
 H_ang = reshape(H_ang, [1 ofdm_symbols*pilot_carriers]);
 %H_abs = reshape(abs(H), [1 ofdm_symbols*pilot_carriers]);
-%H_ang = reshape(angle(H), [1 ofdm_symbols*pilot_carriers]);
+H_ang = reshape(angle(H), [1 ofdm_symbols*pilot_carriers]);
 H_viv_mat_abs = vivado_abs_num ./ vivado_abs_denom;
-figure(),subplot(2,3,2),plot(denom_abs(plot_length),LineWidth=2),hold on,plot(vivado_abs_denom(plot_length)),title('Magnitude Divisor')
-subplot(2,3,5),plot(scale*denom_ang(plot_length),LineWidth=2),hold on,plot(vivado_ang_denom(plot_length)),title('Phase Divisor')
-subplot(2,3,1),plot(num_abs(plot_length),LineWidth=2),hold on,plot(vivado_abs_num(plot_length)),title('Magnitude Dividend')
-subplot(2,3,4),plot(scale*num_ang(plot_length),LineWidth=2),hold on,plot(vivado_ang_num(plot_length)),title('Phase Dividend')
-subplot(2,3,3),plot(H_abs(plot_length),LineWidth=2),hold on,plot(vivado_abs_res(plot_length)),plot(H_viv_mat_abs(plot_length)),legend('Matlab','Vivado','Matlab div'),title('Estimated Magnitude')
+figure(),subplot(2,3,2),plot(denom_abs(plot_length),LineWidth=2),hold on,plot(vivado_abs_denom(plot_length)),title({'Divisor','Magnitude TX Pilots'})
+subplot(2,3,5),plot(scale*denom_ang(plot_length),LineWidth=2),hold on,plot(vivado_ang_denom(plot_length)),title({'Divisor','Phase TX Pilots'})
+subplot(2,3,1),plot(num_abs(plot_length),LineWidth=2),hold on,plot(vivado_abs_num(plot_length)),title({'Dividend','Magnitude RX Pilots'})
+subplot(2,3,4),plot(scale*num_ang(plot_length),LineWidth=2),hold on,plot(vivado_ang_num(plot_length)),title({'Dividend','Phase RX Pilots'})
+subplot(2,3,3),plot(H_abs(plot_length),LineWidth=2),hold on,plot((1/1.03e3)*vivado_abs_res(plot_length))%,plot(H_viv_mat_abs(plot_length)),legend('Matlab','Vivado','Matlab div')
+legend('Matlab','Vivado'),title('Estimated Magnitude')
 subplot(2,3,6),plot(scale*H_ang(plot_length),LineWidth=2),hold on,plot(vivado_ang_res(plot_length)),legend('Matlab','Vivado'),title('Estimated Phase')
-sgtitle('Estimation (Polar)')
+sgtitle('Channel Estimation (Polar)')
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Normal ZF equalization
 H_ZF_interp = interp1(pilot_index,H,1:nfft,'nearest');
@@ -321,6 +323,8 @@ for i = 1:length(Z_EQ_ZF_ZP)
     tmp = fscanf(file,",%d");
     Z_EQ_ang_vivado = [Z_EQ_ang_vivado tmp];
 end
+%Z_EQ_abs_vivado = [Z_EQ_abs_vivado 0 0 0];
+%Z_EQ_ang_vivado = [Z_EQ_ang_vivado 0 0 0];
 H_vivado = complex(H_abs_vivado,H_phase_vivado);
 H_vivado = reshape(H_vivado,[pilot_carriers ofdm_symbols]);
 H_tmp = reshape(H,[1 ofdm_symbols*pilot_carriers]);
@@ -333,18 +337,20 @@ Z_EQ_ZF_ang_re = reshape(Z_EQ_ZF_ang,[1 ofdm_symbols*(pilot_carriers+data_carrie
 Z_EQ_ZF_abs_re = reshape(Z_EQ_ZF_abs,[1 ofdm_symbols*(pilot_carriers+data_carriers)]);
 mat_H_abs_vivado1 = reshape(mat_H_abs_vivado1,[1 ofdm_symbols*(pilot_carriers+data_carriers)]);
 mat_div_mag = R_abs_vivado./mat_H_abs_vivado1;
-figure(),subplot(2,3,1),plot(abs(fft_out_cfo_scaled_zp(plot_length_data)),'LineWidth',2),hold on,plot(R_abs_vivado(plot_length_data)),title('Magnitude Dividend')
-subplot(2,3,4),plot(scale*angle(fft_out_cfo_scaled_zp(plot_length_data)),'LineWidth',2),hold on,plot(R_ang_vivado(plot_length_data)),title('Angle Dividend')
-subplot(2,3,2),plot(H_abs(plot_length),'LineWidth',2),hold on,plot(H_abs_vivado(plot_length)),title('Magnitude Divisor')
-subplot(2,3,5),plot(scale*H_ang(plot_length),'LineWidth',2),hold on,plot(H_phase_vivado(plot_length)),title('Angle Divisor')
-subplot(2,3,3),plot(abs(Z_EQ_ZF_ZP(plot_length_data)),'LineWidth',3),hold on,plot(Z_EQ_abs_vivado(plot_length_data),'LineWidth',2),title('Equalized Magnitude')
+figure(),subplot(2,3,1),plot(abs(fft_out_cfo_scaled_zp(plot_length_data)),'LineWidth',2),hold on,plot(R_abs_vivado(plot_length_data)),title({'Dividend','Magnitude FFT Output'})
+subplot(2,3,4),plot(scale*angle(fft_out_cfo_scaled_zp(plot_length_data)),'LineWidth',2),hold on,plot(R_ang_vivado(plot_length_data)),title({'Dividend','Angle FFT Output'})
+subplot(2,3,2),plot(H_abs(plot_length),'LineWidth',2),hold on,plot((1/1.03e3)*H_abs_vivado(plot_length)),title({'Divisor','Magnitude Channel Estimate'})
+subplot(2,3,5),plot(scale*H_ang(plot_length),'LineWidth',2),hold on,plot(H_phase_vivado(plot_length)),title({'Divisor','Angle Channel Estimate'})
+subplot(2,3,3),plot(abs(Z_EQ_ZF_ZP(plot_length_data)),'LineWidth',3),hold on,plot((1/1.27e2)*Z_EQ_abs_vivado(plot_length_data),'LineWidth',2)
+H_abs_vivado_rep = repelem((1/1.03e3)*H_abs_vivado(plot_length),4);
+mat_div_mag = R_abs_vivado(plot_length_data)./H_abs_vivado_rep(plot_length_data);
 %plot(abs(mat_div_mag(plot_length_data))),title('Equalized Magnitude'),legend('Matlab','Vivado','Matlab div')
-legend('Matlab','Vivado')
+legend('Matlab','Vivado'),title('Equalized Magnitude')
 subplot(2,3,6),plot(scale*Z_EQ_ZF_ang_re(plot_length_data),'LineWidth',3),hold on,plot(Z_EQ_ang_vivado(plot_length_data),'LineWidth',2)
 rep_H_phase_vivado = repelem(H_phase_vivado,4);
 rep_H_phase_matlab = scale*repelem(H_ang,4);
-%mat_div_ang = R_ang_vivado(plot_length_data) + rep_H_phase_vivado(plot_length_data);
-mat_div_ang = scale*angle(fft_out_cfo_scaled_zp) + rep_H_phase_matlab(plot_length_data);
+mat_div_ang = R_ang_vivado(plot_length_data) + rep_H_phase_vivado(plot_length_data);
+%mat_div_ang = scale*angle(fft_out_cfo_scaled_zp) + rep_H_phase_matlab(plot_length_data);
 Z_EQ_ang_vivado = scale*Z_EQ_ZF_ang_re;
 %plot(mat_div_ang(plot_length_data)),legend('Matlab','Vivado','Matlab div'),
 legend('Matlab','Vivado')
@@ -355,7 +361,7 @@ figure(),subplot(2,2,1),scatter(real(fft_out_cfo),imag(fft_out_cfo),'.','LineWid
 subplot(2,2,2),scatter(real(P_RX),imag(P_RX),'.','LineWidth',2),grid on,grid minor,title('Pilots')
 subplot(2,2,3),scatter(real(Z_EQ_ZF),imag(Z_EQ_ZF),'.','LineWidth',2),grid on,grid minor,title('Matlab')
 subplot(2,2,4),scatter(real(Z_EQ_ZF_vivado),imag(Z_EQ_ZF_vivado),'.','LineWidth',2),grid on,grid minor,title('Vivado')%title('Vivado CH Est, Matlab EQ     ')
-sgtitle('ZF Equalization (Polar)')
+sgtitle({'Channel Estimate (Vivado) ZF Equalization (MATLAB)','Polar'})
 Z_EQ_ZF1 = Z_EQ_ZF_abs .* exp(1j*Z_EQ_ZF_ang);
 % Z_EQ_ZF1 = Z_EQ_ZF_abs_re .* exp(-1j*Z_EQ_ZF_ang_re);
 % Z_EQ_ZF1 = reshape(Z_EQ_ZF1,[ofdm_symbols pilot_carriers + data_carriers]);
@@ -379,7 +385,7 @@ figure(),subplot(2,2,1),scatter(real(fft_out_cfo),imag(fft_out_cfo),'.','LineWid
 subplot(2,2,2),scatter(real(P_RX),imag(P_RX),'.','LineWidth',2),grid on,grid minor,title('Pilots')
 subplot(2,2,3),scatter(real(Z_EQ_ZF1),imag(Z_EQ_ZF1),'.','LineWidth',2),grid on,grid minor,title('Matlab')
 subplot(2,2,4),scatter(real(Z_EQ_Vivado2),imag(Z_EQ_Vivado2),'.','LineWidth',2),grid on,grid minor,title('Vivado')
-sgtitle('ZF Equalization')
+sgtitle({'Channel Estimate (Vivado) ZF Equalization (MATLAB)','Cartesian'})
 % dds1    = dds_compiler_v6_0_bitacc()
 %file = fopen('../../../HW/modules/sim/zf_equalizer/dds.txt','r');
 % dds_out = run(dds1,length(Z_EQ_ang_vivado));
@@ -428,15 +434,15 @@ for i = 1:length(Z_EQ_ZF_ZP_P)
     tmp = fscanf(file,",%d");
     Z_EQ_q_vivado = [Z_EQ_q_vivado tmp];
 end
-figure(),subplot(2,2,1),plot(abs(Z_EQ_ZF_ZP_P(plot_length_data_no_pi)),'LineWidth',2),hold on,plot(polar_to_cart_abs(plot_length_data_no_pi)),title('Magnitude')
+figure(),subplot(2,2,1),plot(abs(Z_EQ_ZF_ZP_P(plot_length_data_no_pi)),'LineWidth',2),hold on,plot((1/1.27e2)*polar_to_cart_abs(plot_length_data_no_pi)),title('Magnitude')
 %subplot(2,2,3),plot(scale*angle(Z_EQ_ZF_ZP_P(plot_length_data_no_pi)),'LineWidth',2),hold on,plot(polar_to_cart_ang(plot_length_data_no_pi)),title('Phase')
 subplot(2,2,3),plot(scale*Z_EQ_ZF_ang_re(plot_length_data_no_pi),'LineWidth',2),hold on,plot(polar_to_cart_ang(plot_length_data_no_pi),'LineWidth',1),title('Phase')
 %subplot(2,2,2),plot(real(Z_EQ_ZF_ZP_P(plot_length_data_no_pi)),'LineWidth',2),hold on,plot(Z_EQ_i_vivado(plot_length_data_no_pi)),title('Real')
 %subplot(2,2,4),plot(imag(Z_EQ_ZF_ZP_P(plot_length_data_no_pi)),'LineWidth',2),hold on,plot(Z_EQ_q_vivado(plot_length_data_no_pi)),title('Imaginary')
-subplot(2,2,2),plot(Z_EQ_ZF_i(plot_length_data_no_pi),'LineWidth',2),hold on,plot(Z_EQ_i_vivado(plot_length_data_no_pi)),title('Real'),legend('MATLAB','Vivado')
-subplot(2,2,4),plot(Z_EQ_ZF_q(plot_length_data_no_pi),'LineWidth',2),hold on,plot(-Z_EQ_q_vivado(plot_length_data_no_pi)),title('Imaginary'),legend('MATLAB','Vivado')
+subplot(2,2,2),plot(Z_EQ_ZF_i(plot_length_data_no_pi),'LineWidth',2),hold on,plot((1/1.27e2)*Z_EQ_i_vivado(plot_length_data_no_pi)),title('Real'),legend('MATLAB','Vivado')
+subplot(2,2,4),plot(Z_EQ_ZF_q(plot_length_data_no_pi),'LineWidth',2),hold on,plot((1/1.27e2)*Z_EQ_q_vivado(plot_length_data_no_pi)),title('Imaginary'),legend('MATLAB','Vivado')
 sgtitle('Equalization Data: Polar to Cartesian')
-EQ_Vivado = complex(Z_EQ_i_vivado,Z_EQ_q_vivado);
+EQ_Vivado = complex(Z_EQ_i_vivado,Z_EQ_q_vivado)/scale*tx_scale*1.85;
 EQ_Vivado = reshape(EQ_Vivado,[data_carriers ofdm_symbols]);
 Z_EQ_ZF = complex(Z_EQ_ZF_i,Z_EQ_ZF_q);
 Z_EQ_ZF = reshape(Z_EQ_ZF,[data_carriers ofdm_symbols]);
@@ -447,7 +453,7 @@ figure(),subplot(2,2,1),scatter(real(Z_EQ_ZF_awgn),imag(Z_EQ_ZF_awgn),'.','LineW
 subplot(2,2,2),scatter(real(fft_out_cfo_1),imag(fft_out_cfo_1),'.','LineWidth',2),title('No Equalization')
 subplot(2,2,3),scatter(real(Z_EQ_ZF),imag(Z_EQ_ZF),'.','LineWidth',2),title('Matlab')
 subplot(2,2,4),scatter(real(EQ_Vivado),imag(EQ_Vivado),'.','LineWidth',2),title('Vivado')
-sgtitle("ZF Equalization (I/Q)")
+sgtitle({"ZF Equalization (I/Q)",'Polar to Cartesion Conversion in Vivado'})
 X = freq_signal/tx_scale;
 X([zp_index,pilot_index],:) = [];
 figure(),scatter(real(Z_EQ_ZF(:,1)/tx_scale),imag(Z_EQ_ZF(:,1)/tx_scale),'.','LineWidth',2),hold on,scatter(real(EQ_Vivado(:,1)/tx_scale),imag(EQ_Vivado(:,1)/tx_scale),'.','LineWidth',2)
@@ -457,11 +463,11 @@ scatter(real(X),imag(X)),legend('MATLAB','Vivado','Ideal'),title('Equalization')
 matlab = qamdemod(Z_EQ_ZF/tx_scale,M);
 matlab_ser = symerr(mod_data,matlab)/numel(mod_data);
 %vivado = qamdemod(EQ_Vivado/tx_scale,M);
-vivado = qamdemod(Z_EQ_Vivado2/tx_scale,M);
+vivado = qamdemod(EQ_Vivado/tx_scale,M);
 vivado_ser = symerr(mod_data,vivado)/numel(mod_data);
 evm = comm.EVM(AveragingDimensions=[1 2],MaximumEVMOutputPort=1);
 %[vivado_evm vivado_evm_pk] = evm(X,EQ_Vivado/tx_scale);
-[vivado_evm vivado_evm_pk] = evm(X,Z_EQ_Vivado2/tx_scale);
+[vivado_evm vivado_evm_pk] = evm(X,EQ_Vivado/tx_scale);
 [matlab_evm matlab_evm_pk] = evm(X,Z_EQ_ZF/tx_scale);
 
 Equalization = ["MATLAB";"Vivado"];
@@ -553,6 +559,5 @@ x_lim = y_lim;
 figure(),subplot(2,1,1),scatter(real(fft_out_cfo1),imag(fft_out_cfo1),'.','LineWidth',2),grid on,grid minor,title('RX')
 subplot(2,1,2),scatter(real(Z_EQ3),imag(Z_EQ3),'.','LineWidth',2),grid on,grid minor, title('ZF Stage 3')
 sgtitle('Equalizer')
-Cleanup
 fclose('all');
 
